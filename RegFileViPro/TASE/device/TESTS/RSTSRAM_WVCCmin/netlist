@@ -1,0 +1,31 @@
+//============================================
+// RST Bitcell
+//============================================
+subckt bitcell5TRST BL RRST VBN VBP VDD VSS WL CRST
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+MTR (RRST CRST QB VBN) N_TRANSISTOR  width=wrs length=lrs
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wna length=lna
+ends bitcell5TRST
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdd
+VVBN (VBN 0) vsource dc=0
+
+ICell (BLi BLRi VBN VBP VDD VSS WL WLR) bitcell5TRST
+
+
+VBL (BL 0) vsource dc=pvdd*pbl
+VBLR (BLR 0) vsource dc=pvdd*pblb
+
+VVWL (WL 0) vsource dc=pvdd*pblb
+VVWLR (WLR 0) vsource dc=pvdd*pbl
+
+IBL (BL BLi) iprobe
+IBLR (BLR BLRi) iprobe

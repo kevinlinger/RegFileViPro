@@ -1,0 +1,25 @@
+//============================================
+// Define VDD and VSS
+//============================================
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+
+//============================================
+// Gate voltages 
+//============================================
+
+VVGSN (VGSN 0) vsource dc=pvdd
+VVGSP (VGSP 0) vsource dc=0
+
+
+//============================================
+// N/P transistors to generate logIDp / logIDn
+//============================================
+
+N1 (VDD VGSN VSS VSS) N_TRANSISTOR width=wdef length=ldef
+P1 (VDD VGSP VSS VDD) P_TRANSISTOR width=wdef length=ldef
+
+
+

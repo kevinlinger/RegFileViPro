@@ -1,0 +1,134 @@
+
+// Cell name: DFF
+// View name: schematic
+subckt DFF CLK D Q VDD VSS
+M33 (Q net107 VSS VSS) N_TRANSISTOR width=3.25*wdef length=ldef 
+M30 (net94 net105 VSS VSS) N_TRANSISTOR width=1.25*wdef length=ldef 
+M23 (net101 net133 VSS VSS) N_TRANSISTOR width=2.25*wdef length=ldef 
+M31 (net105 net107 VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M25 (net101 CPI net107 VSS) N_TRANSISTOR width=2.25*wdef length=ldef 
+M29 (net107 CPN net94 VSS) N_TRANSISTOR width=1.25*wdef length=ldef 
+M18 (net0107 net133 VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M19 (net137 CPI net0107 VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M15 (CPI CPN VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M13 (CPN CLK VSS VSS) N_TRANSISTOR width=2.5*wdef length=ldef 
+M17 (net133 net137 VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M4 (net137 CPN net0131 VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M1 (net0131 D VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M32 (Q net107 VDD VDD) P_TRANSISTOR width=4.5*wdef length=ldef 
+M22 (net101 net133 VDD VDD) P_TRANSISTOR width=2.25*wdef length=ldef 
+M26 (net0163 net105 VDD VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M28 (net105 net107 VDD VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M24 (net101 CPN net107 VDD) P_TRANSISTOR width=2.25*wdef length=ldef 
+M20 (net137 CPN net165 VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M16 (net133 net137 VDD VDD) P_TRANSISTOR width=2.5*wdef length=ldef 
+M27 (net107 CPI net0163 VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M12 (CPN CLK VDD VDD) P_TRANSISTOR width=2.5*wdef length=ldef 
+M21 (net165 net133 VDD VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M14 (CPI CPN VDD VDD) P_TRANSISTOR width=2.5*wdef length=ldef 
+M6 (net0183 D VDD VDD) P_TRANSISTOR width=3*wdef length=ldef 
+M5 (net137 CPI net0183 VDD) P_TRANSISTOR width=3*wdef length=ldef 
+ends DFF
+// End of subcircuit definition.
+
+// Cell name: inv
+// View name: schematic
+subckt inv IN OUT VDD VSS
+parameters wp=2*wdef wn=wdef l=ldef
+MP (OUT IN VDD VDD) P_TRANSISTOR width=wp length=l 
+MN (OUT IN VSS VSS) N_TRANSISTOR width=wn length=l 
+ends inv
+// End of subcircuit definition.
+
+// Cell name: triinv
+// View name: schematic
+subckt triinv IN OUT VDD VSS TRI_N TRI_P
+parameters wp=2*wdef wpe=2*wdef wn=wdef wne=wdef l=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wp length=l 
+MP (net19 TRI_P VDD VDD) P_TRANSISTOR width=wpe length=l 
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wn length=l 
+MN (net31 TRI_N VSS VSS) N_TRANSISTOR width=wne length=l 
+ends triinv
+// End of subcircuit definition.
+
+// Cell name: IO
+// View name: schematic
+subckt IO DIN DOUT ICLK NRDWR OCLK RDWR SD VDD VSS WEN
+    I0 (OCLK SD DOUT VDD VSS) DFF
+    I1 (ICLK DIN d VDD VSS) DFF
+    I10 (d db VDD VSS) inv wp=wdef
+    I13 (WEN NWEN VDD VSS) inv 
+    I14 (NWEN WENB VDD VSS) inv
+    I16 (d NRDWR VDD VSS WENB NWEN) triinv wp=400n lp=60n wn=1400n ln=60n
+    I15 (db RDWR VDD VSS WENB NWEN) triinv wp=400n lp=60n wn=1400n ln=60n
+ends IO
+// End of subcircuit definition.
+
+// Cell name: nand2
+// View name: schematic
+subckt nand2 INbot INtop OUT VDD VSS
+parameters wp=120n lp=60n wn=120n ln=60n
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp length=lp 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn length=ln 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends nand2
+// End of subcircuit definition.
+
+// Cell name: SA
+// View name: schematic
+subckt SA NRDWR RDWR SAE SAPREC SD VDD VSS
+parameters wen=120n len=60n wbl=120n lbl=60n wnsa=120n lnsa=60n weql=120n \
+        leql=60n wsapc=120n lsapc=60n wpsa=120n lpsa=60n
+    I5 (SD OUT SDB VDD VSS) nand2 wp=120n lp=60n wn=120n ln=60n
+    I34 (SDB OUTB SD VDD VSS) nand2 wp=120n lp=60n wn=120n ln=60n
+M13 (OUTB SAE net75 net75) N_TRANSISTOR width=wen length=len 
+M16 (OUT SAE net79 net79) N_TRANSISTOR width=wen length=len 
+M11 (net62 NRDWR VSS VSS) N_TRANSISTOR width=wbl length=lbl 
+M10 (net58 RDWR VSS VSS) N_TRANSISTOR width=wbl length=lbl 
+M8 (net75 OUT net58 VSS) N_TRANSISTOR width=wnsa length=lnsa 
+M7 (net79 OUTB net62 VSS) N_TRANSISTOR width=wnsa length=lnsa 
+M12 (RDWR SAPREC NRDWR VDD) P_TRANSISTOR width=weql length=leql 
+M15 (RDWR SAPREC VDD VDD) P_TRANSISTOR width=wsapc length=lsapc 
+M14 (NRDWR SAPREC VDD VDD) P_TRANSISTOR width=wsapc length=lsapc 
+M5 (OUT OUTB VDD VDD) P_TRANSISTOR width=wpsa length=lpsa 
+M4 (OUTB OUT VDD VDD) P_TRANSISTOR width=wpsa length=lpsa 
+M3 (OUTB SAE OUT VDD) P_TRANSISTOR width=weql length=leql 
+M2 (OUT SAE VDD VDD) P_TRANSISTOR width=wsapc length=lsapc 
+M1 (OUTB SAE VDD VDD) P_TRANSISTOR width=wsapc length=lsapc 
+ends SA
+// End of subcircuit definition.
+
+// Cell name: CD4
+// View name: schematic
+subckt CD4 BL_0 BL_1 BL_2 BL_3 BLB_0 BLB_1 BLB_2 BLB_3 CSEL_0 CSEL_1 \
+        CSEL_2 CSEL_3 CSELB_0 CSELB_1 CSELB_2 CSELB_3 NRDWR PCH RDWR VDD \
+        VSS
+parameters wncs=1000n lncs=60n wpcs=600n lpcs=60n wpch=1000n lpch=60n
+M3_0 (BLB_0 CSEL_0 NRDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M1_0 (BL_0 CSEL_0 RDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M4_0 (NRDWR CSELB_0 BLB_0 VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M5_0 (BLB_0 PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+M2_0 (RDWR CSELB_0 BL_0 VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M0_0 (BL_0 PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+ends CD4
+// End of subcircuit definition.
+
+// DUT name: BitSlice_test
+IIO_1 (DIN_1 DOUT_1 ICLK NRDWR_1 OCLK RDWR_1 SD_1 VDD VSS WEN) IO
+IIO_0 (DIN_0 DOUT_0 ICLK NRDWR_0 OCLK RDWR_0 SD_0 VDD VSS WEN) IO
+ISA_1 (NRDWR_1 RDWR_1 SAE SAPREC SD_1 VDD VSS) SA wen=120n len=60n \
+        wbl=120n lbl=60n wnsa=120n lnsa=60n weql=120n leql=60n wsapc=120n \
+        lsapc=60n wpsa=120n lpsa=60n
+ISA_0 (NRDWR_0 RDWR_0 SAE SAPREC SD_0 VDD VSS) SA wen=120n len=60n \
+        wbl=120n lbl=60n wnsa=120n lnsa=60n weql=120n leql=60n wsapc=120n \
+        lsapc=60n wpsa=120n lpsa=60n
+ICD_1 (BL_4 BL_5 BL_6 BL_7 BLB_4 BLB_5 BLB_6 BLB_7 CSEL_0 CSEL_1 CSEL_2 \
+        CSEL_3 CSELB_0 CSELB_1 CSELB_2 CSELB_3 NRDWR_1 PCH RDWR_1 VDD VSS) \
+        CD4 wncs=1000n lncs=60n wpcs=600n lpcs=60n wpch=1000n lpch=60n
+ICD_0 (BL_0 BL_1 BL_2 BL_3 BLB_0 BLB_1 BLB_2 BLB_3 CSEL_0 CSEL_1 CSEL_2 \
+        CSEL_3 CSELB_0 CSELB_1 CSELB_2 CSELB_3 NRDWR_0 PCH RDWR_0 VDD VSS) \
+        CD4 wncs=1000n lncs=60n wpcs=600n lpcs=60n wpch=1000n lpch=60n
+
+//Input drivers for DUT
+

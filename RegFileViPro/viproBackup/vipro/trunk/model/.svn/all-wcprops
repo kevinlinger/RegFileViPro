@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/SRAM_TOOL/!svn/ver/407/trunk/model
+END
+debug.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/SRAM_TOOL/!svn/ver/151/trunk/model/debug.m
+END
+getED.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/SRAM_TOOL/!svn/ver/391/trunk/model/getED.m
+END
+leakage.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/SRAM_TOOL/!svn/ver/95/trunk/model/leakage.m
+END
+getEnergy.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/SRAM_TOOL/!svn/ver/391/trunk/model/getEnergy.m
+END
+EDCurve.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/SRAM_TOOL/!svn/ver/151/trunk/model/EDCurve.m
+END
+getDelay.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/SRAM_TOOL/!svn/ver/391/trunk/model/getDelay.m
+END
+optimize.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/optimize.m
+END
+getParasitics.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/SRAM_TOOL/!svn/ver/307/trunk/model/getParasitics.m
+END
+bufChainOpt.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/SRAM_TOOL/!svn/ver/388/trunk/model/bufChainOpt.m
+END
+vmin_cdfinv.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/vmin_cdfinv.m
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/README
+END
+capWL.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/capWL.m
+END
+selectBaseCase.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/selectBaseCase.m
+END
+area.m
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/SRAM_TOOL/!svn/ver/126/trunk/model/area.m
+END
+sweepWLcap.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/sweepWLcap.m
+END
+breakDown.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/SRAM_TOOL/!svn/ver/151/trunk/model/breakDown.m
+END
+InterconnectCap.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/SRAM_TOOL/!svn/ver/388/trunk/model/InterconnectCap.m
+END
+baseCaseSelectSimple.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/baseCaseSelectSimple.m
+END
+VDDmin.m
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/VDDmin.m
+END
+optimizeBruteForce.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/SRAM_TOOL/!svn/ver/407/trunk/model/optimizeBruteForce.m
+END
+capBL.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/SRAM_TOOL/!svn/ver/151/trunk/model/capBL.m
+END
+sweep.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/SRAM_TOOL/!svn/ver/140/trunk/model/sweep.m
+END

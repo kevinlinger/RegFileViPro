@@ -1,0 +1,42 @@
+16 32 1
+Energy = 4.6602e-12Delay = 1.52657e-09
+
+8 32 2
+Energy = 4.15424e-12Delay = 1.55215e-09
+
+4 32 4
+Energy = 3.94559e-12Delay = 1.55558e-09
+
+1 64 8
+Energy = 3.9967e-12Delay = 1.5692e-09
+
+8 64 1
+Energy = 4.25385e-12Delay = 1.53075e-09
+
+4 64 2
+Energy = 4.01841e-12Delay = 1.54065e-09
+
+2 64 4
+Energy = 3.94627e-12Delay = 1.59431e-09
+
+4 128 1
+Energy = 4.58637e-12Delay = 1.60307e-09
+
+2 128 2
+Energy = 4.48749e-12Delay = 1.60697e-09
+
+1 128 4
+Energy = 4.48429e-12Delay = 1.51063e-09
+
+2 256 1
+Energy = 5.02223e-12Delay = 1.99632e-09
+
+1 256 2
+Energy = 4.99227e-12Delay = 1.85617e-09
+
+1 512 1
+Energy = 6.05514e-12Delay = 2.65972e-09
+
+2 32 8
+Energy = 3.9271e-12Delay = 1.67505e-09
+

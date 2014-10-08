@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RSTSRAM_Ioff_Ileak_vs_VDD
+END
+RSTSRAM_Ioff_Ileak_vs_VDD.scs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RSTSRAM_Ioff_Ileak_vs_VDD/RSTSRAM_Ioff_Ileak_vs_VDD.scs
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RSTSRAM_Ioff_Ileak_vs_VDD/plotGen.m
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RSTSRAM_Ioff_Ileak_vs_VDD/data.ini
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RSTSRAM_Ioff_Ileak_vs_VDD/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RSTSRAM_Ioff_Ileak_vs_VDD/readme
+END

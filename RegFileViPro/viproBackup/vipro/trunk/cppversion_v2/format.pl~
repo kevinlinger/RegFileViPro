@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+
+use POSIX qw(strftime);
+use Getopt::Long;
+
+open INPUT, "<bruteForceOutput2.txt";
+open OUTPUT, ">newBrtForce2.txt";
+
+while ( <INPUT> )
+{
+	chomp;
+	my $line = $_;
+	#$line =~ s/=//;
+	$line =~ s/^(\S*\s*\S*)\s*=*\s*//;
+	#$line =~ s/(?=[0-9])|(?<=[0-9])/ /g;
+	#$line =~ s/\s+//;
+	print OUTPUT "$line\n";
+}

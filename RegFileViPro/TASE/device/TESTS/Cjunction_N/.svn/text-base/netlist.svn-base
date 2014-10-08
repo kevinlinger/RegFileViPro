@@ -1,0 +1,13 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVSS (VSS 0) vsource dc=0
+VGS (G 0) vsource dc=1.0
+
+//===================================================
+// Circuit to find gate capacitance (pg 110 of Rabaey
+//===================================================
+MN (D G VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ID (VSS D) isource dc=10u
+
+ic D=0

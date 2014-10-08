@@ -1,0 +1,6 @@
+Finding capacitance for BL.
+There are four transistors tested for different cases.
+A resistor is connected to the drain of NMOS (BL transistor), then the world line(the gate) and the Q (the source) are either high or low, => 2*2= 4 cases.
+The input to the resistor is pulsed from high to low. The time it takes for the voltage after the resistor to drop to a halfway point is measured, than 
+C = -t/(R*ln(1/2))
+Result would be printed in file called cap.txt.

@@ -1,0 +1,9 @@
+2008-01-14
+Original spec: 7. Cell ratio vs. voltage of '0' node @ read access
+This is a plot of the bump or ripple in the node storing 0 at the time of read access versus the W/L ratio of the inverter and access n-mos transistors. This ripple voltage can be a design constraint and for a given value of the ripple, the cell sizing can be derived.
+
+Run with Sweep analysis with default settings for step size resulting in 50 steps. Current form of the plotGen.m file is inelegant with a brute force approach used for loading the data and finding the peak ripple value with multiple statements used instead of a loop. Need to figure out if there is a more elegant way to plot the graph.
+
+Test runs fine, but hangs at the dat2img stage. It hangs when executing the matlab shell command. When I ran this command myself, it gave me a prompt saying the system doesn't support the matlab version, asking me if I wanted to continue. This is probably why it hung. When I answer yes, I get an error saying 
+"ld.so.1: MATLAB: fatal: libm.so.2: open failed: No such file or directory"
+and Matlab crashes.

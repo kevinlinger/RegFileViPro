@@ -1,0 +1,12 @@
+
+SAOffset =1
+readEnergy= 2.78558e-12
+readDelay= 1.4682e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =2
+readEnergy= 2.78558e-12
+readDelay= 1.4682e-10
+writeEnergy= 0
+writeDelay= 0

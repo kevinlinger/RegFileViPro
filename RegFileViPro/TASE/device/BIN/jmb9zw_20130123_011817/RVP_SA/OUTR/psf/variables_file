@@ -1,0 +1,31 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "Jan 23 01:18:01 2013"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"cwire" "variable" ( 5.238528e-15 ) PROP( )
+"wpu" "variable" ( 160e-9 ) PROP( )
+"lpu" "variable" ( 120e-9 ) PROP( )
+"wpd" "variable" ( 400e-9 ) PROP( )
+"lpd" "variable" ( 120e-9 ) PROP( )
+"wpg" "variable" ( 270e-9 ) PROP( )
+"lpg" "variable" ( 125e-9 ) PROP( )
+"cg" "variable" ( 659.722e-18 ) PROP( )
+"ldef" "variable" ( 60e-9 ) PROP( )
+"wdef" "variable" ( 120e-9 ) PROP( )
+"tper" "variable" ( 5e-9 ) PROP( )
+"trf" "variable" ( 1e-12 ) PROP( )
+"tdly" "variable" ( 1.25e-9 ) PROP( )
+"cbl" "variable" ( 50.8303e-18 ) PROP( )
+"colMux" "variable" ( 8 ) PROP( )
+"pvdd" "variable" ( 1.1 ) PROP( )
+"ws" "variable" ( 16 ) PROP( )
+"cwl" "variable" ( 109.136e-18 ) PROP( )
+"numBanks" "variable" ( 4 ) PROP( )
+"BL_DIFF" "variable" ( 150e-3 ) PROP( )
+"twl" "variable" ( 1e9 ) PROP( )
+"temp" "variable" ( 25 ) PROP( )
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Cjunction_N
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Cjunction_N/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Cjunction_N/netlist
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Cjunction_N/plotGen.m
+END
+runSimulation
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Cjunction_N/runSimulation
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Cjunction_N/netlistHeader
+END

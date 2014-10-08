@@ -1,0 +1,30 @@
+//============================================
+// bitcell
+//============================================
+subckt bitcell5TRST BL RRST VBN VBP VDD VSS WL CRST
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+MTR (RRST CRST QB VBN) N_TRANSISTOR  width=wna length=lna
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wrs length=lrs
+ends bitcell5TRST
+
+
+// Voltage sources
+_VDD (VDD 0) vsource dc=pvdd
+_VSS (VSS 0) vsource dc=0
+_VBP (VBP 0) vsource dc=0
+_VBN (VBN 0) vsource dc=0
+
+_VWL (WL 0) vsource dc=0
+_VCRST (CRST 0) vsource dc=0
+_VBL (BL 0) vsource dc=pvdd
+_VRRST (RRST 0) vsource dc=pvdd
+
+
+// Devices
+ICell (BL RRST VBN VBP VDD VSS WL CRST) bitcell5TRST
+
+// DC convergence 
+nodeset ICell.Q=0 ICell.QB=pvdd

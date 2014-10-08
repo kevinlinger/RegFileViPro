@@ -1,0 +1,6 @@
+2008-11-15
+R.Mann 
+Qcrit simulation to find the critical charge for a given pulse shape (simulating a high energy alpha particle strike) on the n+ diffusion of the internal latch high node. This program performs a binary search. The default is to find the peak current spike to within 1um.  This is typically the 3rd decimal for the Qcrit value.
+
+drain interseting particle strike is simulated (see netlist to change the particle strike simulation)
+

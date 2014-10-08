@@ -1,0 +1,6 @@
+wpMin 180n
+lpMin 50n
+wnMin 90n
+lnMin 50n
+inputsPath /net/plato.ee.virginia.edu/scratch/svn2u/ViPro_release/trunk/compiler/skill/inputs.txt
+sizesPath /net/plato.ee.virginia.edu/scratch/svn2u/ViPro_release/trunk/compiler/skill/sizes.txt

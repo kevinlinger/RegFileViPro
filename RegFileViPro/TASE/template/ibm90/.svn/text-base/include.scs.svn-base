@@ -1,0 +1,3 @@
+include "/app/lib/IBM_PDK/cmos9sf/V2.1.0.2IBM/Spectre/models/design.scs" 
+include "/app/lib/IBM_PDK/cmos9sf/V2.1.0.2IBM/Spectre/models/fixed_corner.scs" 
+include "/app/lib/IBM_PDK/cmos9sf/V2.1.0.2IBM/Spectre/models/process.scs"  

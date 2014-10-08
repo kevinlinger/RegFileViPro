@@ -1,0 +1,27 @@
+;; set simulator
+simulator( 'spectre)
+design( "netlist" )
+
+;; set model lists
+    modelFile(
+        '("/home/svn2u/SRAM_TOOL/trunk/template/ptm90/include.scs")
+        '("/home/svn2u/SRAM_TOOL/trunk/template/ptm90/subN.scs")
+        '("/home/svn2u/SRAM_TOOL/trunk/template/ptm90/subP.scs")
+    )
+
+;;setting vdd
+    VDD = 1.0
+    
+    desVar("ldef" 100n)
+    desVar("wdef" 6000n)
+
+    temp(25)
+
+    analysis('tran ?start 0 ?stop 2n ?step 0.01n ?strobeperiod 0.001n ?errpreset 'conservative)
+  
+    option( 'reltol 1e-6 'gmin 1e-22 )
+    save('all)
+    run()
+
+    selectResult('tran)
+    ocnPrint(?output "output.txt" ?numberNotation 'engineering v("G") deriv(v("G")))

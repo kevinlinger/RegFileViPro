@@ -1,0 +1,3 @@
+Energy and delay calculations for the bank mux. 
+Output format: 
+Number_banks energy_BS_bufChain energy_triState delay_Tristate

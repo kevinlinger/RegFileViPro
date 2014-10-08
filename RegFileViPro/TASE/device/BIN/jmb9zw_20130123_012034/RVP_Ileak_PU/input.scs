@@ -1,0 +1,32 @@
+simulator lang=spectre
+global 0
+
+parameters 	lpu=120e-9	\
+		wpu=160e-9	\
+		pvdd=1.1	
+
+
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subPU.scs"
+include "RVP_Ileak_PU.scs"
+
+
+simulatorOptions options        \
+	reltol=1e-3		\
+	vabstol=1e-6	\
+	iabstol=1e-12	\
+	temp=25		\
+	tnom=27		\
+	scalem=1.0		\
+	scale=1.0		\
+	gmin=1e-22		\
+	rforce=1		\
+	pivrel=1e-3
+
+dc dc                           \
+	dev=VVDS		\
+	param=dc		\
+	start=-pvdd		\
+	stop=0
+
+saveOptions options save=allpub currents=all

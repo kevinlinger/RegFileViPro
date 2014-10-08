@@ -1,0 +1,3 @@
+include "../../../../TASE/template/ptm45/include.scs"
+include "../../../../TASE/template/ptm45/subN.scs"
+include "../../../../TASE/template/ptm45/subP.scs"

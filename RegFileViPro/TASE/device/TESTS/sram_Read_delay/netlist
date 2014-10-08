@@ -1,0 +1,62 @@
+// write time simulation
+//SRAM  use LPPTM models
+// 
+// RWM   --6/9/2009
+
+/////////////////////////////////////////////////////
+// Options 
+/////////////////////////////////////////////////////
+//// Options set here will be overwritten by the values set in OCEAN script;
+//// So options will be set in OCEAN script
+
+// voltages
+VVDD ( VDD 0 ) vsource dc=pvdd
+VVSS ( VSS 0 ) vsource dc=pvss
+VVBL ( BL 0 ) vsource dc=bitline
+VBLB ( BLB 0 ) vsource dc=bitline
+//VVWL ( VWL 0 ) vsource dc=0
+VVBN ( VBN 0 ) vsource dc=pvbn
+VVNW (VNW 0 ) vsource dc=pvbp
+
+
+
+/////////////////////////////////////////////////////
+// SubCircuits:  cell 
+/////////////////////////////////////////////////////
+//  drain gate source substrate
+////////////////////////////////
+
+///change below to VVVP period=20n and delay=9n to allow more time for read
+
+//VVVP (VVP 0) vsource type=pulse val0=bitline val1=0  period=15n rise=10p fall=10p  delay=0n
+VVVP (VVP 0) vsource type=pulse val0=bitline val1=0  period=20n rise=10p fall=10p  delay=0n
+
+
+//VVWL (VWL 0) vsource type=pulse val0=0 val1=wlv  period=20n rise=30p fall=30p delay=10n
+VVWL (VWL 0) vsource type=pulse val0=0 val1=wlv  period=30n rise=30p fall=30p delay=10n
+
+
+//BL precharge
+XPpre ( E VVP BL VNW) P_TRANSISTOR width=wpu*15 length=ldef
+XPpr1 ( C VVP BLB VNW) P_TRANSISTOR width=wpu*15 length=ldef
+
+//bit cell
+XPpur ( A B VDD VNW ) PU_TRANSISTOR width=wpu length=lpu
+XNpdr ( A B VSS VBN ) PD_TRANSISTOR width=wpd length=lpd
+XNpgr ( C VWL A VBN)  PG_TRANSISTOR width=wpg length=lpg
+XPpul ( B A VDD VNW ) PU_TRANSISTOR width=wpu length=lpu
+XNpdl ( B A VSS VBN ) PD_TRANSISTOR width=wpd length=lpd
+XNpgl ( E VWL B VBN) PG_TRANSISTOR width=wpg length=lpg
+
+//simulate lkg on alternate BL
+//XNpgs ( E VSS VDD VBN) N_TRANSISTOR width=wpg*64 length=lpg
+
+nodeset A=pvdd B=0
+
+cbl (C 0) capacitor c=blcap
+cblb (E 0) capacitor c=blcap
+c3 (A B) capacitor c=nncap
+//r1 (A B) resistor r=res1
+
+
+

@@ -1,0 +1,80 @@
+\section{Tool Flow}
+\label{RVP}
+The executable to run ViPro is ViPro.pl in device/BIN. This section describes ViPro.pl in detail. The tool flow can be broadly divided into the following stages. Each stage can be enabled by providing the corresponding flag in the argument list for ViPro.pl.
+
+1. Bitcell Generation
+
+2. Characterization
+
+3. Optimization
+
+4. Schematic and Layout Generation
+
+\subsection{Bitcell Generation}
+If --cellGen is specified in the arguments, the bitcell generator generates optimal bitcell device sizes based on user-specified area, I$_\text{READ}$ and noise margin constraints and writes it to a file called ``range.final" along with other outputs. The device size data (in lambda units) is parsed from this file by \textbf{formatCGOutput.pl} and written to a file called ``cellGenOutput". Finally, the sizes are converted to absolute units in matlab-compatible format by \textbf{convert.m}. The final device sizes are output to ``bitcellsizes.m".
+
+\subsection{Characterization}
+The characterization stage is enabled by the --char flag and can be divided into the following stages:
+\begin{enumerate}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item Metal parasitic estimation
+\item Gate capacitance estimation
+\item SRAM leaf cell E-D characterization or estimation for a fixed configuration 
+\end{enumerate}
+
+The technology node is determined from the user configuration file (configuration/user.m). This is used to determine the local, intermediate, and global interconnect resistance and capacitance parasitics using the extended PTM interconnect model defined in InterconnectCap.m. The values are determined by getParasitics.m and written to the temporary work directory (files/) in parasitics.txt.
+
+Next, the gate capacitance is determined using TASE through the RVP\_Gate\_Capacitance test. For this step, first a .ini file is created to run this test from the corresponding template (RVPtpl) file. The user needs to ensure that the sweep range (e.g. gcap\_start, gcap\_stop) for the gate capacitance estimation is sufficient. If it is not, ViPro will fail and prompt the user to adjust this range so that the gate capacitance can be estimated within the tolerance specified (tol parameter in the .ini file).
+
+The metal and gate capaciance values determined above are then appended to the .ini file. Finally, TASE is invoked to run the E-D characterization of the leaf cells. Before TASE is invoked, the bitcell sizes and the tests below are appended to the .ini template file:
+
+\begin{itemize}
+\item RVP\_Ileak\_PU - bitcell pullup leakage
+\item RVP\_Ileak\_PD - bitcell pulddown leakage
+\item RVP\_Ileak\_PG - bitcell passgate leakage
+\item RVP\_DFF - DFF Delay
+\item RVP\_Inv\_LEparams - Inverter logical effort parameters
+\item RVP\_bufChains - Timing block buffer chain Power,Delay for horizontal control signals.
+\item RVP\_Decoder - Decoder Power, Delay
+\item RVP\_CD - Column Mux Power, Delay
+\item RVP\_SA - SA Power, Delay
+\item RVP\_IO - IO Power, Delay
+\item RVP\_TIMING - Timing block Power, Delay
+\end{itemize}
+
+The characterization data is output in data*.txt. For the decoder it is in output\_\textless no: of address bits\textgreater. The simulation output can be examined in device/BIN/\textless user-id\textgreater /\textless test-name\textgreater.
+
+\subsubsection{Getting metrics for a given configuration}
+If the getMetrics flag in the user configurations file is set to 1, the tool determines the energy and delay breakdown among different components for the given configuration and also the total energy per access and maximum frequency of operation based on the calculated delays. Note that these metrics are for the nominal case with no variations impact considered. If this flag is used, then the characterization sweeps in the previous sections reduce to the simulation of a single user-specified configuration.
+
+ViPro.pl first invokes getMetrics.m. This in turn invokes the getEnergy and getDelay functions, each of which instantiate the top-level SRAM object (described in~\ref{model}) and call its energy and delay methods respectively.
+
+\subsection{Optimization}
+The user can now either use ViPro to estimate the top-level metrics for a given configuration or allow the tool to generate an optimized SRAM configuration.
+
+\subsection{Schematic and Layout Generation}
+\subsubsection{Schematic Generator}
+Full SRAM schematic generation starting from basic gates can be done for any technology. This module takes 3 inputs. These are as follows.
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item minSizes.txt - The main wrapper input file that contains the minimum/default width and length specifications for the nmos and pmos devices.
+\item inputs.txt - The library name, technology details and top-level architectural specs (e.g. rows, cols, word-size) are specified in this file. 
+\item sizes.txt - Outputs of the optimization - optimal device sizes, number of buffer stages etc. are specified in this file. These values override the defaults in the generator (typically minimum sizes for inverters and logical-effort based sizing for larger gates).
+\end{itemize}
+
+Currently these files are manually created and the schematic generator is manually called from the icfb main window. The eventual goal is for them to be automatically generated and for the generator to be automatically called from ViPro.pl. A description of the SKILL functions used by the schematic generator can be found in doc/userGuides/GeneratorFunctionList.pdf. 
+
+\subsubsection{Layout Generation}
+
+
+\begin{comment}
+The bitcell characterization data is written to ``calcParams.m". The bitcell dimensions (e.g. width and height) are estimated using \textbf{getCellDimensions.m} that calls the area function and appends it to calcParams.m. This file is then combined with the user defined parameters in user.m to create a consolidated configuration file called ``constructor.m" in the model/ directory.
+
+\subsection{Optimization}
+The optimization variables are currently the number of rows (NR) and columns (NC) of the array. A brute force search that examines the energy and delay for the SRAM for several configurations is done to determine the optimal configuration that satisfies the user-specified constraints, while minimizing either energy or delay. Energy and Delay are calculated using the TASE output and the SRAM model described in section \ref{model}.
+
+\subsection{Result Generation}
+The optimization output will be used to generate pareto E-D curves, break-down of energy and delay among various SRAM components. Eventually, it will be used to generate actual schematics and layout for the optimal prototype.
+\end{comment}

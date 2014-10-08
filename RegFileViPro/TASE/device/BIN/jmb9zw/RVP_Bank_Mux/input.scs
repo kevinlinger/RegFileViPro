@@ -1,0 +1,87 @@
+//Generated for; spectre
+//Trying to find the gate cap of the WL transistor
+
+simulator lang=spectre
+global 0 
+
+
+
+
+parameters numBanks=4 colMux=8 cg=6.59722e-16 cwl=1.09136e-16 ws=16 \
+    pwidth=1e-09 pfall=2e-11 prise=2e-11 wdef=1.2e-07 ldef=6e-08 pvbp=1.1 \
+    pvdd=1.1
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subN.scs"
+include "../../../../template/ibm65/subP.scs"
+//Auto generated netlist for buffer chain characterization
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VBANK_SEL0 (BANK_SEL0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VBANK_SELB0 (BANK_SELB0 0) vsource type=pulse val0=pvdd val1=0 rise=prise fall=pfall width=pwidth
+
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=2*i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+// Tristate buffer
+subckt triinv OUT IN en ep VDD VSS 
+parameters wp=wdef lp=ldef wn=wdef ln=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wdef*2*16 length=ldef 
+MP (net19 ep VDD VDD) P_TRANSISTOR width=wdef*2*16 length=ldef
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wdef*16 length=ldef 
+MN (net31 en VSS VSS) N_TRANSISTOR width=wdef*16 length=ldef 
+ends triinv
+
+//BANK_SEL inverter chain subckt
+subckt INVCHAIN_BANK_SEL OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4
+I2 (X3 X2 VDD VSS) INV i=16
+I3 (OUT X3 VDD VSS) INV i=48
+ends INVCHAIN_BANK_SEL
+
+
+IBANK_SEL0 (BANK_SEL_OUT0 BANK_SEL0 VDD VSS) INVCHAIN_BANK_SEL
+IBANK_SELB0 (BANK_SEL_OUTB0 BANK_SELB0 VDD VSS) INVCHAIN_BANK_SEL
+
+// number of columns hardcoded at 4 for intial estimates in ocn script
+
+// Wire capacitance for 2, 4, 8, and 16 banks, assumes banks placed
+// side by side with control signals propagating from middle of array
+// Also accounting for enable capacitance on WS-1 tristate enables
+CBANK_SEL0 (BANK_SEL_OUT0 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*16
+CBANK_SELB0 (BANK_SEL_OUTB0 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*32
+
+
+Tri_state0 (DATA_OUT0 VSS BANK_SEL_OUT0 BANK_SEL_OUTB0  VDD VSS) triinv
+
+//Wire cap plus additional gate cap of DFF
+CDATA2 (DATA_OUT0 0) capacitor c=numBanks/2*ws*cwl*colMux+2*wdef*cg*1e6
+
+myOption options pwr=all
+ic DATA_OUT0=0 
+simulatorOptions options reltol=1e-06 vabstol=1e-6 iabstol=1e-12 temp=25 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-22 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="OUT/psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=1.25e-09 errpreset=conservative start=0 step=1e-11 \
+    write="spectre.ic" writefinal="spectre.fc" annotate=status \
+    strobeperiod=1e-12 maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub currents=all
+ 

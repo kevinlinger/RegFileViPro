@@ -1,0 +1,44 @@
+// write time simulation
+//SRAM  use LPPTM models
+// 
+// RWM   --6/9/2009
+
+/////////////////////////////////////////////////////
+// Options 
+/////////////////////////////////////////////////////
+//// Options set here will be overwritten by the values set in OCEAN script;
+//// So options will be set in OCEAN script
+
+// voltages
+VVDD ( VDD 0 ) vsource dc=pvdd
+VVSS ( VSS 0 ) vsource dc=pvss
+VVBL ( BL 0 ) vsource dc=lbl
+VBLB ( BLB 0 ) vsource dc=bitline
+//VVWL ( VWL 0 ) vsource dc=0
+VVBN ( VBN 0 ) vsource dc=pvbn
+VVNW (VNW 0 ) vsource dc=pvbp
+
+
+
+/////////////////////////////////////////////////////
+// SubCircuits:  cell 
+/////////////////////////////////////////////////////
+//  drain gate source substrate
+////////////////////////////////
+
+VVWL (VWL 0) vsource type=pulse val0=0 val1=wlv period=500n rise=10p fall=10p width=30n
+
+XPpur ( A B VDD VNW ) P_TRANSISTOR width=wpu length=lpu
+XNpdr ( A B VSS VBN ) N_TRANSISTOR width=wpd length=lpd
+XNpgr ( BL VWL A VBN)  N_TRANSISTOR width=wpg length=lpg
+XPpul ( B A VDD VNW ) P_TRANSISTOR width=wpu length=lpu
+XNpdl ( B A VSS VBN ) N_TRANSISTOR width=wpd length=lpd
+XNpgl ( BLB VWL B VBN) N_TRANSISTOR width=wpg length=lpg
+
+
+nodeset A=pvdd B=0
+
+
+c3 (A B) capacitor c=nncap
+//r1 (A B) resistor r=res1
+

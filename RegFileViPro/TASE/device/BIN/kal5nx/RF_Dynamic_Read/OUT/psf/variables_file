@@ -1,0 +1,29 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "May 24 02:04:30 2013"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"pvdd" "variable" ( 1 ) PROP( )
+"pvbp" "variable" ( 1 ) PROP( )
+"ldef" "variable" ( 60e-9 ) PROP( )
+"wdef" "variable" ( 120e-9 ) PROP( )
+"prise" "variable" ( 1e-12 ) PROP( )
+"pfall" "variable" ( 1e-12 ) PROP( )
+"per" "variable" ( 5e-9 ) PROP( )
+"ws" "variable" ( 16 ) PROP( )
+"readPorts" "variable" ( 4 ) PROP( )
+"writePorts" "variable" ( 1 ) PROP( )
+"capacity" "variable" ( 64 ) PROP( )
+"wkeepgbl" "variable" ( 1 ) PROP( )
+"pullwlbl" "variable" ( 5 ) PROP( )
+"pullwgbl" "variable" ( 5 ) PROP( )
+"prewlbl" "variable" ( 3 ) PROP( )
+"prewgbl" "variable" ( 3 ) PROP( )
+"wkeeplbl" "variable" ( 1 ) PROP( )
+"gblnum" "variable" ( 4 ) PROP( )
+"lblnum" "variable" ( 8 ) PROP( )
+"temp" "variable" ( 27 ) PROP( )
+END

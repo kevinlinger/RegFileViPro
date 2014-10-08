@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_I2
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_I2/plotGen.m
+END
+plotGen.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_I2/plotGen.tpl
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_I2/data.ini
+END
+Iread2.scs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_I2/Iread2.scs
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_I2/input.tpl
+END

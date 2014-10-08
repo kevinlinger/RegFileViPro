@@ -1,0 +1,71 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdda
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdda
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt TWOHALFCELL (IN1 OUT1 IN2 OUT2 BL1 BL2 WL VDD VBP VSS VBN)
+  MPL (OUT1 IN1 VDD VBP) PU_TRANSISTOR width=wpu length=lpu pvta=vtpul
+  MNL (OUT1 IN1 VSS VBN) PD_TRANSISTOR width=wpd length=lpd pvta=vtpdl
+  MTL (BL1 WL OUT1 VBN) PG_TRANSISTOR width=wpg length=lpg pvta=vtpgl
+  MPR (OUT2 IN2 VDD VBP) PU_TRANSISTOR width=wpu length=lpu pvta=vtpur
+  MNR (OUT2 IN2 VSS VBN) PD_TRANSISTOR width=wpd length=lpd pvta=vtpdr
+  MTR (BL2 WL OUT2 VBN) PG_TRANSISTOR width=wpg length=lpg pvta=vtpgr
+ends TWOHALFCELL
+
+//====================================================
+// Subcircuit to measure SNM value
+//====================================================
+subckt SNMmeas (U INV1in INV1out INV2in INV2out v1mv2)
+  e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+  e2 (INV1in 1 v1 0) vcvs gain=1/sqrt(2)
+  ev1 (v1 U INV1out 0) vcvs gain=sqrt(2)
+  Rdummy  (v1 0)  resistor r=100M
+  Rdummy2 (v2 0) resistor r=100M
+  Rdummy3 (v1mv2 0) resistor r=100M
+
+  e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+  e4 (INV2in 3 v2 0) vcvs gain=1/sqrt(2)
+  enu (nu 0 U 0) vcvs gain=-1
+  ev2 (v2 nu INV2out 0) vcvs gain=sqrt(2)
+  ediff1 (negv2 0 v2 0) vcvs gain=-1
+  ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+ends SNMmeas
+
+
+//============================================
+// Circuit to measure Write SNM by VTC curves
+//============================================
+ICellL (in1 out1 in2 out2 BL1 BL2 WL VDD VBP VSS VBN) TWOHALFCELL 
+
+
+// Note: By removing the measurement circuit hierarchy, we can get the
+//  same variation samples as the other write margin tests
+//Isnm (U in1 out1 in2 out2 v1mv2) SNMmeas
+e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+e2 (in1 1 v1 0) vcvs gain=1/sqrt(2)
+ev1 (v1 U out1 0) vcvs gain=sqrt(2)
+Rdummy  (v1 0)  resistor r=100M
+Rdummy2 (v2 0) resistor r=100M
+Rdummy3 (v1mv2 0) resistor r=100M
+e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+e4 (in2 3 v2 0) vcvs gain=1/sqrt(2)
+enu (nu 0 U 0) vcvs gain=-1
+ev2 (v2 nu out2 0) vcvs gain=sqrt(2)
+ediff1 (negv2 0 v2 0) vcvs gain=-1
+ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+
+VVIN (U 0) vsource dc=pvin
+VWL (WL 0) vsource dc=pvddwl
+
+VBL1 (BL1 0) vsource dc=pvdd
+VBL2 (BL2 0) vsource dc=0
+
+nodeset out1=0 out2=pvdd
+
+

@@ -1,0 +1,4 @@
+2008-10-13
+Original spec: Hold SNM vs. VDD
+
+Varing VDD from the nominal value to 0. Measure hold (WL=0) Static Noise Margin at each VDD point. Plot the trend of HSNM vs. VDD. 

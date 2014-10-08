@@ -1,0 +1,4 @@
+Finding capacitance for BL drain.
+A resistor is connected to the gate of two transistors, which are the BL/BLB transistors. The drain and the sources are connected to H/H and H/L. The input to the resistor is pulsed from low to high. The time it takes for the voltage after the resistor to rise to a halfway point is measured, than 
+C = -t/(R*ln(1/2))
+Result would be printed in file called cap.txt.

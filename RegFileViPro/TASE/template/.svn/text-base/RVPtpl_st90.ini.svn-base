@@ -1,0 +1,87 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED #
+############
+
+<minl>		0.1u
+<minw>		0.12u
+<ldef>		0.1u
+<leff>		0.1u
+<wdef>		0.2u
+<pdk>		st90
+<pvdd>          1.0
+<pvbp>          1.0
+<subN>		../../../../template/st90/subN.scs
+<subP>		../../../../template/st90/subP.scs
+<include>	../../../../template/st90/include.scs
+<nModelName>    nsvt
+<pModelName>    psvt
+
+#############################
+# REQUIRED FOR LE AND CAP   #
+#############################
+
+<prise>         20p
+<pfall>         20p
+<pwidth>        1n
+<wcap>          1u
+<pres>          1k
+
+<dcap_start>    0.3e-15
+<dcap_stop>     1.5e-15
+<dcap_step>     0.05e-15
+
+<gcap_start>    4e-15
+<gcap_stop>     12e-15
+<gcap_step>     0.2e-15
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '1' case;
+## pdat = 1: run write '0' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>          2
+
+############
+# OPTIONAL #
+############
+
+<gmin>		1e-22
+<temp>          27
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+<mcStartNum>    1
+<mcrunNum>      1
+<mcType>        mismatch
+
+##########################
+# REQUIRED FOR SRAM ARRAY#
+##########################
+
+<rowsM1>        127
+<deltaVBL>      0.15
+
+#############################################################################################
+# TEST EXECUTION SELECTION 								    #
+# These are the tests to be run to get parameters to plug in to the models for optimization #
+#############################################################################################
+<scs>
+RVP_Ion_N
+RVP_Ion_P
+RVP_Ileak_PU
+RVP_Ileak_PD
+RVP_Ileak_PG
+RVP_I_cell
+</scs>
+
+<ocn>
+RVP_Gate_Capacitance
+RVP_Junction_Capacitance
+RVP_Inv_LEparams
+RVP_Nand_LEparams
+</ocn>

@@ -1,0 +1,6 @@
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subN.scs"
+include "../../../../template/ibm65/subP.scs"
+include "../../../../template/ibm65/subPU.scs"
+include "../../../../template/ibm65/subPD.scs"
+include "../../../../template/ibm65/subPG.scs"

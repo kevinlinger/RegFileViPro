@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+
+	my @val;
+	my $usr = "./optOut_8k.txt";
+	my $out = "./optOut_8k.dat";
+
+	my $B;
+	my $R;
+	my $C;
+	my $E;
+	my $D;
+	
+	my $rD;
+	my $rE;
+	my $wE;
+	my $wD;
+
+	open(USR,"$usr") or die("Cant open $usr");
+	open(OUT,">$out") or die("Cant open $out");
+	while (my $line = <USR>) { 
+		if ((@val) = ($line =~ /^\s*Change user.m, B=([0-9]+), R=([0-9]+), C=([0-9]+)/ ) ) {
+			$B = shift @val;
+			$R = shift @val;
+			$C = shift @val;
+		}
+		$line = <USR>;
+		if ((@val) = ($line =~ /\s*wdelay:(\S*)\s*wenergy:(\S*)\s*rdelay:(\S*)\s*renergy:(\S*)\s*/ ) ) {
+			$wD = shift @val;
+			$wE = shift @val;
+			$rD = shift @val;
+			$rE = shift @val;
+		}
+
+		if ((@val) = ($line =~ /\s*totalE:(\S*)\s*totalD:(\S*)/ ) ) {
+			$E = shift @val;
+			$D = shift @val;
+			#print "E=$E, D=$D\n";
+		}
+		print OUT "$B\t$R\t$C\t$E\t$D\t$rE\t$wE\t$rD\t$wD\n";
+	}
+	close(USR);
+	close(OUT);
+

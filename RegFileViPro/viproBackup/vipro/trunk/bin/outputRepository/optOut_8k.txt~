@@ -1,0 +1,46 @@
+Change user.m, B=1, R=512, C=1
+wdelay:1.275749e-09	wenergy:4.082770e-12	rdelay:1.397906e-09	renergy:1.978654e-12		totalE:6.061424e-12	totalD:1.397906e-09
+Change user.m, B=1, R=256, C=2
+wdelay:7.560195e-10	wenergy:3.587538e-12	rdelay:1.138680e-09	renergy:1.956726e-12		totalE:5.544264e-12	totalD:1.138680e-09
+Change user.m, B=1, R=128, C=4
+wdelay:5.293682e-10	wenergy:3.812647e-12	rdelay:1.043202e-09	renergy:2.176809e-12		totalE:5.989456e-12	totalD:1.043202e-09
+Change user.m, B=1, R=64, C=8
+wdelay:6.211143e-10	wenergy:4.690971e-12	rdelay:1.059613e-09	renergy:2.538952e-12		totalE:7.229923e-12	totalD:1.059613e-09
+Change user.m, B=2, R=256, C=1
+wdelay:7.438720e-10	wenergy:3.314763e-12	rdelay:1.289090e-09	renergy:1.832847e-12		totalE:5.14761e-12	totalD:1.289090e-09
+Change user.m, B=2, R=128, C=2
+wdelay:5.144339e-10	wenergy:3.287678e-12	rdelay:1.205352e-09	renergy:1.913254e-12		totalE:5.200932e-12	totalD:1.205352e-09
+Change user.m, B=2, R=64, C=4
+wdelay:5.934975e-10	wenergy:3.688938e-12	rdelay:1.232016e-09	renergy:2.101418e-12		totalE:5.790356e-12	totalD:1.232016e-09
+Change user.m, B=2, R=32, C=8
+wdelay:7.452938e-10	wenergy:5.073881e-12	rdelay:1.379703e-09	renergy:2.795097e-12		totalE:7.868978e-12	totalD:1.379703e-09
+Change user.m, B=4, R=128, C=1
+wdelay:5.066949e-10	wenergy:3.015827e-12	rdelay:1.202728e-09	renergy:1.763991e-12		totalE:4.779818e-12	totalD:1.202728e-09
+Change user.m, B=4, R=64, C=2
+wdelay:5.783979e-10	wenergy:3.165934e-12	rdelay:1.231866e-09	renergy:1.775891e-12		totalE:4.941825e-12	totalD:1.231866e-09
+Change user.m, B=4, R=32, C=4
+wdelay:7.172848e-10	wenergy:4.076109e-12	rdelay:1.372077e-09	renergy:2.294874e-12		totalE:6.370983e-12	totalD:1.372077e-09
+Change user.m, B=4, R=16, C=8
+wdelay:7.172848e-10	wenergy:4.076109e-12	rdelay:1.372077e-09	renergy:2.294874e-12		totalE:6.370983e-12	totalD:1.372077e-09
+Change user.m, B=8, R=64, C=1
+Change user.m, B=8, R=64, C=1
+wdelay:5.705860e-10	wenergy:2.895474e-12	rdelay:1.231798e-09	renergy:1.680434e-12		totalE:4.575908e-12	totalD:1.231798e-09
+Change user.m, B=8, R=64, C=1
+wdelay:5.705860e-10	wenergy:2.895474e-12	rdelay:1.231798e-09	renergy:1.680434e-12		totalE:4.575908e-12	totalD:1.231798e-09
+Change user.m, B=8, R=32, C=2
+wdelay:7.020205e-10	wenergy:3.555439e-12	rdelay:1.374193e-09	renergy:1.959716e-12		totalE:5.515155e-12	totalD:1.374193e-09
+Change user.m, B=8, R=16, C=4
+Change user.m, B=8, R=64, C=1
+wdelay:5.705860e-10	wenergy:2.895474e-12	rdelay:1.231798e-09	renergy:1.680434e-12		totalE:4.575908e-12	totalD:1.231798e-09
+Change user.m, B=8, R=32, C=2
+wdelay:7.020205e-10	wenergy:3.555439e-12	rdelay:1.374193e-09	renergy:1.959716e-12		totalE:5.515155e-12	totalD:1.374193e-09
+Change user.m, B=8, R=16, C=4
+Change user.m, B=8, R=16, C=4
+Change user.m, B=8, R=16, C=4
+wdelay:7.020205e-10	wenergy:3.555439e-12	rdelay:1.374193e-09	renergy:1.959716e-12		totalE:5.515155e-12	totalD:1.374193e-09
+Change user.m, B=8, R=16, C=4
+Change user.m, B=16, R=32, C=1
+wdelay:6.941381e-10	wenergy:3.286659e-12	rdelay:1.376599e-09	renergy:1.939193e-12		totalE:5.225852e-12	totalD:1.376599e-09
+Change user.m, B=16, R=16, C=2
+Change user.m, B=16, R=16, C=2
+Change user.m, B=16, R=16, C=2

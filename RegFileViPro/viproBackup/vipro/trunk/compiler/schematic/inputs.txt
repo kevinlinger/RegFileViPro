@@ -1,0 +1,9 @@
+libName ViProTest
+technologyCase lower
+FETlibName cmos090
+PMOScellName psvt
+NMOScellName nsvt
+rows 8
+addrBits 9
+columns 8
+wordSize 1

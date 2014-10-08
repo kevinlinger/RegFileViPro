@@ -1,0 +1,73 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+
+############
+# REQUIRED #
+############
+<minl>          150n
+<minw>          600n
+<ldef>          150n
+<leff>		180n
+<wdef>          600n
+<pdk>           mit180mvt
+<pvdd>          1.5
+<subN>         ../../../../template/mit180mvt/subN.scs
+<subP>         ../../../../template/mit180mvt/subP.scs
+<include>      ../../../../template/mit180mvt/include.scs
+<nModelName>    n_std_mvt
+<pModelName>    p_std_mvt
+<prise>		0.1n
+<pfall>		0.1n
+<pwidth>	0.25n
+
+############
+# OPTIONAL #
+############
+<gmin>          1e-22
+<temp>          27
+
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+
+<mcStartNum>    1
+<mcrunNum>      2
+<mcType>        mismatch
+
+
+###############################
+# REQUIRED FOR 6T SRAM CELL   #
+###############################
+
+<wpu>           0.13u
+<lpu>           0.08u
+<wpd>           0.21u
+<lpd>           0.08u
+<wpg>           0.13u
+<lpg>           0.085u
+
+
+############################
+# TEST EXECUTION SELECTION #
+############################
+<scs>
+IDN_vs_IDP
+IDVD_N
+IDVD_P
+IDVG_N
+IDVG_P
+Ioff_vs_l_N
+Ioff_vs_l_P
+Ioff_vs_VDS_N
+Ioff_vs_VDS_P
+Ioff_vs_w_N
+Ioff_vs_w_P
+Ion_vs_l_N
+Ion_vs_l_P
+Ion_vs_w_N
+Ion_vs_w_P
+leakage_N
+leakage_P
+</scs>

@@ -1,0 +1,81 @@
+# List of tests in spectre and their description
+# Please add test name and brief description whenever you add a new test into the tool
+
+##########################SPECTRE TESTS##########################
+
+1. IDVD_N: NMOS drain-source current vs drain-souce voltage
+
+2. IDVD_P: PMOS drain-source current vs drain-source voltage
+
+3. IDVG_N: NMOS drain-source current vs gate-source voltage
+
+4. IDVG_P: PMOS drain-source current vs gate-source voltage
+
+5. Ioff_vs_VBS_N: NMOS off-current vs body bias
+
+6. Ioff_vs_VBS_P: PMOS off-current vs body bias
+
+7. Ioff_vs_VDS_N: NMOS off-current vs drain-source voltage
+
+8. Ioff_vs_VDS_P: PMOS off-current vs drain-source voltage
+
+9. Ioff_vs_l_N: NMOS off-current vs channel length 
+
+10. Ioff_vs_l_P: PMOS off-current vs channel length
+
+11. Ioff_vs_w_N: NMOS off-current vs channel width
+
+12. Ioff_vs_w_P: PMOS off-current vs channel width
+
+13. Ion_vs_VBS_N: NMOS saturation region drain current vs body bias
+
+14. Ion_vs_VBS_P: PMOS saturation region drain current vs body bias
+
+15. Ion_vs_l_N: NMOS saturation region drain current vs channel length 
+
+16. Ion_vs_l_P: PMOS saturation region drain current vs channel length
+
+17. Ion_vs_w_N: NMOS saturation region drain current vs channel width 
+
+18. Ion_vs_w_P: PMOS saturation region drain current vs channel width
+
+19. leakage_N: NMOS leakage current vs gate-source voltage
+
+20. leakage_P: PMOS leakage current vs gate-source voltage
+
+21. logIDVD_N: semilog plot of NMOS Drain Current vs. VDS
+
+22. logIDVD_P: semilog plot of PMOS Drain Current vs. VDS
+
+23. logIDVG_N: semilog plot of NMOS Drain Current vs. VGS
+
+24. logIDVG_P: semilog plot of PMOS Drain Current vs. VGS
+
+25. dc_nodeset: check for nodeset functionality for dc analysis, added by Mark
+
+26. gate_INV_VTC: inverter VTC
+
+27. SRAM_HSNM: Hold SNM distribution for 6T SRAM
+
+28. SRAM_Ioff_Ileak_vs_VDD: cell leakage currents vs supply voltage
+
+29. SRAM_Ioff_Ileak_vs_lpd: cell leakage currents vs drive transistor channel length
+
+30. SRAM_Ioff_Ileak_vs_lpg: cell leakage currents vs pass gate channel length
+
+31. SRAM_Ioff_Ileak_vs_lpu: cell leakage currents vs load transistor channel length
+
+32. SRAM_Ion_Ioff_vs_VDD: cell currents (Ion and leakage) vs supply voltage
+
+33. SRAM_Iread: cell read current distribution
+
+34. SRAM_Iread_vs_VWL: cell read current vs WL voltage
+
+35. SRAM_PUratio: voltage of node storing '1' vs pull up ratio of 6T SRAM cell
+
+36. SRAM_RSNM: Read SNM distribution for 6T SRAM
+
+37. SRAM_Vbump: peak ripple voltage during read of node storing 0 vs cell ratio of 6T SRAM cell
+
+38. SRAM_ratio: pull up ratio vs write delay
+

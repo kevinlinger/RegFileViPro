@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/netlist
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/plotGen.m
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/ocnloader
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/5TSRAM_RVCCmin/readme
+END

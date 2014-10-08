@@ -1,0 +1,3 @@
+This is a self-contained module for generating the optimized bitcell. The constraints are provided in cellGen.ini and the right template path (config file/execution file) needs to be specified in it.
+
+The cellGen.ini will be in the Configuration dir. along with the other configuration files and user-input files, and the tool will copy it over to this directory before running the cell generator.

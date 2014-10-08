@@ -1,0 +1,158 @@
+include "../../../SUBCKTS/subvt_bitcell.scs"
+
+
+//============================================//
+// GLOBAL VDD and VSS			      //	
+//============================================//
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvbp
+VVBN (VBN 0) vsource dc=0
+
+
+//===========================================//
+// SUPPLY VOLTAGE FOR READ PORT		     //
+//===========================================//
+
+VVSSR (VSSR 0) vsource dc=pvssrd
+VVDDR (VDDR 0) vsource dc=pvddrd
+
+
+//============================================//
+// SUBVT Bitcell Instances		      //
+//============================================//
+
+//======= Column_0 is 6T bitcell =========
+ICell0_act (BL0 BLB0 RWL_act VDD VBP VSS VBN) BITCELL \
+    m=1  dvtsig_pgl=pdvtsig_act dvtsig_pgr=0
+
+ICell0_idl (BL0 BLB0 RWL_idl VDD VBP VSS VBN) BITCELL \
+    m=rowsm1 dvtsig_pgl=0 dvtsig_pgr=pdvtsig_idl
+
+
+//======= Column_1 is 10T-Chang bitcell ========
+ICell1_act (BL1 BLB1 RWL_act WWL_act VDD VSS VSSR VBN VBP) BITCELL10T_chang \
+    m=1  dvtsig_pgl=pdvtsig_act dvtsig_pgr=0
+
+ICell1_idl (BL1 BLB1 RWL_idl WWL_idl VDD VSS VSSR VBN VBP) BITCELL10T_chang \
+    m=rowsm1 dvtsig_pgl=0 dvtsig_pgr=pdvtsig_idl
+
+
+//======= Column_2 is 10T-SchmittTrigger bitcell ========
+ICell2_act (BL2 BLB2 RWL_act VDD VSS VBN VBP) BITCELL10T_st \
+    m=1  dvtsig_pgl=pdvtsig_act dvtsig_pgr=0
+
+ICell2_idl (BL2 BLB2 RWL_idl VDD VSS VBN VBP) BITCELL10T_st \
+    m=rowsm1 dvtsig_pgl=0 dvtsig_pgr=pdvtsig_idl
+
+
+//======= Column_3 is 8T bitcell with zero footer ========
+ICell3_act (WBL3 WBLB3 WWL_act RBL3 RWL_act VDD VSS VSS VBN VBP) BITCELL8T \
+    m=1  dvtsig_pg=pdvtsig_act
+
+ICell3_idl (WBL3 WBLB3 WWL_idl RBL3 RWL_idl VDD VSS VSS VBN VBP) BITCELL8T \
+    m=rowsm1 dvtsig_pg=pdvtsig_idl
+
+
+//======= Column_4 is 8T bitcell with boosted footer ========
+ICell4_act (WBL4 WBLB4 WWL_act RBL4 RWL_act VDD VSS VSS VBN VBP) BITCELL8T \
+    m=1  dvtsig_pg=pdvtsig_act
+
+ICell4_idl (WBL4 WBLB4 WWL_idl RBL4 RWL_idl VDD VSS VDD VBN VBP) BITCELL8T \
+    m=rowsm1 dvtsig_pg=pdvtsig_idl
+
+
+//======= Column_5 is 10T-Ben bitcell ========
+ICell5_act (WBL5 WBLB5 WWL_act RBL5 RWL_act VDD VSS VDDR VSSR VBN VBP) BITCELL10T_ben \
+    m=1  dvtsig_pg=pdvtsig_act
+
+ICell5_idl (WBL5 WBLB5 WWL_idl RBL5 RWL_idl VDD VSS VDDR VSSR VBN VBP) BITCELL10T_ben \
+    m=rowsm1 dvtsig_pg=pdvtsig_idl
+
+
+//======= Column_6 is 10T-Kim bitcell ========
+ICell6_act (WBL6 WBLB6 WWL_act RBL6 RWL_act VDD VSS VDDR VSSR VBN VBP) BITCELL10T_kim \
+    m=1  dvtsig_pg=pdvtsig_act
+
+ICell6_idl (WBL6 WBLB6 WWL_idl RBL6 RWL_idl VDD VSS VDDR VSSR VBN VBP) BITCELL10T_kim \
+    m=rowsm1 dvtsig_pg=pdvtsig_idl
+
+
+//======= Column_7 is 7T-Takeda bitcell ========
+ICell7_act (WBLB7 RBL7 WWL_act RWL_act RWLB_act VDD VSS VBN VBP) BITCELL7T_takeda \
+    m=1  dvtsig_pg=pdvtsig_act
+
+ICell7_idl (WBLB7 RBL7 WWL_idl RWL_idl RWLB_idl VDD VSS VBN VBP) BITCELL7T_takeda \
+    m=rowsm1 dvtsig_pg=pdvtsig_idl
+
+
+//====================================//
+// PREPHERALS			      //
+//====================================//
+
+//====== write BLs to vdd ======
+VWBL3 (WBL3 0) vsource dc=pvdd
+VWBLB3 (WBLB3 0) vsource dc=pvdd
+
+VWBL4 (WBL4 0) vsource dc=pvdd
+VWBLB4 (WBLB4 0) vsource dc=pvdd
+
+VWBL5 (WBL5 0) vsource dc=pvdd
+VWBLB5 (WBLB5 0) vsource dc=pvdd
+
+VWBL6 (WBL6 0) vsource dc=pvdd
+VWBLB6 (WBLB6 0) vsource dc=pvdd
+
+VWBLB7 (WBLB7 0) vsource dc=pvdd
+
+
+//====== write WLs to gnd ======
+VWWLact (WWL_act 0) vsource dc=0
+
+VWWLidl (WWL_idl 0) vsource dc=0
+
+
+//====== read WL ======
+VRWLact (RWL_act 0) vsource type=pulse val0=0 val1=pvdd delay=ptdelay rise=ptrise \
+    fall=ptfall width=ptwidth period=ptwidth*2
+
+VRWLBact (RWLB_act 0) vsource type=pulse val0=pvdd val1=0 delay=ptdelay rise=ptrise \
+    fall=ptfall width=ptwidth period=ptwidth*2
+
+VRWLidl (RWL_idl 0) vsource dc=0
+
+VRWLBidl (RWLB_idl 0) vsource dc=pvdd
+
+
+//====== Initial conditions on BLs ======
+ic BL0=pvdd BLB0=pvdd
+ic BL1=pvdd BLB1=pvdd
+ic BL2=pvdd BLB2=pvdd
+ic RBL3=pvdd
+ic RBL4=pvdd
+ic RBL5=pvdd
+ic RBL6=pvdd
+ic RBL7=pvdd
+
+
+//====== initial conditions on Q/QB to make BL discharge ====== 
+ic ICell0_act.Q=0 
+ic ICell0_act.QB=pvdd
+ic ICell0_idl.Q=pvdd 
+ic ICell0_idl.QB=0
+
+ic ICell1_act.Q=pvdd 
+ic ICell1_act.QB=0
+ic ICell1_idl.Q=0 
+ic ICell1_idl.QB=pvdd
+
+ic ICell2_act.Q=0 
+ic ICell2_act.QB=pvdd
+ic ICell2_idl.Q=pvdd 
+ic ICell2_idl.QB=0
+
+//*** Note: initial conditions for ICell3~7 (single-ended read) 
+//***       will be set in the ocean script 
+
+

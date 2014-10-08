@@ -1,0 +1,125 @@
+DAMN ---> technology = ptm65; memSize = 16384; rows = 64;  banks = 4; colMux = 4; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> memSize = 16384; rows = 64;  banks = 4; colMux = 4; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> rows = 64;  banks = 4; colMux = 4; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> banks = 4; colMux = 4; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> colMux = 4; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> height = 0.34e-6; width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> width = 0.73e-6;  WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> WLBoost = 1; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> wnio = 8;   tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> tasePath = /var/home/kal5nx/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+knob = NBANKS min = 1 max = 32
+NCOLS 1 8 	   NROWS 32 512 	     
+knob = NCOLS min = 1 max = 8
+NROWS 32 512 	     
+knob = NROWS min = 32 max = 512
+OBJ =   	   ENERGY 0  	   DELAY 1.15          KNOB = 
+Const Called
+ new2tpl
+  Initializing test: RVP_Gate_Capacitance
+ tpl2scs
+  Building test: RVP_Gate_Capacitance
+ ocn2out
+  Executing test: RVP_Gate_Capacitance
+ dat2img
+  Building graphical data for: RVP_Gate_Capacitance
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Gate_Capacitance
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RVP_Gate_Capacitance
+	w =0.14 	s =0.14 	t =0.35 	h =0.2 	k =2.2
+num_iterations = 40
+Invalid 32 32 1
+Valid 16 32 2
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_SA_ptm65.ini
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_RD_ptm65.ini
+ new2tpl
+  Initializing test: RVP_Decoder_WWL_Boost
+ tpl2scs
+  Building test: RVP_Decoder_WWL_Boost
+ ocn2out
+  Executing test: RVP_Decoder_WWL_Boost
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_CM_ptm65.ini
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_BC_ptm65.ini
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_TB_ptm65.ini
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RVP_TIMING
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DFFptm65.ini
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_BM_ptm65.ini
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+start extracting output

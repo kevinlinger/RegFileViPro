@@ -1,0 +1,36 @@
+//============================================
+// Define VDD and VSS
+//============================================
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBN (VBN 0) vsource dc=pvbn
+
+//============================================
+// Gate bias
+//============================================
+
+VVGS (VGS VSS) vsource
+
+
+//============================================
+// Drain bias
+//============================================
+
+VVDS (VDS VSS) vsource dc=pvdd
+
+
+//============================================
+// Test transistor
+//============================================
+
+N1 (VDS VGS Q BULK) N_TRANSISTOR width=wdef length=ldef
+N2 (Q VGS VSS BULK) N_TRANSISTOR width=wdef length=ldef
+
+N3 (VDS VGS VSS BULK) N_TRANSISTOR width=wdef length=2*ldef
+
+N4 (VDS VGS VSS BULK) N_TRANSISTOR width=wdef length=ldef
+
+VBULK (BULK VBN) vsource dc=0
+
+

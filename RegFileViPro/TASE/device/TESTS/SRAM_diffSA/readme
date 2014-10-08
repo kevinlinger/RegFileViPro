@@ -1,0 +1,21 @@
+Measure access time for 6T with differential SA. Currently, the timing of SAEN, WL pulse width etc. needs to be manually tweaked for each pdk.
+
+1. BL and SA inputs are precharged. The BL is connected to the SA through the colmux during this time.
+2. BL floats and WL is turned on. BL is still connected to SA input.
+3. When 200mV differential is reached, WL is turned off and SA input is disconnected from the BL. SAEN turns on.
+4. Once the SA resolves, SAEN turns off and the read is complete.
+5. Access delay is measured between WL rising edge and falling edge of SA
+
+Other columns sharing the same SA are represented by a dummy column. BL parasitic capacitance of 0.1fF/cell is assumed based on 32nm ptm interconnect values and bitcell height in 32nm pdk. The accessed cell is assumed to store a 0 with the unaccessed ones storing a 1. All control signals are outputs of buffers to mimic actual signals.
+
+To determine timing for 200 mV differential:
+1. Run sim with large WL pulse width. 
+cross(v("BL") 0.8 1 'falling) - gives the time until which WL must be kept open
+2. CSEL and SAEN go high at this point
+
+Can double check the timing by:
+1. cross(v("SAEN") 0.5 1 'rising) - gives time at which SA is fired.
+2. value(v("BL") <result of 1.>) - gives BL at the time SA is fired, should be ~0.8V.
+
+This is the delay we want:
+cross(v("SAIN") 0.5 1 'falling) - cross(v("WL") 0.5 1 'rising)

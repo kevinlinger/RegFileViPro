@@ -1,0 +1,47 @@
+\section{Description of ViPro.pl}
+\label{functions}
+
+\subsection{ checkEnv()}
+Checks if spectre, ocean and matlab has been setup using the unix which command. Dies if any of these has not been setup in the environment.
+
+\subsection{ inBin()}
+Checks if the tool is being run from the device/BIN directory.
+
+\subsection{ checkInputs()}
+Checks the sanity of the user inputs. Currently checks if rows x cols = memory size and if cols $>=$ word size. If either is not satisfied, ViPro dies. The function extracts these parameters into a hash whose keys correspond to the parameter names in user.m and then does the checks.
+
+\subsection{ getParamFromUser(\$param)}
+Gets the value of \$param from user.m. Does a pattern match of each line in user.m with the required parameter and returns the value once found. If it is not found, ViPro dies with a message indicating the same.
+
+\subsection{ getMetalParasitics()}
+Determines the parasitic R and C for the technology. The function first extracts the technology parameter value from user.m using the getParamFromUser function and then calls the getParasitics function, which in turn uses the extended PTM interconnect model to determine the R,C parameters.
+
+\subsection{ addCaps(\$ini)}
+Appends the metal capacitance in the BL and WL directions per bitcell to the \$ini file. The function first gets the capacitance for the intermediate level wire from files/parasitics.txt. This is then multiplied by the height and width of the bitcell obtained from the user.m file to get the per bitcell values. The cbl and cwl values are then appended to the provided \$ini file.
+
+\subsection{ addGateCap(\$ini) }
+Appends the gate capacitance per micron obtained from the Gate Capacitance characterization sim to the \$ini file.
+
+\subsection{ appendTestsToIni(\$iniTpl,\$ini,\$testType1,@testList1,\$testType2, @testList2)}
+Appends the selected tests of each type to the .ini template file \$iniTpl to create \$ini. The \$testType arguments are `scs' and `ocn' in any order, for spectre and ocean tests. If no tests of a particular type need to be done, the testlist should be given as `'. 
+
+The function first shifts out the input and output .ini files to local variables. Then, depending on the first test type, it appends the tests one by one to the .ini template file, enclosing them within the required tags and writes them to the output .ini file. It then appends the remaining tests enclosing them with the tag corresponding to the other test type.
+
+\subsection{ checkCapSimStatus()}
+Checks if the RVP\_Gate\_Capacitance test was successful in determining the gate capacitance by checking if the data.txt in the TASE output directory for the test is not an empty file. If it is not successful, ViPro dies with a message indicating that the user needs to change the sweep range for the gate capacitance in the .ini file.
+
+\subsection{ appendBitcell(\$iniTpl,\$ini)}
+Adds the bitcell device sizes to the \$iniTpl to generate \$ini. The bitcell device sizes are contained in bitcellSizes.m, either provided directly by the user or by the cell generator. The bitcell device sizes are first written in the appropriate format to \$ini. Then \$iniTpl is read line by line and appended.
+
+\subsection{ modifyParams(\$ini)}
+Modifies the SRAM configuration parameters in the \$ini file (NR\_sweep, NC\_sweep, ws, pvdd, pvbp, temp, and memsize) to match with those specified by the user in user.m (rows, cols, wordSize, vdd, vsub, and temp). A hash is initialized with the keys corresponding to user.m and the values corresponding to \$ini. For each of the keys, the getParamFromUser function is used to get the corresponding value from user.m and then substituted in the \$ini file for the corresponding parameter name as looked up from the hash.
+
+\subsection{ runChar(\$quiet,\$iniBC)}
+Invokes run.pl to run TASE. Depending on \$quiet, the TASE screen output can be made silent or verbose. run.pl is invoked with the -nopdf option.
+
+\subsection{ getED()}
+Calls the getED function to calculate the SRAM metrics for the configuration specified in user.m.
+
+\subsection{ HELP\_MESSAGE}
+Prints the help message with description of various flags.
+

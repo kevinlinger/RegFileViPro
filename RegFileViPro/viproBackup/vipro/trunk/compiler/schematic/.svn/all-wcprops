@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic
+END
+minSizes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/minSizes.txt
+END
+darUvaEceSchematic.il
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darUvaEceSchematic.il
+END
+UvaEcePredecTiming_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/UvaEcePredecTiming_Schem.il
+END
+UvaEceMath.il
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/UvaEceMath.il
+END
+darBitcellArray_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darBitcellArray_Schem.il
+END
+darSchematic.il
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darSchematic.il
+END
+darUvaEceRowPredec_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darUvaEceRowPredec_Schem.il
+END
+darBasicSchematic.il
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darBasicSchematic.il
+END
+UvaEceSchematic.il
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/UvaEceSchematic.il
+END
+inputs.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/inputs.txt
+END
+darUvaEceWLDriver_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darUvaEceWLDriver_Schem.il
+END
+darUvaEceBitSlice_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darUvaEceBitSlice_Schem.il
+END
+darUvaEceSRAM_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darUvaEceSRAM_Schem.il
+END
+darUvaEceColDecoder_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darUvaEceColDecoder_Schem.il
+END
+jwBasicSchematic.il
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/jwBasicSchematic.il
+END
+darTimingBlock_Schem.il
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/darTimingBlock_Schem.il
+END
+sizes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/schematic/sizes.txt
+END

@@ -1,0 +1,1 @@
+Simulation to measure the energy used on the BL while writing. Measures the current and voltage on the BL and BLB to calcultate the power. The bank is kept as 16, and the total array size is also kept at 2^16 bits

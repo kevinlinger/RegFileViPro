@@ -1,0 +1,211 @@
+NCOLS = 2
+NROWS = 32
+Read Energy = 1.03795e-12
+Read Delay = 1.07629e-09
+Write Energy = 1.1749e-12
+Write Delay = 5.14255e-10
+
+NCOLS = 4
+NROWS = 32
+Read Energy = 9.29337e-13
+Read Delay = 1.06335e-09
+Write Energy = 1.0179e-12
+Write Delay = 5.39801e-10
+
+NCOLS = 8
+NROWS = 64
+Read Energy = 8.9499e-13
+Read Delay = 1.14597e-09
+Write Energy = 1.01675e-12
+Write Delay = 6.2816e-10
+
+NCOLS = 1
+NROWS = 64
+Read Energy = 1.04609e-12
+Read Delay = 1.116e-09
+Write Energy = 1.25436e-12
+Write Delay = 5.30244e-10
+
+NCOLS = 2
+NROWS = 64
+Read Energy = 9.27675e-13
+Read Delay = 1.08811e-09
+Write Energy = 1.08754e-12
+Write Delay = 5.40882e-10
+
+NCOLS = 4
+NROWS = 64
+Read Energy = 8.8656e-13
+Read Delay = 1.09605e-09
+Write Energy = 1.02147e-12
+Write Delay = 5.68321e-10
+
+NCOLS = 8
+NROWS = 128
+Read Energy = 7.19094e-13
+Read Delay = 9.90363e-10
+Write Energy = 1.02454e-12
+Write Delay = 5.85036e-10
+
+NCOLS = 1
+NROWS = 128
+Read Energy = 9.7938e-13
+Read Delay = 1.19079e-09
+Write Energy = 1.28149e-12
+Write Delay = 5.96662e-10
+
+NCOLS = 2
+NROWS = 128
+Read Energy = 9.28281e-13
+Read Delay = 1.18379e-09
+Write Energy = 1.20542e-12
+Write Delay = 6.09184e-10
+
+NCOLS = 4
+NROWS = 128
+Read Energy = 9.20815e-13
+Read Delay = 1.20234e-09
+Write Energy = 1.18479e-12
+Write Delay = 6.37654e-10
+
+NCOLS = 1
+NROWS = 256
+Read Energy = 1.00908e-12
+Read Delay = 1.3964e-09
+Write Energy = 1.57002e-12
+Write Delay = 7.9763e-10
+
+NCOLS = 2
+NROWS = 256
+Read Energy = 9.92076e-13
+Read Delay = 1.3999e-09
+Write Energy = 1.53985e-12
+Write Delay = 7.94326e-10
+
+NCOLS = 4
+NROWS = 256
+Read Energy = 7.74598e-13
+Read Delay = 1.15658e-09
+Write Energy = 1.36385e-12
+Write Delay = 7.92693e-10
+
+NCOLS = 1
+NROWS = 512
+Read Energy = 1.15352e-12
+Read Delay = 1.78114e-09
+Write Energy = 2.26857e-12
+Write Delay = 1.3247e-09
+
+NCOLS = 2
+NROWS = 512
+Read Energy = 9.26282e-13
+Read Delay = 1.52275e-09
+Write Energy = 2.08282e-12
+Write Delay = 1.32306e-09
+
+//end of WL boost numbers
+
+NCOLS = 2
+NROWS = 32
+Read Energy = 9.801e-13
+Read Delay = 1.09083e-09
+Write Energy = 1.11795e-12
+Write Delay = 5.25758e-10
+
+NCOLS = 4
+NROWS = 32
+Read Energy = 8.65275e-13
+Read Delay = 1.08122e-09
+Write Energy = 9.5472e-13
+Write Delay = 5.54587e-10
+
+NCOLS = 8
+NROWS = 64
+Read Energy = 8.22109e-13
+Read Delay = 1.19493e-09
+Write Energy = 9.44818e-13
+Write Delay = 6.62264e-10
+
+NCOLS = 1
+NROWS = 64
+Read Energy = 9.91367e-13
+Read Delay = 1.15504e-09
+Write Energy = 1.20059e-12
+Write Delay = 5.54506e-10
+
+NCOLS = 2
+NROWS = 64
+Read Energy = 8.69733e-13
+Read Delay = 1.12907e-09
+Write Energy = 1.03055e-12
+Write Delay = 5.67021e-10
+
+NCOLS = 4
+NROWS = 64
+Read Energy = 8.22196e-13
+Read Delay = 1.14027e-09
+Write Energy = 9.58057e-13
+Write Delay = 5.97707e-10
+
+NCOLS = 1
+NROWS = 128
+Read Energy = 9.24701e-13
+Read Delay = 1.25355e-09
+Write Energy = 1.22768e-12
+Write Delay = 6.22138e-10
+
+NCOLS = 2
+NROWS = 128
+Read Energy = 8.70398e-13
+Read Delay = 1.24834e-09
+Write Energy = 1.14841e-12
+Write Delay = 6.3643e-10
+
+NCOLS = 4
+NROWS = 128
+Read Energy = 8.56752e-13
+Read Delay = 1.27022e-09
+Write Energy = 1.1216e-12
+Write Delay = 6.68232e-10
+
+NCOLS = 8
+NROWS = 128
+Read Energy = 6.46525e-13
+Read Delay = 1.06289e-09
+Write Energy = 9.52847e-13
+Write Delay = 6.20259e-10
+
+NCOLS = 1
+NROWS = 256
+Read Energy = 9.54298e-13
+Read Delay = 1.50283e-09
+Write Energy = 1.5161e-12
+Write Delay = 8.14696e-10
+
+NCOLS = 2
+NROWS = 256
+Read Energy = 9.33881e-13
+Read Delay = 1.50848e-09
+Write Energy = 1.48252e-12
+Write Delay = 8.11392e-10
+
+NCOLS = 4
+NROWS = 256
+Read Energy = 7.10084e-13
+Read Delay = 1.26831e-09
+Write Energy = 1.3002e-12
+Write Delay = 8.09759e-10
+
+NCOLS = 1
+NROWS = 512
+Read Energy = 1.09868e-12
+Read Delay = 2.1305e-09
+Write Energy = 2.21467e-12
+Write Delay = 1.34146e-09
+
+NCOLS = 2
+NROWS = 512
+Read Energy = 8.68121e-13
+Read Delay = 1.87405e-09
+Write Energy = 2.02559e-12
+Write Delay = 1.33983e-09

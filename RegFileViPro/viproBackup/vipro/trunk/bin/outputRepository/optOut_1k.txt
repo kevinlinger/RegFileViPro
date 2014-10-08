@@ -1,0 +1,6 @@
+Change user.m, B=1, R=32, C=2
+wdelay:4.723170e-10	wenergy:2.698962e-12	rdelay:9.052972e-10	renergy:1.478578e-12
+Change user.m, B=1, R=16, C=4
+wdelay:4.985041e-10	wenergy:3.288140e-12	rdelay:9.007372e-10	renergy:1.779208e-12
+Change user.m, B=2, R=16, C=2
+wdelay:4.830274e-10	wenergy:2.767631e-12	rdelay:1.069909e-09	renergy:1.593751e-12

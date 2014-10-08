@@ -1,0 +1,24 @@
+ToDO:
+NEED TO FIGURE OUT THE GLITCH IN RDWR SEEN IN THE SIM FOR FSL65
+
+Independent of number of rows and cols. No sweeps in this sim currently since this circuit is not being tweaked for the optimization
+
+Same netlist and analysis as the CD. Only difference is that the measurements now pertain to SA
+
+
+Measurements:
+For write:
+SA power - mainly due to RDWR/NRDWR charging up towards the end of the cycle
+RDWR/NRDWR charge up delay from SAPREC going low
+
+For read:
+SA power due to SA resolving and also RDWR/NRDWR charging back up
+SA resolution delay, RDWR/NRDWR charge up delay is ignored as it is only going to charge up by deltaVBL
+
+Output format:
+
+dataw.txt:
+avg_pwr pk_pwr dly_blch
+
+datar.txt:
+avg_pwr pk_pwr dly_sa

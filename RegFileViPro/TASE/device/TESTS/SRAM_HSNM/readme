@@ -1,0 +1,11 @@
+2010-02-09  RWM
+added PD, PG and PU devices for pdks with specific sram models
+modified SRAM_HSNM.scs to include VSS,VBN and VBP 
+modified input.tpl to include the full list of inputs
+
+
+2008-01-14
+Original spec: 1. Hold & Read SNMh, SNMl, and SNM distribution
+Distributions for Hold (WL=0) and Read (WL=1) Static Noise Margins obtained by Monte Carlo simulation with at least 1000 iterations.
+
+Setup by Jiajing. Currently running Monte Carlo. But there is no variation and all the iterations produce the same SNM values.

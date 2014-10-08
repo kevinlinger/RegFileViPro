@@ -1,0 +1,56 @@
+
+parameters pw pl nw nl
+
+//============================================
+//Inverter
+//============================================
+subckt INV VDD VSS IN OUT
+P1 (OUT IN VDD VDD) P_TRANSISTOR width=pw length=pl
+N1 (OUT IN VSS VSS) N_TRANSISTOR width=nw length=nl
+ends INV
+
+//============================================
+//2-input NAND
+//============================================
+subckt NAND2 VDD VSS IN1 IN2 OUT
+P1 (OUT IN1 VDD VDD) P_TRANSISTOR width=pw length=pl
+P2 (OUT IN2 VDD VDD) P_TRANSISTOR width=pw length=pl
+N1 (OUT IN1 COM VSS) N_TRANSISTOR width=nw length=nl
+N2 (COM IN2 VSS VSS) N_TRANSISTOR width=nw length=nl
+ends NAND2
+
+//============================================
+//2-input NOR
+//============================================
+subckt NOR2 VDD VSS IN1 IN2 OUT
+P1 (COM IN1 VDD VDD) P_TRANSISTOR width=pw length=pl
+P2 (OUT IN2 COM VDD) P_TRANSISTOR width=pw length=pl
+N1 (OUT IN1 VSS VSS) N_TRANSISTOR width=nw length=nl
+N2 (OUT IN2 VSS VSS) N_TRANSISTOR width=nw length=nl
+ends NOR2
+
+//============================================
+//2-input OR
+//============================================
+subckt OR2 VDD VSS IN1 IN2 OUT
+P1 (COM IN1 VDD VDD) P_TRANSISTOR width=pw length=pl
+P2 (MID IN2 COM VDD) P_TRANSISTOR width=pw length=pl
+N1 (MID IN1 VSS VSS) N_TRANSISTOR width=nw length=nl
+N2 (MID IN2 VSS VSS) N_TRANSISTOR width=nw length=nl
+
+P3 (OUT MID VDD VDD) P_TRANSISTOR width=pw length=pl
+N3 (OUT MID VSS VSS) N_TRANSISTOR width=nw length=nl
+ends OR2
+
+//============================================
+//2-input AND
+//============================================
+subckt AND2 VDD VSS IN1 IN2 OUT
+P1 (MID IN1 VDD VDD) P_TRANSISTOR width=pw length=pl
+P2 (MID IN2 VDD VDD) P_TRANSISTOR width=pw length=pl
+N1 (MID IN1 COM VSS) N_TRANSISTOR width=nw length=nl
+N2 (COM IN2 VSS VSS) N_TRANSISTOR width=nw length=nl
+
+P3 (OUT MID VDD VDD) P_TRANSISTOR width=pw length=pl
+N3 (OUT MID VSS VSS) N_TRANSISTOR width=nw length=nl
+ends AND2

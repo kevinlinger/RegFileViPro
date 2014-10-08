@@ -1,0 +1,3 @@
+
+matlab -nodesktop -nosplash -r "eplot()"
+ps2pdf 8k_SRAME_E_D.eps 8k_SRAME_E_D.pdf

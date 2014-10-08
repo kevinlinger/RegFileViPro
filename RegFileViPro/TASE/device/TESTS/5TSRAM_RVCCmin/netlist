@@ -1,0 +1,16 @@
+include "../../../SUBCKTS/bitcell_5T.scs"
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdd
+VVBN (VBN 0) vsource dc=0
+
+ICell (BL WL VDD VBP VSS VBN) BITCELL_5T
+
+VBL (BL 0) vsource dc=pvdd
+
+VVWL (WL 0) vsource dc=pvdd
+

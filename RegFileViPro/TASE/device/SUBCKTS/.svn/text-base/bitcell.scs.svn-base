@@ -1,0 +1,16 @@
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//============================================
+// 6T Bitcell
+//============================================
+subckt BITCELL (BL BLB WL VDD VBP VSS VBN)
+  ICellLh (QB Q BL WL VDD VBP VSS VBN) HALFCELL
+  ICellRh (Q QB BLB WL VDD VBP VSS VBN) HALFCELL
+ends BITCELL

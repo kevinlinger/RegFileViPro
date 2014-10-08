@@ -1,0 +1,12 @@
+The number of columns affects the wire capacitance between the column mux and the sense amp, currently sweept from 1 to 8 words
+
+Measurements:
+
+For read:
+SA power due to SA resolving and also RDWR/NRDWR charging back up
+SA resolution delay, RDWR/NRDWR charge up delay is ignored as it is only going to charge up by deltaVBL
+
+Output format:
+
+datar.txt:
+avg_pwr pk_pwr dly_sa

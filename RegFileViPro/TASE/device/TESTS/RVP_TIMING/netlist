@@ -1,0 +1,785 @@
+// Cell name: buffer
+subckt buffer IN OUT VDD VSS
+parameters wn2=wdef ln2=ldef wn1=wdef ln1=ldef wp2=2*wdef \
+        lp2=ldef wp1=2*wdef lp1=ldef
+N1 (OUT X VSS VSS) N_TRANSISTOR width=wn2 length=ln2   
+N0 (X IN VSS VSS) N_TRANSISTOR width=wn1 length=ln1    
+P1 (OUT X VDD VDD) P_TRANSISTOR width=wp2 length=lp2   
+P0 (X IN VDD VDD) P_TRANSISTOR width=wp1 length=lp1    
+ends buffer
+// End of subcircuit definition.
+
+
+// Cell name: AND2
+subckt AND2 INA INB OUT VDD VSS
+parameters wnINV=wdef lnINV=ldef wnNAND=2*wdef lnNAND=ldef \
+        wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+N2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wnINV length=lnINV   
+N1 (X INB VSS VSS) N_TRANSISTOR width=wnNAND length=lnNAND   
+N0 (OUTB INA X VSS) N_TRANSISTOR width=wnNAND length=lnNAND   
+P2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wpINV length=lpINV   
+P1 (OUTB INB VDD VDD) P_TRANSISTOR width=wpNAND length=lpNAND   
+P0 (OUTB INA VDD VDD) P_TRANSISTOR width=wpNAND length=lpNAND   
+ends AND2
+// End of subcircuit definition.
+
+
+// Cell name: NAND2
+subckt NAND2 INA INB OUT VDD VSS
+parameters wn=2*wdef ln=ldef wp=2*wdef lp=ldef
+N1 (X INB VSS VSS) N_TRANSISTOR width=wn length=ln    
+N0 (OUT INA X VSS) N_TRANSISTOR width=wn length=ln    
+P1 (OUT INB VDD VDD) P_TRANSISTOR width=wp length=lp   
+P0 (OUT INA VDD VDD) P_TRANSISTOR width=wp length=lp   
+ends NAND2
+// End of subcircuit definition.
+
+
+// Cell name: CSEL_BChain2
+// Buffer chain here is min-sized but actually will be sized to drive the control signals to the bitslice
+// Their energy is calculated separtely in RVP_bufChains, so these are just dummy min-sized chains in this characterization
+subckt CSEL_BChain2 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends CSEL_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: CSEL_BChain1
+subckt CSEL_BChain1 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends CSEL_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: NPRECH_BChain2
+subckt NPRECH_BChain2 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends NPRECH_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: NPRECH_BChain1
+subckt NPRECH_BChain1 IN OUT VDD VSS
+N7 (OUT X7 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N6 (X7 X6 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N5 (X6 X5 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N4 (X5 X4 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N3 (X4 X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P7 (OUT X7 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P6 (X7 X6 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P5 (X6 X5 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P4 (X5 X4 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P3 (X4 X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends NPRECH_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: WEN_BChain2
+subckt WEN_BChain2 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends WEN_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: WEN_BChain1
+subckt WEN_BChain1 IN OUT VDD VSS
+N5 (OUT X5 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N4 (X5 X4 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N3 (X4 X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P5 (OUT X5 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P4 (X5 X4 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P3 (X4 X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends WEN_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: SAE_BChain2
+subckt SAE_BChain2 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends SAE_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: SAE_BChain1
+subckt SAE_BChain1 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends SAE_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: WLEN_BChain2
+subckt WLEN_BChain2 IN OUT VDD VSS
+N1 (OUT X1 VSS VSS) N_TRANSISTOR width=4*wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P1 (OUT X1 VDD VDD) P_TRANSISTOR width=8*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends WLEN_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: WLEN_BChain1
+subckt WLEN_BChain1 IN OUT VDD VSS
+N1 (OUT X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P1 (OUT X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends WLEN_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: NSAPREC_BChain2
+subckt NSAPREC_BChain2 IN OUT VDD VSS
+N3 (OUT X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P3 (OUT X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends NSAPREC_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: NSAPREC_BChain1
+subckt NSAPREC_BChain1 IN OUT VDD VSS
+N1 (OUT X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P1 (OUT X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends NSAPREC_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: inverter
+subckt inverter IN OUT VDD VSS
+parameters wn=wdef ln=ldef wp=2*wdef lp=ldef
+N0 (OUT IN VSS VSS) N_TRANSISTOR width=wn length=ln    
+P0 (OUT IN VDD VDD) P_TRANSISTOR width=wp length=lp    
+ends inverter
+// End of subcircuit definition.
+
+
+// Cell name: NOR2
+subckt NOR2 INA INB OUT VDD VSS
+parameters wn=wdef ln=ldef wp=4*wdef lp=ldef
+N1 (OUT INB VSS VSS) N_TRANSISTOR width=wn length=ln   
+N0 (OUT INA VSS VSS) N_TRANSISTOR width=wn length=ln   
+P1 (OUT INB X VDD) P_TRANSISTOR width=wp length=lp    
+P0 (X INA VDD VDD) P_TRANSISTOR width=wp length=lp    
+ends NOR2
+// End of subcircuit definition.
+
+
+// Cell name: DLY_SAE_BChain
+subckt DLY_SAE_BChain IN OUT VDD VSS
+N23 (OUT X23 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N22 (X23 X22 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N21 (X22 X21 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N20 (X21 X20 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N19 (X20 X19 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N18 (X19 X18 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N17 (X18 X17 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N16 (X17 X16 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N15 (X16 X15 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N14 (X15 X14 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N13 (X14 X13 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N12 (X13 X12 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N11 (X12 X11 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N10 (X11 X10 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N9 (X10 X9 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N8 (X9 X8 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N7 (X8 X7 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N6 (X7 X6 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N5 (X6 X5 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N4 (X5 X4 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N3 (X4 X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P23 (OUT X23 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P22 (X23 X22 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P21 (X22 X21 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P20 (X21 X20 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P19 (X20 X19 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P18 (X19 X18 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P17 (X18 X17 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P16 (X17 X16 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P15 (X16 X15 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P14 (X15 X14 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P13 (X14 X13 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P12 (X13 X12 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P11 (X12 X11 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P10 (X11 X10 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P9 (X10 X9 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P8 (X9 X8 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P7 (X8 X7 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P6 (X7 X6 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P5 (X6 X5 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P4 (X5 X4 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P3 (X4 X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends DLY_SAE_BChain
+// End of subcircuit definition.
+
+
+// Cell name: DLY_WL_BChain2
+subckt DLY_WL_BChain2 IN OUT VDD VSS
+N1 (OUT X1 VSS VSS) N_TRANSISTOR width=4*wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P1 (OUT X1 VDD VDD) P_TRANSISTOR width=8*wdef length=ldef   
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+ends DLY_WL_BChain2
+// End of subcircuit definition.
+
+
+// Cell name: DLY_WL_BChain1
+subckt DLY_WL_BChain1 IN OUT VDD VSS
+N7 (OUT X7 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N6 (X7 X6 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N5 (X6 X5 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N4 (X5 X4 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N3 (X4 X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N2 (X3 X2 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N1 (X2 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+N0 (X1 IN VSS VSS) N_TRANSISTOR width=wdef length=ldef   
+P7 (OUT X7 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P6 (X7 X6 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P5 (X6 X5 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P4 (X5 X4 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P3 (X4 X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P2 (X3 X2 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef   
+P1 (X2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef         
+P0 (X1 IN VDD VDD) P_TRANSISTOR width=2*wdef length=ldef           
+ends DLY_WL_BChain1
+// End of subcircuit definition.
+
+
+// Cell name: timingBlock
+subckt timingBlock CLK CSEL NPRECH NSAPREC SAE VDD VSS WEN WLEN WR
+    INPRECH_BChain2 (BUF_NPRECH NPRECH VDD VSS) NPRECH_BChain2
+    INPRECH_BChain1 (PRE_WLEN BUF_NPRECH VDD VSS) NPRECH_BChain1
+    IWEN_BChain2 (BUF_WEN WEN VDD VSS) WEN_BChain2
+    IWEN_BChain1 (PRE_WEN BUF_WEN VDD VSS) WEN_BChain1
+    ISAE_BChain2 (BUF_SAE SAE VDD VSS) SAE_BChain2
+    ISAE_BChain1 (PRE_SAE BUF_SAE VDD VSS) SAE_BChain1
+    IWLEN_BChain2 (BUF_WLEN WLEN VDD VSS) WLEN_BChain2
+    IWLEN_BChain1 (PRE_WLEN BUF_WLEN VDD VSS) WLEN_BChain1
+    INSAPREC_BChain2 (BUF_NSAPREC NSAPREC VDD VSS) NSAPREC_BChain2
+    INSAPREC_BChain1 (PRE_NSAPREC BUF_NSAPREC VDD VSS) NSAPREC_BChain1
+    ITMNG_BUF0 (PRE_WLEN CSEL VDD VSS) buffer m=1 wn2=4*wdef ln2=ldef wn1=wdef \
+        ln1=ldef wp2=8*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    ITMNG_INV2 (PRE_SAPREC PRE_NSAPREC VDD VSS) inverter m=1 wn=wdef \
+        ln=ldef wp=2*wdef lp=ldef
+    ITMNG_INV1 (NPRE_SAE PRE_SAE VDD VSS) inverter m=1 wn=wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    ITMNG_INV0 (WR NPRE_WEN VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef \
+        lp=ldef
+    ITMNG_AND0 (WR PRE_WLEN PRE_WEN VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    ITMNG_NAND2 (X NPRE_WEN NPRE_SAE VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    ITMNG_NOR3 (PRE_SAE CSEL PRE_SAPREC VDD VSS) NOR2 m=1 wn=wdef ln=ldef \
+        wp=4*wdef lp=ldef
+    ITMNG_NOR1 (PRE_WLEN GEN_SAE X VDD VSS) NOR2 m=1 wn=wdef ln=ldef wp=4*wdef \
+        lp=ldef
+    ITMNG_NOR0 (PRE_WLEN DLY_WLEN GEN_SAE VDD VSS) NOR2 m=1 wn=wdef ln=ldef \
+        wp=4*wdef lp=ldef
+    IDLY_SAE_BChain (CLK DLY_WLEN VDD VSS) DLY_SAE_BChain
+    IDLY_WLEN_BChain2 (PRE_PRE_WLEN PRE_WLEN VDD VSS) DLY_WL_BChain2
+    IDLY_WLEN_BChain1 (CLK PRE_PRE_WLEN VDD VSS) DLY_WL_BChain1
+ends timingBlock
+// End of subcircuit definition.
+
+
+// Cell name: colDecoder
+
+subckt colDecoder VDD VSS in_0 in_1 in_2 out_0 out_1 out_2 out_3 out_4 \
+        out_5 out_6 out_7
+    IAndOUT7 (in22 in01 out_7 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT6 (in22 in0B1 out_6 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT5 (in22 in01B out_5 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT4 (in22 in0B1B out_4 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT3 (in2B2B in01 out_3 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT2 (in2B2B in0B1 out_2 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT1 (in2B2B in01B out_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndOUT0 (in2B2B in0B1B out_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5 (in_2 in_2 in22 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN4 (inB_2 inB_2 in2B2B VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN3 (in_1 in_0 in01 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2 (in_1 inB_0 in0B1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN1 (inB_1 in_0 in01B VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN0 (inB_1 inB_0 in0B1B VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IInvIN2 (in_2 inB_2 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef \
+        lp=ldef
+    IInvIN1 (in_1 inB_1 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef \
+        lp=ldef
+    IInvIN0 (in_0 inB_0 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef \
+        lp=ldef
+ends colDecoder
+// End of subcircuit definition.
+
+
+// Cell name: preDecode
+subckt preDecode A_0 A_1 A_2 A_3 A_4 A_5 A_6 A_7 A_8 PRE5_3_0 PRE5_3_1 \
+        PRE5_3_2 PRE5_3_3 PRE5_3_4 PRE5_3_5 PRE5_3_6 PRE5_3_7 PRE8_6_0 \
+        PRE8_6_1 PRE8_6_2 PRE8_6_3 PRE8_6_4 PRE8_6_5 PRE8_6_6 PRE8_6_7 VDD \
+        VSS WLEN WLclk_0 WLclk_1 WLclk_2 WLclk_3 WLclk_4 WLclk_5 WLclk_6 \
+        WLclk_7
+    IAndIN7 (WLEN PRE2_0_7 WLclk_7 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN6 (WLEN PRE2_0_6 WLclk_6 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5 (WLEN PRE2_0_5 WLclk_5 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN4 (WLEN PRE2_0_4 WLclk_4 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN3 (WLEN PRE2_0_3 WLclk_3 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2 (WLEN PRE2_0_2 WLclk_2 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN1 (WLEN PRE2_0_1 WLclk_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN0 (WLEN PRE2_0_0 WLclk_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8767 (A_8 A7A6_1 PRE8_6_7 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN7613 (A_6 A_7 A7A6_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8766 (A_8 A7NA6_1 PRE8_6_6 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7612 (NA_6 A_7 A7NA6_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8765 (A_8 NA7A6_1 PRE8_6_5 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7611 (A_6 NA_7 NA7A6_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8764 (A_8 NA7NA6_1 PRE8_6_4 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7610 (NA_6 NA_7 NA7NA6_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8763 (NA_8 A7A6_0 PRE8_6_3 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7603 (A_6 A_7 A7A6_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8762 (NA_8 A7NA6_0 PRE8_6_2 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7602 (NA_6 A_7 A7NA6_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8761 (NA_8 NA7A6_0 PRE8_6_1 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7601 (A_6 NA_7 NA7A6_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN8760 (NA_8 NA7NA6_0 PRE8_6_0 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN7600 (NA_6 NA_7 NA7NA6_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5437 (A_5 A4A3_1 PRE5_3_7 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN4313 (A_3 A_4 A4A3_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5436 (A_5 A4NA3_1 PRE5_3_6 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4312 (NA_3 A_4 A4NA3_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5435 (A_5 NA4A3_1 PRE5_3_5 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4311 (A_3 NA_4 NA4A3_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5434 (A_5 NA4NA3_1 PRE5_3_4 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4310 (NA_3 NA_4 NA4NA3_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5433 (NA_5 A4A3_0 PRE5_3_3 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4303 (A_3 A_4 A4A3_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5432 (NA_5 A4NA3_0 PRE5_3_2 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4302 (NA_3 A_4 A4NA3_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5431 (NA_5 NA4A3_0 PRE5_3_1 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4301 (A_3 NA_4 NA4A3_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN5430 (NA_5 NA4NA3_0 PRE5_3_0 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN4300 (NA_3 NA_4 NA4NA3_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2107 (A_2 A1A0_1 PRE2_0_7 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN1013 (A_0 A_1 A1A0_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2106 (A_2 A1NA0_1 PRE2_0_6 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1012 (NA_0 A_1 A1NA0_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2105 (A_2 NA1A0_1 PRE2_0_5 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1011 (A_0 NA_1 NA1A0_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2104 (A_2 NA1NA0_1 PRE2_0_4 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1010 (NA_0 NA_1 NA1NA0_1 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2103 (NA_2 A1A0_0 PRE2_0_3 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1003 (A_0 A_1 A1A0_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2102 (NA_2 A1NA0_0 PRE2_0_2 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1002 (NA_0 A_1 A1NA0_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2101 (NA_2 NA1A0_0 PRE2_0_1 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1001 (A_0 NA_1 NA1A0_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IAndIN2100 (NA_2 NA1NA0_0 PRE2_0_0 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IAndIN1000 (NA_0 NA_1 NA1NA0_0 VDD VSS) AND2 m=1 wnINV=wdef lnINV=ldef \
+        wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef lpNAND=ldef
+    IInv8 (A_8 NA_8 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv7 (A_7 NA_7 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv6 (A_6 NA_6 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv5 (A_5 NA_5 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv4 (A_4 NA_4 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv3 (A_3 NA_3 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv2 (A_2 NA_2 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv1 (A_1 NA_1 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+    IInv0 (A_0 NA_0 VDD VSS) inverter m=1 wn=wdef ln=ldef wp=2*wdef lp=ldef
+ends preDecode
+// End of subcircuit definition.
+
+
+// Cell name: DFF
+subckt DFF CLK D Q VDD VSS
+// View name: schematic
+M25 (Q X3 VSS VSS) N_TRANSISTOR width=1.95*wdef length=ldef 
+M23 (X4 X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef 
+M21 (A5 X4 VSS VSS) N_TRANSISTOR width=wdef length=ldef 
+M20 (X3 CPN A5 VSS) N_TRANSISTOR width=wdef length=ldef 
+M17 (X2 CPI X3 VSS) N_TRANSISTOR width=1.35*wdef length=ldef 
+M15 (X2 X1 VSS VSS) N_TRANSISTOR width=1.35*wdef length=ldef 
+M13 (X1 X0 VSS VSS) N_TRANSISTOR width=wdef length=ldef 
+M11 (A3 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef 
+M10 (X0 CPI A3 VSS) N_TRANSISTOR width=wdef length=ldef 
+M7 (A1 D VSS VSS) N_TRANSISTOR width=wdef length=ldef 
+M6 (X0 CPN A1 VSS) N_TRANSISTOR width=wdef length=ldef 
+M3 (CPI CPN VSS VSS) N_TRANSISTOR width=1.5*wdef length=ldef 
+M1 (CPN CLK VSS VSS) N_TRANSISTOR width=1.5*wdef length=ldef 
+M24 (Q X3 VDD VDD) P_TRANSISTOR width=5.4*wdef length=ldef 
+M22 (X4 X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef 
+M19 (X3 CPI A4 VDD) P_TRANSISTOR width=2*wdef length=ldef 
+M18 (A4 X4 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef 
+M16 (X3 CPN X2 VDD) P_TRANSISTOR width=2.7*wdef length=ldef 
+M14 (X2 X1 VDD VDD) P_TRANSISTOR width=2.7*wdef length=ldef 
+M12 (X1 X0 VDD VDD) P_TRANSISTOR width=3*wdef length=ldef 
+M9 (X0 CPN A2 VDD) P_TRANSISTOR width=2*wdef length=ldef 
+M8 (A2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef 
+M5 (X0 CPI A0 VDD) P_TRANSISTOR width=3.6*wdef length=ldef 
+M4 (A0 D VDD VDD) P_TRANSISTOR width=3.6*wdef length=ldef 
+M2 (CPI CPN VDD VDD) P_TRANSISTOR width=3*wdef length=ldef 
+M0 (CPN CLK VDD VDD) P_TRANSISTOR width=3*wdef length=ldef 
+ends DFF
+// End of subcircuit definition.
+
+
+// Cell name: TIMING_PREDEC
+subckt TIMING_PREDEC AC_0 AC_1 AC_2 AR_0 AR_1 AR_2 AR_3 AR_4 AR_5 AR_6 \
+        AR_7 AR_8 CLK CS_0 CS_1 CS_2 CS_3 CS_4 CS_5 CS_6 CS_7 NCS_0 NCS_1 \
+        NCS_2 NCS_3 NCS_4 NCS_5 NCS_6 NCS_7 NPRECH NSAPREC PRE5_3_0 \
+        PRE5_3_1 PRE5_3_2 PRE5_3_3 PRE5_3_4 PRE5_3_5 PRE5_3_6 PRE5_3_7 \
+        PRE8_6_0 PRE8_6_1 PRE8_6_2 PRE8_6_3 PRE8_6_4 PRE8_6_5 PRE8_6_6 \
+        PRE8_6_7 SAE VDD VSS WEN WLclk_0 WLclk_1 WLclk_2 WLclk_3 WLclk_4 \
+        WLclk_5 WLclk_6 WLclk_7 WR
+    IBUFCSB2_0 (DEC_AC_0 DEC_ACB_0 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_1 (DEC_AC_1 DEC_ACB_1 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_2 (DEC_AC_2 DEC_ACB_2 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_3 (DEC_AC_3 DEC_ACB_3 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_4 (DEC_AC_4 DEC_ACB_4 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_5 (DEC_AC_5 DEC_ACB_5 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_6 (DEC_AC_6 DEC_ACB_6 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IBUFCSB2_7 (DEC_AC_7 DEC_ACB_7 VDD VSS) buffer m=1 wn2=wdef ln2=ldef \
+        wn1=wdef ln1=ldef wp2=2*wdef lp2=ldef wp1=2*wdef lp1=ldef
+    IANDCS_0 (CSEL DEC_AC_0 PRE_CS_0 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_1 (CSEL DEC_AC_1 PRE_CS_1 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_2 (CSEL DEC_AC_2 PRE_CS_2 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_3 (CSEL DEC_AC_3 PRE_CS_3 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_4 (CSEL DEC_AC_4 PRE_CS_4 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_5 (CSEL DEC_AC_5 PRE_CS_5 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_6 (CSEL DEC_AC_6 PRE_CS_6 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    IANDCS_7 (CSEL DEC_AC_7 PRE_CS_7 VDD VSS) AND2 m=1 wnINV=wdef \
+        lnINV=ldef wnNAND=2*wdef lnNAND=ldef wpINV=2*wdef lpINV=ldef wpNAND=2*wdef \
+        lpNAND=ldef
+    INANDCSB_0 (CSEL DEC_ACB_0 PRE_NCS_0 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_1 (CSEL DEC_ACB_1 PRE_NCS_1 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_2 (CSEL DEC_ACB_2 PRE_NCS_2 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_3 (CSEL DEC_ACB_3 PRE_NCS_3 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_4 (CSEL DEC_ACB_4 PRE_NCS_4 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_5 (CSEL DEC_ACB_5 PRE_NCS_5 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_6 (CSEL DEC_ACB_6 PRE_NCS_6 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    INANDCSB_7 (CSEL DEC_ACB_7 PRE_NCS_7 VDD VSS) NAND2 m=1 wn=2*wdef ln=ldef \
+        wp=2*wdef lp=ldef
+    IBCSB2_0 (BUF_NCS_0 NCS_0 VDD VSS) CSEL_BChain2
+    IBCSB2_1 (BUF_NCS_1 NCS_1 VDD VSS) CSEL_BChain2
+    IBCSB2_2 (BUF_NCS_2 NCS_2 VDD VSS) CSEL_BChain2
+    IBCSB2_3 (BUF_NCS_3 NCS_3 VDD VSS) CSEL_BChain2
+    IBCSB2_4 (BUF_NCS_4 NCS_4 VDD VSS) CSEL_BChain2
+    IBCSB2_5 (BUF_NCS_5 NCS_5 VDD VSS) CSEL_BChain2
+    IBCSB2_6 (BUF_NCS_6 NCS_6 VDD VSS) CSEL_BChain2
+    IBCSB2_7 (BUF_NCS_7 NCS_7 VDD VSS) CSEL_BChain2
+    IBCS2_0 (BUF_CS_0 CS_0 VDD VSS) CSEL_BChain2
+    IBCS2_1 (BUF_CS_1 CS_1 VDD VSS) CSEL_BChain2
+    IBCS2_2 (BUF_CS_2 CS_2 VDD VSS) CSEL_BChain2
+    IBCS2_3 (BUF_CS_3 CS_3 VDD VSS) CSEL_BChain2
+    IBCS2_4 (BUF_CS_4 CS_4 VDD VSS) CSEL_BChain2
+    IBCS2_5 (BUF_CS_5 CS_5 VDD VSS) CSEL_BChain2
+    IBCS2_6 (BUF_CS_6 CS_6 VDD VSS) CSEL_BChain2
+    IBCS2_7 (BUF_CS_7 CS_7 VDD VSS) CSEL_BChain2
+    IBCSB1_0 (PRE_NCS_0 BUF_NCS_0 VDD VSS) CSEL_BChain1
+    IBCSB1_1 (PRE_NCS_1 BUF_NCS_1 VDD VSS) CSEL_BChain1
+    IBCSB1_2 (PRE_NCS_2 BUF_NCS_2 VDD VSS) CSEL_BChain1
+    IBCSB1_3 (PRE_NCS_3 BUF_NCS_3 VDD VSS) CSEL_BChain1
+    IBCSB1_4 (PRE_NCS_4 BUF_NCS_4 VDD VSS) CSEL_BChain1
+    IBCSB1_5 (PRE_NCS_5 BUF_NCS_5 VDD VSS) CSEL_BChain1
+    IBCSB1_6 (PRE_NCS_6 BUF_NCS_6 VDD VSS) CSEL_BChain1
+    IBCSB1_7 (PRE_NCS_7 BUF_NCS_7 VDD VSS) CSEL_BChain1
+    IBCS1_0 (PRE_CS_0 BUF_CS_0 VDD VSS) CSEL_BChain1
+    IBCS1_1 (PRE_CS_1 BUF_CS_1 VDD VSS) CSEL_BChain1
+    IBCS1_2 (PRE_CS_2 BUF_CS_2 VDD VSS) CSEL_BChain1
+    IBCS1_3 (PRE_CS_3 BUF_CS_3 VDD VSS) CSEL_BChain1
+    IBCS1_4 (PRE_CS_4 BUF_CS_4 VDD VSS) CSEL_BChain1
+    IBCS1_5 (PRE_CS_5 BUF_CS_5 VDD VSS) CSEL_BChain1
+    IBCS1_6 (PRE_CS_6 BUF_CS_6 VDD VSS) CSEL_BChain1
+    IBCS1_7 (PRE_CS_7 BUF_CS_7 VDD VSS) CSEL_BChain1
+    ITMG (CLK CSEL NPRECH NSAPREC SAE VDD VSS WEN WLEN CKD_WR) timingBlock
+    IColDec (VDD VSS CKD_AC_0 CKD_AC_1 CKD_AC_2 DEC_AC_0 DEC_AC_1 DEC_AC_2 \
+        DEC_AC_3 DEC_AC_4 DEC_AC_5 DEC_AC_6 DEC_AC_7) colDecoder
+    IPD (CKD_AR_0 CKD_AR_1 CKD_AR_2 CKD_AR_3 CKD_AR_4 CKD_AR_5 CKD_AR_6 \
+        CKD_AR_7 CKD_AR_8 PRE5_3_0 PRE5_3_1 PRE5_3_2 PRE5_3_3 PRE5_3_4 \
+        PRE5_3_5 PRE5_3_6 PRE5_3_7 PRE8_6_0 PRE8_6_1 PRE8_6_2 PRE8_6_3 \
+        PRE8_6_4 PRE8_6_5 PRE8_6_6 PRE8_6_7 VDD VSS WLEN WLclk_0 WLclk_1 \
+        WLclk_2 WLclk_3 WLclk_4 WLclk_5 WLclk_6 WLclk_7) preDecode
+    IAC_0 (CLK AC_0 CKD_AC_0 VDD VSS) DFF
+    IAC_1 (CLK AC_1 CKD_AC_1 VDD VSS) DFF
+    IAC_2 (CLK AC_2 CKD_AC_2 VDD VSS) DFF
+    IAR_0 (CLK AR_0 CKD_AR_0 VDD VSS) DFF
+    IAR_1 (CLK AR_1 CKD_AR_1 VDD VSS) DFF
+    IAR_2 (CLK AR_2 CKD_AR_2 VDD VSS) DFF
+    IAR_3 (CLK AR_3 CKD_AR_3 VDD VSS) DFF
+    IAR_4 (CLK AR_4 CKD_AR_4 VDD VSS) DFF
+    IAR_5 (CLK AR_5 CKD_AR_5 VDD VSS) DFF
+    IAR_6 (CLK AR_6 CKD_AR_6 VDD VSS) DFF
+    IAR_7 (CLK AR_7 CKD_AR_7 VDD VSS) DFF
+    IAR_8 (CLK AR_8 CKD_AR_8 VDD VSS) DFF
+    IWR (CLK WR CKD_WR VDD VSS) DFF
+ends TIMING_PREDEC
+// End of subcircuit definition.
+
+
+// Cell name: TIMING_PREDEC_INST
+I0 (AC_0 AC_1 AC_2 AR_0 AR_1 AR_2 AR_3 AR_4 AR_5 AR_6 AR_7 AR_8 CLK CS_0 \
+        CS_1 CS_2 CS_3 CS_4 CS_5 CS_6 CS_7 NCS_0 NCS_1 NCS_2 NCS_3 NCS_4 \
+        NCS_5 NCS_6 NCS_7 NPRECH NSAPREC PRE5_3_0 PRE5_3_1 PRE5_3_2 \
+        PRE5_3_3 PRE5_3_4 PRE5_3_5 PRE5_3_6 PRE5_3_7 PRE8_6_0 PRE8_6_1 \
+        PRE8_6_2 PRE8_6_3 PRE8_6_4 PRE8_6_5 PRE8_6_6 PRE8_6_7 SAE VDD VSS \
+        WEN WLclk_0 WLclk_1 WLclk_2 WLclk_3 WLclk_4 WLclk_5 WLclk_6 \
+        WLclk_7 WR) TIMING_PREDEC
+
+//Input drivers for DUT
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//two lines per predecode set 8-6,5-3,2-0 switch in the worst case - one goes off and one turns on.
+//This would mean 6 of the long vertical wires switching
+//For col-decode, only one long decoded line can switch on and another off in a given cycle
+VAR0 ( AR_0_IN 0 ) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=0.75*tper period=1.5*tper
+VAR3 ( AR_3_IN 0 ) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=0.75*tper period=1.5*tper
+VAR6 ( AR_6_IN 0 ) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=0.75*tper period=1.5*tper
+VAC (AC_0_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=0.75*tper period=1.5*tper
+IB00 (AR_0_IN AR_0 VDD VSS) buffer
+IB03 (AR_3_IN AR_3 VDD VSS) buffer
+IB06 (AR_6_IN AR_6 VDD VSS) buffer
+IB1 (AC_0_IN AC_0 VDD VSS) buffer
+
+VVCLK ( CLK 0 ) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/2 period=tper
+//IB2 (CLK_IN CLK VDD VSS) buffer
+
+//Read and write combined in the same sim or else the switching of the logic that generates WEN when WR switches will not be considered
+VWrite ( WR_IN 0 ) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=0.75*tper period=1.5*tper
+IB3 (WR_IN WR VDD VSS) buffer
+
+//Caps on timing block outputs - metal cap proportional to cols and whatever gate cap each control is driving
+
+//NCS<i>,CS<i> - connect to word-sizex2 FETs
+//selection switches between words 0 and 1
+CCS_0 (CS_0 0) capacitor c=NC*cwl+2*ws*wncs*cg*1e6
+CCS_1 (CS_1 0) capacitor c=NC*cwl+2*ws*wncs*cg*1e6
+CNCS_0 (NCS_0 0) capacitor c=NC*cwl+2*ws*wpcs*cg*1e6
+CNCS_1 (NCS_1 0) capacitor c=NC*cwl+2*ws*wpcs*cg*1e6
+
+//NPRECH - connect to 3 pfets per column
+CPCH (NPRECH 0) capacitor c=3*NC*wpch*cg*1e6+NC*cwl
+
+//NSAPREC - connect to 2 pfets per SA
+CSAP (NSAPREC 0) capacitor c=NC*cwl+2*wsapc*cg*1e6*ws
+
+//SAE - connect to 6 pfets and 1 nfets per SA, all min width
+CSAE (SAE 0) capacitor c=NC*cwl+7*wdef*cg*1e6*ws
+
+//WEN - connect to ws number of 4x-size inverters
+CWN (WEN 0) capacitor c=NC*cwl
+IINV (VSS OUT0 VDD VSS) inverter m=ws*4
+
+//PRE*<0:7> - connect to input and gates in 8 WLD8s
+//Since AR0,3,6 are switching, the PRE*<0,1> switch
+IWLD0 (VSS PRE8_6_0 OUT1 VDD VSS) AND2 m=8*8
+IWLD1 (VSS PRE8_6_1 OUT2 VDD VSS) AND2 m=8*8
+IWLD2 (VSS PRE5_3_0 OUT3 VDD VSS) AND2 m=8*8
+IWLD3 (VSS PRE5_3_1 OUT4 VDD VSS) AND2 m=8*8
+CP860 (PRE8_6_0 0) capacitor c=NR*cbl
+CP861 (PRE8_6_1 0) capacitor c=NR*cbl
+CP530 (PRE5_3_0 0) capacitor c=NR*cbl
+CP531 (PRE5_3_1 0) capacitor c=NR*cbl
+
+//WLclk<0:7> - connect to input nand gates in NR/8 WL drivers
+//Same reasoning as for PRE*
+//The Nand input is being made min size while sweeping number of stages.
+IWLC0 (VSS WLclk_0 OUT5 VDD VSS) NAND2 m=NR/8
+IWLC1 (VSS WLclk_1 OUT6 VDD VSS) NAND2 m=NR/8
+CP200 (WLclk_0 0) capacitor c=NR*cbl
+CP201 (WLclk_1 0) capacitor c=NR*cbl
+
+ic I0.CKD_AR_0=pvdd \
+I0.CKD_AR_1=pvdd \
+I0.CKD_AR_2=pvdd \
+I0.CKD_AR_3=pvdd \
+I0.CKD_AR_4=pvdd \
+I0.CKD_AR_5=pvdd \
+I0.CKD_AR_6=pvdd \
+I0.CKD_AR_7=pvdd \
+I0.CKD_AR_8=pvdd \
+I0.CKD_AC_0=pvdd \
+I0.CKD_AC_1=pvdd \
+I0.CKD_AC_2=pvdd 
+
+myOption options pwr=all

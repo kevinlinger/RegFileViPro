@@ -1,0 +1,101 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Circuit to find current 
+//============================================
+
+subckt Bitcell (BL BLB WL VDD VSS VBN VBP)
+ N1 (BL WL Q VBN) N_TRANSISTOR width=wdef length=ldef
+ N2 (QB Q VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ P2 (QB Q VDD VBP) P_TRANSISTOR width=wpu length=lpu
+ N3 (Q QB VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ P3 (Q QB VDD VBP) P_TRANSISTOR width=wpu length=lpu
+ N4 (BLB WL QB VBN) N_TRANSISTOR width=wdef length=ldef
+ends Bitcell
+
+
+subckt Inv (In Out VDD VSS VBN VBP)
+ P1 (VDD In Out VBP) P_TRANSISTOR width=wdef length=ldef
+ N1 (VSS In Out VBN) N_TRANSISTOR width=wdef length=ldef
+ends Inv
+
+
+//Precharge is active low
+subckt Charger (Pre Wr Data BL BLB VDD VSS VBN VBP)
+ Pr  (BL Pre VDD VBP) P_TRANSISTOR width=54*wdef length=ldef
+ Pr1 (BLB Pre VDD VBP) P_TRANSISTOR width=54*wdef length=ldef 
+ //PassGates for write
+ P1 (BL WrB A2 VBP)  P_TRANSISTOR width=wdef length=ldef
+ N1 (BL Wr A2 VBN) N_TRANSISTOR width=wdef length=ldef
+ 
+ P2 (BLB WrB A3 VBP)  P_TRANSISTOR width=wdef length=ldef
+ N2 (BLB Wr A3 VBN) N_TRANSISTOR width=wdef length=ldef
+ //Inverters =>buffers for Data and DataB
+ I1 (Data A1 VDD VSS VBN VBP) Inv m=2
+ I2 (A1 A2 VDD VSS VBN VBP) Inv m=8
+ I3 (A4 A3 VDD VSS VBN VBP) Inv m=8
+ I4 (A5 A4 VDD VSS VBN VBP) Inv m=2
+ I5 (Data A5 VDD VSS VBN VBP) Inv m=1
+
+ I6 (Wr WrB VDD VSS VBN VBP) Inv m=1 
+ends Charger
+
+//Column of memory + the precharge/data
+subckt MemCol (Pre Data Wr WL0 WL1 Csel VDD VSS VBN VBP)
+ Ch (Pre Wr Data BLch BLBch VDD VSS VBN VBP) Charger
+ Cell1 (BL BLB WL0 VDD VSS VBN VBP) Bitcell
+ Dummy (BL BLB VSS VDD VSS VBN VBP) Bitcell m=rows
+ Cell2 (BL BLB WL1 VDD VSS VBN VBP) Bitcell
+ Ip (BLch BL) iprobe
+ IpB (BLBch BLB) iprobe
+ //passgate
+ N1 (BL Csel M1 VBN) N_TRANSISTOR width=wdef length=ldef
+ P1 (BL CselB M1 VBP) P_TRANSISTOR width=wdef length=ldef
+ //Equalising PMOS
+ P3 (BLB Pre BL VBP) P_TRANSISTOR width=wdef length=ldef
+ //PassGate
+ N4 (BLB Csel M2 VBN) N_TRANSISTOR width=wdef length=ldef
+ P4 (BLB CselB M2 VBP) P_TRANSISTOR width=wdef length=ldef
+ //Capacitance for BL load
+ C1 (BL VSS) capacitor c=cap
+ C2 (BLB VSS) capacitor c=cap
+ I1 (Csel CselB VDD VSS VBN VBP) Inv
+//set initial condition of the column set to worse case
+ic Cell1.Q = pvdd Cell1.QB = 0 Cell2.Q = pvdd Cell2.QB = 0 Dummy.Q = pvdd Dummy.QB=0  BL=pvdd BLB = pvdd 
+ends MemCol
+
+
+subckt MemArray (Pre Data0 Data1 Data2 Data3 Data4 Data5 Data6 Data7 Wr WL0 WL1 Csel VDD VSS VBN VBP)
+ Col0 (Pre Data0 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ ColW (Pre Data1 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol m=7
+ ColR (Pre VSS VSS WL0 WL1 VSS VDD VSS VBN VBP) MemCol
+ DumCol (Pre VSS VSS WL0 WL1 VSS VDD VSS VBN VBP) MemCol m=columns
+
+ends MemArray
+
+//============================================
+// Measure cell current 
+//============================================
+
+C0 (Pre Data0 Data1 Data2 Data3 Data4 Data5 Data6 Data7 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemArray
+
+VWL0 (WL0 0) vsource type=pulse val0=0 val1=pvdd delay=0.1n rise=100p fall=100p width=Pwi
+
+VPre (Pre 0) vsource type=pulse val0=0 val1=pvdd delay=0 rise=100p fall=100p width=Pwi + 0.1n
+
+VWL1 (WL1 0) vsource type=dc dc=0 
+
+VWr (Wr 0) vsource type=dc dc=pvdd
+
+VData0 (Data0 Data1) vsource type=dc dc=0
+
+VCsel (Csel 0) vsource type=dc dc = 0
+
+opt options pwr=all currents=all
+
+
+

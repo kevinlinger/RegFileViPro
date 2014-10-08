@@ -1,0 +1,8 @@
+subckt PD_TRANSISTOR D G S B
+
+parameters width=0.6u length=0.15u
+
+NX (D G S B) n_std_lvt w=width l=length
+
+ends PD_TRANSISTOR
+

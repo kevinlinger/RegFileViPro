@@ -1,0 +1,22 @@
+Old specification:
+------------------
+Inverter pmos width and nand nmos width are swept for different number of cells on the WL. Peak and average power, and delay are measured.
+
+The data is recorded in triples (average pwr, peak pwr, delay) with the values for a given pmos inv width per line for each value of number of columns (WL cap)
+
+Optimization knobs:
+device sizes in nand and inv of WL driver
+wp_inv, wn_nand
+
+Output format:
+
+data.txt
+0           w_nand[1]	    0               0               0               w_nand[2]	    0               0               0
+w_inv[1]    avg_pwr	    pk_pwr	    dly		    trise          ..................................................  
+w_inv[2]   ..................................................................................................................
+
+New specification:
+------------------
+Final inverter pmos width is alone swept. The inverter nmos is half the width of the pmos and the preceeding nand follows a fo4 rule. 
+
+The width may be constrained not at the minimum but at a larger value depending on ease and symmetry of layout. For example, the WL Drivers are easily pitchmatched and symmetric about the x-axis if the min. width for nand FETs is constrained to 0.2u instead of the min. width of 0.12u, and that for inverters to 0.4 (with 2 fingers) instead of 0.12u. This is what was done for the fsl 65 tapeout.

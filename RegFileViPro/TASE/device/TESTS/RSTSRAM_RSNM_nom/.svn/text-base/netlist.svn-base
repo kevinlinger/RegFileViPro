@@ -1,0 +1,58 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVBP (VBP 0) vsource dc=0
+VVSS (VSS 0) vsource dc=0
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+  MT (BL WL OUT VBN) N_TRANSISTOR width=wna length=lna
+ends HALFCELL
+
+//============================================
+// Reset Half Cell
+//============================================
+subckt RSTHCELL (IN OUT RRST CRST VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+  MT (RRST CRST OUT VBN) N_TRANSISTOR width=wrs length=lrs
+ends RSTHCELL
+
+//====================================================
+// Subcircuit to measure SNM value
+//====================================================
+subckt SNMmeas (U INV1in INV1out INV2in INV2out v1mv2)
+  e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+  e2 (INV1in 1 v1 0) vcvs gain=1/sqrt(2)
+  ev1 (v1 U INV1out 0) vcvs gain=sqrt(2)
+  Rdummy  (v1 0)  resistor r=100M
+  Rdummy2 (v2 0) resistor r=100M
+  Rdummy3 (v1mv2 0) resistor r=100M
+
+  e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+  e4 (INV2in 3 v2 0) vcvs gain=1/sqrt(2)
+  enu (nu 0 U 0) vcvs gain=-1
+  ev2 (v2 nu INV2out 0) vcvs gain=sqrt(2)
+  ediff1 (negv2 0 v2 0) vcvs gain=-1
+  ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+ends SNMmeas
+
+
+//============================================
+// Test Read SNM
+//============================================
+ICellAh (in1h out1h BL WL VDD VBP VSS VBN) HALFCELL
+ICellBi (in2h out2h RRST CRST VDD VBP VSS VBN) RSTHCELL
+Isnmh (U in1h out1h in2h out2h v1mv2h) SNMmeas
+
+VU (U 0) vsource dc=pvIn
+VWL (WL 0) vsource dc=pvdd
+VBL (BL 0) vsource dc=pvdd
+VRST (RRST 0) vsource dc=pvdd
+VCRST (CRST 0) vsource dc=0

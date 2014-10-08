@@ -1,0 +1,14 @@
+R.W.Mann
+node and read delay generated in file = tread_out.txt.
+
+
+need to specify the following in the *.ini file:
+
+pvdd= vdd
+lbl = level of low bitline in write
+bitline = level of high bitline in write
+wlv = level of WL 
+pvbn = pwell voltage
+pvbp = nwell voltage
+pvss = cell VSS level
+blcap = capacitance of bit line

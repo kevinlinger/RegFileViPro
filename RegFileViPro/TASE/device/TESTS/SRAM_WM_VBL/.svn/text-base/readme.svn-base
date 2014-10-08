@@ -1,0 +1,31 @@
+##### 2008-02-11  by jw4pg #####
+Original spec: Write Margin (BL criterion) distribution
+Write margin 0 is measured by sweeping down the voltage of bitline that connects with node '1' until the internal nodes flip.
+
+Currently only the write 1 (cell holding '0' before write) scenario is simulated. Later this test should also include write 0 scenario. And the final write SNM is the smaller of the values from these 2 scenarios.
+
+
+##### 2008-02-21  by jw4pg #####
+This test now supports both write '1' and '0' scenario.
+
+
+##### 2008-05-19  by jw4pg #####
+Update input.tpl and plotGen.m:
+  Add a monteCarlo expression "WM_QmQB" to save the voltage difference 
+between QB and Q when VBL=VDD. This is needed since Q and QB might not 
+cross over during BL sweeping but start from the value opposite to the 
+initial node setting and maintain that value all the time.  
+  It occurs when the cell's write ability is so strong that Q 
+and QB flip at the instant of rising WL before sweeping BL down, which 
+is a write success but also a destructive read failure. In this case, 
+write margin should be equal to VDD although the measured data 
+"WM_fm_Ird"/"WM_fm_VQ" is zero/nil because of no cross-over point.
+
+
+##### 2008-09-23  by jw4pg #####
+Change to work with the relative model path defined in the config file
+
+
+##### 2008-11-12 by jw4pg #####
+Use the dedicated power supply for cell array (pvdda) and wordline (pvddwl)
+ to evaluate write assist techniques 

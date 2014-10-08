@@ -1,0 +1,48 @@
+
+SAOffset =0.7
+readEnergy= 1.25985e-12
+readDelay= 3.83658e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =0.8
+readEnergy= 1.46901e-12
+readDelay= 2.63739e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =0.9
+readEnergy= 1.69954e-12
+readDelay= 2.00543e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1
+readEnergy= 1.95591e-12
+readDelay= 7.50383e-09
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1.1
+readEnergy= 2.24879e-12
+readDelay= 1.45263e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1.2
+readEnergy= 2.57654e-12
+readDelay= 1.30155e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1.3
+readEnergy= 2.95618e-12
+readDelay= 1.18952e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1.4
+readEnergy= 3.37381e-12
+readDelay= 1.10538e-10
+writeEnergy= 0
+writeDelay= 0

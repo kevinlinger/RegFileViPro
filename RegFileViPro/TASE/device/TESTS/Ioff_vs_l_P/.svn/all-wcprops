@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/Ioff_vs_l_P
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/Ioff_vs_l_P/plotGen.m
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/Ioff_vs_l_P/data.ini
+END
+Ioff_vs_l_P.scs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/Ioff_vs_l_P/Ioff_vs_l_P.scs
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/Ioff_vs_l_P/input.tpl
+END

@@ -1,0 +1,43 @@
+//SRAM  use LPPTM models
+// 
+// RWM   --10/13/2008
+
+/////////////////////////////////////////////////////
+// Options 
+/////////////////////////////////////////////////////
+//// Options set here will be overwritten by the values set in OCEAN script;
+//// So options will be set in OCEAN script
+
+// voltages
+VVDD ( VDD 0 ) vsource dc=pvdd
+VVSS ( VSS 0 ) vsource dc=0
+VVBL ( BL 0 ) vsource dc=pvdd
+VBLB ( BLB 0 ) vsource dc=pvdd
+VVWL ( VWL 0 ) vsource dc=0
+VVBN ( VBN 0 ) vsource dc=0
+VVNW (VNW 0 ) vsource dc=pvdd
+
+//define current value for p+ drain intersecting alpha particle spike
+I1 (B 0) isource dc=pvdd type=exp  val0=0 val1=-Ic  td1=100p td2=100.1p tau1=0.1p tau2=5.5p
+
+
+/////////////////////////////////////////////////////
+// SubCircuits:  cell 
+/////////////////////////////////////////////////////
+//  drain gate source substrate
+////////////////////////////////
+
+
+XPpur ( A B VDD VNW ) P_TRANSISTOR width=wpu length=lpu
+XNpdr ( A B VSS VBN ) N_TRANSISTOR width=wpd length=lpd
+XNpgr ( BL VWL A VBN)  N_TRANSISTOR width=wpg length=lpg
+XPpul ( B A VDD VNW ) P_TRANSISTOR width=wpu length=lpu
+XNpdl ( B A VSS VBN ) N_TRANSISTOR width=wpd length=lpd
+XNpgl ( BLB VWL B VBN) N_TRANSISTOR width=wpg length=lpg
+
+
+nodeset A=pvdd B=0
+
+c3 (A B) capacitor c=nncap
+//r1 (A B) resistor r=res1
+

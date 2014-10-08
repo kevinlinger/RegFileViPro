@@ -1,0 +1,25 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Half cell for SNM test
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//============================================
+// Test Read SNM
+//============================================
+ICellAh (QB Q BL WL VDD VDD VSS VSS) HALFCELL 
+ICellBh (Q QB BLB WL VDD VDD VSS VSS) HALFCELL
+
+VWL (WL 0) vsource type=pulse val0=0 val1=pvdd delay=0.01n rise=0.01n fall=0.01n width=1n period=2n
+
+ic Q=0 QB=1.0 BL=pvdd BLB=pvdd
+

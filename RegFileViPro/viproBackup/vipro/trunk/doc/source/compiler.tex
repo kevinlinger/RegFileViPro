@@ -1,0 +1,31 @@
+\section{Compiler}
+\label{sec:compiler}
+
+The compiler in ViPro consists of technology agnositic schematic and layout generators. These are described in the following subsections.
+
+\subsection{Schematic Generator}
+compiler/schematic contains the SKILL scripts used to generate the SRAM schematic. The top-level wrapper script is darUvaEceSRAM\_Schematic.il. It takes 3 files as inputs - inputs.txt, minSizes.txt, and sizes.txt. First, the basic gates are generated. Next, the leaf nodes, such as WL drivers, SA, CD etc. are generated. Finally, these are hierarchically tiled to generate the full SRAM schematic.
+
+To generate an SRAM schematic in a new technology, follow these steps.
+\begin{enumerate}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item Add the technology template directory (template/\textless technology \textgreater/) with the include.scs, subN.scs and subP.scs files.
+\item Add the RVPtpl\_ \textless technology \textgreater .ini file to the template/ directory.
+\item Modify configuration/user.m and configuration/bitcellSizes.m. 
+\item Run the following command. "perl ViPro.pl --clean --char". This will create ctrlBufChains\_*.txt in the files/ directory.
+\item Create "optParams.txt" file in the files directory. This file currently looks like this:
+\begin{verbatim}
+decoder 9 1 1
+ctrlBuf 4	5	4	3	3   4.34	4.48	4.14	7.41	6.24
+\end{verbatim}
+The first line specifies the number of row address bits, the number of predecode \textit{buffers}, and the number of WL \textit{buffers}. The second line specifies the number of \textit{inveter} stages and fanout for the buffer chains corresponding to the timing block signals going to the bitslice (CSEL, NPRECH, NSAPREC, SAE, WEN). These numbers can be got from files/ctrlBufChains\_*.txt from the line corresponding to the required column-muxing.
+
+Through these steps ViPro should ensure a working SRAM. The user only needs to select sufficient number of decoder buffer stages in the first line of optParams.txt. Eventually, the idea is for optParams.txt to be generated automatically from the optimization.
+\end{enumerate}
+
+\subsection{Layout Generator}
+The layout generator is currently hard-coded for a particular technology (st65). It tiles together manually created leaf node layouts to first create the WL driver, bitslice, and the array. These blocks are then abutted together with the timing block (assumed synthesized) to generate the layout of the SRAM.
+
+Eventually, the idea is to use pycell to create at least the leaf layouts for any technology. Then, either SKILL or pycell itself can be used again to hierarchically create the top-level SRAM layout.
+

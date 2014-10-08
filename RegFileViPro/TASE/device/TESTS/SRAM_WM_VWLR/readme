@@ -1,0 +1,16 @@
+##### 2008-02-11 by jw4pg #####
+Original spec: Write Margin (WL criterion) distribution
+
+Measurement:
+The half cell initially holding '1' is exemined. Its input is set to be VOL of the other half of the cell, which is under the read '0' condition. Its wordline voltage is swept from 0 until its output reaches VM of the other half of the cell.
+
+Currently only the write 1 (cell holding '0' before write) scenario is simulated. Later this test should also include write 0 scenario. And the final write SNM is the smaller of the values from these 2 scenarios.
+
+
+##### 2008-02-21 by jw4pg #####
+support both write 1 and write 0 case now
+
+
+##### 2008-09-23  by jw4pg #####
+Change to work with the relative model path defined in the config file
+

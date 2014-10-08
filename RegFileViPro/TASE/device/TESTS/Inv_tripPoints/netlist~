@@ -1,0 +1,15 @@
+subckt inv VSS VDD OUT IN
+    
+M1 (st1 IN VDD VDD) P_TRANSISTOR width=wdef length=ldef
+M2 (st2 IN st1 VDD) P_TRANSISTOR width=wdef length=ldef
+M3 (st3 IN st2 VDD) P_TRANSISTOR width=wdef length=ldef
+M4 (OUT IN st3 VDD) P_TRANSISTOR width=wdef length=ldef
+M5 (st2 OUT VSS VDD) P_TRANSISTOR width=wdef length=ldef
+M5 (OUT IN VSS VSS) N_TRANSISTOR width=4*wdef length=ldef
+ends inv
+
+I0 (VSS VDD OUT IN) inv
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VIN (IN 0) vsource dc=pvin

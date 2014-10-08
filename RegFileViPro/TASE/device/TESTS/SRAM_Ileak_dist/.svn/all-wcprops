@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/netlist
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/plotGen.m
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/ocnloader
+END
+plotGen.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/plotGen.tpl
+END
+plotGen.m.r50
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/plotGen.m.r50
+END
+plotGen.m.mine
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/plotGen.m.mine
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/input.tpl
+END
+plotGen.m.r55
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/plotGen.m.r55
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_Ileak_dist/readme
+END

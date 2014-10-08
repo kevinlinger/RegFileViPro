@@ -1,0 +1,36 @@
+Change user.m, B=1, R=512, C=2
+wdelay:1.286144e-09	wenergy:4.416899e-12	rdelay:1.413626e-09	renergy:2.304202e-12		totalE:6.721101e-12	totalD:1.413626e-09
+Change user.m, B=1, R=256, C=4
+wdelay:7.810024e-10	wenergy:4.233011e-12	rdelay:1.172179e-09	renergy:2.440668e-12		totalE:6.673679e-12	totalD:1.172179e-09
+Change user.m, B=1, R=128, C=8
+wdelay:6.222259e-10	wenergy:5.058549e-12	rdelay:1.127428e-09	renergy:2.921848e-12		totalE:7.980397e-12	totalD:1.127428e-09
+Change user.m, B=2, R=512, C=1
+wdelay:1.274079e-09	wenergy:4.129929e-12	rdelay:1.542447e-09	renergy:2.080878e-12		totalE:6.210807e-12	totalD:1.542447e-09
+Change user.m, B=2, R=256, C=2
+wdelay:7.567852e-10	wenergy:3.678878e-12	rdelay:1.290971e-09	renergy:2.061934e-12		totalE:5.740812e-12	totalD:1.290971e-09
+Change user.m, B=2, R=128, C=4
+wdelay:5.293751e-10	wenergy:3.996046e-12	rdelay:1.219538e-09	renergy:2.325513e-12		totalE:6.321559e-12	totalD:1.219538e-09
+Change user.m, B=2, R=64, C=8
+wdelay:6.211187e-10	wenergy:5.064253e-12	rdelay:1.287105e-09	renergy:2.791190e-12		totalE:7.855443e-12	totalD:1.287105e-09
+Change user.m, B=4, R=256, C=1
+wdelay:7.446017e-10	wenergy:3.392309e-12	rdelay:1.264209e-09	renergy:1.859546e-12		totalE:5.251855e-12	totalD:1.264209e-09
+Change user.m, B=4, R=128, C=2
+wdelay:5.113497e-10	wenergy:3.442219e-12	rdelay:1.172880e-09	renergy:1.930803e-12		totalE:5.373022e-12	totalD:1.172880e-09
+Change user.m, B=4, R=64, C=4
+wdelay:5.278175e-10	wenergy:4.002471e-12	rdelay:1.194861e-09	renergy:2.172824e-12		totalE:6.175295e-12	totalD:1.194861e-09
+Change user.m, B=4, R=32, C=8
+wdelay:6.140512e-10	wenergy:5.714392e-12	rdelay:1.334818e-09	renergy:2.995042e-12		totalE:8.709434e-12	totalD:1.334818e-09
+Change user.m, B=8, R=128, C=1
+wdelay:5.036283e-10	wenergy:3.156298e-12	rdelay:1.146375e-09	renergy:1.806310e-12		totalE:4.962608e-12	totalD:1.146375e-09
+Change user.m, B=8, R=64, C=2
+wdelay:4.799715e-10	wenergy:3.449633e-12	rdelay:1.148404e-09	renergy:1.792710e-12		totalE:5.242343e-12	totalD:1.148404e-09
+Change user.m, B=8, R=32, C=4
+wdelay:5.626335e-10	wenergy:4.655394e-12	rdelay:1.243804e-09	renergy:2.397733e-12		totalE:7.053127e-12	totalD:1.243804e-09
+Change user.m, B=8, R=16, C=8
+wdelay:8.236895e-10	wenergy:7.162131e-12	rdelay:1.475614e-09	renergy:3.568500e-12		totalE:1.0730631e-11	totalD:1.475614e-09
+Change user.m, B=16, R=64, C=1
+wdelay:4.623962e-10	wenergy:3.164828e-12	rdelay:1.121586e-09	renergy:1.755835e-12		totalE:4.920663e-12	totalD:1.121586e-09
+Change user.m, B=16, R=32, C=2
+wdelay:5.473845e-10	wenergy:4.104606e-12	rdelay:1.197422e-09	renergy:1.979548e-12		totalE:6.084154e-12	totalD:1.197422e-09
+Change user.m, B=16, R=16, C=4
+wdelay:7.952976e-10	wenergy:6.107628e-12	rdelay:1.386016e-09	renergy:2.939946e-12		totalE:9.047574e-12	totalD:1.386016e-09

@@ -1,0 +1,17 @@
+simulator lang=spectre
+
+include "../../../SUBCKTS/bitcell.scs"
+
+// Voltage sources
+_VDD (VDD 0) vsource dc=pvdd
+_VSS (VSS 0) vsource dc=0
+
+_VWL (WL 0) vsource dc=pvin
+_VBL (BL 0) vsource dc=pvdd
+_VBLB (BLB 0) vsource dc=pvdd
+
+// Devices
+ICell (BL BLB WL VDD VDD VSS VSS) BITCELL
+
+// DC convergence
+nodeset ICell.Q=0 ICell.QB=pvdd

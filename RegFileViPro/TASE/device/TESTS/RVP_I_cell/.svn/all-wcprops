@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_I_cell
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_I_cell/plotGen.m
+END
+RVP_I_cell.scs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_I_cell/RVP_I_cell.scs
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_I_cell/data.ini
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_I_cell/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_I_cell/readme
+END

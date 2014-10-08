@@ -1,0 +1,23 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Half cell for Pullup ratio test
+//============================================
+subckt HALFCELLP (Q BL WL VDD VBP VBN)
+  MP (Q 0 VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MT (BL WL Q VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELLP
+
+//============================================
+// Test Read SNM
+//============================================
+ICellAh (Q BL WL VDD VDD VSS) HALFCELLP 
+
+VWL (WL 0) vsource type=pulse val0=0 val1=pvdd delay=0.01n rise=0.01n fall=0.01n width=1n period=2n
+VBL (BL 0) vsource dc=0
+
+ic Q=pvdd

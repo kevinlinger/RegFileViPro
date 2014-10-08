@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay/netlist
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay/plotGen.m
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay/ocnloader
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/8TSRAM_RdDelay/input.tpl
+END

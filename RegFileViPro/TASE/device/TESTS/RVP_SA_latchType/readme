@@ -1,0 +1,15 @@
+Name - Satya Nalam
+
+date updated - 03/02/2009
+
+Brief description of the test - Power, energy and delay for latch type SA
+
+Detailed description
+Transient sim, 
+1. Calculate delay for SA to resolve, starting from SAEN going high
+2. Avg power of SA
+3. Avg power * resolution time = SA Energy
+Need to refine the test more. Only power is being calculated right now. 
+
+list of any additional parameters needed (this is especially helpful as the tests grow more complicated)
+deltavbl - the bitline differential

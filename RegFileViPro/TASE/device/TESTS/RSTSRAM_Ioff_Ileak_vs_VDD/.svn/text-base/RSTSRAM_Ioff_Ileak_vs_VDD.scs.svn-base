@@ -1,0 +1,37 @@
+simulator lang=spectre
+
+// Voltage sources
+_VDD (VDD 0) vsource dc=pvdd
+_VSS (VSS 0) vsource dc=0
+
+_VWL (WL 0) vsource dc=0
+_VWLR (WLR 0) vsource dc=0
+_VBL (BL 0) vsource dc=pvdd
+_VBLR (BLR 0) vsource dc=pvdd
+_VBP (VBP 0) vsource dc=pvdd
+
+//============================================
+// RST Bitcell
+//============================================
+subckt bitcell5TRST BL RRST VBN VBP VDD VSS WL CRST
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+MTR (RRST CRST QB VBN) N_TRANSISTOR  width=wna length=lna
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wrs length=lrs
+ends bitcell5TRST
+
+// Devices
+ICell (BL_CELL BLR 0 VBP VDD_CELL VSS_CELL WL 0) bitcell5TRST
+//ICell (BL BLR_CELL 0 VBP VDD_CELL VSS_CELL WL 0) bitcell5TRST
+
+// Current probes
+IOFF BL BL_CELL iprobe
+//IOFF BLR BLR_CELL iprobe
+ILEAK_VDD VDD VDD_CELL iprobe
+ILEAK_VSS VSS_CELL VSS iprobe
+
+// DC convergence
+nodeset ICell.Q=0 ICell.QB=pvdd
+//nodeset ICell.QB=0 ICell.Q=pvdd

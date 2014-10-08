@@ -1,0 +1,30 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdda
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdda
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// bitcell
+//============================================
+subckt bitcell5TB BL VBN VBP VDD VSS WL
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wpu2 length=lpu2
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wpu1 length=lpu1
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wpd2 length=lpd2
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wpd1 length=lpd1
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wpg length=lpg
+ends bitcell5TB
+
+//============================================
+// Circuit to sweep WL
+//============================================
+ICell (BL VBN VBP VDD VSS WL) bitcell5TB
+
+nodeset ICell.QB=0 ICell.Q=pvdda
+
+VBL (BL 0) vsource dc=0
+
+// sweep WL
+VVIN (WL 0) vsource dc=pvin

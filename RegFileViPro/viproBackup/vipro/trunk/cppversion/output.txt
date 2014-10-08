@@ -1,0 +1,48 @@
+1 - 0
+technology = ibm45; memSize = 8192; rows = 512;  banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+2 - 0
+memSize = 8192; rows = 512;  banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+3 - 0
+rows = 512;  banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+4 - 0
+banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+5 - 0
+colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+6 - 0
+wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+7 - 0
+vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+8 - 0
+temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+9 - 0
+SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+10 - 0
+height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+11 - 0
+width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+12 - 0
+energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+13 - 0
+delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+14 - 0
+wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+15 - 0
+tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+
+16 - 0
+OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  ----
+

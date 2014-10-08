@@ -1,0 +1,30 @@
+Change user.m, B=1, R=512, C=2
+wdelay:1.288174e-09	wenergy:4.419401e-12	rdelay:1.422573e-09	renergy:2.310081e-12		totalE:6.729482e-12	totalD:1.422573e-09
+Change user.m, B=1, R=256, C=4
+wdelay:7.808977e-10	wenergy:4.237203e-12	rdelay:1.180123e-09	renergy:2.451174e-12		totalE:6.688377e-12	totalD:1.180123e-09
+Change user.m, B=1, R=128, C=8
+wdelay:6.222190e-10	wenergy:5.062515e-12	rdelay:1.129949e-09	renergy:2.929346e-12		totalE:7.991861e-12	totalD:1.129949e-09
+Change user.m, B=2, R=512, C=1
+wdelay:1.276073e-09	wenergy:4.145644e-12	rdelay:1.571079e-09	renergy:2.098270e-12		totalE:6.243914e-12	totalD:1.571079e-09
+Change user.m, B=2, R=256, C=2
+wdelay:7.566870e-10	wenergy:3.711422e-12	rdelay:1.338933e-09	renergy:2.098726e-12		totalE:5.810148e-12	totalD:1.338933e-09
+Change user.m, B=2, R=128, C=4
+wdelay:5.949665e-10	wenergy:4.057744e-12	rdelay:1.298003e-09	renergy:2.396157e-12		totalE:6.453901e-12	totalD:1.298003e-09
+Change user.m, B=2, R=64, C=8
+wdelay:7.523629e-10	wenergy:5.178001e-12	rdelay:1.422705e-09	renergy:2.911412e-12		totalE:8.089413e-12	totalD:1.422705e-09
+Change user.m, B=4, R=256, C=1
+wdelay:7.445068e-10	wenergy:3.439150e-12	rdelay:1.334109e-09	renergy:1.906509e-12		totalE:5.345659e-12	totalD:1.334109e-09
+Change user.m, B=4, R=128, C=2
+wdelay:5.800322e-10	wenergy:3.533369e-12	rdelay:1.294818e-09	renergy:2.026571e-12		totalE:5.55994e-12	totalD:1.294818e-09
+Change user.m, B=4, R=64, C=4
+wdelay:7.247458e-10	wenergy:4.176169e-12	rdelay:1.410817e-09	renergy:2.358906e-12		totalE:6.535075e-12	totalD:1.410817e-09
+Change user.m, B=8, R=128, C=1
+wdelay:5.722932e-10	wenergy:3.262340e-12	rdelay:1.292756e-09	renergy:1.910485e-12		totalE:5.172825e-12	totalD:1.292756e-09
+Change user.m, B=8, R=64, C=2
+wdelay:7.096460e-10	wenergy:3.654042e-12	rdelay:1.410554e-09	renergy:2.001606e-12		totalE:5.655648e-12	totalD:1.410554e-09
+Change user.m, B=8, R=32, C=4
+wdelay:7.096460e-10	wenergy:3.654042e-12	rdelay:1.410554e-09	renergy:2.001606e-12		totalE:5.655648e-12	totalD:1.410554e-09
+Change user.m, B=16, R=64, C=1
+wdelay:7.018341e-10	wenergy:3.384747e-12	rdelay:1.411591e-09	renergy:1.971187e-12		totalE:5.355934e-12	totalD:1.411591e-09
+Change user.m, B=16, R=32, C=2
+wdelay:7.018341e-10	wenergy:3.384747e-12	rdelay:1.411591e-09	renergy:1.971187e-12		totalE:5.355934e-12	totalD:1.411591e-09

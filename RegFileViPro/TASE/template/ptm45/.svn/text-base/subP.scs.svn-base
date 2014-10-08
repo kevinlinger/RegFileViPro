@@ -1,0 +1,15 @@
+subckt P_TRANSISTOR S G D B
+
+// Parameter Definition
+// mmen: enable mismatch 
+// var_nsigma: the specified vth mismatch 
+//            '0' ~ using monteCarlo generated mismatch
+//            '-1'~ -1 sigma mismatch (pmos becomes weaker)
+//            '1' ~ 1 sigma mismatch (pmos becomes stronger)
+
+parameters width=32n length=32n mmen=1 var_nsigma=0
+
+PX (S G D B) PFET w=width l=length mismatch=mmen nsigmadevmm=var_nsigma
+
+ends P_TRANSISTOR
+

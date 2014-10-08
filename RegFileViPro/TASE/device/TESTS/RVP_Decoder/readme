@@ -1,0 +1,1 @@
+Decoder characterization test. First the decoders that need to be characterized as determined by the capacity and the row and col-mux constrinats are determined. The corresponding netlists are copied and simulated.

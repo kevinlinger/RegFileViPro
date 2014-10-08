@@ -1,0 +1,52 @@
+
+//SRAM  use PTM models
+// 
+// RWM   --1/27/2009
+
+
+
+simulator lang=spectre
+
+// voltages
+VVDD ( VDD 0 ) vsource dc=pvdd
+VVSS ( VSS 0 ) vsource dc=pvss
+VVBL ( BL 0 ) vsource dc=bitline
+VBLB ( BLB 0 ) vsource dc=bitline
+//VVWL ( VWL 0 ) vsource dc=0
+VVBN ( VBN 0 ) vsource dc=pvbn
+VVBP (VBP 0 ) vsource dc=pvbp
+VA (A 0) vsource dc=pvIn
+VVWL (VWL 0) vsource dc=wlv
+VC (C 0) vsource dc=pvdd-pvIn
+
+
+
+/////////////////////////////////////////////////////
+// SubCircuits:  cell 
+/////////////////////////////////////////////////////
+//  drain gate source substrate
+////////////////////////////////
+
+//subckt F1 (A B BL BLB VWL VDD VSS VBP VBN)
+XPpur ( A B VDD VBP ) P_TRANSISTOR width=wpu length=lpu
+XNpdr ( A B VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+//XNpdr ( A B VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+XNpgr ( BL VWL A VBN)  N_TRANSISTOR width=wpg length=lpg
+XPpul ( B A VDD VBP ) P_TRANSISTOR width=wpu length=lpu
+XNpdl ( B A VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+//XNpdl ( B A VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+XNpgl ( BLB VWL B VBN) N_TRANSISTOR width=wpg length=lpg
+
+//nodeset A=0 B=pvdd
+
+XPpur1 ( D C VDD VBP ) P_TRANSISTOR width=wpu length=lpu
+XNpdr1 ( D C VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+//XNpdr1 ( D C VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+XNpgr1 ( BL VWL D VBN)  N_TRANSISTOR width=wpg length=lpg
+XPpul1 ( C D VDD VBP ) P_TRANSISTOR width=wpu length=lpu
+XNpdl1 ( C D VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+//XNpdl1 ( C D VSS VBN ) N_TRANSISTOR width=wpd length=lpd 
+XNpgl1 ( BLB VWL C VBN) N_TRANSISTOR width=wpg length=lpg
+
+
+

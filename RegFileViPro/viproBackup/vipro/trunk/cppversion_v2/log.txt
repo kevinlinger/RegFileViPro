@@ -1,0 +1,281 @@
+DAMN ---> technology = ptm32; memSize = 1024; rows = 64;  banks = 1; colMux = 1; wordSize = 16; vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> memSize = 1024; rows = 64;  banks = 1; colMux = 1; wordSize = 16; vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> rows = 64;  banks = 1; colMux = 1; wordSize = 16; vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> banks = 1; colMux = 1; wordSize = 16; vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> colMux = 1; wordSize = 16; vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> wordSize = 16; vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> vdd = 0.8; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> height = 0.34e-6; width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> width = 0.73e-6;  WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> WLBoost = 0; WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> WLoffset = 0.15;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> wnio = 8;   tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+DAMN ---> tasePath = /var/home/kal5nx/TASE;  SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+----SWEEP----
+SWEEP VDD 0.7 1.5 0.1 ./sweep_vddStaticReadptm32.txt OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+  	   NBANKS 1 32 	   NCOLS 1 8 	   NROWS 32 512 	     
+knob = NBANKS min = 1 max = 32
+NCOLS 1 8 	   NROWS 32 512 	     
+knob = NCOLS min = 1 max = 8
+NROWS 32 512 	     
+knob = NROWS min = 32 max = 512
+OBJ =   	   ENERGY 0  	   DELAY 1.15          KNOB = 
+Const Called
+ new2tpl
+  Initializing test: RVP_Gate_Capacitance
+ tpl2scs
+  Building test: RVP_Gate_Capacitance
+ ocn2out
+  Executing test: RVP_Gate_Capacitance
+ dat2img
+  Building graphical data for: RVP_Gate_Capacitance
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Gate_Capacitance
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RVP_Gate_Capacitance
+	w =0.07 	s =0.07 	t =0.28 	h =0.16 	k =2.2
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 1.72342e-10
+BM Output extracted
+output extraction done
+dynamic read delay = 1.72342e-10 dynamic read energy = 2.81325e-12
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 1.16448e-10
+BM Output extracted
+output extraction done
+dynamic read delay = 1.16448e-10 dynamic read energy = 3.82429e-12
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 8.88482e-11
+BM Output extracted
+output extraction done
+dynamic read delay = 8.88482e-11 dynamic read energy = 5.50931e-12
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 1.00376e-08
+BM Output extracted
+output extraction done
+dynamic read delay = 1.00376e-08 dynamic read energy = 8.50133e-12
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 6.30453e-11
+BM Output extracted
+output extraction done
+dynamic read delay = 6.30453e-11 dynamic read energy = 1.42817e-11
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 5.5403e-11
+BM Output extracted
+output extraction done
+dynamic read delay = 5.5403e-11 dynamic read energy = 2.64964e-11
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 4.8522e-11
+BM Output extracted
+output extraction done
+dynamic read delay = 4.8522e-11 dynamic read energy = 5.3481e-11
+write is 0 here
+start simulation
+perl /var/home/kal5nx/TASE/device/BIN/run.pl -i /var/home/kal5nx/TASE/template/RVP_DR_ptm32.ini
+ new2tpl
+  Initializing test: RF_Static_Read
+ tpl2scs
+  Building test: RF_Static_Read
+ ocn2out
+  Executing test: RF_Static_Read
+ dat2img
+  Building graphical data for: RF_Static_Read
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RF_Static_Read
+
+Report exists at: /net/plato.ee.Virginia.EDU/users/kal5nx/Desktop/vipro/trunk/cppversion_v2
+
+
+Build complete for:   RF_Static_Read
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_dynamicRead 4.20162e-11
+BM Output extracted
+output extraction done
+dynamic read delay = 4.20162e-11 dynamic read energy = 1.11137e-10
+write is 0 here
+dynamic read delay = 4.20162e-11 dynamic read energy = 1.11137e-10
+write is 0 here
+rEn= 2.77843e-11 rDel= 4.20162e-11
+wEn= 0 wDel= 0

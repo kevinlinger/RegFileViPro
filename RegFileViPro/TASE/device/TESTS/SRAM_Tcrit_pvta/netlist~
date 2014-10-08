@@ -1,0 +1,32 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt BITCELL (Q QB BL BLB WL VDD VBP VSS VBN)
+  MPL (Q QB VDD VBP) PU_TRANSISTOR width=wpu length=lpu pvta=vtpul
+  MNL (Q QB VSS VBN) PD_TRANSISTOR width=wpd length=lpd pvta=vtpdl
+  MTL (BL WL Q VBN) PG_TRANSISTOR width=wpg length=lpg pvta=vtpgl
+  MPR (QB Q VDD VBP) PU_TRANSISTOR width=wpu length=lpu pvta=vtpur
+  MNR (QB Q VSS VBN) PD_TRANSISTOR width=wpd length=lpd pvta=vtpdr
+  MTR (BLB WL QB VBN) PG_TRANSISTOR width=wpg length=lpg pvta=vtpgr
+ends HALFCELL
+
+//============================================
+// BITCELL
+//============================================
+ICellL (Q QB BL BLB WL VDD VBP VSS VBN) BITCELL
+
+ic Q=0 QB=pvdd
+
+VWL (WL 0) vsource type=pulse val0=0 val1=pvdd rise=pr fall=pf width=pw
+
+VBL (BL 0) vsource dc=pvdd
+VBLB (BLB 0) vsource dc=0
+
+VVBP (VBP 0) vsource dc=pvbp
+VVBN (VBN 0) vsource dc=0

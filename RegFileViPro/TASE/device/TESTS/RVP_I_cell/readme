@@ -1,0 +1,21 @@
+2008-01-07
+Original spec: 11. Ion vs. Ioff
+SRAM_Ion_Ioff_vs_VDD is a simulation which gives data on cell currents,
+including read current (Ion), with varying supply voltage.
+
+Currently the leakage currents are negative for some reason, even though the
+iprobes have all been set up in positive directions: current SHOULD flow from
+BL to Q2 since BL is at 1V and Q2 is at 0V, from VDD to VDD_OFFCELL because
+current can't possibly flow into the voltage source, and VSS_OFFCELL to VSS
+because current can't possibly flow out of ground.
+
+This analysis is run with a transient simulation from VDD=pvdd down to 0V at
+1u.  It cannot be accurately run with DC analysis because ic/nodeset isn't
+working to set the storage nodes and the only other way to run DC analysis is
+to assign voltage sources to the internal nodes, which would be incorrect for
+Ion since there is a read bump on the 0 node.
+
+2008-01-14T1920
+Switched back to DC analysis from transient analysis.  Major improvement -
+transient analysis showed _negative_ leakage currents for some reason.  The
+results look much better now.

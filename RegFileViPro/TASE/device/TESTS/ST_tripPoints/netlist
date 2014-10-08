@@ -1,0 +1,20 @@
+subckt ST VSS VDD OUT IN
+    // PMOS half of schmitt-trigger
+    P0 (INY IN  VDD VDD) P_TRANSISTOR width=wdef length=ldef
+    P1 (INY IN  OUT VDD) P_TRANSISTOR width=wdef length=ldef
+    P2 (INY OUT VVS VDD) P_TRANSISTOR width=wdef length=ldef
+
+    // NMOS half of schmitt-trigger
+    N0 (OUT IN  INX VSS) N_TRANSISTOR width=wdef length=ldef
+    N1 (INX IN  VSS VSS) N_TRANSISTOR width=wdef length=ldef
+    N2 (INX OUT VDD VSS) N_TRANSISTOR width=wdef length=ldef 
+
+    N3 (VVS VSS VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ends ST
+
+I0 (VSS VDD OUT IN) ST
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+//VIN (IN 0) vsource type=pulse val0=0 val1=pvdd rise=100p fallength=100p width=500p
+VIN (IN 0) vsource dc=pvin

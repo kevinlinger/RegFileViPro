@@ -1,0 +1,1 @@
+Measures the delay introduced by the WL. Measures the time difference between 50% point of the input WL pulse, the GWL pulse and the LWL pulse. The capacitance  values are taken from the PTM website

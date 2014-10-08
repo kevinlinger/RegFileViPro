@@ -1,0 +1,13 @@
+02/23/2009
+SRAM_Tcrit_mc
+
+This template is similar to the SRAM_Tcrit_mc test, except that instead of running monte carlo, the threshold value of each transistor is swept manually from nominal - 0.2V to nomimal + 0.2V.
+
+For write, the Tcrit is the max of the Tcrit when cell holds 0 and holds 1.
+
+Template-specific parameters specified by the user:
+cycle time <tp>
+WL rise and fall times <pr> <pf>
+min and max WL pulse width <minpw> <maxpw>
+start and stop monteCarlo iteration numbers <startIter> <stopIter>
+accuracy of binary search <tol>

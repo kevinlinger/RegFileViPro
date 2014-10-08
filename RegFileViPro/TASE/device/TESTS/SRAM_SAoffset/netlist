@@ -1,0 +1,24 @@
+ // Generated for: spectre
+// Generated on: Feb  5 03:33:51 2007
+// Design library name: SenseAmplifiers
+// Design cell name: DiffTest6
+// Design view name: schematic
+
+V1 (VCM BL) vsource dc=offsetp
+V2 (VCM BLN) vsource dc=offsetn 
+V3 (VCM 0) vsource dc=pvdd
+
+P2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wdef length=ldef
+P3 (OUTB OUT VDD VDD) P_TRANSISTOR width=wdef length=ldef
+N1 (OUT OUTB COM VSS) N_TRANSISTOR width=win length=lin
+N2 (OUTB OUT COM VSS) N_TRANSISTOR width=win length=lin
+
+P4 (OUTB SAE BLN VDD) P_TRANSISTOR width=wdef length=ldef
+P5 (OUT SAE BL VDD) P_TRANSISTOR width=wdef length=ldef
+
+N0 (COM SAE VSS VSS) N_TRANSISTOR width=wdef length=ldef
+
+_VDD (VDD 0) vsource dc=pvdd type=dc
+_VSS (VSS 0) vsource dc=0 type=dc
+
+_vEN  (SAE 0)  vsource type=pulse val0=0.0 val1=pvdd rise=sao_prf fall=sao_prf width=sao_pw period=sao_per 

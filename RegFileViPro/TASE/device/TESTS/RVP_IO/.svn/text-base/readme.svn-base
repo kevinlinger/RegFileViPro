@@ -1,0 +1,22 @@
+
+Independent of number of rows and cols. No sweeps in this sim currently since this circuit is not being tweaked for the optimization
+
+Power consumed at clock edges and WL edges
+
+Measurements:
+For write:
+Average and peak power consumed by write drivers and output latch which latches previous cycle read data
+Input DFF delay
+write logic delay
+
+For read:
+Average and peak power consumed by DFF
+Output DFF delay
+
+Output format:
+
+dataw.txt:
+avg_pwr pk_pwr dly_ff dly_logic
+
+datar.txt:
+avg_pwr pk_pwr dly_out

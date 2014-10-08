@@ -1,0 +1,250 @@
+\section{About this document}
+This document is a frequently updated user-guide for ViPro. While ViPro is still under construction, it will keep changing to reflect and document the current state of work.
+
+\subsection{What is ViPro?}
+ViPro is a technology-agnostic prototyping and design space exploration tool for SRAM. The primary input is a specification of the memory (e.g. capacity, word-size, technology, supply voltage). The primary output is a ``somewhat optimized" SRAM prototype (e.g. schematic, layout, gds) composed of periphery from the built-in library. The SRAM is not truly optimal since the number of knobs/variables for optimization is limited to make the problem manageable. A single-bank architecture is assumed (described in section ~\ref{arch}). In addition, ViPro will also allow easy design space exploration by allowing the user to specify custom periphery (to various degrees of detail - e.g. preliminary E-D data to completed designs) and generate a re-optimized prototype.
+
+\subsection{Current state of ViPro}
+The working of ViPro can be broadly divided into three main steps - E-D characterization of SRAM components, optimization and prototype generation. The characterization step is completed in this version, with frameworks for optimization and prototype generation in place. Also completed is a full schematic generator that can be used independently of ViPro to generate a full SRAM schematic in any technology, provided correct sizing and other parameters. ViPro is currently similar to CACTI in that it can give the energy per access and maximum frequency/access time for a given SRAM configuration. It also gives the E-D breakup among different components of the SRAM (e.g. Bitlines, decoder etc.). However, it is slower as it is simulation based and technology specific.
+
+The E-D characterization data will be fed to a convex optimizer to generate the optimal values of the knobs. These values will then be used by the prototype generator (e.g. compiler) to build the SRAM using SKILL for schematics and PyCell for layout. The characterization itself is done by TASE (separate user guide available).
+
+\section{Quick Start}
+
+\subsection{Insructions}
+These steps should help you get setup with ViPro. The instructions are for a linux machine.
+\begin{description}
+\item \textbf{Step 1:} Check out the TASE and ViPro to your workspace. You need to have a sub-version account setup. Sub-version help is available on the UVA ECE wiki.
+
+\% mkdir /some/work/dir/vipro
+
+\% cd /some/work/dir/vipro
+
+\% svn checkout \$SVNROOT/SRAM\_TOOL/trunk
+
+\% cd /some/work/dir/tase
+
+\% svn checkout \$SVNROOT/SRAM\_TOOL/branches/TASE
+
+\item \textbf{Step 2:} Set up Cadence environment.
+
+\% . cadence-ic15141
+
+\item \textbf{Step 3:} Configure user inputs in configuration/user.m and configuration/bitcellSizes.m. Bitcell generator settings can be made in configuration/cellgen.ini.
+
+\begin{itemize}
+
+\item The following parameters are defined in user.m.
+\begin{enumerate}
+\item technology - The string identifying the pdk. This should have a corresponding .ini file in the template directory. For example, if Technology=`ptm65', ensure that there is a RVPtpl\_ptm65.ini in the template/ directory.
+\item wdef = default device width.
+\item memSize - Memory size in bits.
+\item arbits - Number of row address bits - will be log2(no: of rows)
+\item acbits - Number of col address bits - will be log2(no: of cols)
+\item wordSize - Size of the word in bits.
+\item vdd, vsub - Nominal supply V$_\text{DD}$ and PMOS bulk V$_\text{DD}$.
+\item temp - Temperature.
+
+\item width - width of the bitcell in metres.
+\item height - height of the bitcell in metres. Width and height of the bitcell need to be specified if using a custom bitcell (e.g. cell generator not invoked)
+
+\item global/local/interMtl - type of metal for global, local and intermediate level interconnect. Can be either `cu' or `al'.
+
+\item global/local/interParams - width, space, thickness, height, and dielectric constant for various levels of interconnect. To use default values built into the interconnect model, leave the parameters as zeros. Otherwise, custom dimensions can be specified in microns.
+
+\item getMetrics - A boolean flag that is set to 1 if ViPro is being used only to estimate energy and delay for a particular configuration. The optimization related inputs will be ignored in that case. If getMetrics is 0, the optimization related inputs are also considered.
+
+\item rows - Number of rows.
+\item cols - Number of columns (= memSize(fixed)/rows).
+\item wnio - Device widths for Tristate inverter in IO block
+\item decStages - Number of predecode buffer and WL buffer stages respectively
+
+\item tasePath - Absolute path for the location of TASE - should be of the form /some/work/dir/tase
+\end{enumerate}
+
+\item rows, wnio, and decStages are the current set of optimization knobs with respect to which characteristic sims are run in TASE. This set of knobs can be expanded along with potential new characterization sims in TASE corresponding to those knobs.
+
+\item Constraints on Noise margin, I$_\text{READ}$, and bitcell area are specified for the bitcell generator in cellGen.ini. The bitcell generator has not been developed/maintained recently while the rest of ViPro has been changing and may need some testing and debugging before it is functional again.
+
+\item The bitcell device sizes can be specified in bitcellSizes.m if the bitcell generator is not run and a foundry bitcell is used.
+
+\end{itemize}
+
+
+\item \textbf{Step 4:} Execute ViPro from the device/BIN directory
+
+\% cd device/BIN
+
+\% perl ViPro.pl --flag1 --flag2 ...
+
+The various flags that can be used are
+\begin{itemize}
+\item --cellGen       - Run bitcell generator
+
+\item --char          - Run the characterization (TASE) step. This is done at least once whether performing optimization or using in the get metrics mode.
+
+\item --opt           - Run optimization engine.Currently inactive.
+
+\item --compiler      - Run technology agnostic memory compiler (schematic and layout generator). Currently the generator resides in the compiler/ directory but is not callable yet from ViPro.pl. It also needs an optParams.txt file to be present in files/. This file is created manually but will eventually come from the optimizer output. See section~\ref{sec:compiler} for more info on this option.
+
+\item --genCustom     - Only generate custom specified schematics and layout. Useful for just generating a completely specified memory skipping the characterization and optimization part. A files/sizes.txt file needs to be specified by the user.
+
+\item --h,--help      - Display this help message
+
+\item --quiet	      - Reduce the verbosity of the screen output
+
+\item --clean         - Remove files/ directory prior to starting a new run of ViPro.pl
+\end{itemize}
+For a particular step to be executed, the corresponding flag must be specified. For instance, TASE does not run if --char is not specified in the command line arguments to ViPro.pl. The flags are case-insensitive and can be used with a single hyphen as well.
+
+\end{description}
+
+\textbf{NOTE:}
+The examples in the quickstart instructions are currently for a user at UVA. Path names, environment setup etc. may change for an external user.
+
+\subsection{Example run}
+This is a walk-through example using the IBM 65 technology.
+
+\begin{description}
+\item Step 1: Setup the environment
+\item Step 2: cd path-to-tool/device/BIN
+\item Step 3: perl ViPro.pl --clean --char
+\item Step 4: The breakdown of E,D numbers and Energy per accesss, max frequency will be in path-to-tool/files/debug*.txt and path-to-tool/files/topMetrics.txt.
+\end{description}
+
+The screen output looks like:
+\begin{verbatim}
+: /scratch/svn2u/ViPro_release/trunk/device/BIN $ perl ViPro.pl --clean --char
+VIPRO:Checking sanity of user inputs
+VIPRO:Getting Metal parasitic values for 'ibm65'
+	
+	  	     < M A T L A B (R) >
+	   Copyright 1984-2010 The MathWorks, Inc.
+	Version 7.10.0.499 (R2010a) 64-bit (glnxa64)
+	  	      February 5, 2010
+
+
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+VIPRO:Running Gate capacitance characterization for ibm65
+VIPRO:Running characterizer
+ new2tpl
+  Initializing test: RVP_Gate_Capacitance
+ tpl2scs
+  Building test: RVP_Gate_Capacitance
+ ocn2out
+  Executing test: RVP_Gate_Capacitance
+ dat2img
+  Building graphical data for: RVP_Gate_Capacitance
+  Compiling global image sets
+Skipping img2pdf
+
+Build complete for:   RVP_Gate_Capacitance
+
+
+                    < M A T L A B (R) >
+          Copyright 1984-2010 The MathWorks, Inc.
+        Version 7.12.0.635 (R2011a) 64-bit (glnxa64)
+                       March 18, 2011
+
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+
+VIPRO:Running characterization for user configuration
+VIPRO:Running characterizer
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_DFF
+  Initializing test: RVP_Inv_LEparams
+  Initializing test: RVP_bufChains
+  Initializing test: RVP_TIMING
+  Initializing test: RVP_CD
+  Initializing test: RVP_SA
+  Initializing test: RVP_IO
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_DFF
+  Building test: RVP_Inv_LEparams
+  Building test: RVP_bufChains
+  Building test: RVP_TIMING
+  Building test: RVP_CD
+  Building test: RVP_SA
+  Building test: RVP_IO
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_DFF
+  Executing test: RVP_Inv_LEparams
+  Executing test: RVP_bufChains
+  Executing test: RVP_TIMING
+  Executing test: RVP_CD
+  Executing test: RVP_SA
+  Executing test: RVP_IO
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_DFF
+  Building graphical data for: RVP_Inv_LEparams
+  Building graphical data for: RVP_bufChains
+  Building graphical data for: RVP_TIMING
+  Building graphical data for: RVP_CD
+  Building graphical data for: RVP_SA
+  Building graphical data for: RVP_IO
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+Skipping img2pdf
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG  RVP_DFF 
+RVP_Inv_LEparams RVP_bufChains RVP_TIMING RVP_CD RVP_SA RVP_IO RVP_Decoder
+VIPRO:Getting E and D for user-specified SRAM configuration
+	
+	              < M A T L A B (R) >
+	    Copyright 1984-2010 The MathWorks, Inc.
+	 Version 7.10.0.499 (R2010a) 64-bit (glnxa64)
+	               February 5, 2010
+
+
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+\end{verbatim}
+
+The following files can now be found in path-to-tool/files:
+
+\begin{verbatim}
+: /scratch/svn2u/ViPro_release/trunk/device/BIN $ ls ../../files/
+debugDelayRd.txt  debugDelayWrt.txt  debugEnergyRd.txt  debugEnergyWrt.txt 
+parasitics.txt  topMetrics.txt
+\end{verbatim}
+
+These contain the breakdown of energy and delay. For example:
+\begin{verbatim}
+: /scratch/svn2u/ViPro_release/trunk/files $ cat debugEnergyWrt.txt 
+Decoder(erowdec) = 1.177766e-12
+IO(eio) = 1.718782e-12
+CD(ecd) = 2.005102e-12
+SA(esach) = 3.807166e-13
+Bitcell(ebcwr) = 3.350314e-13
+Timing(etmng) = 6.561755e-13
+Leakage(elkg) = 3.098865e-17
+Energy per write = 6.273604e-12
+\end{verbatim}

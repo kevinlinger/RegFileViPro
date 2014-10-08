@@ -1,0 +1,4 @@
+include INV.scs
+include NAND2.scs
+include NOR2.scs
+

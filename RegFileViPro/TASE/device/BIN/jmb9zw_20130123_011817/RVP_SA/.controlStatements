@@ -1,0 +1,15 @@
+simulatorOptions options reltol=0.001 vabstol=1e-6 iabstol=1e-12 temp=25 \
+    tnom=27 multithread=on nthreads=3 scalem=1.0 scale=1.0 gmin=1e-22 \
+    rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="OUTR/psf/sens.output" checklimitdest=psf 
+tran tran stop=5.5e-09 errpreset=conservative start=0 step=1e-11 \
+    write="spectre.ic" writefinal="spectre.fc" annotate=status \
+    strobeperiod=1e-12 maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub

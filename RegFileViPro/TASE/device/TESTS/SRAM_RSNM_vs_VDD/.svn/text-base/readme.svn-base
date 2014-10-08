@@ -1,0 +1,5 @@
+2008-10-13
+Original spec: Read SNM vs. VDD
+
+Varing VDD from the nominal value to 0. Measure read (WL=1) Static Noise Margin at each VDD point. Plot the trend of RSNM vs. VDD. 
+

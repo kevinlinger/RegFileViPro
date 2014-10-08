@@ -1,0 +1,3 @@
+This directory contains SRAM compiler scripts that can generate a library of SRAM components and top-level SRAM for a given pdk for the configuration parameters specified by the optimizer.
+
+Acknowledgement: Daniel Reyno developed the SKILL-based  schematic generator as his undergrad thesis.

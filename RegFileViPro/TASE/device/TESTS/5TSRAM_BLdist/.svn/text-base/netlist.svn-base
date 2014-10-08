@@ -1,0 +1,55 @@
+
+//============================================
+// RST Bitcell
+//============================================
+subckt bitcell5TRST BL VBN VBP VDD VSS WL
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wpu2 length=lpu2
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wpu1 length=lpu1
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wpd2 length=lpd2
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wpd1 length=lpd1
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wax length=lax
+ends bitcell5TRST
+
+//============================================
+// 6T Bitcell
+//============================================
+subckt bitcell6TB BL BLB WL VDD VBP VSS VBN
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wpu length=lpu
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wpu length=lpu
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wpd length=lpd
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wpd length=lpd
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wpg length=lpg
+MTR (BLB WL QB VBN) N_TRANSISTOR  width=wpg length=lpg
+ends bitcell6TB
+
+//-------------------------------------------------------
+//RST bitcells
+IA5T (BL1 VBN VBP VDD VSS WLA5T) bitcell5TRST
+ID5T1 (BL1 VBN VBP VDD VSS VSS) bitcell5TRST m=(numRows/2)-1
+IREF1 (BL1 VBN VBP VDD VSS WLR1) bitcell5TRST
+C5T1 (BL1 0) capacitor c=cbl*((numRows/2)+1)
+
+IREF2 (BL2 VBN VBP VDD VSS WLR2) bitcell5TRST
+ID5T2 (BL2 VBN VBP VDD VSS VSS) bitcell5TRST m=numRows/2
+C5T2 (BL2 0) capacitor c=cbl*(numRows+1)
+//--------------------------------------------------------
+
+//--------------------------------------------------------
+// 6T bitcells
+IA6T (BL BLB WLA6T VDD VBP VSS VBN) bitcell6TB
+ID6T (BL BLB WLU VDD VBP VSS VBN) bitcell6TB m=numRows-1
+C6T1 (BL 0) capacitor c=cbl*numRows
+C6T2 (BLB 0) capacitor c=cbl*numRows
+//--------------------------------------------------------
+
+VVDD (VDD 0) vsource dc=pvdd
+VVBP (VBP 0) vsource dc=pvdd
+VVBN (VBN 0) vsource dc=0
+VVSS (VSS 0) vsource dc=0
+
+VWLA5 (WLA5T 0) vsource type=pulse val0=0 val1=pvdd rise=pr fall=pf width=pw
+VWLR1 (WLR1 0) vsource dc=0
+VWLR2 (WLR2 0) vsource type=pulse val0=0 val1=pvddl rise=pr fall=pf width=pw
+
+VWLA6 (WLA6T 0) vsource type=pulse val0=0 val1=pvdd rise=pr fall=pf width=pw
+VWLU (WLU 0) vsource dc=0

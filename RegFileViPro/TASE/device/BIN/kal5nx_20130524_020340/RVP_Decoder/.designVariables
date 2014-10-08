@@ -1,0 +1,3 @@
+parameters wireCap=3.253139e-15 wireRes=9.769792 multiplier=16 pvdd=1 \
+    cwl=1.09136e-16 lpg=7.5e-08 wpg=9e-08 lpd=6.5e-08 wpd=1.4e-07 \
+    lpu=6.5e-08 wpu=8e-08 ldef=6e-08 wdef=1.2e-07

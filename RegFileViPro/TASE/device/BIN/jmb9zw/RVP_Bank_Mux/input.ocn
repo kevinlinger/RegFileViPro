@@ -1,0 +1,67 @@
+/*
+ Ocean script to measure inverter chain energy
+ 
+ Author		Satya
+ Date		04/17/2011
+ Modified by
+*/
+
+; ************************** main code ***************************
+simulator( 'spectre )
+
+;; COPY THE CORRISPONDING NETLIST FOR THE DESIRED DATA PATTERN
+design( "./netlist" )
+
+resultsDir("./OUT")
+
+modelFile( 
+	'("../../../../template/ibm65/include_mm.scs")
+	'("../../../../template/ibm65/subN.scs")
+	'("../../../../template/ibm65/subP.scs")
+)
+
+out = outfile("data.txt", "w")
+
+desVar(   "pvdd" 1.1)
+desVar(   "pvbp" 1.1)
+desVar(   "ldef" 60e-9 )
+desVar(   "wdef" 120e-9 )
+desVar(   "prise" 20e-12 )
+desVar(   "pfall" 20e-12 )
+desVar(   "pwidth" 1e-9 )
+desVar(   "ws" 16 )
+desVar(   "cwl" 1.09136e-16)
+desVar(   "cg" 6.59722e-16)
+desVar( "colMux" 8)
+desVar( "numBanks" 4)
+VDD=1.1
+
+char = 0
+
+if( (4 == 1) then
+fprintf(out,"%d\t%d\t%d\t%d\t%d\t%d\n",4,8,0,0,0,0)
+close(out)
+else
+
+		analysis('tran ?start 0 ?stop 1.25*1e-9 ?step 0.01n ?strobeperiod 0.001n ?errpreset 'conservative)
+		temp(25)
+		option('reltol 1e-6 'gmin 1e-22)
+		save('all)
+		run()
+		selectResults('tran)
+	
+		
+	
+		interCon_energy = 1.25*1e-9*(average(getData("IBANK_SEL0:pwr"))+average(getData("IBANK_SELB0:pwr")))
+		e_Tri_ivn = 1.25*1e-9*average(getData("Tri_state0:pwr"))*16
+		
+			
+		;;propagation delay through buffer chain to output tristate
+		interCon_delay=cross(v("BANK_SEL_OUT0") VDD/2 1 'rising) -cross(v("BANK_SEL0") VDD/2 1 'rising)
+		;; propagation delay from tristate to DFF over bank interconnect
+		bank_output_delay= cross(v("DATA_OUT0") VDD/2 1 'rising) -cross(v("BANK_SEL_OUT0") VDD/2 1 'rising)
+
+	fprintf(out,"%d\t%d\t%e\t%e\t%e\t%e\n", 4,8, e_Tri_ivn, bank_output_delay, interCon_energy, interCon_delay)
+
+close(out)
+)

@@ -1,0 +1,47 @@
+
+//SRAM  use PTM models
+// 
+// RWM   --10/13/2008
+
+/////////////////////////////////////////////////////
+// Options 
+/////////////////////////////////////////////////////
+//// Options set here will be overwritten by the values set in OCEAN script;
+//// So options will be set in OCEAN script
+
+// voltages
+VVDD ( VDD 0 ) vsource dc=pvdd
+VVSS ( VSS 0 ) vsource dc=0
+VVBL ( BL 0 ) vsource dc=pvdd
+VBLB ( BLB 0 ) vsource dc=pvdd
+VVWL ( VWL 0 ) vsource dc=0
+VVBN ( VBN 0 ) vsource dc=0
+
+//define current value for particle spike
+I1 (A 0) isource dc=0 type=exp  val0=0 val1=Ic  td1=100p td2=103p tau1=1p tau2=30p
+
+
+/////////////////////////////////////////////////////
+// SubCircuits:  cell 
+/////////////////////////////////////////////////////
+//  drain gate source substrate
+////////////////////////////////
+
+
+XPpur ( A B VDD VDD ) P_TRANSISTOR width=wpu length=lpu
+XNpdr ( A B VSS VBN ) N_TRANSISTOR width=wpd length=lpd
+XNpgr ( BL WL A VBN)  N_TRANSISTOR width=wpg length=lpg
+XPpul ( B A VDD VDD ) P_TRANSISTOR width=wpu length=lpu
+XNpdl ( B A VSS VBN ) N_TRANSISTOR width=wpd length=lpd
+XNpgl ( BLB WL B VBN) N_TRANSISTOR width=wpg length=lpg
+
+
+
+nodeset A=0 B=pvdd
+
+
+
+//// Load
+//c1 ( A 0 ) capacitor c=.03f 
+//c2 ( B 0 ) capacitor c=.03f
+c3 (A B) capacitor c=.3f

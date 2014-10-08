@@ -1,0 +1,1 @@
+Dummy template file for buffer chain of variable length and fanout. This will be populated by ViPro.pl with the full netlist and measurements in .tpl before running with the rest of the characterization

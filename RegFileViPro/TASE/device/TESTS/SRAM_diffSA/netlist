@@ -1,0 +1,91 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// buffer
+//============================================
+subckt BUF OUT IN VDD VSS
+MP1 (OUTB IN VDD VDD) P_TRANSITOR width=wdef length=ldef
+MP2 (OUT OUTB VDD VDD) P_TRANSITOR width=wdef length=ldef
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wdef length=ldef
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ends BUF
+
+//============================================
+// bitcell
+//============================================
+subckt bitcell6TB BL BLB WL VDD VBP VSS VBN
+MPR (QB Q VDD VBP) PU_TRANSITOR width=wpu length=lpu
+MPL (Q QB VDD VBP) PU_TRANSITOR width=wpu length=lpu
+MNR (QB Q VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MNL (Q QB VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MTL (BL WL Q VBN) PG_TRANSISTOR  width=wpg length=lpg
+MTR (BLB WL QB VBN) PG_TRANSISTOR  width=wpg length=lpg
+ends bitcell6TB
+
+//============================================
+// Single sub-column
+//============================================
+subckt SUBCOL (BL BLB WL WLU CSEL SAIN SAINB VDD VSS)
+IA (BL BLB WL VDD VDD VSS VSS) bitcell6TB
+IUA (BL BLB WLU VDD VDD VSS VSS) bitcell6TB m=numRows2
+PCS1 (BL CSEL SAIN VSS) P_TRANSITOR width=4*wdef length=ldef
+PCS2 (BLB CSEL SAINB VSS) P_TRANSITOR width=4*wdef length=ldef
+ends SUBCOL
+
+//============================================
+// Col-muxed sub-cols
+//============================================
+subckt SUBCOLX (BL BLB BLD BLBD WL WLU CSEL CSELD SAIN SAINB VDD VSS)
+parameters cols1=3
+IA (BL BLB WL WLU CSEL SAIN SAINB VDD VSS) SUBCOL
+ID (BLD BLBD WL WLU CSELD SAIN SAINB VDD VSS) SUBCOL m=cols1
+ends SUBCOLX
+
+//============================================
+// Basic Voltage Sense amp
+//============================================
+subckt LSA (IO IOB SAPREC SAEN VDD VSS)
+MTN (VN SAEN VSS VSS) N_TRANSISTOR width=wdef length=ldef
+MNR (IO IOB VN VSS) N_TRANSISTOR width=wdef length=ldef
+MNL (IOB IO VN VSS) N_TRANSISTOR width=wdef length=ldef
+MPPL (IO SAPREC VDD VDD) P_TRANSITOR width=wdef length=ldef
+MPPR (IOB SAPREC VDD VDD) P_TRANSITOR width=wdef length=ldef
+MPR (IO IOB VDD VDD) P_TRANSITOR width=wdef length=ldef
+MPL (IOB IO VDD VDD) P_TRANSITOR width=wdef length=ldef
+ends LSA
+
+//============================================
+// Main circuit
+//============================================
+I0 (BL BLB BLD BLBD WL WLU CSEL CSELD SAIN SAINB VDD VSS) SUBCOLX
+ISA (SAIN SAINB PCH SAEN VDD VSS) LSA
+
+// Precharge P_TRANSITOR
+MPCH (BL PCH VDD VDD) P_TRANSITOR width=4*wdef length=4*ldef
+
+// Buffers for producing WL, SAEN, PCH and CSEL signals
+IBUFW (WL WLIN VDD VSS) BUF
+IBUFS (SAEN SAENIN VDD VSS) BUF
+IBUFP (PCH PCHIN VDD VSS) BUF
+IBUFC (CSEL CSELIN VDD VSS) BUF
+
+VWLU (WLU 0) vsource dc=0
+VWL (WLIN 0) vsource type=pulse val0=0 val1=pvdd rise=10p fall=10p width=50p delay=65p
+//VCSEL (CSELIN 0) vsource dc=0
+VCSEL (CSELIN 0) vsource type=pulse val0=0 val1=pvdd rise=10p delay=130p
+VCSELD (CSELD 0) vsource dc=pvdd
+
+VPREC (PCHIN 0) vsource type=pulse val0=0 val1=pvdd rise=10p delay=40p
+VEN (SAENIN 0) vsource type=pulse val0=0 val1=pvdd rise=10p fall=10p width=60p delay=130p
+
+CBL (BL 0) capacitor c=cap
+CBLB (BLB 0) capacitor c=cap
+
+//==================
+//Initial Conditions
+//==================
+ic I0.IA.IA.Q=0 I0.IA.IA.QB=pvdd BL=pvdd BLB=pvdd BLD=pvdd BLBD=pvdd

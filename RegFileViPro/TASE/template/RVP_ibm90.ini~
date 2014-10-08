@@ -1,0 +1,160 @@
+#############################
+# Bitcell device dimensions
+#############################
+<wpu> 70e-9
+<lpu> 55e-9
+<wpd> 220e-9
+<lpd> 55e-9
+<wpg> 160e-9
+<lpg> 57e-9
+
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED #
+############
+<bcType>	6T
+<minl>          90n
+<minw>          140n
+<ldef>          90n
+<leff>          90n
+<wdef>          140n
+<pdk>           ibm90
+<pvdd>	1.2
+<pvbp>	1.2
+<pvbn>		0
+<pvddwl>        1.2
+<pvdda>         1.2
+<pvss>         0
+<subPG>         ../../../../template/ibm90/subPG.scs
+<subPD>         ../../../../template/ibm90/subPD.scs
+<subPU>         ../../../../template/ibm90/subPU.scs
+<subN>         ../../../../template/ibm90/subN.scs
+<subP>         ../../../../template/ibm90/subP.scs
+<include>      ../../../../template/ibm90/include.scs
+<nModelName>    nfet
+<pModelName>    pfet
+<PDModelName>	nfet
+<PGModelName>   nfet
+<PUModelName>	pfet
+
+###############################
+# REQUIRED FOR 6T SRAM CELL   #
+###############################
+
+<wpu>           140n
+<lpu>           90n
+<wpd>           420n
+<lpd>           90n
+<wpg>           280n
+<lpg>           93n
+
+#############################
+# 8T bitcell sizing
+#############################
+<wrd1> 160e-9
+<lrd1> 90e-9
+<wrdpg> 160e-9
+<lrdpg> 90e-9
+
+###########################
+# Gate Capacitance
+############################
+
+<prise>         20p
+<pfall>         20p
+<pwidth>        1n
+
+<gcap_start>    13e-15
+<gcap_stop>     16e-15
+<gcap_step>     0.2e-15
+
+<tol>           1e-12
+
+############################
+# Decoder parameters
+############################
+<mres>		0.71
+<mcap>		0.17f
+<height>	0.56e-6
+<memsize>	1024
+
+############################
+# Bitslice parameters
+############################
+<NR_sweep>	64
+<addrRow>	6
+<addrCol>	2
+<tper>          5n
+<trf>           0.1n
+<tdly>          1.25n
+<mux>           8
+<deltaVBL>      0.15
+
+############################
+# Timing block parameters
+############################
+<ws>	32
+<NC_sweep>	128
+<numBanks>	1
+<colMux>	4
+############################
+# Bitslice parameters
+############################
+<NR_sweep>	64
+<addrRow>	6
+<addrCol>	2
+<tper>          6n
+<trf>           0.1n
+<tdly>          1.25n
+<BL_DIFF>	.150
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+<mcStartNum>    1
+<mcrunNum>      5
+<mcType>        all
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '1' case;
+## pdat = 1: run write '0' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>          2
+
+############
+# OPTIONAL #
+############
+
+<gmin>          1e-22
+<temp>	25
+
+####################
+# Metal Parasitics
+####################
+<rbl>	0.083111096
+<cbl>	6.0857994e-17
+<cwl>	1.30665693e-16
+<cg>	1.130952e-15
+<char>	0
+
+#############################
+# TEST CASE SELECTION
+#############################
+<scs>
+RVP_Ileak_PU
+RVP_Ileak_PD
+RVP_Ileak_PG
+</scs>
+
+<ocn>
+RVP_DFF
+RVP_TIMING
+RVP_CD
+RVP_SA
+RVP_Bank_Mux
+RVP_Decoder
+</ocn>

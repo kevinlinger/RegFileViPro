@@ -1,0 +1,27 @@
+simulator lang=spectre
+
+// Voltage sources
+_VDD (VDD 0) vsource dc=pvdd
+_VSS (VSS 0) vsource dc=0
+
+_VWL (WL 0) vsource dc=pvwl
+_VBL (BL 0) vsource dc=pvdd
+_VBLB (BLB 0) vsource dc=pvdd
+_VBP (VBP 0) vsource dc=pvbp
+
+// Half cell
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+// Devices
+ICellAh (QB Q BL_CELL WL VDD VBP VSS VSS) HALFCELL 
+ICellBh (Q QB BLB WL VDD VBP VSS VSS) HALFCELL
+
+// Current probes
+IREAD BL BL_CELL iprobe
+
+// DC Convergence
+nodeset Q=0 QB=pvdd

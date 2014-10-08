@@ -1,0 +1,5 @@
+parameters capacity=64 pullDownWidth=5 writePorts=1 readPortsQB=2 \
+    readPortsQ=2 readPorts=4 ws=16 per=5e-09 pfall=1e-12 prise=1e-12 \
+    wdef=1.2e-07 ldef=6e-08 pvbp=1 pvdd=1 numBanks=1 cg=6.59722e-16 \
+    cwl=1.09136e-16 NR=64 cbl=5.08303e-17 tdly=1.25e-09 twl=8.333333e-10 \
+    lpg=7.5e-08 wpg=7.2e-07 lpd=6.5e-08 wpd=1.4e-07 lpu=6.5e-08 wpu=6.4e-07

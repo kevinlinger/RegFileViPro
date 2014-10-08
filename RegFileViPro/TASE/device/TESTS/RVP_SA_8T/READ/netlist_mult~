@@ -1,0 +1,101 @@
+////Cell name: buf
+subckt buf IN OUT VDD VSS
+parameters wp2=wdef wp1=wdef wn2=wdef wn1=wdef l=ldef
+MP1 (OUTB IN VDD VDD) P_TRANSISTOR width=wp1 length=l
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wn1 length=l
+MP2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wp2 length=l
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wn2 length=l
+ends buf
+
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=2*i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+// End of subcircuit definition.
+
+
+// Cell name: nand2
+// View name: schematic
+subckt nand2 INbot INtop OUT VDD VSS
+parameters wp=2*wdef lp=ldef wn=2*wdef ln=ldef
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp length=lp 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn length=ln 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends nand2
+// End of subcircuit definition.
+
+// Cell name: SA
+// View name: schematic
+subckt IN OUT VDD VSS
+M1 (st1 IN VDD VDD) P_TRANSISTOR width=wdef length=ldef
+M2 (st2 IN st1 VDD) P_TRANSISTOR width=wdef length=ldef
+M3 (st3 IN st2 VDD) P_TRANSISTOR width=wdef length=ldef
+M4 (OUT IN st3 VDD) P_TRANSISTOR width=wdef length=ldef
+M5 (st2 OUT VSS VDD) P_TRANSISTOR width=wdef length=ldef
+M5 (OUT IN VSS VSS) N_TRANSISTOR width=4*wdef length=ldef
+
+ends SA
+// End of subcircuit definition.
+
+// Cell name: col mux
+// View name: schematic
+subckt col_mux BL BLB CSEL CSELB NRDWR RDWR VDD VSS
+parameters wncs=wdef lncs=ldef wpcs=wdef lpcs=ldef
+M3 (BLB CSEL NRDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M1 (BL CSEL RDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M4 (NRDWR CSELB BLB VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M2 (RDWR CSELB BL VDD) P_TRANSISTOR width=wpcs length=lpcs 
+ends col_mux
+
+//generic inverter chain optimize later
+subckt INVCHAIN IN OUT VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4
+I2 (X3 X2 VDD VSS) INV i=16
+I3 (OUT X3 VDD VSS) INV i=48
+ends INVCHAIN
+
+
+VBL (BL 0) vsource dc=pvdd-BL_DIFF
+VBLB (BLB 0) vsource dc=pvdd
+
+CwireNDRWR (NRDWR 0) capacitor c=cwire
+CwireRDWR (RDWR 0) capacitor c=cwire
+
+//BC and CD
+ICOL1 (BL BLB CSEL CSELB NRDWR RDWR VDD VSS) col_mux
+
+//SA
+ISA (NRDWR RDWR SAE SAPREC SD VDD VSS) SA 
+
+// capacitance of SA driving the tristate buffer (hardcoded for now assuming pmos 16x min, nmos 8x min)
+cap1 (SD 0) capacitor c=wdef*cg*1e6*24
+
+//Input drivers for DUT
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VCSEL (CSEL_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=1n period=tper delay=1n
+VCSELB (CSELB_IN 0) vsource type=pulse val0=pvdd val1=0 rise=trf fall=trf width=1n period=tper delay=1n
+
+ICSEL (CSEL_IN CSEL VDD VSS) INVCHAIN
+ICSELB (CSELB_IN CSELB VDD VSS) INVCHAIN
+ISAE (SAE_IN SAE VDD VSS) INVCHAIN
+ISAPREC (SAPREC_IN SAPREC VDD VSS) INVCHAIN
+
+VSAE (SAE_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/5 period=tper delay=2n
+VSAPREC (SAPREC_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/2.5 period=tper delay=1n
+
+// CAPS assume that banks placed side by side and signals generated from middle of structure
+// wire cap + gate cap for each component
+capSAE (SAE 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*7 
+capSAPREC (SAPREC 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*10
+capCSEL (CSEL 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*2
+capCSELB (CSELB 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*2
+
+ic ISA.OUT=pvdd ISA.OUTB=pvdd ISA.SD=pvdd ISA.SDB=0 
+myOption options pwr=all pivotdc=yes

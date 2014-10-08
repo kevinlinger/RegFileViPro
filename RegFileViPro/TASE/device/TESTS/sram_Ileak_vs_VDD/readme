@@ -1,0 +1,7 @@
+2009-01-06
+# SRAM 6T Cell Leakage Current (nominal case) vs. VDD 
+This test uses DC analysis to measure the leakage current of an SRAM 6T bitcell during hold. 
+Sub-threshold leakge, gate leakage, GIDL/junction current, and total leakage current are plotted. 
+
+# Note: no body biasing is used in the current setting
+

@@ -1,0 +1,182 @@
+//Cell name: buf
+subckt buf IN OUT VDD VSS
+parameters wp2=wdef wp1=wdef wn2=wdef wn1=wdef l=ldef
+MP1 (OUTB IN VDD VDD) P_TRANSISTOR width=wp1 length=l
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wn1 length=l
+MP2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wp2 length=l
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wn2 length=l
+ends buf
+
+// Cell name: bitcell6T
+// View name: schematic
+subckt bitcell6T BL BLB VDDC VSSC WL
+//parameters wpg=90n lpg=75n wpd=140n lpd=65n wpu=80n lpu=65n
+M3 (QB WL BLB VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M2 (Q WL BL VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M4 (QB Q VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M1 (Q QB VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M5 (QB Q VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+M0 (Q QB VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+ends bitcell6T
+
+// Cell name: DFF
+// View name: schematic
+subckt DFF CLK D Q VDD VSS
+M33 (Q net107 VSS VSS) N_TRANSISTOR width=3.25*wdef length=ldef 
+M30 (net94 net105 VSS VSS) N_TRANSISTOR width=1.25*wdef length=ldef 
+M23 (net101 net133 VSS VSS) N_TRANSISTOR width=2.25*wdef length=ldef 
+M31 (net105 net107 VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M25 (net101 CPI net107 VSS) N_TRANSISTOR width=2.25*wdef length=ldef 
+M29 (net107 CPN net94 VSS) N_TRANSISTOR width=1.25*wdef length=ldef 
+M18 (net0107 net133 VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M19 (net137 CPI net0107 VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M15 (CPI CPN VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M13 (CPN CLK VSS VSS) N_TRANSISTOR width=2.5*wdef length=ldef 
+M17 (net133 net137 VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M4 (net137 CPN net0131 VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M1 (net0131 D VSS VSS) N_TRANSISTOR width=1.67*wdef length=ldef 
+M32 (Q net107 VDD VDD) P_TRANSISTOR width=4.5*wdef length=ldef 
+M22 (net101 net133 VDD VDD) P_TRANSISTOR width=2.25*wdef length=ldef 
+M26 (net0163 net105 VDD VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M28 (net105 net107 VDD VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M24 (net101 CPN net107 VDD) P_TRANSISTOR width=2.25*wdef length=ldef 
+M20 (net137 CPN net165 VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M16 (net133 net137 VDD VDD) P_TRANSISTOR width=2.5*wdef length=ldef 
+M27 (net107 CPI net0163 VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M12 (CPN CLK VDD VDD) P_TRANSISTOR width=2.5*wdef length=ldef 
+M21 (net165 net133 VDD VDD) P_TRANSISTOR width=1.67*wdef length=ldef 
+M14 (CPI CPN VDD VDD) P_TRANSISTOR width=2.5*wdef length=ldef 
+M6 (net0183 D VDD VDD) P_TRANSISTOR width=3*wdef length=ldef 
+M5 (net137 CPI net0183 VDD) P_TRANSISTOR width=3*wdef length=ldef 
+ends DFF
+// End of subcircuit definition.
+
+// Cell name: inv
+// View name: schematic
+subckt inv IN OUT VDD VSS
+parameters wp=wdef lp=ldef wn=wdef ln=ldef
+MP (OUT IN VDD VDD) P_TRANSISTOR width=wp length=lp 
+MN (OUT IN VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends inv
+// End of subcircuit definition.
+
+// Cell name: triinv
+// View name: schematic
+subckt triinv IN OUT VDD VSS TRI_N TRI_P
+parameters wp=wdef lp=ldef wn=wdef ln=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wp length=lp 
+MP (net19 TRI_P VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wn length=ln 
+MN (net31 TRI_N VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends triinv
+// End of subcircuit definition.
+
+// Cell name: IO
+// View name: schematic
+subckt IO DIN DOUT ICLK NRDWR OCLK RDWR SD VDD VSS WEN
+    I0 (OCLK SD DOUT VDD VSS) DFF
+    I1 (ICLK DIN d VDD VSS) DFF
+    I10 (d db VDD VSS) inv m=1 wp=wdef lp=ldef wn=wdef ln=ldef
+    I13 (WEN NWEN VDD VSS) inv m=1 wp=2*wdef lp=ldef wn=wdef ln=ldef
+    I14 (NWEN WENB VDD VSS) inv m=1 wp=2*wdef lp=ldef wn=wdef ln=ldef
+    I16 (d NRDWR VDD VSS WENB NWEN) triinv wp=wdef lp=ldef wn=wnio ln=ldef
+    I15 (db RDWR VDD VSS WENB NWEN) triinv wp=wdef lp=ldef wn=wnio ln=ldef
+ends IO
+// End of subcircuit definition.
+
+// Cell name: nand2
+// View name: schematic
+subckt nand2 INbot INtop OUT VDD VSS
+parameters wp=wdef lp=ldef wn=wdef ln=ldef
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp length=lp 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn length=ln 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends nand2
+// End of subcircuit definition.
+
+// Cell name: SA
+// View name: schematic
+subckt SA NRDWR RDWR SAE SAPREC SD VDD VSS
+I5 (SD OUT SDB VDD VSS) nand2 wp=wdef lp=ldef wn=wdef ln=ldef
+I34 (SDB OUTB SD VDD VSS) nand2 wp=wdef lp=ldef wn=wdef ln=ldef
+M19 (COM SAE VSS VSS) N_TRANSISTOR width=wdef length=ldef 
+M11 (xinb NRDWR COM VSS) N_TRANSISTOR width=wdef length=ldef 
+M10 (xin RDWR COM VSS) N_TRANSISTOR width=wdef length=ldef 
+M8 (OUTB OUT xin VSS) N_TRANSISTOR width=3*wdef length=ldef 
+M7 (OUT OUTB xinb VSS) N_TRANSISTOR width=3*wdef length=ldef 
+M20 (NRDWR SAPREC VDD VDD) P_TRANSISTOR width=5*wdef length=ldef
+M24 (xinb SAE VDD VDD) P_TRANSISTOR width=wdef length=ldef 
+M23 (xin SAE xinb VDD) P_TRANSISTOR width=wdef length=ldef 
+M25 (xin SAE VDD VDD) P_TRANSISTOR width=wdef length=ldef 
+M14 (RDWR SAPREC VDD VDD) P_TRANSISTOR width=5*wdef length=ldef
+M5 (OUT OUTB VDD VDD) P_TRANSISTOR width=wdef length=ldef
+M4 (OUTB OUT VDD VDD) P_TRANSISTOR width=wdef length=ldef 
+M3 (OUTB SAE OUT VDD) P_TRANSISTOR width=wdef length=ldef 
+M2 (OUT SAE VDD VDD) P_TRANSISTOR width=wdef length=ldef 
+M1 (OUTB SAE VDD VDD) P_TRANSISTOR width=wdef length=ldef 
+ends SA
+// End of subcircuit definition.
+
+// Cell name: CD
+// View name: schematic
+subckt CD BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS
+parameters wncs=6*wdef lncs=ldef wpcs=6*wdef lpcs=ldef wpch=6*wdef lpch=ldef
+M3 (BLB CSEL NRDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M1 (BL CSEL RDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M4 (NRDWR CSELB BLB VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M5 (BLB PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+M2 (RDWR CSELB BL VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M0 (BL PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+ends CD
+// End of subcircuit definition.
+
+// DUT name: BitSlice_test
+
+//One bitcell column with accessed cell and rest dummy cells
+IBCA (BL BLB VDD VSS WLA) bitcell6T
+IBCD (BL BLB VDD VSS VSS) bitcell6T m=(NR - 1)
+CBL (BL 0) capacitor c=cbl*(NR+32)
+CBLB (BLB 0) capacitor c=cbl*(NR+32)
+
+//CD with one accessed BL pair and rest dummy pairs
+ICDA (BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS) CD 
+//ICDD (BLD BLBD VSS VDD NRDWR PCH RDWR VDD VSS) CD m=mux
+
+//SA
+ISA (NRDWR RDWR SAE SAPREC SD VDD VSS) SA 
+
+//IO
+IIO (DIN DOUT CLK NRDWR CLK RDWR SD VDD VSS WEN) IO
+
+//Input drivers for DUT
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VWLA (WLA_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=twl period=tper delay=tdly
+IB0 (WLA_IN WLA VDD VSS) buf
+
+VCSEL (CSEL_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=twl period=tper delay=tdly
+VCSELB (CSELB_IN 0) vsource type=pulse val0=pvdd val1=0 rise=trf fall=trf width=twl period=tper delay=tdly
+
+;0.1n added to PCH pulse width, since PCH should go low after CSEL and CSELB switch so that the sensed differential shouldn't get corrupted
+VPCH (PCH_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=(twl)+0.1n period=tper delay=tdly
+
+IB1 (CSEL_IN CSEL VDD VSS) buf
+IB2 (CSELB_IN CSELB VDD VSS) buf
+IB3 (PCH_IN PCH VDD VSS) buf wp2=4*wdef wn2=2*wdef
+
+VSAE (SAE_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/5 period=tper delay=tdly+(twl)
+VSAPREC (SAPREC_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=(twl)+(tper/5) period=tper delay=tdly
+IB4 (SAE_IN SAE VDD VSS) buf
+IB5 (SAPREC_IN SAPREC VDD VSS) buf
+
+VCLK (CLK_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/2 period=tper delay=0.1n
+VDIN (DIN_IN 0) vsource dc=0
+VWEN (WEN_IN 0) vsource dc=0
+IB6 (CLK_IN CLK VDD VSS) buf
+IB7 (DIN_IN DIN VDD VSS) buf
+IB8 (WEN_IN WEN VDD VSS) buf
+
+ic IBCA.Q=0 IBCD.Q=pvdd BL=pvdd BLB=pvdd BLD=pvdd BLBD=pvdd ISA.OUT=pvdd ISA.OUTB=pvdd ISA.SD=pvdd ISA.SDB=0 IIO.d=0 IIO.db=pvdd DOUT=0
+myOption options pwr=all

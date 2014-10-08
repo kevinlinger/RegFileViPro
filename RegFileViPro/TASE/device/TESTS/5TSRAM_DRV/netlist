@@ -1,0 +1,21 @@
+include "../../../SUBCKTS/bitcell_5T.scs"
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdd
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// 6T bitcell 
+//============================================
+ICell (BL WL VDD VBP VSS VBN) BITCELL_5T
+
+VVBL (BL 0) vsource dc=pvdd
+VVWL (WL 0) vsource dc=0
+
+alter1 alter param=mc_global value=0
+alter2 alter param=cor_nmos value=0
+alter3 alter param=cor_pmos value=0

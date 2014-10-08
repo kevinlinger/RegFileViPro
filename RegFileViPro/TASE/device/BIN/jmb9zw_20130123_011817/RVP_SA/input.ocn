@@ -1,0 +1,114 @@
+;; POWER-DELAY CHARACTERIZATION OF SA
+;; Jim Boley 3/13/2012
+
+;; set simulator
+simulator( 'spectre)
+(envSetVal "spectre.opts" "multithread" 'string "on")
+(envSetVal "spectre.opts" "nthreads" 'string "3")
+
+;; set model lists
+modelFile(
+     '("../../../../template/ibm65/include_mm.scs")
+     '("../../../../template/ibm65/subN.scs")
+     '("../../../../template/ibm65/subP.scs")
+     '("../../../../template/ibm65/subPU.scs")
+     '("../../../../template/ibm65/subPD.scs")
+     '("../../../../template/ibm65/subPG.scs")
+)
+
+;;; 
+;; characterization is not accurate b/c the number of banks has an effect
+;; on the signal buffer power
+char = 0
+
+if( char == 1 then
+	maxColMux = 8 ;; current upper bound set at 
+	colMux = 1 
+	muxStep = 2
+else
+	maxColMux = 8
+	colMux = 8
+	muxStep = 2
+)
+;; open file for writing characterization results
+of = outfile("datar.txt","w")
+bcType="<bcType>"
+while( (colMux <= maxColMux)
+
+	;; Copy READ Netlist
+	if( colMux ==1 then
+		if( bcType == "8T" then
+			cpnetlist = "cp -f ./READ/netlist_one_8T netlist"
+		else
+			cpnetlist = "cp -f ./READ/netlist_one netlist"
+		)
+	else
+		if( bcType == "8T" then
+			cpnetlist = "cp -f ./READ/netlist_mult_8T netlist"
+		else
+			cpnetlist = "cp -f ./READ/netlist_mult netlist"
+		)
+	)
+	sh( cpnetlist )
+	design(  "./netlist")
+	resultsDir("./OUTR")
+	if( (colMux>1) then
+		cwire=16*1.09136e-16*((colMux-1)/2)   ;;calculation for wire length
+		desVar("cwire" cwire)	
+	)
+	VDD = 1.1
+
+	desVar(   "wpu" 160e-9   )
+	desVar(   "lpu" 120e-9   )
+	desVar(   "wpd" 400e-9   )
+	desVar(   "lpd" 120e-9   )
+	desVar(   "wpg" 270e-9   )
+	desVar(   "lpg" 125e-9   )
+	desVar(	  "cg"  6.59722e-16	)
+	desVar("ldef" 60e-9)
+	desVar("wdef" 120e-9)
+	desVar("tper" 5e-9)
+	desVar("trf" 1e-12)
+	desVar("tdly" 1.25e-9)
+	desVar("cbl" 5.08303e-17)
+	desVar("colMux" colMux )
+	desVar("pvdd" VDD    )
+	desVar("ws" 16)
+	desVar("cwl" 1.09136e-16)
+	desVar("numBanks" 4)
+	desVar("BL_DIFF" 0.15)
+
+	temp( 25 )
+	option( 'reltol 1e-3 'gmin 1e-22)
+
+	desVar("twl"  5e-9/2)
+
+	; run analysis 
+	desVar("twl" 1e9)
+	analysis('tran ?start 0 ?stop 1.1*5e-9 ?step 0.01n ?strobeperiod 0.001n ?errpreset 'conservative)
+	run()
+	
+	;; measure power
+	selectResults('tran)
+
+	avg_pwr_buf= average(getData("ICSEL:pwr"))+average(getData("ICSELB:pwr"))+average(getData("ISAE:pwr"))+average(getData("ISAPREC:pwr"))
+	energy_buf=avg_pwr_buf*1.1*5e-9
+
+	avg_pwr = average(getData("ISA:pwr"))
+	energy_SA = 1.1*5e-9*avg_pwr
+	etot_r = energy_SA*16
+	
+	;; measure delays
+	
+	; SA resolution delay
+	dly_sa = cross(v("SD") VDD/2 1 'falling) - cross(v("SAE") VDD/2 1 'rising)
+	;; global interconnect delay
+	dly_SAE= cross(v("SAE") VDD/2 1 'rising) - cross(v("SAE_IN") VDD/2 1 'rising) 	
+	dly_CS= cross(v("CSEL") VDD/2 1 'rising) - cross(v("CSEL_IN") VDD/2 1 'rising) 
+	dly_inter=max(dly_SAE,dly_CS)
+	;; write data to file
+	fprintf(of,"%d\t%d\t%e\t%e\t%e\t%e\n", 4,colMux,etot_r,dly_sa,energy_buf,dly_inter)
+	drain(of)
+	colMux=colMux*muxStep
+) 
+close(of)

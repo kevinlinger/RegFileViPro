@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg/plotGen.m
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg/data.ini
+END
+SRAM_Ioff_Ileak_vs_lpg.scs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg/SRAM_Ioff_Ileak_vs_lpg.scs
+END
+SRAM_Ioff_vs_lpg_flat.scs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg/SRAM_Ioff_vs_lpg_flat.scs
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpg/readme
+END

@@ -1,0 +1,120 @@
+%##############################################################
+%#      MATLAB code to plot SRAM cell-ratio vs Qmax @ read0   #
+%##############################################################
+
+%load data%
+load SRAM_Vbump/DAT/swp1-000_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-001_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-002_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-003_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-004_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-005_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-006_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-007_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-008_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-009_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-010_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-011_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-012_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-013_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-014_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-015_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-016_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-017_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-018_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-019_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-020_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-021_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-022_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-023_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-024_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-025_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-026_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-027_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-028_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-029_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-030_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-031_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-032_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-033_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-034_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-035_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-036_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-037_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-038_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-039_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-040_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-041_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-042_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-043_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-044_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-045_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-046_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-047_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-048_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-049_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1-050_tran_Q.dat;
+load SRAM_Vbump/DAT/swp1_tran_wpd.dat;
+
+%get max voltage of ripple%
+peak(1,1) = max(swp1_000_tran_Q);
+peak(1,2) = max(swp1_001_tran_Q);
+peak(1,3) = max(swp1_002_tran_Q);
+peak(1,4) = max(swp1_003_tran_Q);
+peak(1,5) = max(swp1_004_tran_Q);
+peak(1,6) = max(swp1_005_tran_Q);
+peak(1,7) = max(swp1_006_tran_Q);
+peak(1,8) = max(swp1_007_tran_Q);
+peak(1,9) = max(swp1_008_tran_Q);
+peak(1,10) = max(swp1_009_tran_Q);
+peak(1,11) = max(swp1_010_tran_Q);
+peak(1,12) = max(swp1_011_tran_Q);
+peak(1,13) = max(swp1_012_tran_Q);
+peak(1,14) = max(swp1_013_tran_Q);
+peak(1,15) = max(swp1_014_tran_Q);
+peak(1,16) = max(swp1_015_tran_Q);
+peak(1,17) = max(swp1_016_tran_Q);
+peak(1,18) = max(swp1_017_tran_Q);
+peak(1,19) = max(swp1_018_tran_Q);
+peak(1,20) = max(swp1_019_tran_Q);
+peak(1,21) = max(swp1_020_tran_Q);
+peak(1,22) = max(swp1_021_tran_Q);
+peak(1,23) = max(swp1_022_tran_Q);
+peak(1,24) = max(swp1_023_tran_Q);
+peak(1,25) = max(swp1_024_tran_Q);
+peak(1,26) = max(swp1_025_tran_Q);
+peak(1,27) = max(swp1_026_tran_Q);
+peak(1,28) = max(swp1_027_tran_Q);
+peak(1,29) = max(swp1_028_tran_Q);
+peak(1,30) = max(swp1_029_tran_Q);
+peak(1,31) = max(swp1_030_tran_Q);
+peak(1,32) = max(swp1_031_tran_Q);
+peak(1,33) = max(swp1_032_tran_Q);
+peak(1,34) = max(swp1_033_tran_Q);
+peak(1,35) = max(swp1_034_tran_Q);
+peak(1,36) = max(swp1_035_tran_Q);
+peak(1,37) = max(swp1_036_tran_Q);
+peak(1,38) = max(swp1_037_tran_Q);
+peak(1,39) = max(swp1_038_tran_Q);
+peak(1,40) = max(swp1_039_tran_Q);
+peak(1,41) = max(swp1_040_tran_Q);
+peak(1,42) = max(swp1_041_tran_Q);
+peak(1,43) = max(swp1_042_tran_Q);
+peak(1,44) = max(swp1_043_tran_Q);
+peak(1,45) = max(swp1_044_tran_Q);
+peak(1,46) = max(swp1_045_tran_Q);
+peak(1,47) = max(swp1_046_tran_Q);
+peak(1,48) = max(swp1_047_tran_Q);
+peak(1,49) = max(swp1_048_tran_Q);
+peak(1,50) = max(swp1_049_tran_Q);
+peak(1,51) = max(swp1_050_tran_Q);
+
+%plot data and format figure%
+plot(1E9*swp1_tran_wpd/70,peak);
+grid on;
+xlabel('Cell ratio','fontsize',12);
+ylabel('Peak ripple voltage at 0 node (mV)','fontsize',12);
+
+%save and close%
+print(gcf, '-depsc', 'SRAM_Vbump/IMG/SRAM_Vbump.eps');
+close(gcf);

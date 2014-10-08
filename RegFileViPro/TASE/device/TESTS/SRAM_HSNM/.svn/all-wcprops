@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_HSNM
+END
+plotGen.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_HSNM/plotGen.tpl
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_HSNM/data.ini
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_HSNM/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_HSNM/readme
+END
+SRAM_HSNM.scs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/sram_HSNM/SRAM_HSNM.scs
+END

@@ -1,0 +1,1 @@
+This dc sim finds the trip points of the schmidt trigger. Change the gate of N3 to VSS or VDD to get the trip-points with feedback cut-off and for the normal ST respectively. The trip-points are written to data.txt in the run directory.

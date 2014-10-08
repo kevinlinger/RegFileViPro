@@ -1,0 +1,10 @@
+subckt N_TRANSISTOR D G S B
+
+parameters width=70n length=40n pvta=0 mult=1
+
+NX (D G S B) nfet w=width l=length nf=1 m=mult \
+  as=(120n)*width ad=(120n)*width ps=2*((1)*(120n)+width) \
+  pd=2*((1)*(120n)+width) nrd=(70n)/width nrs=(70n)/width \
+  sa=(120n) sb=(120n) sd=2*(70n) ptwell=0 pccrit=0 p_vta=pvta
+ends N_TRANSISTOR
+

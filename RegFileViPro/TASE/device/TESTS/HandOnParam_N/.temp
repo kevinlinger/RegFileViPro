@@ -1,0 +1,143 @@
+%####################################################
+%#      MATLAB code to generate NMOS IDVG plot      #
+%####################################################
+
+%load data%
+load HandOnParam_N/DAT/dc_dc.dat;
+load HandOnParam_N/DAT/dc_N1_NX_d.dat;
+load HandOnParam_N/DAT/dc_N2_NX_d.dat;
+
+%put data into I and convert to milliamps%
+I=[dc_N1_NX_d dc_N2_NX_d];
+%I=I*10^3;
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  Estimate Vtsat & Vtlin                     %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+W = <wdef>;
+% effective length
+Leff = <leff>;
+
+
+
+
+% calculate vth using slope, pick two points in the middle
+% v1 = (1.0/3) * 1.0;
+% v2 = (2.0/3) * 1.0;
+
+vthei = 0.4;
+vdsat = 0.256;
+vgssat = vdsat + vthi;
+
+%v2 = vgssat;
+%v1 = vgssat - 0.1 ;
+
+v1 = 0.5;
+v2 = 0.52;
+
+id1 = find(dc_dc<v1);
+i1 = dc_N1_NX_d(id1(end));
+v1 = dc_dc(id1(end))
+
+id2 = find(dc_dc<v2);
+i2 = dc_N1_NX_d(id2(end));
+v2 = dc_dc(id2(end))
+
+slope = (i2 - i1) / (power(v2,2) - power(v1,2));
+
+%vthe = v1 - (i1 / slope);
+
+ratio = sqrt(i1/i2);
+vthe = (v2*ratio - v1)/(ratio-1);
+
+%calculate Kth
+Kth = (2 * i1) / ( (W/Leff) * power(v1-vthe,2));
+
+%calculate threshold current
+id = find(dc_dc<vthe);
+Ith = dc_N1_NX_d(id(end));
+
+% calculate S
+% find voltage when I = 0.1*Ith
+id = find(dc_N2_NX_d<0.1*Ith);
+vx1 = (dc_dc(id(end))+dc_dc(id(end)+1))/2;
+S = vthe - vx1;
+
+exit;
+
+
+
+
+
+for s = 1:numel(dc_N1_NX_d)
+  curvex(s,1) = Kth * (W/2 * Leff) * (power(dc_dc(s)-vthe,2));
+end
+
+
+
+
+% estimated Id when Vg=Vtsat
+I_vtsat = 300e-9*W/Leff;
+id = find(dc_N1_NX_d<I_vtsat);
+Vtsat = (dc_dc(id(end))+dc_dc(id(end)+1))/2;
+line([Vtsat Vtsat],[0 max(I(:,1))],'lineStyle','--');
+st = sprintf('Vt_{sat}=%g',Vtsat);
+ht = text(Vtsat, max(I(:,1))/2, st, 'fontsize',12);
+
+% estimated Id when Vg=Vtlin
+I_vtlin = 300e-9*W/Leff;
+id = find(dc_N2_NX_d<I_vtlin);
+Vtlin = (dc_dc(id(end))+dc_dc(id(end)+1))/2;
+line([Vtlin Vtlin],[0 max(I(:,1))],'lineStyle','--');
+st = sprintf('Vt_{lin}=%g',Vtlin);
+ht = text(Vtlin, max(I(:,1))/3, st, 'fontsize',12);
+
+% calculate gamma
+% vb1 = <VB1>;
+% vb2 = <VB2>;
+gamma = (Vtsat - Vtlin)/(sqrt(0.6 + 0) - sqrt(0.6 + 0.05));
+
+st = sprintf('gamma=%g',gamma);
+ht = text(max(dc_dc(:,1))/2, max(I(:,1)), st, 'fontsize',12);
+
+
+% calculate Vt0
+VT0x = Vtlin; 
+VT0y = Vtsat - gamma * (sqrt(0.6 + 0.05) - sqrt(0.6)); 
+
+
+
+
+
+
+%plot data and format figure%
+plot(dc_dc,I,'LineWidth',2);
+grid on;
+ylabel('Drain Current (mA)','fontsize',12);
+xlabel('VGS (V)','fontsize',12);
+legend('VDS=<pvdd>','VDS=0.05');
+title('NMOS Drain Current vs. VGS','fontsize',16);
+
+
+
+st = sprintf('VT0x=%g \n VT0y=%g \n V1=%g \n S=%g \n vthe=%g \n Kth = %g',VT0x,VT0y,V1,S,vthe,slope*2);
+ht = text(max(dc_dc(:,1))/2, max(I(:,1))/2, st, 'fontsize',12);
+
+%save the Vtsat/Vtlin values into a file
+fout = fopen('HandOnParam_N/data.txt', 'w');
+fprintf(fout, '%e\t%e\n', [Vtsat Vtlin]'); 
+fclose(fout);
+
+%save and close%
+print(gcf, '-depsc', 'HandOnParam_N/IMG/HandOnParam_N.eps');
+close(gcf);
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+simulator lang=spectre
+
+// Voltage sources
+_VDD0 (VDD0 0) vsource dc=pvdd
+_VDD1 (VDD1 0) vsource dc=pvdd
+_VSS0 (VSS0 0) vsource dc=0
+_VSS1 (VSS1 0) vsource dc=0
+
+_VWL0 (WL0 0) vsource dc=0
+_VWL1 (WL1 0) vsource dc=0
+_VBL0 (BL0 0) vsource dc=pvdd
+_VBL1 (BL1 0) vsource dc=pvdd
+_VBLB0 (BLB0 0) vsource dc=pvdd
+_VBLB1 (BLB1 0) vsource dc=pvdd
+_VBP0 (VBP0 0) vsource dc=pvbp
+_VBP1 (VBP1 0) vsource dc=pvbp
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu1 length=lpu1
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd1 length=lpd1
+  MT (BL WL OUT VBN) PD_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//============================================
+// Inverter
+//============================================
+subckt INV (IN OUT VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu2 length=lpu2
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd2 length=lpd2
+ends INV
+
+// Devices
+ICellAh0 (QB0 Q0 BL_CELL0 WL0 VDD_CELL0 VBP0 VSS_CELL0 VSS_CELL0) HALFCELL 
+ICellBh0 (Q0 QB0 VDD_CELL0 VBP0 VSS_CELL0 VSS_CELL0) INV
+
+ICellAh1 (QB1 Q1 BL_CELL1 WL1 VDD_CELL1 VBP1 VSS_CELL1 VSS_CELL1) HALFCELL
+ICellBh1 (Q1 QB1 VDD_CELL1 VBP1 VSS_CELL1 VSS_CELL1) INV
+
+// Current probes
+IOFF0 BL0 BL_CELL0 iprobe
+IOFF1 BL1 BL_CELL1 iprobe
+ILEAK_VDD0 VDD0 VDD_CELL0 iprobe
+ILEAK_VDD1 VDD1 VDD_CELL1 iprobe
+ILEAK_VSS0 VSS_CELL0 VSS0 iprobe
+ILEAK_VSS1 VSS_CELL1 VSS1 iprobe
+
+// DC convergence
+nodeset Q0=0 QB0=pvdd
+nodeset Q1=pvdd QB1=0

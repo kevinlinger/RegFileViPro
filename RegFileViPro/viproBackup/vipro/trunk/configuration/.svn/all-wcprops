@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/SRAM_TOOL/!svn/ver/407/trunk/configuration
+END
+user_ibm130.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/SRAM_TOOL/!svn/ver/387/trunk/configuration/user_ibm130.m
+END
+components
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/SRAM_TOOL/!svn/ver/219/trunk/configuration/components
+END
+bitcellSizes.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/SRAM_TOOL/!svn/ver/407/trunk/configuration/bitcellSizes.m
+END
+cellGen.ini
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/SRAM_TOOL/!svn/ver/407/trunk/configuration/cellGen.ini
+END
+user.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/SRAM_TOOL/!svn/ver/407/trunk/configuration/user.m
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/SRAM_TOOL/!svn/ver/209/trunk/configuration/README
+END

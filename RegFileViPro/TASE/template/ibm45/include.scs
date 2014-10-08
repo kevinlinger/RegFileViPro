@@ -1,0 +1,13 @@
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=base
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=pre_layout
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=tt
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=typ_capacitor
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=typ_resistor
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=typ_diode
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp.rev0c.scs" section=typ_bjt
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp_5_000_00_02_00.interconnect.scs" section=base
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp_5_000_00_02_00.interconnect.scs" section=default_metal_par
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp_5_000_00_02_00.interconnect.scs" section=opc_bias
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp_5_000_00_02_00.interconnect.scs" section=typ_para
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp_5_000_00_02_00.interconnect.scs" section=wire_model
+include "/mnt/pdk45/cmos45_11lp/ams2.3_alpha2/amsmodels/spectre/cmos45_11lp_5_000_00_02_00.interconnect.scs" section=resistor

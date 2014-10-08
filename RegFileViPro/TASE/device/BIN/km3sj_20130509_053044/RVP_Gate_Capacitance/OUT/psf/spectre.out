@@ -1,0 +1,1979 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 7.0.1.125.isr11 -- 19 Oct 2008
+Copyright (C) 1989-2007 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 7,085,700; 7,143,021.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+Simulating `input.scs' on class3.ee.Virginia.EDU at 5:23:38 AM, Thur May 9, 2013 (process id: 18392).
+Command line:
+    /app/cadence/MMSIM70/tools.lnx86/spectre/bin/32bit/spectre -env  \
+        artist5.1.0 +escchars +log OUT/psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_18330_1 -format sst2 -raw OUT/psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5 input.scs
+spectre pid = 18392
+
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Using new Spectre Parser.
+Auto-loading AHDL component.
+Finished loading AHDL component in 0 s (elapsed).
+Installed AHDL simulation interface.
+
+Warning from spectre in `INV', during circuit read-in.
+    WARNING (SFE-31): "input.scs" 24: `INV': Parameter `ldef' redefines parameter of same name defined at higher level.
+Warning from spectre in `P_TRANSISTOR':`I0.MP', in `INV':`I0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`I0.MN', in `INV':`I0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`I1.MP', in `INV':`I1', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`I1.MN', in `INV':`I1', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`I2.MP', in `INV':`I2', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+Warning from spectre during initial setup.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+Circuit inventory:
+              nodes 10
+              bsim4 10    
+          capacitor 1     
+            vsource 5     
+
+
+Warning from spectre.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_18330_1, ).
+
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps     (2.5 %), step = 334.4 fs    (8.36 m%)
+    tran: time = 301.8 ps    (7.55 %), step = 10.37 ps     (259 m%)
+    tran: time = 528.1 ps    (13.2 %), step = 40 ps           (1 %)
+    tran: time = 728.1 ps    (18.2 %), step = 40 ps           (1 %)
+    tran: time = 928.1 ps    (23.2 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 623.8 fs    (15.6 m%)
+    tran: time = 1.305 ns    (32.6 %), step = 9.247 ps     (231 m%)
+    tran: time = 1.523 ns    (38.1 %), step = 40 ps           (1 %)
+    tran: time = 1.723 ns    (43.1 %), step = 40 ps           (1 %)
+    tran: time = 1.923 ns    (48.1 %), step = 40 ps           (1 %)
+    tran: time = 2.123 ns    (53.1 %), step = 40 ps           (1 %)
+    tran: time = 2.323 ns    (58.1 %), step = 40 ps           (1 %)
+    tran: time = 2.523 ns    (63.1 %), step = 40 ps           (1 %)
+    tran: time = 2.723 ns    (68.1 %), step = 40 ps           (1 %)
+    tran: time = 2.923 ns    (73.1 %), step = 40 ps           (1 %)
+    tran: time = 3.123 ns    (78.1 %), step = 40 ps           (1 %)
+    tran: time = 3.323 ns    (83.1 %), step = 40 ps           (1 %)
+    tran: time = 3.523 ns    (88.1 %), step = 40 ps           (1 %)
+    tran: time = 3.723 ns    (93.1 %), step = 40 ps           (1 %)
+    tran: time = 3.923 ns    (98.1 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1055
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 335.1 fs    (8.38 m%)
+    tran: time = 309.2 ps    (7.73 %), step = 12.14 ps     (304 m%)
+    tran: time = 511.9 ps    (12.8 %), step = 40 ps           (1 %)
+    tran: time = 711.9 ps    (17.8 %), step = 40 ps           (1 %)
+    tran: time = 911.9 ps    (22.8 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 629.2 fs    (15.7 m%)
+    tran: time = 1.309 ns    (32.7 %), step = 10.08 ps     (252 m%)
+    tran: time = 1.537 ns    (38.4 %), step = 40 ps           (1 %)
+    tran: time = 1.737 ns    (43.4 %), step = 40 ps           (1 %)
+    tran: time = 1.937 ns    (48.4 %), step = 40 ps           (1 %)
+    tran: time = 2.137 ns    (53.4 %), step = 40 ps           (1 %)
+    tran: time = 2.337 ns    (58.4 %), step = 40 ps           (1 %)
+    tran: time = 2.537 ns    (63.4 %), step = 40 ps           (1 %)
+    tran: time = 2.737 ns    (68.4 %), step = 40 ps           (1 %)
+    tran: time = 2.937 ns    (73.4 %), step = 40 ps           (1 %)
+    tran: time = 3.137 ns    (78.4 %), step = 40 ps           (1 %)
+    tran: time = 3.337 ns    (83.4 %), step = 40 ps           (1 %)
+    tran: time = 3.537 ns    (88.4 %), step = 40 ps           (1 %)
+    tran: time = 3.737 ns    (93.4 %), step = 40 ps           (1 %)
+    tran: time = 3.937 ns    (98.4 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1059
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.1 ps     (2.5 %), step = 333.5 fs    (8.34 m%)
+    tran: time = 300.3 ps    (7.51 %), step = 10.03 ps     (251 m%)
+    tran: time = 522.7 ps    (13.1 %), step = 40 ps           (1 %)
+    tran: time = 722.7 ps    (18.1 %), step = 40 ps           (1 %)
+    tran: time = 922.7 ps    (23.1 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 633.2 fs    (15.8 m%)
+    tran: time = 1.304 ns    (32.6 %), step = 8.897 ps     (222 m%)
+    tran: time = 1.518 ns    (37.9 %), step = 40 ps           (1 %)
+    tran: time = 1.718 ns    (42.9 %), step = 40 ps           (1 %)
+    tran: time = 1.918 ns    (47.9 %), step = 40 ps           (1 %)
+    tran: time = 2.118 ns    (52.9 %), step = 40 ps           (1 %)
+    tran: time = 2.318 ns    (57.9 %), step = 40 ps           (1 %)
+    tran: time = 2.518 ns    (62.9 %), step = 40 ps           (1 %)
+    tran: time = 2.718 ns    (67.9 %), step = 40 ps           (1 %)
+    tran: time = 2.918 ns    (72.9 %), step = 40 ps           (1 %)
+    tran: time = 3.118 ns    (77.9 %), step = 40 ps           (1 %)
+    tran: time = 3.318 ns    (82.9 %), step = 40 ps           (1 %)
+    tran: time = 3.518 ns    (87.9 %), step = 40 ps           (1 %)
+    tran: time = 3.718 ns    (92.9 %), step = 40 ps           (1 %)
+    tran: time = 3.918 ns    (97.9 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1062
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.1 ps     (2.5 %), step = 333 fs      (8.33 m%)
+    tran: time = 310.2 ps    (7.75 %), step = 12.41 ps     (310 m%)
+    tran: time = 514.4 ps    (12.9 %), step = 40 ps           (1 %)
+    tran: time = 714.4 ps    (17.9 %), step = 40 ps           (1 %)
+    tran: time = 914.4 ps    (22.9 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 640.1 fs      (16 m%)
+    tran: time = 1.302 ns    (32.5 %), step = 8.508 ps     (213 m%)
+    tran: time = 1.512 ns    (37.8 %), step = 40 ps           (1 %)
+    tran: time = 1.712 ns    (42.8 %), step = 40 ps           (1 %)
+    tran: time = 1.912 ns    (47.8 %), step = 40 ps           (1 %)
+    tran: time = 2.112 ns    (52.8 %), step = 40 ps           (1 %)
+    tran: time = 2.312 ns    (57.8 %), step = 40 ps           (1 %)
+    tran: time = 2.512 ns    (62.8 %), step = 40 ps           (1 %)
+    tran: time = 2.712 ns    (67.8 %), step = 40 ps           (1 %)
+    tran: time = 2.912 ns    (72.8 %), step = 40 ps           (1 %)
+    tran: time = 3.112 ns    (77.8 %), step = 40 ps           (1 %)
+    tran: time = 3.312 ns    (82.8 %), step = 40 ps           (1 %)
+    tran: time = 3.512 ns    (87.8 %), step = 40 ps           (1 %)
+    tran: time = 3.712 ns    (92.8 %), step = 40 ps           (1 %)
+    tran: time = 3.912 ns    (97.8 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1059
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 200 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps     (2.5 %), step = 333.6 fs    (8.34 m%)
+    tran: time = 310.6 ps    (7.77 %), step = 12.54 ps     (314 m%)
+    tran: time = 515.5 ps    (12.9 %), step = 40 ps           (1 %)
+    tran: time = 715.5 ps    (17.9 %), step = 40 ps           (1 %)
+    tran: time = 915.5 ps    (22.9 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 647 fs      (16.2 m%)
+    tran: time = 1.306 ns    (32.6 %), step = 9.428 ps     (236 m%)
+    tran: time = 1.526 ns    (38.1 %), step = 40 ps           (1 %)
+    tran: time = 1.726 ns    (43.1 %), step = 40 ps           (1 %)
+    tran: time = 1.926 ns    (48.1 %), step = 40 ps           (1 %)
+    tran: time = 2.126 ns    (53.1 %), step = 40 ps           (1 %)
+    tran: time = 2.326 ns    (58.1 %), step = 40 ps           (1 %)
+    tran: time = 2.526 ns    (63.1 %), step = 40 ps           (1 %)
+    tran: time = 2.726 ns    (68.1 %), step = 40 ps           (1 %)
+    tran: time = 2.926 ns    (73.1 %), step = 40 ps           (1 %)
+    tran: time = 3.126 ns    (78.1 %), step = 40 ps           (1 %)
+    tran: time = 3.326 ns    (83.1 %), step = 40 ps           (1 %)
+    tran: time = 3.526 ns    (88.1 %), step = 40 ps           (1 %)
+    tran: time = 3.726 ns    (93.1 %), step = 40 ps           (1 %)
+    tran: time = 3.926 ns    (98.1 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1054
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps    (2.51 %), step = 334.2 fs    (8.36 m%)
+    tran: time = 308.2 ps    (7.71 %), step = 11.94 ps     (298 m%)
+    tran: time = 509.9 ps    (12.7 %), step = 40 ps           (1 %)
+    tran: time = 709.9 ps    (17.7 %), step = 40 ps           (1 %)
+    tran: time = 909.9 ps    (22.7 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 652.1 fs    (16.3 m%)
+    tran: time = 1.305 ns    (32.6 %), step = 9.188 ps     (230 m%)
+    tran: time = 1.522 ns    (38.1 %), step = 40 ps           (1 %)
+    tran: time = 1.722 ns    (43.1 %), step = 40 ps           (1 %)
+    tran: time = 1.922 ns    (48.1 %), step = 40 ps           (1 %)
+    tran: time = 2.122 ns    (53.1 %), step = 40 ps           (1 %)
+    tran: time = 2.322 ns    (58.1 %), step = 40 ps           (1 %)
+    tran: time = 2.522 ns    (63.1 %), step = 40 ps           (1 %)
+    tran: time = 2.722 ns    (68.1 %), step = 40 ps           (1 %)
+    tran: time = 2.922 ns    (73.1 %), step = 40 ps           (1 %)
+    tran: time = 3.122 ns    (78.1 %), step = 40 ps           (1 %)
+    tran: time = 3.322 ns    (83.1 %), step = 40 ps           (1 %)
+    tran: time = 3.522 ns    (88.1 %), step = 40 ps           (1 %)
+    tran: time = 3.722 ns    (93.1 %), step = 40 ps           (1 %)
+    tran: time = 3.922 ns    (98.1 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1051
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 335 fs      (8.37 m%)
+    tran: time = 303.7 ps    (7.59 %), step = 10.83 ps     (271 m%)
+    tran: time = 535.5 ps    (13.4 %), step = 40 ps           (1 %)
+    tran: time = 735.5 ps    (18.4 %), step = 40 ps           (1 %)
+    tran: time = 935.5 ps    (23.4 %), step = 40 ps           (1 %)
+    tran: time = 1.101 ns    (27.5 %), step = 655.2 fs    (16.4 m%)
+    tran: time = 1.308 ns    (32.7 %), step = 9.805 ps     (245 m%)
+    tran: time = 1.532 ns    (38.3 %), step = 40 ps           (1 %)
+    tran: time = 1.732 ns    (43.3 %), step = 40 ps           (1 %)
+    tran: time = 1.932 ns    (48.3 %), step = 40 ps           (1 %)
+    tran: time = 2.132 ns    (53.3 %), step = 40 ps           (1 %)
+    tran: time = 2.332 ns    (58.3 %), step = 40 ps           (1 %)
+    tran: time = 2.532 ns    (63.3 %), step = 40 ps           (1 %)
+    tran: time = 2.732 ns    (68.3 %), step = 40 ps           (1 %)
+    tran: time = 2.932 ns    (73.3 %), step = 40 ps           (1 %)
+    tran: time = 3.132 ns    (78.3 %), step = 40 ps           (1 %)
+    tran: time = 3.332 ns    (83.3 %), step = 40 ps           (1 %)
+    tran: time = 3.532 ns    (88.3 %), step = 40 ps           (1 %)
+    tran: time = 3.732 ns    (93.3 %), step = 40 ps           (1 %)
+    tran: time = 3.932 ns    (98.3 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1056
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100 ps       (2.5 %), step = 331.6 fs    (8.29 m%)
+    tran: time = 301.3 ps    (7.53 %), step = 10.3 ps      (258 m%)
+    tran: time = 526.9 ps    (13.2 %), step = 40 ps           (1 %)
+    tran: time = 726.9 ps    (18.2 %), step = 40 ps           (1 %)
+    tran: time = 926.9 ps    (23.2 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 657.1 fs    (16.4 m%)
+    tran: time = 1.309 ns    (32.7 %), step = 10.08 ps     (252 m%)
+    tran: time = 1.537 ns    (38.4 %), step = 40 ps           (1 %)
+    tran: time = 1.737 ns    (43.4 %), step = 40 ps           (1 %)
+    tran: time = 1.937 ns    (48.4 %), step = 40 ps           (1 %)
+    tran: time = 2.137 ns    (53.4 %), step = 40 ps           (1 %)
+    tran: time = 2.337 ns    (58.4 %), step = 40 ps           (1 %)
+    tran: time = 2.537 ns    (63.4 %), step = 40 ps           (1 %)
+    tran: time = 2.737 ns    (68.4 %), step = 40 ps           (1 %)
+    tran: time = 2.937 ns    (73.4 %), step = 40 ps           (1 %)
+    tran: time = 3.137 ns    (78.4 %), step = 40 ps           (1 %)
+    tran: time = 3.337 ns    (83.4 %), step = 40 ps           (1 %)
+    tran: time = 3.537 ns    (88.4 %), step = 40 ps           (1 %)
+    tran: time = 3.737 ns    (93.4 %), step = 40 ps           (1 %)
+    tran: time = 3.937 ns    (98.4 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1055
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 200 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps     (2.5 %), step = 333.2 fs    (8.33 m%)
+    tran: time = 307.7 ps    (7.69 %), step = 11.82 ps     (295 m%)
+    tran: time = 508.7 ps    (12.7 %), step = 40 ps           (1 %)
+    tran: time = 708.7 ps    (17.7 %), step = 40 ps           (1 %)
+    tran: time = 908.7 ps    (22.7 %), step = 40 ps           (1 %)
+    tran: time = 1.101 ns    (27.5 %), step = 654.5 fs    (16.4 m%)
+    tran: time = 1.3 ns      (32.5 %), step = 8.21 ps      (205 m%)
+    tran: time = 1.506 ns    (37.7 %), step = 40 ps           (1 %)
+    tran: time = 1.706 ns    (42.7 %), step = 40 ps           (1 %)
+    tran: time = 1.906 ns    (47.7 %), step = 40 ps           (1 %)
+    tran: time = 2.106 ns    (52.7 %), step = 40 ps           (1 %)
+    tran: time = 2.306 ns    (57.7 %), step = 40 ps           (1 %)
+    tran: time = 2.506 ns    (62.7 %), step = 40 ps           (1 %)
+    tran: time = 2.706 ns    (67.7 %), step = 40 ps           (1 %)
+    tran: time = 2.906 ns    (72.7 %), step = 40 ps           (1 %)
+    tran: time = 3.106 ns    (77.7 %), step = 40 ps           (1 %)
+    tran: time = 3.306 ns    (82.7 %), step = 40 ps           (1 %)
+    tran: time = 3.506 ns    (87.7 %), step = 40 ps           (1 %)
+    tran: time = 3.706 ns    (92.7 %), step = 40 ps           (1 %)
+    tran: time = 3.906 ns    (97.7 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1057
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100 ps       (2.5 %), step = 331.9 fs     (8.3 m%)
+    tran: time = 307.7 ps    (7.69 %), step = 11.82 ps     (295 m%)
+    tran: time = 508.7 ps    (12.7 %), step = 40 ps           (1 %)
+    tran: time = 708.7 ps    (17.7 %), step = 40 ps           (1 %)
+    tran: time = 908.7 ps    (22.7 %), step = 40 ps           (1 %)
+    tran: time = 1.101 ns    (27.5 %), step = 653.8 fs    (16.3 m%)
+    tran: time = 1.306 ns    (32.6 %), step = 9.353 ps     (234 m%)
+    tran: time = 1.525 ns    (38.1 %), step = 40 ps           (1 %)
+    tran: time = 1.725 ns    (43.1 %), step = 40 ps           (1 %)
+    tran: time = 1.925 ns    (48.1 %), step = 40 ps           (1 %)
+    tran: time = 2.125 ns    (53.1 %), step = 40 ps           (1 %)
+    tran: time = 2.325 ns    (58.1 %), step = 40 ps           (1 %)
+    tran: time = 2.525 ns    (63.1 %), step = 40 ps           (1 %)
+    tran: time = 2.725 ns    (68.1 %), step = 40 ps           (1 %)
+    tran: time = 2.925 ns    (73.1 %), step = 40 ps           (1 %)
+    tran: time = 3.125 ns    (78.1 %), step = 40 ps           (1 %)
+    tran: time = 3.325 ns    (83.1 %), step = 40 ps           (1 %)
+    tran: time = 3.525 ns    (88.1 %), step = 40 ps           (1 %)
+    tran: time = 3.725 ns    (93.1 %), step = 40 ps           (1 %)
+    tran: time = 3.925 ns    (98.1 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1051
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps    (2.51 %), step = 333.9 fs    (8.35 m%)
+    tran: time = 303.8 ps    (7.59 %), step = 10.87 ps     (272 m%)
+    tran: time = 536.1 ps    (13.4 %), step = 40 ps           (1 %)
+    tran: time = 736.1 ps    (18.4 %), step = 40 ps           (1 %)
+    tran: time = 936.1 ps    (23.4 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 655.2 fs    (16.4 m%)
+    tran: time = 1.306 ns    (32.6 %), step = 9.335 ps     (233 m%)
+    tran: time = 1.524 ns    (38.1 %), step = 40 ps           (1 %)
+    tran: time = 1.724 ns    (43.1 %), step = 40 ps           (1 %)
+    tran: time = 1.924 ns    (48.1 %), step = 40 ps           (1 %)
+    tran: time = 2.124 ns    (53.1 %), step = 40 ps           (1 %)
+    tran: time = 2.324 ns    (58.1 %), step = 40 ps           (1 %)
+    tran: time = 2.524 ns    (63.1 %), step = 40 ps           (1 %)
+    tran: time = 2.724 ns    (68.1 %), step = 40 ps           (1 %)
+    tran: time = 2.924 ns    (73.1 %), step = 40 ps           (1 %)
+    tran: time = 3.124 ns    (78.1 %), step = 40 ps           (1 %)
+    tran: time = 3.324 ns    (83.1 %), step = 40 ps           (1 %)
+    tran: time = 3.524 ns    (88.1 %), step = 40 ps           (1 %)
+    tran: time = 3.724 ns    (93.1 %), step = 40 ps           (1 %)
+    tran: time = 3.924 ns    (98.1 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1056
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 334.4 fs    (8.36 m%)
+    tran: time = 302.3 ps    (7.56 %), step = 10.53 ps     (263 m%)
+    tran: time = 530.5 ps    (13.3 %), step = 40 ps           (1 %)
+    tran: time = 730.5 ps    (18.3 %), step = 40 ps           (1 %)
+    tran: time = 930.5 ps    (23.3 %), step = 40 ps           (1 %)
+    tran: time = 1.101 ns    (27.5 %), step = 652.5 fs    (16.3 m%)
+    tran: time = 1.31 ns     (32.7 %), step = 10.27 ps     (257 m%)
+    tran: time = 1.54 ns     (38.5 %), step = 40 ps           (1 %)
+    tran: time = 1.74 ns     (43.5 %), step = 40 ps           (1 %)
+    tran: time = 1.94 ns     (48.5 %), step = 40 ps           (1 %)
+    tran: time = 2.14 ns     (53.5 %), step = 40 ps           (1 %)
+    tran: time = 2.34 ns     (58.5 %), step = 40 ps           (1 %)
+    tran: time = 2.54 ns     (63.5 %), step = 40 ps           (1 %)
+    tran: time = 2.74 ns     (68.5 %), step = 40 ps           (1 %)
+    tran: time = 2.94 ns     (73.5 %), step = 40 ps           (1 %)
+    tran: time = 3.14 ns     (78.5 %), step = 40 ps           (1 %)
+    tran: time = 3.34 ns     (83.5 %), step = 40 ps           (1 %)
+    tran: time = 3.54 ns     (88.5 %), step = 40 ps           (1 %)
+    tran: time = 3.74 ns     (93.5 %), step = 40 ps           (1 %)
+    tran: time = 3.94 ns     (98.5 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1058
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100 ps       (2.5 %), step = 331.6 fs    (8.29 m%)
+    tran: time = 306.4 ps    (7.66 %), step = 11.51 ps     (288 m%)
+    tran: time = 505.8 ps    (12.6 %), step = 40 ps           (1 %)
+    tran: time = 705.8 ps    (17.6 %), step = 40 ps           (1 %)
+    tran: time = 905.8 ps    (22.6 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 652.9 fs    (16.3 m%)
+    tran: time = 1.302 ns    (32.6 %), step = 8.563 ps     (214 m%)
+    tran: time = 1.513 ns    (37.8 %), step = 40 ps           (1 %)
+    tran: time = 1.713 ns    (42.8 %), step = 40 ps           (1 %)
+    tran: time = 1.913 ns    (47.8 %), step = 40 ps           (1 %)
+    tran: time = 2.113 ns    (52.8 %), step = 40 ps           (1 %)
+    tran: time = 2.313 ns    (57.8 %), step = 40 ps           (1 %)
+    tran: time = 2.513 ns    (62.8 %), step = 40 ps           (1 %)
+    tran: time = 2.713 ns    (67.8 %), step = 40 ps           (1 %)
+    tran: time = 2.913 ns    (72.8 %), step = 40 ps           (1 %)
+    tran: time = 3.113 ns    (77.8 %), step = 40 ps           (1 %)
+    tran: time = 3.313 ns    (82.8 %), step = 40 ps           (1 %)
+    tran: time = 3.513 ns    (87.8 %), step = 40 ps           (1 %)
+    tran: time = 3.713 ns    (92.8 %), step = 40 ps           (1 %)
+    tran: time = 3.913 ns    (97.8 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1057
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps    (2.51 %), step = 333.4 fs    (8.33 m%)
+    tran: time = 301.1 ps    (7.53 %), step = 10.25 ps     (256 m%)
+    tran: time = 526.1 ps    (13.2 %), step = 40 ps           (1 %)
+    tran: time = 726.1 ps    (18.2 %), step = 40 ps           (1 %)
+    tran: time = 926.1 ps    (23.2 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 653.1 fs    (16.3 m%)
+    tran: time = 1.301 ns    (32.5 %), step = 8.259 ps     (206 m%)
+    tran: time = 1.508 ns    (37.7 %), step = 40 ps           (1 %)
+    tran: time = 1.708 ns    (42.7 %), step = 40 ps           (1 %)
+    tran: time = 1.908 ns    (47.7 %), step = 40 ps           (1 %)
+    tran: time = 2.108 ns    (52.7 %), step = 40 ps           (1 %)
+    tran: time = 2.308 ns    (57.7 %), step = 40 ps           (1 %)
+    tran: time = 2.508 ns    (62.7 %), step = 40 ps           (1 %)
+    tran: time = 2.708 ns    (67.7 %), step = 40 ps           (1 %)
+    tran: time = 2.908 ns    (72.7 %), step = 40 ps           (1 %)
+    tran: time = 3.108 ns    (77.7 %), step = 40 ps           (1 %)
+    tran: time = 3.308 ns    (82.7 %), step = 40 ps           (1 %)
+    tran: time = 3.508 ns    (87.7 %), step = 40 ps           (1 %)
+    tran: time = 3.708 ns    (92.7 %), step = 40 ps           (1 %)
+    tran: time = 3.908 ns    (97.7 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1061
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 333.9 fs    (8.35 m%)
+    tran: time = 310.2 ps    (7.76 %), step = 12.47 ps     (312 m%)
+    tran: time = 514.7 ps    (12.9 %), step = 40 ps           (1 %)
+    tran: time = 714.7 ps    (17.9 %), step = 40 ps           (1 %)
+    tran: time = 914.7 ps    (22.9 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 651.7 fs    (16.3 m%)
+    tran: time = 1.309 ns    (32.7 %), step = 10.11 ps     (253 m%)
+    tran: time = 1.537 ns    (38.4 %), step = 40 ps           (1 %)
+    tran: time = 1.737 ns    (43.4 %), step = 40 ps           (1 %)
+    tran: time = 1.937 ns    (48.4 %), step = 40 ps           (1 %)
+    tran: time = 2.137 ns    (53.4 %), step = 40 ps           (1 %)
+    tran: time = 2.337 ns    (58.4 %), step = 40 ps           (1 %)
+    tran: time = 2.537 ns    (63.4 %), step = 40 ps           (1 %)
+    tran: time = 2.737 ns    (68.4 %), step = 40 ps           (1 %)
+    tran: time = 2.937 ns    (73.4 %), step = 40 ps           (1 %)
+    tran: time = 3.137 ns    (78.4 %), step = 40 ps           (1 %)
+    tran: time = 3.337 ns    (83.4 %), step = 40 ps           (1 %)
+    tran: time = 3.537 ns    (88.4 %), step = 40 ps           (1 %)
+    tran: time = 3.737 ns    (93.4 %), step = 40 ps           (1 %)
+    tran: time = 3.937 ns    (98.4 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1057
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 333.6 fs    (8.34 m%)
+    tran: time = 310.4 ps    (7.76 %), step = 12.53 ps     (313 m%)
+    tran: time = 515.3 ps    (12.9 %), step = 40 ps           (1 %)
+    tran: time = 715.3 ps    (17.9 %), step = 40 ps           (1 %)
+    tran: time = 915.3 ps    (22.9 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 650.9 fs    (16.3 m%)
+    tran: time = 1.309 ns    (32.7 %), step = 9.891 ps     (247 m%)
+    tran: time = 1.534 ns    (38.3 %), step = 40 ps           (1 %)
+    tran: time = 1.734 ns    (43.3 %), step = 40 ps           (1 %)
+    tran: time = 1.934 ns    (48.3 %), step = 40 ps           (1 %)
+    tran: time = 2.134 ns    (53.3 %), step = 40 ps           (1 %)
+    tran: time = 2.334 ns    (58.3 %), step = 40 ps           (1 %)
+    tran: time = 2.534 ns    (63.3 %), step = 40 ps           (1 %)
+    tran: time = 2.734 ns    (68.3 %), step = 40 ps           (1 %)
+    tran: time = 2.934 ns    (73.3 %), step = 40 ps           (1 %)
+    tran: time = 3.134 ns    (78.3 %), step = 40 ps           (1 %)
+    tran: time = 3.334 ns    (83.3 %), step = 40 ps           (1 %)
+    tran: time = 3.534 ns    (88.3 %), step = 40 ps           (1 %)
+    tran: time = 3.734 ns    (93.3 %), step = 40 ps           (1 %)
+    tran: time = 3.934 ns    (98.3 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1061
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 200 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100 ps       (2.5 %), step = 330.9 fs    (8.27 m%)
+    tran: time = 312.2 ps    (7.81 %), step = 12.99 ps     (325 m%)
+    tran: time = 519.6 ps      (13 %), step = 40 ps           (1 %)
+    tran: time = 719.6 ps      (18 %), step = 40 ps           (1 %)
+    tran: time = 919.6 ps      (23 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 651 fs      (16.3 m%)
+    tran: time = 1.301 ns    (32.5 %), step = 8.191 ps     (205 m%)
+    tran: time = 1.506 ns    (37.6 %), step = 40 ps           (1 %)
+    tran: time = 1.706 ns    (42.6 %), step = 40 ps           (1 %)
+    tran: time = 1.906 ns    (47.6 %), step = 40 ps           (1 %)
+    tran: time = 2.106 ns    (52.6 %), step = 40 ps           (1 %)
+    tran: time = 2.306 ns    (57.6 %), step = 40 ps           (1 %)
+    tran: time = 2.506 ns    (62.6 %), step = 40 ps           (1 %)
+    tran: time = 2.706 ns    (67.6 %), step = 40 ps           (1 %)
+    tran: time = 2.906 ns    (72.6 %), step = 40 ps           (1 %)
+    tran: time = 3.106 ns    (77.6 %), step = 40 ps           (1 %)
+    tran: time = 3.306 ns    (82.6 %), step = 40 ps           (1 %)
+    tran: time = 3.506 ns    (87.6 %), step = 40 ps           (1 %)
+    tran: time = 3.706 ns    (92.6 %), step = 40 ps           (1 %)
+    tran: time = 3.906 ns    (97.6 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1059
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 220 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 333 fs      (8.33 m%)
+    tran: time = 301.5 ps    (7.54 %), step = 10.37 ps     (259 m%)
+    tran: time = 527.9 ps    (13.2 %), step = 40 ps           (1 %)
+    tran: time = 727.9 ps    (18.2 %), step = 40 ps           (1 %)
+    tran: time = 927.9 ps    (23.2 %), step = 40 ps           (1 %)
+    tran: time = 1.101 ns    (27.5 %), step = 649.2 fs    (16.2 m%)
+    tran: time = 1.302 ns    (32.6 %), step = 8.443 ps     (211 m%)
+    tran: time = 1.512 ns    (37.8 %), step = 40 ps           (1 %)
+    tran: time = 1.712 ns    (42.8 %), step = 40 ps           (1 %)
+    tran: time = 1.912 ns    (47.8 %), step = 40 ps           (1 %)
+    tran: time = 2.112 ns    (52.8 %), step = 40 ps           (1 %)
+    tran: time = 2.312 ns    (57.8 %), step = 40 ps           (1 %)
+    tran: time = 2.512 ns    (62.8 %), step = 40 ps           (1 %)
+    tran: time = 2.712 ns    (67.8 %), step = 40 ps           (1 %)
+    tran: time = 2.912 ns    (72.8 %), step = 40 ps           (1 %)
+    tran: time = 3.112 ns    (77.8 %), step = 40 ps           (1 %)
+    tran: time = 3.312 ns    (82.8 %), step = 40 ps           (1 %)
+    tran: time = 3.512 ns    (87.8 %), step = 40 ps           (1 %)
+    tran: time = 3.712 ns    (92.8 %), step = 40 ps           (1 %)
+    tran: time = 3.912 ns    (97.8 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1060
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 332.8 fs    (8.32 m%)
+    tran: time = 303.9 ps     (7.6 %), step = 10.91 ps     (273 m%)
+    tran: time = 536.7 ps    (13.4 %), step = 40 ps           (1 %)
+    tran: time = 736.7 ps    (18.4 %), step = 40 ps           (1 %)
+    tran: time = 936.7 ps    (23.4 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 651.2 fs    (16.3 m%)
+    tran: time = 1.309 ns    (32.7 %), step = 9.798 ps     (245 m%)
+    tran: time = 1.533 ns    (38.3 %), step = 40 ps           (1 %)
+    tran: time = 1.733 ns    (43.3 %), step = 40 ps           (1 %)
+    tran: time = 1.933 ns    (48.3 %), step = 40 ps           (1 %)
+    tran: time = 2.133 ns    (53.3 %), step = 40 ps           (1 %)
+    tran: time = 2.333 ns    (58.3 %), step = 40 ps           (1 %)
+    tran: time = 2.533 ns    (63.3 %), step = 40 ps           (1 %)
+    tran: time = 2.733 ns    (68.3 %), step = 40 ps           (1 %)
+    tran: time = 2.933 ns    (73.3 %), step = 40 ps           (1 %)
+    tran: time = 3.133 ns    (78.3 %), step = 40 ps           (1 %)
+    tran: time = 3.333 ns    (83.3 %), step = 40 ps           (1 %)
+    tran: time = 3.533 ns    (88.3 %), step = 40 ps           (1 %)
+    tran: time = 3.733 ns    (93.3 %), step = 40 ps           (1 %)
+    tran: time = 3.933 ns    (98.3 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1061
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps     (2.5 %), step = 332.2 fs    (8.31 m%)
+    tran: time = 305.7 ps    (7.64 %), step = 11.36 ps     (284 m%)
+    tran: time = 504.4 ps    (12.6 %), step = 40 ps           (1 %)
+    tran: time = 704.4 ps    (17.6 %), step = 40 ps           (1 %)
+    tran: time = 904.4 ps    (22.6 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 648.8 fs    (16.2 m%)
+    tran: time = 1.308 ns    (32.7 %), step = 9.655 ps     (241 m%)
+    tran: time = 1.531 ns    (38.3 %), step = 40 ps           (1 %)
+    tran: time = 1.731 ns    (43.3 %), step = 40 ps           (1 %)
+    tran: time = 1.931 ns    (48.3 %), step = 40 ps           (1 %)
+    tran: time = 2.131 ns    (53.3 %), step = 40 ps           (1 %)
+    tran: time = 2.331 ns    (58.3 %), step = 40 ps           (1 %)
+    tran: time = 2.531 ns    (63.3 %), step = 40 ps           (1 %)
+    tran: time = 2.731 ns    (68.3 %), step = 40 ps           (1 %)
+    tran: time = 2.931 ns    (73.3 %), step = 40 ps           (1 %)
+    tran: time = 3.131 ns    (78.3 %), step = 40 ps           (1 %)
+    tran: time = 3.331 ns    (83.3 %), step = 40 ps           (1 %)
+    tran: time = 3.531 ns    (88.3 %), step = 40 ps           (1 %)
+    tran: time = 3.731 ns    (93.3 %), step = 40 ps           (1 %)
+    tran: time = 3.931 ns    (98.3 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1055
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 220 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.1 ps     (2.5 %), step = 331.2 fs    (8.28 m%)
+    tran: time = 313 ps      (7.82 %), step = 13.19 ps     (330 m%)
+    tran: time = 521.5 ps      (13 %), step = 40 ps           (1 %)
+    tran: time = 721.5 ps      (18 %), step = 40 ps           (1 %)
+    tran: time = 921.5 ps      (23 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 649.8 fs    (16.2 m%)
+    tran: time = 1.31 ns     (32.7 %), step = 9.924 ps     (248 m%)
+    tran: time = 1.535 ns    (38.4 %), step = 40 ps           (1 %)
+    tran: time = 1.735 ns    (43.4 %), step = 40 ps           (1 %)
+    tran: time = 1.935 ns    (48.4 %), step = 40 ps           (1 %)
+    tran: time = 2.135 ns    (53.4 %), step = 40 ps           (1 %)
+    tran: time = 2.335 ns    (58.4 %), step = 40 ps           (1 %)
+    tran: time = 2.535 ns    (63.4 %), step = 40 ps           (1 %)
+    tran: time = 2.735 ns    (68.4 %), step = 40 ps           (1 %)
+    tran: time = 2.935 ns    (73.4 %), step = 40 ps           (1 %)
+    tran: time = 3.135 ns    (78.4 %), step = 40 ps           (1 %)
+    tran: time = 3.335 ns    (83.4 %), step = 40 ps           (1 %)
+    tran: time = 3.535 ns    (88.4 %), step = 40 ps           (1 %)
+    tran: time = 3.735 ns    (93.4 %), step = 40 ps           (1 %)
+    tran: time = 3.935 ns    (98.4 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1062
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 200 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.1 ps     (2.5 %), step = 331.5 fs    (8.29 m%)
+    tran: time = 302.9 ps    (7.57 %), step = 10.68 ps     (267 m%)
+    tran: time = 533 ps      (13.3 %), step = 40 ps           (1 %)
+    tran: time = 733 ps      (18.3 %), step = 40 ps           (1 %)
+    tran: time = 933 ps      (23.3 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 649.6 fs    (16.2 m%)
+    tran: time = 1.301 ns    (32.5 %), step = 7.85 ps      (196 m%)
+    tran: time = 1.538 ns    (38.4 %), step = 40 ps           (1 %)
+    tran: time = 1.738 ns    (43.4 %), step = 40 ps           (1 %)
+    tran: time = 1.938 ns    (48.4 %), step = 40 ps           (1 %)
+    tran: time = 2.138 ns    (53.4 %), step = 40 ps           (1 %)
+    tran: time = 2.338 ns    (58.4 %), step = 40 ps           (1 %)
+    tran: time = 2.538 ns    (63.4 %), step = 40 ps           (1 %)
+    tran: time = 2.738 ns    (68.4 %), step = 40 ps           (1 %)
+    tran: time = 2.938 ns    (73.4 %), step = 40 ps           (1 %)
+    tran: time = 3.138 ns    (78.4 %), step = 40 ps           (1 %)
+    tran: time = 3.338 ns    (83.4 %), step = 40 ps           (1 %)
+    tran: time = 3.538 ns    (88.4 %), step = 40 ps           (1 %)
+    tran: time = 3.738 ns    (93.4 %), step = 40 ps           (1 %)
+    tran: time = 3.938 ns    (98.4 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1062
+Intrinsic tran analysis time =              210 ms.
+Total time required for tran analysis `tran' was 210 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.2 ps    (2.51 %), step = 331.9 fs     (8.3 m%)
+    tran: time = 309 ps      (7.72 %), step = 12.16 ps     (304 m%)
+    tran: time = 511.8 ps    (12.8 %), step = 40 ps           (1 %)
+    tran: time = 711.8 ps    (17.8 %), step = 40 ps           (1 %)
+    tran: time = 911.8 ps    (22.8 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 647.8 fs    (16.2 m%)
+    tran: time = 1.302 ns    (32.5 %), step = 7.94 ps      (198 m%)
+    tran: time = 1.5 ns      (37.5 %), step = 40 ps           (1 %)
+    tran: time = 1.7 ns      (42.5 %), step = 40 ps           (1 %)
+    tran: time = 1.9 ns      (47.5 %), step = 40 ps           (1 %)
+    tran: time = 2.1 ns      (52.5 %), step = 40 ps           (1 %)
+    tran: time = 2.3 ns      (57.5 %), step = 40 ps           (1 %)
+    tran: time = 2.5 ns      (62.5 %), step = 40 ps           (1 %)
+    tran: time = 2.7 ns      (67.5 %), step = 40 ps           (1 %)
+    tran: time = 2.9 ns      (72.5 %), step = 40 ps           (1 %)
+    tran: time = 3.1 ns      (77.5 %), step = 40 ps           (1 %)
+    tran: time = 3.3 ns      (82.5 %), step = 40 ps           (1 %)
+    tran: time = 3.5 ns      (87.5 %), step = 40 ps           (1 %)
+    tran: time = 3.7 ns      (92.5 %), step = 40 ps           (1 %)
+    tran: time = 3.9 ns      (97.5 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1061
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 200 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 332.4 fs    (8.31 m%)
+    tran: time = 309.4 ps    (7.74 %), step = 12.26 ps     (307 m%)
+    tran: time = 512.8 ps    (12.8 %), step = 40 ps           (1 %)
+    tran: time = 712.8 ps    (17.8 %), step = 40 ps           (1 %)
+    tran: time = 912.8 ps    (22.8 %), step = 40 ps           (1 %)
+    tran: time = 1.101 ns    (27.5 %), step = 646.3 fs    (16.2 m%)
+    tran: time = 1.301 ns    (32.5 %), step = 7.756 ps     (194 m%)
+    tran: time = 1.536 ns    (38.4 %), step = 40 ps           (1 %)
+    tran: time = 1.736 ns    (43.4 %), step = 40 ps           (1 %)
+    tran: time = 1.936 ns    (48.4 %), step = 40 ps           (1 %)
+    tran: time = 2.136 ns    (53.4 %), step = 40 ps           (1 %)
+    tran: time = 2.336 ns    (58.4 %), step = 40 ps           (1 %)
+    tran: time = 2.536 ns    (63.4 %), step = 40 ps           (1 %)
+    tran: time = 2.736 ns    (68.4 %), step = 40 ps           (1 %)
+    tran: time = 2.936 ns    (73.4 %), step = 40 ps           (1 %)
+    tran: time = 3.136 ns    (78.4 %), step = 40 ps           (1 %)
+    tran: time = 3.336 ns    (83.4 %), step = 40 ps           (1 %)
+    tran: time = 3.536 ns    (88.4 %), step = 40 ps           (1 %)
+    tran: time = 3.736 ns    (93.4 %), step = 40 ps           (1 %)
+    tran: time = 3.936 ns    (98.4 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1060
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 220 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Warning from spectre.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (SPECTRE-6006): 5 warnings suppressed.
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): I4.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+
+
+settnom: `tnom' set to 27 C.
+
+***********************************************
+Transient Analysis `tran': time = (0 s -> 4 ns)
+***********************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 4 ns
+    step = 2 ps
+    maxstep = 40 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 100.3 ps    (2.51 %), step = 332.2 fs    (8.31 m%)
+    tran: time = 312.3 ps    (7.81 %), step = 13.01 ps     (325 m%)
+    tran: time = 519.8 ps      (13 %), step = 40 ps           (1 %)
+    tran: time = 719.8 ps      (18 %), step = 40 ps           (1 %)
+    tran: time = 919.8 ps      (23 %), step = 40 ps           (1 %)
+    tran: time = 1.1 ns      (27.5 %), step = 648.2 fs    (16.2 m%)
+    tran: time = 1.304 ns    (32.6 %), step = 8.211 ps     (205 m%)
+    tran: time = 1.508 ns    (37.7 %), step = 40 ps           (1 %)
+    tran: time = 1.708 ns    (42.7 %), step = 40 ps           (1 %)
+    tran: time = 1.908 ns    (47.7 %), step = 40 ps           (1 %)
+    tran: time = 2.108 ns    (52.7 %), step = 40 ps           (1 %)
+    tran: time = 2.308 ns    (57.7 %), step = 40 ps           (1 %)
+    tran: time = 2.508 ns    (62.7 %), step = 40 ps           (1 %)
+    tran: time = 2.708 ns    (67.7 %), step = 40 ps           (1 %)
+    tran: time = 2.908 ns    (72.7 %), step = 40 ps           (1 %)
+    tran: time = 3.108 ns    (77.7 %), step = 40 ps           (1 %)
+    tran: time = 3.308 ns    (82.7 %), step = 40 ps           (1 %)
+    tran: time = 3.508 ns    (87.7 %), step = 40 ps           (1 %)
+    tran: time = 3.708 ns    (92.7 %), step = 40 ps           (1 %)
+    tran: time = 3.908 ns    (97.7 %), step = 40 ps           (1 %)
+Number of accepted tran steps =             1058
+Intrinsic tran analysis time =              200 ms.
+Total time required for tran analysis `tran' was 200 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+Spectre received SIGTERM.
+
+Killed by user.
+
+Aggregate audit (5:24:34 AM, Thur May 9, 2013):
+Time used: CPU = 7.03 s, elapsed = 56 s, util. = 12.6%.
+Time spent in licensing: elapsed = 20 ms.
+Virtual memory used = 8.05 Mbytes.
+spectre completes with 0 errors, 476 warnings, and 0 notices.

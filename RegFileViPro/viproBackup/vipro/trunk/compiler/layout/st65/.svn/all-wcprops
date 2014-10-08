@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65
+END
+st65Top_DoutBuf.il
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_DoutBuf.il
+END
+st65Top_MuxFcount.il
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_MuxFcount.il
+END
+st65Top_MuxMemInput.il
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_MuxMemInput.il
+END
+st65Top_ClkGate.il
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_ClkGate.il
+END
+st65Top_outputTx.il
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_outputTx.il
+END
+st65Top_BistBuf.il
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_BistBuf.il
+END
+st65Top_ClkGen.il
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_ClkGen.il
+END
+st65Top_BlkDec.il
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_BlkDec.il
+END
+st65Top_MuxFcountBuf.il
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_MuxFcountBuf.il
+END
+st65Top_ClockBlock.il
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/st65/st65Top_ClockBlock.il
+END

@@ -1,0 +1,38 @@
+simulator lang=spectre
+
+// Voltage sources
+_VDD (VDD 0) vsource dc=pvdd
+_VSS (VSS 0) vsource dc=0
+
+_VWL (WL 0) vsource dc=pvwl
+_VBL (BL 0) vsource dc=pvdd
+_VBP (VBP 0) vsource dc=pvbp
+_VBN (VBN 0) vsource dc=pvbn
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+  MT (BL WL OUT VBN) N_TRANSISTOR width=wna length=lna
+ends HALFCELL
+
+//============================================
+// Reset Half Cell
+//============================================
+subckt RSTHCELL (IN OUT RRST CRST VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+  MT (RRST CRST OUT VBN) N_TRANSISTOR width=wrs length=lrs
+ends RSTHCELL
+
+// Devices
+ICellL (QB Q BL_CELL WL VDD VBP VSS VBN) HALFCELL
+ICellR (Q QB VDD 0 VDD VBP VSS VBN) RSTHCELL
+
+// Current probes
+IREAD BL BL_CELL iprobe
+
+// DC Convergence
+nodeset Q=0 QB=pvdd

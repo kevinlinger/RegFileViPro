@@ -1,0 +1,24 @@
+
+SAOffset =0.9
+readEnergy= 6.92602e-14
+readDelay= 2.42002e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1
+readEnergy= 7.52595e-14
+readDelay= 7.50406e-09
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1.1
+readEnergy= 8.0951e-14
+readDelay= 1.65457e-10
+writeEnergy= 0
+writeDelay= 0
+
+SAOffset =1.2
+readEnergy= 8.63616e-14
+readDelay= 1.44567e-10
+writeEnergy= 0
+writeDelay= 0

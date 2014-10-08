@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/SRAM_TOOL/!svn/ver/407/trunk/bin
+END
+compiler.pl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/SRAM_TOOL/!svn/ver/391/trunk/bin/compiler.pl
+END
+char.pl
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/SRAM_TOOL/!svn/ver/407/trunk/bin/char.pl
+END
+user.pl
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/SRAM_TOOL/!svn/ver/407/trunk/bin/user.pl
+END
+ViPro.pl
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/SRAM_TOOL/!svn/ver/407/trunk/bin/ViPro.pl
+END
+optimizer.pl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/SRAM_TOOL/!svn/ver/407/trunk/bin/optimizer.pl
+END

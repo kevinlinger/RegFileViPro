@@ -1,0 +1,5 @@
+2008-01-07
+Original spec: 9. Ioff vs. VDD
+5TSRAM_Ioff_Ileak_vs_VDD is a simulation which gives data on cell leakage currents with varying supply voltage.
+
+Need separate sims for storing 0 and 1 due to asymmetry of the cell

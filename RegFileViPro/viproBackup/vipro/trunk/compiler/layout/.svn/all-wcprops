@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout
+END
+jwBasicLayout.il
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/jwBasicLayout.il
+END
+UvaEceMath.il
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/UvaEceMath.il
+END
+UvaEceBitcellArray_Layout.il
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/UvaEceBitcellArray_Layout.il
+END
+UvaEceBitSlice_Layout.il
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/UvaEceBitSlice_Layout.il
+END
+UvaEceWLDriver_Layout.il
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/UvaEceWLDriver_Layout.il
+END
+UvaEceLayout.il
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/UvaEceLayout.il
+END
+UvaEceSRAM_Layout.il
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/UvaEceSRAM_Layout.il
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/SRAM_TOOL/!svn/ver/384/trunk/compiler/layout/README
+END

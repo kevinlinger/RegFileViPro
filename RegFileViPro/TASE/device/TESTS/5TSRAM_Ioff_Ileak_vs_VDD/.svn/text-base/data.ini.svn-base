@@ -1,0 +1,10 @@
+%dc.dc
+
+IOFF0:in
+ILEAK_VDD0:in
+ILEAK_VSS0:in
+VDD0
+IOFF1:in
+ILEAK_VDD1:in
+ILEAK_VSS1:in
+VDD1

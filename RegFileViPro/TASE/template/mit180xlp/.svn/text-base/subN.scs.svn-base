@@ -1,0 +1,8 @@
+subckt N_TRANSISTOR D G S B
+
+parameters width=0.6u length=0.15u
+
+NX (D G S B) nmos_std_xlp w=width l=length
+
+ends N_TRANSISTOR
+

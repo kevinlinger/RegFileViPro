@@ -1,0 +1,3 @@
+2009-11-30
+
+Run a number of 1k MC sims for RSNM to get the fitted parameters to pass to the model. In the plotGen file, the parameters extracted from the MC sim data are plugged into the equations to generate failure prob vs. VDD and Read Vmin vs. sigma

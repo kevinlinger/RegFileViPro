@@ -1,0 +1,31 @@
+//============================================
+// Define VDD and VSS
+//============================================
+
+VVDD (VDD 0) vsource dc=pvdd 
+VVSS (VSS 0) vsource dc=pvss
+VVBN (VBN 0) vsource dc=pvbn
+VVBP (VBP 0) vsource dc=pvbp
+
+//============================================
+// Source that will swing VGS from -VDD to VDD 
+//============================================
+
+VVGS (VGS VSS) vsource
+
+
+//============================================
+// Drain bias
+//============================================
+
+VVDS (VDS VSS) vsource dc=pvdd
+
+
+//============================================
+// Test transistor (D G S B)
+//============================================
+
+N1 (VDS VGS VSS VBN) N_TRANSISTOR width=wdef length=ldef
+
+N2 (VDS VGS VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+N3 (VDS VGS VSS VBN) PG_TRANSISTOR width=wpg length=lpg

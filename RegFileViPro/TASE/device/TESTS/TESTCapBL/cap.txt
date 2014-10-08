@@ -1,0 +1,4 @@
+ WL = VDD, data = VDD C = 2.508812e-16 F
+ WL = VDD, data = 0 C = 1.497274e-16 F
+ WL = 0, data = 0 C = 2.265470e-16 F
+ WL = 0, data = VDD C = 2.265731e-16 F

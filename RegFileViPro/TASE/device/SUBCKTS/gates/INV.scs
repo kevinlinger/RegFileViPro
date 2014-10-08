@@ -1,0 +1,8 @@
+subckt INV VDD VSS IN OUT
+
+parameters pw pl nw nl
+
+P1 (VDD IN OUT VDD) P_TRANSISTOR width=pw length=pl
+N1 (OUT IN VSS VSS) N_TRANSISTOR width=nw length=nl
+
+ends INV

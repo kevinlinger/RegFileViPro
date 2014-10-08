@@ -1,0 +1,7 @@
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/p_std_mvt.scs"
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/n_std_mvt.scs"
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/p_std_lvt.scs"
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/n_std_lvt.scs"
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/xlpfdsoi_p_rev1.scs"
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/xlpfdsoi_n_rev1.scs"
+

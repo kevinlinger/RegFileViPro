@@ -1,0 +1,34 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// bitcell for IRead
+//============================================
+subckt bitcell6TB BL BLB VBN VBP VDD VSS WL
+MPR (QB Q VDD VBP) PU_TRANSITOR width=wpu length=lpu
+MPL (Q QB VDD VBP) PU_TRANSITOR width=wpu length=lpu
+MNR (QB Q VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MNL (Q QB VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MTL (BL WL Q VBN) PG_TRANSISTOR  width=wpg length=lpg
+MTR (BLB WL QB VBN) PG_TRANSISTOR  width=wpg length=lpg
+ends bitcell6TB
+
+//============================================
+// Test Read Current
+//============================================
+I0 (BL1 BLB1 VSS VDD VDD VSS WLA) bitcell6TB m=1
+I1 (BL2 BLB2 VSS VDD VDD VSS WLU) bitcell6TB m=rowsM1
+
+VBL (BL2 BL1) vsource dc=0
+VBLB (BLB2 BLB1) vsource dc=0
+VWLU (WLU 0) vsource dc=0
+VWLA (WLA 0) vsource type=pulse val0=0 val1=pvdd delay=0.01n rise=0.01n fall=0.01n width=1n period=2n
+
+
+//==================
+//Initial Conditions
+//==================
+ic I1.QB=0 I1.Q=pvdd I0.QB=pvdd I0.Q=0 BLB2=pvdd BLB1=pvdd BL2=pvdd BL1=pvdd

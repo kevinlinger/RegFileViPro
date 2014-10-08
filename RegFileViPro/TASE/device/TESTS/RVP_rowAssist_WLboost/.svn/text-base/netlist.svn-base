@@ -1,0 +1,68 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDDH (VDDH 0) vsource dc=pvddh
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Inverter 
+//============================================
+subckt INV (IN OUT VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wpul length=lpul
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wpdl length=lpdl
+ends INV
+
+//============================================
+// AND
+//============================================
+subckt AND (IN1 IN2 OUT VDD VBP VSS VBN)
+  MP1 (OUTB IN1 VDD VBP) P_TRANSISTOR width=wpul length=lpul
+  MP2 (OUTB IN2 VDD VBP) P_TRANSISTOR width=wpul length=lpul
+  MN1 (OUTB IN1 COM VBN) N_TRANSISTOR width=wpdl length=lpdl
+  MN2 (COM IN2 VSS VBN) N_TRANSISTOR width=wpdl length=lpdl
+  IINV (OUTB OUT VDD VBP VSS VBN) INV
+ends AND
+
+//============================================
+// Tx Gate
+//============================================
+subckt TXG (IN OUT SELP SELN VBP VBN)
+  MP (OUT SELP IN VBP) P_TRANSISTOR width=wpt length=lpt
+  MN (IN SELN OUT VBN) N_TRANSISTOR width=wnt length=lnt
+ends TXG
+
+//============================================
+// Level converter
+//============================================
+subckt LVL_CVT (IN OUT VDDH VDDL VSS VBN)
+MP1 (X OUT VDDH VDDH) P_TRANSISTOR width=wp1 length=lp1
+MP2 (OUT X VDDH VDDH) P_TRANSISTOR width=wp2 length=lp2
+MN1 (X IN VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+MN2 (OUT INB VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+I1 (IN INB VDDL VDDL VSS VBN) INV
+ends LVL_CVT
+
+I1 (SEL SELB VDD VDD VSS VSS) INV
+IAND (WRITE DECOUT SEL VDD VDD VSS VSS) AND
+I2 (DECOUT X VDD VDD VSS VSS) INV
+I3 (X XB VDD VDD VSS VSS) INV
+I4 (XB XBB VDD VDD VSS VSS) INV
+I5 (XBB LVIN VDD VDD VSS VSS) INV
+
+//Level converters
+IL1 (LVIN OUT VDDWL VDD VSS VBN) LVL_CVT
+IL2 (SELB SELBH VDDH VDD VSS VBN) LVL_CVT
+
+//VDD mux
+PW (VDDWL SELBH VDDH VDDH) P_TRANSISTOR width=wpmux length=lpmux
+PR (VDDWL SEL VDD VDDH) P_TRANSISTOR width=wpmux length=lpmux
+
+VDEC (DECOUT 0) vsource type=pulse val0=0 val1=pvdd rise=0.1n fall=0.1n width=1n
+VWR (WRITE 0) vsource type=pulse val0=0 val1=pvdd rise=0.1n
+
+//Virtual VDD is loaded by all the PMOSes in the WL driver, st90nm value
+CVDD (VDDWL 0) capacitor c=6.7f
+
+save :pwr

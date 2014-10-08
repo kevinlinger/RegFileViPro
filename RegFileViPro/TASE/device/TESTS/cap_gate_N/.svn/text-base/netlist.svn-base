@@ -1,0 +1,24 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Circuit to find capacitor, R = 1k ohm
+//============================================
+
+subckt TESTC (IN WL VDD VSS VBN)
+ N1 (VDD WL VDD VBN) N_TRANSISTOR width=wdef length=ldef
+ N2 (VDD WL VSS VBN) N_TRANSISTOR width=wdef length=ldef
+ R1 (IN WL) resistor r=1000
+ends TESTC
+ 
+//============================================
+// Measure WL current
+//============================================
+C0 (IN WLM VDD VSS VSS) TESTC m=1
+
+ic WLM=0
+
+VIN (IN 0) vsource type=pulse val0=0 val1=pvdd delay=1p rise=50p fall=50p width=0.7n period=1n 

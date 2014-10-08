@@ -1,0 +1,22 @@
+2008-01-02
+Original spec: 10. Read current vs. WL voltage
+
+SRAM_Iread_vs_VWL is a simulation which gives data on cell read current with
+varying wordline voltage.
+
+DC simulation did not work, despite attempts to set or read the initial
+condition or nodesets for the storage nodes, they always converged to Q=QB in
+the dc simulations.
+
+Currently using a transient simulation varying VWL from 0 to 2*pvdd over 1u
+which should be slow enough to yield accurate results while also having a
+realistic value for the storage nodes.
+
+Note that at some point after WL exceeds VDD, the read turns destructive and the
+cell's storage nodes are corrupted, causing the IRead to drop.
+
+2008-01-14T1900
+Revised this to a more accurate DC analysis.  It works now because the DC sweep
+is done from 0 to 2*pvdd rather than the opposite direction.  Since the nodeset
+is only used to assist the first point of the sweep, the first point must be
+chosen carefully.

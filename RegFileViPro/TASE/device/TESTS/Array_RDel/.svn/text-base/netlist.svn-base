@@ -1,0 +1,132 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Circuit to find current 
+//============================================
+
+subckt Bitcell (BL BLB WL VDD VSS VBN VBP)
+ N1 (BL WL Q VBN) N_TRANSISTOR width=wdef length=ldef
+ N2 (QB Q VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ P2 (QB Q VDD VBP) P_TRANSISTOR width=wpu length=lpu
+ N3 (Q QB VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ P3 (Q QB VDD VBP) P_TRANSISTOR width=wpu length=lpu
+ N4 (BLB WL QB VBN) N_TRANSISTOR width=wdef length=ldef
+ends Bitcell
+
+
+subckt Inv (In Out VDD VSS VBN VBP)
+ P1 (VDD In Out VBP) P_TRANSISTOR width=wdef length=ldef
+ N1 (VSS In Out VBN) N_TRANSISTOR width=wdef length=ldef
+ends Inv
+
+
+//Precharge is active low
+subckt Charger (Pre Wr Data BL BLB VDD VSS VBN VBP)
+ Pr  (BL Pre VDD VBP) P_TRANSISTOR width=54*wdef length=ldef
+ Pr1 (BLB Pre VDD VBP) P_TRANSISTOR width=54*wdef length=ldef 
+ //PassGates for write
+ P1 (BL WrB A2 VBP)  P_TRANSISTOR width=wdef length=ldef
+ N1 (BL Wr A2 VBN) N_TRANSISTOR width=wdef length=ldef
+ 
+ P2 (BLB WrB A3 VBP)  P_TRANSISTOR width=wdef length=ldef
+ N2 (BLB Wr A3 VBN) N_TRANSISTOR width=wdef length=ldef
+ //Inverters =>buffers for Data and DataB
+ I1 (Data A1 VDD VSS VBN VBP) Inv m=2
+ I2 (A1 A2 VDD VSS VBN VBP) Inv m=8
+ I3 (A4 A3 VDD VSS VBN VBP) Inv m=8
+ I4 (A5 A4 VDD VSS VBN VBP) Inv m=2
+ I5 (Data A5 VDD VSS VBN VBP) Inv m=1
+
+ I6 (Wr WrB VDD VSS VBN VBP) Inv m=1 
+ends Charger
+
+//Column of memory + the precharge/data
+subckt MemCol (Pre Data Wr WL0 WL1 Csel VDD VSS VBN VBP)
+ Ch (Pre Wr Data BLch BLBch VDD VSS VBN VBP) Charger
+ Ip (BLch BL) iprobe
+ IpB (BLBch BLB) iprobe
+
+ Cell1 (BL BLB WL0 VDD VSS VBN VBP) Bitcell
+ R1 (BL BL1) resistor r = res/6
+ RB1 (BLB BLB1) resistor r = res/6
+ C1 (BL1 VSS) capacitor c=cap/3
+ CB1 (BLB1 VSS) capacitor c=cap/3
+ R2 (BL1 BL2) resistor r = res/3
+ RB2 (BLB1 BLB2) resistor r = res/3
+ C2 (BL2 VSS) capacitor c=cap/3
+ CB2 (BLB2 VSS) capacitor c=cap/3
+
+ Dummy (BL2 BLB2 VSS VDD VSS VBN VBP) Bitcell m=rows
+ R3 (BL2 BL3) resistor r = res/3
+ RB3 (BLB2 BLB3) resistor r = res/3
+ C3 (BL3 VSS) capacitor c=cap/3
+ CB3 (BLB3 VSS) capacitor c=cap/3
+ R4 (BL3 BL4) resistor r = res/6
+ RB4 (BLB3 BLB4) resistor r = res/6
+
+ Cell2 (BL4 BLB4 WL1 VDD VSS VBN VBP) Bitcell
+
+ //passgate
+ N1 (BL4 Csel M1 VBN) N_TRANSISTOR width=wdef length=ldef
+ P1 (BL4 CselB M1 VBP) P_TRANSISTOR width=wdef length=ldef
+ //Equalising PMOS
+ P3 (BLB4 Pre BL4 VBP) P_TRANSISTOR width=wdef length=ldef
+ //PassGate
+ N4 (BLB4 Csel M2 VBN) N_TRANSISTOR width=wdef length=ldef
+ P4 (BLB4 CselB M2 VBP) P_TRANSISTOR width=wdef length=ldef
+ //Capacitance for BL load
+ I1 (Csel CselB VDD VSS VBN VBP) Inv
+//set initial condition of the column set to worse case
+ic Cell1.Q = pvdd Cell1.QB = 0 Cell2.Q = 0 Cell2.QB = pvdd Dummy.Q = 0 Dummy.QB=pvdd  BL=pvdd BLB = pvdd  BL1=pvdd BLB1 = pvdd  BL2=pvdd BLB2 = pvdd 
+ends MemCol
+
+
+subckt MemArray (Pre Data0 Data1 Data2 Data3 Data4 Data5 Data6 Data7 Wr WL0 WL1 Csel VDD VSS VBN VBP)
+ Col0 (Pre Data0 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col1 (Pre Data1 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col2 (Pre Data2 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col3 (Pre Data3 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col4 (Pre Data4 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col5 (Pre Data5 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col6 (Pre Data6 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ Col7 (Pre Data7 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemCol
+ DumCol (Pre VSS Wr0 WL0 WL1 VSS VDD VSS VBN VBP) MemCol m=columns
+
+ends MemArray
+
+//============================================
+// Measure cell current 
+//============================================
+
+C0 (Pre Data0 Data1 Data2 Data3 Data4 Data5 Data6 Data7 Wr WL0 WL1 Csel VDD VSS VBN VBP) MemArray
+
+
+VWL0 (WL0 0) vsource type=pulse val0=0 val1=pvdd delay=50p rise=100p fall=100p
+// width=dt
+
+VPre (Pre 0) vsource type=pulse val0=0 val1=pvdd delay=0 rise=100p fall=100p
+// width=dt +100p
+
+VWL1 (WL1 0) vsource type=dc dc=0 
+
+VWr (Wr 0) vsource type=dc dc=0 
+
+VData0 (Data0 Data1) vsource type=dc dc=0
+VData1 (Data2 Data3) vsource type=dc dc=0
+VData2 (Data4 Data5) vsource type=dc dc=0
+VData3 (Data6 Data7) vsource type=dc dc=0
+
+VVBN (VBN 0) vsource type=dc dc=0
+VVBP (VBP 0) vsource type=dc dc=pvdd
+VCsel (Csel 0) vsource type=pulse val0=0 val1=pvdd delay=100p + dt/2 rise=100p  
+opt options pwr=all currents=all 
+
+
+
+
+
+

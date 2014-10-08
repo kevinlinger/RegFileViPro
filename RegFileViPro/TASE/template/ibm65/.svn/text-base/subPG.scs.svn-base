@@ -1,0 +1,8 @@
+subckt PG_TRANSISTOR D G S B
+
+parameters width=90n length=75n pvta=0
+
+NX (D G S B) nsvtlppgsp w=width l=length m=1 tometer=1 mismatch=1 srcefirst=1 p_vta=pvta
+ 
+ends PG_TRANSISTOR
+

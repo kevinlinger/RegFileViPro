@@ -1,0 +1,14 @@
+subckt NOR2 VDD VSS IN1 IN2 OUT
+
+parameters pw pl nw nl
+
+P1 (VDD IN1 MID VDD) P_TRANSISTOR width=pw length=pl
+P2 (VDD IN2 MID VDD) P_TRANSISTOR width=pw length=pl
+N1 (MID IN1 COM VSS) N_TRANSISTOR width=nw length=nl
+N2 (COM IN2 VSS VSS) N_TRANSISTOR width=nw length=nl
+
+P1 (VDD MID OUT VDD) P_TRANSISTOR width=pw length=pl
+N1 (OUT MID VSS VSS) N_TRANSISTOR width=nw length=nl
+
+ends NOR2
+

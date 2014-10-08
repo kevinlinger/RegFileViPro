@@ -1,0 +1,36 @@
+//============================================
+// To extract DIBL coefficient
+// Id ~ VDS (VGS=0)
+//============================================
+
+//============================================
+// Define VDD and VSS
+//============================================
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+
+//============================================
+// Gate bias
+//============================================
+
+VVGS1 (VGS1 VDD) vsource dc=0
+VVGS2 (VGS2 VDD) vsource dc=-0.1*pvdd
+VVGS3 (VGS3 VDD) vsource dc=-0.2*pvdd
+
+//============================================
+// Drain bias
+//============================================
+
+VVDS (VDS VDD) vsource dc=-pvdd
+
+
+//============================================
+// Test transistor
+//============================================
+
+P1 (VDS VGS1 VDD VDD) PU_TRANSISTOR width=wpu length=lpu
+P2 (VDS VGS2 VDD VDD) PU_TRANSISTOR width=wpu length=lpu
+P3 (VDS VGS3 VDD VDD) PU_TRANSISTOR width=wpu length=lpu
+

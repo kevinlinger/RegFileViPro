@@ -1,0 +1,113 @@
+////Cell name: buf
+subckt buf IN OUT VDD VSS
+parameters wp2=wdef wp1=wdef wn2=wdef wn1=wdef l=ldef
+MP1 (OUTB IN VDD VDD) P_TRANSISTOR width=wp1 length=l
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wn1 length=l
+MP2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wp2 length=l
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wn2 length=l
+ends buf
+
+// Cell name: bitcell6T
+// View name: schematic
+subckt bitcell6T BL BLB VDDC VSSC WL
+M3 (QB WL BLB VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M2 (Q WL BL VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M4 (QB Q VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M1 (Q QB VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M5 (QB Q VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+M0 (Q QB VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+ends bitcell6T
+
+// Cell name: nand2
+// View name: schematic
+subckt nand2 INbot INtop OUT VDD VSS
+parameters wp=2*wdef lp=ldef wn=2*wdef ln=ldef
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp length=lp 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn length=ln 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends nand2
+// End of subcircuit definition.
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=2*i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+//generic inverter chain optimize later
+subckt INVCHAIN IN OUT VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4
+I2 (X3 X2 VDD VSS) INV i=16
+I3 (OUT X3 VDD VSS) INV i=48
+ends INVCHAIN
+
+// Cell name: CD
+// View name: schematic
+subckt CD BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS
+parameters wncs=wdef lncs=ldef wpcs=wdef lpcs=ldef wpch=6*wdef lpch=ldef
+M3 (BLB CSEL NRDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M1 (BL CSEL RDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M4 (NRDWR CSELB BLB VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M5 (BLB PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+M2 (RDWR CSELB BL VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M0 (BL PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+M6 (BL PCH BLB VDD) P_TRANSISTOR width=wpch length=lpch
+ends CD
+// End of subcircuit definition.
+
+// DUT name: BitSlice_test
+
+subckt COL BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS
+IBCA (BL BLB VDD VSS WLA) bitcell6T
+IBCD (BL BLB VDD VSS VSS) bitcell6T m=(NR - 1)
+ICDA (BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS) CD 
+//+15 to account for length of wire to periphery
+CBL (BL 0) capacitor c=cbl*(NR+15) 
+CBLB (BLB 0) capacitor c=cbl*(NR+15)
+ends COL
+
+// Cell name: triinv
+// View name: schematic
+subckt triinv IN OUT TRI_N TRI_P VDD VSS 
+parameters wp=wdef lp=ldef wn=wdef ln=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wp length=lp 
+MP (net19 TRI_P VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wn length=ln 
+MN (net31 TRI_N VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends triinv
+// End of subcircuit definition.
+
+//BC and CD
+ICOL1 (BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS) COL
+
+IWRD (DIN BL VSS VDD VDD VSS) triinv wp=wdef lp=ldef wn=wdef*10 ln=ldef
+IWRDB (db BLB VSS VDD VDD VSS) triinv wp=wdef lp=ldef wn=wdef*10 ln=ldef
+
+// Cap calculation for pch
+capPCH (PCH 0) capacitor c=numBanks/2*ws*cwl+wdef*cg*1e6*(ws-1)*6 
+
+//Input drivers for DUT
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VWLA (WLA_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=twl period=tper delay=tdly
+IB0 (WLA_IN WLA VDD VSS) buf
+
+VCSEL (CSEL 0) vsource dc=0
+VCSELB (CSELB 0) vsource dc=pvdd
+
+;0.1n added to PCH pulse width, since PCH should go low after CSEL and CSELB switch so that the sensed differential shouldn't get corrupted
+VPCH (PCH_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=(twl)+0.2n period=tper delay=tdly-0.1n
+
+Idb (db DIN_IN VDD VSS) INV i=1
+IPCH (PCH_IN PCH VDD VSS) INVCHAIN
+VDIN (DIN_IN 0) vsource dc=0
+VWEN (WEN_IN 0) vsource dc=0
+IB7 (DIN_IN DIN VDD VSS) buf
+IB8 (WEN_IN WEN VDD VSS) INVCHAIN
+
+ic ICOL1.IBCA.Q=0 ICOL1.IBCD.Q=pvdd BL=pvdd BLB=pvdd NRDWR=0 RDWR=0
+myOption options pwr=all pivotdc=yes

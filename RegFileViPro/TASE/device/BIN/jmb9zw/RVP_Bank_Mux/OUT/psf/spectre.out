@@ -1,0 +1,133 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 7.0.1.125.isr11 -- 19 Oct 2008
+Copyright (C) 1989-2007 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 7,085,700; 7,143,021.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+Simulating `input.scs' on class3.ee.Virginia.EDU at 1:21:36 AM, Wed Jan 23, 2013 (process id: 9897).
+Command line:
+    /app/cadence/MMSIM70/tools.lnx86/spectre/bin/32bit/spectre -env  \
+        artist5.1.0 +escchars +log OUT/psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_9837_1 -format sst2 -raw OUT/psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5 input.scs
+spectre pid = 9897
+
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Using new Spectre Parser.
+Auto-loading AHDL component.
+Finished loading AHDL component in 0 s (elapsed).
+Installed AHDL simulation interface.
+
+Warning from spectre in `P_TRANSISTOR':`IBANK_SEL0.I0.MP', in `INV':`IBANK_SEL0.I0', in `INVCHAIN_BANK_SEL':`IBANK_SEL0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: IBANK_SEL0.I0.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`IBANK_SEL0.I0.MN', in `INV':`IBANK_SEL0.I0', in `INVCHAIN_BANK_SEL':`IBANK_SEL0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: IBANK_SEL0.I0.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`IBANK_SEL0.I1.MP', in `INV':`IBANK_SEL0.I1', in `INVCHAIN_BANK_SEL':`IBANK_SEL0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: IBANK_SEL0.I1.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`IBANK_SEL0.I1.MN', in `INV':`IBANK_SEL0.I1', in `INVCHAIN_BANK_SEL':`IBANK_SEL0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: IBANK_SEL0.I1.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`IBANK_SEL0.I2.MP', in `INV':`IBANK_SEL0.I2', in `INVCHAIN_BANK_SEL':`IBANK_SEL0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: IBANK_SEL0.I2.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+Warning from spectre during initial setup.
+    WARNING (CMI-2426): Tri_state0.M1.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I3.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+        Further occurrences of this warning will be suppressed.
+
+
+Circuit inventory:
+              nodes 15
+              bsim4 20    
+          capacitor 3     
+            vsource 4     
+
+
+Warning from spectre.
+    WARNING (SPECTRE-6006): 15 warnings suppressed.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_9837_1, ).
+
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): Tri_state0.M1.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I3.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I2.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I1.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBANK_SEL0.I0.MN.NX.m1: `Dvt0' = -30 mV is negative.
+        Further occurrences of this warning will be suppressed.
+
+
+settnom: `tnom' set to 27 C.
+
+**************************************************
+Transient Analysis `tran': time = (0 s -> 1.25 ns)
+**************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 1.25 ns
+    step = 1.25 ps
+    maxstep = 12.5 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 25 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 31.41 ps    (2.51 %), step = 414.5 fs    (33.2 m%)
+    tran: time = 94 ps       (7.52 %), step = 264.6 fs    (21.2 m%)
+    tran: time = 156.5 ps    (12.5 %), step = 541.4 fs    (43.3 m%)
+    tran: time = 219 ps      (17.5 %), step = 1 ps          (80 m%)
+    tran: time = 282 ps      (22.6 %), step = 1 ps          (80 m%)
+    tran: time = 344 ps      (27.5 %), step = 1 ps          (80 m%)
+    tran: time = 407 ps      (32.6 %), step = 1 ps          (80 m%)
+    tran: time = 469 ps      (37.5 %), step = 1 ps          (80 m%)
+    tran: time = 532 ps      (42.6 %), step = 1 ps          (80 m%)
+    tran: time = 594 ps      (47.5 %), step = 1 ps          (80 m%)
+    tran: time = 657 ps      (52.6 %), step = 1 ps          (80 m%)
+    tran: time = 719 ps      (57.5 %), step = 1 ps          (80 m%)
+    tran: time = 782 ps      (62.6 %), step = 1 ps          (80 m%)
+    tran: time = 844 ps      (67.5 %), step = 1 ps          (80 m%)
+    tran: time = 907 ps      (72.6 %), step = 1 ps          (80 m%)
+    tran: time = 969 ps      (77.5 %), step = 1 ps          (80 m%)
+    tran: time = 1.031 ns    (82.5 %), step = 315.1 fs    (25.2 m%)
+    tran: time = 1.094 ns    (87.5 %), step = 465.8 fs    (37.3 m%)
+    tran: time = 1.157 ns    (92.5 %), step = 500 fs        (40 m%)
+    tran: time = 1.219 ns    (97.5 %), step = 1 ps          (80 m%)
+Number of accepted tran steps =             1972
+Intrinsic tran analysis time =              640 ms.
+Total time required for tran analysis `tran' was 660 ms.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+Spectre received SIGTERM.
+
+Killed by user.
+
+Aggregate audit (1:21:40 AM, Wed Jan 23, 2013):
+Time used: CPU = 976 ms, elapsed = 4 s, util. = 24.4%.
+Time spent in licensing: elapsed = 10 ms.
+Virtual memory used = 7.81 Mbytes.
+spectre completes with 0 errors, 31 warnings, and 0 notices.

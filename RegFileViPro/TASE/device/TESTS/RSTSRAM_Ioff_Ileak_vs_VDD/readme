@@ -1,0 +1,12 @@
+2008-01-07
+Original spec: 9. Ioff vs. VDD
+SRAM_Ioff_Ileak_vs_VDD is a simulation which gives data on cell leakage currents with varying supply voltage.
+
+Seems to work reasonably well as a DC simulation although I'm not entirely
+comfortable with setting the storage nodes directly from the rails.  As a
+transient, though, it wouldn't be possible to test leakage throughout the whole
+range, because the cell would become corrupted.  Also transients can't be done
+while varying device parameters while DC analysis can. - mmccartn
+
+2008-01-14T1930
+Switched back to DC analysis from transient analysis.  Major improvement.

@@ -1,0 +1,21 @@
+simulator lang=spectre
+//============================================
+// Define VDD and VSS
+//============================================
+_VDD (VDD 0) vsource dc=vdd
+_VSS (VSS 0) vsource dc=0
+
+//============================================
+//
+//============================================
+
+// Library name: FSL45_TEST
+// Cell name: dc_nodeset
+// View name: schematic
+_C1 (V1 0) capacitor c=1p
+_C0 (VDD V1) capacitor c=1p
+
+//==================
+//Initial Conditions
+//==================
+nodeset V1=0.5

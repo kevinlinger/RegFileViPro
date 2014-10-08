@@ -1,0 +1,11 @@
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/4283481814.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/3421611052.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/2268464613.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/1266648557.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/1189544457.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/690271857.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/1346760340.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/1580850431.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/1481681510.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/680003802.index
+/net/plato.ee.virginia.edu/users/jmb9zw/TASE/device/BIN/VLSIGroup/.metadata/.plugins/org.eclipse.jdt.core/1501317170.index

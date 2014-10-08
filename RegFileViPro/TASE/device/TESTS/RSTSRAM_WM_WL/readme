@@ -1,0 +1,13 @@
+##### 2008-05-03 by jw4pg #####
+Original spec: Write Margin (WL criterion) distribution
+
+Measurement:
+Both access transistors are connected to WL. WL is swept from 0 to VDD. At the critical WL value, the internal nodes Q and QB flip. Write margin is the margin between this value and VDD. 
+
+
+##### 2008-09-23  by jw4pg #####
+Change to work with the relative model path defined in the config file
+
+
+##### 2008-11-12  by jw4pg #####
+Use a dedicated power supply for the cell array (pvdda) to evaluate the VDD callape write assist.

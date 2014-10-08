@@ -1,0 +1,35 @@
+#tpl2scs
+#!/usr/bin/env perl
+use strict;
+
+#########################
+# Simple Plugin Example #
+#########################
+print("\nHello World!\n\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

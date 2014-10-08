@@ -1,0 +1,40 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED #
+############
+
+<minl>          600n
+<minw>          1.5u
+<ldef>          600n
+<wdef>          1.5u
+
+<pdk>		ami06
+<pvdd>          5.0
+<subN>		../../../../template/ami06/subN.scs
+<subP>		../../../../template/ami06/subP.scs
+<include>	../../../../ami06/include.scs
+
+############
+# OPTIONAL #
+############
+
+
+
+#############################################################################################
+# TEST EXECUTION SELECTION                                                                  #
+# These are the tests to be run to get parameters to plug in to the models for optimization #
+#############################################################################################
+<scs>
+IDVD_N
+IDVD_P
+Ioff_vs_VDS_N
+Ioff_vs_VDS_P
+SRAM_Ion_Ioff_vs_VDD
+</scs>
+
+<ocn>
+Cgate_N
+Cjunction_N
+INV_delay
+</ocn>

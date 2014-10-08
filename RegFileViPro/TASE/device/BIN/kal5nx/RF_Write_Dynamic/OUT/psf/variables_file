@@ -1,0 +1,37 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "May 24 02:05:26 2013"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"wpu" "variable" ( 640e-9 ) PROP( )
+"lpu" "variable" ( 65e-9 ) PROP( )
+"wpd" "variable" ( 140e-9 ) PROP( )
+"lpd" "variable" ( 65e-9 ) PROP( )
+"wpg" "variable" ( 720e-9 ) PROP( )
+"lpg" "variable" ( 75e-9 ) PROP( )
+"twl" "variable" ( 833.3333e-12 ) PROP( )
+"tdly" "variable" ( 1.25e-9 ) PROP( )
+"cbl" "variable" ( 50.8303e-18 ) PROP( )
+"NR" "variable" ( 64 ) PROP( )
+"cwl" "variable" ( 109.136e-18 ) PROP( )
+"cg" "variable" ( 659.722e-18 ) PROP( )
+"numBanks" "variable" ( 1 ) PROP( )
+"pvdd" "variable" ( 1 ) PROP( )
+"pvbp" "variable" ( 1 ) PROP( )
+"ldef" "variable" ( 60e-9 ) PROP( )
+"wdef" "variable" ( 120e-9 ) PROP( )
+"prise" "variable" ( 1e-12 ) PROP( )
+"pfall" "variable" ( 1e-12 ) PROP( )
+"per" "variable" ( 5e-9 ) PROP( )
+"ws" "variable" ( 16 ) PROP( )
+"readPorts" "variable" ( 4 ) PROP( )
+"readPortsQ" "variable" ( 2 ) PROP( )
+"readPortsQB" "variable" ( 2 ) PROP( )
+"writePorts" "variable" ( 1 ) PROP( )
+"pullDownWidth" "variable" ( 5 ) PROP( )
+"capacity" "variable" ( 64 ) PROP( )
+"temp" "variable" ( 27 ) PROP( )
+END

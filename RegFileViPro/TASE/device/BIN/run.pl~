@@ -1,0 +1,182 @@
+#!/usr/bin/env perl
+
+###### TERMS AND CONDITIONS ######
+#Copyright 2010 Satyanand Nalam, Kyle Ringgenberg, Rob McNish, Mudit Bhargava
+#This file is part of TASE.
+#
+#TASE is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#TASE is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with TASE.  If not, see <http://www.gnu.org/licenses/>.
+################################
+
+use strict;
+use File::Copy;
+
+my $verbose=1;
+#####################################################
+# Run full characterization on each configured test #
+#####################################################
+my $usr = getlogin();
+my $pwd = `pwd`;
+my $path = $0;
+$path =~ s/run.pl.*//;
+if ($path){
+    chdir $path;
+}
+
+
+my $tests_path = '';
+my ($out,$noimg,$nopdf) = cmdOptions($usr, $pwd);
+my $scs_tests = getTests($usr, "scs");
+my $ocn_tests = getTests($usr, "ocn");
+my $tests = $scs_tests . " " . $ocn_tests;
+
+###################################
+# Execute Each Step for Each Test #
+###################################
+
+runStep("new2tpl", $tests, $tests_path);
+
+if($scs_tests ne '') {
+  runStep("tpl2scs", ' scs ' . $scs_tests);
+  runStep("scs2out", $scs_tests);
+  runStep("out2dat", $scs_tests);
+}
+
+if($ocn_tests ne '') {
+  runStep("tpl2scs", ' ocn ' . $ocn_tests);
+  runStep("ocn2out", $ocn_tests);
+}
+
+if($noimg==0) {
+  runStep("dat2img", $tests);
+} else {
+  if($verbose){print "Skipping dat2img\n";}
+}
+
+if(($nopdf==0) && ($noimg==0)) {
+  runStep("img2pdf", $tests);
+
+  # Move Final PDF to Output #
+  system("cp " . $usr . "/output.pdf " . $usr . "/output." . $usr . ".pdf") == 0
+      or die("Unable to create output file, failed");
+  system("cp " . $usr . "/output." . $usr . ".pdf " . $out) == 0
+      or die("Unable to create output file, failed");
+  if($verbose){print "\nReport exists at: " . $out . "\n";}
+
+} else {
+  if($verbose){print "Skipping img2pdf\n";}
+}
+
+
+if($verbose){print "\nBuild complete for:" . $tests . "\n";}
+
+
+
+#########################################
+##                                     ##
+##   H E L P E R   F U N C T I O N S   ##
+##                                     ##
+#########################################
+
+
+
+########################
+# Command Line Options #
+########################
+sub cmdOptions {
+    my $usr  = $_[0];
+    my $out  = $_[1];
+    my $orig = $out;
+    chomp($orig);
+    my $noimg = 0;
+    my $nopdf = 0;
+
+    #system("cp ../config.ini ../" . $usr . ".ini");
+    copy("../config.ini", "../$usr.ini");
+    
+    my $i = 0;
+    while ($i<=$#ARGV) {
+        if ($ARGV[$i] eq '-i') {
+
+          #system("cp " . $orig . "/" . $ARGV[$i+1] . " ../" . $usr . ".ini") == 0
+            system("cp " . $ARGV[$i+1] . " ../" . $usr . ".ini") == 0
+                or die("Invalid path to user defined configuration file, failed");
+            $i = $i + 2;
+        } elsif ($ARGV[$i] eq '-o') {
+            $out = $orig . "/" . $ARGV[$i+1];
+	    $i = $i + 2;
+        } elsif ($ARGV[$i] eq '-noimg') {
+	    $noimg = 1;
+	    $i = $i + 1;
+	} elsif ($ARGV[$i] eq '-nopdf') {
+	    $nopdf = 1;
+	    $i = $i + 1;
+        } elsif ($ARGV[$i] eq '-testpath') {
+	    $tests_path = $ARGV[$i+1];
+	    $i = $i + 2;
+	} elsif ($ARGV[$i] eq '-f') {
+		$configList = $ARGV[$i + 1];
+		chomp $configList;
+		$i = $i + 2;
+        } else {
+	    print("Invalid Option flag found.\n");
+	    exit();
+        } 
+    }
+
+    return ($out,$noimg,$nopdf);
+}
+
+####################
+# Get Tests to Run #
+####################
+sub getTests {
+    my $usr = $_[0];
+    my $section = $_[1];
+    my $in_section = 0;
+
+    open(CFG, "../" . $usr . ".ini") or die("Could NOT open config.ini, failed");
+    my @lines = <CFG>;
+    close CFG;
+    chomp(@lines);
+
+    # Get only tests of the specified section
+    my $tests = "";
+    foreach my $line (@lines) {
+      if($in_section) {
+        my @words = split(" ", $line);
+        if (($#words == 0) && ($words[0] !~ "#") && ($words[0] !~ "<")) {
+            $tests = " " . $tests . " " . $words[0];
+        }
+      }
+      if($line =~ "<$section>") {
+        $in_section = 1;
+      }
+      elsif($line =~ "</$section>") {
+        $in_section = 0;
+      }
+    }
+    return $tests;
+}
+
+###############################
+# Run step on specified tests #
+###############################
+sub runStep {
+  my $step = $_[0];
+  my $tests = $_[1];
+  my $options = $_[2];
+  system("perl " . $step . ".pl" . $tests . " " . $options) == 0
+    or exit();
+  system("perl plugin.pl " . $step . $tests);
+}

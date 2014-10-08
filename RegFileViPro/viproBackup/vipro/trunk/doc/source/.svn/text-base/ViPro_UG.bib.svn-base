@@ -1,0 +1,23 @@
+@INPROCEEDINGS{nalam09,
+author={Nalam, S. and Bhargava, M. and Ringgenberg, K. and Ken Mai and Calhoun, B.H.},
+journal={Computer Design, 2009. ICCD 2009. IEEE International Conference on}, title={A Technology-Agnostic Simulation Environment (TASE) for iterative custom IC design across processes},
+year={2009},
+month={oct.},
+volume={},
+number={},
+pages={523 -528},
+keywords={SRAM;custom circuit design;custom circuits;design flows;iterative custom IC design;read and write noise margins;simulation templates;technology-agnostic simulation environment;technology-specific components;technology-specific features;circuit simulation;integrated circuit design;},
+doi={10.1109/ICCD.2009.5413107},
+ISSN={1063-6404},}
+
+@INPROCEEDINGS{nalam10,
+author={Nalam, Satyanand and Bhargava, Mudit and Mai, Ken and Calhoun, Benton H.},
+journal={Design Automation Conference (DAC), 2010 47th ACM/IEEE}, title={Virtual prototyper (ViPro): An early design space exploration and optimization tool for SRAM designers},
+year={2010},
+month={jun.},
+volume={},
+number={},
+pages={138 -143},
+keywords={},
+doi={},
+ISSN={0738-100X},}

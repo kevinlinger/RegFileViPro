@@ -1,0 +1,89 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED #
+############
+
+<minl>		60n
+<minw>		120n
+<ldef>		60n
+<leff>		60n
+<wdef>		120n
+<pdk>		ibm65
+<pvdd>          1.1
+<pvbp>          1.1
+<include>       ../../../../template/ibm65/include_mm.scs
+<subN>          ../../../../template/ibm65/subN.scs
+<subP>          ../../../../template/ibm65/subP.scs
+<subPD>         ../../../../template/ibm65/subPD.scs
+<subPG>         ../../../../template/ibm65/subPG.scs
+<subPU>         ../../../../template/ibm65/subPU.scs
+<pgModelName>   nsvtlppgsp
+<pdModelName>   nsvtlppdsp
+<puModelName>   psvtlppusp
+<nModelName>    nsvtlp
+<pModelName>    psvtlp
+
+###########################
+# Gate Capacitance
+############################
+
+<prise>         20p
+<pfall>         20p
+<pwidth>        1n
+
+<gcap_start>    7e-15
+<gcap_stop>     12e-15
+<gcap_step>     0.2e-15
+
+<tol>           1e-12
+
+############################
+# Decoder parameters
+############################
+<mres>		0.71
+<mcap>		0.17f
+<height>	0.56e-6
+<memsize>	16384
+
+############################
+# Bitslice parameters
+############################
+<NR_sweep>      512
+<addrRow>	9
+<addrCol>	2
+<tper>          5n
+<trf>           1p
+<tdly>          1.25n
+<BL_DIFF>      0.15
+
+############################
+# Timing block parameters
+############################
+<ws>            16
+<NC_sweep>      8
+<numBanks>	1
+<colMux>	1
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+<mcStartNum>    1
+<mcrunNum>      5
+<mcType>        all
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '1' case;
+## pdat = 1: run write '0' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>          2
+
+############
+# OPTIONAL #
+############
+
+<gmin>          1e-22
+<temp>          27

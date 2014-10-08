@@ -1,0 +1,96 @@
+VIPRO:Checking sanity of user inputs
+VIPRO:Getting Metal parasitic values for 'ibm130'
+[?1h=
+                                                                                                          < M A T L A B (R) >
+                                                                                                Copyright 1984-2011 The MathWorks, Inc.
+                                                                                                  R2011b (7.13.0.564) 64-bit (glnxa64)
+                                                                                                            August 13, 2011
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[?1l>VIPRO:Running Gate capacitance characterization for ibm130
+VIPRO:Running characterizer
+ new2tpl
+  Initializing test: RVP_Gate_Capacitance
+ tpl2scs
+  Building test: RVP_Gate_Capacitance
+ ocn2out
+  Executing test: RVP_Gate_Capacitance
+ dat2img
+  Building graphical data for: RVP_Gate_Capacitance
+  Compiling global image sets
+Skipping img2pdf
+
+Build complete for:   RVP_Gate_Capacitance
+VIPRO:Running characterization for user configuration
+VIPRO:Running characterizer
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_DFF
+  Initializing test: RVP_Inv_LEparams
+  Initializing test: RVP_TIMING
+  Initializing test: RVP_CD
+  Initializing test: RVP_SA
+  Initializing test: RVP_IO
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_DFF
+  Building test: RVP_Inv_LEparams
+  Building test: RVP_TIMING
+  Building test: RVP_CD
+  Building test: RVP_SA
+  Building test: RVP_IO
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_DFF
+  Executing test: RVP_Inv_LEparams
+  Executing test: RVP_TIMING
+  Executing test: RVP_CD
+  Executing test: RVP_SA
+  Executing test: RVP_IO
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_DFF
+  Building graphical data for: RVP_Inv_LEparams
+  Building graphical data for: RVP_TIMING
+  Building graphical data for: RVP_CD
+  Building graphical data for: RVP_SA
+  Building graphical data for: RVP_IO
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+Skipping img2pdf
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG         RVP_DFF RVP_Inv_LEparams RVP_TIMING RVP_CD RVP_SA RVP_IO RVP_Decoder
+VIPRO:Getting E and D for user-specified SRAM configuration
+[?1h=
+                                                                                                          < M A T L A B (R) >
+                                                                                                Copyright 1984-2011 The MathWorks, Inc.
+                                                                                                  R2011b (7.13.0.564) 64-bit (glnxa64)
+                                                                                                            August 13, 2011
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 

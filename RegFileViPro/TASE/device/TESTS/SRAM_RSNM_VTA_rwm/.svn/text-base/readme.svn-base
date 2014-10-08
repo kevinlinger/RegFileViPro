@@ -1,0 +1,13 @@
+
+
+Defined by RWM
+Monte Carlo SNM simulation
+
+
+.ini must include pdvtar, pdvtal, pgvtar, pgvtal, puvtar, puvtal
+
+The vt adder values are defaulted to zero.
+
+5/15/10
+This currently works with the ibm45 technology.
+

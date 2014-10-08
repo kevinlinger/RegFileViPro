@@ -1,0 +1,22 @@
+6.211187e-10	5.064253e-12	1.260708e-09	2.713469e-12
+delay_bitcell_r	1.263186e-10
+ delay_pch_r	8.231054e-11
+ energy_pch_r	1.327765e-12
+ energy_bitcell_r	3.277343e-13
+delay_rowDecoder	4.106166e-10
+ energy_rowDecoder	4.780422e-13
+ energy_SA	2.208789e-13
+  delay_SA	3.007339e-10
+delay_DFF	9.968566e-11
+ energy_DFF_r	1.685802e-13
+ energy_timing	6.998889e-14
+ delay_bankSelect	1.193272e-10
+delay_bankOutput	2.236673e-10
+  read_delay	1.260708e-09
+  read_energy	2.713469e-12
+  delay_rowDecoder	4.106166e-10
+energy_rowDecoder	4.780422e-13
+  energy_timing	6.998889e-14
+  delay_DFF	9.968566e-11
+  delay_DFF_w	2.288352e-10
+  energy_DFF_w	4.261635e-13

@@ -1,0 +1,18 @@
+include "../../../SUBCKTS/bitcell.scs"
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdd
+VVBN (VBN 0) vsource dc=0
+
+ICell (BL BLB WL VDD VBP VSS VBN) BITCELL 
+
+VBL (BLB 0) vsource dc=pvdd
+VBLB (BL 0) vsource dc=0
+
+VVWL (WL 0) vsource type=pulse val0=0 val1=pvdd rise=0.1n fall=0.1n width=98u
+
+ic ICell.QB=0 ICell.Q=pvdd

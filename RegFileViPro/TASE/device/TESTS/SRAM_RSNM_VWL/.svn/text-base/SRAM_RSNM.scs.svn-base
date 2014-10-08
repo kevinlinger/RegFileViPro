@@ -1,0 +1,61 @@
+simulator lang=spectre
+
+include "../../../SUBCKTS/bitcell.scs"
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//====================================================
+// Subcircuit to measure SNM value
+//====================================================
+subckt SNMmeas (U INV1in INV1out INV2in INV2out v1mv2)
+  e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+  e2 (INV1in 1 v1 0) vcvs gain=1/sqrt(2)
+  ev1 (v1 U INV1out 0) vcvs gain=sqrt(2)
+  Rdummy  (v1 0)  resistor r=100M
+  Rdummy2 (v2 0) resistor r=100M
+  Rdummy3 (v1mv2 0) resistor r=100M
+
+  e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+  e4 (INV2in 3 v2 0) vcvs gain=1/sqrt(2)
+  enu (nu 0 U 0) vcvs gain=-1
+  ev2 (v2 nu INV2out 0) vcvs gain=sqrt(2)
+  ediff1 (negv2 0 v2 0) vcvs gain=-1
+  ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+ends SNMmeas
+
+
+//============================================
+// Test Read SNM
+//============================================
+
+ICell (in1 in2 out1 out2 BL BLB WL VDD VDD VSS VSS) TWOHALFCELL 
+
+// Note: By removing the measurement circuit hierarchy, we can get the
+//  same variation samples as the other write margin tests
+//Isnmh (U in1 out1 in2 out2 v1mv2) SNMmeas
+e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+e2 (in1 1 v1 0) vcvs gain=1/sqrt(2)
+ev1 (v1 U out1 0) vcvs gain=sqrt(2)
+Rdummy  (v1 0)  resistor r=100M
+Rdummy2 (v2 0) resistor r=100M
+Rdummy3 (v1mv2 0) resistor r=100M
+e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+e4 (in2 3 v2 0) vcvs gain=1/sqrt(2)
+enu (nu 0 U 0) vcvs gain=-1
+ev2 (v2 nu out2 0) vcvs gain=sqrt(2)
+ediff1 (negv2 0 v2 0) vcvs gain=-1
+ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+
+
+VU (U 0) vsource dc=pvIn
+VWL (WL 0) vsource dc=wlv
+VBL (BL 0) vsource dc=bitline
+VBLB (BLB 0) vsource dc=bitline
+
+
+
+

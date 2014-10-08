@@ -1,0 +1,164 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+
+############
+# REQUIRED #
+############
+<minl>          150n
+<minw>          600n
+<ldef>          150n
+<leff>		180n
+<wdef>          600n
+<pdk>           mit180xlp
+<pvdd>          0.5
+<subN>         ../../../../template/mit180xlp/subN.scs
+<subP>         ../../../../template/mit180xlp/subP.scs
+<subPU>		../../../../template/mit180xlp/subPU.scs
+<subPD>		../../../../template/mit180xlp/subPD.scs
+<subPG>		../../../../template/mit180xlp/subPG.scs
+<include>      ../../../../template/mit180xlp/include.scs
+<nModelName>    nmos_std_xlp
+<pModelName>    pmos_std_xlp
+<pvbp>		0
+<pvbn>		0
+<prise>		0.1n
+<pfall>		0.1n
+<pwidth>	0.25n
+
+############
+# OPTIONAL #
+############
+<gmin>          1e-22
+<temp>          27
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '0' case;
+## pdat = 1: run write '1' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>	        2
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+
+<mcStartNum>    1
+<mcrunNum>      1000
+<mcType>        all
+
+
+###############################
+# REQUIRED FOR 6T SRAM CELL   #
+###############################
+
+<wpu>           600n
+<lpu>           150n
+<wpd>           2.25u
+<lpd>           150n
+<wpg>           1.6u
+<lpg>           150n
+
+###############################
+# REQUIRED FOR 8T SRAM CELL   #
+###############################
+<wpu8>           600n
+<lpu8>           150n
+<wpd8>           2.25u
+<lpd8>           150n
+<wpg8>           1.6u
+<lpg8>           150n
+<wrdpg8>	 750n
+<lrdpg8>	 150n	
+<wrdn18>	 1.2u
+<lrdn18>	 150n
+
+<pvss>		0
+<pvddrd>	0.3
+<pvssrd>	0
+
+###############################
+# REQUIRED FOR 10T-ST SRAM CELL   
+###############################
+<wpuST>           600n
+<lpuST>           150n
+<wpdST>           600n
+<lpdST>           150n
+<wpgST>           600n
+<lpgST>           150n
+<wrdn1ST> 	  600n
+<lrdn1ST> 	  150n	
+<wrdn2ST> 	  800n
+<lrdn2ST> 	  150n
+
+###################################
+# REQUIRED FOR 8T ASYM ST SRAM CELL  
+###################################
+
+<wpuAST>           600n		
+<lpuAST>           150n
+<wpdlAST>          900n
+<lpdlAST>          150n
+<wpdrAST>          1.45u
+<lpdrAST>          150n
+<wpglAST>          1.2u
+<lpglAST>          150n
+<wpgrAST>          1.45u
+<lpgrAST>          150n
+# Feedback transistor
+<wrdn2AST> 	   1.5u  
+<lrdn2AST>  	   150n	
+# Stacked pull down transistor
+<wrdn1AST>         1.45u	   
+<lrdn1AST> 	   150n
+
+############################
+# TEST EXECUTION SELECTION #
+############################
+<scs>
+#IDN_vs_IDP
+#IDVD_N
+#IDVD_P
+#IDVG_N
+#IDVG_P
+#Ioff_vs_l_N
+#Ioff_vs_l_P
+#Ioff_vs_VDS_N
+#Ioff_vs_VDS_P
+#Ioff_vs_w_N
+#Ioff_vs_w_P
+#Ion_vs_l_N
+#Ion_vs_l_P
+#Ion_vs_w_N
+#Ion_vs_w_P
+#leakage_N
+#leakage_P
+#SRAM_RSNM
+#SRAM_RSNM_10T_STn
+SRAM_RSNM_STnAsym
+#SRAM_HSNM
+#SRAM_HSNM_8T
+#SRAM_HSNM_10T_STn
+#SRAM_HSNM_STnAsym
+</scs>
+
+<ocn>
+#SRAM_WM_WL_ALL
+#SRAM_WM_WL_8T
+#SRAM_WM_WL_STnAsym
+#SRAM_WM_WL_10T_STn
+#SRAM_WM_WL_pvta_mc
+#SRAM_WM_WL_pvta
+#SRAM_Tcrit_pvta
+#SRAM_Tcrit_pvta_mc
+#SRAM_WM_SNM
+#SRAM_WM_SNM_pvta
+#SRAM_Tcrit_vs_vdd
+#SRAM_Tcrit_mc
+#SRAM_WM_WL
+#SRAM_RVCCmin
+#SRAM_Vctrl_vs_RVmin
+</ocn>
+

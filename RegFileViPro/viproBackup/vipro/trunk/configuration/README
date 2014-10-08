@@ -1,0 +1,25 @@
+This directory has the following files:
+
+bitcellSizes.m (generated) -
+--------------
+The final output of the bitcell generator is here. It has the 3x2=6 device dimensions and the bitcell layout dimensions.
+
+calcParams.m (generated) -
+------------ 
+The data extracted from the output of the characterizer run for variables used in the SRAM model calculations is written to this file. E.g. - gate and junction capacitances, Ions, Ioffs etc.
+
+cellGen.ini - 
+-----------
+The constraints and configuration file for the cellgenerator. User provides bitcell level constraints here.
+
+user.m - 
+------
+User provides global inputs like technology, memory capacity etc. here.
+
+constructor.m (generated) -
+-------------
+The concatention of the .m files which is used to instantiate the SRAM object. This file will be generated after the bitcell generator and characterizer are run.
+
+Components -
+----------
+User lists the template names for specific sub-components to plug into the memory hierarchy instead of using the default model. Templates can be in spectre or ocean format.

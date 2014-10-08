@@ -1,0 +1,22 @@
+##### 2008-02-11  by jw4pg #####
+Original spec: Write Margin (Ncurve criterion) distribution
+
+Measurement:
+This test sets the bitcell at the 'READ' operation, and measures the three cross points (A, B, and C) when the current through QB is zero. WTV is the voltage difference btw the most right point C and the middle point B. WTI is the absolute value of the peak current btw B and C. 
+
+Note: for testing the write 1 (cell holding '0' before write) scenario, the cell should be set as holding '1' case (Q=VDD, QB=0).    
+
+Currently only the write 1 scenario is simulated. Later this test should also include write 0 scenario. And the final write SNM is the smaller of the values from these 2 scenarios.
+
+
+
+##### 2008-02-21 by jw4pg #####
+The test now supports both write 1 and write 0 scenario.
+
+
+##### 2008-09-23  by jw4pg #####
+Change to work with the relative model path defined in the config file
+
+
+
+

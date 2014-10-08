@@ -1,0 +1,5 @@
+# RST SRAM 6T Cell Leakage Current Distribution
+This test uses DC analysis to measure the total leakage current of an SRAM 6T bitcell during hold. 
+Monte Carlo analysis is performed to get its distribution due to local mismatch. 
+The histogram is plotted and the distrubtion is fitted as a log-normal.
+Currently, the leakage current at VDD=<pvdd> is saved and plotted.

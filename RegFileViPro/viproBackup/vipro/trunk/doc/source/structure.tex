@@ -1,0 +1,99 @@
+\section{Tool Structure}  
+ViPro has the following sub-directories.
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item bin
+\item cellGen
+\item compiler
+\item configuration
+\item doc
+\item model
+\item files
+\end{itemize}
+
+\subsection{bin}
+The bin directory contains a bunch of .pl files. These are described below-
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item ViPro.pl - The top-level wrapper script for ViPro that runs the entire flow from Characterization to optimization to prototype generation
+\item char.pl - Characterization related helper functions
+\item compiler.pl - Layout/schematic generation related helper functions.
+\item optimizer.pl - Optimization related helper functions.
+\item user.pl - Helper functions related to parsing user inputs.
+\end{itemize}
+
+\subsection{cellGen}
+The cellGen directory contains following scripts and functions pertaining to the bitcell generator-
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item area.m - function to estimate bitcell dimensions and area.
+\item cellGen.pl - Main bitcell generator that determines optimal bitcell sizes based on noise margin, I$_\text{READ}$ and area constraints.
+\item formatCGOutput.pl - Parses the raw cellGen.pl output to generate the intermediate ``cellGenOutput".
+\item convert.m - Generates the final ``bitcellSizes.m" from intermediate ``cellGenOutput".
+\end{itemize}
+
+The following intermediate results and logs are also found in this directory-
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item matlab.log - Execution log for the .m files
+\item bitcellSizes.m - The generated final bitcell device size descriptor
+\item area\_results, w\_results, h\_results - area, width, and height of the bitcell calculated by cellGen.pl in lambda units
+\item range.init - Intermediate file containing the range of bitcell device sizes to be searched; keeps shrinking till the optimal bitcell configuration is determined.
+\end{itemize}
+
+\subsection{compiler}
+The compiler directory is currently a place-holder for the automatic schematic generation and layout scripts in SKILL and/or PyCell, that will take the optimization output and generate schematics and layout for the SRAM prototype.
+
+\subsection{configuration}
+The configuration directory provides the user interface for ViPro. The user can enter top-level SRAM specifications such as technology, V$_\text{DD}$ etc., and constraints on energy, delay, noise margins etc. in various configuration files listed below.
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item bitcellSizes.m - Foundry/custom bitcell sizes can be provided here if the generator is not used.
+\item user.m - Top-level specifications for the SRAM
+\item cellGen.ini - Noise margin, I$_\text{READ}$, area constraints for bitcell generator
+\item components - This file lists any additional TASE templates that need to be characterized other than the ones in the library. This is useful, for example, when the user wants to characterize a new circuit for an SRAM periphery component.
+\end{itemize}
+
+The user/ and sizes/ directory provide example bitcellSizes.m and user.m files for different technologies.
+
+\subsection{doc}
+This directory contains a comprehensive documentation for ViPro and the latex source code for it.
+
+\subsection{model}\label{model}
+The model directory contains the Hierarchical SRAM model in Matlab and the optimization code that uses TASE output to determine the optimal SRAM prototype. The files/directories that make up the model are briefly described below.
+\begin{itemize}
+%\setlength{\itemsep}{0cm}
+%\setlength{\parskip}{0cm}
+\item @SRAM\_Component - Abstract base class in Matlab that defines common properties and methods for different SRAM components. For example, properties such as technology, rows, columns, word size etc. are defined in the class. All other classes are inherited classes from the SRAM\_Component class
+
+\item @SRAM\_Bitcell - Bitcell class. No local properties currently defined. Energy and delay methods (`E' and `D') defined which use the TASE output (that measures power/delay for a single bitcell/column). Energy contributed by all bitcells is calculated.
+
+\item @SRAM\_CD - Column Mux class. The device sizes of the CD circuit are defined as local properties.
+
+\item @SRAM\_Decoder - Decoder class
+
+\item @SRAM\_IO - IO class. 
+
+\item @SRAM\_SA - SA class. Device sizes of the SA are defined as local properties.
+
+\item @SRAM\_Timing - Timing block class.
+
+\item @SRAM\_Top - SRAM class that defines the top-level of the SRAM. The leakage of the bitcell devices, and objects of each component class (e.g. IO, CD, SA, Decoder, Bitcell, and Timing) are defined as local properties. The energy and delay model is implemented in this class. The energy and delay functions defined in the SRAM\_Top class call the corresponding functions of the component objects and estimate the energy and delay/fmax for the SRAM as described in section~\ref{model}.
+\end{itemize}
+In addition, each class has a constructor that initializes the properties of the class. The component class constructors first reference the super-class constructor (e.g. constructor of the SRAM\_Component class) to initialize the global parameters.
+
+\subsection{files}
+The files directory contains intermediate files and output files generated by ViPro. The following files are generated:
+
+\begin{enumerate}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item parasitics.txt - metal parasitics for local, intermediate and global interconnect generated using the InterconnectCap fucntion in the model/directory.
+\item debugXY.txt - where X refers to either energy or delay, Y refers to read or write. This file provides the total E,D and breakup among the various SRAM components for the given user configuration/
+\item topMetrics.txt - The top-level metrics - worst case energy per access and maximum frequency of operation can be found in this file.
+\end{enumerate}

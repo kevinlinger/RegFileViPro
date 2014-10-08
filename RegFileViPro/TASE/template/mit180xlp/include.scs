@@ -1,0 +1,3 @@
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/mitll_model_stat/mitllib.scs" section normStat
+include "/app/lib/MITLL_XLP/3D_PDK3.3.5/models/spectre/mitll_model_stat/mitllib.scs" section xlpTT
+

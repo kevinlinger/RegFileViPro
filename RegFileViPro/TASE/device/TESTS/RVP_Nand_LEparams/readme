@@ -1,0 +1,5 @@
+Transient sim to get delay vs fanout for characteristic inverter. Slope of this line is the tau parameter and the y-intercept divided by tau is the p parameter used in logical effort delay calculation of inverter.
+
+NOTE:
+THIS TEST MUST BE RUN AFTER RVP_Inv_LEparams IS RUN, SINCE IT USES THE VALUE OF TAU CALCULATED IN THAT TEST. IT CANNOT BE RUN STAND-ALONE!!
+

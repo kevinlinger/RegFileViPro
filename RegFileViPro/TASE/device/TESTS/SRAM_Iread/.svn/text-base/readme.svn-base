@@ -1,0 +1,7 @@
+2008-01-15
+Original Spec: 5. Read current distribution
+Monte Carlo simulation to plot the distribution of cell current during read operation.
+
+Monte Carlo sim to measure average and peak read current and read delay i.e the time taken for the BL differential to rise to 100mV after the WL goes high. All unaccessed cells are storing a 1 and the accessed cell is storing a 0.
+
+The read delay is in picoseconds when the sim is in the nanosecond regime and in nanoseconds when slowed down to the micorsecond regime. Not sure which one is correct.

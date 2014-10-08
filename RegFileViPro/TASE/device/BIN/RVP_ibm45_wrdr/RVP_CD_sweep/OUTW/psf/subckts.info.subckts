@@ -1,0 +1,412 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "7.0.1.125.isr11"
+"date" "2:01:43 PM, Wed Apr 25, 2012"
+"design" "//Generated for; spectre"
+"analysis type" "info.subckts"
+"analysis name" "subckts"
+"analysis description" "Circuit Information"
+"xVecSorted" "unsorted"
+"tolerance.relative" 0.00100000
+TYPE
+"subckt" STRUCT(
+"subckt_params" STRING *
+"subckt_terminals" STRING *
+) PROP(
+"key" "sub"
+)
+VALUE
+"dplnfetpd" "subckt" (
+""
+""
+)
+"pexwirecap" "subckt" (
+""
+""
+)
+"egncap" "subckt" (
+""
+""
+)
+"txlinemidm3" "subckt" (
+""
+""
+)
+"txlinemidfa" "subckt" (
+""
+""
+)
+"buf" "subckt" (
+"wn1 wp2 wp1 l wn2"
+"IN OUT VDD VSS"
+)
+"tdpdnw" "subckt" (
+""
+""
+)
+"wireloadendm4_2d" "subckt" (
+""
+""
+)
+"wireloadmidpc_2d" "subckt" (
+""
+""
+)
+"spim1" "subckt" (
+""
+""
+)
+"txlinemidm5" "subckt" (
+""
+""
+)
+"diodepnw" "subckt" (
+""
+""
+)
+"dplpfetpu" "subckt" (
+""
+""
+)
+"egpfet" "subckt" (
+""
+""
+)
+"PD_TRANSISTOR" "subckt" (
+"length mult pvta width"
+"D G S B"
+)
+"diodepwtw" "subckt" (
+""
+""
+)
+"wireloadendm5_2d" "subckt" (
+""
+""
+)
+"pfet" "subckt" (
+"aclv_factor_2 aclv_ni_sws fet_aclv_out k22 k2matchd1 eta01 k2adder aclv_factor aclv_factor_6 acv_uncorr p_pld200 aclv_dist_sws eta01_loc sel_plnest w eta01_fet p_weff vt2_fet cnr_rnd_skew fet_aclv_iso acwv_ran dtemp par aclv_fet_ran aclv_or cf_cnr_pfet min_dev scc peta0_pfet prox_adjust sca_f xc_xl_1 aclv_factor_3 sti_logic xl_pfet cf_pfet1 lchiptol scb_f cv_cnr_pfet eta0matchd1 kvth0we_tw noi_mul k2_pfet u0_factor aclv_factor_7 aclv_fet_ranf pccritf sel_pldist u0_pfet_f vtmatchd1 aclv_ran k22_glo p_plorient eta02_glo kvth0we_pfet p_vttotalvar fet_aclv_nest p_plnest aclv_fet_ni eta0_pfet k21_fet xx_xl_3 aclv_fet_or nwp_logic psw_acv_sign sd xx_xw_2 k21_loc pdevwgeos mm_fet sb xc_xl_2 aclv_factor_1 aclv_factor_4 noib_pfet pu0_pfet vt2_glo wu0_pfet aclv_ni pccrit pld200 sd_f sel_plorient xc_xl_0 aclv_factor_9 aclv_fet_nif eta02_fet max_dev scc_f plorient pre_layout_f vt0adder k21_glo noi_scale xx_xl_4 aclv_or_sws k21 l nrs rgatemod_f sca vt1 xc_xw_pfet eta02_loc pre_layout_local k22_loc ps xc_xw_1 vt2 mm_dop_rss scb fet_aclv_in p_leff sa_f cnr_switch eta0mult nrd pdevlgeos vt1_loc sb_f xw_pfet aclv_factor_5 cf_pfet eta0matchd2 ptwell aclv_fet_dist aclv_fet_distf dlc_pfet u0_mult aclv_fet_orf eta02 mm_global noic_pfet p_sqrtarea vth0_cnr_rnd xc_xl_fet as eta01_glo nf pd pdevdops sa k22_fet mm_local p_long_adj vt1_fet vt1_glo vtmatchd2 k2matchd2 mm_on aclv_factor_15 fet_aclv_v rdsw_pfet_f aclv_dist fet_aclv_h plnest aclv_factor_8 ad dnoin mc_cnr_rnd noia_pfet p_vta vt2_loc"
+"1 2 3 4"
+)
+"dgpsvt18" "subckt" (
+""
+""
+)
+"txlineendfb" "subckt" (
+""
+""
+)
+"wireloadmidlb_2d" "subckt" (
+""
+""
+)
+"wireloadmidm2_2d" "subckt" (
+""
+""
+)
+"wireloadmidm1_2d" "subckt" (
+""
+""
+)
+"P_TRANSISTOR" "subckt" (
+"length mult pvta width"
+"D G S B"
+)
+"spipc" "subckt" (
+""
+""
+)
+"wireloadendm1_2d" "subckt" (
+""
+""
+)
+"diodenwx" "subckt" (
+""
+""
+)
+"dplnfetwl" "subckt" (
+""
+""
+)
+"lslnfetwl" "subckt" (
+"aclv_factor_2 aclv_ni_sws fet_aclv_out aclv_factor aclv_factor_6 acv_uncorr p_pld200 aclv_dist_sws sel_plnest w p_weff vt2_fet cnr_rnd_skew dlc_lslnfetwl fet_aclv_iso acwv_ran dtemp par aclv_fet_ran aclv_or scc prox_adjust sca_f u0_lslnfetwl_f xc_xl_1 xc_xw_lslnfetwl aclv_factor_3 rdsw_lslnfetwl_f sti_logic lchiptol scb_f cf_cnr_lslnfetwl kvth0we_tw noi_mul u0_factor aclv_factor_7 aclv_fet_ranf pccritf sel_pldist vtmatchd1 aclv_ran p_plorient p_vttotalvar fet_aclv_nest p_plnest aclv_fet_ni xx_xl_3 aclv_fet_or nwp_logic psw_acv_sign sd xx_xw_2 pdevwgeos mm_fet sb xc_xl_2 aclv_factor_1 aclv_factor_4 vt2_glo aclv_ni pccrit pld200 sd_f sel_plorient xc_xl_0 aclv_factor_9 aclv_fet_nif noib_lslnfetwl scc_f plorient pre_layout_f vt0adder noi_scale xx_xl_4 aclv_or_sws l nrs rgatemod_f sca vt1 pre_layout_local ps xc_xw_1 vt2 cv_cnr_lslnfetwl mm_dop_rss scb xl_lslnfetwl fet_aclv_in p_leff sa_f xw_lslnfetwl cf_lslnfetwl cnr_switch kvth0we_lslnfetwl nrd pdevlgeos vt1_loc sb_f aclv_factor_5 ptwell aclv_fet_dist aclv_fet_distf u0_mult aclv_fet_orf mm_global p_sqrtarea vth0_cnr_rnd xc_xl_fet as nf pd pdevdops sa mm_local p_long_adj cf_lslnfetwl1 vt1_fet vt1_glo vtmatchd2 mm_on noic_lslnfetwl aclv_factor_15 fet_aclv_v noia_lslnfetwl pu0_lslnfetwl aclv_dist fet_aclv_h plnest aclv_factor_8 ad dnoin mc_cnr_rnd p_vta vt2_loc"
+"1 2 3 4"
+)
+"opppcres" "subckt" (
+""
+""
+)
+"spim4" "subckt" (
+""
+""
+)
+"wireloadmidfb_2d" "subckt" (
+""
+""
+)
+"spilb" "subckt" (
+""
+""
+)
+"pex_cap_l11" "subckt" (
+""
+""
+)
+"txlinemidfb" "subckt" (
+""
+""
+)
+"egpcap" "subckt" (
+""
+""
+)
+"wireloadendfa_2d" "subckt" (
+""
+""
+)
+"lvtnfet" "subckt" (
+""
+""
+)
+"triinv" "subckt" (
+"wn ln lp wp"
+"IN OUT TRI_N TRI_P VDD VSS"
+)
+"wireloadendfb_2d" "subckt" (
+""
+""
+)
+"lvtpfet" "subckt" (
+""
+""
+)
+"pex_cap_l10" "subckt" (
+""
+""
+)
+"txlinemidm4" "subckt" (
+""
+""
+)
+"dgnsvt18" "subckt" (
+""
+""
+)
+"INV" "subckt" (
+"i"
+"OUT IN VDD VSS"
+)
+"PG_TRANSISTOR" "subckt" (
+"length mult pvta width"
+"D G S B"
+)
+"txlineendm1" "subckt" (
+""
+""
+)
+"pcap" "subckt" (
+""
+""
+)
+"spim2" "subckt" (
+""
+""
+)
+"wireloadmidm5_2d" "subckt" (
+""
+""
+)
+"dslpfetpu" "subckt" (
+""
+""
+)
+"wireloadmidm4_2d" "subckt" (
+""
+""
+)
+"txlineendm2" "subckt" (
+""
+""
+)
+"wireloadmidfa_2d" "subckt" (
+""
+""
+)
+"PU_TRANSISTOR" "subckt" (
+"length mult pvta width"
+"D G S B"
+)
+"bitcell6T" "subckt" (
+""
+"BL BLB VDDC VSSC WL"
+)
+"vncap" "subckt" (
+""
+""
+)
+"diodetwx" "subckt" (
+""
+""
+)
+"spifb" "subckt" (
+""
+""
+)
+"txlineendlb" "subckt" (
+""
+""
+)
+"N_TRANSISTOR" "subckt" (
+"length mult pvta width"
+"D G S B"
+)
+"tdndsx" "subckt" (
+""
+""
+)
+"CD" "subckt" (
+"lpcs wpch lncs wncs wpcs lpch"
+"BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS"
+)
+"efuse" "subckt" (
+""
+""
+)
+"spifa" "subckt" (
+""
+""
+)
+"txlineendm5" "subckt" (
+""
+""
+)
+"vpnp" "subckt" (
+""
+""
+)
+"indstack" "subckt" (
+""
+""
+)
+"nand2" "subckt" (
+""
+""
+)
+"wireloadendpc_2d" "subckt" (
+""
+""
+)
+"txlineendm4" "subckt" (
+""
+""
+)
+"INVCHAIN" "subckt" (
+""
+"IN OUT VDD VSS"
+)
+"pex_cap_l4" "subckt" (
+""
+""
+)
+"wireloadendlb_2d" "subckt" (
+""
+""
+)
+"dslnfetwl" "subckt" (
+""
+""
+)
+"txlineendfa" "subckt" (
+""
+""
+)
+"COL" "subckt" (
+""
+"BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS 0"
+)
+"diodenx" "subckt" (
+""
+""
+)
+"pex_cap_l2" "subckt" (
+""
+""
+)
+"txlinemidlb" "subckt" (
+""
+""
+)
+"dslnfetpd" "subckt" (
+""
+""
+)
+"txlineendpc" "subckt" (
+""
+""
+)
+"txlinemidpc" "subckt" (
+""
+""
+)
+"lslnfetpd" "subckt" (
+"aclv_factor_2 aclv_ni_sws fet_aclv_out aclv_factor aclv_factor_6 acv_uncorr p_pld200 aclv_dist_sws sel_plnest w p_weff vt2_fet cnr_rnd_skew fet_aclv_iso acwv_ran dtemp par aclv_fet_ran aclv_or scc prox_adjust sca_f xc_xl_1 aclv_factor_3 sti_logic lchiptol scb_f kvth0we_tw noi_mul u0_factor aclv_factor_7 aclv_fet_ranf pccritf sel_pldist vtmatchd1 aclv_ran p_plorient p_vttotalvar fet_aclv_nest kvth0we_lslnfetpd p_plnest xc_xw_lslnfetpd aclv_fet_ni rdsw_lslnfetpd_f xx_xl_3 aclv_fet_or nwp_logic psw_acv_sign sd xx_xw_2 pdevwgeos xl_lslnfetpd mm_fet sb xc_xl_2 aclv_factor_1 aclv_factor_4 noia_lslnfetpd vt2_glo aclv_ni cf_lslnfetpd1 pccrit pld200 sd_f sel_plorient xc_xl_0 aclv_factor_9 aclv_fet_nif cf_cnr_lslnfetpd dlc_lslnfetpd pu0_lslnfetpd scc_f plorient pre_layout_f vt0adder xw_lslnfetpd noi_scale xx_xl_4 aclv_or_sws l noic_lslnfetpd nrs rgatemod_f sca vt1 pre_layout_local ps xc_xw_1 vt2 mm_dop_rss scb fet_aclv_in p_leff sa_f cnr_switch cv_cnr_lslnfetpd nrd pdevlgeos vt1_loc sb_f aclv_factor_5 ptwell aclv_fet_dist aclv_fet_distf u0_mult aclv_fet_orf mm_global p_sqrtarea vth0_cnr_rnd xc_xl_fet as nf noib_lslnfetpd pd pdevdops sa mm_local p_long_adj u0_lslnfetpd_f vt1_fet vt1_glo vtmatchd2 mm_on aclv_factor_15 cf_lslnfetpd fet_aclv_v aclv_dist fet_aclv_h plnest aclv_factor_8 ad dnoin mc_cnr_rnd p_vta vt2_loc"
+"1 2 3 4"
+)
+"spim3" "subckt" (
+""
+""
+)
+"wireloadendm3_2d" "subckt" (
+""
+""
+)
+"spim5" "subckt" (
+""
+""
+)
+"symindp" "subckt" (
+""
+""
+)
+"wireloadendm2_2d" "subckt" (
+""
+""
+)
+"wireloadmidm3_2d" "subckt" (
+""
+""
+)
+"pex_cap_l3" "subckt" (
+""
+""
+)
+"txlinemidm2" "subckt" (
+""
+""
+)
+"ncap" "subckt" (
+""
+""
+)
+"lslpfetpu" "subckt" (
+"aclv_factor_2 aclv_ni_sws fet_aclv_out xw_lslpfetpu aclv_factor aclv_factor_6 acv_uncorr p_pld200 wu0_lslpfetpu aclv_dist_sws cf_lslpfetpu noib_lslpfetpu sel_plnest w p_weff vt2_fet cnr_rnd_skew fet_aclv_iso acwv_ran dtemp par aclv_fet_ran aclv_or scc prox_adjust sca_f xc_xl_1 aclv_factor_3 sti_logic u0_lslpfetpu_f lchiptol scb_f kvth0we_tw noi_mul xc_xw_lslpfetpu u0_factor aclv_factor_7 aclv_fet_ranf pccritf prdsw_lslpfetpu sel_pldist vtmatchd1 aclv_ran p_plorient p_vttotalvar fet_aclv_nest p_plnest aclv_fet_ni cf_cnr_lslpfetpu xx_xl_3 aclv_fet_or nwp_logic psw_acv_sign sd xx_xw_2 pdevwgeos mm_fet sb xc_xl_2 aclv_factor_1 aclv_factor_4 vt2_glo aclv_ni pccrit pld200 sd_f dlc_lslpfetpu sel_plorient xc_xl_0 aclv_factor_9 aclv_fet_nif scc_f plorient pre_layout_f vt0adder cv_cnr_lslpfetpu noi_scale xl_lslpfetpu xx_xl_4 aclv_or_sws l noic_lslpfetpu nrs rgatemod_f sca vt1 noia_lslpfetpu pre_layout_local ps xc_xw_1 vt2 cf_lslpfetpu1 mm_dop_rss scb fet_aclv_in p_leff sa_f cnr_switch nrd pdevlgeos vt1_loc rdsw_lslpfetpu_f sb_f aclv_factor_5 ptwell aclv_fet_dist aclv_fet_distf u0_mult aclv_fet_orf kvth0we_lslpfetpu mm_global p_sqrtarea vth0_cnr_rnd xc_xl_fet as nf pd pdevdops sa mm_local p_long_adj pu0_lslpfetpu vt1_fet vt1_glo vtmatchd2 mm_on aclv_factor_15 fet_aclv_v aclv_dist fet_aclv_h plnest aclv_factor_8 ad dnoin mc_cnr_rnd p_vta vt2_loc"
+"1 2 3 4"
+)
+"nfet" "subckt" (
+"aclv_factor_2 aclv_ni_sws fet_aclv_out k22 k2matchd1 cf_cnr_nfet eta01 k2adder aclv_factor aclv_factor_6 acv_uncorr p_pld200 aclv_dist_sws eta01_loc sel_plnest w eta01_fet p_weff vt2_fet cnr_rnd_skew fet_aclv_iso acwv_ran dtemp par pu0_nfet aclv_fet_ran aclv_or kvth0we_nfet min_dev scc prox_adjust sca_f xc_xl_1 aclv_factor_3 sti_logic lchiptol scb_f xl_nfet eta0matchd1 kvth0we_tw noi_mul u0_factor aclv_factor_7 aclv_fet_ranf pccritf sel_pldist vtmatchd1 aclv_ran dlc_nfet k22_glo p_plorient eta02_glo p_vttotalvar k2_nfet fet_aclv_nest noib_nfet p_plnest aclv_fet_ni k21_fet xx_xl_3 aclv_fet_or cv_cnr_nfet nwp_logic psw_acv_sign sd xx_xw_2 k21_loc pdevwgeos u0_nfet_f mm_fet sb xc_xl_2 aclv_factor_1 aclv_factor_4 vt2_glo aclv_ni pccrit pld200 sd_f xc_xw_nfet sel_plorient xc_xl_0 aclv_factor_9 aclv_fet_nif cf_nfet1 eta02_fet max_dev scc_f plorient pre_layout_f vt0adder k21_glo noi_scale xx_xl_4 aclv_or_sws k21 l nrs rgatemod_f sca vt1 eta02_loc pre_layout_local k22_loc ps xc_xw_1 vt2 eta0_nfet mm_dop_rss scb fet_aclv_in p_leff sa_f cnr_switch eta0mult nrd pdevlgeos vt1_loc sb_f aclv_factor_5 eta0matchd2 ptwell xw_nfet aclv_fet_dist aclv_fet_distf u0_mult aclv_fet_orf eta02 mm_global p_sqrtarea vth0_cnr_rnd xc_xl_fet as eta01_glo nf noic_nfet pd pdevdops sa k22_fet mm_local noia_nfet p_long_adj rdsw_nfet_f cf_nfet vt1_fet vt1_glo vtmatchd2 k2matchd2 mm_on aclv_factor_15 fet_aclv_v aclv_dist fet_aclv_h plnest aclv_factor_8 ad dnoin mc_cnr_rnd p_vta vt2_loc"
+"1 2 3 4"
+)
+"txlineendm3" "subckt" (
+""
+""
+)
+"egnfet" "subckt" (
+""
+""
+)
+"txlinemidm1" "subckt" (
+""
+""
+)
+END

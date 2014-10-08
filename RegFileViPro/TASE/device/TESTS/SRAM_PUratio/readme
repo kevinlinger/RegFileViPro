@@ -1,0 +1,9 @@
+2008-01-14
+Original spec: 8. Pullup ratio vs. VQ @ write access
+
+This is a plot of the voltage at the node storing '1' versus the W/L ratio of the inverter p-mos and access n-mos transistor. Reliable writing of the cell is ensured if this node can be pulled sufficiently low (i.e below the threshold of the inverter, or to be more safe, the threshold of the n-mos)
+
+Setup as a sweep analysis, similar to the Vbump test. Simulated only the pmos and the access transistor. Swept the width of the pmos and measured the min value to which Q can be pulled down
+
+Same problems with the plotGen file and matlab as for that test. 
+

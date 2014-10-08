@@ -1,0 +1,14 @@
+R.W.Mann
+node and write time generated in file = twrite_out.txt.
+
+WL pulse with 5ps rise time is used to generate the write time.
+
+need to specify the following in the *.ini file:
+
+pvdd= vdd
+lbl = level of low bitline in write
+bitline = level of high bitline in write
+wlv = level of WL 
+pvbn = pwell voltage
+pvbp = nwell voltage
+pvss = cell VSS level

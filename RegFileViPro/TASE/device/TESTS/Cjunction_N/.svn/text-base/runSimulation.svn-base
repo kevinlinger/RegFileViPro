@@ -1,0 +1,1 @@
+spectre input.scs +escchars +log ../psf/spectre.out +inter=mpsc +mpssession=spectre27_27489_28 -format sst2 -raw ../psf  +lqtimeout 900 -maxw 5 -maxn 5   

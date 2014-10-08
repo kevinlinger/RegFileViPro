@@ -1,0 +1,126 @@
+//Write Driver and bitcell array for reg file
+
+////Cell name: buf
+subckt buf IN OUT VDD VSS
+parameters wp2=8*wdef wp1=2*wdef wn2=4*wdef wn1=wdef l=ldef
+MP1 (OUTB IN VDD VDD) P_TRANSISTOR width=wp1 length=l
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wn1 length=l
+MP2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wp2 length=l
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wn2 length=l
+ends buf
+
+// Cell name: bitcell6TRegFile
+// View name: schematic
+subckt bitcell6TRegFile BL BLB VDDC VSSC WL
+M3 (QB WL BLB VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M2 (Q WL BL VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M4 (QB Q VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M1 (Q QB VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M5 (QB Q VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+M0 (Q QB VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu
+MRQ (midQ Q VSSC VSSC) N_TRANSISTOR width=pullDownWidth*wdef length=ldef 
+MRQx (VDDC VSSC midQ VSSC) N_TRANSISTOR width=pullDownWidth*wdef length=ldef
+writePortLoadQ (Q VSSC VSSC VSSC) PG_TRANSISTOR width=wpg length=lpg m = (writePorts - 1)
+writePortLoadQB (QB VSSC VSSC VSSC) PG_TRANSISTOR width=wpg length=lpg  m = (writePorts - 1)
+ends bitcell1Read6TRegFile
+
+
+// Cell name: triinv
+// View name: schematic
+subckt triinv IN OUT TRI_N TRI_P VDD VSS
+parameters wp=4*wdef lp=ldef wn=2*wdef ln=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wp length=lp 
+MP (net19 TRI_P VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wn length=ln 
+MN (net31 TRI_N VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends triinv
+// End of subcircuit definition.
+
+
+// Cell name: nand2
+// View name: schematic
+subckt nand2 INbot INtop OUT VDD VSS
+parameters wp=2*wdef lp=ldef wn=2*wdef ln=ldef
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp length=lp 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn length=ln 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends nand2
+// End of subcircuit definition.
+
+//Not Needed for Reg File
+// Cell name: CD
+// View name: schematic
+//subckt CD BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS
+//parameters wncs=6*wdef lncs=ldef wpcs=6*wdef lpcs=ldef wpch=6*wdef lpch=ldef
+//M3 (BLB CSEL NRDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+//M1 (BL CSEL RDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+//M4 (NRDWR CSELB BLB VDD) P_TRANSISTOR width=wpcs length=lpcs 
+//M5 (BLB PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+//M2 (RDWR CSELB BL VDD) P_TRANSISTOR width=wpcs length=lpcs 
+//M0 (BL PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+//M6 (BL PCH BLB VDD) P_TRANSISTOR width=wpch length=lpch
+//ends CD
+// End of subcircuit definition.
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i=1
+MP (OUT IN VDD VDD) P_TRANSISTOR width=2*i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+//generic inverter chain optimize later
+subckt INVCHAIN IN OUT VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4
+I2 (X3 X2 VDD VSS) INV i=16
+I3 (OUT X3 VDD VSS) INV i=48
+ends INVCHAIN
+// DUT name: BitSlice_test
+
+//NOT NEEDED FOR REG FILE
+//subckt COL BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS
+//IBCA (BL BLB VDD VSS WLA) bitcell6T
+//IBCD (BL BLB VDD VSS VSS) bitcell6T m=(NR - 1)
+//ICDA (BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS) CD 
+//CBL (BL 0) capacitor c=cbl*(NR+15)
+//CBLB (BLB 0) capacitor c=cbl*(NR+15)
+//ends COL
+
+//BC and CD
+//ICOL1 (BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS) COL
+
+
+//Not needed for Reg File
+// Cap calculation for pch (assumes size of pch is 6x min, 3 devices)
+//capPCH (PCH 0) capacitor c=numBanks/2*ws*cwl+wdef*cg*1e6*(ws-1)*6*3
+// cap calculation for WEN (assumes write driver nmos sized 10x min, pmos min
+//capWEN (WEN 0) capacitor c=numBanks/2*ws*cwl+wdef*cg*1e6*(ws-1)*22*2 
+
+
+//Drivers and array
+IWRD (DIN BL WEN WENB VDD VSS) triinv wp=wdef*20 lp=ldef wn=wdef*10 ln=ldef
+IWRDB (db BLB WEN WENB VDD VSS) triinv wp=wdef*20 lp=ldef wn=wdef*10 ln=ldef
+IBCA (BL BLB VDD VSS WLA) bitcell6TRegFile
+IBCD (BL BLB VDD VSS VSS) bitcell6TRegFile m=(NR - 1)
+
+
+//Input drivers for DUT
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VBUF (VBUFFER 0) vsource dc=pvdd
+
+VWLA (WLA 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=twl period=per delay=tdly+5e-10
+
+VDIN (DIN_IN 0) vsource dc=0
+Idb (db DIN VDD VSS) INV i=1
+VWEN (WEN_IN 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=per/2.0 period=per delay=5e-10
+VWENB (WEN_INB 0) vsource type=pulse val0=pvdd val1=0 rise=prise fall=pfall width=per/2.0 period=per delay=5e-10
+IB7 (DIN_IN DIN VBUFFER VSS) buf
+IWEN (WEN_IN WEN VBUFFER VSS) buf
+IWENB (WEN_INB WENB VBUFFER VSS) buf
+
+ic IBCA.Q=0 IBCD.Q=pvdd BL=0 BLB=0
+myOption options pwr=all
+

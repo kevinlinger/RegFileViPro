@@ -1,0 +1,16 @@
+//Basic current Sense amp
+M1 (z bit COM VSS) N_TRANSISTOR width=wdef length=ldef
+M2 (y bitb COM VSS) N_TRANSISTOR width=wdef length=ldef
+M3 (z z VDD VDD) P_TRANSISTOR width=wdef length=ldef
+M4 (y z VDD VDD) P_TRANSISTOR width=wdef length=ldef
+M5 (COM SE VSS VSS) N_TRANSISTOR width=wdef length=ldef
+
+M6 (OUT y VDD VDD) P_TRANSISTOR width=wdef length=ldef
+M7 (OUT y VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ 
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VSE (SE 0) vsource type=pulse val0=0 val1=pvdd rise=0.1n fall=0.1n width=0.5n
+
+ic bit=pvdd-deltavbl bitb=pvdd y=pvdd
+save :pwr

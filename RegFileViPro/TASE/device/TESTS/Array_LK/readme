@@ -1,0 +1,2 @@
+Measures the average leakage power for an array of memory (1bank)
+The array only consists of bitcells, and there are no peripheral circuits. The average power should be nearly the same since the total number of bitcells are constant.

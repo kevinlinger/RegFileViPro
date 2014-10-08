@@ -1,0 +1,1 @@
+Transient sim to measure parasitic delay of min-sized inverter. This will be taken as the refernece inverter for logical effort calculations.The sim outputs tpHL and tpLH into data.txt

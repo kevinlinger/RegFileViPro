@@ -1,0 +1,59 @@
+##############################################################
+# Cell Generator Initialization file
+# Provides the specifications (FoMs) and constraints(device sizing, area) under which a 6T cell is designed
+# Spefications currently supported : Ion, RSNM, WM_SNM
+# Constraints : Length/Width of devices, Area
+############################################################## 
+
+##############################
+# Directory of template files
+##############################
+
+templatePath  /var/home/jmb9zw/TASE/template
+
+##############################
+# List of tech files
+##############################
+# Format : <TECH-FILE-NAME>   <DRC/subDRC/Xreg>      <LAMBDA (in nm)>
+# where <DRC/subDRC/Xreg> specifies whether a DRC-compliant or sub-DRC 
+# or Extreme regular (regular fabrics) cell is to be generated.
+# LAMBDA = minL/2
+
+<tech>
+RVP_ibm45       DRC 40 
+</tech>
+
+##############################
+# Specifications
+##############################
+#Format1: <Spec>   <Process>   <Voltage>  <Temp>  <nom>  <wc acceptable nom value> [6 column entries]
+#Format2: <Spec>   <Process>   <Voltage>  <Temp>  <mc>   <#runs> <wc runs' acceptable value> [7 column entries]
+#Format3: <Spec>   <Process>   <Voltage>  <Temp>  <mc>   <#runs> <'N' in std-N*sigma> <wc acceptable std-N*sigma value> [8 column entries]
+
+# UNITS: Give currents in Amperes and voltages in MilliVolts
+
+<spec>
+SRAM_Iread       TT          1.0        -40       nom   1.8e-05             
+SRAM_Iread       TT          0.9        105      mc    20     0.8e-05             
+SRAM_RSNM        TT          1.0        27       mc    20     2        30
+SRAM_WM_SNM     TT          1.0        0       mc    20    .200
+</spec>
+
+##########################################
+# Design constraints (device W/L and area)
+##########################################
+
+# Param  <abs/lambdas>   Min   Max (more constraining definitions override)
+# eg. if min(allL)=2 and min(LPU)=3 are both provided, min(LPU)=3 overrides
+
+<constraints>
+allL    lambdas         2       10
+allW    lambdas         5       40
+Area    lambdas         0       1500
+</constraints>
+
+##########################################
+# Other design control params
+##########################################
+# Not used currently. Intended to give some control on the granularity of initial solution
+NumSamples    10

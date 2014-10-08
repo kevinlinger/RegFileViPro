@@ -1,0 +1,59 @@
+//Cell name: buf
+subckt buf IN OUT VDD VSS
+MP1 (OUTB IN VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wdef length=ldef
+MP2 (OUT OUTB VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ends buf
+// End of subcircuit definition.
+
+// Cell name: inv
+subckt inv IN OUT VDD VSS
+MP (OUT IN VDD VDD) P_TRANSISTOR width=wp_inv length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=wn_inv length=ldef
+ends inv
+// End of subcircuit definition.
+
+// Cell name: nand2
+subckt nand2 INbot INtop OUT VDD VSS
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp_nand length=ldef 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp_nand length=ldef
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn_nand length=ldef 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn_nand length=ldef
+ends nand2
+// End of subcircuit definition.
+
+// Cell name: and2
+subckt and2 INbot INtop OUT VDD VSS
+M2 (OUTB INtop VDD VDD) P_TRANSISTOR width=wp1_and length=ldef
+MP (OUTB INbot VDD VDD) P_TRANSISTOR width=wp1_and length=ldef
+M1 (OUTB INtop MID VSS) N_TRANSISTOR width=wn1_and length=ldef
+M3 (MID INbot VSS VSS) N_TRANSISTOR width=wn1_and length=ldef
+M4 (OUT OUTB VDD VDD) P_TRANSISTOR width=wp2_and length=ldef
+M5 (OUT OUTB VSS VSS) N_TRANSISTOR width=wn2_and length=ldef
+ends and2
+// End of subcircuit definition.
+
+//DUT name: WLDriver8_test
+I0 (A B PRE8_3 VDD VSS) and2
+I5 (net35 WL VDD VSS) inv
+I1 (WLclk PRE8_3 net35 VDD VSS) nand2
+
+//Input drivers for DUT
+IDR1 (WLclkIN WLclk VDD VSS) buf
+IDR2 (AIN A VDD VSS) buf
+IDR3 (BIN B VDD VSS) buf
+
+//WL cap = no: of cols*per cell WL cap (gate caps + metal cap) 
+//Alternatively, can be got by parasitic extraction of bitcell prior to characterization 
+CWL (WL 0) capacitor c=NC*cwl
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//All input predecode signals to WL driver switch in the worst case
+VA (AIN 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=wlwidth
+VB (BIN 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=wlwidth
+VW (WLclkIN 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=wlwidth
+
+myOption options pwr=all

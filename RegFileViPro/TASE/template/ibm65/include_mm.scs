@@ -1,0 +1,23 @@
+include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/LPGP_rev1j_preview2007Apr19/cmos065lpgp.rev1j.scs" section=base
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065lpgp_18v.rev1j.scs" section=pre_layout
+include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/LPGP_rev1j_preview2007Apr19/cmos065lpgp.rev1j.scs" section=typ_fet
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065lpgp_18v.rev1j.scs" section=typ_capacitor
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065lpgp_18v.rev1j.scs" section=typ_resistor
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065lpgp_18v.rev1j.scs" section=typ_diode
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065lpgp_18v.rev1j.scs" section=typ_bjt
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065_7m4x1y1z.interconnect.scs" section=base
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065_7m4x1y1z.interconnect.scs" section=default_metal_par
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065_7m4x1y1z.interconnect.scs" section=opc_bias
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065_7m4x1y1z.interconnect.scs" section=typ_para
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065_7m4x1y1z.interconnect.scs" section=wire_model
+//include "/mnt/pdk65/cmos065_7m4x1y1z/ams2.10/amsmodels/spectre/cmos065_7m4x1y1z.interconnect.scs" section=resistor
+
+
+// set variation to be 'mismatch' tpye without global variation 
+//alter1 alter param=mc_global value=0
+// set nmos global variation -3~3 sigma 
+//alter2 alter param=cor_nmos value=0
+// set pmos global variation -3~3 sigma
+//alter3 alter param=cor_pmos value=0
+
+

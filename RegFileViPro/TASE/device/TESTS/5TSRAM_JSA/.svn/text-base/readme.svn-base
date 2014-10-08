@@ -1,0 +1,1 @@
+Transient sim to determine read delay. Something is wrong. The ST doesn't trip even when the input crosses the threshold determined from the dc sweep. Is there a fight going on somwhere that is preventing the ST from flipping?

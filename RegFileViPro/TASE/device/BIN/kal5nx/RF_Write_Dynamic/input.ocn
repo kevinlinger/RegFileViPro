@@ -1,0 +1,80 @@
+/*
+ Ocean script to test write operation of register file with dynamic read periphery
+*/
+
+; ************************** main code ***************************
+simulator( 'spectre )
+
+;; COPY THE CORRISPONDING NETLIST FOR THE DESIRED DATA PATTERN
+design( "./netlist" )
+
+resultsDir("./OUT")
+outputFile = outfile( "data.txt" "w" )
+
+modelFile( 
+	'("../../../../template/ibm65/include_mm.scs")
+	'("../../../../template/ibm65/subN.scs")
+	'("../../../../template/ibm65/subP.scs")
+        '("../../../../template/ibm65/subPU.scs")
+        '("../../../../template/ibm65/subPD.scs")
+        '("../../../../template/ibm65/subPG.scs")
+)
+
+
+desVar(	  "wpu" 8*80e-9	)
+desVar(	  "lpu" 65e-9	)
+desVar(	  "wpd" 140e-9	)
+desVar(	  "lpd" 65e-9	)
+desVar(	  "wpg" 8*90e-9	)
+desVar(	  "lpg" 75e-9	)
+desVar("twl" 5e-9/6)
+desVar("tdly" 1.25e-9)
+desVar("cbl" 5.08303e-17)
+desVar("NR" 64)
+desVar("cwl" 1.09136e-16)
+desVar("cg" 6.59722e-16)
+desVar("numBanks" 1)
+desVar(   "pvdd" 1)
+desVar(   "pvbp" 1)
+desVar(   "ldef" 60e-9 )
+desVar(   "wdef" 120e-9 )
+desVar(   "prise" 1e-12 )
+desVar(   "pfall" 1e-12 )
+desVar(	  "per" 5e-9 )
+desVar(	  "ws"  16   )
+desVar(   "readPorts" 4 )
+desVar(	  "readPortsQ" 2 )
+desVar(   "readPortsQB" 2 )
+desVar(   "writePorts" 1 )
+desVar(   "pullDownWidth" 5 )
+desVar(   "capacity" (1024/16) )
+
+pvdd = 1
+
+
+analysis('tran ?start 0 ?stop (5e-9*2) ?step 0.1p ?errpreset 'conservative)
+temp(27)
+option('reltol 1e-6 'gmin 1e-22)
+save('all)
+run()
+selectResults('tran)
+
+
+; Bitcell flip delay
+tdel1 = cross(v("IBCA.Q") (pvdd/2.0) 1 'rising) - cross(v("WLA") (pvdd/2.0) 1 'rising)
+
+; Bitline charge delay
+tdel2 = cross(v("BL") (pvdd/2.0) 1 'rising) - cross(v("WENB") (pvdd/2.0) 1 'falling)
+
+maxdel = max(tdel1 tdel2)
+
+;energy = integ(i("VVDD.p") 5e-10 cross(v("BL") (pvdd*0.9) 1 'rising)) + integ(i("VVDD.p") (1.25e-9+5e-10) cross(v("IBCA.Q") (pvdd/2.0) 1 'rising))
+
+energy = integ(i("VVDD.p") 5e-10 (maxdel+5e-10)) + integ(i("VVDD.p") (1.25e-9+5e-10) (1.25e-9+5e-10+maxdel))
+
+;plot(v("WLA") v("IBCA.Q") v("IBCA.QB") v("BL") v("BLB") v("DIN") )
+
+fprintf(outputFile "%e\n", tdel1)
+fprintf(outputFile "%e\n", tdel2)
+fprintf(outputFile "%e\n", (energy*-1.0*16*1))
+close( outputFile ) 

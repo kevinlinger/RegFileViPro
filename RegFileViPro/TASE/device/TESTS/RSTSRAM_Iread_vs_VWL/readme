@@ -1,0 +1,3 @@
+
+RSTSRAM_Iread_vs_VWL is a simulation which gives data on cell read current with
+varying wordline voltage.

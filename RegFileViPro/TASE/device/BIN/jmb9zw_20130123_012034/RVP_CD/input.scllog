@@ -1,0 +1,13 @@
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 7.0.1.125.isr11 -- 19 Oct 2008
+Simulating `input.scs' on class3.ee.Virginia.EDU at 1:20:03 AM, Wed Jan 23, 2013 (process id: 9157).
+H = mpsImport( "spectre" "ipi" "v0.0" ?session "spectre0_9031_2" )
+H->sclSetResultDir( "OUTW/psf" )
+H->sclRun( "all" )
+H->sclEcho( "@-@" )
+sclCkt2953d2f8 = H->sclGetCircuit(  "" )
+sclParam2953d2f8 = H->sclGetParameter( sclCkt2953d2f8 "twl" )
+H->sclSetAttribute( sclParam2953d2f8 "value" "5.896631e-11" )
+H->sclSetResultDir( "OUTW/psf" )
+H->sclRun( "all" )
+H->sclEcho( "@-@" )

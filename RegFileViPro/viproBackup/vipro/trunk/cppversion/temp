@@ -1,0 +1,536 @@
+class userInput {
+	userInput();
+	~userInput();
+	void print();
+	void setTech(string tech) {
+	technology = tech;
+}
+void setMemSize(int memSize) {
+	memory_size = memSize;
+}
+void setNBanks(int nBanks) {
+	n_banks = nBanks;
+}
+void setNColMux(int nColMux) {
+	n_colMux = nColMux;
+}
+void setNRows(int nRows) {
+	n_rows = nRows;
+}
+void setWordSize(int wordSize) {
+	word_size = wordSize;
+}
+void setSAOffset(float SAOffset) {
+	SAoffset = SAOffset;
+}
+void setBCHeight(float BCHeight) {
+	BCheight  = BCHeight;
+}
+void setBCWidth(float BCWidth) {
+	BCwidth  = BCWidth;
+}
+void setENConstraint(float ENConst) {
+	energy_constraint = ENConst;
+}
+void setDLConstraint(float DLConst) {
+	delay_constraint = DLConst;
+}
+void setWDWidth(int WDWidth) {
+	WDwidth = WDWidth;
+}
+void setTASEPath(string path) {
+	TASEpath = path;
+}
+string getTech() {
+	return technology;
+}
+int getMemSize() {
+	return memory_size;
+}
+int getNBanks() {
+	return n_banks;
+}
+int getNColMux() {
+	return n_colMux;
+}
+int getNRows() {
+	return n_rows;
+}
+int getWordSize() {
+	return word_size;
+}
+float getSAOffset() {
+	return SAoffset;
+}
+float getBCHeight() {
+	return BCheight;
+}
+float getBCWidth() {
+	return  BCwidth;
+}
+float getENConstraint() {
+	return  energy_constraint;
+}
+float getDLConstraint() {
+	return delay_constraint;
+}
+float getWDWidth() {
+	return  WDwidth;
+}
+string getTASEPath() {
+	return  TASEpath;
+}
+
+
+class DFF {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        DFF() {
+        }
+        DFF(userInput& uInp) {
+        }
+        ~DFF() {
+        }
+        void getBCInfo() {
+        }
+        void simulate(string techTemp) {
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<ocn>\n\
+RVP_DFF\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_DFF_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+                runTASE(newTempPath.str());
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" << getenv("USER") << " ../results/DFF";
+                system(mvcmd.str().c_str());
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+        // Modify it to read file, set variable
+        // and getter for the variables
+        void calculateReadED(float& delay_DFF, float& energy_DFF_r) {
+                stringstream sst;
+                ifstream fileHandle;
+                char dummy;
+
+                fileHandle.open("../results/DFF/RVP_DFF/data.txt");
+                sst << fileHandle.rdbuf();
+                sst >> delay_DFF >> dummy >> energy_DFF_r; 
+                cout << fileHandle.good() << " - " << delay_DFF << " " << energy_DFF_r << endl;
+                fileHandle.close();
+        }
+        void calculateWriteED(float& delay_DFF, float& delay_DFF_w, float& energy_DFF_w) {
+                stringstream sst;
+                ifstream fileHandle;
+                char dummy;
+
+                fileHandle.open("../results/DFF/RVP_DFF/data.txt");
+                sst << fileHandle.rdbuf();
+                sst >> delay_DFF >> delay_DFF_w >> dummy >> energy_DFF_w; 
+                cout << fileHandle.good() << " - " << delay_DFF << " " << delay_DFF_w << " " <<  energy_DFF_w << endl;
+                fileHandle.close();
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+                cout << "tasePath " << tasePath << "tasePath " << input->TASEpath << endl;
+        }
+};
+
+class senseAmp {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        senseAmp() {
+        }
+        senseAmp(userInput& uInp) {
+        }
+        ~senseAmp() {
+        }
+        void getBCInfo() {
+        }
+        void simulate(string techTemp) {
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<ocn>\n\
+RVP_SA\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_SA_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+                runTASE(newTempPath.str());
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" << getenv("USER") <<  " ../results/SA";
+                system(mvcmd.str().c_str());
+
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+        void calculateReadED(float& energy_SA, float& delay_SA) {
+                stringstream sst;
+                ifstream fileHandle;
+                char dummy;
+
+                fileHandle.open("../results/SA/RVP_SA/datar.txt");
+                sst << fileHandle.rdbuf();
+                sst >> dummy >> dummy >> energy_SA >> delay_SA;
+                cout << fileHandle.good() << " - " << energy_SA << " " << delay_SA << endl;
+                fileHandle.close();
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};
+class rowDecoder {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        rowDecoder() {
+        }
+        rowDecoder(userInput& uInp) {
+        }
+        ~rowDecoder() {
+        }
+        void simulate(string techTemp) {
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<ocn>\n\
+RVP_Decoder\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_RD_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+                runTASE(newTempPath.str());
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" << getenv("USER")  << " ../results/RD";
+                system(mvcmd.str().c_str());
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+        void calculateReadED(float& energy_rowDecoder, float& delay_rowDecoder) {
+                stringstream sst_path, sst;
+                ifstream fileHandle;
+                char dummy;
+
+                // Get it from SRAM Input ptr
+                int rowAddr = 9;
+                sst_path << "../results/RD/RVP_Decoder/output_" << rowAddr << ".txt";
+                fileHandle.open(sst_path.str().c_str());
+                sst << fileHandle.rdbuf();
+                //energy_rowDecoder = data(6,5)*32e-9;
+                energy_rowDecoder = 0;
+                //delay_rowDecoder = data(6,4);
+                delay_rowDecoder = 0;
+                fileHandle.close();
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};
+// should be included somehow
+class colMux {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        colMux() {
+        }
+        colMux(userInput& uInp) {
+        }
+        ~colMux() {
+        }
+        void simulate(string techTemp) {
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<ocn>\n\
+RVP_Bank_Mux\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_CM_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+                runTASE(newTempPath.str());
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" <<  getenv("USER")  <<  " ../results/CM";
+                system(mvcmd.str().c_str());
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};
+class bitCell {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        bitCell() {
+        }
+        bitCell(userInput& uInp) {
+        }
+        ~bitCell() {
+        }
+        void simulate(string techTemp) {
+                // Add BC Tests
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<scs>\n\
+RVP_Ileak_PU\n\
+RVP_Ileak_PD\n\
+RVP_Ileak_PG\n\
+</scs>\n\
+\n\
+<ocn>\n\
+RVP_CD\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_BC_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+                runTASE(newTempPath.str());
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" << getenv("USER") << " ../results/BC";
+                system(mvcmd.str().c_str());
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+        void calculateReadED(float& delay_bitcell_r, float& delay_pch_r, float& energy_pch_r, float& energy_bitcell_r) {
+                stringstream sst;
+                ifstream fileHandle;
+                char dummy;
+                fileHandle.open("../results/SA/RVP_CD/datar.txt");
+                sst << fileHandle.rdbuf();
+                sst >> dummy >> dummy >> dummy >> delay_bitcell_r >> delay_pch_r >> energy_pch_r >> energy_bitcell_r;
+                cout << fileHandle.good() << " - " << delay_bitcell_r << " " << delay_pch_r << " " << energy_pch_r << " " << energy_bitcell_r << endl;
+                fileHandle.close();
+        }
+        void calculateWriteED(float& delay_pch_w, float& delay_writeDriver, float& delay_bitcell_w, float& energy_pch_w, float& energy_bitcell_w, float& energy_writeDriver) {
+                stringstream sst;
+                ifstream fileHandle;
+                char dummy;
+
+                fileHandle.open("../results/CD/RVP_CD/datarw.txt");
+                sst << fileHandle.rdbuf();
+                sst >> dummy >> dummy >> dummy >> delay_pch_w >> delay_writeDriver >> delay_bitcell_w >> energy_pch_w >> energy_bitcell_w >> energy_writeDriver;
+                fileHandle.close();
+        }
+        void calculateLeakage(float& leakage_power) {
+                // Define path to the results
+                stringstream sst_pg, sst_pu, sst_pd;
+                ifstream fileHandle;
+
+                // Take it from the input
+                int vdd = 1; 
+                int memSize = 512;
+
+                float iOffPg,iOffPu, iOffPd;
+
+                // Pass-gate leakage
+                fileHandle.open("../results/BC/RVP_Ileak_PG/data.txt");
+                sst_pg << fileHandle.rdbuf();
+                sst_pg >> iOffPg; 
+                fileHandle.close();
+
+                // Pull-up leakage
+                fileHandle.open("../results/BC/RVP_Ileak_PU/data.txt");
+                sst_pu << fileHandle.rdbuf();
+                sst_pu >> iOffPu; 
+                fileHandle.close();
+
+                // Pull-down leakage
+                fileHandle.open("../results/BC/RVP_Ileak_PD/data.txt");
+                sst_pd << fileHandle.rdbuf();
+                sst_pd >> iOffPd; 
+                fileHandle.close();
+
+                leakage_power=(iOffPu+iOffPg+iOffPd)*memSize*vdd;
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};
+class timingBlock {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        timingBlock() {
+        }
+        timingBlock(userInput& uInp) {
+        }
+        ~timingBlock() {
+        }
+        void simulate(string techTemp) {
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<ocn>\n\
+RVP_TIMING\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_TB_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" << getenv("USER") << " ../results/TB";
+                system(mvcmd.str().c_str());
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+        void calculateReadED(float& energy_timing) {
+                stringstream sst;
+                ifstream fileHandle;
+
+                fileHandle.open("../results/TB/RVP_TIMING/data.txt");
+                sst << fileHandle.rdbuf();
+                sst >> energy_timing;
+                cout << fileHandle.good() << " - " << energy_timing << endl;
+                fileHandle.close();
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};
+
+// Needs to separate the driver
+// from the SRAM bitcell test
+class writeDriver {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        writeDriver() {
+        }
+        writeDriver(userInput& uInp) {
+        }
+        ~writeDriver() {
+        }
+        // Currently with the BC
+        void simulate(string techTemp) {
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};
+
+// Q: Why colMux is ignored?
+class bankMux {
+        private:
+        userInput* input;
+        string tasePath; 
+        string tech; 
+
+        public:
+        bankMux() {
+        }
+        bankMux(userInput& uInp) {
+        }
+        ~bankMux() {
+        }
+        void simulate(string techTemp) {
+                stringstream techTemplate;
+                techTemplate << techTemp;
+                techTemplate << "<ocn>\n\
+RVP_Bank_Mux\n\
+</ocn>\n";
+                stringstream newTempPath;
+                newTempPath << tasePath.c_str() << "/template/RVP_BM_" << tech << ".ini";
+                ofstream ofile(newTempPath.str().c_str());
+                ofile << techTemplate.str() << endl;
+                ofile.close();
+                runTASE(newTempPath.str());
+
+                stringstream mvcmd;
+                mvcmd << "mv " << tasePath.c_str() << "/device/BIN/" << getenv("USER") << " ../results/BM";
+                system(mvcmd.str().c_str());
+        }
+        void runTASE(string tempPath) { 
+                stringstream sst;
+                sst << "perl " << tasePath.c_str() << "/device/BIN/run.pl -i " << tempPath;
+                system(sst.str().c_str());
+        }
+
+        void calculateReadED(float& delay_bankSelect, float& delay_bankOutput) {
+                stringstream sst;
+                ifstream fileHandle;
+                char dummy;
+
+                fileHandle.open("../results/BM/RVP_Bank_Mux/data.txt");
+                sst << fileHandle.rdbuf();
+                sst >> dummy >> dummy >> dummy >> delay_bankSelect >> delay_bankOutput;
+                cout << fileHandle.good() << " - " << delay_bankSelect << " " << delay_bankOutput << endl;
+                fileHandle.close();
+        }
+        void setInput(userInput& uImp) {
+                input = &uImp;
+                tasePath = input->TASEpath;
+                tech = input->technology;
+        }
+};

@@ -1,0 +1,204 @@
+;; set simulator
+simulator( 'spectre)
+clearAll()
+
+;;define technology
+tech = 90
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+design( "netlist" )
+
+when( tech == 90
+
+
+;; set model lists
+    modelFile( 
+	'("/home/ks2cu/SRAM_TOOL/template/ptm90/include.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm90/subN.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm90/subP.scs")
+    )
+
+;;setting vdd
+    VDD = 1.0
+
+    desVar(	  "wpu" 1.8e-07	)
+    desVar(	  "lpu" 9e-08	)
+    desVar(	  "wpd" 1.8e-07	)
+    desVar(	  "lpd" 9e-08	)
+    desVar(	  "wpg" 1.8e-07	)
+    desVar(	  "lpg" 9e-08	)
+
+    desVar(   "ldef" 9e-08 )
+    desVar(   "wdef" 1.8e-07 )
+    desVar(   "pvdd" VDD    )
+    desVar(   "pvbp" VDD    )
+    desVar(   "minl" 9e-08 )
+    desVar(   "minw" 1.8e-07 )
+    desVar(   "pvin" 0    )
+
+   ;;define capacitance value per 0.8um => bet each cells
+   capa = 0.180E-15
+
+)
+
+when( tech == 65 
+addSubwindow()
+addSubwindowTitle( "65nm PTM" )
+     modelFile( 
+	'("/home/ks2cu/SRAM_TOOL/template/ptm65/include.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm65/subN.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm65/subP.scs")
+    )
+
+;;setting vdd
+    VDD = 1.0
+
+    desVar(	  "wpu" 1.3e-07	)
+    desVar(	  "lpu" 6.5e-08	)
+    desVar(	  "wpd" 1.3e-07	)
+    desVar(	  "lpd" 6.5e-08	)
+    desVar(	  "wpg" 1.3e-07	)
+    desVar(	  "lpg" 6.5e-08	)
+
+    desVar(   "ldef" 6.5e-08 )
+    desVar(   "wdef" 1.3e-07 )
+    desVar(   "pvdd" VDD    )
+    desVar(   "pvbp" VDD    )
+    desVar(   "minl" 6.5e-08 )
+    desVar(   "minw" 1.3e-07 )
+    desVar(   "pvin" 0    )
+
+)
+
+when( tech == 45
+addSubwindow()
+addSubwindowTitle( "45nm PTM" )
+    modelFile( 
+	'("/home/ks2cu/SRAM_TOOL/template/ptm45/include.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm45/subN.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm45/subP.scs")
+    )
+
+;;setting vdd
+    VDD = 1.0
+
+    desVar(	  "wpu" 9e-08	)
+    desVar(	  "lpu" 4.5e-08	)
+    desVar(	  "wpd" 9e-08	)
+    desVar(	  "lpd" 4.5e-08	)
+    desVar(	  "wpg" 9e-08	)
+    desVar(	  "lpg" 4.5e-08	)
+
+    desVar(   "ldef" 4.5e-08 )
+    desVar(   "wdef" 9e-08 )
+    desVar(   "pvdd" VDD    )
+    desVar(   "pvbp" VDD    )
+    desVar(   "minl" 4.5e-08 )
+    desVar(   "minw" 9e-08 )
+    desVar(   "pvin" 0    )
+
+)
+
+when( tech == 32 
+addSubwindow()
+addSubwindowTitle( "32nm PTM" )
+    modelFile( 
+	'("/home/ks2cu/SRAM_TOOL/template/ptm32/include.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm32/subN.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm32/subP.scs")
+    )
+
+    VDD = 1.0
+
+    desVar(	  "wpu" 6.4e-08	)
+    desVar(	  "lpu" 3.2e-08	)
+    desVar(	  "wpd" 6.4e-08	)
+    desVar(	  "lpd" 3.2e-08	)
+    desVar(	  "wpg" 6.4e-08	)
+    desVar(	  "lpg" 3.2e-08	)
+
+    desVar(   "ldef" 3.2e-08 )
+    desVar(   "wdef" 6.4e-08 )
+    desVar(   "pvdd" VDD    )
+    desVar(   "pvbp" VDD    )
+    desVar(   "minl" 3.2e-08 )
+    desVar(   "minw" 6.4e-08 )
+    desVar(   "pvin" 0    )
+
+)
+
+when( tech == 22 
+addSubwindow()
+addSubwindowTitle( "22nm PTM" )
+    modelFile( 
+	'("/home/ks2cu/SRAM_TOOL/template/ptm22/include.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm22/subN.scs")
+	'("/home/ks2cu/SRAM_TOOL/template/ptm22/subP.scs")
+    )
+    VDD = 1.0
+
+    desVar(	  "wpu" 4.4e-08	)
+    desVar(	  "lpu" 2.2e-08	)
+    desVar(	  "wpd" 4.4e-08	)
+    desVar(	  "lpd" 2.2e-08	)
+    desVar(	  "wpg" 4.4e-08	)
+    desVar(	  "lpg" 2.2e-08	)
+
+    desVar(   "ldef" 2.2e-08 )
+    desVar(   "wdef" 4.4e-08 )
+    desVar(   "pvdd" VDD    )
+    desVar(   "pvbp" VDD    )
+    desVar(   "minl" 2.2e-08 )
+    desVar(   "minw" 4.4e-08 )
+    desVar(   "pvin" 0    )
+
+)
+   
+   ;; N= number of rows
+   ;; M = number of columns
+
+
+    foreach( N '(64 128 256 512 1024)
+    ;;N = 1024
+    ;;foreach( M '(16 32 64 128)
+    M = 2**18/(N*16)
+
+    desVar( "rows" N-2 )
+    desVar( "columns" M-8)
+
+    ;;designate capacitance 
+    desVar( "cap" capa*N )
+
+
+    temp( 25 )
+
+
+    ;;output file
+    sprintf(outputFile "./powerWriteN%dM%d.txt" N M)
+    ;;sprintf(outputFile "./powerRead%d.txt" M)
+    out = outfile(outputFile, "w")
+
+    analysis('tran ?start 0 ?stop 7n ?step 0.01n ?strobeperiod 0.01n ?errpreset 'conservative) 
+
+    option( 'reltol 1e-6 'gmin 1e-12 )
+    save( "C0.Col0" )
+    run()
+       
+    selectResults('tran)
+   ;;plot control signals
+   ;;plot(v("Pre") v("WL0") v("Csel") v("Eq"))
+   
+   ;;plot  voltage of Q, BL, BLB and current in BL
+   ;;plot(v("C0.Col1.Cell1.Q") v("C0.Col1.Cell1.QB") i("C0.Col1.Ip:in") v("C0.Col0.BL") v("C0.Col0.BLB"))
+   ;;plot powers
+   ;;addSubwindow()
+   addSubwindow()
+   ;;plot( getData(":pwr") getData("C0.Col0.Cell1:pwr"))
+   ;;when(M>16 addSubwindow())
+   ;;print voltage and current to file
+   setup(?numberNotation 'scientific)
+   ocnPrint(?output out v("C0.Col0.BL") i("C0.Col0.Ip:in") getData(":pwr") )
+   ;;getData("C0.Col0.Cell1:pwr")) )
+
+
+

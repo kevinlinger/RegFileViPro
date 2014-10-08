@@ -1,0 +1,72 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED #
+############
+
+<minl>		90n
+<minw>		90n
+<ldef>		90n
+<leff>		90n
+<wdef>		180n
+<pdk>		ptm90
+<pvdd>          1.2
+<pvbp>          1.2
+<subN>		../../../../template/ptm90/subN.scs
+<subP>		../../../../template/ptm90/subP.scs
+<include>	../../../../template/ptm90/include.scs
+<nModelName>    nmos
+<pModelName>    pmos
+
+#############################
+# REQUIRED FOR LE AND CAP   #
+#############################
+
+<prise>         20p
+<pfall>         20p
+<pwidth>        1n
+<wcap>          1u
+<pres>          1k
+
+<dcap_start>    0.3e-15
+<dcap_stop>     1.5e-15
+<dcap_step>     0.05e-15
+
+<gcap_start>    12e-15
+<gcap_stop>     14.5e-15
+<gcap_step>     0.2e-15
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+<mcStartNum>    1
+<mcrunNum>      5
+<mcType>        process
+
+##########################
+# REQUIRED FOR SRAM ARRAY#
+##########################
+
+<rowsM1>        127
+<deltaVBL>      0.15
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '1' case;
+## pdat = 1: run write '0' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>          2
+
+############
+# OPTIONAL #
+############
+
+<gmin>          1e-22
+<temp>          27
+
+#############################################################################################
+# TEST EXECUTION SELECTION 								    #
+# These are the tests to be run to get parameters to plug in to the models for optimization #
+#############################################################################################
+

@@ -1,0 +1,1 @@
+spectre -env artist5.1.0 +escchars +log OUTW/psf/spectre.out +inter=mpsc +mpssession=spectre0_9031_2 -format sst2 -raw OUTW/psf  +lqtimeout 900 -maxw 5 -maxn 5 input.scs 

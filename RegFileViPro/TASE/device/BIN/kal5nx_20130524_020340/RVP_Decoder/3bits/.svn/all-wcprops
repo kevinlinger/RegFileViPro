@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Decoder/3bits
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Decoder/3bits/netlist
+END
+bitspec
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Decoder/3bits/bitspec
+END

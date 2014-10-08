@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/SRAM_TOOL/!svn/ver/394/branches/TASE/device/TESTS
+END
+Tests_ocn.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Tests_ocn.txt
+END
+Tests_scs.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/Tests_scs.txt
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/README
+END

@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/SRAM_TOOL/!svn/ver/396/branches/TASE/template
+END
+RVPtpl_ibm130.ini
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_ibm130.ini
+END
+RVPtpl_st90.ini
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_st90.ini
+END
+mit180xlp.ini
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SRAM_TOOL/!svn/ver/395/branches/TASE/template/mit180xlp.ini
+END
+mit180lvt.ini
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SRAM_TOOL/!svn/ver/395/branches/TASE/template/mit180lvt.ini
+END
+mit180mvt.ini
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SRAM_TOOL/!svn/ver/395/branches/TASE/template/mit180mvt.ini
+END
+RVPtpl_ptm22.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_ptm22.ini
+END
+RVPtpl_lpptm45.ini
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_lpptm45.ini
+END
+RVPtpl_ptm32.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_ptm32.ini
+END
+ibm90.ini
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/SRAM_TOOL/!svn/ver/395/branches/TASE/template/ibm90.ini
+END
+RVPtpl_ptm45.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_ptm45.ini
+END
+RVPtpl_ptm90.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/402/branches/TASE/template/RVPtpl_ptm90.ini
+END
+ibm45.ini
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/SRAM_TOOL/!svn/ver/396/branches/TASE/template/ibm45.ini
+END
+RVPtpl_ptm65.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_ptm65.ini
+END
+ibm65.ini
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/SRAM_TOOL/!svn/ver/395/branches/TASE/template/ibm65.ini
+END
+RVPtpl_ami06.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/386/branches/TASE/template/RVPtpl_ami06.ini
+END
+ptm22_sram.ini
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/282/branches/TASE/template/ptm22_sram.ini
+END
+RVPtpl_ibm45.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/402/branches/TASE/template/RVPtpl_ibm45.ini
+END
+ptm32_sram.ini
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/283/branches/TASE/template/ptm32_sram.ini
+END
+RVPtpl_ibm65.ini
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/402/branches/TASE/template/RVPtpl_ibm65.ini
+END
+ptm90_sram.ini
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/283/branches/TASE/template/ptm90_sram.ini
+END
+ibm130.ini
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/SRAM_TOOL/!svn/ver/395/branches/TASE/template/ibm130.ini
+END
+ptm45_sram.ini
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/283/branches/TASE/template/ptm45_sram.ini
+END
+ptm65_sram.ini
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/283/branches/TASE/template/ptm65_sram.ini
+END

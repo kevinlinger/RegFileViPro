@@ -1,0 +1,30 @@
+NEED TO PARAMETRIZE MORE. ST65 SIZES CURRENTLY USED
+SEE netlist_parametrized FOR EXAMPLE
+
+The "tper" parameter which is double the WL/PCH/CSEL etc. pulsewidths is an arbitrary sufficiently large width for even large BLs to charge/discharge. It is NOT related to the max frequency that the SRAM can operate. That will be determined by looking at the measured delays from this simulation and from the simulation of the other leaf cells and determining the critical paths/bottlenecks for read and write operations separateley.
+
+Number of rows (bl cap) is swept read and write. 
+
+Measurements:
+For write:
+CD power for charging and discharging one BL fully is measured 
+BL charge and discharge delay is measured
+Power consumed in bitcell due to flipping of nodes is also measured.
+Bitcell flip delay is ignored for now as it happens almost immediately after WL goes high and its not in the critical path
+
+For read:
+CD power for charging and discharging one BL by deltaVBL is measured
+BL discharge delay is measured. This is the critical bitcell Iread dependent delay. BL charge delay is ignored as it will be negligible because BL is charging up only by 0.1-0.2V through a strong pullup.
+Power consumed in bitcell during bitline droop is also measured
+
+The .bmp image files in this test indicate the timing of various signals for read and write
+
+Output format:
+
+dataw.txt:
+<rows>	avg_pwr pk_pwr avg_pwrbc pk_pwrbc dly_bldis dly_blch
+...
+
+datar.txt:
+<rows>	avg_pwr pk_pwr avg_pwrbc pk_pwrbc dly_bldis
+

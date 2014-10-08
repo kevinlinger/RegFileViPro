@@ -1,0 +1,3 @@
+ReadPorts,DynamicReadDelay,DynamicReadEnergy,StaticReadDelay,StaticReadEnergy,DynamicWriteDelay,DynamicWriteEnergy,StaticWriteDelay,StaticWriteEnergy,DecoderDelay,DecoderEnergy
+1,1.43197e-10,5.5938e-14,1.38591e-10,1.32789e-14,8.73216e-11,7.77648e-13,1.18533e-10,8.76102e-13,4.07081e-10,1.81953e-13
+2,1.43197e-10,1.11876e-13,1.38591e-10,2.65579e-14,1.10248e-10,7.87024e-13,1.62389e-10,8.94636e-13,4.07081e-10,1.81953e-13

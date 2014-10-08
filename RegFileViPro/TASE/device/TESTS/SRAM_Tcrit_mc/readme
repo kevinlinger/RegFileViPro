@@ -1,0 +1,13 @@
+02/23/2009
+SRAM_Tcrit_mc
+
+This template runs a MC sim to find the Tcrit of a 6T bitcell. Tcrit is the width of the WL pulse width when the cell just flips. For each iteration of the MC, we do a binary search between user-specified min and max width of WL pulse to find a flipping point. If no point is found, we assume the cell doesn't flip for the given WL period, i.e., Tcrit is infinite. It is recorded as 1.5*maxpw for ease of plotting. Can think of other ways to represent this. 
+
+For write, the Tcrit is the max of the Tcrit when cell holds 0 and holds 1.
+
+Template-specific parameters specified by the user:
+cycle time <tp>
+WL rise and fall times <pr> <pf>
+min and max WL pulse width <minpw> <maxpw>
+start and stop monteCarlo iteration numbers <startIter> <stopIter>
+accuracy of binary search <tol>

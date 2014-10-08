@@ -1,0 +1,4 @@
+2008-12-16
+Original spec: Write margin(via WL sweeping) vs. VDD
+
+Varing VDD from the nominal value to 0. Measure the Write Margin (via WL sweeping) at each VDD point. Plot the trend of Write Margin vs. VDD. 

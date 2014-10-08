@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates
+END
+INV.scs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates/INV.scs
+END
+NOR2.scs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates/NOR2.scs
+END
+NAND2.scs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates/NAND2.scs
+END
+OR2.scs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates/OR2.scs
+END
+include.scs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates/include.scs
+END
+AND2.scs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/SUBCKTS/gates/AND2.scs
+END

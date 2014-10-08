@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/template/ptm22
+END
+subP.scs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/template/ptm22/subP.scs
+END
+subPD.scs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/template/ptm22/subPD.scs
+END
+subPU.scs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/template/ptm22/subPU.scs
+END
+subPG.scs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/template/ptm22/subPG.scs
+END
+include.scs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/template/ptm22/include.scs
+END
+subN.scs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/template/ptm22/subN.scs
+END

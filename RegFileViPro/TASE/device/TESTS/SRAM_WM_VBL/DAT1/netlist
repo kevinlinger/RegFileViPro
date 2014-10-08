@@ -1,0 +1,33 @@
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdda
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdda
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//============================================
+// Circuit to extract N-curve
+//============================================
+ICellL (Q QB BLB WL VDD VBP VSS VBN) HALFCELL 
+ICellR (QB Q BL WL VDD VBP VSS VBN) HALFCELL
+
+nodeset Q=0 QB=pvdd
+
+VWL (WL 0) vsource dc=pvddwl
+
+VBL (BL2 0) vsource dc=pvdd
+VVIN (BLB 0) vsource dc=pvin
+
+IRD BL2 BL iprobe
+

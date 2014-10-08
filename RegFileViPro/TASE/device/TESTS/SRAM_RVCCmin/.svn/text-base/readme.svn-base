@@ -1,0 +1,9 @@
+##### 2008-10-13 by Jiajing, Wang (jw4pg) #####
+Original spec: Minimum VCC distribution for read
+
+Measurement:
+WL is high, BL/BLB is precharged high. DC sweeping VDD (power supply for cell, bitline and wordline) from VDD to 0. At the critical VDD value, the internal nodes Q and QB will flip.  
+
+
+
+

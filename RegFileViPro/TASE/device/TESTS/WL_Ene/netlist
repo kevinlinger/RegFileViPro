@@ -1,0 +1,105 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBN (VBN 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdd
+
+//============================================
+// Circuit 
+//============================================
+//inverter
+subckt Inv (IN OUT VBN VBP VDD VSS)
+N1 (VSS IN OUT VBN) N_TRANSISTOR width=wpd length=lpd
+P1 (VDD IN OUT VBP) P_TRANSISTOR width=wpu length=lpu
+ends Inv
+
+//And Gate
+subckt ANDg (IN1 IN2 OUT VBN VBP VDD VSS)
+ P1 (VDD IN1 M1 VBP) P_TRANSISTOR width=wpu length=lpu
+ P2 (VDD IN2 M1 VBP) P_TRANSISTOR width=wpu length=lpu 
+ N1 (M1 IN1 M2 VBN) N_TRANSISTOR width=wpd length=lpd 
+ N2 (M2 IN2 VSS VBN) N_TRANSISTOR width=wpd length=lpd 
+ N3 (VSS M1 OUT VBN) N_TRANSISTOR width=wpd length=lpd
+ P3 (VDD M1 OUT VBP) P_TRANSISTOR width=wpu length=lpu
+ends ANDg
+
+//6T bitcell
+subckt Bitcell(BL BLB WL VBN VBP VDD VSS)
+P1 (Q QB VDD VBP) P_TRANSISTOR width=wpu length=lpu
+P2 (QB Q VDD VBP) P_TRANSISTOR width=wpu length=lpu
+N1 (Q QB VSS VBN) N_TRANSISTOR width=wpd length=lpd
+N2 (QB Q VSS VBN) N_TRANSISTOR width=wpd length=lpd
+NQ (Q WL BL VBN)  N_TRANSISTOR width=wpd length=lpd
+NB (BLB WL QB VBN) N_TRANSISTOR width=wpd length=lpd
+ends Bitcell
+
+subckt LWLdriver (IN OUT VBN VBP VDD VSS)
+N1 (VSS IN M1 VBN) N_TRANSISTOR width=wpd*4 length=lpd
+P1 (VDD IN M1 VBP) P_TRANSISTOR width=wpu*4 length=lpu
+N2 (VSS M1 M2 VBN) N_TRANSISTOR width=wpd*16 length=lpd
+P2 (VDD M1 M2 VBP) P_TRANSISTOR width=wpu*16 length=lpu
+N3 (VSS M2 M3 VBN) N_TRANSISTOR width=wpd*Mul0 length=lpd
+P3 (VDD M2 M3 VBP) P_TRANSISTOR width=wpu*Mul0 length=lpu
+N4 (VSS M3 OUT VBN) N_TRANSISTOR width=wpd*Mul1 length=lpd
+P4 (VDD M3 OUT VBP) P_TRANSISTOR width=wpu*Mul1 length=lpu
+ends LWLdriver
+
+subckt GWLdriver (IN OUT VBN VBP VDD VSS)
+N1 (VSS IN M1 VBN) N_TRANSISTOR width=wpd*MulG0 length=lpd 
+P1 (VDD IN M1 VBP) P_TRANSISTOR width=wpu*MulG0 length=lpu 
+N2 (VSS M1 OUT VBN) N_TRANSISTOR width=wpd*MulG1 length=lpd 
+P2 (VDD M1 OUT VBP) P_TRANSISTOR width=wpu*MulG1 length=lpu 
+
+ends GWLdriver
+
+
+
+subckt LWL (IN VBN VBP VDD VSS)
+//WL driver
+Dr1 (IN M1 VBN VBP VDD VSS) LWLdriver
+
+Ip (M1 WL) iprobe
+//bitcells BCD=> dummy, m changes with number of columns
+BC0 (BL0 BLB0 WL VBN VBP VDD VSS) Bitcell m=1
+BC1 (BL1 BLB1 WL VBN VBP VDD VSS) Bitcell m=1
+BCD (BLD BLBD WL VBN VBP VDD VSS) Bitcell m = cols
+Cint (WL VSS) capacitor c=Lcap
+
+ic BL0= pvdd BLB0=pvdd WL=0 BL1=pvdd BLB1=pvdd BLD=pvdd BLBD=pvdd M1=0
+ends LWL
+
+subckt GWL (IN Lin VBN VBP VDD VSS)
+//WL driver
+Dr1 (IN M1 VBN VBP VDD VSS) GWLdriver
+
+Ip (M1 WL) iprobe
+//dummy lwl
+ANDd (WL VSS LWLD VBN VBP VDD VSS) ANDg m=banks
+DumLWL (LWLD VBN VBP VDD VSS) LWL m=banks
+
+//R1 (WL WL1) resistor r=Gres
+C1 (WL VSS) capacitor c=Gcap
+
+//accessed lwl
+AND (WL Lin OUT VBN VBP VDD VSS) ANDg
+localWL (OUT VBN VBP VDD VSS) LWL
+
+ic WL = 0 M1=0
+ends GWL
+
+//=========================================
+//
+//===========================================
+
+C0 (IN Lin VBN VBP VDD VSS) GWL
+
+VIN (IN 0) vsource type=pulse val0=0 val1=pvdd delay=0 rise=100p fall=100p width=ww
+//VIN (IN 0) vsource type=dc dc=pvdd
+
+VLin (Lin 0) vsource type=pulse val0=0 val1=pvdd delay=0 rise=100p fall=100p width=ww
+//VLin (Lin 0) vsource type=dc dc=pvdd
+
+opt options pwr=all currents=all 
+

@@ -1,0 +1,42 @@
+
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+
+//============================================
+// Circuit to find capacitor, R = 1k ohm
+//============================================
+
+NHH (BL1 VDD VDD VBN) N_TRANSISTOR width=wdef length=ldef  
+NHL (BL2 VDD VSS VBN) N_TRANSISTOR width=wdef length=ldef
+NLL (BL3 VSS VSS VBN) N_TRANSISTOR width=wdef length=ldef
+NLH (BL4 VSS VDD VBN) N_TRANSISTOR width=wdef length=ldef
+
+R1 (INHH BL1) resistor r=pres
+R2 (INHL BL2) resistor r=pres
+R3 (INLL BL3) resistor r=pres
+R4 (INLH BL4) resistor r=pres
+ 
+//============================================
+// Measure WL current
+//============================================
+
+ic INHH = 0 INHL = 0 INLL = 0 INLH = 0 BL1 = 0 BL2 = 0 BL3 = 0 BL4 = 0 
+
+VIN1 (INHH 0) vsource type=pulse val0=pvdd val1=0 delay=1p rise=0.01p fall=0.01p width=0.7n period=1n 
+
+VIN2 (INHL 0) vsource type=pulse val0=pvdd val1=0 delay=1p rise=0.01p fall=0.01p width=0.7n period=1n 
+
+VIN3 (INLL 0)  vsource type=pulse val0=pvdd val1=0 delay=1p rise=0.01p fall=0.01p width=0.7n period=1n 
+
+VIN4 (INLH 0)  vsource type=pulse val0=pvdd val1=0 delay=1p rise=0.01p fall=0.01p width=0.7n period=1n  
+
+
+
+
+
+

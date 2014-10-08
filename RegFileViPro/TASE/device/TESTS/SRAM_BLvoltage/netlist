@@ -1,0 +1,50 @@
+//============================================
+// RST Bitcell
+//============================================
+subckt bitcell5TRST BL RRST VBN VBP VDD VSS WL CRST
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+MTR (RRST CRST QB VBN) N_TRANSISTOR  width=wrs length=lrs
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wna length=lna
+ends bitcell5TRST
+
+//============================================
+// 6T Bitcell
+//============================================
+subckt bitcell6TB BL BLB WL VDD VBP VSS VBN
+MPR (QB Q VDD VBP) P_TRANSISTOR width=wpu length=lpu
+MPL (Q QB VDD VBP) P_TRANSISTOR width=wpu length=lpu
+MNR (QB Q VSS VBN) N_TRANSISTOR width=wpd length=lpd
+MNL (Q QB VSS VBN) N_TRANSISTOR width=wpd length=lpd
+MTL (BL WL Q VBN) N_TRANSISTOR  width=wpg length=lpg
+MTR (BLB WL QB VBN) N_TRANSISTOR  width=wpg length=lpg
+ends bitcell6TB
+
+//bitcells
+IA (BL1 BLR1 VSS VDD VDD VSS WLA 0) bitcell5TRST
+ID1 (BL1 BLR1 VSS VDD VDD VSS 0 0) bitcell5TRST m=numRows
+C1 (BL1 0) capacitor c=cap
+
+IREF2 (BL2 BLR2 VSS VDD VDD VSS WLref 0) bitcell5TRST
+ID2 (BL2 BLR2 VSS VDD VDD VSS 0 0) bitcell5TRST m=numRows
+C2 (BL2 0) capacitor c=cap
+
+IA6T (BL BLB WLA6T VDD VBP VSS VBN) bitcell6TB
+ID6T (BL BLB 0 VDD VBP VSS VBN) bitcell6TB m=2*numRows+1
+C6T1 (BL 0) capacitor c=cap6
+C6T2 (BLB 0) capacitor c=cap6
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VWLA5 (WLA 0) vsource type=pulse val0=0 val1=pvdd rise=pr fall=pf width=pw
+VWLref (WLref 0) vsource type=pulse val0=0 val1=pvddl rise=pr fall=pf width=pw
+VWLA6 (WLA6T 0) vsource type=pulse val0=0 val1=pvdd rise=pr fall=pf width=pw
+
+//Worst case for reading 1 - Read cell droops a lot due to BL leakage and dummy cell doesn't droop much due to BL leakage
+//ic BL1=pvdd BL2=pvdd IA.Q=pvdd IA.QB=0 ID1.Q=0 ID1.QB=pvdd IREF2.Q=0 IREF2.QB=pvdd ID2.Q=pvdd ID2.QB=0 IA6T.Q=pvdd IA6T.QB=0 ID6T.Q=0 ID6T.QB=pvdd BL=pvdd BLB=pvdd
+
+//Worst case for reading 0 - Read cell doesnt droop much due to BL leakage and dummy cell droops a lot due to BL leakage
+ic BL1=pvdd BL2=pvdd IA.Q=0 IA.QB=pvdd ID1.Q=pvdd ID1.QB=0 IREF2.Q=0 IREF2.QB=pvdd ID2.Q=0 ID2.QB=pvdd IA6T.QB=pvdd IA6T.Q=0 ID6T.QB=0 ID6T.Q=pvdd BL=pvdd BLB=pvdd

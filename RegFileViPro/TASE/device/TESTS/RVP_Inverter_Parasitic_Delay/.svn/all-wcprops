@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/netlist
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/plotGen.m
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/ocnloader
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Inverter_Parasitic_Delay/readme
+END

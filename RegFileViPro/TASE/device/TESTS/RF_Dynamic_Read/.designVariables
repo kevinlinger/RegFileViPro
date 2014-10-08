@@ -1,0 +1,3 @@
+parameters gblnum=8 wkeeplbl=1 prewgbl=2 prewlbl=2 pullwgbl=2 pullwlbl=2 \
+    wkeepgbl=1 capacity=256 per=2e-09 pfall=1e-11 prise=1e-11 wdef=4.5e-08 \
+    ldef=4.5e-08 pvbp=1.0 pvdd=1.0

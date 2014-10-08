@@ -1,0 +1,15 @@
+subckt N_TRANSISTOR D G S B
+
+parameters width=32n length=32n mmen=1 var_nsigma=0
+
+NX (D G S B) NFET w=width l=length mismatch=mmen nsigmadevmm=var_nsigma
+
+ends N_TRANSISTOR
+
+
+// Parameter Definition
+// mmen: enable mismatch
+// var_nsigma: the specified vth mismatch 
+//            '0' ~ using monteCarlo generated mismatch
+//            '-1'~ -1 sigma mismatch (nmos becomes stronger)
+//            '1' ~ 1 sigma mismatch (nmos becomes weaker)

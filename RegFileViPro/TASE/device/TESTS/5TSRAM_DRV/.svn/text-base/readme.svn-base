@@ -1,0 +1,2 @@
+5T DRV distribution
+Setup as a Monte Carlo sweep with dc analysis. nodeset is used for intial condition specification for Q and QB. In the current setup, vbulk for the pmos is fixed at pvbp (1V for 45nm) and not lowered. The cell vdd is at pvdd and is lowered till the Q and QB waveforms cross. The value of pvdd at the crossing point is set to be the DRV of the cell.

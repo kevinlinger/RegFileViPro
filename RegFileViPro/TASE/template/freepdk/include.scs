@@ -1,0 +1,2 @@
+include "/app/lib/freepdk45/trunk/ncsu_basekit/models/hspice/tran_models/models_nom/NMOS_VTL.inc"
+include "/app/lib/freepdk45/trunk/ncsu_basekit/models/hspice/tran_models/models_nom/PMOS_VTL.inc"

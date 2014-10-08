@@ -1,0 +1,119 @@
+%##############################################################
+%#      MATLAB code to plot Tcrit distribution		      #
+%##############################################################
+
+f0 = [];
+f1 = [];
+
+%%%%%%%%% For Write '1' into the cell that holds '0' %%%%%%%%%%%
+if exist('SRAM_Tcrit_mc/Tcrit_wr1.txt', 'file')
+
+  %load data%
+  f1=load('SRAM_Tcrit_mc/Tcrit_wr1.txt')
+  f2=load('SRAM_Tcrit_mc/Tcrit_wr2.txt')
+  f3=load('SRAM_Tcrit_mc/Tcrit_wr3.txt')
+  f4=load('SRAM_Tcrit_mc/Tcrit_wr4.txt')
+  f5=load('SRAM_Tcrit_mc/Tcrit_wr5.txt')
+  f6=load('SRAM_Tcrit_mc/Tcrit_wr6.txt')
+  Tcrit1 = f1(:,1)*1e12;
+  Tcrit2 = f2(:,1)*1e12;
+  Tcrit3 = f3(:,1)*1e12;
+  Tcrit4 = f4(:,1)*1e12;
+  Tcrit5 = f5(:,1)*1e12;
+  Tcrit6 = f6(:,1)*1e12;
+  var=f1(:,2);
+
+  %get mean and std
+  [m,s]=normfit(Tcrit1);
+
+  %plot data and format figure%
+  plot(var,Tcrit1);
+  grid on;
+  strx=sprintf('Tcrit (ps)\n(mean=%f; sigma=%f)',m,s);
+  xlabel('VT Shift','fontsize',12);
+  ylabel(strx,'fontsize',12);
+  title('Tcrit vs VT shift - PU left','fontsize',16);
+
+  %save and close%
+  print(gcf, '-depsc', 'SRAM_Tcrit_mc/IMG/SRAM_Tcrit_PUL.eps');
+  close(gcf);
+
+%get mean and std
+  [m,s]=normfit(Tcrit2);
+
+  %plot data and format figure%
+  plot(var,Tcrit2);
+  grid on;
+  strx=sprintf('Tcrit (ps)\n(mean=%f; sigma=%f)',m,s);
+  xlabel('VT Shift','fontsize',12);
+  ylabel(strx,'fontsize',12);
+  title('Tcrit vs VT shift - PD left','fontsize',16);
+
+  %save and close%
+  print(gcf, '-depsc', 'SRAM_Tcrit_mc/IMG/SRAM_Tcrit_PDL.eps');
+  close(gcf);
+
+
+%get mean and std
+  [m,s]=normfit(Tcrit3);
+
+  %plot data and format figure%
+  plot(var,Tcrit3);
+  grid on;
+  strx=sprintf('Tcrit (ps)\n(mean=%f; sigma=%f)',m,s);
+  xlabel('VT Shift','fontsize',12);
+  ylabel(strx,'fontsize',12);
+  title('Tcrit vs VT shift - PG left','fontsize',16);
+
+  %save and close%
+  print(gcf, '-depsc', 'SRAM_Tcrit_mc/IMG/SRAM_Tcrit_PGL.eps');
+  close(gcf);
+
+
+%get mean and std
+  [m,s]=normfit(Tcrit4);
+
+  %plot data and format figure%
+  plot(var,Tcrit4);
+  grid on;
+  strx=sprintf('Tcrit (ps)\n(mean=%f; sigma=%f)',m,s);
+  xlabel('VT Shift','fontsize',12);
+  ylabel(strx,'fontsize',12);
+  title('Tcrit vs VT shift - PU right','fontsize',16);
+
+  %save and close%
+  print(gcf, '-depsc', 'SRAM_Tcrit_mc/IMG/SRAM_Tcrit_PUR.eps');
+  close(gcf);
+
+
+%get mean and std
+  [m,s]=normfit(Tcrit5);
+
+  %plot data and format figure%
+  plot(var,Tcrit5);
+  grid on;
+  strx=sprintf('Tcrit (ps)\n(mean=%f; sigma=%f)',m,s);
+  xlabel('VT Shift','fontsize',12);
+  ylabel(strx,'fontsize',12);
+  title('Tcrit vs VT shift - PD right','fontsize',16);
+
+  %save and close%
+  print(gcf, '-depsc', 'SRAM_Tcrit_mc/IMG/SRAM_Tcrit_PDR.eps');
+  close(gcf);
+
+
+%get mean and std
+  [m,s]=normfit(Tcrit6);
+
+  %plot data and format figure%
+  plot(var,Tcrit6);
+  grid on;
+  strx=sprintf('Tcrit (ps)\n(mean=%f; sigma=%f)',m,s);
+  xlabel('VT Shift','fontsize',12);
+  ylabel(strx,'fontsize',12);
+  title('Tcrit vs VT shift - PG right','fontsize',16);
+
+  %save and close%
+  print(gcf, '-depsc', 'SRAM_Tcrit_mc/IMG/SRAM_Tcrit_PGR.eps');
+  close(gcf);
+end

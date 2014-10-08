@@ -1,0 +1,225 @@
+function [write_delay, write_energy, read_delay, read_energy] = getED(tasePath, userid, vdd, memSize,rowAddr,breakDown)
+% Jim Boley 3/19/2012
+% data extraction script
+%% set to 0 to use characterization data, otherwise predefine componenet ED below
+memSize=str2num(memSize);
+
+vdd=str2num(vdd);
+% pch_r - due to driving bitlines back to .95*VDD after read (current default)
+energy_pch_r=0;
+delay_pch_r=0;
+
+% pch_w - driving bitlines back to .95*VDD after write (current default)
+energy_pch_w=0;
+delay_pch_w=0;
+
+% read- ED to discharge bitline to VDD-<BL_DIFF> (set in user.m)
+% write- ED to flip bitcell 
+energy_bitcell_r=0;
+delay_bitcell_r=0;
+energy_bitcell_w=0;
+delay_bitcell_w=0;
+
+% only for write- delay measured driving bitline to VDD*.05
+energy_writeDriver=0;
+delay_writeDriver=0;
+
+%only for read- sense amp resolution time, bank muxing to output DFF
+energy_SA=0;
+delay_SA=0;
+energy_bankMux=0;
+% delay bankSelect is the propagation delay on the bank select signal, this occurs in parallel of the WL pulse+SA resolution
+% delay_bankOutput is the progation delay through the bank mux to the output DFF
+delay_bankSelect=0;
+delay_bankOutput=0;
+
+% read- ED of address inputs latching + output data latching
+% write- ED of data inputs
+energy_DFF_r=0;
+delay_DFF=0;	%generic DFF CLK-Q Delay value
+energy_DFF_w=0;
+delay_DFF_w=0;
+
+% ED of row decoder/wordline driver
+energy_rowDecoder=0;
+delay_rowDecoder=0;
+
+% total leakage power from bitcells- converted later to leakage energy by multiplying by Tmin
+leakage_power=0;
+
+% ED for timing block
+energy_timing=0;
+
+
+%load data from TASE unless preset by user
+if (energy_pch_r  == 0)
+	datar=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/datar.txt'));
+	energy_pch_r = datar(:,6);
+end
+
+if (delay_pch_r  == 0)
+	datar=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/datar.txt'));
+	delay_pch_r = datar(:,5);
+end
+
+if (energy_pch_w  == 0)
+	dataw=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/dataw.txt'));
+	energy_pch_w = dataw(:,7);
+end
+
+if (delay_pch_w  == 0)
+	dataw=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/dataw.txt'));
+	delay_pch_w = dataw(:,4);
+end
+
+if (energy_bitcell_w  == 0)
+	dataw=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/dataw.txt'));
+	energy_bitcell_w = dataw(:,8);
+end
+
+if (delay_bitcell_w  == 0)
+	dataw=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/dataw.txt'));
+	delay_bitcell_w = dataw(:,6);
+end
+
+if (energy_bitcell_r  == 0)
+	datar=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/datar.txt'));
+	energy_bitcell_r = datar(:,7);
+end
+
+if (delay_bitcell_r  == 0)
+	datar=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/datar.txt'));
+	delay_bitcell_r = datar(:,4);
+end
+
+if (energy_writeDriver  == 0)
+	dataw=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/dataw.txt'));
+	energy_writeDriver = dataw(:,9);
+end
+
+if (delay_writeDriver  == 0)
+	dataw=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_CD/dataw.txt'));
+	delay_writeDriver = dataw(:,5);
+end
+
+if (energy_SA  == 0)
+	datar=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_SA/datar.txt'));
+	energy_SA = datar(:,3);
+end
+
+if (delay_SA  == 0)
+	datar=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_SA/datar.txt'));
+	delay_SA = datar(:,4);
+end
+
+if (energy_bankMux  == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Bank_Mux/data.txt'));
+	energy_bankMux = data(:,3);
+end
+
+if (delay_bankSelect  == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Bank_Mux/data.txt'));
+	delay_bankSelect = data(:,4);
+end
+
+if (delay_bankOutput  == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Bank_Mux/data.txt'));
+	delay_bankOutput = data(:,5);
+end
+
+if (energy_DFF_r  == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_DFF/data.txt'));
+	energy_DFF_r = data(:,3);
+end
+
+if (delay_DFF  == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_DFF/data.txt'));
+	delay_DFF = data(:,1);
+end
+
+if (energy_DFF_w == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_DFF/data.txt'));
+	energy_DFF_w = data(:,4);
+end
+
+if (delay_DFF_w  == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_DFF/data.txt'));
+	delay_DFF_w = data(:,2);
+end
+
+if (energy_rowDecoder == 0)
+	data = load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Decoder/output_',rowAddr,'.txt'));
+	energy_rowDecoder = data(6,5)*32e-9;
+end
+
+if (delay_rowDecoder  == 0)
+	data = load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Decoder/output_',rowAddr,'.txt'));
+	delay_rowDecoder = data(6,4);
+end
+
+if (energy_timing == 0)
+	data=load(strcat(tasePath,'/device/BIN/',userid,'/RVP_TIMING/data.txt'));
+	energy_timing = data(:,1);
+end
+
+if (leakage_power  == 0)
+	vds = load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Ileak_PD/DAT/dc_dc.dat'));
+	[minDiff, i] = min(abs(vds-vdd));
+	load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Ileak_PG/DAT/dc_N1_NX_d.dat'));
+	iOffPg = dc_N1_NX_d(i);
+	load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Ileak_PD/DAT/dc_N1_NX_d.dat'));
+	iOffPd = dc_N1_NX_d(i);
+	load(strcat(tasePath,'/device/BIN/',userid,'/RVP_Ileak_PU/DAT/dc_P1_PX_d.dat'));
+	iOffPu = abs(dc_P1_PX_d(i));
+	leakage_power=(iOffPu+iOffPg+iOffPd)*memSize*vdd
+end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% write delay calculation
+% stage 1- input data latching in DFF
+% stage 2- row decoding, column/bank decoding, write BL droop (this calculation has 2 parts, the delay of the actual write driver pulling the BL low, and the propgation delay of the data from the DFF to the write driver)
+% stage 3- WL pulse width required to write bitcell
+% stage 4- precharging BL back to VDD (this can be done in parallel with stage 2)
+
+write_delay=delay_DFF+max([delay_rowDecoder,(delay_DFF_w-delay_DFF+delay_writeDriver),delay_pch_w],[],2)+delay_bitcell_w
+write_energy=leakage_power*write_delay+energy_timing+energy_DFF_w+energy_rowDecoder+energy_writeDriver+energy_pch_w+energy_bitcell_w
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% read delay calculation
+% stage 1- input data latching in DFF
+% stage 2- row decoding
+% stage 3- max(WL pulse width required to write bitcell+SA delay, bank select signal delay)
+% stage 4- precharging BL back to VDD (this can be done in parallel with stage 2)
+% stage 5- data sent from bank select to DFF +output data latching in DFF
+read_delay=delay_DFF+max([delay_pch_r,delay_rowDecoder],[],2)+max([delay_bitcell_r+delay_SA,delay_bankSelect],[],2)+delay_bankOutput+delay_DFF
+read_energy=leakage_power*read_delay+energy_timing+energy_DFF_r+energy_rowDecoder+energy_pch_r+energy_bitcell_r+energy_bankMux+energy_SA
+
+if(breakDown==1)
+	energy=1e12*[leakage_power*write_delay energy_timing energy_DFF_w energy_rowDecoder energy_pch_w energy_bitcell_w 0 energy_writeDriver ; leakage_power*read_delay energy_timing energy_DFF_r energy_rowDecoder energy_pch_r energy_bitcell_r energy_SA energy_bankMux]
+	bar(energy,'stack')
+	grid on;
+ 	xlabel('Write and Read Energy','fontsize',12)
+ 	ylabel('Picojoules','fontsize',12);	
+	title('Energy Breakdown by Component','fontsize',16)
+	legend('Leakage','Timing','DFF','Row Decoder','Precharge','Bitcell','Sense Amp','Write Driver(w)/Bank Mux(r)')
+	%save and close%
+	print(gcf, '-depsc', 'IMG/Energy_breakdown.eps');
+	close(gcf);
+
+	delay_write=1e9*[delay_DFF delay_rowDecoder delay_pch_w delay_bitcell_w delay_DFF_w-delay_DFF+delay_writeDriver 0; delay_DFF delay_rowDecoder delay_pch_r delay_bitcell_r delay_SA delay_bankOutput+delay_DFF ]
+	bar(delay_write,'stack');
+	legend('DFF','Row Decoder','Precharge','Bitcell','Write Driver(w)/SA(r)','Bank Output Latching');
+	grid on;
+	xlabel('Write and Read Delay','fontsize',12)
+ 	ylabel('Nanoseconds','fontsize',12);	
+	title('Delay Breakdown by Component','fontsize',16)
+	%save and close%
+	print(gcf, '-depsc', 'IMG/delay_breakdown.eps');
+	close(gcf);
+end
+
+
+	fid = fopen('data.txt','w');
+	fprintf(fid,'%e\t%e\t%e\t%e\n',write_delay, write_energy, read_delay, read_energy);
+	fclose(fid);
+
+exit;

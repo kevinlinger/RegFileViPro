@@ -1,0 +1,35 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvbp
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//============================================
+// Circuit to extract N-curve
+//============================================
+ICellL (Q QB_OUT BLB WL1 VDD VBP VSS VBN) HALFCELL
+ICellR (QB_IN Q BL WL0 VDD VBP VSS VBN) HALFCELL 
+
+nodeset QB_IN=pvdd
+
+// For the inverter initially holding '0', get its VOL by keeping QB_IN high
+VBL (BL 0) vsource dc=pvdd
+VWL0 (WL0 0) vsource dc=pvdd
+VVTC (QB_IN 0) vsource dc=pvdd
+
+// For the inverter initially holding '1', sweep WLR
+VBLB (BLB 0) vsource dc=0
+VVIN (WL1 0) vsource dc=pvin
+
+

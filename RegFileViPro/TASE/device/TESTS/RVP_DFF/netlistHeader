@@ -1,0 +1,9 @@
+//Generated for; spectre
+//Trying to find the gate cap of the WL transistor
+
+simulator lang=spectre
+global 0 
+
+
+
+

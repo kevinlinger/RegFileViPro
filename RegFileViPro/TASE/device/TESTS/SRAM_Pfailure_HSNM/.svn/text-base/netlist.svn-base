@@ -1,0 +1,50 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Half cell for SNM test
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//====================================================
+// Subcircuit to measure SNM value
+//====================================================
+subckt SNMmeas (U INV1in INV1out INV2in INV2out v1mv2)
+  e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+  e2 (INV1in 1 v1 0) vcvs gain=1/sqrt(2)
+  ev1 (v1 U INV1out 0) vcvs gain=sqrt(2)
+  Rdummy  (v1 0)  resistor r=100M
+  Rdummy2 (v2 0) resistor r=100M
+  Rdummy3 (v1mv2 0) resistor r=100M
+
+  e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+  e4 (INV2in 3 v2 0) vcvs gain=1/sqrt(2)
+  enu (nu 0 U 0) vcvs gain=-1
+  ev2 (v2 nu INV2out 0) vcvs gain=sqrt(2)
+  ediff1 (negv2 0 v2 0) vcvs gain=-1
+  ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+ends SNMmeas
+
+
+//============================================
+// Test Hold SNM
+//============================================
+ICellAh (in1h out1h BL WL VDD VDD VSS VSS) HALFCELL 
+ICellBh (in2h out2h BLB WL VDD VDD VSS VSS) HALFCELL
+Isnmh (U in1h out1h in2h out2h v1mv2h) SNMmeas
+
+VU (U 0) vsource dc=pvIn
+VWL (WL 0) vsource dc=0
+VBL (BL 0) vsource dc=pvdd
+VBLB (BLB 0) vsource dc=pvdd
+
+
+
+

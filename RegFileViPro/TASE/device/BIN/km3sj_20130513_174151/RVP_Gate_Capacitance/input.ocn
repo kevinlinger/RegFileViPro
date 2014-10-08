@@ -1,0 +1,62 @@
+/*
+ Ocean script to measure inverter parasitic delay
+ 
+ Author		Satya
+ Date		10/22/2008
+ Modified by
+*/
+
+; ************************** main code ***************************
+simulator( 'spectre )
+
+;; COPY THE CORRISPONDING NETLIST FOR THE DESIRED DATA PATTERN
+design( "./netlist" )
+
+resultsDir("./OUT")
+
+modelFile(
+        '("../../../../template/ibm65/include_mm.scs")
+        '("../../../../template/ibm65/subN.scs")
+        '("../../../../template/ibm65/subP.scs")
+)
+
+;;setting vdd
+VDD = 1.1
+
+desVar(   "ldef" 60e-9)
+desVar(   "pvdd" VDD    )
+desVar(   "pvbp" VDD    )
+desVar(   "minl" 60e-9 )
+desVar(   "minw" 120e-9 )
+desVar(   "pvin" 0    )
+desVar(   "prise" 20e-12 )
+desVar(   "pfall" 20e-12 )
+desVar(   "pwidth" 1e-9 )
+
+gcap = 7e-15
+out = outfile("cap.txt", "w")
+
+while( gcap < 12e-15
+	desVar(   "gcap" gcap)
+	analysis('tran ?start 0 ?stop 4*1e-9 ?step 0.002*1e-9 ?errpreset 'conservative)
+	temp(27)
+	option('reltol 1e-6 'gmin 1e-22)
+	save('all)
+	run()
+	selectResults('tran)
+
+	;fet
+	tpHL1 = cross(v("OUT2") 1.1/2 1 'falling) - cross(v("OUT1") 1.1/2 1 'rising)
+	tpLH1 = cross(v("OUT2") 1.1/2 1 'rising) - cross(v("OUT1") 1.1/2 1 'falling)
+	t1 = (tpHL1 + tpLH1)/2
+
+	;test cap
+	tpHL2 = cross(v("OUT3") 1.1/2 1 'falling) - cross(v("OUT1") 1.1/2 1 'rising)
+	tpLH2 = cross(v("OUT3") 1.1/2 1 'rising) - cross(v("OUT1") 1.1/2 1 'falling)
+	t2 = (tpHL2 + tpLH2)/2
+
+	fprintf(out "%e\t%e\t%e\n" gcap,t1,t2)
+	gcap = gcap + 0.2e-15
+)
+
+close(out)

@@ -1,0 +1,40 @@
+#
+# setup script for UVA-ECE Cadence Users
+#
+BASE_DIR=/app/cadence
+ASSURA=$BASE_DIR/assura
+IC=$BASE_DIR/IC5141
+#IC=$BASE_DIR/IC611
+ICC=$BASE_DIR/icc
+IUS=$BASE_DIR/ius
+IUS53=$BASE_DIR/ius53
+#MMSIM=$BASE_DIR/MMSIM611
+MMSIM=$BASE_DIR/MMSIM70
+RC=$BASE_DIR/rc
+SOC=$BASE_DIR/soc
+TSI=$BASE_DIR/tsi
+#
+ASSURA_PATH=$ASSURA/tools/bin:$ASSURA/tools/dfII/bin:$ASSURA/tools/sna/bin:$ASSURA/tools/vertity/bin:$ASSURA/tools/assura/bin:$ASSURA/tools/dsm/bin
+#
+IC_PATH=$IC/tools/bin:$IC/tools/dfII/bin:$IC/tools/stream_mgt/bin:$IC/tools/cdsdoc/bin:$IC/tools/plot/bin:$IC/tools/gcf/bin:$IC/tools/vframe/bin:$IC/tools/concice/bin:$IC/tools/coeffgen/bin:$IC/tools/dracula/bin:$IC/tools/sfe/bin:$IC/tools/verity/_ssol26/bin:$IC/tools/verity/bin:$IC/tools/mdl/bin:$IC/tools/tlfUtil/bin:$IC/tools/modelwriter/bin:$IC/tools/leapfrog/bin:$IC/tools/pearl/bin:$IC/tools/spectre/bin:$IC/tools/spectre/ahdlcmi/bin:$IC/tools/systemc/bin
+#
+ICC_PATH=$ICC/tools/bin:$ICC/tools/icccraft/bin:$ICC/tools/dfII/bin
+IUS_PATH=$IUS/tools/bin:$IUS53/tools/bin
+MMSIM_PATH=$MMSIM/tools.lnx86/bin
+RC_PATH=$RC/tools/bin:$RC/tools/dfII/bin:$RC/tools/synth/bin
+SOC_PATH=$SOC/tools/bin
+TSI_PATH=$TSI/tools/bin
+# set license file
+#CDS_LIC_FILE 5280@eeuva2.ee.virginia.edu
+CDS_LIC_FILE=/app/cadence/license/license.dat
+# set path
+#PATH=$IC_PATH:$ASSURA_PATH:$ICC_PATH:$IUS_PATH:$MMSIM_PATH:$RC_PATH:$SOC_PATH:$TSI_PATH:$PATH 
+#PATH=$IC_PATH:$MMSIM_PATH:$PATH 
+PATH=$MMSIM_PATH:$IC_PATH:$PATH 
+# it seemed that new sol8 machines will complain without next line -Gary 2/15/2002
+#CLS_CDSD_COMPATIBILITY_LOCKING="NO";export CLS_CDSD_COMPATIBILITY_LOCKING
+# export variables
+export CDS_LIC_FILE PATH
+echo "... Cadence environment is set up successfully."
+echo "Documents are under /app/cadence/*/doc,"
+echo " the html index file usually ends with '*TOC.html'."

@@ -1,0 +1,8 @@
+subckt P_TRANSISTOR S G D B
+
+parameters width=0.6u length=0.15u
+
+PX (S G D B) pmos_std_xlp w=width l=length
+
+ends P_TRANSISTOR
+

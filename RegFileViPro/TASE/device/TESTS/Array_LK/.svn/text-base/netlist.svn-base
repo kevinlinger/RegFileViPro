@@ -1,0 +1,72 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// Circuit to find current 
+//============================================
+
+subckt Bitcell (BL BLB WL VDD VSS VBN VBP)
+ N1 (BL WL Q VBN) N_TRANSISTOR width=wdef length=ldef
+ N2 (QB Q VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ P2 (QB Q VDD VBP) P_TRANSISTOR width=wpu length=lpu
+ N3 (Q QB VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ P3 (Q QB VDD VBP) P_TRANSISTOR width=wpu length=lpu
+ N4 (BLB WL QB VBN) N_TRANSISTOR width=wdef length=ldef
+ends Bitcell
+
+
+subckt Inv (In Out VDD VSS VBN VBP)
+ P1 (VDD In Out VBP) P_TRANSISTOR width=wdef length=ldef
+ N1 (VSS In Out VBN) N_TRANSISTOR width=wdef length=ldef
+ends Inv
+
+
+//Column of memory + the precharge/data
+subckt MemCol (Pre Data Wr WL0 WL1 Csel VDD VSS VBN VBP)
+ Cell1 (BL BLB WL0 VDD VSS VBN VBP) Bitcell
+ Dummy (BL BLB VSS VDD VSS VBN VBP) Bitcell m=rows
+ Cell2 (BL BLB WL1 VDD VSS VBN VBP) Bitcell
+ //passgate
+ N1 (BL Csel M1 VBN) N_TRANSISTOR width=wdef length=ldef
+ P1 (BL CselB M1 VBP) P_TRANSISTOR width=wdef length=ldef
+ //Equalising PMOS
+ P3 (BLB Pre BL VBP) P_TRANSISTOR width=wdef length=ldef
+ //PassGate
+ N4 (BLB Csel M2 VBN) N_TRANSISTOR width=wdef length=ldef
+ P4 (BLB CselB M2 VBP) P_TRANSISTOR width=wdef length=ldef
+ //Capacitance for BL load
+ C1 (BL VSS) capacitor c=cap
+ C2 (BLB VSS) capacitor c=cap
+ I1 (Csel CselB VDD VSS VBN VBP) Inv
+//set initial condition of the column set to worse case
+ic Cell1.Q = pvdd Cell1.QB = 0 Cell2.Q = 0 Cell2.QB = pvdd Dummy.Q = 0 Dummy.QB=pvdd BL=pvdd BLB = pvdd 
+ends MemCol
+
+
+subckt MemArray (Pre VDD VSS VBN VBP)
+ Col0 (Pre VSS VSS VSS VSS VSS VDD VSS VBN VBP) MemCol
+ Col1 (Pre VSS VSS VSS VSS VSS VDD VSS VBN VBP) MemCol
+ DumCol (Pre VSS VSS VSS VSS VSS VDD VSS VBN VBP) MemCol m=columns
+
+ends MemArray
+
+//============================================
+// Measure cell current 
+//============================================
+
+C0 (Pre VDD VSS VBN VBP) MemArray
+
+
+VPre (Pre 0) vsource type=dc dc=pvdd
+//pulse val0=0 val1=pvdd delay=0 rise=100p fall=100p width=dt +100p
+
+
+
+
+opt options pwr=all currents=all 
+
+
+

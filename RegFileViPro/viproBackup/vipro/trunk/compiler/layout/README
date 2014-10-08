@@ -1,0 +1,7 @@
+The layout scripts are named UvaEce<component>_Layout.il. The top-level scripts that tile all the components together are UvaEceSRAM_Layout.il.
+
+The scripts are all currently hard-coded for st65.
+
+Each script has a short documentation at the beginning of the script, with details about what cells need to be manually created before using the script. Once the leaf cells are manually created, the top-level scripts can be called to tile the SRAM.
+
+The timing block needs to be synthesized. The scripts can be used to tile WL drivers, CD,SA,IO and bitcells, and then tile them all together with filler cells (for connectivity) to make the top-level SRAM

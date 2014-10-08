@@ -1,0 +1,2 @@
+include "~/PTM/trunk/PTM_spectre/ptmLib.scs" section=normStat
+include "~/PTM/trunk/PTM_spectre/ptmLib.scs" section=32nmTT

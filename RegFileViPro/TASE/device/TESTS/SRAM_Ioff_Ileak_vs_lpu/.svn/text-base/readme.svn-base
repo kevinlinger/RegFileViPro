@@ -1,0 +1,6 @@
+2008-01-07
+Original spec: 9. Ioff vs. VDD
+SRAM_Ioff_Ileak_vs_lpu is a simulation which gives data on cell leakage currents with varying length of pullup transistor.
+
+Run with DC analysis.  Seems to only affect ILeak via VDD.
+2008-01-13

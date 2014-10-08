@@ -1,0 +1,4 @@
+VDD,ReadEnergy,ReadDelay,WriteEnergy,WriteDelay
+0.9,1.01505e-12,2.98647e-10,0,0
+1,1.12313e-12,-9.92335e-09,0,0
+1.1,1.23104e-12,1.71423e-10,0,0

@@ -1,0 +1,9 @@
+<scs>
+SRAM_RSNM
+VT_SHIFT_N
+</scs>
+
+<ocn>
+SRAM_WM_VBL
+SRAM_Tcrit_pvta
+</ocn>

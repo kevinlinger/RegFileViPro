@@ -1,0 +1,18 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvbp
+VVBN (VBN 0) vsource dc=0
+
+subckt INV (OUT IN VDD VBP VSS VBN)
+MP (OUT IN VDD VBP) P_TRANSISTOR width=2*wdef length=ldef
+MN (OUT IN VSS VBN) N_TRANSISTOR width=wdef length=ldef
+ends INV
+
+ID (IN IN_EXT VDD VBP VSS VBN) INV
+IT (OUT IN VDD VBP VSS VBN) INV
+IL (OUTB OUT VDD VBP VSS VBN) INV m=f
+
+VINX (IN_EXT 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth

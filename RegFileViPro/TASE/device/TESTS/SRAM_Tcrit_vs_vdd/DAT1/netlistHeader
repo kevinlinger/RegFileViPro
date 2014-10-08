@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Jan 13 20:47:06 2008
+// Design library name: CHARACTERIZER_NOLIB
+// Design cell name: SRAM_Ncurve
+// Design view name: schematic
+simulator lang=spectre
+global 0

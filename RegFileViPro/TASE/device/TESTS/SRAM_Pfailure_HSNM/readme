@@ -1,0 +1,3 @@
+2009-11-24
+
+Plot probability of cell failure based on DRV criterion vs. VDD. First run DRV nominal sim to get VDD point with reference to which the parameters needed for the model are to be extracted. Then run x number of 1k MC sims to get the slope of SNM vs. VDD by fitting the means to a line. Use the mu and sigma values at the nominal DRV point to pass to the model. In the plotGen file, the parameters extracted from the sims are plugged into the equations to generate failure prob vs. VDD and DRV vs. sigma

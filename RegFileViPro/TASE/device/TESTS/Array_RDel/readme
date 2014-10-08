@@ -1,0 +1,2 @@
+Simulation to find out delay while reading by BL, in a SRAM Array
+Varies the number of rows, from 64~1024. Measures the time till there is a 100mV BL/BLB difference.

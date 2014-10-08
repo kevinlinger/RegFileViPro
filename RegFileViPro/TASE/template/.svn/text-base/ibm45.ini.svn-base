@@ -1,0 +1,118 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED FOR PROCESS #
+#############################
+
+<minl>		40n
+<minw>		70n
+<ldef>		40n
+<leff>		40n
+<wdef>		70n
+<pdk>		ibm45
+<pvdd>          1.0
+<pvbp>		1.0
+<pvbn>		0
+<pvddwl>	1.0
+<pvdda>		1.0
+<include>	../../../../template/ibm45/include_mm.scs
+<subN>		../../../../template/ibm45/subN.scs
+<subP>		../../../../template/ibm45/subP.scs
+<subPU>		../../../../template/ibm45/subPU.scs
+<subPD>		../../../../template/ibm45/subPD.scs
+<subPG>		../../../../template/ibm45/subPG.scs
+<nModelName>	nfet
+<pModelName>    pfet
+<PDModelName>	lslnfetpd
+<PGModelName>   lslnfetwl
+<PUModelName>	lslpfetpu
+
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+<mcStartNum>	1
+<mcrunNum>  	1000
+<mcType>        all
+
+##############################
+# REQUIRED FOR TCRIT	     #
+# min/maxpw scaled by /vdd^4 #
+##############################
+
+<pr>		1e-13
+<pf>		1e-13
+<tp>		40e-11
+<minpw>		9e-12
+<maxpw>		35e-12
+<tol>		1e-14
+<startIter>	1
+<stopIter>	2
+
+##########################
+# REQUIRED FOR SRAM CELL #
+##########################
+
+<wpu>           70n
+<lpu>           55n
+<wpd>           220n
+<lpd>           55n
+<wpg>           160n
+<lpg>           57n
+
+
+##########################
+# REQUIRED FOR SRAM ARRAY#
+##########################
+
+<rowsM1>	127
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '0' case;
+## pdat = 1: run write '1' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>	        2
+
+############
+# OPTIONAL #
+############
+
+<gmin>		1e-22
+<temp>		27
+
+############################
+# TEST EXECUTION SELECTION #
+############################
+
+<scs>
+#IDVG_N
+#SRAM_RSNM
+#VT_SHIFT_N
+#IDN_vs_IDP
+#Ion_vs_w_N
+#Ion_vs_w_P
+</scs>
+
+<ocn>
+#INV_delay
+#SRAM_VTGen
+#SRAM_WM_WL_VT
+SRAM_WM_VBL
+#SRAM_WM_VBL_pvta
+#SRAM_WM_WL_pvta_mc
+#SRAM_WM_WL_pvta
+#SRAM_Tcrit_pvta
+#SRAM_Tcrit_VT
+#SRAM_Tcrit_pvsource
+#SRAM_Tcrit_pvta_mc
+#SRAM_WM_SNM
+#SRAM_WM_SNM_pvta
+#SRAM_Tcrit_vs_vdd
+#SRAM_Tcrit_mc
+SRAM_WM_WL
+#SRAM_RVCCmin
+#SRAM_Vctrl_vs_RVmin
+</ocn>

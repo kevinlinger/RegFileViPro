@@ -1,0 +1,32 @@
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDDH (VDDH 0) vsource dc=pvddh
+VVDDL (VDDL 0) vsource dc=pvddl
+VVBP (VBP 0) vsource dc=pvddh
+VVSS (VSS 0) vsource dc=0
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Inverter 
+//============================================
+subckt INV (IN OUT VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wpd length=lpd
+ends INV
+
+//============================================
+// Level converter
+//============================================
+subckt LVL_CVT (IN OUT VDDH VDDL VBP VSS VBN)
+MP1 (X OUT VDDH VBP) P_TRANSISTOR width=wp1 length=lp1
+MP2 (OUT X VDDH VBP) P_TRANSISTOR width=wp2 length=lp2
+MN1 (X IN VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+MN2 (OUT INB VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+I1 (IN INB VDDL VBP VSS VBN) INV
+ends LVL_CVT
+
+IL (IN OUT VDDH VDDL VBP VSS VBN) LVL_CVT
+
+VIN (IN 0) vsource type=pulse val0=0 val1=pvddl delay=0.5n rise=0.1n fall=0.1n width=1n

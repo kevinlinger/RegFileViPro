@@ -1,0 +1,10 @@
+
+// Generated for: spectre
+// Generated on: Feb  5 03:33:51 2007
+// Design library name: SenseAmplifiers
+// Design cell name: DiffTest6
+// Design view name: schematic
+simulator lang=spectre
+global 0
+// include "/net/cadence2004/ic50/tools.sun4v/dfII/samples/artist/ahdlLib/quantity.spectre"
+

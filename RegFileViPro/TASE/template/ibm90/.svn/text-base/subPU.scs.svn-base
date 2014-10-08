@@ -1,0 +1,8 @@
+subckt PU_TRANSISTOR D G S B
+
+parameters width=140n length=90n pvta=0
+
+PX (D G S B) pfet w=width l=length p_vta=pvta
+
+ends PU_TRANSISTOR
+

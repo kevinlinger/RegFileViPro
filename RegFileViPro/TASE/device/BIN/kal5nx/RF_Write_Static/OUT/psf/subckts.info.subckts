@@ -1,0 +1,312 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "7.0.1.125.isr11"
+"date" "2:05:03 AM, Fri May 24, 2013"
+"design" "//Generated for; spectre"
+"analysis type" "info.subckts"
+"analysis name" "subckts"
+"analysis description" "Circuit Information"
+"xVecSorted" "unsorted"
+"tolerance.relative" 1.00000e-06
+TYPE
+"subckt" STRUCT(
+"subckt_params" STRING *
+"subckt_terminals" STRING *
+) PROP(
+"key" "sub"
+)
+VALUE
+"nlvtgp" "subckt" (
+""
+""
+)
+"buf" "subckt" (
+"wn1 wp2 wp1 l wn2"
+"IN OUT VDD VSS"
+)
+"nlvtlprpo" "subckt" (
+""
+""
+)
+"nsvt18" "subckt" (
+""
+""
+)
+"phvtgprpo" "subckt" (
+""
+""
+)
+"nhvtlppddp" "subckt" (
+""
+""
+)
+"nsvtlppdsp620" "subckt" (
+""
+""
+)
+"PD_TRANSISTOR" "subckt" (
+"length pvta width"
+"D G S B"
+)
+"nsvtgppgdp" "subckt" (
+""
+""
+)
+"psvtlppusp" "subckt" (
+"alignment_prelayout cjswgs nfing noib alignment_postlayout lpe0 rconsd tmp2 xdep0_typ c2 lmineps vth_rsce cgso dsub prt rgatemod w jtsswgs lpec2 k1eff psm rdswmin jsd voff llimit scc c4 cgsl dvt1 prwb rdsw tox cgbo cgdl dcfring dwc jtsd k3b lmaxeps jswgd jtssws c56 dmu drdsw rswmineff agidl mflag_corner po2db rswmin c3ext cf cjd dagidl dbeta_sig jswgs conw dbeta_alpha nch dvthtot lmin noic wint cjswgs2 mult k1 lpec mobility vth0 moin ni dvth0_fudge dvth0_alpha k2 lper n_subvt rdsweff2 c7 dwu0 eg0 rdswmineff tometer conpo epsilon2 jtsswgd asm c3int dvt0eff pdm rshg0 lec wmineps dlc k3 lketa cjswgd2 dvth0_mm ngcon phis_typ srcefirst dwu jswd l nrs rdsweff rsw sca ps u0eff wec dbeta_beta le lketaexp mflag_no mismatch rdw rdwmin dbeta_fudge lint scb adp cjswd rdsweff0 cjswgd cons diodemod nrd po2act vth xw adm dvtp0 bgidl cjs dvth0_sig fs lm ncrsd fd jtss mostype psp coeact dvt1w lpe nfactor as mflag_mc pd we dbeta_mm rsweff u0 vth0eff w0 asp dvth0_beta pdp rdweff rdwmineff tempk wfing wmaxeps jsws wlimit cgdo cjsws coepo jtsswd lpeb phis wm xl noia xdep0 ad jss"
+"d g s b"
+)
+"nsvtlppgdp" "subckt" (
+""
+""
+)
+"P_TRANSISTOR" "subckt" (
+"length pvta width"
+"D G S B"
+)
+"nsvtlprpo" "subckt" (
+""
+""
+)
+"nsvt25rponoldd" "subckt" (
+""
+""
+)
+"nsvtgp" "subckt" (
+""
+""
+)
+"psvt18" "subckt" (
+""
+""
+)
+"phvtlp" "subckt" (
+""
+""
+)
+"nlvtgprpo" "subckt" (
+""
+""
+)
+"nhvtlp" "subckt" (
+""
+""
+)
+"nsvt25rpo" "subckt" (
+""
+""
+)
+"nsvt18rpo" "subckt" (
+""
+""
+)
+"nsvtgppddp" "subckt" (
+""
+""
+)
+"nsvtlppgsp" "subckt" (
+"alignment_prelayout cjswgs nfing noib alignment_postlayout lpe0 rconsd tmp2 xdep0_typ c2 lmineps vth_rsce cgso dsub prt rgatemod w jtsswgs lpec2 k1eff psm rdswmin jsd voff llimit scc c4 cgsl dvt1 prwb rdsw tox cgbo cgdl dcfring dwc jtsd k3b lmaxeps jswgd jtssws c56 dmu drdsw rswmineff agidl mflag_corner po2db rswmin c3ext cf cjd dagidl dbeta_sig jswgs conw dbeta_alpha nch dvthtot lmin noic wint cjswgs2 mult k1 lpec mobility vth0 moin ni dvth0_fudge dvth0_alpha k2 lper n_subvt rdsweff2 c7 dwu0 eg0 rdswmineff tometer conpo epsilon2 jtsswgd asm c3int dvt0eff pdm rshg0 lec wmineps dlc k3 lketa cjswgd2 dvth0_mm ngcon phis_typ srcefirst dwu jswd l nrs rdsweff rsw sca ps u0eff wec dbeta_beta le mflag_no mismatch rdw rdwmin dbeta_fudge lint scb adp cjswd rdsweff0 cjswgd cons diodemod nrd po2act vth xw adm dvtp0 bgidl cjs dvth0_sig fs lm ncrsd fd jtss mostype psp coeact dvt1w lpe nfactor as mflag_mc pd we dbeta_mm rsweff u0 vth0eff w0 asp dvth0_beta pdp rdweff rdwmineff tempk wfing wmaxeps jsws wlimit cgdo cjsws coepo jtsswd lpeb phis wm xl noia xdep0 ad jss"
+"d g s b"
+)
+"triinv" "subckt" (
+"wn ln lp wp"
+"IN OUT TRI_N TRI_P VDD VSS"
+)
+"nhvtlppdsp" "subckt" (
+""
+""
+)
+"phvtlppusp620" "subckt" (
+""
+""
+)
+"plvtlprpo" "subckt" (
+""
+""
+)
+"psvt25" "subckt" (
+""
+""
+)
+"psvtgppusp" "subckt" (
+""
+""
+)
+"psvtlppudp" "subckt" (
+""
+""
+)
+"INV" "subckt" (
+"i"
+"OUT IN VDD VSS"
+)
+"nhvtgp" "subckt" (
+""
+""
+)
+"psvtgp" "subckt" (
+""
+""
+)
+"PG_TRANSISTOR" "subckt" (
+"length pvta width"
+"D G S B"
+)
+"plvtlp" "subckt" (
+""
+""
+)
+"psvtlp" "subckt" (
+"alignment_prelayout cjswgs nfing noib alignment_postlayout dbeta_fudge_c2 lpe0 rconsd tmp2 xdep0_typ c2 vth_rsce cgso dsub prt rgatemod w jtsswgs lpec2 k1eff po2actcalm psm rdswmin jsd mflag_alignment voff dbeta_alpha_c2 k2we llimit scc sccm c4 cgsl dvt1 prwb rdsw tox cgbo cgdl dcfring drdsw_mechstress dwc jtsd k3b web jswgd jtssws c56 dmu drdsw nrdeff rswmineff agidl mflag_corner po2db rswmin varmaxu0 c3ext cf cjd dagidl dbeta_sig jswgs scm conw dbeta_alpha nch dvthtot lmin rgate noic wint cjswgs2 dvth0_alpha_c2 mult varmaxrdsw dvt0_stress dvth0_dev k1 lpec mobility vth0 moin ni rshgummid dvth0_fudge dvth0_alpha k2 lper n_subvt rdsweff2 c7 dwu0 eg0 rdswmineff rshgu tometer wej conpo dk1_mechstress epsilon2 jtsswgd rsh asm c3int ddvt0_mechstress dvt0eff pdm rshg0 scref dvth0_beta_c2 dvth0_mechstress lec dlc dwj k3 lketa cjswgd2 ngcon phis_typ srcefirst dwu jswd rshgumeff kvth0we l nrs rdsweff rshgum rsw sca rshg ps u0eff wec dbeta_beta le lketaexp mflag_no mismatch rdw rdwmin scam dbeta_fudge lint scb scbm wpemod adp cjswd rdsweff0 cjswgd cons diodemod nrd po2act vth xw adm dvtp0 ku0we bgidl cjs dvth0_sig fs lm ncrsd fd jtss mostype psp coeact dvt1w lpe nfactor varmaxvth0 as dvth0_fudge_c2 mflag_mc pd sc we du0_mechstress rsweff u0 vth0eff w0 asp dvth0_beta pdp rdweff rdwmineff tempk wfing dbeta_beta_c2 jsws nrsd_flag wlimit cgdo cjsws coepo jtsswd lpeb nrseff phis varmaxk1 wm xl dbeta_dev noia rgate_switch xdep0 ad jss varmaxdvt0 wec2"
+"d g s b"
+)
+"nsvtgprpo" "subckt" (
+""
+""
+)
+"psvt25rpo" "subckt" (
+""
+""
+)
+"bitcell6TRegFile" "subckt" (
+""
+"BL BLB VDDC VSSC WL"
+)
+"nsvt25" "subckt" (
+""
+""
+)
+"nhvtlppgdp" "subckt" (
+""
+""
+)
+"psvt18rpo" "subckt" (
+""
+""
+)
+"phvtlppusp" "subckt" (
+""
+""
+)
+"nsvtlp" "subckt" (
+"alignment_prelayout cjswgs nfing noib alignment_postlayout dbeta_fudge_c2 lpe0 rconsd tmp2 xdep0_typ c2 vth_rsce cgso dsub prt rgatemod w jtsswgs lpec2 k1eff po2actcalm psm rdswmin jsd mflag_alignment voff dbeta_alpha_c2 k2we llimit scc sccm c4 cgsl dvt1 prwb rdsw tox cgbo cgdl dcfring drdsw_mechstress dwc jtsd k3b web jswgd jtssws c56 dmu drdsw nrdeff rswmineff agidl mflag_corner po2db rswmin varmaxu0 c3ext cf cjd dagidl dbeta_sig jswgs scm conw dbeta_alpha nch dvthtot lmin rgate noic wint cjswgs2 dvth0_alpha_c2 mult varmaxrdsw dvt0_stress dvth0_dev k1 lpec mobility vth0 moin ni rshgummid dvth0_fudge dvth0_alpha k2 lper n_subvt rdsweff2 c7 dwu0 eg0 rdswmineff rshgu tometer wej conpo dk1_mechstress epsilon2 jtsswgd rsh asm c3int ddvt0_mechstress dvt0eff pdm rshg0 scref dvth0_beta_c2 dvth0_mechstress lec dlc dwj k3 lketa cjswgd2 ngcon phis_typ srcefirst dwu jswd rshgumeff kvth0we l nrs rdsweff rshgum rsw sca rshg ps u0eff wec dbeta_beta le mflag_no mismatch rdw rdwmin scam dbeta_fudge lint scb scbm wpemod adp cjswd rdsweff0 cjswgd cons diodemod nrd po2act vth xw adm dvtp0 ku0we bgidl cjs dvth0_sig fs lm ncrsd fd jtss mostype psp coeact dvt1w lpe nfactor varmaxvth0 as dvth0_fudge_c2 mflag_mc pd sc we du0_mechstress rsweff u0 vth0eff w0 asp dvth0_beta pdp rdweff rdwmineff tempk wfing dbeta_beta_c2 jsws nrsd_flag wlimit cgdo cjsws coepo jtsswd lpeb nrseff phis varmaxk1 wm xl dbeta_dev noia rgate_switch xdep0 ad jss varmaxdvt0 wec2"
+"d g s b"
+)
+"PU_TRANSISTOR" "subckt" (
+"length pvta width"
+"D G S B"
+)
+"psvtgprpo" "subckt" (
+""
+""
+)
+"phvtlppudp" "subckt" (
+""
+""
+)
+"nsvtlppdsp" "subckt" (
+"alignment_prelayout cjswgs nfing noib alignment_postlayout lpe0 rconsd tmp2 xdep0_typ c2 lmineps vth_rsce cgso dsub prt rgatemod w jtsswgs lpec2 k1eff psm rdswmin jsd voff llimit scc c4 cgsl dvt1 prwb rdsw tox cgbo cgdl dcfring dwc jtsd k3b lmaxeps jswgd jtssws c56 dmu drdsw rswmineff agidl mflag_corner po2db rswmin c3ext cf cjd dagidl dbeta_sig jswgs conw dbeta_alpha nch dvthtot lmin noic wint cjswgs2 mult k1 lpec mobility vth0 moin ni dvth0_fudge dvth0_alpha k2 lper n_subvt rdsweff2 c7 dwu0 eg0 rdswmineff tometer conpo epsilon2 jtsswgd asm c3int dvt0eff pdm rshg0 lec wmineps dlc k3 lketa cjswgd2 dvth0_mm ngcon phis_typ srcefirst dwu jswd l nrs rdsweff rsw sca ps u0eff wec dbeta_beta le mflag_no mismatch rdw rdwmin dbeta_fudge lint scb adp cjswd rdsweff0 cjswgd cons diodemod nrd po2act vth xw adm dvtp0 bgidl cjs dvth0_sig fs lm ncrsd fd jtss mostype psp coeact dvt1w lpe nfactor as mflag_mc pd we dbeta_mm rsweff u0 vth0eff w0 asp dvth0_beta pdp rdweff rdwmineff tempk wfing wmaxeps jsws wlimit cgdo cjsws coepo jtsswd lpeb phis wm xl noia xdep0 ad jss"
+"d g s b"
+)
+"nlvtlp" "subckt" (
+""
+""
+)
+"nhvtlppgsp" "subckt" (
+""
+""
+)
+"nsvtlppgsp620" "subckt" (
+""
+""
+)
+"nhvtlprpo" "subckt" (
+""
+""
+)
+"psvtlppusp620" "subckt" (
+""
+""
+)
+"N_TRANSISTOR" "subckt" (
+"length pvta width"
+"D G S B"
+)
+"nand2" "subckt" (
+""
+""
+)
+"plvtgprpo" "subckt" (
+""
+""
+)
+"ndr25" "subckt" (
+""
+""
+)
+"ndr25_leak" "subckt" (
+""
+""
+)
+"pdr25" "subckt" (
+""
+""
+)
+"INVCHAIN" "subckt" (
+""
+""
+)
+"nhvtlppgsp620" "subckt" (
+""
+""
+)
+"nhvtgprpo" "subckt" (
+""
+""
+)
+"nhvtlppdsp620" "subckt" (
+""
+""
+)
+"nsvtgppgsp" "subckt" (
+""
+""
+)
+"phvtgp" "subckt" (
+""
+""
+)
+"nsvtgppdsp" "subckt" (
+""
+""
+)
+"pdr25_leak" "subckt" (
+""
+""
+)
+"nsvt18rponoldd" "subckt" (
+""
+""
+)
+"nsvtlppddp" "subckt" (
+""
+""
+)
+"psvtlprpo" "subckt" (
+""
+""
+)
+"plvtgp" "subckt" (
+""
+""
+)
+"psvtgppudp" "subckt" (
+""
+""
+)
+"phvtlprpo" "subckt" (
+""
+""
+)
+END

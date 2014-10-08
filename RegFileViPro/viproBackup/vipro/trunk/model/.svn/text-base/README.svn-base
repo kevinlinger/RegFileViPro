@@ -1,0 +1,16 @@
+This directory contains the class definitions of the SRAM model. All components classes are inherited from the superclass SRAM_Component. Each component class overloads the E and D methods to calculate Energy and Delay for the particular component.
+
+The top-level SRAM class is SRAM_top. The E and D methods of this class calculate the Energy and Delay for the whole SRAM. 
+
+Procedure to calculate E and D for a given SRAM:
+1. Make required changes to user.m
+2. Create bitcellSizes.m with bitcell sizes and cell dimensions in the Configuration directory if you just want to evaluate a specific bitcell.
+3. Run RVP.csh to generate the constructor file needed to play with the model. (comment out the call to cellGen.pl for now)
+4. In the model/ directory, At matlab prompt:
+	instance = SRAM_top(<wr>,<rows>,<cols>) % wr = 1 means write, 0 means read.
+	instance.D; % first calculate Delay as this is used to calculate leakage energy
+	instance.E;
+5. You can look at all the properties of the SRAM_top object using the workspace variables window in matlab. The Energy and Delay are properties of the object and are arrays containing the total value and the breakup among various components. The functions in SRAM_top gives an idea about the components of the breakup.
+
+Note:
+Some paths in the class definition files are hardcoded to work for me, so some features may not work (e.g. in SRAM_Component.m)

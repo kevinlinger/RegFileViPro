@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpu
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpu/plotGen.m
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpu/data.ini
+END
+SRAM_Ioff_Ileak_vs_lpu.scs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpu/SRAM_Ioff_Ileak_vs_lpu.scs
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/260/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpu/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/160/branches/TASE/device/TESTS/SRAM_Ioff_Ileak_vs_lpu/readme
+END

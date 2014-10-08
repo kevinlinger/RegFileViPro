@@ -1,0 +1,76 @@
+
+SAOffset =5
+readEnergy= 1.97117e-12
+readDelay= 1.38601e-09
+writeEnergy= 4.07532e-12
+writeDelay= 1.46225e-09
+
+SAOffset =6
+readEnergy= 1.97472e-12
+readDelay= 1.38595e-09
+writeEnergy= 4.08043e-12
+writeDelay= 1.27377e-09
+
+SAOffset =7
+readEnergy= 1.97824e-12
+readDelay= 1.38882e-09
+writeEnergy= 4.08552e-12
+writeDelay= 1.13404e-09
+
+SAOffset =8
+readEnergy= 1.98178e-12
+readDelay= 1.39169e-09
+writeEnergy= 4.09061e-12
+writeDelay= 1.08925e-09
+
+SAOffset =9
+readEnergy= 1.9853e-12
+readDelay= 1.39456e-09
+writeEnergy= 4.09569e-12
+writeDelay= 1.09043e-09
+
+SAOffset =10
+readEnergy= 1.98882e-12
+readDelay= 1.39743e-09
+writeEnergy= 4.10078e-12
+writeDelay= 1.09162e-09
+
+
+
+
+
+
+readEnergy= 1.97117+4.07532
+
+readEnergy= 1.97472+4.08043
+
+readEnergy= 1.97824+4.08552
+
+readEnergy= 1.98178+4.09061
+
+readEnergy= 1.9853+4.09569
+
+readEnergy= 1.98882+4.10078
+
+
+
+
+
+
+
+
+
+
+
+
+1.38601+ 1.46225
+
+1.38595+ 1.27377
+
+1.38882+ 1.13404
+
+1.39169+ 1.08925
+
+1.39456+1.09043
+
+1.39743+ 1.09162

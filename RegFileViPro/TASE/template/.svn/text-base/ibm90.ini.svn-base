@@ -1,0 +1,152 @@
+#############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+
+############
+# REQUIRED #
+############
+<minl>          90n
+<minw>          140n
+<ldef>          90n
+<leff>          90n
+<wdef>          140n
+<pdk>           ibm90
+<pvdd>          1.0
+<pvbp>          1.0
+<pvbn>		0
+<pvddwl>        1.0
+<pvdda>         1.0
+<pvss>         0
+<subPG>         ../../../../template/ibm90/subPG.scs
+<subPD>         ../../../../template/ibm90/subPD.scs
+<subPU>         ../../../../template/ibm90/subPU.scs
+<subN>         ../../../../template/ibm90/subN.scs
+<subP>         ../../../../template/ibm90/subP.scs
+<include>      ../../../../template/ibm90/include.scs
+<nModelName>    nfet
+<pModelName>    pfet
+<PDModelName>	nfet
+<PGModelName>   nfet
+<PUModelName>	pfet
+
+
+############
+# OPTIONAL #
+############
+<gmin>          1e-22
+<temp>          27
+
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+
+<mcStartNum>    1
+<mcrunNum>      150
+<mcType>        all
+
+
+###############################
+# REQUIRED FOR 6T SRAM CELL   #
+###############################
+
+<wpu>           140n
+<lpu>           90n
+<wpd>           420n
+<lpd>           90n
+<wpg>           280n
+<lpg>           93n
+
+##############################
+# REQUIRED FOR TCRIT	     #
+# min/maxpw scaled by /vdd^4 #
+##############################
+
+<pr>		1e-13
+<pf>		1e-13
+<tp>		40e-11
+<minpw>		6e-12
+<maxpw>		15e-12
+<tol>		2e-13
+<startIter>	1
+<stopIter>	150
+
+##########################
+# REQUIRED FOR SRAM ARRAY#
+##########################
+
+<rowsM1>        127
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '1' case;
+## pdat = 1: run write '0' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>         2 
+
+
+############################
+# TEST EXECUTION SELECTION #
+############################
+<scs>
+#SRAM_Ioff_Ileak_vs_VDD
+#IDVD_N
+#IDVD_P
+#IDN_vs_IDP
+#IDVG_N
+#IDVG_P
+#Ioff_vs_l_N
+#Ioff_vs_l_P
+#Ioff_vs_VBS_N
+#Ioff_vs_VBS_P
+#Ioff_vs_VDS_N
+#Ioff_vs_VDS_P
+#Ioff_vs_w_N
+#Ioff_vs_w_P
+#Ion_vs_l_N
+#Ion_vs_l_P
+#Ion_vs_VBS_N
+#Ion_vs_VBS_P
+#Ion_vs_w_N
+#Ion_vs_w_P
+#leakage_N
+#leakage_P
+#logIDVD_N
+#logIDVD_P
+#logIDVG_P
+#AddSub_Delay
+#SRAM_HSNM_8T
+#SRAM_HSNM
+##SRAM_HDFT_OFF_voltage
+#SRAM_PUratio
+</scs>
+
+<ocn>
+#SRAM_WM_SNM_vs_lpg
+#SRAM_WM_VBL
+#SRAM_Tcrit_mc
+#SRAM_Tcrit_pvta
+SRAM_Tcrit_pvta_mc
+#SRAM_WM_VBL_vs_VDD
+#SRAM_WM_WL_vs_VDD
+#SRAM_WM_WL_8T
+#SRAM_WM_WL
+#SRAM_WM_WL_pvta
+#SRAM_HSNM_vs_VDD
+#SRAM_WM_SNM_vs_VDD
+#SRAM_WM_SNM
+#SRAM_WM_SNM_8T
+#INV_delay
+#SRAM_Ileak_dist
+#SRAM_WM_VBL
+#SRAM_WM_VBL_8T
+#Adder
+#AddSub_Delay_ocn
+#AddSub_Energy_ocn
+#Mult_Delay_ocn
+#Mult_Energy_ocn
+#SRAM_DRV
+#SRAM_DRV_8T
+</ocn>

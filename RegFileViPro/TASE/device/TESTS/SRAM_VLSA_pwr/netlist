@@ -1,0 +1,84 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+subckt BUF OUT IN VDD VSS
+MP1 (OUTB IN VDD VDD) pfet w=2*wdef l=ldef
+MP2 (OUT OUTB VDD VDD) pfet w=2*wdef l=ldef
+MN1 (OUTB IN VSS VSS) nfet w=wdef l=ldef
+MN2 (OUT OUTB VSS VSS) nfet w=wdef l=ldef
+ends BUF
+
+//============================================
+// bitcell for IRead
+//============================================
+subckt bitcell6T BL BLB VBN VBP VDD VSS WL
+MPR (QB Q VDD VBP) PU_TRANSITOR width=wpu length=lpu
+MPL (Q QB VDD VBP) PU_TRANSITOR width=wpu length=lpu
+MNR (QB Q VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MNL (Q QB VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MTL (BL WL Q VBN) PG_TRANSISTOR  width=wpg length=lpg
+MTR (BLB WL QB VBN) PG_TRANSISTOR  width=wpg length=lpg
+ends bitcell6T
+
+//============================================
+// Drain input LSA
+//============================================
+subckt SA BL BLB OUT OUTB SAE SAPRE VDD VSS
+MPPR (OUTB SAPRE VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MPEQ (OUT SAPRE VDD VDD) P_TRANSISTOR width=wdef length=ldef
+
+MNR (OUT OUTB VN VSS) N_TRANSISTOR width=win length=lin
+MNL (OUTB OUT VN VSS) N_TRANSISTOR width=win length=lin
+MPR (OUT OUTB VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MPL (OUTB OUT VDD VDD) P_TRANSISTOR width=wdef length=ldef
+
+P4 (OUTB SAE BLB VDD) P_TRANSISTOR width=wdef length=ldef
+P5 (OUT SAE BL VDD) P_TRANSISTOR width=wdef length=ldef
+
+MTN (VN SAE VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ends SA
+
+// Columns
+I0 (BL BLB VSS VDD VDD VSS WLA) bitcell6T m=1
+I1 (BL BLB VSS VDD VDD VSS VSS) bitcell6T m=numRows
+
+CBL1 (BL 0) capacitor c=cbl*numRows
+CBL2 (BLB 0) capacitor c=cbl*numRows
+
+// Precharge
+P0 (BL PREB VDD VDD) P_TRANSISTOR width=4*wdef length=ldef
+P1 (BLB PREB VDD VDD) P_TRANSISTOR width=4*wdef length=ldef
+
+// Col-mux
+NX1 (IN1 PREB BL VSS) N_TRANSISTOR width=wdef length=ldef
+PX1 (IN1 PRE BL VDD) P_TRANSISTOR width=wdef length=ldef
+NX2 (IN2 PREB BLB VSS) N_TRANSISTOR width=wdef length=ldef
+PX2 (IN2 PRE BLB VDD) P_TRANSISTOR width=wdef length=ldef
+
+NXD1 (IN1 VSS BLD VSS) N_TRANSISTOR width=wdef length=ldef m=colmux
+PXD1 (IN1 VDD BLD VDD) P_TRANSISTOR width=wdef length=ldef m=colmux
+NXD2 (IN2 VSS BLBD VSS) N_TRANSISTOR width=wdef length=ldef m=colmux
+PXD2 (IN2 VDD BLBD VDD) P_TRANSISTOR width=wdef length=ldef m=colmux
+
+// SA
+ISA (IN1 IN2 OUT OUTB SAE SAPRE VDD VSS) SA
+
+// inputs
+VWLA (WLAIN 0) vsource type=pulse val0=0 val1=pvdd rise=prf fall=prf width=pw 
+VPRE (PREIN 0) vsource type=pulse val0=pvdd val1=0 rise=prf fall=prf  width=pw
+VPREB (PREBIN 0) vsource type=pulse val1=pvdd val0=0 rise=prf fall=prf  width=pw
+VSAE (SAEIN 0) vsource type=pulse val0=0 val1=pvdd rise=prf fall=prf width=pse delay=pw
+VSAPRE (SAPREIN 0) vsource type=pulse val0=0 val1=pvdd rise=prf fall=prf width=(pw+pse) 
+IB0 (PRE PREIN VDD VSS) BUF
+IB1 (SAE SAEIN VDD VSS) BUF
+IB2 (PREB PREBIN VDD VSS) BUF
+IB3 (WLA WLAIN VDD VSS) BUF
+IB5 (SAPRE SAPREIN VDD VSS) BUF
+
+//Initial Conditions
+ic BL=pvdd BLB=pvdd BLD=pvdd BLBD=pvdd I0.Q=0 I1.Q=pvdd
+
+myOption options pwr=all

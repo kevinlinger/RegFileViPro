@@ -1,0 +1,15 @@
+<scs>
+IDN_vs_IDP
+Ion_vs_w_N
+Ion_vs_w_P
+</scs>
+
+<ocn>
+SRAM_WM_SNM
+SRAM_WM_SNM_pvta
+SRAM_Tcrit_vs_vdd
+SRAM_Tcrit_mc
+SRAM_WM_WL
+SRAM_RVCCmin
+SRAM_Vctrl_vs_RVmin
+</ocn>

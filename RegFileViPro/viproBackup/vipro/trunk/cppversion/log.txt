@@ -1,0 +1,2110 @@
+DAMN ---> technology = ibm45; memSize = 8192; rows = 512;  banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> memSize = 8192; rows = 512;  banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> rows = 512;  banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> banks = 1; colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> colMux = 1; wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> wordSize = 16; vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> vdd = 1.0; temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> temp = 25; SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> SAoffset = .150;  height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> height = 0.34e-6; width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> width = 0.73e-6;     energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> energyConstraint = 0; delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> delayConstraint = 1e-9;   wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> wnio = 8;   tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+DAMN ---> tasePath = /var/home/plb3qt/scratch/plb3qt/TASE;  OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+OPTIMIZE OBJECTIVE  	   ENERGY 0  	   DELAY 1.15          KNOBS  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+  	   NBANKS 1 16 	   NCOLS 1 8 	   NROWS 32 512  
+knob = NBANKS min = 1 max = 16
+NCOLS 1 8 	   NROWS 32 512  
+knob = NCOLS min = 1 max = 8
+NROWS 32 512  
+knob = NROWS min = 32 max = 512
+OBJ =   	   ENERGY 0  	   DELAY 1.15          KNOB = 
+Const Called
+ new2tpl
+  Initializing test: RVP_Gate_Capacitance
+ tpl2scs
+  Building test: RVP_Gate_Capacitance
+ ocn2out
+  Executing test: RVP_Gate_Capacitance
+ dat2img
+  Building graphical data for: RVP_Gate_Capacitance
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Gate_Capacitance
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Gate_Capacitance 
+	w =0.1 	s =0.1 	t =0.31 	h =0.18 	k =2.2
+num_iterations = 20
+Valid 16 32 1
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.19327e-10 delay_bankOutput 2.23667e-10
+BM Output extracted
+output extraction done
+read_delay = 1.07865e-09  read_energy = 1.60092e-12
+Valid 8 32 2
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+0 - delay_bankSelect 1.19327e-10 delay_bankOutput 2.23667e-10
+BM Output extracted
+output extraction done
+read_delay = 1.08771e-09  read_energy = 1.45844e-12
+Valid 4 32 4
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.13018e-10 delay_bankOutput 1.65315e-10
+BM Output extracted
+output extraction done
+read_delay = 1.05833e-09  read_energy = 1.40963e-12
+Valid 1 64 8
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 0 delay_bankOutput 0
+BM Output extracted
+output extraction done
+read_delay = 9.98605e-10  read_energy = 1.44199e-12
+Valid 8 64 1
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.15208e-10 delay_bankOutput 1.8483e-10
+BM Output extracted
+output extraction done
+read_delay = 1.07523e-09  read_energy = 1.47274e-12
+Valid 4 64 2
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.13018e-10 delay_bankOutput 1.65315e-10
+BM Output extracted
+output extraction done
+read_delay = 1.06849e-09  read_energy = 1.41054e-12
+Valid 2 64 4
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.11871e-10 delay_bankOutput 1.55472e-10
+BM Output extracted
+output extraction done
+read_delay = 1.0894e-09  read_energy = 1.40253e-12
+Invalid 0 128 8
+Valid 4 128 1
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.13018e-10 delay_bankOutput 1.65315e-10
+BM Output extracted
+output extraction done
+read_delay = 1.12296e-09  read_energy = 1.62355e-12
+Valid 2 128 2
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.11871e-10 delay_bankOutput 1.55472e-10
+BM Output extracted
+output extraction done
+read_delay = 1.1275e-09  read_energy = 1.60217e-12
+Valid 1 128 4
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 0 delay_bankOutput 0
+BM Output extracted
+output extraction done
+read_delay = 1.00392e-09  read_energy = 1.61482e-12
+Invalid 0 256 8
+Valid 2 256 1
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.11871e-10 delay_bankOutput 1.55472e-10
+BM Output extracted
+output extraction done
+read_delay = 1.25235e-09  read_energy = 1.72767e-12
+Valid 1 256 2
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 0 delay_bankOutput 0
+BM Output extracted
+output extraction done
+read_delay = 1.11251e-09  read_energy = 1.72694e-12
+Invalid 0 256 4
+Invalid 0 512 8
+Valid 1 512 1
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 0 delay_bankOutput 0
+BM Output extracted
+output extraction done
+read_delay = 1.38595e-09  read_energy = 1.97472e-12
+Invalid 0 512 2
+Invalid 0 512 4
+Valid 2 32 8
+start simulation
+ new2tpl
+  Initializing test: RVP_SA
+ tpl2scs
+  Building test: RVP_SA
+ ocn2out
+  Executing test: RVP_SA
+ dat2img
+  Building graphical data for: RVP_SA
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_SA
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_SA 
+ new2tpl
+  Initializing test: RVP_Decoder
+ tpl2scs
+  Building test: RVP_Decoder
+ ocn2out
+  Executing test: RVP_Decoder
+ dat2img
+  Building graphical data for: RVP_Decoder
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Decoder
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Decoder 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+ new2tpl
+  Initializing test: RVP_Ileak_PU
+  Initializing test: RVP_Ileak_PD
+  Initializing test: RVP_Ileak_PG
+  Initializing test: RVP_CD
+ tpl2scs
+  Building test: RVP_Ileak_PU
+  Building test: RVP_Ileak_PD
+  Building test: RVP_Ileak_PG
+ scs2out
+  Executing test: RVP_Ileak_PU
+  Executing test: RVP_Ileak_PD
+  Executing test: RVP_Ileak_PG
+ out2dat
+  Reading data from: RVP_Ileak_PU
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PD
+   Extracting: dc.dc
+  Reading data from: RVP_Ileak_PG
+   Extracting: dc.dc
+ tpl2scs
+  Building test: RVP_CD
+ ocn2out
+  Executing test: RVP_CD
+ dat2img
+  Building graphical data for: RVP_Ileak_PU
+  Building graphical data for: RVP_Ileak_PD
+  Building graphical data for: RVP_Ileak_PG
+  Building graphical data for: RVP_CD
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Ileak_PU
+  Compiling Report Data From: RVP_Ileak_PD
+  Compiling Report Data From: RVP_Ileak_PG
+  Compiling Report Data From: RVP_CD
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:    RVP_Ileak_PU RVP_Ileak_PD RVP_Ileak_PG   RVP_CD 
+ new2tpl
+  Initializing test: RVP_TIMING
+ tpl2scs
+  Building test: RVP_TIMING
+ ocn2out
+  Executing test: RVP_TIMING
+ dat2img
+  Building graphical data for: RVP_TIMING
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_TIMING
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_TIMING 
+ new2tpl
+  Initializing test: RVP_DFF
+ tpl2scs
+  Building test: RVP_DFF
+ ocn2out
+  Executing test: RVP_DFF
+ dat2img
+  Building graphical data for: RVP_DFF
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_DFF
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_DFF 
+ new2tpl
+  Initializing test: RVP_Bank_Mux
+ tpl2scs
+  Building test: RVP_Bank_Mux
+ ocn2out
+  Executing test: RVP_Bank_Mux
+ dat2img
+  Building graphical data for: RVP_Bank_Mux
+  Compiling global image sets
+ img2pdf
+  Compiling Report Data From: RVP_Bank_Mux
+
+Report exists at: /net/humpback.ece.virginia.edu/scratch2/plb3qt/vipro/trunk/cppversion
+
+
+Build complete for:   RVP_Bank_Mux 
+start extracting output
+SA Output extracted
+RD Output extracted
+BC Output extracted
+TB Output extracted
+ioDFF Output extracted
+1 - delay_bankSelect 1.11871e-10 delay_bankOutput 1.55472e-10
+BM Output extracted
+output extraction done
+read_delay = 1.11216e-09  read_energy = 1.42844e-12

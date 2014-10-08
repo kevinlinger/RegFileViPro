@@ -1,0 +1,56 @@
+//Auto generated netlist for buffer chain characterization
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VBANK_SEL0 (BANK_SEL0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VBANK_SELB0 (BANK_SELB0 0) vsource type=pulse val0=pvdd val1=0 rise=prise fall=pfall width=pwidth
+
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=2*i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+// Tristate buffer
+subckt triinv OUT IN en ep VDD VSS 
+parameters wp=wdef lp=ldef wn=wdef ln=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wdef*2*16 length=ldef 
+MP (net19 ep VDD VDD) P_TRANSISTOR width=wdef*2*16 length=ldef
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wdef*16 length=ldef 
+MN (net31 en VSS VSS) N_TRANSISTOR width=wdef*16 length=ldef 
+ends triinv
+
+//BANK_SEL inverter chain subckt
+subckt INVCHAIN_BANK_SEL OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4
+I2 (X3 X2 VDD VSS) INV i=16
+I3 (OUT X3 VDD VSS) INV i=48
+ends INVCHAIN_BANK_SEL
+
+
+IBANK_SEL0 (BANK_SEL_OUT0 BANK_SEL0 VDD VSS) INVCHAIN_BANK_SEL
+IBANK_SELB0 (BANK_SEL_OUTB0 BANK_SELB0 VDD VSS) INVCHAIN_BANK_SEL
+
+// number of columns hardcoded at 4 for intial estimates in ocn script
+
+// Wire capacitance for 2, 4, 8, and 16 banks, assumes banks placed
+// side by side with control signals propagating from middle of array
+// Also accounting for enable capacitance on WS-1 tristate enables
+CBANK_SEL0 (BANK_SEL_OUT0 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*16
+CBANK_SELB0 (BANK_SEL_OUTB0 0) capacitor c=numBanks/2*ws*cwl*colMux+wdef*cg*1e6*(ws-1)*32
+
+
+Tri_state0 (DATA_OUT0 VSS BANK_SEL_OUT0 BANK_SEL_OUTB0  VDD VSS) triinv
+
+//Wire cap plus additional gate cap of DFF
+CDATA2 (DATA_OUT0 0) capacitor c=numBanks/2*ws*cwl*colMux+2*wdef*cg*1e6
+
+myOption options pwr=all
+ic DATA_OUT0=0 

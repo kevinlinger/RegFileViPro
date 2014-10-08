@@ -1,0 +1,61 @@
+%##################################################################
+%#   MATLAB code to plot SRAM Cell Leakage Current distribution	  #
+%#                                                                #
+%# Created by jw4pg@virginia.edu                                  #
+%##################################################################
+
+
+%load data%
+f=load('SRAM_Ileak_dist/OUT/monteCarlo/mcdata');
+
+%get Ileak, unit nA%
+Ilk_1p0=f(:,4)*1e9;
+
+Ilk_0p3=f(:,9)*1e9;
+
+%------------------------- when VDD=1.0 --------------------------%
+%get mean and std of the lognormal distribution%
+p_1p0 = lognfit(Ilk_1p0);
+m_1p0 = exp(p_1p0(1)+p_1p0(2)^2/2);
+s2_1p0 = exp(2*p_1p0(1)+p_1p0(2)^2)*(exp(p_1p0(2)^2)-1);
+s_1p0 = sqrt(s2_1p0);
+
+%plot data and format figure%
+ndata = length(Ilk_1p0);
+nbins = ceil(sqrt(ndata));
+[n,d]=hist(Ilk_1p0,nbins);
+bar(d,n,1);
+grid on;
+txt=sprintf('Fitted as a log-normal with\n\\mu=%0.3g; \\sigma=%0.3g\nmean=%0.3g; sigma=%0.3g',p_1p0(1),p_1p0(2),m_1p0,s_1p0);
+h=text(m_1p0+s_1p0,max(n)/2,txt,'fontSize',12);
+xlabel('Cell Leakage Current (nA)','fontsize',12);
+ylabel('Occurance','fontsize',12);
+title('Ileak Distribution when VDD=1.0','fontsize',16);
+
+%save and close%
+print(gcf, '-depsc', 'SRAM_Ileak_dist/IMG/SRAM_Ileak_dist_vdd1p0.eps');
+close(gcf);
+
+
+%------------------------- when VDD=0.3 --------------------------%
+%get mean and std of the lognormal distribution%
+p_0p3 = lognfit(Ilk_0p3);
+m_0p3 = exp(p_0p3(1)+p_0p3(2)^2/2);
+s2_0p3 = exp(2*p_0p3(1)+p_0p3(2)^2)*(exp(p_0p3(2)^2)-1);
+s_0p3 = sqrt(s2_0p3);
+
+%plot data and format figure%
+ndata = length(Ilk_0p3);
+nbins = ceil(sqrt(ndata));
+[n,d]=hist(Ilk_0p3,nbins);
+bar(d,n,1);
+grid on;
+txt=sprintf('Fitted as a log-normal with\n\\mu=%0.3g; \\sigma=%0.3g\nmean=%0.3g; sigma=%0.3g',p_0p3(1),p_0p3(2),m_0p3,s_0p3);
+h=text(m_0p3+s_0p3,max(n)/2,txt,'fontSize',12);
+xlabel('Cell Leakage Current (nA)','fontsize',12);
+ylabel('Occurance','fontsize',12);
+title('Ileak Distribution when VDD=0.3','fontsize',16);
+
+%save and close%
+print(gcf, '-depsc', 'SRAM_Ileak_dist/IMG/SRAM_Ileak_dist_vdd0p3.eps');
+close(gcf);

@@ -1,0 +1,73 @@
+/*
+ Ocean script to test robustness of dynamic OR gate
+*/
+
+; ************************** main code ***************************
+simulator( 'spectre )
+
+;; COPY THE CORRISPONDING NETLIST FOR THE DESIRED DATA PATTERN
+design( "./netlist" )
+
+resultsDir("./OUT")
+outputFile = outfile( "data.txt" "w" )
+
+modelFile( 
+	'("../../../../template/ibm65/include_mm.scs")
+	'("../../../../template/ibm65/subN.scs")
+	'("../../../../template/ibm65/subP.scs")
+)
+
+desVar(   "pvdd" 1)
+desVar(   "pvbp" 1)
+desVar(   "ldef" 60e-9 )
+desVar(   "wdef" 120e-9 )
+desVar(   "prise" 1e-12 )
+desVar(   "pfall" 1e-12 )
+desVar(	  "per" 5e-9 )
+desVar(	  "ws"  16   )
+desVar(   "readPorts" 4 )
+desVar(   "writePorts" 1 )
+desVar(   "capacity" (1024/16) )
+
+
+desVar(   "wkeepgbl" 1)
+desVar(   "pullwlbl" 5)
+desVar(   "pullwgbl" 5)
+desVar(   "prewlbl" 3)
+desVar(   "prewgbl" 3)
+desVar(   "wkeeplbl" 1)
+
+
+
+desVar( "gblnum" pow(2 2))
+desVar( "lblnum" pow(2 3))
+
+pvdd = 1
+
+
+analysis('tran ?start 0 ?stop (5e-9*4) ?step 0.1p ?errpreset 'conservative)
+temp(27)
+option('reltol 1e-6 'gmin 1e-22)
+save('all)
+run()
+selectResults('tran)
+
+
+teval = cross(v("Dout") (pvdd/2.0) 1 'rising) - cross(v("In2") (pvdd/2.0) 1 'rising)
+tpre1 = cross(v("Out") (pvdd/2.0) 1 'rising)  - cross(v("In2") (pvdd/2.0) 1 'falling)
+tpre2 = cross(v("GBLout") (pvdd/2.0) 1 'rising)  - cross(v("In2") (pvdd/2.0) 1 'falling)
+
+tdel = max(teval tpre1 tpre2)
+;tdel = teval
+
+Oldenergy = integ(i("Vvdd.p") 0.01n (5e-9*2))
+
+energy = integ(i("Vvdd.p") 5e-9 (5e-9 + tdel)) + integ(i("Vvdd.p") (5e-9*1.5) ((5e-9*1.5) + tdel)) + integ(i("Vvdd.p") (5e-9*3.0) ((5e-9*3.0) + tdel)) + integ(i("Vvdd.p") (5e-9*3.5) ((5e-9*3.5) + tdel))
+
+avgenergy = energy/2.0
+
+
+fprintf(outputFile "%e\n", tdel)
+fprintf(outputFile "%e\n", (avgenergy*-1.0*4*16))
+fprintf(outputFile "%e\n", (energy*-1.0*4*16))
+close( outputFile ) 

@@ -1,0 +1,85 @@
+//Generated for; spectre
+//Trying to find the gate cap of the WL transistor
+
+simulator lang=spectre
+global 0 
+
+
+
+
+parameters numBanks=4 colMux=8 cwl=1.09136e-16 ws=16 tper=5e-09 trf=1e-12 \
+    wdef=1.2e-07 ldef=6e-08 pvbp=1.1 pvdd=1.1
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subN.scs"
+include "../../../../template/ibm65/subP.scs"
+subckt inverter IN OUT VDD VSS
+parameters f
+N0 (OUT IN VSS VSS) N_TRANSISTOR width=f*wdef length=ldef
+P0 (OUT IN VDD VDD) P_TRANSISTOR width=2*f*wdef length=ldef
+ends inverter
+
+// Library name: ViPro_st65
+// Cell name: DFF
+// View name: schematic
+subckt DFF CLK D Q VDD VSS
+M25 (Q X3 VSS VSS) N_TRANSISTOR width=1.95*wdef length=ldef mult=1
+M23 (X4 X3 VSS VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M21 (A5 X4 VSS VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M20 (X3 CPN A5 VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M17 (X2 CPI X3 VSS) N_TRANSISTOR width=1.35*wdef length=ldef mult=1
+M15 (X2 X1 VSS VSS) N_TRANSISTOR width=1.35*wdef length=ldef mult=1
+M13 (X1 X0 VSS VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M11 (A3 X1 VSS VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M10 (X0 CPI A3 VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M7 (A1 D VSS VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M6 (X0 CPN A1 VSS) N_TRANSISTOR width=wdef length=ldef mult=1
+M3 (CPI CPN VSS VSS) N_TRANSISTOR width=1.5*wdef length=ldef mult=1
+M1 (CPN CLK VSS VSS) N_TRANSISTOR width=1.5*wdef length=ldef mult=1
+M24 (Q X3 VDD VDD) P_TRANSISTOR width=5.4*wdef length=ldef mult=1
+M22 (X4 X3 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef mult=1
+M19 (X3 CPI A4 VDD) P_TRANSISTOR width=2*wdef length=ldef mult=1
+M18 (A4 X4 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef mult=1
+M16 (X3 CPN X2 VDD) P_TRANSISTOR width=2.7*wdef length=ldef mult=1
+M14 (X2 X1 VDD VDD) P_TRANSISTOR width=2.7*wdef length=ldef mult=1
+M12 (X1 X0 VDD VDD) P_TRANSISTOR width=3*wdef length=ldef mult=1
+M9 (X0 CPN A2 VDD) P_TRANSISTOR width=2*wdef length=ldef mult=1
+M8 (A2 X1 VDD VDD) P_TRANSISTOR width=2*wdef length=ldef mult=1
+M5 (X0 CPI A0 VDD) P_TRANSISTOR width=3.6*wdef length=ldef mult=1
+M4 (A0 D VDD VDD) P_TRANSISTOR width=3.6*wdef length=ldef mult=1
+M2 (CPI CPN VDD VDD) P_TRANSISTOR width=3*wdef length=ldef mult=1
+M0 (CPN CLK VDD VDD) P_TRANSISTOR width=3*wdef length=ldef mult=1
+ends DFF
+
+I1 (CLK D Q1 VDD VSS) DFF
+I2 (CLK D Q2 VDD VSS) DFF
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+VDAT (D 0) vsource type=pulse val0=0 val1=pvdd delay=1.25*tper rise=trf
+VCLK (CLK 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=0.5*tper delay=0.5*tper period=tper
+
+//equivalent load for address DFF is 4 and gates and one inverter, take it as 5 inverters (pessimistic)
+IINV1 (Q1 QB1 VDD VSS) inverter f=5
+
+//equivalent load for data DFF is 1 4x inverter plus wire cap
+IINV2 (Q2 QB2 VDD VSS) inverter f=4
+capWire (Q2 0) capacitor c=numBanks/2*ws*cwl*colMux 
+
+ic Q1=pvdd Q2=pvdd
+myOption options pwr=all pivotdc=yes
+simulatorOptions options reltol=1e-06 vabstol=1e-6 iabstol=1e-12 temp=25 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-22 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="OUT/psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=1e-08 errpreset=moderate start=0 step=5e-12 \
+    write="spectre.ic" writefinal="spectre.fc" annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub currents=all
+ 

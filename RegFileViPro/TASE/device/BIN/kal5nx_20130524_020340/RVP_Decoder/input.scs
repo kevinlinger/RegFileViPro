@@ -1,0 +1,328 @@
+//Generated for; spectre
+//Trying to find the gate cap of the WL transistor
+
+simulator lang=spectre
+global 0 
+
+
+
+
+parameters wireCap=3.253139e-15 wireRes=9.769792 multiplier=16 pvdd=1 \
+    cwl=1.09136e-16 lpg=7.5e-08 wpg=9e-08 lpd=6.5e-08 wpd=1.4e-07 \
+    lpu=6.5e-08 wpu=8e-08 ldef=6e-08 wdef=1.2e-07
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subN.scs"
+include "../../../../template/ibm65/subP.scs"
+include "../../../../template/ibm65/subPU.scs"
+include "../../../../template/ibm65/subPD.scs"
+include "../../../../template/ibm65/subPG.scs"
+// ========================================================
+//                         Title
+// ========================================================
+simulator lang=spectre
+myOption options pwr=all
+
+// ========================================================
+//                      Subcircuits Used
+// ========================================================
+
+// Subcircuit: inverter
+subckt inverter VDD VSS In Out
+parameters wn=wdef wp=2*wdef ln=ldef lp=ldef mult=1 alpha=1
+   P0 (Out In VDD VDD) P_TRANSISTOR width=alpha*wp length=lp m=mult 
+   N0 (Out In VSS VSS) N_TRANSISTOR width=alpha*wn length=ln m=mult
+ends inverter
+// End of subcircuit definition.
+
+// Subcircuit: NAND2
+subckt NAND2 VDD VSS inA inB out
+parameters wn=2*wdef ln=ldef wp=2*wdef lp=ldef alpha=1 mult=1 
+    PA (out inA VDD VDD) P_TRANSISTOR width=wp*alpha length=lp m=mult
+    PB (out inB VDD VDD) P_TRANSISTOR width=wp*alpha length=lp m=mult
+    NA (out inA netAB VSS) N_TRANSISTOR width=wn*alpha length=ln m=mult
+    NB (netAB inB VSS VSS) N_TRANSISTOR width=wn*alpha length=ln m=mult
+ends NAND2
+// End of subcircuit definition
+
+// Subcircuit: parasitics
+subckt parasitics VSS in out
+parameters capacitance resistance 
+    C0 (in VSS) capacitor c=capacitance/2
+    R0 (in out) resistor r=resistance
+    C1 (out VSS) capacitor c=capacitance/2
+ends parasitics
+// End of subcircuit definition
+
+// Subcircuit: bitcell
+subckt bitcell VDD VSS WL BL BLB
+parameters mult=1
+    N5 (BL WL Q VSS) N_TRANSISTOR width=wpg length=lpg m=mult
+    P4 (QB Q VDD VDD) P_TRANSISTOR width=wpu length=lpu m=mult
+    N3 (QB Q VSS VSS) N_TRANSISTOR width=wpd length=lpd m=mult
+    P2 (Q QB VDD VDD) P_TRANSISTOR width=wpu length=lpu m=mult
+    N1 (Q QB VSS VSS) N_TRANSISTOR width=wpd length=lpd m=mult
+    N6 (BLB WL QB VSS) N_TRANSISTOR width=wpg length=lpg m=mult
+ends bitcell
+// End of subcircuit definition
+
+// Subcircuit: buffer
+subckt buffer VDD VSS in out
+parameters wn0=wdef wp0=2*wdef ln0=ldef lp0=ldef mult0=1 alpha0=1 alpha1=1
+    I0 (VDD VSS in inbar) inverter wn=wn0 ln=ln0 wp=wp0 lp=lp0 alpha=alpha0 mult=mult0
+    I1 (VDD VSS inbar out) inverter wn=wn0 ln=ln0 wp=wp0 lp=lp0 alpha=alpha1 mult=mult0
+ends buffer
+// End of subcircuit definition.
+
+// Subcircuit: twobuffers
+subckt twobuffers VDD VSS in out
+parameters wn0=wdef wp0=2*wdef ln0=ldef lp0=ldef mult0=1 alpha0=1 alpha1=1 alpha2=1 alpha3=1
+    I0 (VDD VSS in inbar) inverter wn=wn0 ln=ln0 wp=wp0 lp=lp0 alpha=alpha0 mult=mult0
+    I1 (VDD VSS inbar inbarbar) inverter wn=wn0 ln=ln0 wp=wp0 lp=lp0 alpha=alpha1 mult=mult0
+    I2 (VDD VSS inbarbar inbarbarbar) inverter wn=wn0 ln=ln0 wp=wp0 lp=lp0 alpha=alpha2 mult=mult0
+    I3 (VDD VSS inbarbarbar out) inverter wn=wn0 ln=ln0 wp=wp0 lp=lp0 alpha=alpha3 mult=mult0
+ends twobuffers
+// End of subcircuit definition.
+
+// Subcircuit: predecoder
+subckt predecoder VDD VSS in out
+    Nand0 (VDD VSS in in postN0) NAND2 mult=1
+    Inv0 (VDD VSS postN0 preN1) inverter
+    Nand1 (VDD VSS preN1 VDD postN1) NAND2 mult=2
+    Inv1 (VDD VSS postN1 out) inverter
+ends predecoder
+// End of subcircuit definition.
+
+// Subcircuit: nobuffers
+subckt nobuffers VDD VSS in out
+    R0 (in out) resistor r=0.000000000000001
+ends nobuffers
+// End of subcircuit definition.
+
+// Subcircuit: wldriver
+subckt wldriver VDD VSS in out
+    Nand3 (VDD VSS in VDD postN3) NAND2 mult=1
+    Inv4 (VDD VSS postN3 out) inverter
+ends wldriver
+// End of subcircuit definition.
+
+
+//Subcircuit: WCpathN0K0
+//critical path for 6 bits when n = 0 and k = 0
+subckt WCpathN0K0 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) nobuffers
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) nobuffers
+ends WCpathN0K0
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN1K0
+//critical path for 6 bits when n = 1 and k = 0
+subckt WCpathN1K0 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) buffer alpha0=1 alpha1=4
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) nobuffers
+ends WCpathN1K0
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN2K0
+//critical path for 6 bits when n = 2 and k = 0
+subckt WCpathN2K0 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) twobuffers alpha0=1 alpha1=4 alpha2=16 alpha3=64
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) nobuffers
+ends WCpathN2K0
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN0K1
+//critical path for 6 bits when n = 0 and k = 1
+subckt WCpathN0K1 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) nobuffers
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) buffer alpha0=1 alpha1=4
+ends WCpathN0K1
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN1K1
+//critical path for 6 bits when n = 1 and k = 1
+subckt WCpathN1K1 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) buffer alpha0=1 alpha1=4
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) buffer alpha0=1 alpha1=4
+ends WCpathN1K1
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN2K1
+//critical path for 6 bits when n = 2 and k = 1
+subckt WCpathN2K1 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) twobuffers alpha0=1 alpha1=4 alpha2=16 alpha3=64
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) buffer alpha0=1 alpha1=4
+ends WCpathN2K1
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN0K2
+//critical path for 6 bits when n = 0 and k = 2
+subckt WCpathN0K2 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) nobuffers
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) twobuffers alpha0=1 alpha1=4 alpha2=16 alpha3=64
+ends WCpathN0K2
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN1K2
+//critical path for 6 bits when n = 1 and k = 2
+subckt WCpathN1K2 VDD VSS in out
+parameters wirecap wireres
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) buffer alpha0=1 alpha1=4
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) twobuffers alpha0=1 alpha1=4 alpha2=16 alpha3=64
+ends WCpathN1K2
+// End of Subcircuit Definition
+
+//Subcircuit: WCpathN2K2
+//critical path for 6 bits when n = 2 and k = 2
+subckt WCpathN2K2 VDD VSS in out
+parameters wirecap wireres numBitcellsOnWL=1
+    Inv0 (VDD VSS in preN0) inverter
+    Predecoder0 (VDD VSS preN0 preNbuf) predecoder
+    Nbuffer0 (VDD VSS preNbuf prePAR) twobuffers alpha0=1 alpha1=4 alpha2=16 alpha3=64
+    PAR0 (VSS prePAR preN2) parasitics capacitance = wirecap resistance = wireres
+    Nand2 (VDD VSS preN2 VDD postN2) NAND2 mult=8
+    Inv2 (VDD VSS postN2 preWL) inverter
+    WLdriver0 (VDD VSS preWL preKbuf) wldriver
+    Kbuffer0 (VDD VSS preKbuf out) twobuffers alpha0=1 alpha1=4 alpha2=16 alpha3=64
+ends WCpathN2K2
+// End of Subcircuit Definition
+
+
+
+// ========================================================
+//                      Test Bench
+// ========================================================
+
+//power supplies
+V0 (vdd_0 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 0 and k = 0
+V1 (vdd_1 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 1 and k = 0
+V2 (vdd_2 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 2 and k = 0
+V3 (vdd_3 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 0 and k = 1
+V4 (vdd_4 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 1 and k = 1
+V5 (vdd_5 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 2 and k = 1
+V6 (vdd_6 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 0 and k = 2
+V7 (vdd_7 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 1 and k = 2
+V8 (vdd_8 0) vsource dc=pvdd type=dc	//voltage source for 6 bit model with n = 2 and k = 2
+
+VGLOBAL (vdd 0) vsource dc=pvdd type=dc	//global voltage source
+
+//input signals (goes from 1 -> 0)
+VVIN0 ( in_0 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN1 ( in_1 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN2 ( in_2 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN3 ( in_3 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN4 ( in_4 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN5 ( in_5 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN6 ( in_6 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN7 ( in_7 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+VVIN8 ( in_8 0 ) vsource type=pulse val0=0 val1=pvdd delay=10n rise=0.01n fall=0.01n width=16n period=32n 
+
+//BUFFERS TO MAKE INPUT SIGNALS MORE REALISTIC
+
+B0 (vdd 0 in_0 in0) buffer alpha0=1 alpha1=1
+B1 (vdd 0 in_1 in1) buffer alpha0=1 alpha1=1
+B2 (vdd 0 in_2 in2) buffer alpha0=1 alpha1=1
+B3 (vdd 0 in_3 in3) buffer alpha0=1 alpha1=1
+B4 (vdd 0 in_4 in4) buffer alpha0=1 alpha1=1
+B5 (vdd 0 in_5 in5) buffer alpha0=1 alpha1=1
+B6 (vdd 0 in_6 in6) buffer alpha0=1 alpha1=1
+B7 (vdd 0 in_7 in7) buffer alpha0=1 alpha1=1
+B8 (vdd 0 in_8 in8) buffer alpha0=1 alpha1=1
+
+//DUT(S)
+
+DUT0 (vdd_0 0 in0 WL0) WCpathN0K0 wirecap=wireCap wireres=wireRes
+DUT1 (vdd_1 0 in1 WL1) WCpathN1K0 wirecap=wireCap wireres=wireRes
+DUT2 (vdd_2 0 in2 WL2) WCpathN2K0 wirecap=wireCap wireres=wireRes
+DUT3 (vdd_3 0 in3 WL3) WCpathN0K1 wirecap=wireCap wireres=wireRes
+DUT4 (vdd_4 0 in4 WL4) WCpathN1K1 wirecap=wireCap wireres=wireRes
+DUT5 (vdd_5 0 in5 WL5) WCpathN2K1 wirecap=wireCap wireres=wireRes
+DUT6 (vdd_6 0 in6 WL6) WCpathN0K2 wirecap=wireCap wireres=wireRes
+DUT7 (vdd_7 0 in7 WL7) WCpathN1K2 wirecap=wireCap wireres=wireRes
+DUT8 (vdd_8 0 in8 WL8) WCpathN2K2 wirecap=wireCap wireres=wireRes
+
+//BITCELLS
+
+Bitcell0 (vdd 0 WL0 vdd vdd) bitcell mult=multiplier
+Bitcell1 (vdd 0 WL1 vdd vdd) bitcell mult=multiplier
+Bitcell2 (vdd 0 WL2 vdd vdd) bitcell mult=multiplier
+Bitcell3 (vdd 0 WL3 vdd vdd) bitcell mult=multiplier
+Bitcell4 (vdd 0 WL4 vdd vdd) bitcell mult=multiplier
+Bitcell5 (vdd 0 WL5 vdd vdd) bitcell mult=multiplier
+Bitcell6 (vdd 0 WL6 vdd vdd) bitcell mult=multiplier
+Bitcell7 (vdd 0 WL7 vdd vdd) bitcell mult=multiplier
+Bitcell8 (vdd 0 WL8 vdd vdd) bitcell mult=multiplier
+
+
+
+
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=25 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="TranResults/psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=3.2e-08 errpreset=conservative start=0 step=1e-11 \
+    write="spectre.ic" writefinal="spectre.fc" annotate=status \
+    strobeperiod=1e-11 maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub currents=all
+ 

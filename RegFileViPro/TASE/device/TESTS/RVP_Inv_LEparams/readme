@@ -1,0 +1,1 @@
+Transient sim to get delay vs fanout for characteristic inverter. Slope of this line is the tau parameter and the y-intercept divided by tau is the p parameter used in logical effort delay calculation of inverter.

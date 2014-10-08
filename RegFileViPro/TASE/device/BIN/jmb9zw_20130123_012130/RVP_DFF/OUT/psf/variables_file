@@ -1,0 +1,20 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "Jan 23 01:21:15 2013"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"pvdd" "variable" ( 1.1 ) PROP( )
+"pvbp" "variable" ( 1.1 ) PROP( )
+"ldef" "variable" ( 60e-9 ) PROP( )
+"wdef" "variable" ( 120e-9 ) PROP( )
+"trf" "variable" ( 1e-12 ) PROP( )
+"tper" "variable" ( 5e-9 ) PROP( )
+"ws" "variable" ( 16 ) PROP( )
+"cwl" "variable" ( 109.136e-18 ) PROP( )
+"colMux" "variable" ( 8 ) PROP( )
+"numBanks" "variable" ( 4 ) PROP( )
+"temp" "variable" ( 25 ) PROP( )
+END

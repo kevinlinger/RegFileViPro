@@ -1,0 +1,23 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "May 24 02:02:54 2013"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"wdef" "variable" ( 120e-9 ) PROP( )
+"ldef" "variable" ( 60e-9 ) PROP( )
+"wpu" "variable" ( 80e-9 ) PROP( )
+"lpu" "variable" ( 65e-9 ) PROP( )
+"wpd" "variable" ( 140e-9 ) PROP( )
+"lpd" "variable" ( 65e-9 ) PROP( )
+"wpg" "variable" ( 90e-9 ) PROP( )
+"lpg" "variable" ( 75e-9 ) PROP( )
+"cwl" "variable" ( 109.136e-18 ) PROP( )
+"pvdd" "variable" ( 1 ) PROP( )
+"multiplier" "variable" ( 16 ) PROP( )
+"wireRes" "variable" ( 9.769792 ) PROP( )
+"wireCap" "variable" ( 3.253139e-15 ) PROP( )
+"temp" "variable" ( 25 ) PROP( )
+END

@@ -1,0 +1,13 @@
+##### 2009-10-13 by Jiajing, Wang (jw4pg) #####
+Original spec: Minimum VCC distribution for write
+
+Measurement:
+WL is high, BL/BLB is precharged low/high. DC sweeping VDD (power supply for cell, bitline and wordline) from 0.1 to VDD. At the critical VDD value, the internal nodes Q and QB will flip.  
+
+####  Issue  ####
+The VDD sweeping start value is 0.2 instead of 0 because the cell might also flip below 0.2 due to data retention. 
+But the real write VCCmin is actually much higher. 
+To see an example, pls refer to wvccmin_vddscaling.png
+In this case, if sweeeping from 0, the cell won't flip at higher votlage.
+So this simulation can correctly obtain the worst WVCCmin value, but cannot get the whole distribution of WVCCmin. 
+To obtain the whole distribution of WVCCmin, we can run write margin test with the sweep of VDD.

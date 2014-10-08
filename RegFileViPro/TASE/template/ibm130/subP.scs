@@ -1,0 +1,8 @@
+subckt P_TRANSISTOR D G S B
+
+parameters width=160n length=120n
+
+PX (D G S B) pfet w=width l=length
+
+ends P_TRANSISTOR
+

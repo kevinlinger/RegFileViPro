@@ -1,0 +1,661 @@
+10
+
+dir
+396
+https://venividiwiki.ee.virginia.edu/svn/SRAM_TOOL/branches/TASE/device/TESTS
+https://venividiwiki.ee.virginia.edu/svn/SRAM_TOOL
+
+
+
+2012-01-25T19:23:53.081442Z
+394
+JamesBoley
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+98ceb7bb-72bb-49ce-8a60-1c4bab548b95
+
+5TSRAM_WM_WL
+dir
+
+cap_gate_N
+dir
+
+SRAM_Ncurve
+dir
+
+SRAM_Bfly_st
+dir
+
+RVP_Ileak_N
+dir
+
+RVP_cap_gate
+dir
+
+RVP_Ileak_P
+dir
+
+SRAM_HSNM_vs_VDD
+dir
+
+RSTSRAM_BLdist
+dir
+
+RVP_IO
+dir
+
+Ion_vs_w_N
+dir
+
+Ion_vs_w_P
+dir
+
+SRAM_RdDelay
+dir
+
+WL_Ene
+dir
+
+sram_Read_delay
+dir
+
+RVP_I_cell
+dir
+
+SRAM_WM_VWLR
+dir
+
+TESTCapBL
+dir
+
+SRAM_WM_SNM
+dir
+
+RVP_Gate_Capacitance
+dir
+
+SRAM_RVCCmin
+dir
+
+Ioff_vs_VDS_N
+dir
+
+Ioff_vs_VDS_P
+dir
+
+RVP_I_offn
+dir
+
+SRAM_Pfailure_RSNM
+dir
+
+RVP_I_offp
+dir
+
+RSTSRAM_RSNM
+dir
+
+Array_WEne
+dir
+
+SRAM_SAoffset
+dir
+
+10TstSRAM_RSNM
+dir
+
+SRAM_RSNM
+dir
+
+SRAM_Qcrit
+dir
+
+logIDVD_N
+dir
+
+SRAM_WM_WL_VTA_rwm
+dir
+
+logIDVD_P
+dir
+
+SRAM_WM_WL_vs_VDD
+dir
+
+SRAM_WVCCmin_tran
+dir
+
+RVP_CD
+dir
+
+SRAM_Qc_neutron_p
+dir
+
+SRAM_Ion_Ioff_vs_VDD
+dir
+
+SRAM_Ioff_Ileak_vs_lpd
+dir
+
+RSTSRAM_WVCCmin
+dir
+
+ST_tripPoints
+dir
+
+RSTSRAM_Iread_dist
+dir
+
+mcIDVG_Nsvt
+dir
+
+SRAM_Ioff_Ileak_vs_lpg
+dir
+
+Ion_vs_l_N
+dir
+
+SRAM_Tcrit_mc
+dir
+
+Array_REne
+dir
+
+Ion_vs_l_P
+dir
+
+RVP_Ion_N
+dir
+
+SRAM_Qc_alpha
+dir
+
+RVP_SA
+dir
+
+RVP_Ion_P
+dir
+
+RVP_Decoder
+dir
+
+SRAM_WM_WL_rwm
+dir
+
+sram_I2
+dir
+
+RVP_rowAssist_WLboost
+dir
+
+Cgate_N
+dir
+
+SRAM_Ioff_Ileak_vs_lpu
+dir
+
+Cgate_P
+dir
+
+RSTSRAM_RSNM_nom
+dir
+
+IDVG_N
+dir
+
+sram_Wtime
+dir
+
+mcIDVG_2N
+dir
+
+SRAM_WM_VBL
+dir
+
+5TSRAM_JSA
+dir
+
+IDVG_P
+dir
+
+sram_Ileak_vs_VDD
+dir
+
+5TSRAM_BLdist
+dir
+
+SRAM_Pfailure_HSNM
+dir
+
+sram_Pfailure_Vmin
+dir
+
+Ioff_vs_VBS_N
+dir
+
+10TstSRAM_HSNM
+dir
+
+Ioff_vs_VBS_P
+dir
+
+SRAM_WM_SNM_vs_VDD
+dir
+
+SRAM_WM_Ncurve
+dir
+
+SRAM_HSNM
+dir
+
+Tests_scs.txt
+file
+
+
+
+
+2012-02-03T21:24:14.000000Z
+0b41cb034eb4624a49c8d7df5825dd70
+2011-08-03T18:51:02.512150Z
+385
+SatyanandNalam
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2594
+
+sram_Ileak_dist
+dir
+
+README
+file
+
+
+
+
+2012-02-03T21:24:14.000000Z
+33fddcb8dd09abf9696063b10a96d8d9
+2011-08-03T18:51:02.512150Z
+385
+SatyanandNalam
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187
+
+Ioff_vs_w_N
+dir
+
+Ioff_vs_w_P
+dir
+
+SRAM_BLvoltage
+dir
+
+SRAM_Iread
+dir
+
+5TSRAM_SBLD_pwr
+dir
+
+RVP_SA_latchType
+dir
+
+RSTSRAM_Ioff_Ileak_vs_VDD
+dir
+
+RVPtpl_bufChains
+dir
+
+5TSRAM_RSNM
+dir
+
+INV_delay
+dir
+
+RSTSRAM_RVCCmin
+dir
+
+sram_Bfly
+dir
+
+SRAM_diffSA
+dir
+
+RVP_TIMING
+dir
+
+sram_HSNM_vs_Temp
+dir
+
+Ion_vs_VBS_N
+dir
+
+Ion_vs_VBS_P
+dir
+
+SRAM_Iread_dist
+dir
+
+SRAM_RSNM_VWL
+dir
+
+IDVGN_rwm
+dir
+
+SRAM_Qc_neutron
+dir
+
+5TSRAM_Iread_dist
+dir
+
+IDVD_N
+dir
+
+IDVD_P
+dir
+
+SRAM_RSNM_vs_VDD
+dir
+
+SRAM_WM_WL
+dir
+
+SRAM_Vbump
+dir
+
+SRAM_WM_SNM_pvta
+dir
+
+SRAM_Bfly_VTA_rwm
+dir
+
+SRAM_DRV
+dir
+
+IDN_vs_IDP
+dir
+
+RVP_tau
+dir
+
+8TSRAM_RdDelay
+dir
+
+RSTSRAM_Ileak_dist
+dir
+
+Ioff_vs_l_N
+dir
+
+Ioff_vs_l_P
+dir
+
+sram_Pfailure_RSNM
+dir
+
+RVP_Nand_LEparams
+dir
+
+RSTSRAM_Iread_vs_VWL
+dir
+
+RSTSRAM_WM_WL
+dir
+
+5TSRAM_HSNM
+dir
+
+sram_RSNM
+dir
+
+RVP_Inverter_Parasitic_Delay
+dir
+
+TESTMemArrayW
+dir
+
+Array_LK
+dir
+
+leakage_N
+dir
+
+SRAM_Iread_vs_VWL
+dir
+
+WL_Del
+dir
+
+RVP_Inv_LEparams
+dir
+
+leakage_P
+dir
+
+lk_stack_n
+dir
+
+SRAM_Qc_alpha_p
+dir
+
+SRAM_Tcrit_vs_vdd
+dir
+
+RVP_WLDriver8
+dir
+
+5TSRAM_RSNM_vs_VDD
+dir
+
+5TSRAM_RdDelay
+dir
+
+SRAM_VLSA_pwr
+dir
+
+SRAM_Ilk_vs_VDD_SOI
+dir
+
+5TSRAM_DRV
+dir
+
+RVP_DFF
+dir
+
+mcIDVG_N
+dir
+
+RVP_lvlCvter
+dir
+
+5TSRAM_Ioff_Ileak_vs_VDD
+dir
+
+Array_WDel
+dir
+
+SRAM_I2
+dir
+
+5TSRAM_RVCCmin
+dir
+
+sram_WM_WL_rwm
+dir
+
+logidvg_n_rwm
+dir
+
+RVP_Ileak_PD
+dir
+
+SRAM_RSNM_VTA_rwm
+dir
+
+RVP_Ileak_PG
+dir
+
+RVP_cap_junction
+dir
+
+SRAM_PUratio
+dir
+
+SRAM_Wtime
+dir
+
+dc_nodeset
+dir
+
+gate_INV_VTC
+dir
+
+Cjunction_N
+dir
+
+SRAM_Ileak_vs_VDD
+dir
+
+SRAM_WM_VBL_vs_VDD
+dir
+
+SRAM_Ioff_Ileak_vs_VDD
+dir
+
+Tests_ocn.txt
+file
+
+
+
+
+2012-02-03T21:24:14.000000Z
+2e960f0ac0a95f67fc2bfba5bd775c07
+2011-08-03T18:51:02.512150Z
+385
+SatyanandNalam
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1391
+
+RVP_Ileak_PU
+dir
+
+5TSRAM_NSRSA
+dir
+
+SRAM_Pfailure_Vmin
+dir
+
+Array_RDel
+dir
+
+SRAM_RSNM_rwm
+dir
+
+RVP_SA_currentMirror
+dir
+
+sram_HSNM
+dir
+
+SRAM_WVCCmin
+dir
+
+SRAM_Ileak_dist
+dir
+
+RVP_Junction_Capacitance
+dir
+
+RVP_Bank_Mux
+dir
+
+5TSRAM_Ileak_dist
+dir
+
+logIDVG_N
+dir
+
+subvtSRAM_VBL_vs_rownum
+dir
+
+SRAM_Pfailure_WNM
+dir
+
+logIDVG_P
+dir
+
+RVP_colDecoderEN
+dir
+
+SRAM_Bfly
+dir
+

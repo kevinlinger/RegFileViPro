@@ -1,0 +1,37 @@
+simulator lang=spectre
+//============================================
+// Define VDD and VSS
+//============================================
+_VDD (VDD 0) vsource dc=pvdd
+_VSS (VSS 0) vsource dc=0
+
+//============================================
+// Half cell for Ioff vs. VDD
+//============================================
+//subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+//  MP (OUT IN VDD VBP) P_TRANSISTOR width=wpu length=lpu
+//  MN (OUT IN VSS VBN) N_TRANSISTOR width=wpd length=lpd
+//  MT (BL WL OUT VBN) N_TRANSISTOR width=wpg length=lpg
+//ends HALFCELL
+
+//============================================
+// Test Read Current
+//============================================
+//ICellAh (QB Q BL WL VDD VDD VSS VSS) HALFCELL 
+//ICellBh (Q QB BLB WL VDD VDD VSS VSS) HALFCELL
+
+MPA (Q QB VDD VDD) PU_TRANSISTOR width=wpu length=lpu
+MNA (Q QB VSS VSS) PD_TRANSISTOR width=wpd length=lpd
+MTA (BL WL Q VSS) PG_TRANSISTOR width=wpg length=lpg
+MPB (QB Q VDD VDD) PU_TRANSISTOR width=wpu length=lpu
+MNB (QB Q VSS VSS) PD_TRANSISTOR width=wpd length=lpd
+MTB (BLB WL QB VSS) PG_TRANSISTOR width=wpg length=lpg
+
+_VWL (WL 0) vsource dc=0
+_VBL (BL 0) vsource dc=pvdd
+_VBLB (BLB 0) vsource dc=pvdd
+
+//==================
+//Initial Conditions
+//==================
+ic Q=0 QB=1.0

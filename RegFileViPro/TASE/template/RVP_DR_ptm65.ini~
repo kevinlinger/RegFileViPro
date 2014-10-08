@@ -1,0 +1,110 @@
+############################
+# MODEL SPECIFIC PARAMETERS #
+#############################
+# REQUIRED #
+############
+
+<minl>		65n
+<minw>		65n
+<ldef>		65n
+<leff>		65n
+<wdef>		130n
+<pdk>		ptm65
+<pvdd>          1.1
+<pvbp>          1.1
+<subN>		../../../../template/ptm65/subN.scs
+<subP>		../../../../template/ptm65/subP.scs
+<subPD>         ../../../../template/ptm65/subPD.scs
+<subPG>         ../../../../template/ptm65/subPG.scs
+<subPU>         ../../../../template/ptm65/subPU.scs
+<include>	../../../../template/ptm65/include.scs
+<nModelName>    nmos
+<pModelName>    pmos
+
+###########################
+# Gate Capacitance
+############################
+
+<prise>         20p
+<pfall>         20p
+<pwidth>        1n
+
+<gcap_start>    8e-15
+<gcap_stop>     10e-15
+<gcap_step>     0.2e-15
+
+<tol>           1e-12
+
+############################
+# Decoder parameters
+############################
+<memsize>	1024
+
+
+############################
+# Bitslice parameters
+############################
+<NR_sweep>      512
+<tper>          5n
+<trf>           0.1n
+<tdly>          1.25n
+<mux>           8
+
+############################
+# Timing block parameters
+############################
+<ws>            32
+<NC_sweep>      8
+
+############################
+# REQUIRED FOR MONTE-CARLO #
+############################
+<mcStartNum>    1
+<mcrunNum>      5
+<mcType>        all
+
+########################################
+# REQUIRED FOR SRAM WRITE MARGIN TESTS #
+########################################
+
+## pdat = 0: run write '1' case;
+## pdat = 1: run write '0' case;
+## pdat = 2: run both write '1' and write '0' cases
+<pdat>          2
+
+############
+# OPTIONAL #
+############
+
+<gmin>          1e-22
+<temp>          27
+
+
+####################
+# Metal Parasitics
+####################
+<rbl>	0
+<cbl>	0
+<cwl>	0
+<char>	0
+#############################
+# Bitcell device dimensions
+#############################
+<wpu>	70e-9
+<lpu>	55e-9
+<wpd>	220e-9
+<lpd>	55e-9
+<wpg>	160e-9
+<lpg>	57e-9
+#############################
+# Register File Ports
+#############################
+<readPorts>	4
+<writePorts>	1
+<ocn>
+RF_Dynamic_Read
+RVP_DFF
+</ocn>
+
+
+

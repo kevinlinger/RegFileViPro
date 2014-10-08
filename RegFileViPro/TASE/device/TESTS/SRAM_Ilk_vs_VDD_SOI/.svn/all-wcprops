@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Ilk_vs_VDD_SOI
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Ilk_vs_VDD_SOI/plotGen.m
+END
+SRAM_Ilk_vs_VDD_SOI.scs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Ilk_vs_VDD_SOI/SRAM_Ilk_vs_VDD_SOI.scs
+END
+data.ini
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Ilk_vs_VDD_SOI/data.ini
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Ilk_vs_VDD_SOI/input.tpl
+END

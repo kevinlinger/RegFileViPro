@@ -1,0 +1,155 @@
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+parameters dvtsig_pg=0
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) N_TRANSISTOR width=wpg length=lpg var_nsigma=dvtsig_pg
+ends HALFCELL
+
+
+//============================================
+// 6T Bitcell
+//============================================
+subckt BITCELL (BL BLB WL VDD VBP VSS VBN)
+parameters dvtsig_pgl=0 dvtsig_pgr=0
+  ICellLh (QB Q BL WL VDD VBP VSS VBN) HALFCELL dvtsig_pg=dvtsig_pgl
+  ICellRh (Q QB BLB WL VDD VBP VSS VBN) HALFCELL dvtsig_pg=dvtsig_pgr
+ends BITCELL
+
+
+//============================================
+// 8T Bitcell
+//============================================
+subckt BITCELL8T (WBL WBLB WWL RBL RWL VDD VSS VSSR BN BP) 
+parameters dvtsig_pg=0
+  MPR (QB Q VDD BP)      P_TRANSISTOR width=wpu length=lpu  
+  MNR (QB Q VSS BN)      N_TRANSISTOR width=wpd length=lpd 
+  MTR (WBLB WWL QB BN)   N_TRANSISTOR width=wpg length=lpg
+  MPL (VDD QB Q BP)      P_TRANSISTOR width=wpu length=lpu 
+  MNL (VSS QB Q BN)      N_TRANSISTOR width=wpd length=lpd 
+  MTL (Q WWL WBL BN)     N_TRANSISTOR width=wpg length=lpg 
+  MRD1 (Qbuf QB VSSR BN) N_TRANSISTOR width=wrdn1 length=lrdn1
+  MRD0 (RBL RWL Qbuf BN) N_TRANSISTOR width=wrdpg length=lrdpg var_nsigma=dvtsig_pg
+ends BITCELL8T
+
+
+//============================================
+// 9T Bitcell
+//============================================
+subckt BITCELL9T (WBL WBLB WWL RBL RWL VDD VSS VDDR VSSR BN BP) 
+parameters dvtsig_pg=0
+  MPR (QB Q VDD BP)      P_TRANSISTOR width=wpu length=lpu  
+  MNR (QB Q VSS BN)      N_TRANSISTOR width=wpd length=lpd 
+  MTR (WBLB WWL QB BN)   N_TRANSISTOR width=wpg length=lpg
+  MPL (VDD QB Q BP)      P_TRANSISTOR width=wpu length=lpu 
+  MNL (VSS QB Q BN)      N_TRANSISTOR width=wpd length=lpd 
+  MTL (Q WWL WBL BN)     N_TRANSISTOR width=wpg length=lpg 
+  MRD1 (Qbuf QB VSSR BN) N_TRANSISTOR width=wrdn1 length=lrdn1
+  MRD0 (RBL RWL Qbuf BN) N_TRANSISTOR width=wrdpg length=lrdpg var_nsigma=dvtsig_pg
+  MRD3 (Qbuf QB VDDR BP) P_TRANSISTOR width=wpu length=lpu
+ends BITCELL9T
+
+
+//===========================================
+// 10T Bitcell from [Calhoun_JSSC07]
+//===========================================
+subckt BITCELL10T_ben (WBL WBLB WWL RBL RWL VDD VSS VDDR VSSR BN BP)
+parameters dvtsig_pg=0
+  MPR (QB Q VDD BP)	   P_TRANSISTOR width=wpu length=lpu  
+  MNR (QB Q VSS BN)        N_TRANSISTOR width=wpd length=lpd  
+  MTR (WBLB WWL QB BN)     N_TRANSISTOR width=wpg length=lpg  
+  MPL (VDD QB Q BP)        P_TRANSISTOR width=wpu length=lpu  
+  MNL (VSS QB Q BN)        N_TRANSISTOR width=wpd length=lpd  
+  MTL (Q WWL WBL BN)       N_TRANSISTOR width=wpg length=lpg  
+  MRD3 (Qbuf QB VDDR BP)   P_TRANSISTOR width=wrdp1 length=lrdp1 
+  MRD2 (Qbuf1 RWL Qbuf BN) N_TRANSISTOR width=wrdn2 length=lrdn2 
+  MRD1 (Qbuf1 QB VSSR BN)  N_TRANSISTOR width=wrdn1 length=lrdn1 
+  MRD0 (RBL RWL Qbuf BN)   N_TRANSISTOR width=wrdpg length=lrdpg var_nsigma=dvtsig_pg 
+ends BITCELL10T_ben
+
+
+//===========================================
+// 10T Bitcell from [Kim_JSSC08]
+//===========================================
+subckt BITCELL10T_kim (WBL WBLB WWL RBL RWL VDD VSS VDDR VSSR BN BP)
+parameters dvtsig_pg=0
+  MPR (QB Q VDD BP)        P_TRANSISTOR width=wpu length=lpu  
+  MNR (QB Q VSS BN)        N_TRANSISTOR width=wpd length=lpd  
+  MTR (WBLB WWL QB BN)     N_TRANSISTOR width=wpg length=lpg  
+  MPL (VDD QB Q BP)        P_TRANSISTOR width=wpu length=lpu  
+  MNL (VSS QB Q BN)        N_TRANSISTOR	width=wpd length=lpd  
+  MTL (Q WWL WBL BN)       N_TRANSISTOR	width=wpg length=lpg  
+  MRD3 (VDDR RWL Qbuf BP)  P_TRANSISTOR width=wrdp1 length=lrdp1
+  MRD2 (Qbuf QB Qbuf1 BN)  N_TRANSISTOR width=wrdn1 length=lrdn1
+  MRD1 (VSSR RWL Qbuf1 BN) N_TRANSISTOR	width=wrdn2 length=lrdn2
+  MRD0 (RBL RWL Qbuf BN)   N_TRANSISTOR width=wrdpg length=lrdpg var_nsigma=dvtsig_pg
+ends BITCELL10T_kim
+
+
+//===========================================
+// 10T Bitcell from [Chang_ISSCC08]
+//===========================================
+subckt BITCELL10T_chang (BL BLB WL WWL VDD VSS VSSR BN BP)
+parameters dvtsig_pgl=0 dvtsig_pgr=0
+  MPR (QB Q VDD BP)    P_TRANSISTOR width=wpu  length=lpu 
+  MNR (QB Q VSS BN)    N_TRANSISTOR width=wpd  length=lpd     
+  MTR (VR WWL QB BN)   N_TRANSISTOR width=wpg  length=lpg 
+  MPL (VDD QB Q BP)    P_TRANSISTOR width=wpu  length=lpu 
+  MNL (VSS QB Q BN)    N_TRANSISTOR width=wpd  length=lpd  
+  MTL (Q WWL VL BN)    N_TRANSISTOR width=wpg  length=lpg 
+  MRD3 (VSSR Q VL BN)  N_TRANSISTOR width=wrdn1 length=lrdn1  
+  MRD2 (VL WL BL BN)   N_TRANSISTOR width=wrdpg length=lrdpg var_nsigma=dvtsig_pgl
+  MRD1 (VR QB VSSR BN) N_TRANSISTOR width=wrdn1 length=lrdn1 
+  MRD0 (BLB WL VR BN)  N_TRANSISTOR width=wrdpg length=lrdpg var_nsigma=dvtsig_pgr 
+ends BITCELL10T_chang
+
+
+//==========================================================
+// 10T Bitcell Schmitt Trigger based from [Kulkarni_JSSC07]
+//==========================================================
+subckt BITCELL10T_st (BL BLB WL VDD VSS BN BP)
+parameters dvtsig_pgl=0 dvtsig_pgr=0
+  MPR (QB Q VDD BP)    P_TRANSISTOR width=wpu   length=lpu 
+  MNR1 (QB Q VNR BN)   N_TRANSISTOR width=wpd   length=lpd 
+  MNR2 (VNR Q VSS BN)  N_TRANSISTOR width=wrdn1 length=lrdn1 
+  MTR (BLB WL QB BN)   N_TRANSISTOR width=wpg   length=lpg  var_nsigma=dvtsig_pgr
+  MWTR (VDD QB VNR BN) N_TRANSISTOR width=wrdn2 length=lrdn2 
+  MPL (VDD QB Q BP)    P_TRANSISTOR width=wpu   length=lpu 
+  MNL1 (VNL QB Q BN)   N_TRANSISTOR width=wpd   length=lpd 
+  MNL2 (VSS QB VNL BN) N_TRANSISTOR width=wrdn1 length=lrdn1
+  MTL (Q WL BL BN)     N_TRANSISTOR width=wpg   length=lpg  var_nsigma=dvtsig_pgl
+  MWTL (VNL Q VDD BN)  N_TRANSISTOR width=wrdn2 length=lrdn2
+ends BITCELL10T_st
+
+
+
+//===========================================
+// 7T Bitcell from [Takeda_JSSC06]
+//===========================================
+subckt BITCELL7T_takeda (WBLB BL WWL WL WLB VDD VSS BN BP)
+parameters dvtsig_pg=0 
+  MPR (Q QB VDD BP)   P_TRANSISTOR width=wpu  length=lpu 
+  MNR (Q QB VSS BN)   N_TRANSISTOR width=wpd  length=lpd 
+  MTR (BL WL Q BN)    N_TRANSISTOR width=wpg  length=lpg var_nsigma=dvtsig_pg
+  MPL (VDD Q QB BP)   P_TRANSISTOR width=wpu  length=lpu
+  MNL2 (QB WLB VNL BN) N_TRANSISTOR width=wrdn1 length=lrdn1
+  MNL (VSS Q VNL BN) N_TRANSISTOR width=wpd  length=lpd
+  MTL (QB WWL WBLB BN)  N_TRANSISTOR width=wpg  length=lpg 
+ends BITCELL7T_takeda
+
+
+//===========================================
+// 5T Bitcell
+//===========================================
+subckt BITCELL5T (BL WL VDD VSS BN BP)
+  MPR (QB Q VDD BP) P_TRANSISTOR width=wpu  length=lpu
+  MNR (QB Q VSS BN) N_TRANSISTOR width=wpd  length=lpd 
+  MTL (Q WL BL BN)  N_TRANSISTOR width=wpg  length=lpg 
+  MPL (VDD QB Q BP) P_TRANSISTOR width=wpu  length=lpu
+  MNL (VSS QB Q BN) N_TRANSISTOR width=wpd  length=lpd
+ends BITCELL5T			 
+
+

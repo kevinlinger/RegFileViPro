@@ -1,0 +1,8 @@
+subckt P_TRANSISTOR D G S B
+
+parameters width=120n length=60n pvta=0
+
+PX (D G S B) psvtlp w=width l=length m=1 tometer=1 mismatch=1 srcefirst=1 p_vta=pvta
+ 
+ends P_TRANSISTOR
+

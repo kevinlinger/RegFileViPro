@@ -1,0 +1,8 @@
+<scs>
+SRAM_RSNM
+</scs>
+
+<ocn>
+SRAM_WM_VBL
+SRAM_Tcrit_pvta
+</ocn>

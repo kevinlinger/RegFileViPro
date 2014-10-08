@@ -1,0 +1,42 @@
+# List of tests in ocean 
+# Please add test name and brief description whenever you add a new test into the tool
+
+##########################OCEAN TESTS##########################
+
+1. SRAM_DRV: Date retention voltage distribution for 6T SRAM
+
+2. SRAM_Ileak_dist: Distribution of total leakage current of 6T SRAM
+
+3. SRAM_Ncurve: N-curve plot for nominal cell for readability and write-ability of 6T SRAM
+
+4. SRAM_WM_Ncurve: N-curve metric distribution for write-ability of 6T SRAM
+
+5. SRAM_WM_SNM: Write margin distribution of 6T SRAM using Seevinck's least squares method
+
+6. SRAM_WM_VBL: Write margin distribution of 6T SRAM using BL sweep
+
+7. SRAM_WM_VWLR: Write margin distribution of 6T SRAM sweeping the WL connected to the side storing 1
+
+8. SRAM_WM_WL: Write margin distribution of 6T SRAM using WL sweep
+
+9. TESTCap: Test to extract gate capacitance of SRAM access transistor
+
+10. TESTCapBL: Test to extract BL junction capacitance of SRAM access transistor
+
+11. TESTMemArrayW: Test to measure Energy of 6T SRAM array during write.
+
+12. subvtSRAM_VBL_vs_rownum: SubvtSRAM test for BL/BLB voltage vs. number of
+rows
+ 
+13. SRAM_Iread_dist: Distribution of read current of 6T SRAM
+
+14. SRAM_HSNM_vs_VDD: HSNM vs. VDD
+
+15. SRAM_RSNM_vs_VDD: RSNM vs. VDD
+
+16. SRAM_RVCCmin: Distribution of VCCmin for read
+
+17. SRAM_WM_VBL_vs_VDD: WM(VBL) vs. VDD
+
+18. SRAM_WM_SNM_vs_VDD: WM(SNM) vs. VDD
+

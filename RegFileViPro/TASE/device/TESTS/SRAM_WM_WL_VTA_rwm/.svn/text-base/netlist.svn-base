@@ -1,0 +1,26 @@
+simulator lang=spectre
+
+include "../../../SUBCKTS/bitcell_full.scs"
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdda
+VVSS (VSS 0) vsource dc=pvss
+VVBP (VBP 0) vsource dc=pvbp
+VVBN (VBN 0) vsource dc=pvbn
+
+//============================================
+// Circuit to sweep WL 
+//============================================
+
+ICell (BL BLB WL VDD VBP VSS VBN) BITCELL
+
+
+VBL (BL 0) vsource dc=pvbl
+VBLB (BLB 0) vsource dc=pvblb
+
+// sweep WL
+VVIN (WL 0) vsource dc=pvin
+
+

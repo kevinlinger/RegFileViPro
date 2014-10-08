@@ -1,0 +1,120 @@
+%##############################################################
+%#      MATLAB code to plot SRAM cell-ratio vs Qmin @ read0   #
+%##############################################################
+
+%load data%
+load SRAM_PUratio/DAT/swp1-000_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-001_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-002_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-003_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-004_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-005_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-006_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-007_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-008_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-009_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-010_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-011_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-012_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-013_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-014_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-015_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-016_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-017_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-018_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-019_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-020_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-021_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-022_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-023_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-024_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-025_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-026_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-027_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-028_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-029_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-030_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-031_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-032_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-033_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-034_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-035_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-036_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-037_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-038_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-039_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-040_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-041_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-042_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-043_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-044_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-045_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-046_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-047_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-048_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-049_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1-050_tran_Q.dat;
+load SRAM_PUratio/DAT/swp1_tran_wpu.dat;
+
+%get min voltage of Q%
+qmin(1,1) = min(swp1_000_tran_Q);
+qmin(1,2) = min(swp1_001_tran_Q);
+qmin(1,3) = min(swp1_002_tran_Q);
+qmin(1,4) = min(swp1_003_tran_Q);
+qmin(1,5) = min(swp1_004_tran_Q);
+qmin(1,6) = min(swp1_005_tran_Q);
+qmin(1,7) = min(swp1_006_tran_Q);
+qmin(1,8) = min(swp1_007_tran_Q);
+qmin(1,9) = min(swp1_008_tran_Q);
+qmin(1,10) = min(swp1_009_tran_Q);
+qmin(1,11) = min(swp1_010_tran_Q);
+qmin(1,12) = min(swp1_011_tran_Q);
+qmin(1,13) = min(swp1_012_tran_Q);
+qmin(1,14) = min(swp1_013_tran_Q);
+qmin(1,15) = min(swp1_014_tran_Q);
+qmin(1,16) = min(swp1_015_tran_Q);
+qmin(1,17) = min(swp1_016_tran_Q);
+qmin(1,18) = min(swp1_017_tran_Q);
+qmin(1,19) = min(swp1_018_tran_Q);
+qmin(1,20) = min(swp1_019_tran_Q);
+qmin(1,21) = min(swp1_020_tran_Q);
+qmin(1,22) = min(swp1_021_tran_Q);
+qmin(1,23) = min(swp1_022_tran_Q);
+qmin(1,24) = min(swp1_023_tran_Q);
+qmin(1,25) = min(swp1_024_tran_Q);
+qmin(1,26) = min(swp1_025_tran_Q);
+qmin(1,27) = min(swp1_026_tran_Q);
+qmin(1,28) = min(swp1_027_tran_Q);
+qmin(1,29) = min(swp1_028_tran_Q);
+qmin(1,30) = min(swp1_029_tran_Q);
+qmin(1,31) = min(swp1_030_tran_Q);
+qmin(1,32) = min(swp1_031_tran_Q);
+qmin(1,33) = min(swp1_032_tran_Q);
+qmin(1,34) = min(swp1_033_tran_Q);
+qmin(1,35) = min(swp1_034_tran_Q);
+qmin(1,36) = min(swp1_035_tran_Q);
+qmin(1,37) = min(swp1_036_tran_Q);
+qmin(1,38) = min(swp1_037_tran_Q);
+qmin(1,39) = min(swp1_038_tran_Q);
+qmin(1,40) = min(swp1_039_tran_Q);
+qmin(1,41) = min(swp1_040_tran_Q);
+qmin(1,42) = min(swp1_041_tran_Q);
+qmin(1,43) = min(swp1_042_tran_Q);
+qmin(1,44) = min(swp1_043_tran_Q);
+qmin(1,45) = min(swp1_044_tran_Q);
+qmin(1,46) = min(swp1_045_tran_Q);
+qmin(1,47) = min(swp1_046_tran_Q);
+qmin(1,48) = min(swp1_047_tran_Q);
+qmin(1,49) = min(swp1_048_tran_Q);
+qmin(1,50) = min(swp1_049_tran_Q);
+qmin(1,51) = min(swp1_050_tran_Q);
+
+%plot data and format figure%
+plot(1E9*swp1_tran_wpu/70,qmin);
+grid on;
+xlabel('Pullup ratio','fontsize',12);
+ylabel('min Q voltage when writing 0 (mV)','fontsize',12);
+
+%save and close%
+print(gcf, '-depsc', 'SRAM_PUratio/IMG/SRAM_PUratio.eps');
+close(gcf);

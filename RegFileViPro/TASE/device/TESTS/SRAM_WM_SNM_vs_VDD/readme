@@ -1,0 +1,4 @@
+2008-01-14
+Original spec: Write margin(via butterfly curve) vs. VDD
+
+Varing VDD from the nominal value to 0. Measure the Write Margin (via butterfly curve) at each VDD point. Plot the trend of Write Margin vs. VDD. 

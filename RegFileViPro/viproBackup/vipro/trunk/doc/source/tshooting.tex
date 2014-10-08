@@ -1,0 +1,21 @@
+\section{Trouble-shooting tips}
+If things are not working, one or more of the following things may be the reason.
+
+\begin{enumerate}
+\item Configuration error - One or both of user.m and bitcellSizes.m could be absent, missing some mandatory parameters, or have wrong parameters.
+
+\item Flag error - Make sure that the right flags are provided. For example, the --char needs to be use at least once for each technology to produce the TASE characterization data. 
+
+\item TASE failure - The characterization step can fail for a number of reasons - 
+\begin{itemize}
+\setlength{\itemsep}{0cm}
+\setlength{\parskip}{0cm}
+\item Environment setup
+\item Model file path
+\item Simulation setup
+\item Matlab
+\item LaTeX
+\end{itemize}
+For more details on these and ways to debug and fix TASE problems, refer to the TASE user guide.
+
+\end{enumerate}

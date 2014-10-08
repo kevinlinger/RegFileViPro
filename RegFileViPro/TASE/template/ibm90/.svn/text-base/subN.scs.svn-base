@@ -1,0 +1,8 @@
+subckt N_TRANSISTOR D G S B
+
+parameters width=140n length=90n pvta=0
+
+NX (D G S B) nfet w=width l=length p_vta=pvta
+
+ends N_TRANSISTOR
+

@@ -1,0 +1,152 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 7.0.1.125.isr11 -- 19 Oct 2008
+Copyright (C) 1989-2007 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 7,085,700; 7,143,021.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+Simulating `input.scs' on class4.ee.Virginia.EDU at 2:05:26 AM, Fri May 24, 2013 (process id: 5300).
+Command line:
+    /app/cadence/MMSIM70/tools.lnx86/spectre/bin/32bit/spectre -env  \
+        artist5.1.0 +escchars +log OUT/psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_5239_1 -format sst2 -raw OUT/psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5 input.scs
+spectre pid = 5300
+
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Using new Spectre Parser.
+Auto-loading AHDL component.
+Finished loading AHDL component in 0 s (elapsed).
+Installed AHDL simulation interface.
+
+Warning from spectre in `P_TRANSISTOR':`IWRD.M0', in `triinv':`IWRD', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: IWRD.M0.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`IWRD.MP', in `triinv':`IWRD', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: IWRD.MP.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`IWRD.M1', in `triinv':`IWRD', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: IWRD.M1.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`IWRD.MN', in `triinv':`IWRD', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: IWRD.MN.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`IWRDB.M0', in `triinv':`IWRDB', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: IWRDB.M0.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+Warning from spectre during initial setup.
+    WARNING (CMI-2441): IBCD.writePortLoadQB.NX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'IBCD.writePortLoadQB.NX.nsvtlppgsp'.
+    WARNING (CMI-2441): IBCD.writePortLoadQ.NX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'IBCD.writePortLoadQ.NX.nsvtlppgsp'.
+    WARNING (CMI-2441): IBCD.M0.PX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'IBCD.M0.PX.psvtlppusp'.
+    WARNING (CMI-2441): IBCD.M5.PX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'IBCD.M5.PX.psvtlppusp'.
+    WARNING (CMI-2441): IBCD.M2.NX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'IBCD.M2.NX.nsvtlppgsp'.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): IB7.MN2.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IB7.MN1.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): Idb.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBCA.M3.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBCA.MRQ.NX.m1: `Dvt0' = -30 mV is negative.
+        Further occurrences of this warning will be suppressed.
+
+
+Circuit inventory:
+              nodes 28
+              bsim4 46    
+            vsource 7     
+
+
+Warning from spectre.
+    WARNING (SPECTRE-6006): 51 warnings suppressed.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_5239_1, ).
+
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): IB7.MN2.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IB7.MN1.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): Idb.MN.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBCA.M3.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): IBCA.MRQ.NX.m1: `Dvt0' = -30 mV is negative.
+        Further occurrences of this warning will be suppressed.
+
+
+settnom: `tnom' set to 27 C.
+
+Warning from spectre during alter `settnom'.
+    WARNING (SPECTRE-16518): Arithmetic exception in analysis `settnom' .
+Warning from spectre.
+    WARNING (SPECTRE-6006): 3 warnings suppressed.
+
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 10 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 10 ns
+    step = 100 fs
+    maxstep = 100 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-09
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 100e-24 S
+
+    tran: time = 272.7 ps    (2.73 %), step = 100 ps          (1 %)
+    tran: time = 750.1 ps     (7.5 %), step = 136.1 fs    (1.36 m%)
+    tran: time = 1.274 ns    (12.7 %), step = 77.51 ps     (775 m%)
+    tran: time = 1.75 ns     (17.5 %), step = 76.38 ps     (764 m%)
+    tran: time = 2.283 ns    (22.8 %), step = 45.98 ps     (460 m%)
+    tran: time = 2.75 ns     (27.5 %), step = 4.533 ps    (45.3 m%)
+    tran: time = 3.259 ns    (32.6 %), step = 9.496 ps      (95 m%)
+    tran: time = 3.824 ns    (38.2 %), step = 100 ps          (1 %)
+    tran: time = 4.324 ns    (43.2 %), step = 100 ps          (1 %)
+    tran: time = 4.824 ns    (48.2 %), step = 100 ps          (1 %)
+    tran: time = 5.324 ns    (53.2 %), step = 100 ps          (1 %)
+    tran: time = 5.751 ns    (57.5 %), step = 3.156 ps    (31.6 m%)
+    tran: time = 6.254 ns    (62.5 %), step = 100 ps          (1 %)
+    tran: time = 6.75 ns     (67.5 %), step = 95.5 ps      (955 m%)
+    tran: time = 7.304 ns      (73 %), step = 98.85 ps     (989 m%)
+    tran: time = 7.754 ns    (77.5 %), step = 4.805 ps    (48.1 m%)
+    tran: time = 8.257 ns    (82.6 %), step = 9.192 ps    (91.9 m%)
+    tran: time = 8.809 ns    (88.1 %), step = 100 ps          (1 %)
+    tran: time = 9.309 ns    (93.1 %), step = 100 ps          (1 %)
+    tran: time = 9.809 ns    (98.1 %), step = 100 ps          (1 %)
+Number of accepted tran steps =             13073
+Intrinsic tran analysis time =              12.07 s.
+Total time required for tran analysis `tran' was 12.08 s.
+
+finalTimeOP: writing operating point information to rawfile.
+
+Warning from spectre during info `finalTimeOP'.
+    WARNING (SPECTRE-16518): Arithmetic exception in analysis `finalTimeOP' .
+
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+
+Warning from spectre during info `element'.
+    WARNING (SPECTRE-16518): Arithmetic exception in analysis `element' .
+
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+Spectre received SIGTERM.
+
+Killed by user.
+
+Aggregate audit (2:05:48 AM, Fri May 24, 2013):
+Time used: CPU = 12.4 s, elapsed = 22 s, util. = 56.3%.
+Time spent in licensing: elapsed = 20 ms.
+Virtual memory used = 8.52 Mbytes.
+spectre completes with 0 errors, 79 warnings, and 0 notices.

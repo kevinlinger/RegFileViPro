@@ -1,0 +1,97 @@
+//Generated for; spectre
+//Trying to find the gate cap of the WL transistor
+
+simulator lang=spectre
+global 0 
+
+
+
+
+parameters lblnum=8 gblnum=4 wkeeplbl=1 prewgbl=3 prewlbl=3 pullwgbl=5 \
+    pullwlbl=5 wkeepgbl=1 capacity=64 writePorts=1 readPorts=4 ws=16 \
+    per=5e-09 pfall=1e-12 prise=1e-12 wdef=1.2e-07 ldef=6e-08 pvbp=1 pvdd=1
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subN.scs"
+include "../../../../template/ibm65/subP.scs"
+subckt dynamicOR In1 In2 Out Pre VDD VSS VBN VBP
+M0 (Mid In1 VSS VBN) N_TRANSISTOR width=wdef*pullwlbl length=ldef
+M1 (Out In2 Mid VBN) N_TRANSISTOR width=wdef*pullwlbl length=ldef
+I0 (VSS VSS Out VDD VSS VBN VBP) seriesN m=(lblnum-1)
+MPre (Out Pre VDD VBP) P_TRANSISTOR width=wdef*prewlbl length=ldef
+I1 (Out KeepMid VDD VSS VBN VBP) inverter 
+MKeep (Out KeepMid VDD VBP) P_TRANSISTOR width=wdef*wkeeplbl length=ldef
+ends dynamicOR
+
+subckt dynamicORGBL In Out Pre VDD VSS VBN VBP
+M0 (Mid Pre VSS VBN) N_TRANSISTOR width=wdef*pullwgbl length=ldef
+M1 (Out In Mid VBN) N_TRANSISTOR width=wdef*pullwgbl length=ldef
+M2 (Out VSS Mid VBN) N_TRANSISTOR width=wdef*pullwgbl length=ldef m=(gblnum-1)
+MPre (Out Pre VDD VBP) P_TRANSISTOR width=wdef*prewgbl length=ldef
+I1 (Out KeepMid VDD VSS VBN VBP) inverter 
+MKeep (Out KeepMid VDD VBP) P_TRANSISTOR width=wdef*wkeepgbl length=ldef
+ends dynamicORGBL
+
+subckt NAND In1 In2 Out VDD VSS VBN VBP
+M0 (Mid In1 VSS VBN) N_TRANSISTOR width=2*wdef length=ldef
+M1 (Out In2 Mid VBN) N_TRANSISTOR width=2*wdef length=ldef
+M2 (Out In1 VDD VBP) P_TRANSISTOR width=2*wdef length=ldef
+M3 (Out In2 VDD VBP) P_TRANSISTOR width=2*wdef length=ldef
+ends NAND
+
+subckt seriesN In1 In2 Out VDD VSS VBN VBP
+M0 (Mid In1 VSS VBN) N_TRANSISTOR width=pullwlbl*wdef length=ldef
+M1 (Out In2 Mid VBN) N_TRANSISTOR width=pullwlbl*wdef length=ldef
+ends seriesN
+
+subckt inverter In Out VDD VSS VBN VBP
+parameters size=1
+M0 (Out In VSS VBN) N_TRANSISTOR width=wdef*size length=ldef
+M1 (Out In VDD VBP) P_TRANSISTOR width=2*wdef*size length=ldef
+ends inverter
+
+subckt buffer In Out VDD VSS VBN VBP
+parameters invSize=1
+I0 (In Mid VDD VSS VBN VBP) inverter size=invSize
+I1 (Mid Out VDD VSS VBN VBP) inverter size=invSize
+ends buffer
+
+I0 (In1 In2 Out Pre VDD VSS VBN VBP) dynamicOR
+I1 (VSS VSS Out2 Pre VDD VSS VBN VBP) dynamicOR 
+I2 (Out Out2 LBLout VDD VSS VBN VBP) NAND
+I3 (LBLout GBLout Pre VDD VSS VBN VBP) dynamicORGBL
+ILoad1 (VSS VSS Out3 Pre VDD VSS VBN VBP) dynamicOR m=((gblnum*2)-2)
+ILoad2 (VSS VSS Out4 VDD VSS VBN VBP) NAND m=(gblnum-1)
+Inv0 (GBLout Dout VDD VSS VBN VBP) inverter
+
+Vvdd (VDD 0) vsource type=dc dc=pvdd
+Vvss (VSS 0) vsource type=dc dc=0
+Vvbp (VBP 0) vsource type=dc dc=pvbp
+Vvbn (VBN 0) vsource type=dc dc=0
+Vbuf (VBUFFER 0) vsource type=dc dc=pvdd
+
+V0 (Prev 0) vsource type=pulse val0=0 val1=pvdd period=per delay=0 rise=prise fall=pfall width=(per/2)
+V1 (In1v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="11110000"
+V2 (In2v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="00100010"
+
+B0 (Prev Pre VBUFFER VSS VBN VBP) buffer invSize=8
+B1 (In1v In1 VBUFFER VSS VBN VBP) buffer
+B2 (In2v In2 VBUFFER VSS VBN VBP) buffer
+
+B4 (Dout end VBUFFER VSS VBN VBP) buffer
+
+C1 (end 0) capacitor c=1e-15
+simulatorOptions options reltol=1e-06 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-22 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="OUT/psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=2e-08 errpreset=conservative start=0 step=1e-13 \
+    write="spectre.ic" writefinal="spectre.fc" annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub currents=all
+ 

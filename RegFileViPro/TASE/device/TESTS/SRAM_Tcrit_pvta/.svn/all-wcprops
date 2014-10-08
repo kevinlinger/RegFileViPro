@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/SRAM_TOOL/!svn/ver/258/trunk/device/TESTS/SRAM_Tcrit_mc
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/139/trunk/device/TESTS/SRAM_Tcrit_mc/netlistFooter
+END
+plotGen.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/139/trunk/device/TESTS/SRAM_Tcrit_mc/plotGen.m
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/139/trunk/device/TESTS/SRAM_Tcrit_mc/ocnloader
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SRAM_TOOL/!svn/ver/139/trunk/device/TESTS/SRAM_Tcrit_mc/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/SRAM_TOOL/!svn/ver/258/trunk/device/TESTS/SRAM_Tcrit_mc/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/SRAM_TOOL/!svn/ver/139/trunk/device/TESTS/SRAM_Tcrit_mc/readme
+END

@@ -1,0 +1,53 @@
+; ************************** main code ***************************
+simulator( 'spectre )
+
+design( "./netlist" )
+
+resultsDir("./OUT")
+
+modelFile( 
+	'("../../../../template/ibm65/include_mm.scs")
+	'("../../../../template/ibm65/subN.scs")
+	'("../../../../template/ibm65/subP.scs")
+)
+
+desVar(   "pvdd" 1.1)
+desVar(   "pvbp" 1.1)
+desVar(   "ldef" 60e-9 )
+desVar(   "wdef" 120e-9 )
+desVar(   "trf" 1e-12 )
+desVar(   "tper" 5e-9 )
+desVar(   "ws" 16 )
+desVar(   "cwl" 1.09136e-16 )
+desVar(   "colMux" 8 )
+desVar(   "numBanks" 4 )
+
+out = outfile("data.txt", "w")
+
+analysis('tran ?start 0 ?stop 2*5e-9 ?step 0.001*5e-9 ?errpreset 'moderate)
+temp(25)
+option('reltol 1e-6 'gmin 1e-22)
+save('all)
+run()
+selectResults('tran)
+
+tpHL1 = cross(v("Q1") 1.1/2 1 'falling) - cross(v("CLK") 1.1/2 1 'rising)
+tpLH1 = cross(v("Q1") 1.1/2 1 'rising) - cross(v("CLK") 1.1/2 2 'rising)
+
+tpHL2 = cross(v("Q2") 1.1/2 1 'falling) - cross(v("CLK") 1.1/2 1 'rising)
+tpLH2 = cross(v("Q2") 1.1/2 1 'rising) - cross(v("CLK") 1.1/2 2 'rising)
+
+;; input FF delay (addresses), this applies to both read and write
+delay_FF= (tpHL1+tpLH1)/2
+;; read energy- all input address bits + data out bits (=wordsize)
+energy_r= 2*5e-9*average(getData("I1:pwr"))*(16+5+3)
+
+;; data in delay, only for write
+delay_dataIn= (tpHL2+tpLH2)/2
+;; energy for write- driving data_in bits + energy of address bits
+energy_w=2*5e-9*average(getData("I2:pwr"))*16+2*5e-9*average(getData("I1:pwr"))*(5+3)
+
+
+fprintf(out, "%e\t%e\t%e\t%e\n", delay_FF, delay_dataIn, energy_r, energy_w)
+
+close(out)

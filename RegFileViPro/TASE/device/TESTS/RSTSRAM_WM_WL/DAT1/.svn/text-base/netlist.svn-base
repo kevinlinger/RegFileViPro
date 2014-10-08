@@ -1,0 +1,40 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=0
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wp1 length=lp1
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wn1 length=ln1
+  MT (BL WL OUT VBN) N_TRANSISTOR width=wna length=lna
+ends HALFCELL
+
+//============================================
+// Reset Half Cell
+//============================================
+subckt RSTHCELL (IN OUT RRST CRST VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) P_TRANSISTOR width=wp2 length=lp2
+  MN (OUT IN VSS VBN) N_TRANSISTOR width=wn2 length=ln2
+  MT (RRST CRST OUT VBN) N_TRANSISTOR width=wrs length=lrs
+ends RSTHCELL
+
+//============================================
+// Circuit to sweep WL 
+//============================================
+ICellL (QB Q BL WL VDD VBP VSS VBN) HALFCELL
+ICellR (Q QB RRST CRST VDD VBP VSS VBN) RSTHCELL
+
+nodeset Q=pvdd QB=0
+
+VCRST (CRST 0) vsource dc=0
+VBL (BL 0) vsource dc=0
+VRRST (RRST 0) vsource dc=pvdd
+
+// sweep WL
+VVIN (WL 0) vsource dc=pvin

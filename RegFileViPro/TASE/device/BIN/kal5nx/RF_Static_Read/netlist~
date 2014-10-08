@@ -1,0 +1,68 @@
+subckt inverter In Out VDD VSS VBN VBP
+parameters size=1
+M0 (Out In VSS VBN) N_TRANSISTOR width=wdef*size length=ldef
+M1 (Out In VDD VBP) P_TRANSISTOR width=2*wdef*size length=ldef
+ends inverter
+
+subckt txgate In Out C CBar VDD VSS VBN VBP
+parameters nsize=1 psize=1
+M0 (In C Out VBN) N_TRANSISTOR width=nsize*wdef length=ldef
+M1 (In CBar Out VBP) P_TRANSISTOR width=psize*wdef length=ldef
+ends txgate
+
+subckt buffer In Out VDD VSS VBN VBP
+I0 (In Mid VDD VSS VBN VBP) inverter
+I1 (Mid Out VDD VSS VBN VBP) inverter
+ends buffer
+
+subckt NAND In1 In2 Out VDD VSS VBN VBP
+M0 (Mid In1 VSS VBN) N_TRANSISTOR width=2*wdef length=ldef
+M1 (Out In2 Mid VBN) N_TRANSISTOR width=2*wdef length=ldef
+M2 (Out In1 VDD VBP) P_TRANSISTOR width=2*wdef length=ldef
+M3 (Out In2 VDD VBP) P_TRANSISTOR width=2*wdef length=ldef
+ends NAND
+
+I1 (In1 In1out VDD VSS VBN VBP) inverter size=1
+I2 (In1out LBLout C1 C1Bar VDD VSS VBN VBP) txgate nsize=lblnsize psize=lblpsize
+I3 (In2 In2out VDD VSS VBN VBP) inverter size=1
+I4 (In2out LBLout C2 C2Bar VDD VSS VBN VBP) txgate nsize=lblnsize psize=lblpsize
+I4x (VSS LBLout VSS VDD VDD VSS VBN VBP) txgate nsize=lblnsize psize=lblpsize m=(lblnum-2)
+InvLoad (VSS loadNode VDD VSS VBN VBP) inverter m =(rows-2)
+txLoad (VSS loadNode2 VSS VDD VDD VSS VBN VBP) txgate m=(rows-lblnum)
+I5 (LBLout  GBLin VDD VSS VBN VBP) inverter
+I7 (GBLin GBLout C3 C3Bar VDD VSS VBN VBP) txgate nsize=gblnsize psize=gblpsize
+I8 (In3 GBLout VSS VDD VDD VSS VBN VBP) txgate nsize=gblnsize psize=gblpsize m=(gblnum-1)
+I9 (GBLout DoutB VDD VSS VBN VBP) inverter
+I10 (DoutB Dout VDD VSS VBN VBP) inverter 
+
+Bend (Dout end VBUFFER VSS VBN VBP) buffer
+C1 (end 0) capacitor c=1e-15
+
+Vvdd (VDD 0) vsource type=dc dc=pvdd
+Vvss (VSS 0) vsource type=dc dc=0
+Vvbp (VBP 0) vsource type=dc dc=pvbp
+Vvbn (VBN 0) vsource type=dc dc=0
+Vbuf (VBUFFER 0) vsource type=dc dc=pvdd
+
+
+V1 (In1v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="1111111111"
+V2 (In2v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="0000000000"
+V3 (In3v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="00000000"
+V4 (C1v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="1000001010"
+V4B (C1Bv 0) vsource type=bit val0=pvdd val1=0 delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="1000001010"
+V5 (C2v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="0010100000"
+V5B (C2Bv 0) vsource type=bit val0=pvdd val1=0 delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="0010100000"
+V6 (C3v 0) vsource type=bit val0=0 val1=pvdd delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="1010101010"
+V6B (C3Bv 0) vsource type=bit val0=pvdd val1=0 delay=0 rise=prise fall=pfall rptstart=1 rpttimes=0 period=per/2 data="1010101010"
+
+
+B1 (In1v In1 VBUFFER VSS VBN VBP) buffer
+B2 (In2v In2 VBUFFER VSS VBN VBP) buffer
+B3 (C1v C1 VBUFFER VSS VBN VBP) buffer 
+B4 (C1Bv C1Bar VBUFFER VSS VBN VBP) buffer
+B5 (C2v C2 VBUFFER VSS VBN VBP) buffer
+B6 (C2Bv C2Bar VBUFFER VSS VBN VBP) buffer
+B7 (Dout end VBUFFER VSS VBN VBP) buffer
+B8 (In3v In3 VBUFFER VSS VBN VBP) buffer
+B9 (C3v C3 VBUFFER VSS VBN VBP) buffer
+B10 (C3Bv C3Bar VBUFFER VSS VBN VBP) buffer

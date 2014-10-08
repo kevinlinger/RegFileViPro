@@ -1,0 +1,5 @@
+##### 2009-07-25 by satnal01 #####
+# RSTSRAM  Cell Read Current Distribution
+This test uses DC analysis to measure the read current through the access transistor and the pulldown transistor. 
+Monte Carlo analysis is performed to get its distribution due to local mismatch. 
+The histogram is plotted and the distrubtion is fitted as a normal.

@@ -1,0 +1,5 @@
+2010-2-9   R.Mann 
+Added capability of 3 SRAM devices PD, PG and PU instead of just nfet and pfet.
+
+2009-2-20  R.Mann
+Plot Butterfly curve of SRAM

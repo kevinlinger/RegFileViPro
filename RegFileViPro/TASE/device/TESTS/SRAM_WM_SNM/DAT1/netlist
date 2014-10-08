@@ -1,0 +1,68 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdda
+VVSS (VSS 0) vsource dc=0
+VVBP (VBP 0) vsource dc=pvdda
+VVBN (VBN 0) vsource dc=0
+
+//============================================
+// Half cell
+//============================================
+subckt HALFCELL (IN OUT BL WL VDD VBP VSS VBN)
+  MP (OUT IN VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+  MN (OUT IN VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+  MT (BL WL OUT VBN) PG_TRANSISTOR width=wpg length=lpg
+ends HALFCELL
+
+//====================================================
+// Subcircuit to measure SNM value
+//====================================================
+subckt SNMmeas (U INV1in INV1out INV2in INV2out v1mv2)
+  e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+  e2 (INV1in 1 v1 0) vcvs gain=1/sqrt(2)
+  ev1 (v1 U INV1out 0) vcvs gain=sqrt(2)
+  Rdummy  (v1 0)  resistor r=100M
+  Rdummy2 (v2 0) resistor r=100M
+  Rdummy3 (v1mv2 0) resistor r=100M
+
+  e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+  e4 (INV2in 3 v2 0) vcvs gain=1/sqrt(2)
+  enu (nu 0 U 0) vcvs gain=-1
+  ev2 (v2 nu INV2out 0) vcvs gain=sqrt(2)
+  ediff1 (negv2 0 v2 0) vcvs gain=-1
+  ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+ends SNMmeas
+
+
+//============================================
+// Circuit to measure Write SNM by VTC curves
+//============================================
+ICellL (in2 out2 BL2 WL VDD VBP VSS VBN) HALFCELL 
+ICellR (in1 out1 BL1 WL VDD VBP VSS VBN) HALFCELL
+
+// Note: By removing the measurement circuit hierarchy, we can get the
+//  same variation samples as the other write margin tests
+//Isnm (U in1 out1 in2 out2 v1mv2) SNMmeas
+e1 (1 0 U 0) vcvs gain=1/sqrt(2)
+e2 (in1 1 v1 0) vcvs gain=1/sqrt(2)
+ev1 (v1 U out1 0) vcvs gain=sqrt(2)
+Rdummy  (v1 0)  resistor r=100M
+Rdummy2 (v2 0) resistor r=100M
+Rdummy3 (v1mv2 0) resistor r=100M
+e3 (3 0 U 0) vcvs gain=-1/sqrt(2)
+e4 (in2 3 v2 0) vcvs gain=1/sqrt(2)
+enu (nu 0 U 0) vcvs gain=-1
+ev2 (v2 nu out2 0) vcvs gain=sqrt(2)
+ediff1 (negv2 0 v2 0) vcvs gain=-1
+ediff2 (v1mv2 negv2 v1 0) vcvs gain=1
+
+VVIN (U 0) vsource dc=pvin
+VWL (WL 0) vsource dc=pvddwl
+
+VBL1 (BL1 0) vsource dc=pvdd
+VBL2 (BL2 0) vsource dc=0
+
+nodeset out1=0 out2=pvdd
+
+

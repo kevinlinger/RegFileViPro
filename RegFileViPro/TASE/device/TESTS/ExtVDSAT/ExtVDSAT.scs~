@@ -1,0 +1,33 @@
+//============================================
+// Define VDD and VSS
+//============================================
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+
+//============================================
+// Gate voltages 
+//============================================
+
+VVGS (VGS VSS) vsource dc=pvdd
+
+
+
+//============================================
+// Source that will swing VDS from 0V to VDD
+// 	to generate IDVD curves
+//============================================
+
+VVDS (VDS VSS) vsource
+
+
+//============================================
+// Five transistors  to generate the five IDVD
+//	curves
+//============================================
+
+N1 (VDS VGS VSS VSS) N_TRANSISTOR width=wdef length=ldef
+
+
+

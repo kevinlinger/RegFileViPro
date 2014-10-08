@@ -1,0 +1,3 @@
+Determine the gate capacitance by matching two inverters of the same size driven by the same circuit. One inverter is loaded by a test cap which is swept and the other is loaded by another inverter. The value of the test cap when the delays of both the inverters are the same will be the value of the gate cap of the inverter that is being driven. This will then need to be divided by the total width to get per micron gate cap.
+
+In the current sim, a sweep of the test cap from gcap_start to gcap_stop is done in steps of gcap_step. The plotGen file then finds the value of the test cap where the delays match.

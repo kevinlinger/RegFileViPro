@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage{epsfig}
+%\usepackage{cite}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{times}
+\usepackage{color}
+% \usepackage{colortbl}
+% \usepackage{rotating}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage{booktabs}
+\usepackage[square,numbers,sort]{natbib}
+\usepackage[pdfpagemode=UseOutlines,bookmarks=true,bookmarksopen=true]{hyperref}
+
+\renewcommand{\textfraction}{0.1}
+\newcommand{\D}{\displaystyle}
+\newcommand{\T}{\mathrm}
+\newcommand{\M}{\mathcal}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\mm}{\mathbf{\mathcal{M}}}
+\newcommand{\hl}{\vspace{6pt}\noindent\textbf}
+\newcommand{\Si}{\Sigma}
+\newcommand{\Sib}{\overline\Sigma}
+\newcommand{\hs}{\hspace{0.1em}}
+
+% \usepackage{fancyhdr}
+% \fancypagestyle{plain}{%
+% \fancyhf{}
+% \renewcommand{\headwidth}{\textwidth}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0.5pt}
+% \setlength{\headsep}{5pt}
+% }
+% \pagestyle{plain}
+
+\hyphenation{app-rox-ima-tion app-rox-ima-tions}
+
+%--------DOCUMENT---------------------------------
+\begin{document}
+
+%\conferenceinfo{DAC 2008,}{June 8--13, 2008, Anaheim, California, USA.}
+%\crdata{978-1-60558-115-6/08/0006}
+
+\title{Virtual Prototyper (ViPro) User Guide}
+\author{Satya Nalam}
+%\author{Mihir Choudhury$^\dag$~~~~Vikas Chandra$^\ddag$~~~~Kartik Mohanram$^\ddag$~~~~Rob Aitken$^\dag$\vspace{2pt}\\
+%$^\dag$Department of Electrical and Computer Engineering, Rice University, Houston\vspace{2pt}\\
+%$^\ddag$ARM Inc., San Jose\vspace{2pt}\\
+%\{mihir,kmram\}@rice.edu~~~~\{vikas.chandra,raitken\}@ufl.edu
+%\author{Mihir Choudhury and Vikas Chanda and Kartik Mohanram and Rob Aitken\vspace{2pt}\\
+%Department of Electrical and Computer Engineering, Rice University,
+%Houston\vspace{2pt}\\
+%\url{{mihir,kmram}@rice.edu}
+%}
+
+\maketitle
+\input{qstart}
+\input{flow}
+\input{structure}
+\input{model}
+\input{opt}
+\input{compiler}
+\input{tshooting}
+\input{functions}
+% \vspace{6pt}
+% \noindent {\bf Categories and Subject Descriptors:} B.7.1 [Integrated circuits]: Types and Design Styles---Advanced technologies
+% \terms{Algorithms}
+% \noindent {\bf General Terms:} Design, Performance, Reliability
+% \keywords{Model-order reduction, skin effect, interconnect}
+% \noindent {\bf Keywords:} Graphene nanoribbons, variability, defects
+
+%\scriptsize{
+%\bibliography{ViPro_UG}
+%\bibliographystyle{ieeetr}}
+
+\end{document}
+%--that's it------------------------------------------------

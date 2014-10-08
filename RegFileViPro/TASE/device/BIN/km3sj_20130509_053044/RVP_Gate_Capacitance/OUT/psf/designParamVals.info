@@ -1,0 +1,2166 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "7.0.1.125.isr11"
+"date" "5:24:32 AM, Thur May 9, 2013"
+"design" "//Generated for; spectre"
+"analysis type" "info"
+"analysis name" "designParamVals"
+"analysis description" "Circuit Information"
+"xVecSorted" "unsorted"
+"tolerance.relative" 1.00000e-06
+TYPE
+"top-level" STRUCT(
+"temp" FLOAT DOUBLE
+"tnom" FLOAT DOUBLE
+"time" FLOAT DOUBLE
+"gcap" FLOAT DOUBLE
+"pwidth" FLOAT DOUBLE
+"pfall" FLOAT DOUBLE
+"prise" FLOAT DOUBLE
+"pvin" FLOAT DOUBLE
+"minw" FLOAT DOUBLE
+"minl" FLOAT DOUBLE
+"pvbp" FLOAT DOUBLE
+"pvdd" FLOAT DOUBLE
+"ldef" FLOAT DOUBLE
+"diodelp_dev" FLOAT DOUBLE
+"diodegp_dev" FLOAT DOUBLE
+"diode25_dev" FLOAT DOUBLE
+"diode18_dev" FLOAT DOUBLE
+"diodeiso_dev" FLOAT DOUBLE
+"svtlp_dev" FLOAT DOUBLE
+"svtgp_dev" FLOAT DOUBLE
+"lvtlp_dev" FLOAT DOUBLE
+"lvtgp_dev" FLOAT DOUBLE
+"hvtlp_dev" FLOAT DOUBLE
+"hvtgp_dev" FLOAT DOUBLE
+"hpalp_dev" FLOAT DOUBLE
+"sramdphvtlp_dev" FLOAT DOUBLE
+"sramdpsvtlp_dev" FLOAT DOUBLE
+"sramdpsvtgp_dev" FLOAT DOUBLE
+"sramsphvtlp_dev" FLOAT DOUBLE
+"sramspsvtlp_dev" FLOAT DOUBLE
+"sramspsvtgp_dev" FLOAT DOUBLE
+"svt18_dev" FLOAT DOUBLE
+"svt25_dev" FLOAT DOUBLE
+"dgnsvt25_dev" FLOAT DOUBLE
+"dgpsvt25_dev" FLOAT DOUBLE
+"dgnsvt18_dev" FLOAT DOUBLE
+"dgpsvt18_dev" FLOAT DOUBLE
+"pnpv_dev" FLOAT DOUBLE
+"npnv_dev" FLOAT DOUBLE
+"rpolyn_dev" FLOAT DOUBLE
+"rpolys_dev" FLOAT DOUBLE
+"rpolys_vp12_dev" FLOAT DOUBLE
+"rpolyh_dev" FLOAT DOUBLE
+"rpolyp_dev" FLOAT DOUBLE
+"rpdiff_dev" FLOAT DOUBLE
+"rmetal_dev" FLOAT DOUBLE
+"cpolyn18_dev" FLOAT DOUBLE
+"cpolyn25_dev" FLOAT DOUBLE
+"cpolyp25_dev" FLOAT DOUBLE
+"cfringe_dev" FLOAT DOUBLE
+"cfringelem_dev" FLOAT DOUBLE
+"cmim_dev" FLOAT DOUBLE
+"cplate_dev" FLOAT DOUBLE
+"cstrip_dev" FLOAT DOUBLE
+"rpolyni_dev" FLOAT DOUBLE
+"rpolypi_dev" FLOAT DOUBLE
+"mismatch_crolles" FLOAT DOUBLE
+"nhvtlp_dagidl" FLOAT DOUBLE
+"nhvtlp_dcfring" FLOAT DOUBLE
+"nhvtlp_dcjb" FLOAT DOUBLE
+"nhvtlp_dcjgate" FLOAT DOUBLE
+"nhvtlp_dcjsw" FLOAT DOUBLE
+"nhvtlp_djbbtbr" FLOAT DOUBLE
+"nhvtlp_djbbtgr" FLOAT DOUBLE
+"nhvtlp_djbbtsr" FLOAT DOUBLE
+"nhvtlp_djsdbr" FLOAT DOUBLE
+"nhvtlp_djsdgr" FLOAT DOUBLE
+"nhvtlp_djsdsr" FLOAT DOUBLE
+"nhvtlp_djsgbr" FLOAT DOUBLE
+"nhvtlp_djsggr" FLOAT DOUBLE
+"nhvtlp_djsgsr" FLOAT DOUBLE
+"nhvtlp_djtatbr" FLOAT DOUBLE
+"nhvtlp_djtatgr" FLOAT DOUBLE
+"nhvtlp_djtatsr" FLOAT DOUBLE
+"nhvtlp_dmu" FLOAT DOUBLE
+"nhvtlp_dnoise" FLOAT DOUBLE
+"nhvtlp_drconpo" FLOAT DOUBLE
+"nhvtlp_drconsd" FLOAT DOUBLE
+"nhvtlp_drdsw" FLOAT DOUBLE
+"nhvtlp_drhig" FLOAT DOUBLE
+"nhvtlp_drsd_rpo" FLOAT DOUBLE
+"nhvtlp_drsh" FLOAT DOUBLE
+"nhvtlp_drshg" FLOAT DOUBLE
+"nhvtlp_drshgu" FLOAT DOUBLE
+"nhvtlp_dtoxe" FLOAT DOUBLE
+"nhvtlp_dvth0" FLOAT DOUBLE
+"nhvtlp_dxl" FLOAT DOUBLE
+"nhvtlp_dxw" FLOAT DOUBLE
+"nhvtlp_mcor_beta" FLOAT DOUBLE
+"nhvtlp_mcor_vt" FLOAT DOUBLE
+"phvtlp_dagidl" FLOAT DOUBLE
+"phvtlp_dcfring" FLOAT DOUBLE
+"phvtlp_dcjb" FLOAT DOUBLE
+"phvtlp_dcjgate" FLOAT DOUBLE
+"phvtlp_dcjsw" FLOAT DOUBLE
+"phvtlp_djbbtbr" FLOAT DOUBLE
+"phvtlp_djbbtgr" FLOAT DOUBLE
+"phvtlp_djbbtsr" FLOAT DOUBLE
+"phvtlp_djsdbr" FLOAT DOUBLE
+"phvtlp_djsdgr" FLOAT DOUBLE
+"phvtlp_djsdsr" FLOAT DOUBLE
+"phvtlp_djsgbr" FLOAT DOUBLE
+"phvtlp_djsggr" FLOAT DOUBLE
+"phvtlp_djsgsr" FLOAT DOUBLE
+"phvtlp_djtatbr" FLOAT DOUBLE
+"phvtlp_djtatgr" FLOAT DOUBLE
+"phvtlp_djtatsr" FLOAT DOUBLE
+"phvtlp_dmu" FLOAT DOUBLE
+"phvtlp_dnoise" FLOAT DOUBLE
+"phvtlp_drconpo" FLOAT DOUBLE
+"phvtlp_drconsd" FLOAT DOUBLE
+"phvtlp_drdsw" FLOAT DOUBLE
+"phvtlp_drhig" FLOAT DOUBLE
+"phvtlp_drsd_rpo" FLOAT DOUBLE
+"phvtlp_drsh" FLOAT DOUBLE
+"phvtlp_drshg" FLOAT DOUBLE
+"phvtlp_drshgu" FLOAT DOUBLE
+"phvtlp_dtoxe" FLOAT DOUBLE
+"phvtlp_dvth0" FLOAT DOUBLE
+"phvtlp_dxl" FLOAT DOUBLE
+"phvtlp_dxw" FLOAT DOUBLE
+"phvtlp_mcor_beta" FLOAT DOUBLE
+"phvtlp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nhvtlp" FLOAT DOUBLE
+"dbeta_dev_nhvtlp" FLOAT DOUBLE
+"dvth0_dev_nhvtlprpo" FLOAT DOUBLE
+"dbeta_dev_nhvtlprpo" FLOAT DOUBLE
+"dvth0_dev_phvtlp" FLOAT DOUBLE
+"dbeta_dev_phvtlp" FLOAT DOUBLE
+"dvth0_dev_phvtlprpo" FLOAT DOUBLE
+"dbeta_dev_phvtlprpo" FLOAT DOUBLE
+"nsvtlp_dagidl" FLOAT DOUBLE
+"nsvtlp_dcfring" FLOAT DOUBLE
+"nsvtlp_dcjb" FLOAT DOUBLE
+"nsvtlp_dcjgate" FLOAT DOUBLE
+"nsvtlp_dcjsw" FLOAT DOUBLE
+"nsvtlp_djbbtbr" FLOAT DOUBLE
+"nsvtlp_djbbtgr" FLOAT DOUBLE
+"nsvtlp_djbbtsr" FLOAT DOUBLE
+"nsvtlp_djsdbr" FLOAT DOUBLE
+"nsvtlp_djsdgr" FLOAT DOUBLE
+"nsvtlp_djsdsr" FLOAT DOUBLE
+"nsvtlp_djsgbr" FLOAT DOUBLE
+"nsvtlp_djsggr" FLOAT DOUBLE
+"nsvtlp_djsgsr" FLOAT DOUBLE
+"nsvtlp_djtatbr" FLOAT DOUBLE
+"nsvtlp_djtatgr" FLOAT DOUBLE
+"nsvtlp_djtatsr" FLOAT DOUBLE
+"nsvtlp_dmu" FLOAT DOUBLE
+"nsvtlp_dnoise" FLOAT DOUBLE
+"nsvtlp_drconpo" FLOAT DOUBLE
+"nsvtlp_drconsd" FLOAT DOUBLE
+"nsvtlp_drdsw" FLOAT DOUBLE
+"nsvtlp_drhig" FLOAT DOUBLE
+"nsvtlp_drsd_rpo" FLOAT DOUBLE
+"nsvtlp_drsh" FLOAT DOUBLE
+"nsvtlp_drshg" FLOAT DOUBLE
+"nsvtlp_drshgu" FLOAT DOUBLE
+"nsvtlp_dtoxe" FLOAT DOUBLE
+"nsvtlp_dvth0" FLOAT DOUBLE
+"nsvtlp_dxl" FLOAT DOUBLE
+"nsvtlp_dxw" FLOAT DOUBLE
+"nsvtlp_mcor_beta" FLOAT DOUBLE
+"nsvtlp_mcor_vt" FLOAT DOUBLE
+"psvtlp_dagidl" FLOAT DOUBLE
+"psvtlp_dcfring" FLOAT DOUBLE
+"psvtlp_dcjb" FLOAT DOUBLE
+"psvtlp_dcjgate" FLOAT DOUBLE
+"psvtlp_dcjsw" FLOAT DOUBLE
+"psvtlp_djbbtbr" FLOAT DOUBLE
+"psvtlp_djbbtgr" FLOAT DOUBLE
+"psvtlp_djbbtsr" FLOAT DOUBLE
+"psvtlp_djsdbr" FLOAT DOUBLE
+"psvtlp_djsdgr" FLOAT DOUBLE
+"psvtlp_djsdsr" FLOAT DOUBLE
+"psvtlp_djsgbr" FLOAT DOUBLE
+"psvtlp_djsggr" FLOAT DOUBLE
+"psvtlp_djsgsr" FLOAT DOUBLE
+"psvtlp_djtatbr" FLOAT DOUBLE
+"psvtlp_djtatgr" FLOAT DOUBLE
+"psvtlp_djtatsr" FLOAT DOUBLE
+"psvtlp_dmu" FLOAT DOUBLE
+"psvtlp_dnoise" FLOAT DOUBLE
+"psvtlp_drconpo" FLOAT DOUBLE
+"psvtlp_drconsd" FLOAT DOUBLE
+"psvtlp_drdsw" FLOAT DOUBLE
+"psvtlp_drhig" FLOAT DOUBLE
+"psvtlp_drsd_rpo" FLOAT DOUBLE
+"psvtlp_drsh" FLOAT DOUBLE
+"psvtlp_drshg" FLOAT DOUBLE
+"psvtlp_drshgu" FLOAT DOUBLE
+"psvtlp_dtoxe" FLOAT DOUBLE
+"psvtlp_dvth0" FLOAT DOUBLE
+"psvtlp_dxl" FLOAT DOUBLE
+"psvtlp_dxw" FLOAT DOUBLE
+"psvtlp_mcor_beta" FLOAT DOUBLE
+"psvtlp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nsvtlp" FLOAT DOUBLE
+"dbeta_dev_nsvtlp" FLOAT DOUBLE
+"dvth0_dev_nsvtlprpo" FLOAT DOUBLE
+"dbeta_dev_nsvtlprpo" FLOAT DOUBLE
+"dvth0_dev_psvtlp" FLOAT DOUBLE
+"dbeta_dev_psvtlp" FLOAT DOUBLE
+"dvth0_dev_psvtlprpo" FLOAT DOUBLE
+"dbeta_dev_psvtlprpo" FLOAT DOUBLE
+"nlvtlp_dagidl" FLOAT DOUBLE
+"nlvtlp_dcfring" FLOAT DOUBLE
+"nlvtlp_dcjb" FLOAT DOUBLE
+"nlvtlp_dcjgate" FLOAT DOUBLE
+"nlvtlp_dcjsw" FLOAT DOUBLE
+"nlvtlp_djbbtbr" FLOAT DOUBLE
+"nlvtlp_djbbtgr" FLOAT DOUBLE
+"nlvtlp_djbbtsr" FLOAT DOUBLE
+"nlvtlp_djsdbr" FLOAT DOUBLE
+"nlvtlp_djsdgr" FLOAT DOUBLE
+"nlvtlp_djsdsr" FLOAT DOUBLE
+"nlvtlp_djsgbr" FLOAT DOUBLE
+"nlvtlp_djsggr" FLOAT DOUBLE
+"nlvtlp_djsgsr" FLOAT DOUBLE
+"nlvtlp_djtatbr" FLOAT DOUBLE
+"nlvtlp_djtatgr" FLOAT DOUBLE
+"nlvtlp_djtatsr" FLOAT DOUBLE
+"nlvtlp_dmu" FLOAT DOUBLE
+"nlvtlp_dnoise" FLOAT DOUBLE
+"nlvtlp_drconpo" FLOAT DOUBLE
+"nlvtlp_drconsd" FLOAT DOUBLE
+"nlvtlp_drdsw" FLOAT DOUBLE
+"nlvtlp_drhig" FLOAT DOUBLE
+"nlvtlp_drsd_rpo" FLOAT DOUBLE
+"nlvtlp_drsh" FLOAT DOUBLE
+"nlvtlp_drshg" FLOAT DOUBLE
+"nlvtlp_drshgu" FLOAT DOUBLE
+"nlvtlp_dtoxe" FLOAT DOUBLE
+"nlvtlp_dvth0" FLOAT DOUBLE
+"nlvtlp_dxl" FLOAT DOUBLE
+"nlvtlp_dxw" FLOAT DOUBLE
+"nlvtlp_mcor_beta" FLOAT DOUBLE
+"nlvtlp_mcor_vt" FLOAT DOUBLE
+"plvtlp_dagidl" FLOAT DOUBLE
+"plvtlp_dcfring" FLOAT DOUBLE
+"plvtlp_dcjb" FLOAT DOUBLE
+"plvtlp_dcjgate" FLOAT DOUBLE
+"plvtlp_dcjsw" FLOAT DOUBLE
+"plvtlp_djbbtbr" FLOAT DOUBLE
+"plvtlp_djbbtgr" FLOAT DOUBLE
+"plvtlp_djbbtsr" FLOAT DOUBLE
+"plvtlp_djsdbr" FLOAT DOUBLE
+"plvtlp_djsdgr" FLOAT DOUBLE
+"plvtlp_djsdsr" FLOAT DOUBLE
+"plvtlp_djsgbr" FLOAT DOUBLE
+"plvtlp_djsggr" FLOAT DOUBLE
+"plvtlp_djsgsr" FLOAT DOUBLE
+"plvtlp_djtatbr" FLOAT DOUBLE
+"plvtlp_djtatgr" FLOAT DOUBLE
+"plvtlp_djtatsr" FLOAT DOUBLE
+"plvtlp_dmu" FLOAT DOUBLE
+"plvtlp_dnoise" FLOAT DOUBLE
+"plvtlp_drconpo" FLOAT DOUBLE
+"plvtlp_drconsd" FLOAT DOUBLE
+"plvtlp_drdsw" FLOAT DOUBLE
+"plvtlp_drhig" FLOAT DOUBLE
+"plvtlp_drsd_rpo" FLOAT DOUBLE
+"plvtlp_drsh" FLOAT DOUBLE
+"plvtlp_drshg" FLOAT DOUBLE
+"plvtlp_drshgu" FLOAT DOUBLE
+"plvtlp_dtoxe" FLOAT DOUBLE
+"plvtlp_dvth0" FLOAT DOUBLE
+"plvtlp_dxl" FLOAT DOUBLE
+"plvtlp_dxw" FLOAT DOUBLE
+"plvtlp_mcor_beta" FLOAT DOUBLE
+"plvtlp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nlvtlp" FLOAT DOUBLE
+"dbeta_dev_nlvtlp" FLOAT DOUBLE
+"dvth0_dev_nlvtlprpo" FLOAT DOUBLE
+"dbeta_dev_nlvtlprpo" FLOAT DOUBLE
+"dvth0_dev_plvtlp" FLOAT DOUBLE
+"dbeta_dev_plvtlp" FLOAT DOUBLE
+"dvth0_dev_plvtlprpo" FLOAT DOUBLE
+"dbeta_dev_plvtlprpo" FLOAT DOUBLE
+"nhvtgp_dagidl" FLOAT DOUBLE
+"nhvtgp_dcfring" FLOAT DOUBLE
+"nhvtgp_dcjb" FLOAT DOUBLE
+"nhvtgp_dcjgate" FLOAT DOUBLE
+"nhvtgp_dcjsw" FLOAT DOUBLE
+"nhvtgp_djbbtbr" FLOAT DOUBLE
+"nhvtgp_djbbtgr" FLOAT DOUBLE
+"nhvtgp_djbbtsr" FLOAT DOUBLE
+"nhvtgp_djsdbr" FLOAT DOUBLE
+"nhvtgp_djsdgr" FLOAT DOUBLE
+"nhvtgp_djsdsr" FLOAT DOUBLE
+"nhvtgp_djsgbr" FLOAT DOUBLE
+"nhvtgp_djsggr" FLOAT DOUBLE
+"nhvtgp_djsgsr" FLOAT DOUBLE
+"nhvtgp_djtatbr" FLOAT DOUBLE
+"nhvtgp_djtatgr" FLOAT DOUBLE
+"nhvtgp_djtatsr" FLOAT DOUBLE
+"nhvtgp_dmu" FLOAT DOUBLE
+"nhvtgp_dnoise" FLOAT DOUBLE
+"nhvtgp_drconpo" FLOAT DOUBLE
+"nhvtgp_drconsd" FLOAT DOUBLE
+"nhvtgp_drdsw" FLOAT DOUBLE
+"nhvtgp_drhig" FLOAT DOUBLE
+"nhvtgp_drsd_rpo" FLOAT DOUBLE
+"nhvtgp_drsh" FLOAT DOUBLE
+"nhvtgp_drshg" FLOAT DOUBLE
+"nhvtgp_drshgu" FLOAT DOUBLE
+"nhvtgp_dtoxe" FLOAT DOUBLE
+"nhvtgp_dvth0" FLOAT DOUBLE
+"nhvtgp_dxl" FLOAT DOUBLE
+"nhvtgp_dxw" FLOAT DOUBLE
+"nhvtgp_mcor_beta" FLOAT DOUBLE
+"nhvtgp_mcor_vt" FLOAT DOUBLE
+"phvtgp_dagidl" FLOAT DOUBLE
+"phvtgp_dcfring" FLOAT DOUBLE
+"phvtgp_dcjb" FLOAT DOUBLE
+"phvtgp_dcjgate" FLOAT DOUBLE
+"phvtgp_dcjsw" FLOAT DOUBLE
+"phvtgp_djbbtbr" FLOAT DOUBLE
+"phvtgp_djbbtgr" FLOAT DOUBLE
+"phvtgp_djbbtsr" FLOAT DOUBLE
+"phvtgp_djsdbr" FLOAT DOUBLE
+"phvtgp_djsdgr" FLOAT DOUBLE
+"phvtgp_djsdsr" FLOAT DOUBLE
+"phvtgp_djsgbr" FLOAT DOUBLE
+"phvtgp_djsggr" FLOAT DOUBLE
+"phvtgp_djsgsr" FLOAT DOUBLE
+"phvtgp_djtatbr" FLOAT DOUBLE
+"phvtgp_djtatgr" FLOAT DOUBLE
+"phvtgp_djtatsr" FLOAT DOUBLE
+"phvtgp_dmu" FLOAT DOUBLE
+"phvtgp_dnoise" FLOAT DOUBLE
+"phvtgp_drconpo" FLOAT DOUBLE
+"phvtgp_drconsd" FLOAT DOUBLE
+"phvtgp_drdsw" FLOAT DOUBLE
+"phvtgp_drhig" FLOAT DOUBLE
+"phvtgp_drsd_rpo" FLOAT DOUBLE
+"phvtgp_drsh" FLOAT DOUBLE
+"phvtgp_drshg" FLOAT DOUBLE
+"phvtgp_drshgu" FLOAT DOUBLE
+"phvtgp_dtoxe" FLOAT DOUBLE
+"phvtgp_dvth0" FLOAT DOUBLE
+"phvtgp_dxl" FLOAT DOUBLE
+"phvtgp_dxw" FLOAT DOUBLE
+"phvtgp_mcor_beta" FLOAT DOUBLE
+"phvtgp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nhvtgp" FLOAT DOUBLE
+"dbeta_dev_nhvtgp" FLOAT DOUBLE
+"dvth0_dev_nhvtgprpo" FLOAT DOUBLE
+"dbeta_dev_nhvtgprpo" FLOAT DOUBLE
+"dvth0_dev_phvtgp" FLOAT DOUBLE
+"dbeta_dev_phvtgp" FLOAT DOUBLE
+"dvth0_dev_phvtgprpo" FLOAT DOUBLE
+"dbeta_dev_phvtgprpo" FLOAT DOUBLE
+"nsvtgp_dagidl" FLOAT DOUBLE
+"nsvtgp_dcfring" FLOAT DOUBLE
+"nsvtgp_dcjb" FLOAT DOUBLE
+"nsvtgp_dcjgate" FLOAT DOUBLE
+"nsvtgp_dcjsw" FLOAT DOUBLE
+"nsvtgp_djbbtbr" FLOAT DOUBLE
+"nsvtgp_djbbtgr" FLOAT DOUBLE
+"nsvtgp_djbbtsr" FLOAT DOUBLE
+"nsvtgp_djsdbr" FLOAT DOUBLE
+"nsvtgp_djsdgr" FLOAT DOUBLE
+"nsvtgp_djsdsr" FLOAT DOUBLE
+"nsvtgp_djsgbr" FLOAT DOUBLE
+"nsvtgp_djsggr" FLOAT DOUBLE
+"nsvtgp_djsgsr" FLOAT DOUBLE
+"nsvtgp_djtatbr" FLOAT DOUBLE
+"nsvtgp_djtatgr" FLOAT DOUBLE
+"nsvtgp_djtatsr" FLOAT DOUBLE
+"nsvtgp_dmu" FLOAT DOUBLE
+"nsvtgp_dnoise" FLOAT DOUBLE
+"nsvtgp_drconpo" FLOAT DOUBLE
+"nsvtgp_drconsd" FLOAT DOUBLE
+"nsvtgp_drdsw" FLOAT DOUBLE
+"nsvtgp_drhig" FLOAT DOUBLE
+"nsvtgp_drsd_rpo" FLOAT DOUBLE
+"nsvtgp_drsh" FLOAT DOUBLE
+"nsvtgp_drshg" FLOAT DOUBLE
+"nsvtgp_drshgu" FLOAT DOUBLE
+"nsvtgp_dtoxe" FLOAT DOUBLE
+"nsvtgp_dvth0" FLOAT DOUBLE
+"nsvtgp_dxl" FLOAT DOUBLE
+"nsvtgp_dxw" FLOAT DOUBLE
+"nsvtgp_mcor_beta" FLOAT DOUBLE
+"nsvtgp_mcor_vt" FLOAT DOUBLE
+"psvtgp_dagidl" FLOAT DOUBLE
+"psvtgp_dcfring" FLOAT DOUBLE
+"psvtgp_dcjb" FLOAT DOUBLE
+"psvtgp_dcjgate" FLOAT DOUBLE
+"psvtgp_dcjsw" FLOAT DOUBLE
+"psvtgp_djbbtbr" FLOAT DOUBLE
+"psvtgp_djbbtgr" FLOAT DOUBLE
+"psvtgp_djbbtsr" FLOAT DOUBLE
+"psvtgp_djsdbr" FLOAT DOUBLE
+"psvtgp_djsdgr" FLOAT DOUBLE
+"psvtgp_djsdsr" FLOAT DOUBLE
+"psvtgp_djsgbr" FLOAT DOUBLE
+"psvtgp_djsggr" FLOAT DOUBLE
+"psvtgp_djsgsr" FLOAT DOUBLE
+"psvtgp_djtatbr" FLOAT DOUBLE
+"psvtgp_djtatgr" FLOAT DOUBLE
+"psvtgp_djtatsr" FLOAT DOUBLE
+"psvtgp_dmu" FLOAT DOUBLE
+"psvtgp_dnoise" FLOAT DOUBLE
+"psvtgp_drconpo" FLOAT DOUBLE
+"psvtgp_drconsd" FLOAT DOUBLE
+"psvtgp_drdsw" FLOAT DOUBLE
+"psvtgp_drhig" FLOAT DOUBLE
+"psvtgp_drsd_rpo" FLOAT DOUBLE
+"psvtgp_drsh" FLOAT DOUBLE
+"psvtgp_drshg" FLOAT DOUBLE
+"psvtgp_drshgu" FLOAT DOUBLE
+"psvtgp_dtoxe" FLOAT DOUBLE
+"psvtgp_dvth0" FLOAT DOUBLE
+"psvtgp_dxl" FLOAT DOUBLE
+"psvtgp_dxw" FLOAT DOUBLE
+"psvtgp_mcor_beta" FLOAT DOUBLE
+"psvtgp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nsvtgp" FLOAT DOUBLE
+"dbeta_dev_nsvtgp" FLOAT DOUBLE
+"dvth0_dev_nsvtgprpo" FLOAT DOUBLE
+"dbeta_dev_nsvtgprpo" FLOAT DOUBLE
+"dvth0_dev_psvtgp" FLOAT DOUBLE
+"dbeta_dev_psvtgp" FLOAT DOUBLE
+"dvth0_dev_psvtgprpo" FLOAT DOUBLE
+"dbeta_dev_psvtgprpo" FLOAT DOUBLE
+"nlvtgp_dagidl" FLOAT DOUBLE
+"nlvtgp_dcfring" FLOAT DOUBLE
+"nlvtgp_dcjb" FLOAT DOUBLE
+"nlvtgp_dcjgate" FLOAT DOUBLE
+"nlvtgp_dcjsw" FLOAT DOUBLE
+"nlvtgp_djbbtbr" FLOAT DOUBLE
+"nlvtgp_djbbtgr" FLOAT DOUBLE
+"nlvtgp_djbbtsr" FLOAT DOUBLE
+"nlvtgp_djsdbr" FLOAT DOUBLE
+"nlvtgp_djsdgr" FLOAT DOUBLE
+"nlvtgp_djsdsr" FLOAT DOUBLE
+"nlvtgp_djsgbr" FLOAT DOUBLE
+"nlvtgp_djsggr" FLOAT DOUBLE
+"nlvtgp_djsgsr" FLOAT DOUBLE
+"nlvtgp_djtatbr" FLOAT DOUBLE
+"nlvtgp_djtatgr" FLOAT DOUBLE
+"nlvtgp_djtatsr" FLOAT DOUBLE
+"nlvtgp_dmu" FLOAT DOUBLE
+"nlvtgp_dnoise" FLOAT DOUBLE
+"nlvtgp_drconpo" FLOAT DOUBLE
+"nlvtgp_drconsd" FLOAT DOUBLE
+"nlvtgp_drdsw" FLOAT DOUBLE
+"nlvtgp_drhig" FLOAT DOUBLE
+"nlvtgp_drsd_rpo" FLOAT DOUBLE
+"nlvtgp_drsh" FLOAT DOUBLE
+"nlvtgp_drshg" FLOAT DOUBLE
+"nlvtgp_drshgu" FLOAT DOUBLE
+"nlvtgp_dtoxe" FLOAT DOUBLE
+"nlvtgp_dvth0" FLOAT DOUBLE
+"nlvtgp_dxl" FLOAT DOUBLE
+"nlvtgp_dxw" FLOAT DOUBLE
+"nlvtgp_mcor_beta" FLOAT DOUBLE
+"nlvtgp_mcor_vt" FLOAT DOUBLE
+"plvtgp_dagidl" FLOAT DOUBLE
+"plvtgp_dcfring" FLOAT DOUBLE
+"plvtgp_dcjb" FLOAT DOUBLE
+"plvtgp_dcjgate" FLOAT DOUBLE
+"plvtgp_dcjsw" FLOAT DOUBLE
+"plvtgp_djbbtbr" FLOAT DOUBLE
+"plvtgp_djbbtgr" FLOAT DOUBLE
+"plvtgp_djbbtsr" FLOAT DOUBLE
+"plvtgp_djsdbr" FLOAT DOUBLE
+"plvtgp_djsdgr" FLOAT DOUBLE
+"plvtgp_djsdsr" FLOAT DOUBLE
+"plvtgp_djsgbr" FLOAT DOUBLE
+"plvtgp_djsggr" FLOAT DOUBLE
+"plvtgp_djsgsr" FLOAT DOUBLE
+"plvtgp_djtatbr" FLOAT DOUBLE
+"plvtgp_djtatgr" FLOAT DOUBLE
+"plvtgp_djtatsr" FLOAT DOUBLE
+"plvtgp_dmu" FLOAT DOUBLE
+"plvtgp_dnoise" FLOAT DOUBLE
+"plvtgp_drconpo" FLOAT DOUBLE
+"plvtgp_drconsd" FLOAT DOUBLE
+"plvtgp_drdsw" FLOAT DOUBLE
+"plvtgp_drhig" FLOAT DOUBLE
+"plvtgp_drsd_rpo" FLOAT DOUBLE
+"plvtgp_drsh" FLOAT DOUBLE
+"plvtgp_drshg" FLOAT DOUBLE
+"plvtgp_drshgu" FLOAT DOUBLE
+"plvtgp_dtoxe" FLOAT DOUBLE
+"plvtgp_dvth0" FLOAT DOUBLE
+"plvtgp_dxl" FLOAT DOUBLE
+"plvtgp_dxw" FLOAT DOUBLE
+"plvtgp_mcor_beta" FLOAT DOUBLE
+"plvtgp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nlvtgp" FLOAT DOUBLE
+"dbeta_dev_nlvtgp" FLOAT DOUBLE
+"dvth0_dev_nlvtgprpo" FLOAT DOUBLE
+"dbeta_dev_nlvtgprpo" FLOAT DOUBLE
+"dvth0_dev_plvtgp" FLOAT DOUBLE
+"dbeta_dev_plvtgp" FLOAT DOUBLE
+"dvth0_dev_plvtgprpo" FLOAT DOUBLE
+"dbeta_dev_plvtgprpo" FLOAT DOUBLE
+"nsvt18_dagidl" FLOAT DOUBLE
+"nsvt18_dcfring" FLOAT DOUBLE
+"nsvt18_dcjb" FLOAT DOUBLE
+"nsvt18_dcjgate" FLOAT DOUBLE
+"nsvt18_dcjsw" FLOAT DOUBLE
+"nsvt18_djbbtbr" FLOAT DOUBLE
+"nsvt18_djbbtgr" FLOAT DOUBLE
+"nsvt18_djbbtsr" FLOAT DOUBLE
+"nsvt18_djsdbr" FLOAT DOUBLE
+"nsvt18_djsdgr" FLOAT DOUBLE
+"nsvt18_djsdsr" FLOAT DOUBLE
+"nsvt18_djsgbr" FLOAT DOUBLE
+"nsvt18_djsggr" FLOAT DOUBLE
+"nsvt18_djsgsr" FLOAT DOUBLE
+"nsvt18_djtatbr" FLOAT DOUBLE
+"nsvt18_djtatgr" FLOAT DOUBLE
+"nsvt18_djtatsr" FLOAT DOUBLE
+"nsvt18_dmu" FLOAT DOUBLE
+"nsvt18_dnoise" FLOAT DOUBLE
+"nsvt18_drconpo" FLOAT DOUBLE
+"nsvt18_drconsd" FLOAT DOUBLE
+"nsvt18_drd_rpo" FLOAT DOUBLE
+"nsvt18_drdsw" FLOAT DOUBLE
+"nsvt18_drhig" FLOAT DOUBLE
+"nsvt18_drs_rpo" FLOAT DOUBLE
+"nsvt18_drshg" FLOAT DOUBLE
+"nsvt18_drshgu" FLOAT DOUBLE
+"nsvt18_dtoxe" FLOAT DOUBLE
+"nsvt18_dvth0" FLOAT DOUBLE
+"nsvt18_dxl" FLOAT DOUBLE
+"nsvt18_dxw" FLOAT DOUBLE
+"nsvt18_mcor_beta" FLOAT DOUBLE
+"nsvt18_mcor_vt" FLOAT DOUBLE
+"psvt18_dagidl" FLOAT DOUBLE
+"psvt18_dcfring" FLOAT DOUBLE
+"psvt18_dcjb" FLOAT DOUBLE
+"psvt18_dcjgate" FLOAT DOUBLE
+"psvt18_dcjsw" FLOAT DOUBLE
+"psvt18_djbbtbr" FLOAT DOUBLE
+"psvt18_djbbtgr" FLOAT DOUBLE
+"psvt18_djbbtsr" FLOAT DOUBLE
+"psvt18_djsdbr" FLOAT DOUBLE
+"psvt18_djsdgr" FLOAT DOUBLE
+"psvt18_djsdsr" FLOAT DOUBLE
+"psvt18_djsgbr" FLOAT DOUBLE
+"psvt18_djsggr" FLOAT DOUBLE
+"psvt18_djsgsr" FLOAT DOUBLE
+"psvt18_djtatbr" FLOAT DOUBLE
+"psvt18_djtatgr" FLOAT DOUBLE
+"psvt18_djtatsr" FLOAT DOUBLE
+"psvt18_dmu" FLOAT DOUBLE
+"psvt18_dnoise" FLOAT DOUBLE
+"psvt18_drconpo" FLOAT DOUBLE
+"psvt18_drconsd" FLOAT DOUBLE
+"psvt18_drd_rpo" FLOAT DOUBLE
+"psvt18_drdsw" FLOAT DOUBLE
+"psvt18_drhig" FLOAT DOUBLE
+"psvt18_drs_rpo" FLOAT DOUBLE
+"psvt18_drshg" FLOAT DOUBLE
+"psvt18_drshgu" FLOAT DOUBLE
+"psvt18_dtoxe" FLOAT DOUBLE
+"psvt18_dvth0" FLOAT DOUBLE
+"psvt18_dxl" FLOAT DOUBLE
+"psvt18_dxw" FLOAT DOUBLE
+"psvt18_mcor_beta" FLOAT DOUBLE
+"psvt18_mcor_vt" FLOAT DOUBLE
+"DVTH0NSVT18" FLOAT DOUBLE
+"DBETANSVT18" FLOAT DOUBLE
+"mcdistrib_nsvt18" FLOAT DOUBLE
+"DVTH0PSVT18" FLOAT DOUBLE
+"DBETAPSVT18" FLOAT DOUBLE
+"mcdistrib_psvt18" FLOAT DOUBLE
+"nsvt25_dagidl" FLOAT DOUBLE
+"nsvt25_dcfring" FLOAT DOUBLE
+"nsvt25_dcjb" FLOAT DOUBLE
+"nsvt25_dcjgate" FLOAT DOUBLE
+"nsvt25_dcjsw" FLOAT DOUBLE
+"nsvt25_djbbtbr" FLOAT DOUBLE
+"nsvt25_djbbtgr" FLOAT DOUBLE
+"nsvt25_djbbtsr" FLOAT DOUBLE
+"nsvt25_djsdbr" FLOAT DOUBLE
+"nsvt25_djsdgr" FLOAT DOUBLE
+"nsvt25_djsdsr" FLOAT DOUBLE
+"nsvt25_djsgbr" FLOAT DOUBLE
+"nsvt25_djsggr" FLOAT DOUBLE
+"nsvt25_djsgsr" FLOAT DOUBLE
+"nsvt25_djtatbr" FLOAT DOUBLE
+"nsvt25_djtatgr" FLOAT DOUBLE
+"nsvt25_djtatsr" FLOAT DOUBLE
+"nsvt25_dmu" FLOAT DOUBLE
+"nsvt25_dnoise" FLOAT DOUBLE
+"nsvt25_drconpo" FLOAT DOUBLE
+"nsvt25_drconsd" FLOAT DOUBLE
+"nsvt25_drd_rpo" FLOAT DOUBLE
+"nsvt25_drdsw" FLOAT DOUBLE
+"nsvt25_drhig" FLOAT DOUBLE
+"nsvt25_drs_rpo" FLOAT DOUBLE
+"nsvt25_drshg" FLOAT DOUBLE
+"nsvt25_drshgu" FLOAT DOUBLE
+"nsvt25_dtoxe" FLOAT DOUBLE
+"nsvt25_dvth0" FLOAT DOUBLE
+"nsvt25_dxl" FLOAT DOUBLE
+"nsvt25_dxw" FLOAT DOUBLE
+"nsvt25_mcor_beta" FLOAT DOUBLE
+"nsvt25_mcor_vt" FLOAT DOUBLE
+"psvt25_dagidl" FLOAT DOUBLE
+"psvt25_dcfring" FLOAT DOUBLE
+"psvt25_dcjb" FLOAT DOUBLE
+"psvt25_dcjgate" FLOAT DOUBLE
+"psvt25_dcjsw" FLOAT DOUBLE
+"psvt25_djbbtbr" FLOAT DOUBLE
+"psvt25_djbbtgr" FLOAT DOUBLE
+"psvt25_djbbtsr" FLOAT DOUBLE
+"psvt25_djsdbr" FLOAT DOUBLE
+"psvt25_djsdgr" FLOAT DOUBLE
+"psvt25_djsdsr" FLOAT DOUBLE
+"psvt25_djsgbr" FLOAT DOUBLE
+"psvt25_djsggr" FLOAT DOUBLE
+"psvt25_djsgsr" FLOAT DOUBLE
+"psvt25_djtatbr" FLOAT DOUBLE
+"psvt25_djtatgr" FLOAT DOUBLE
+"psvt25_djtatsr" FLOAT DOUBLE
+"psvt25_dmu" FLOAT DOUBLE
+"psvt25_dnoise" FLOAT DOUBLE
+"psvt25_drconpo" FLOAT DOUBLE
+"psvt25_drconsd" FLOAT DOUBLE
+"psvt25_drd_rpo" FLOAT DOUBLE
+"psvt25_drdsw" FLOAT DOUBLE
+"psvt25_drhig" FLOAT DOUBLE
+"psvt25_drs_rpo" FLOAT DOUBLE
+"psvt25_drshg" FLOAT DOUBLE
+"psvt25_drshgu" FLOAT DOUBLE
+"psvt25_dtoxe" FLOAT DOUBLE
+"psvt25_dvth0" FLOAT DOUBLE
+"psvt25_dxl" FLOAT DOUBLE
+"psvt25_dxw" FLOAT DOUBLE
+"psvt25_mcor_beta" FLOAT DOUBLE
+"psvt25_mcor_vt" FLOAT DOUBLE
+"DVTH0NSVT25" FLOAT DOUBLE
+"DBETANSVT25" FLOAT DOUBLE
+"mcdistrib_nsvt25" FLOAT DOUBLE
+"DVTH0PSVT25" FLOAT DOUBLE
+"DBETAPSVT25" FLOAT DOUBLE
+"mcdistrib_psvt25" FLOAT DOUBLE
+"nsramspsvtlp_dagidl" FLOAT DOUBLE
+"nsramspsvtlp_dcfring" FLOAT DOUBLE
+"nsramspsvtlp_dcjb" FLOAT DOUBLE
+"nsramspsvtlp_dcjgate" FLOAT DOUBLE
+"nsramspsvtlp_dcjsw" FLOAT DOUBLE
+"nsramspsvtlp_djbbtbr" FLOAT DOUBLE
+"nsramspsvtlp_djbbtgr" FLOAT DOUBLE
+"nsramspsvtlp_djbbtsr" FLOAT DOUBLE
+"nsramspsvtlp_djsdbr" FLOAT DOUBLE
+"nsramspsvtlp_djsdgr" FLOAT DOUBLE
+"nsramspsvtlp_djsdsr" FLOAT DOUBLE
+"nsramspsvtlp_djsgbr" FLOAT DOUBLE
+"nsramspsvtlp_djsggr" FLOAT DOUBLE
+"nsramspsvtlp_djsgsr" FLOAT DOUBLE
+"nsramspsvtlp_djtatbr" FLOAT DOUBLE
+"nsramspsvtlp_djtatgr" FLOAT DOUBLE
+"nsramspsvtlp_djtatsr" FLOAT DOUBLE
+"nsramspsvtlp_dmu" FLOAT DOUBLE
+"nsramspsvtlp_dnoise" FLOAT DOUBLE
+"nsramspsvtlp_drconsd" FLOAT DOUBLE
+"nsramspsvtlp_drdsw" FLOAT DOUBLE
+"nsramspsvtlp_drshg" FLOAT DOUBLE
+"nsramspsvtlp_dtoxe" FLOAT DOUBLE
+"nsramspsvtlp_dxl" FLOAT DOUBLE
+"nsramspsvtlp_dxw" FLOAT DOUBLE
+"nsramspsvtlp_mcor_beta" FLOAT DOUBLE
+"nsramspsvtlp_mcor_vt" FLOAT DOUBLE
+"nsvtlppdsp_dvth0" FLOAT DOUBLE
+"nsvtlppgsp_dvth0" FLOAT DOUBLE
+"psramspsvtlp_dagidl" FLOAT DOUBLE
+"psramspsvtlp_dcfring" FLOAT DOUBLE
+"psramspsvtlp_dcjb" FLOAT DOUBLE
+"psramspsvtlp_dcjgate" FLOAT DOUBLE
+"psramspsvtlp_dcjsw" FLOAT DOUBLE
+"psramspsvtlp_djbbtbr" FLOAT DOUBLE
+"psramspsvtlp_djbbtgr" FLOAT DOUBLE
+"psramspsvtlp_djbbtsr" FLOAT DOUBLE
+"psramspsvtlp_djsdbr" FLOAT DOUBLE
+"psramspsvtlp_djsdgr" FLOAT DOUBLE
+"psramspsvtlp_djsdsr" FLOAT DOUBLE
+"psramspsvtlp_djsgbr" FLOAT DOUBLE
+"psramspsvtlp_djsggr" FLOAT DOUBLE
+"psramspsvtlp_djsgsr" FLOAT DOUBLE
+"psramspsvtlp_djtatbr" FLOAT DOUBLE
+"psramspsvtlp_djtatgr" FLOAT DOUBLE
+"psramspsvtlp_djtatsr" FLOAT DOUBLE
+"psramspsvtlp_dmu" FLOAT DOUBLE
+"psramspsvtlp_dnoise" FLOAT DOUBLE
+"psramspsvtlp_drconsd" FLOAT DOUBLE
+"psramspsvtlp_drdsw" FLOAT DOUBLE
+"psramspsvtlp_drshg" FLOAT DOUBLE
+"psramspsvtlp_dtoxe" FLOAT DOUBLE
+"psramspsvtlp_dvth0" FLOAT DOUBLE
+"psramspsvtlp_dxl" FLOAT DOUBLE
+"psramspsvtlp_dxw" FLOAT DOUBLE
+"psramspsvtlp_mcor_beta" FLOAT DOUBLE
+"psramspsvtlp_mcor_vt" FLOAT DOUBLE
+"DVTH0NSVTLPPDSP" FLOAT DOUBLE
+"DBETANSVTLPPDSP" FLOAT DOUBLE
+"mcdistrib_nsvtlppdsp" FLOAT DOUBLE
+"DVTH0NSVTLPPGSP" FLOAT DOUBLE
+"DBETANSVTLPPGSP" FLOAT DOUBLE
+"mcdistrib_nsvtlppgsp" FLOAT DOUBLE
+"DVTH0PSVTLPPUSP" FLOAT DOUBLE
+"DBETAPSVTLPPUSP" FLOAT DOUBLE
+"mcdistrib_psvtlppusp" FLOAT DOUBLE
+"nhvtlppdsp_dvth0" FLOAT DOUBLE
+"nhvtlppgsp_dvth0" FLOAT DOUBLE
+"nsramsphvtlp_dagidl" FLOAT DOUBLE
+"nsramsphvtlp_dcfring" FLOAT DOUBLE
+"nsramsphvtlp_dcjb" FLOAT DOUBLE
+"nsramsphvtlp_dcjgate" FLOAT DOUBLE
+"nsramsphvtlp_dcjsw" FLOAT DOUBLE
+"nsramsphvtlp_djbbtbr" FLOAT DOUBLE
+"nsramsphvtlp_djbbtgr" FLOAT DOUBLE
+"nsramsphvtlp_djbbtsr" FLOAT DOUBLE
+"nsramsphvtlp_djsdbr" FLOAT DOUBLE
+"nsramsphvtlp_djsdgr" FLOAT DOUBLE
+"nsramsphvtlp_djsdsr" FLOAT DOUBLE
+"nsramsphvtlp_djsgbr" FLOAT DOUBLE
+"nsramsphvtlp_djsggr" FLOAT DOUBLE
+"nsramsphvtlp_djsgsr" FLOAT DOUBLE
+"nsramsphvtlp_djtatbr" FLOAT DOUBLE
+"nsramsphvtlp_djtatgr" FLOAT DOUBLE
+"nsramsphvtlp_djtatsr" FLOAT DOUBLE
+"nsramsphvtlp_dmu" FLOAT DOUBLE
+"nsramsphvtlp_dnoise" FLOAT DOUBLE
+"nsramsphvtlp_drconsd" FLOAT DOUBLE
+"nsramsphvtlp_drdsw" FLOAT DOUBLE
+"nsramsphvtlp_drshg" FLOAT DOUBLE
+"nsramsphvtlp_dtoxe" FLOAT DOUBLE
+"nsramsphvtlp_dxl" FLOAT DOUBLE
+"nsramsphvtlp_dxw" FLOAT DOUBLE
+"nsramsphvtlp_mcor_beta" FLOAT DOUBLE
+"nsramsphvtlp_mcor_vt" FLOAT DOUBLE
+"psramsphvtlp_dagidl" FLOAT DOUBLE
+"psramsphvtlp_dcfring" FLOAT DOUBLE
+"psramsphvtlp_dcjb" FLOAT DOUBLE
+"psramsphvtlp_dcjgate" FLOAT DOUBLE
+"psramsphvtlp_dcjsw" FLOAT DOUBLE
+"psramsphvtlp_djbbtbr" FLOAT DOUBLE
+"psramsphvtlp_djbbtgr" FLOAT DOUBLE
+"psramsphvtlp_djbbtsr" FLOAT DOUBLE
+"psramsphvtlp_djsdbr" FLOAT DOUBLE
+"psramsphvtlp_djsdgr" FLOAT DOUBLE
+"psramsphvtlp_djsdsr" FLOAT DOUBLE
+"psramsphvtlp_djsgbr" FLOAT DOUBLE
+"psramsphvtlp_djsggr" FLOAT DOUBLE
+"psramsphvtlp_djsgsr" FLOAT DOUBLE
+"psramsphvtlp_djtatbr" FLOAT DOUBLE
+"psramsphvtlp_djtatgr" FLOAT DOUBLE
+"psramsphvtlp_djtatsr" FLOAT DOUBLE
+"psramsphvtlp_dmu" FLOAT DOUBLE
+"psramsphvtlp_dnoise" FLOAT DOUBLE
+"psramsphvtlp_drconsd" FLOAT DOUBLE
+"psramsphvtlp_drdsw" FLOAT DOUBLE
+"psramsphvtlp_drshg" FLOAT DOUBLE
+"psramsphvtlp_dtoxe" FLOAT DOUBLE
+"psramsphvtlp_dvth0" FLOAT DOUBLE
+"psramsphvtlp_dxl" FLOAT DOUBLE
+"psramsphvtlp_dxw" FLOAT DOUBLE
+"psramsphvtlp_mcor_beta" FLOAT DOUBLE
+"psramsphvtlp_mcor_vt" FLOAT DOUBLE
+"DVTH0NHVTLPPDSP" FLOAT DOUBLE
+"DBETANHVTLPPDSP" FLOAT DOUBLE
+"mcdistrib_nhvtlppdsp" FLOAT DOUBLE
+"DVTH0NHVTLPPGSP" FLOAT DOUBLE
+"DBETANHVTLPPGSP" FLOAT DOUBLE
+"mcdistrib_nhvtlppgsp" FLOAT DOUBLE
+"DVTH0PHVTLPPUSP" FLOAT DOUBLE
+"DBETAPHVTLPPUSP" FLOAT DOUBLE
+"mcdistrib_phvtlppusp" FLOAT DOUBLE
+"nsramdpsvtlp_dagidl" FLOAT DOUBLE
+"nsramdpsvtlp_dcfring" FLOAT DOUBLE
+"nsramdpsvtlp_dcjb" FLOAT DOUBLE
+"nsramdpsvtlp_dcjgate" FLOAT DOUBLE
+"nsramdpsvtlp_dcjsw" FLOAT DOUBLE
+"nsramdpsvtlp_djbbtbr" FLOAT DOUBLE
+"nsramdpsvtlp_djbbtgr" FLOAT DOUBLE
+"nsramdpsvtlp_djbbtsr" FLOAT DOUBLE
+"nsramdpsvtlp_djsdbr" FLOAT DOUBLE
+"nsramdpsvtlp_djsdgr" FLOAT DOUBLE
+"nsramdpsvtlp_djsdsr" FLOAT DOUBLE
+"nsramdpsvtlp_djsgbr" FLOAT DOUBLE
+"nsramdpsvtlp_djsggr" FLOAT DOUBLE
+"nsramdpsvtlp_djsgsr" FLOAT DOUBLE
+"nsramdpsvtlp_djtatbr" FLOAT DOUBLE
+"nsramdpsvtlp_djtatgr" FLOAT DOUBLE
+"nsramdpsvtlp_djtatsr" FLOAT DOUBLE
+"nsramdpsvtlp_dmu" FLOAT DOUBLE
+"nsramdpsvtlp_dnoise" FLOAT DOUBLE
+"nsramdpsvtlp_drconsd" FLOAT DOUBLE
+"nsramdpsvtlp_drdsw" FLOAT DOUBLE
+"nsramdpsvtlp_drshg" FLOAT DOUBLE
+"nsramdpsvtlp_dtoxe" FLOAT DOUBLE
+"nsramdpsvtlp_dxl" FLOAT DOUBLE
+"nsramdpsvtlp_dxw" FLOAT DOUBLE
+"nsramdpsvtlp_mcor_beta" FLOAT DOUBLE
+"nsramdpsvtlp_mcor_vt" FLOAT DOUBLE
+"nsvtlppddp_dvth0" FLOAT DOUBLE
+"nsvtlppgdp_dvth0" FLOAT DOUBLE
+"psramdpsvtlp_dagidl" FLOAT DOUBLE
+"psramdpsvtlp_dcfring" FLOAT DOUBLE
+"psramdpsvtlp_dcjb" FLOAT DOUBLE
+"psramdpsvtlp_dcjgate" FLOAT DOUBLE
+"psramdpsvtlp_dcjsw" FLOAT DOUBLE
+"psramdpsvtlp_djbbtbr" FLOAT DOUBLE
+"psramdpsvtlp_djbbtgr" FLOAT DOUBLE
+"psramdpsvtlp_djbbtsr" FLOAT DOUBLE
+"psramdpsvtlp_djsdbr" FLOAT DOUBLE
+"psramdpsvtlp_djsdgr" FLOAT DOUBLE
+"psramdpsvtlp_djsdsr" FLOAT DOUBLE
+"psramdpsvtlp_djsgbr" FLOAT DOUBLE
+"psramdpsvtlp_djsggr" FLOAT DOUBLE
+"psramdpsvtlp_djsgsr" FLOAT DOUBLE
+"psramdpsvtlp_djtatbr" FLOAT DOUBLE
+"psramdpsvtlp_djtatgr" FLOAT DOUBLE
+"psramdpsvtlp_djtatsr" FLOAT DOUBLE
+"psramdpsvtlp_dmu" FLOAT DOUBLE
+"psramdpsvtlp_dnoise" FLOAT DOUBLE
+"psramdpsvtlp_drconsd" FLOAT DOUBLE
+"psramdpsvtlp_drdsw" FLOAT DOUBLE
+"psramdpsvtlp_drshg" FLOAT DOUBLE
+"psramdpsvtlp_dtoxe" FLOAT DOUBLE
+"psramdpsvtlp_dvth0" FLOAT DOUBLE
+"psramdpsvtlp_dxl" FLOAT DOUBLE
+"psramdpsvtlp_dxw" FLOAT DOUBLE
+"psramdpsvtlp_mcor_beta" FLOAT DOUBLE
+"psramdpsvtlp_mcor_vt" FLOAT DOUBLE
+"DVTH0NSVTLPPDDP" FLOAT DOUBLE
+"DBETANSVTLPPDDP" FLOAT DOUBLE
+"mcdistrib_nsvtlppddp" FLOAT DOUBLE
+"DVTH0NSVTLPPGDP" FLOAT DOUBLE
+"DBETANSVTLPPGDP" FLOAT DOUBLE
+"mcdistrib_nsvtlppgdp" FLOAT DOUBLE
+"DVTH0PSVTLPPUDP" FLOAT DOUBLE
+"DBETAPSVTLPPUDP" FLOAT DOUBLE
+"mcdistrib_psvtlppudp" FLOAT DOUBLE
+"nhvtlppddp_dvth0" FLOAT DOUBLE
+"nhvtlppgdp_dvth0" FLOAT DOUBLE
+"nsramdphvtlp_dagidl" FLOAT DOUBLE
+"nsramdphvtlp_dcfring" FLOAT DOUBLE
+"nsramdphvtlp_dcjb" FLOAT DOUBLE
+"nsramdphvtlp_dcjgate" FLOAT DOUBLE
+"nsramdphvtlp_dcjsw" FLOAT DOUBLE
+"nsramdphvtlp_djbbtbr" FLOAT DOUBLE
+"nsramdphvtlp_djbbtgr" FLOAT DOUBLE
+"nsramdphvtlp_djbbtsr" FLOAT DOUBLE
+"nsramdphvtlp_djsdbr" FLOAT DOUBLE
+"nsramdphvtlp_djsdgr" FLOAT DOUBLE
+"nsramdphvtlp_djsdsr" FLOAT DOUBLE
+"nsramdphvtlp_djsgbr" FLOAT DOUBLE
+"nsramdphvtlp_djsggr" FLOAT DOUBLE
+"nsramdphvtlp_djsgsr" FLOAT DOUBLE
+"nsramdphvtlp_djtatbr" FLOAT DOUBLE
+"nsramdphvtlp_djtatgr" FLOAT DOUBLE
+"nsramdphvtlp_djtatsr" FLOAT DOUBLE
+"nsramdphvtlp_dmu" FLOAT DOUBLE
+"nsramdphvtlp_dnoise" FLOAT DOUBLE
+"nsramdphvtlp_drconsd" FLOAT DOUBLE
+"nsramdphvtlp_drdsw" FLOAT DOUBLE
+"nsramdphvtlp_drshg" FLOAT DOUBLE
+"nsramdphvtlp_dtoxe" FLOAT DOUBLE
+"nsramdphvtlp_dxl" FLOAT DOUBLE
+"nsramdphvtlp_dxw" FLOAT DOUBLE
+"nsramdphvtlp_mcor_beta" FLOAT DOUBLE
+"nsramdphvtlp_mcor_vt" FLOAT DOUBLE
+"psramdphvtlp_dagidl" FLOAT DOUBLE
+"psramdphvtlp_dcfring" FLOAT DOUBLE
+"psramdphvtlp_dcjb" FLOAT DOUBLE
+"psramdphvtlp_dcjgate" FLOAT DOUBLE
+"psramdphvtlp_dcjsw" FLOAT DOUBLE
+"psramdphvtlp_djbbtbr" FLOAT DOUBLE
+"psramdphvtlp_djbbtgr" FLOAT DOUBLE
+"psramdphvtlp_djbbtsr" FLOAT DOUBLE
+"psramdphvtlp_djsdbr" FLOAT DOUBLE
+"psramdphvtlp_djsdgr" FLOAT DOUBLE
+"psramdphvtlp_djsdsr" FLOAT DOUBLE
+"psramdphvtlp_djsgbr" FLOAT DOUBLE
+"psramdphvtlp_djsggr" FLOAT DOUBLE
+"psramdphvtlp_djsgsr" FLOAT DOUBLE
+"psramdphvtlp_djtatbr" FLOAT DOUBLE
+"psramdphvtlp_djtatgr" FLOAT DOUBLE
+"psramdphvtlp_djtatsr" FLOAT DOUBLE
+"psramdphvtlp_dmu" FLOAT DOUBLE
+"psramdphvtlp_dnoise" FLOAT DOUBLE
+"psramdphvtlp_drconsd" FLOAT DOUBLE
+"psramdphvtlp_drdsw" FLOAT DOUBLE
+"psramdphvtlp_drshg" FLOAT DOUBLE
+"psramdphvtlp_dtoxe" FLOAT DOUBLE
+"psramdphvtlp_dvth0" FLOAT DOUBLE
+"psramdphvtlp_dxl" FLOAT DOUBLE
+"psramdphvtlp_dxw" FLOAT DOUBLE
+"psramdphvtlp_mcor_beta" FLOAT DOUBLE
+"psramdphvtlp_mcor_vt" FLOAT DOUBLE
+"DVTH0NHVTLPPDDP" FLOAT DOUBLE
+"DBETANHVTLPPDDP" FLOAT DOUBLE
+"mcdistrib_nhvtlppddp" FLOAT DOUBLE
+"DVTH0NHVTLPPGDP" FLOAT DOUBLE
+"DBETANHVTLPPGDP" FLOAT DOUBLE
+"mcdistrib_nhvtlppgdp" FLOAT DOUBLE
+"DVTH0PHVTLPPUDP" FLOAT DOUBLE
+"DBETAPHVTLPPUDP" FLOAT DOUBLE
+"mcdistrib_phvtlppudp" FLOAT DOUBLE
+"nsramspsvtgp_dagidl" FLOAT DOUBLE
+"nsramspsvtgp_dcfring" FLOAT DOUBLE
+"nsramspsvtgp_dcjb" FLOAT DOUBLE
+"nsramspsvtgp_dcjgate" FLOAT DOUBLE
+"nsramspsvtgp_dcjsw" FLOAT DOUBLE
+"nsramspsvtgp_djbbtbr" FLOAT DOUBLE
+"nsramspsvtgp_djbbtgr" FLOAT DOUBLE
+"nsramspsvtgp_djbbtsr" FLOAT DOUBLE
+"nsramspsvtgp_djsdbr" FLOAT DOUBLE
+"nsramspsvtgp_djsdgr" FLOAT DOUBLE
+"nsramspsvtgp_djsdsr" FLOAT DOUBLE
+"nsramspsvtgp_djsgbr" FLOAT DOUBLE
+"nsramspsvtgp_djsggr" FLOAT DOUBLE
+"nsramspsvtgp_djsgsr" FLOAT DOUBLE
+"nsramspsvtgp_djtatbr" FLOAT DOUBLE
+"nsramspsvtgp_djtatgr" FLOAT DOUBLE
+"nsramspsvtgp_djtatsr" FLOAT DOUBLE
+"nsramspsvtgp_dmu" FLOAT DOUBLE
+"nsramspsvtgp_dnoise" FLOAT DOUBLE
+"nsramspsvtgp_drconsd" FLOAT DOUBLE
+"nsramspsvtgp_drdsw" FLOAT DOUBLE
+"nsramspsvtgp_drsh" FLOAT DOUBLE
+"nsramspsvtgp_drshg" FLOAT DOUBLE
+"nsramspsvtgp_dtoxe" FLOAT DOUBLE
+"nsramspsvtgp_dxl" FLOAT DOUBLE
+"nsramspsvtgp_dxw" FLOAT DOUBLE
+"nsramspsvtgp_mcor_beta" FLOAT DOUBLE
+"nsramspsvtgp_mcor_vt" FLOAT DOUBLE
+"nsvtgppdsp_dvth0" FLOAT DOUBLE
+"nsvtgppgsp_dvth0" FLOAT DOUBLE
+"psramspsvtgp_dagidl" FLOAT DOUBLE
+"psramspsvtgp_dcfring" FLOAT DOUBLE
+"psramspsvtgp_dcjb" FLOAT DOUBLE
+"psramspsvtgp_dcjgate" FLOAT DOUBLE
+"psramspsvtgp_dcjsw" FLOAT DOUBLE
+"psramspsvtgp_djbbtbr" FLOAT DOUBLE
+"psramspsvtgp_djbbtgr" FLOAT DOUBLE
+"psramspsvtgp_djbbtsr" FLOAT DOUBLE
+"psramspsvtgp_djsdbr" FLOAT DOUBLE
+"psramspsvtgp_djsdgr" FLOAT DOUBLE
+"psramspsvtgp_djsdsr" FLOAT DOUBLE
+"psramspsvtgp_djsgbr" FLOAT DOUBLE
+"psramspsvtgp_djsggr" FLOAT DOUBLE
+"psramspsvtgp_djsgsr" FLOAT DOUBLE
+"psramspsvtgp_djtatbr" FLOAT DOUBLE
+"psramspsvtgp_djtatgr" FLOAT DOUBLE
+"psramspsvtgp_djtatsr" FLOAT DOUBLE
+"psramspsvtgp_dmu" FLOAT DOUBLE
+"psramspsvtgp_dnoise" FLOAT DOUBLE
+"psramspsvtgp_drconsd" FLOAT DOUBLE
+"psramspsvtgp_drdsw" FLOAT DOUBLE
+"psramspsvtgp_drsh" FLOAT DOUBLE
+"psramspsvtgp_drshg" FLOAT DOUBLE
+"psramspsvtgp_dtoxe" FLOAT DOUBLE
+"psramspsvtgp_dvth0" FLOAT DOUBLE
+"psramspsvtgp_dxl" FLOAT DOUBLE
+"psramspsvtgp_dxw" FLOAT DOUBLE
+"psramspsvtgp_mcor_beta" FLOAT DOUBLE
+"psramspsvtgp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nsvtgppdsp" FLOAT DOUBLE
+"dbeta_dev_nsvtgppdsp" FLOAT DOUBLE
+"dvth0_dev_nsvtgppgsp" FLOAT DOUBLE
+"dbeta_dev_nsvtgppgsp" FLOAT DOUBLE
+"dvth0_dev_psvtgppusp" FLOAT DOUBLE
+"dbeta_dev_psvtgppusp" FLOAT DOUBLE
+"nsramdpsvtgp_dagidl" FLOAT DOUBLE
+"nsramdpsvtgp_dcfring" FLOAT DOUBLE
+"nsramdpsvtgp_dcjb" FLOAT DOUBLE
+"nsramdpsvtgp_dcjgate" FLOAT DOUBLE
+"nsramdpsvtgp_dcjsw" FLOAT DOUBLE
+"nsramdpsvtgp_djbbtbr" FLOAT DOUBLE
+"nsramdpsvtgp_djbbtgr" FLOAT DOUBLE
+"nsramdpsvtgp_djbbtsr" FLOAT DOUBLE
+"nsramdpsvtgp_djsdbr" FLOAT DOUBLE
+"nsramdpsvtgp_djsdgr" FLOAT DOUBLE
+"nsramdpsvtgp_djsdsr" FLOAT DOUBLE
+"nsramdpsvtgp_djsgbr" FLOAT DOUBLE
+"nsramdpsvtgp_djsggr" FLOAT DOUBLE
+"nsramdpsvtgp_djsgsr" FLOAT DOUBLE
+"nsramdpsvtgp_djtatbr" FLOAT DOUBLE
+"nsramdpsvtgp_djtatgr" FLOAT DOUBLE
+"nsramdpsvtgp_djtatsr" FLOAT DOUBLE
+"nsramdpsvtgp_dmu" FLOAT DOUBLE
+"nsramdpsvtgp_dnoise" FLOAT DOUBLE
+"nsramdpsvtgp_drconsd" FLOAT DOUBLE
+"nsramdpsvtgp_drdsw" FLOAT DOUBLE
+"nsramdpsvtgp_drsh" FLOAT DOUBLE
+"nsramdpsvtgp_drshg" FLOAT DOUBLE
+"nsramdpsvtgp_dtoxe" FLOAT DOUBLE
+"nsramdpsvtgp_dxl" FLOAT DOUBLE
+"nsramdpsvtgp_dxw" FLOAT DOUBLE
+"nsramdpsvtgp_mcor_beta" FLOAT DOUBLE
+"nsramdpsvtgp_mcor_vt" FLOAT DOUBLE
+"nsvtgppddp_dvth0" FLOAT DOUBLE
+"nsvtgppgdp_dvth0" FLOAT DOUBLE
+"psramdpsvtgp_dagidl" FLOAT DOUBLE
+"psramdpsvtgp_dcfring" FLOAT DOUBLE
+"psramdpsvtgp_dcjb" FLOAT DOUBLE
+"psramdpsvtgp_dcjgate" FLOAT DOUBLE
+"psramdpsvtgp_dcjsw" FLOAT DOUBLE
+"psramdpsvtgp_djbbtbr" FLOAT DOUBLE
+"psramdpsvtgp_djbbtgr" FLOAT DOUBLE
+"psramdpsvtgp_djbbtsr" FLOAT DOUBLE
+"psramdpsvtgp_djsdbr" FLOAT DOUBLE
+"psramdpsvtgp_djsdgr" FLOAT DOUBLE
+"psramdpsvtgp_djsdsr" FLOAT DOUBLE
+"psramdpsvtgp_djsgbr" FLOAT DOUBLE
+"psramdpsvtgp_djsggr" FLOAT DOUBLE
+"psramdpsvtgp_djsgsr" FLOAT DOUBLE
+"psramdpsvtgp_djtatbr" FLOAT DOUBLE
+"psramdpsvtgp_djtatgr" FLOAT DOUBLE
+"psramdpsvtgp_djtatsr" FLOAT DOUBLE
+"psramdpsvtgp_dmu" FLOAT DOUBLE
+"psramdpsvtgp_dnoise" FLOAT DOUBLE
+"psramdpsvtgp_drconsd" FLOAT DOUBLE
+"psramdpsvtgp_drdsw" FLOAT DOUBLE
+"psramdpsvtgp_drsh" FLOAT DOUBLE
+"psramdpsvtgp_drshg" FLOAT DOUBLE
+"psramdpsvtgp_dtoxe" FLOAT DOUBLE
+"psramdpsvtgp_dvth0" FLOAT DOUBLE
+"psramdpsvtgp_dxl" FLOAT DOUBLE
+"psramdpsvtgp_dxw" FLOAT DOUBLE
+"psramdpsvtgp_mcor_beta" FLOAT DOUBLE
+"psramdpsvtgp_mcor_vt" FLOAT DOUBLE
+"dvth0_dev_nsvtgppddp" FLOAT DOUBLE
+"dbeta_dev_nsvtgppddp" FLOAT DOUBLE
+"dvth0_dev_nsvtgppgdp" FLOAT DOUBLE
+"dbeta_dev_nsvtgppgdp" FLOAT DOUBLE
+"dvth0_dev_psvtgppudp" FLOAT DOUBLE
+"dbeta_dev_psvtgppudp" FLOAT DOUBLE
+"ndr25_dagidl" FLOAT DOUBLE
+"ndr25_dcfring" FLOAT DOUBLE
+"ndr25_dcgbo" FLOAT DOUBLE
+"ndr25_dlintd" FLOAT DOUBLE
+"ndr25_dmu" FLOAT DOUBLE
+"ndr25_drdw" FLOAT DOUBLE
+"ndr25_drshd" FLOAT DOUBLE
+"ndr25_drsw" FLOAT DOUBLE
+"ndr25_dstixl" FLOAT DOUBLE
+"ndr25_dtox" FLOAT DOUBLE
+"ndr25_dtoxcap" FLOAT DOUBLE
+"ndr25_dtoxsti" FLOAT DOUBLE
+"ndr25_dvth0" FLOAT DOUBLE
+"ndr25_dvthcap" FLOAT DOUBLE
+"ndr25_dxl" FLOAT DOUBLE
+"ndr25_dxld" FLOAT DOUBLE
+"ndr25_dxw" FLOAT DOUBLE
+"pdr25_dagidl" FLOAT DOUBLE
+"pdr25_dcfring" FLOAT DOUBLE
+"pdr25_dcgbo" FLOAT DOUBLE
+"pdr25_dlintd" FLOAT DOUBLE
+"pdr25_dmu" FLOAT DOUBLE
+"pdr25_drdw" FLOAT DOUBLE
+"pdr25_drshd" FLOAT DOUBLE
+"pdr25_drsw" FLOAT DOUBLE
+"pdr25_dstixl" FLOAT DOUBLE
+"pdr25_dtox" FLOAT DOUBLE
+"pdr25_dtoxcap" FLOAT DOUBLE
+"pdr25_dtoxsti" FLOAT DOUBLE
+"pdr25_dvth0" FLOAT DOUBLE
+"pdr25_dvthcap" FLOAT DOUBLE
+"pdr25_dxl" FLOAT DOUBLE
+"pdr25_dxld" FLOAT DOUBLE
+"pdr25_dxw" FLOAT DOUBLE
+) PROP(
+"key" "parameters"
+)
+VALUE
+"top-level" "top-level" (
+27.0000
+27.0000
+0.00000
+1.18000e-14
+1.00000e-09
+2.00000e-11
+2.00000e-11
+0.00000
+1.20000e-07
+6.00000e-08
+1.10000
+1.10000
+6.00000e-08
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+)
+END

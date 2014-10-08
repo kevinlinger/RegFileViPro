@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%
+% Decoder class
+% This includes the row-predecode, WL Driver, and col-decoder
+%%%%%%%%%%%%%%%%%%%%%%
+
+classdef SRAM_Decoder < SRAM_Component
+	properties
+
+		%predecode buffer stages
+		n=0;
+
+		%wl driver buffer stages
+		k=0;
+
+	end % properties
+
+	methods
+        	% Constructor
+        	function obj = SRAM_Decoder(toolPath,tasePath,uid)
+			obj = obj@SRAM_Component(toolPath,tasePath,uid);
+			chdir(strcat(toolPath,'/configuration'));
+			user;
+			if (exist('decStages'))
+				obj.n=decStages(1);
+				obj.k=decStages(2);
+			end
+			chdir(strcat(toolPath,'/model'));
+        	end
+
+		% Energy
+		function energy = E(obj)			
+			%row decoder
+				obj.energy = 0;
+		end 
+		
+		% Delay - row predecode, WL Driver and FF delays
+		function delay = D(obj)
+				obj.delay = 0;
+		end
+	end 
+end % classdef

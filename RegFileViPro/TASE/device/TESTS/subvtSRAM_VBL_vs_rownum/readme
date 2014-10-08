@@ -1,0 +1,9 @@
+##### 2008-09-23 by jw4pg #####
+Original spec: 
+
+This is one SubVT SRAM test. Various bitcell structures (6T, 7T, 8T & 10T) are compared. We measure the BL/BLB voltage vs. the number of rows. Since the read-current is much smaller in the subthreshold region, the bitline leakage impact becomes worse. We test the worst scenario for the read current, i.e. using the weakest access transistor (6 sigma variation). The weak read current and the increased leakage current discharge the two bitlines (or the same bitline when reading 0 and when reading 1) with the similar speed. In that case, read failure might occur.
+
+
+
+
+

@@ -1,0 +1,38 @@
+//============================================
+// Define VDD and VSS
+// Monte-Carlo Simulation
+//===========================================
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//============================================
+// bitcell for IRead
+//============================================
+subckt bitcell8T BL BLB VBN VBP VDD VSS WL RBL RWL
+MPR (QB Q VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+MPL (Q QB VDD VBP) PU_TRANSISTOR width=wpu length=lpu
+MNR (QB Q VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MNL (Q QB VSS VBN) PD_TRANSISTOR width=wpd length=lpd
+MTL (BL WL Q VBN) PG_TRANSISTOR  width=wpg length=lpg
+MTR (BLB WL QB VBN) PG_TRANSISTOR  width=wpg length=lpg
+MA1 (MID QB VSS VSS) PD_TRANSISTOR width=wax1 length=lax1
+MA2 (RBL RWL MID VSS) PG_TRANSISTOR width=wax2 length=lax2
+ends bitcell8T
+
+//============================================
+// Test Read Current
+//============================================
+I0 (WBL1 WBLB1 VSS VDD VDD VSS VSS BL1 WLA) bitcell8T m=1
+I1 (WBL2 WBLB2 VSS VDD VDD VSS VSS BL2 WLU) bitcell8T m=127
+
+VBL (BL2 BL1) vsource dc=0
+VWLU (WLU 0) vsource dc=0
+VWLA (WLA 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+
+//==================
+//Initial Conditions
+//==================
+ic I1.QB=0 I1.Q=pvdd I0.QB=pvdd I0.Q=0 WBL1=pvdd WBLB1=pvdd WBL2=pvdd WBLB2=pvdd BL1=pvdd BL2=pvdd

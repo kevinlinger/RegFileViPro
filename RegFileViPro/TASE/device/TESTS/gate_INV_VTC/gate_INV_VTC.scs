@@ -1,0 +1,25 @@
+//============================================
+// Define VDD and VSS
+//============================================
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+
+//============================================
+// Input voltage 
+//============================================
+
+VIN (IN VSS) vsource
+
+subckt INV VDD VSS IN OUT
+P1 (OUT IN VDD VDD) P_TRANSISTOR width=pw length=pl
+N1 (OUT IN VSS VSS) N_TRANSISTOR width=nw length=nl
+ends INV
+
+//============================================
+// Test inverter
+//============================================
+
+INV1 (VDD VSS IN OUT) INV
+

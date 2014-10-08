@@ -1,0 +1,21 @@
+//Basic Voltage Sense amp
+MTN (VN SAEN VSS VSS) N_TRANSISTOR width=wdef length=ldef
+MNR (IO IOB VN VSS) N_TRANSISTOR width=wdef length=ldef
+MNL (IOB IO VN VSS) N_TRANSISTOR width=wdef length=ldef
+MPPL (IO SAPREC VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MPPR (IOB SAPREC VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MPR (IO IOB VDD VDD) P_TRANSISTOR width=wdef length=ldef
+MPL (IOB IO VDD VDD) P_TRANSISTOR width=wdef length=ldef
+
+//PMOS switches to access BL and BLB
+MPBL (IO ENB BL VDD) P_TRANSISTOR width=wdef*10 length=ldef
+MPBLB (IOB ENB BLB VDD) P_TRANSISTOR width=wdef*10 length=ldef
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VSAEN (SAEN 0) vsource type=pulse val0=0 val1=pvdd rise=0.1n fall=0.1n width=0.5n delay=1n
+VENB (ENB 0) vsource type=pulse val0=pvdd val1=0 rise=0.1n fall=0.1n width=0.5n delay=1n
+VSAPREC (SAPREC 0) vsource type=pulse val0=0 val1=pvdd rise=0.1n fall=0.1n width=0.5n delay=1n
+
+ic IO=0 IOB=pvdd BLB=pvdd-deltavbl BL=pvdd
+save :pwr

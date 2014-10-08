@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/netlist
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/ocnloader
+END
+plotGen.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/plotGen.tpl
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/RVP_Gate_Capacitance/readme
+END

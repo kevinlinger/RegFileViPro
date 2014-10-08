@@ -1,0 +1,150 @@
+//Generated for; spectre
+//Trying to find the gate cap of the WL transistor
+
+simulator lang=spectre
+global 0 
+
+
+
+
+parameters numBanks=4 ws=16 cg=6.59722e-16 cwl=1.09136e-16 pvdd=1.1 \
+    colMux=7 NR=32 cbl=5.08303e-17 tdly=1.25e-09 twl=8.333333e-10 \
+    WLOffset=0 trf=1e-12 tper=5e-09 wdef=1.2e-07 ldef=6e-08 lpg=1.25e-07 \
+    wpg=2.7e-07 lpd=1.2e-07 wpd=4e-07 lpu=1.2e-07 wpu=1.6e-07
+include "../../../../template/ibm65/include_mm.scs"
+include "../../../../template/ibm65/subN.scs"
+include "../../../../template/ibm65/subP.scs"
+include "../../../../template/ibm65/subPU.scs"
+include "../../../../template/ibm65/subPD.scs"
+include "../../../../template/ibm65/subPG.scs"
+////Cell name: buf
+subckt buf IN OUT VDD VSS
+parameters wp2=wdef wp1=wdef wn2=wdef wn1=wdef l=ldef
+MP1 (OUTB IN VDD VDD) P_TRANSISTOR width=wp1 length=l
+MN1 (OUTB IN VSS VSS) N_TRANSISTOR width=wn1 length=l
+MP2 (OUT OUTB VDD VDD) P_TRANSISTOR width=8*wp2 length=l
+MN2 (OUT OUTB VSS VSS) N_TRANSISTOR width=8*wn2 length=l
+ends buf
+
+// Cell name: bitcell6T
+// View name: schematic
+subckt bitcell6T BL BLB VDDC VSSC WL
+M3 (QB WL BLB VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M2 (Q WL BL VSSC) PG_TRANSISTOR width=wpg length=lpg 
+M4 (QB Q VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M1 (Q QB VSSC VSSC) PD_TRANSISTOR width=wpd length=lpd 
+M5 (QB Q VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+M0 (Q QB VDDC VDDC) PU_TRANSISTOR width=wpu length=lpu 
+ends bitcell6T
+
+// Cell name: triinv
+// View name: schematic
+subckt triinv IN OUT TRI_N TRI_P VDD VSS
+parameters wp=4*wdef lp=ldef wn=2*wdef ln=ldef
+M0 (OUT IN net19 VDD) P_TRANSISTOR width=wp length=lp 
+MP (net19 TRI_P VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT IN net31 VSS) N_TRANSISTOR width=wn length=ln 
+MN (net31 TRI_N VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends triinv
+// End of subcircuit definition.
+
+// Cell name: nand2
+// View name: schematic
+subckt nand2 INbot INtop OUT VDD VSS
+parameters wp=2*wdef lp=ldef wn=2*wdef ln=ldef
+M2 (OUT INtop VDD VDD) P_TRANSISTOR width=wp length=lp 
+MP (OUT INbot VDD VDD) P_TRANSISTOR width=wp length=lp 
+M1 (OUT INtop net048 VSS) N_TRANSISTOR width=wn length=ln 
+M3 (net048 INbot VSS VSS) N_TRANSISTOR width=wn length=ln 
+ends nand2
+// End of subcircuit definition.
+
+// Cell name: CD
+// View name: schematic
+subckt CD BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS
+parameters wncs=6*wdef lncs=ldef wpcs=6*wdef lpcs=ldef wpch=6*wdef lpch=ldef
+M3 (BLB CSEL NRDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M1 (BL CSEL RDWR VSS) N_TRANSISTOR width=wncs length=lncs 
+M4 (NRDWR CSELB BLB VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M5 (BLB PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+M2 (RDWR CSELB BL VDD) P_TRANSISTOR width=wpcs length=lpcs 
+M0 (BL PCH VDD VDD) P_TRANSISTOR width=wpch length=lpch 
+M6 (BL PCH BLB VDD) P_TRANSISTOR width=wpch length=lpch
+ends CD
+// End of subcircuit definition.
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=2*i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+//generic inverter chain optimize later
+subckt INVCHAIN IN OUT VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4
+I2 (X3 X2 VDD VSS) INV i=16
+I3 (OUT X3 VDD VSS) INV i=48
+ends INVCHAIN
+
+// DUT name: BitSlice_test
+
+subckt COL BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS
+IBCA (BL BLB VDD VSS WLA) bitcell6T
+IBCD (BL BLB VDD VSS VSS) bitcell6T m=(NR - 1)
+ICDA (BL BLB CSEL CSELB NRDWR PCH RDWR VDD VSS) CD 
+CBL (BL 0) capacitor c=cbl*(NR+15)
+CBLB (BLB 0) capacitor c=cbl*(NR+15)
+ends COL
+
+//BC and CD
+ICOL1 (BL BLB WLA CSEL CSELB NRDWR RDWR PCH VDD VSS) COL
+ICOLD (BLD BLBD WLA VSS VDD NRDWR RDWR PCH VDD VSS) COL m=colMux
+
+IWRD (DIN BL WEN WENB VDD VSS) triinv wp=wdef lp=ldef wn=wdef*10 ln=ldef
+IWRDB (db BLB WEN WENB VDD VSS) triinv wp=wdef lp=ldef wn=wdef*10 ln=ldef
+IWENB (WENB WEN VDD VSS) INV i=1
+
+//Input drivers for DUT
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+// Cap calculation for pch (assumes size of pch is 6x min, 3 devices)
+capPCH (PCH 0) capacitor c=numBanks/2*ws*cwl*(colMux+1)+wdef*cg*1e6*(ws-1)*6*3*(colMux+1)
+// cap calculation for WEN (assumes write driver nmos sized 10x min, pmos min, 2 drivers per column) also assumes WEN signal has already been ANDed with the colSel signal
+capWEN (WEN 0) capacitor c=numBanks/2*ws*cwl*(colMux+1)+wdef*cg*1e6*(ws-1)*22*2
+
+VWLA (WLA 0) vsource type=pulse val0=0 val1=pvdd+WLOffset rise=trf fall=trf width=twl period=tper delay=tdly+5e-10
+
+
+VCSEL (CSEL 0) vsource dc=0
+VCSELB (CSELB 0) vsource dc=pvdd
+VPCH (PCH_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/1.5 period=tper*1.5 delay=0
+
+VDIN (DIN_IN 0) vsource dc=0
+Idb (db DIN VDD VSS) INV i=1
+VWEN (WEN_IN 0) vsource type=pulse val0=0 val1=pvdd rise=trf fall=trf width=tper/1.5 period=tper*1.5 delay=0
+IPCH (PCH_IN PCH VDD VSS) INVCHAIN
+IB7 (DIN_IN DIN VDD VSS) buf
+IWEN (WEN_IN WEN VDD VSS) INVCHAIN
+
+ic ICOL1.IBCA.Q=0 ICOL1.IBCD.Q=pvdd ICOLD.IBCA.Q=0 ICOLD.IBCD.Q=pvdd BL=pvdd BLB=pvdd BLD=pvdd BLBD=pvdd NRDWR=0 RDWR=0
+myOption options pwr=all
+
+simulatorOptions options reltol=0.001 vabstol=1e-6 iabstol=1e-12 temp=25 \
+    tnom=27 multithread=on nthreads=3 scalem=1.0 scale=1.0 gmin=1e-22 \
+    rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="OUTW/psf/sens.output" checklimitdest=psf 
+tran tran stop=5.5e-09 errpreset=moderate start=0 step=1e-11 \
+    write="spectre.ic" writefinal="spectre.fc" annotate=status \
+    strobeperiod=1e-12 maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub
+ 

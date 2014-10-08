@@ -1,0 +1,3 @@
+Determine the junction capacitance by matching two inverters of the same size driven by the same circuit. One inverter is loaded by a test cap which is swept and the other is loaded by a MOSFET. The value of the test cap when the delays of both the inverters are the same will be the value of the the junction cap of the FET. Alternatively, powers can be matched instead of delay.
+
+In the current sim, a sweep of the test cap from dcap_start to dcap_stop is done in steps of dcap_step. The plotGen file then finds the value of the test cap where the delays match.

@@ -1,0 +1,75 @@
+subckt bitcell VSS VDD BL WL
+    P0 (Q QB VDD VDD) P_TRANSISTOR width=wdef length=ldef
+    N0 (Q QB VSS VSS) N_TRANSISTOR width=wdef length=ldef
+
+    P1 (QB Q VDD VDD) P_TRANSISTOR width=wdef length=ldef
+    N1 (QB Q VSS VSS) N_TRANSISTOR width=wdef length=ldef
+
+    N2 (BL WL Q VSS) N_TRANSISTOR width=wdef length=ldef
+ends bitcell
+
+subckt INV OUT IN VDD VSS
+    P1 (OUT IN VDD VDD) P_TRANSISTOR width=wdef length=ldef
+    N1 (OUT IN VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ends INV
+
+subckt ST VSS VDD OUT IN PRE
+    // PMOS half of schmitt-trigger
+    P0 (INY IN  VDD VDD) P_TRANSISTOR width=wdef length=ldef
+    P1 (INY IN  OUT VDD) P_TRANSISTOR width=wdef length=ldef
+    P2 (INY OUT VVS VDD) P_TRANSISTOR width=wdef length=ldef
+
+    // NMOS half of schmitt-trigger
+    N0 (OUT IN  INX VSS) N_TRANSISTOR width=wdef length=ldef
+    N1 (INX IN  VSS VSS) N_TRANSISTOR width=wdef length=ldef
+    N2 (INX OUT VDD VSS) N_TRANSISTOR width=wdef length=ldef 
+
+    // NFET to break feedback
+    N3 (VVS PRE VSS VSS) N_TRANSISTOR width=wdef length=ldef
+ends ST
+
+subckt JSA IN OUT OUTB PRE PREB VDD VSS
+    IST (VSS VDD OUT IN PRE) ST
+    IINV (OUTB OUT VDD VSS) INV
+
+    // Pull-up
+    // pre-charge up to the point where ST triggers to a "0"
+    P1 (IN PREB VVD VDD) P_TRANSISTOR width=wdef length=ldef
+    N1 (VVD OUT VDD VSS) N_TRANSISTOR width=2*wdef length=ldef
+
+    // Pull-down
+    // during resolution phase, pull down to VSS if output makes "0->1" transition
+    N2 (RST OUT IN VSS) N_TRANSISTOR width=wdef length=ldef	
+    N3 (RST PREB VSS VSS) N_TRANSISTOR width=wdef length=ldef
+
+    // capacitor coupling input to output-bar, to cancel-out feedthrough during reset phase
+    C1 (OUTB IN OUTB VSS) N_TRANSISTOR width=wdef length=ldef 
+ends JSA
+
+// Main Circuit
+
+// Bitcell column
+B0 (VSS VDD BL WL) bitcell
+B1 (VSS VDD BL VSS) bitcell m=255
+C0 (BL 0) capacitor c=25f // capacitance of metal
+
+// Decouple BL from input
+NX (IN WL BL VSS) N_TRANSISTOR width=wdef length=ldef
+
+// SA
+J1 (IN OUT OUTB PRE PREB VDD VSS) JSA
+
+// Precharge
+P0 (BL PREB VDDPRE VDDPRE) P_TRANSISTOR width=wdef length=ldef
+
+VPRE (PRE 0) vsource type=pulse val0=pvdd val1=0.0  delay=0n rise=0.2n fall=0.2n width=1.8n period=4n
+VPREB (PREB 0) vsource type=pulse val0=0.0  val1=pvdd delay=0n rise=0.2n fall=0.2n width=1.8n period=4n 
+
+VWL (WL 0) vsource type=pwl wave=[0n 0 5n 0 5.2n pvdd 6n pvdd 6.2n 0]
+
+VDDPRE (VDDPRE 0) vsource dc=0.6 type=dc
+
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+ic B0.Q=0 B0.QB=pvdd B1.Q=pvdd B1.QB=0 

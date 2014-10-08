@@ -1,0 +1,37 @@
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+VSAE (SAE_IN 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VPCH (PCH_IN 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+myOption options pwr=all
+
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+subckt INVCHAIN_SAE0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=6.35
+I2 (X3 X2 VDD VSS) INV i=40.05
+I3 (X4 X3 VDD VSS) INV i=256
+ends INVCHAIN_SAE0
+
+subckt INVCHAIN_PCH0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=6.35
+I2 (X3 X2 VDD VSS) INV i=40.05
+I3 (X4 X3 VDD VSS) INV i=256
+ends INVCHAIN_PCH0
+
+ISAE0 (SAE_OUT0 SAE_IN0 VDD VSS) INVCHAIN_SAE0
+IPCH0 (PCH_OUT0 PCH_IN0 VDD VSS) INVCHAIN_PCH0
+
+CSAE0 (SAE_OUT0 0) capacitor c=ws*cwl
+CSAE1 (SAE_OUT1 0) capacitor c=ws*2*cwl
+CPCH0 (PCH_OUT0 0) capacitor c=ws*cwl
+CPCH1 (PCH_OUT1 0) capacitor c=ws*2*cwl
+

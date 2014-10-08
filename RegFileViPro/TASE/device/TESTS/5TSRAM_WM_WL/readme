@@ -1,0 +1,5 @@
+Original spec: Write Margin (WL criterion) distribution
+
+Measurement:
+Access transistors connected to WL. WL is swept from 0 to VDD. At the critical WL value, the internal nodes Q and QB flip. Write margin is the margin between this value and VDD. 
+

@@ -1,0 +1,9318 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "7.0.1.125.isr11"
+"date" "2:01:43 PM, Wed Apr 25, 2012"
+"design" "//Generated for; spectre"
+"analysis type" "info"
+"analysis name" "designParamVals"
+"analysis description" "Circuit Information"
+"xVecSorted" "unsorted"
+"tolerance.relative" 0.00100000
+TYPE
+"top-level" STRUCT(
+"temp" FLOAT DOUBLE
+"tnom" FLOAT DOUBLE
+"time" FLOAT DOUBLE
+"numBanks" FLOAT DOUBLE
+"ws" FLOAT DOUBLE
+"cg" FLOAT DOUBLE
+"cwl" FLOAT DOUBLE
+"pvdd" FLOAT DOUBLE
+"colMux" FLOAT DOUBLE
+"NR" FLOAT DOUBLE
+"cbl" FLOAT DOUBLE
+"tdly" FLOAT DOUBLE
+"twl" FLOAT DOUBLE
+"trf" FLOAT DOUBLE
+"tper" FLOAT DOUBLE
+"wdef" FLOAT DOUBLE
+"ldef" FLOAT DOUBLE
+"lpg" FLOAT DOUBLE
+"wpg" FLOAT DOUBLE
+"lpd" FLOAT DOUBLE
+"wpd" FLOAT DOUBLE
+"lpu" FLOAT DOUBLE
+"wpu" FLOAT DOUBLE
+"wnth" FLOAT DOUBLE
+"mc_global" FLOAT DOUBLE
+"fet_cnr_sw" FLOAT DOUBLE
+"wireopt" FLOAT DOUBLE
+"pccrit_global" FLOAT DOUBLE
+"grs" FLOAT DOUBLE
+"esd_event" FLOAT DOUBLE
+"esd_exit" FLOAT DOUBLE
+"esd_extr" FLOAT DOUBLE
+"fet_dop_mm" FLOAT DOUBLE
+"fet_geo_mm" FLOAT DOUBLE
+"pc_nest_add" FLOAT DOUBLE
+"pc_orient_add" FLOAT DOUBLE
+"pc_dist_add" FLOAT DOUBLE
+"pc_nest" FLOAT DOUBLE
+"pc_orient" FLOAT DOUBLE
+"pc_dist" FLOAT DOUBLE
+"sigma" FLOAT DOUBLE
+"cor_acv_corr" FLOAT DOUBLE
+"cor_acv_uncorr" FLOAT DOUBLE
+"cor_noin" FLOAT DOUBLE
+"cor_noip" FLOAT DOUBLE
+"cor_rx" FLOAT DOUBLE
+"cor_pc" FLOAT DOUBLE
+"cor_sub" FLOAT DOUBLE
+"cor_nw" FLOAT DOUBLE
+"cor_pw" FLOAT DOUBLE
+"cor_m1" FLOAT DOUBLE
+"cor_m2" FLOAT DOUBLE
+"cor_m3" FLOAT DOUBLE
+"cor_m4" FLOAT DOUBLE
+"cor_m5" FLOAT DOUBLE
+"cor_m6" FLOAT DOUBLE
+"cor_m7" FLOAT DOUBLE
+"cor_b1" FLOAT DOUBLE
+"cor_b2" FLOAT DOUBLE
+"cor_ba" FLOAT DOUBLE
+"cor_bb" FLOAT DOUBLE
+"cor_l1" FLOAT DOUBLE
+"cor_l2" FLOAT DOUBLE
+"cor_ea" FLOAT DOUBLE
+"cor_eb" FLOAT DOUBLE
+"cor_fa" FLOAT DOUBLE
+"cor_fb" FLOAT DOUBLE
+"cor_ua" FLOAT DOUBLE
+"cor_ub" FLOAT DOUBLE
+"cor_lb" FLOAT DOUBLE
+"cor_sub_pc" FLOAT DOUBLE
+"cor_diff_m1" FLOAT DOUBLE
+"cor_pc_m1" FLOAT DOUBLE
+"cor_sub_m1" FLOAT DOUBLE
+"cor_v1" FLOAT DOUBLE
+"cor_v2" FLOAT DOUBLE
+"cor_v3" FLOAT DOUBLE
+"cor_v4" FLOAT DOUBLE
+"cor_v5" FLOAT DOUBLE
+"cor_v6" FLOAT DOUBLE
+"cor_w0" FLOAT DOUBLE
+"cor_w1" FLOAT DOUBLE
+"cor_wt" FLOAT DOUBLE
+"cor_wa" FLOAT DOUBLE
+"cor_j0" FLOAT DOUBLE
+"cor_j1" FLOAT DOUBLE
+"cor_yt" FLOAT DOUBLE
+"cor_ya" FLOAT DOUBLE
+"cor_ot" FLOAT DOUBLE
+"cor_gm" FLOAT DOUBLE
+"cor_jr" FLOAT DOUBLE
+"cor_hl" FLOAT DOUBLE
+"cor_ga" FLOAT DOUBLE
+"cor_vv" FLOAT DOUBLE
+"cor_dgnfet" FLOAT DOUBLE
+"cor_dgpfet" FLOAT DOUBLE
+"cor_dgvnfet" FLOAT DOUBLE
+"cor_dgvpfet" FLOAT DOUBLE
+"cor_dgxnfet" FLOAT DOUBLE
+"cor_dgxpfet" FLOAT DOUBLE
+"cor_dplnfetpd" FLOAT DOUBLE
+"cor_dplnfetwl" FLOAT DOUBLE
+"cor_dplpfetpu" FLOAT DOUBLE
+"cor_dslnfetpd" FLOAT DOUBLE
+"cor_dslnfetwl" FLOAT DOUBLE
+"cor_dslpfetpu" FLOAT DOUBLE
+"cor_egnfet" FLOAT DOUBLE
+"cor_egpfet" FLOAT DOUBLE
+"cor_egvnfet" FLOAT DOUBLE
+"cor_egvpfet" FLOAT DOUBLE
+"cor_hvtnfet" FLOAT DOUBLE
+"cor_hvtpfet" FLOAT DOUBLE
+"cor_lshnfetpd" FLOAT DOUBLE
+"cor_lshnfetwl" FLOAT DOUBLE
+"cor_lshpfetpu" FLOAT DOUBLE
+"cor_lslnfetpd" FLOAT DOUBLE
+"cor_lslnfetwl" FLOAT DOUBLE
+"cor_lslpfetpu" FLOAT DOUBLE
+"cor_lvtnfet" FLOAT DOUBLE
+"cor_lvtpfet" FLOAT DOUBLE
+"cor_nfet" FLOAT DOUBLE
+"cor_pfet" FLOAT DOUBLE
+"cor_sslnfetpd" FLOAT DOUBLE
+"cor_sslnfetwl" FLOAT DOUBLE
+"cor_sslpfetpu" FLOAT DOUBLE
+"cor_zvtdgnfet" FLOAT DOUBLE
+"cor_zvtegnfet" FLOAT DOUBLE
+"cor_zvtnfet" FLOAT DOUBLE
+"pi" FLOAT DOUBLE
+"e0" FLOAT DOUBLE
+"mu0" FLOAT DOUBLE
+"pepoxsti" FLOAT DOUBLE
+"ersi" FLOAT DOUBLE
+"wireo" FLOAT DOUBLE
+"mc_test1" FLOAT DOUBLE
+"mc2_test1" FLOAT DOUBLE
+"mc_test2" FLOAT DOUBLE
+"mc2_test2" FLOAT DOUBLE
+"mc_test3" FLOAT DOUBLE
+"mc2_test3" FLOAT DOUBLE
+"mc_sw" FLOAT DOUBLE
+"mc_gl_f" FLOAT DOUBLE
+"mc_fet_mm_f" FLOAT DOUBLE
+"mc_std" FLOAT DOUBLE
+"cnr_pc" FLOAT DOUBLE
+"cnr_rx" FLOAT DOUBLE
+"cnr_tox" FLOAT DOUBLE
+"cnr_toxeg" FLOAT DOUBLE
+"cnr_toxdg" FLOAT DOUBLE
+"cnr_nmos" FLOAT DOUBLE
+"cnr_pmos" FLOAT DOUBLE
+"cnr_acv_corr" FLOAT DOUBLE
+"cnr_acv_uncorr" FLOAT DOUBLE
+"cnr_noin" FLOAT DOUBLE
+"cnr_noip" FLOAT DOUBLE
+"cnr_dgnfet" FLOAT DOUBLE
+"cnr_dgpfet" FLOAT DOUBLE
+"cnr_dgvnfet" FLOAT DOUBLE
+"cnr_dgvpfet" FLOAT DOUBLE
+"cnr_dgxnfet" FLOAT DOUBLE
+"cnr_dgxpfet" FLOAT DOUBLE
+"cnr_dplnfetpd" FLOAT DOUBLE
+"cnr_dplnfetwl" FLOAT DOUBLE
+"cnr_dplpfetpu" FLOAT DOUBLE
+"cnr_dslnfetpd" FLOAT DOUBLE
+"cnr_dslnfetwl" FLOAT DOUBLE
+"cnr_dslpfetpu" FLOAT DOUBLE
+"cnr_egnfet" FLOAT DOUBLE
+"cnr_egpfet" FLOAT DOUBLE
+"cnr_egvnfet" FLOAT DOUBLE
+"cnr_egvpfet" FLOAT DOUBLE
+"cnr_hvtnfet" FLOAT DOUBLE
+"cnr_hvtpfet" FLOAT DOUBLE
+"cnr_lshnfetpd" FLOAT DOUBLE
+"cnr_lshnfetwl" FLOAT DOUBLE
+"cnr_lshpfetpu" FLOAT DOUBLE
+"cnr_lslnfetpd" FLOAT DOUBLE
+"cnr_lslnfetwl" FLOAT DOUBLE
+"cnr_lslpfetpu" FLOAT DOUBLE
+"cnr_lvtnfet" FLOAT DOUBLE
+"cnr_lvtpfet" FLOAT DOUBLE
+"cnr_nfet" FLOAT DOUBLE
+"cnr_pfet" FLOAT DOUBLE
+"cnr_sslnfetpd" FLOAT DOUBLE
+"cnr_sslnfetwl" FLOAT DOUBLE
+"cnr_sslpfetpu" FLOAT DOUBLE
+"cnr_zvtdgnfet" FLOAT DOUBLE
+"cnr_zvtegnfet" FLOAT DOUBLE
+"cnr_zvtnfet" FLOAT DOUBLE
+"xtox" FLOAT DOUBLE
+"dtox" FLOAT DOUBLE
+"dtox_fet" FLOAT DOUBLE
+"xtoxeg" FLOAT DOUBLE
+"dtoxeg" FLOAT DOUBLE
+"dtoxeg_fet" FLOAT DOUBLE
+"xtoxdg" FLOAT DOUBLE
+"dtoxdg" FLOAT DOUBLE
+"dtoxdg_fet" FLOAT DOUBLE
+"xdelrx" FLOAT DOUBLE
+"delrx" FLOAT DOUBLE
+"delrx_fet" FLOAT DOUBLE
+"mjs_nfet" FLOAT DOUBLE
+"pbs_nfet" FLOAT DOUBLE
+"tcj_nfet" FLOAT DOUBLE
+"tpb_nfet" FLOAT DOUBLE
+"mjsws_nfet" FLOAT DOUBLE
+"pbsws_nfet" FLOAT DOUBLE
+"tcjsw_nfet" FLOAT DOUBLE
+"tpbsw_nfet" FLOAT DOUBLE
+"mjs_pfet" FLOAT DOUBLE
+"pbs_pfet" FLOAT DOUBLE
+"tcj_pfet" FLOAT DOUBLE
+"tpb_pfet" FLOAT DOUBLE
+"mjsws_pfet" FLOAT DOUBLE
+"pbsws_pfet" FLOAT DOUBLE
+"tcjsw_pfet" FLOAT DOUBLE
+"tpbsw_pfet" FLOAT DOUBLE
+"xl_egncap_f" FLOAT DOUBLE
+"xw_nonfet_f" FLOAT DOUBLE
+"fixed_cor_sw0" FLOAT DOUBLE
+"fixed_cor_sw1" FLOAT DOUBLE
+"fixed_cor_sw2" FLOAT DOUBLE
+"fixed_cor_sw3" FLOAT DOUBLE
+"fixed_cor_sw4" FLOAT DOUBLE
+"fixed_cor_sw5" FLOAT DOUBLE
+"fixed_cor_sw6" FLOAT DOUBLE
+"fixed_cor_sw7" FLOAT DOUBLE
+"fixed_cor_sw8" FLOAT DOUBLE
+"fixed_cor_sw9" FLOAT DOUBLE
+"fixed_cor_sw10" FLOAT DOUBLE
+"cgsl_dgxpfet_fc" FLOAT DOUBLE
+"toxe_dgxpfet_fc" FLOAT DOUBLE
+"vth0_dgxpfet_fc" FLOAT DOUBLE
+"cgdl_dgxpfet_fc" FLOAT DOUBLE
+"cjsws_dgxpfet_fc" FLOAT DOUBLE
+"cgso_dgxpfet_fc" FLOAT DOUBLE
+"xl_dgxpfet_fc" FLOAT DOUBLE
+"cgdo_dgxpfet_fc" FLOAT DOUBLE
+"cjswgs_dgxpfet_fc" FLOAT DOUBLE
+"cjd_dgxpfet_fc" FLOAT DOUBLE
+"xw_dgxpfet_fc" FLOAT DOUBLE
+"cjswd_dgxpfet_fc" FLOAT DOUBLE
+"pvth0_dgxpfet_fc" FLOAT DOUBLE
+"cjs_dgxpfet_fc" FLOAT DOUBLE
+"cjswgd_dgxpfet_fc" FLOAT DOUBLE
+"rdsw_dgxpfet_fc" FLOAT DOUBLE
+"u0_dgxpfet_fc" FLOAT DOUBLE
+"cgsl_hvtpfet_fc" FLOAT DOUBLE
+"toxe_hvtpfet_fc" FLOAT DOUBLE
+"vth0_hvtpfet_fc" FLOAT DOUBLE
+"cgdl_hvtpfet_fc" FLOAT DOUBLE
+"cjsws_hvtpfet_fc" FLOAT DOUBLE
+"cgso_hvtpfet_fc" FLOAT DOUBLE
+"xl_hvtpfet_fc" FLOAT DOUBLE
+"cgdo_hvtpfet_fc" FLOAT DOUBLE
+"cjswgs_hvtpfet_fc" FLOAT DOUBLE
+"cjd_hvtpfet_fc" FLOAT DOUBLE
+"xw_hvtpfet_fc" FLOAT DOUBLE
+"cjswd_hvtpfet_fc" FLOAT DOUBLE
+"pvth0_hvtpfet_fc" FLOAT DOUBLE
+"cjs_hvtpfet_fc" FLOAT DOUBLE
+"cjswgd_hvtpfet_fc" FLOAT DOUBLE
+"rdsw_hvtpfet_fc" FLOAT DOUBLE
+"u0_hvtpfet_fc" FLOAT DOUBLE
+"cgsl_zvtegnfet_fc" FLOAT DOUBLE
+"toxe_zvtegnfet_fc" FLOAT DOUBLE
+"vth0_zvtegnfet_fc" FLOAT DOUBLE
+"cgdl_zvtegnfet_fc" FLOAT DOUBLE
+"cjsws_zvtegnfet_fc" FLOAT DOUBLE
+"cgso_zvtegnfet_fc" FLOAT DOUBLE
+"xl_zvtegnfet_fc" FLOAT DOUBLE
+"cgdo_zvtegnfet_fc" FLOAT DOUBLE
+"cjswgs_zvtegnfet_fc" FLOAT DOUBLE
+"cjd_zvtegnfet_fc" FLOAT DOUBLE
+"xw_zvtegnfet_fc" FLOAT DOUBLE
+"cjswd_zvtegnfet_fc" FLOAT DOUBLE
+"pvth0_zvtegnfet_fc" FLOAT DOUBLE
+"cjs_zvtegnfet_fc" FLOAT DOUBLE
+"cjswgd_zvtegnfet_fc" FLOAT DOUBLE
+"rdsw_zvtegnfet_fc" FLOAT DOUBLE
+"u0_zvtegnfet_fc" FLOAT DOUBLE
+"cgsl_dslpfetpu_fc" FLOAT DOUBLE
+"toxe_dslpfetpu_fc" FLOAT DOUBLE
+"vth0_dslpfetpu_fc" FLOAT DOUBLE
+"cgdl_dslpfetpu_fc" FLOAT DOUBLE
+"cjsws_dslpfetpu_fc" FLOAT DOUBLE
+"cgso_dslpfetpu_fc" FLOAT DOUBLE
+"xl_dslpfetpu_fc" FLOAT DOUBLE
+"cgdo_dslpfetpu_fc" FLOAT DOUBLE
+"cjswgs_dslpfetpu_fc" FLOAT DOUBLE
+"cjd_dslpfetpu_fc" FLOAT DOUBLE
+"xw_dslpfetpu_fc" FLOAT DOUBLE
+"cjswd_dslpfetpu_fc" FLOAT DOUBLE
+"pvth0_dslpfetpu_fc" FLOAT DOUBLE
+"cjs_dslpfetpu_fc" FLOAT DOUBLE
+"cjswgd_dslpfetpu_fc" FLOAT DOUBLE
+"rdsw_dslpfetpu_fc" FLOAT DOUBLE
+"u0_dslpfetpu_fc" FLOAT DOUBLE
+"cgsl_dplnfetwl_fc" FLOAT DOUBLE
+"toxe_dplnfetwl_fc" FLOAT DOUBLE
+"vth0_dplnfetwl_fc" FLOAT DOUBLE
+"cgdl_dplnfetwl_fc" FLOAT DOUBLE
+"cjsws_dplnfetwl_fc" FLOAT DOUBLE
+"cgso_dplnfetwl_fc" FLOAT DOUBLE
+"xl_dplnfetwl_fc" FLOAT DOUBLE
+"cgdo_dplnfetwl_fc" FLOAT DOUBLE
+"cjswgs_dplnfetwl_fc" FLOAT DOUBLE
+"cjd_dplnfetwl_fc" FLOAT DOUBLE
+"xw_dplnfetwl_fc" FLOAT DOUBLE
+"cjswd_dplnfetwl_fc" FLOAT DOUBLE
+"pvth0_dplnfetwl_fc" FLOAT DOUBLE
+"cjs_dplnfetwl_fc" FLOAT DOUBLE
+"cjswgd_dplnfetwl_fc" FLOAT DOUBLE
+"rdsw_dplnfetwl_fc" FLOAT DOUBLE
+"u0_dplnfetwl_fc" FLOAT DOUBLE
+"cgsl_nfet_fc" FLOAT DOUBLE
+"toxe_nfet_fc" FLOAT DOUBLE
+"vth0_nfet_fc" FLOAT DOUBLE
+"cgdl_nfet_fc" FLOAT DOUBLE
+"cjsws_nfet_fc" FLOAT DOUBLE
+"cgso_nfet_fc" FLOAT DOUBLE
+"xl_nfet_fc" FLOAT DOUBLE
+"cgdo_nfet_fc" FLOAT DOUBLE
+"cjswgs_nfet_fc" FLOAT DOUBLE
+"cjd_nfet_fc" FLOAT DOUBLE
+"xw_nfet_fc" FLOAT DOUBLE
+"cjswd_nfet_fc" FLOAT DOUBLE
+"pvth0_nfet_fc" FLOAT DOUBLE
+"cjs_nfet_fc" FLOAT DOUBLE
+"cjswgd_nfet_fc" FLOAT DOUBLE
+"rdsw_nfet_fc" FLOAT DOUBLE
+"u0_nfet_fc" FLOAT DOUBLE
+"cgsl_lshnfetwl_fc" FLOAT DOUBLE
+"toxe_lshnfetwl_fc" FLOAT DOUBLE
+"vth0_lshnfetwl_fc" FLOAT DOUBLE
+"cgdl_lshnfetwl_fc" FLOAT DOUBLE
+"cjsws_lshnfetwl_fc" FLOAT DOUBLE
+"cgso_lshnfetwl_fc" FLOAT DOUBLE
+"xl_lshnfetwl_fc" FLOAT DOUBLE
+"cgdo_lshnfetwl_fc" FLOAT DOUBLE
+"cjswgs_lshnfetwl_fc" FLOAT DOUBLE
+"cjd_lshnfetwl_fc" FLOAT DOUBLE
+"xw_lshnfetwl_fc" FLOAT DOUBLE
+"cjswd_lshnfetwl_fc" FLOAT DOUBLE
+"pvth0_lshnfetwl_fc" FLOAT DOUBLE
+"cjs_lshnfetwl_fc" FLOAT DOUBLE
+"cjswgd_lshnfetwl_fc" FLOAT DOUBLE
+"rdsw_lshnfetwl_fc" FLOAT DOUBLE
+"u0_lshnfetwl_fc" FLOAT DOUBLE
+"cgsl_sslpfetpu_fc" FLOAT DOUBLE
+"toxe_sslpfetpu_fc" FLOAT DOUBLE
+"vth0_sslpfetpu_fc" FLOAT DOUBLE
+"cgdl_sslpfetpu_fc" FLOAT DOUBLE
+"cjsws_sslpfetpu_fc" FLOAT DOUBLE
+"cgso_sslpfetpu_fc" FLOAT DOUBLE
+"xl_sslpfetpu_fc" FLOAT DOUBLE
+"cgdo_sslpfetpu_fc" FLOAT DOUBLE
+"cjswgs_sslpfetpu_fc" FLOAT DOUBLE
+"cjd_sslpfetpu_fc" FLOAT DOUBLE
+"xw_sslpfetpu_fc" FLOAT DOUBLE
+"cjswd_sslpfetpu_fc" FLOAT DOUBLE
+"pvth0_sslpfetpu_fc" FLOAT DOUBLE
+"cjs_sslpfetpu_fc" FLOAT DOUBLE
+"cjswgd_sslpfetpu_fc" FLOAT DOUBLE
+"rdsw_sslpfetpu_fc" FLOAT DOUBLE
+"u0_sslpfetpu_fc" FLOAT DOUBLE
+"cgsl_lslpfetpu_fc" FLOAT DOUBLE
+"toxe_lslpfetpu_fc" FLOAT DOUBLE
+"vth0_lslpfetpu_fc" FLOAT DOUBLE
+"cgdl_lslpfetpu_fc" FLOAT DOUBLE
+"cjsws_lslpfetpu_fc" FLOAT DOUBLE
+"cgso_lslpfetpu_fc" FLOAT DOUBLE
+"xl_lslpfetpu_fc" FLOAT DOUBLE
+"cgdo_lslpfetpu_fc" FLOAT DOUBLE
+"cjswgs_lslpfetpu_fc" FLOAT DOUBLE
+"cjd_lslpfetpu_fc" FLOAT DOUBLE
+"xw_lslpfetpu_fc" FLOAT DOUBLE
+"cjswd_lslpfetpu_fc" FLOAT DOUBLE
+"pvth0_lslpfetpu_fc" FLOAT DOUBLE
+"cjs_lslpfetpu_fc" FLOAT DOUBLE
+"cjswgd_lslpfetpu_fc" FLOAT DOUBLE
+"rdsw_lslpfetpu_fc" FLOAT DOUBLE
+"u0_lslpfetpu_fc" FLOAT DOUBLE
+"cgsl_egvnfet_fc" FLOAT DOUBLE
+"toxe_egvnfet_fc" FLOAT DOUBLE
+"vth0_egvnfet_fc" FLOAT DOUBLE
+"cgdl_egvnfet_fc" FLOAT DOUBLE
+"cjsws_egvnfet_fc" FLOAT DOUBLE
+"cgso_egvnfet_fc" FLOAT DOUBLE
+"xl_egvnfet_fc" FLOAT DOUBLE
+"cgdo_egvnfet_fc" FLOAT DOUBLE
+"cjswgs_egvnfet_fc" FLOAT DOUBLE
+"cjd_egvnfet_fc" FLOAT DOUBLE
+"xw_egvnfet_fc" FLOAT DOUBLE
+"cjswd_egvnfet_fc" FLOAT DOUBLE
+"pvth0_egvnfet_fc" FLOAT DOUBLE
+"cjs_egvnfet_fc" FLOAT DOUBLE
+"cjswgd_egvnfet_fc" FLOAT DOUBLE
+"rdsw_egvnfet_fc" FLOAT DOUBLE
+"u0_egvnfet_fc" FLOAT DOUBLE
+"cgsl_lvtnfet_fc" FLOAT DOUBLE
+"toxe_lvtnfet_fc" FLOAT DOUBLE
+"vth0_lvtnfet_fc" FLOAT DOUBLE
+"cgdl_lvtnfet_fc" FLOAT DOUBLE
+"cjsws_lvtnfet_fc" FLOAT DOUBLE
+"cgso_lvtnfet_fc" FLOAT DOUBLE
+"xl_lvtnfet_fc" FLOAT DOUBLE
+"cgdo_lvtnfet_fc" FLOAT DOUBLE
+"cjswgs_lvtnfet_fc" FLOAT DOUBLE
+"cjd_lvtnfet_fc" FLOAT DOUBLE
+"xw_lvtnfet_fc" FLOAT DOUBLE
+"cjswd_lvtnfet_fc" FLOAT DOUBLE
+"pvth0_lvtnfet_fc" FLOAT DOUBLE
+"cjs_lvtnfet_fc" FLOAT DOUBLE
+"cjswgd_lvtnfet_fc" FLOAT DOUBLE
+"rdsw_lvtnfet_fc" FLOAT DOUBLE
+"u0_lvtnfet_fc" FLOAT DOUBLE
+"cgsl_dplnfetpd_fc" FLOAT DOUBLE
+"toxe_dplnfetpd_fc" FLOAT DOUBLE
+"vth0_dplnfetpd_fc" FLOAT DOUBLE
+"cgdl_dplnfetpd_fc" FLOAT DOUBLE
+"cjsws_dplnfetpd_fc" FLOAT DOUBLE
+"cgso_dplnfetpd_fc" FLOAT DOUBLE
+"xl_dplnfetpd_fc" FLOAT DOUBLE
+"cgdo_dplnfetpd_fc" FLOAT DOUBLE
+"cjswgs_dplnfetpd_fc" FLOAT DOUBLE
+"cjd_dplnfetpd_fc" FLOAT DOUBLE
+"xw_dplnfetpd_fc" FLOAT DOUBLE
+"cjswd_dplnfetpd_fc" FLOAT DOUBLE
+"pvth0_dplnfetpd_fc" FLOAT DOUBLE
+"cjs_dplnfetpd_fc" FLOAT DOUBLE
+"cjswgd_dplnfetpd_fc" FLOAT DOUBLE
+"rdsw_dplnfetpd_fc" FLOAT DOUBLE
+"u0_dplnfetpd_fc" FLOAT DOUBLE
+"cgsl_egnfet_fc" FLOAT DOUBLE
+"toxe_egnfet_fc" FLOAT DOUBLE
+"vth0_egnfet_fc" FLOAT DOUBLE
+"cgdl_egnfet_fc" FLOAT DOUBLE
+"cjsws_egnfet_fc" FLOAT DOUBLE
+"cgso_egnfet_fc" FLOAT DOUBLE
+"xl_egnfet_fc" FLOAT DOUBLE
+"cgdo_egnfet_fc" FLOAT DOUBLE
+"cjswgs_egnfet_fc" FLOAT DOUBLE
+"cjd_egnfet_fc" FLOAT DOUBLE
+"xw_egnfet_fc" FLOAT DOUBLE
+"cjswd_egnfet_fc" FLOAT DOUBLE
+"pvth0_egnfet_fc" FLOAT DOUBLE
+"cjs_egnfet_fc" FLOAT DOUBLE
+"cjswgd_egnfet_fc" FLOAT DOUBLE
+"rdsw_egnfet_fc" FLOAT DOUBLE
+"u0_egnfet_fc" FLOAT DOUBLE
+"cgsl_pfet_fc" FLOAT DOUBLE
+"toxe_pfet_fc" FLOAT DOUBLE
+"vth0_pfet_fc" FLOAT DOUBLE
+"cgdl_pfet_fc" FLOAT DOUBLE
+"cjsws_pfet_fc" FLOAT DOUBLE
+"cgso_pfet_fc" FLOAT DOUBLE
+"xl_pfet_fc" FLOAT DOUBLE
+"cgdo_pfet_fc" FLOAT DOUBLE
+"cjswgs_pfet_fc" FLOAT DOUBLE
+"cjd_pfet_fc" FLOAT DOUBLE
+"xw_pfet_fc" FLOAT DOUBLE
+"cjswd_pfet_fc" FLOAT DOUBLE
+"pvth0_pfet_fc" FLOAT DOUBLE
+"cjs_pfet_fc" FLOAT DOUBLE
+"cjswgd_pfet_fc" FLOAT DOUBLE
+"rdsw_pfet_fc" FLOAT DOUBLE
+"u0_pfet_fc" FLOAT DOUBLE
+"cgsl_lshnfetpd_fc" FLOAT DOUBLE
+"toxe_lshnfetpd_fc" FLOAT DOUBLE
+"vth0_lshnfetpd_fc" FLOAT DOUBLE
+"cgdl_lshnfetpd_fc" FLOAT DOUBLE
+"cjsws_lshnfetpd_fc" FLOAT DOUBLE
+"cgso_lshnfetpd_fc" FLOAT DOUBLE
+"xl_lshnfetpd_fc" FLOAT DOUBLE
+"cgdo_lshnfetpd_fc" FLOAT DOUBLE
+"cjswgs_lshnfetpd_fc" FLOAT DOUBLE
+"cjd_lshnfetpd_fc" FLOAT DOUBLE
+"xw_lshnfetpd_fc" FLOAT DOUBLE
+"cjswd_lshnfetpd_fc" FLOAT DOUBLE
+"pvth0_lshnfetpd_fc" FLOAT DOUBLE
+"cjs_lshnfetpd_fc" FLOAT DOUBLE
+"cjswgd_lshnfetpd_fc" FLOAT DOUBLE
+"rdsw_lshnfetpd_fc" FLOAT DOUBLE
+"u0_lshnfetpd_fc" FLOAT DOUBLE
+"cgsl_egvpfet_fc" FLOAT DOUBLE
+"toxe_egvpfet_fc" FLOAT DOUBLE
+"vth0_egvpfet_fc" FLOAT DOUBLE
+"cgdl_egvpfet_fc" FLOAT DOUBLE
+"cjsws_egvpfet_fc" FLOAT DOUBLE
+"cgso_egvpfet_fc" FLOAT DOUBLE
+"xl_egvpfet_fc" FLOAT DOUBLE
+"cgdo_egvpfet_fc" FLOAT DOUBLE
+"cjswgs_egvpfet_fc" FLOAT DOUBLE
+"cjd_egvpfet_fc" FLOAT DOUBLE
+"xw_egvpfet_fc" FLOAT DOUBLE
+"cjswd_egvpfet_fc" FLOAT DOUBLE
+"pvth0_egvpfet_fc" FLOAT DOUBLE
+"cjs_egvpfet_fc" FLOAT DOUBLE
+"cjswgd_egvpfet_fc" FLOAT DOUBLE
+"rdsw_egvpfet_fc" FLOAT DOUBLE
+"u0_egvpfet_fc" FLOAT DOUBLE
+"cgsl_egpfet_fc" FLOAT DOUBLE
+"toxe_egpfet_fc" FLOAT DOUBLE
+"vth0_egpfet_fc" FLOAT DOUBLE
+"cgdl_egpfet_fc" FLOAT DOUBLE
+"cjsws_egpfet_fc" FLOAT DOUBLE
+"cgso_egpfet_fc" FLOAT DOUBLE
+"xl_egpfet_fc" FLOAT DOUBLE
+"cgdo_egpfet_fc" FLOAT DOUBLE
+"cjswgs_egpfet_fc" FLOAT DOUBLE
+"cjd_egpfet_fc" FLOAT DOUBLE
+"xw_egpfet_fc" FLOAT DOUBLE
+"cjswd_egpfet_fc" FLOAT DOUBLE
+"pvth0_egpfet_fc" FLOAT DOUBLE
+"cjs_egpfet_fc" FLOAT DOUBLE
+"cjswgd_egpfet_fc" FLOAT DOUBLE
+"rdsw_egpfet_fc" FLOAT DOUBLE
+"u0_egpfet_fc" FLOAT DOUBLE
+"cgsl_lvtpfet_fc" FLOAT DOUBLE
+"toxe_lvtpfet_fc" FLOAT DOUBLE
+"vth0_lvtpfet_fc" FLOAT DOUBLE
+"cgdl_lvtpfet_fc" FLOAT DOUBLE
+"cjsws_lvtpfet_fc" FLOAT DOUBLE
+"cgso_lvtpfet_fc" FLOAT DOUBLE
+"xl_lvtpfet_fc" FLOAT DOUBLE
+"cgdo_lvtpfet_fc" FLOAT DOUBLE
+"cjswgs_lvtpfet_fc" FLOAT DOUBLE
+"cjd_lvtpfet_fc" FLOAT DOUBLE
+"xw_lvtpfet_fc" FLOAT DOUBLE
+"cjswd_lvtpfet_fc" FLOAT DOUBLE
+"pvth0_lvtpfet_fc" FLOAT DOUBLE
+"cjs_lvtpfet_fc" FLOAT DOUBLE
+"cjswgd_lvtpfet_fc" FLOAT DOUBLE
+"rdsw_lvtpfet_fc" FLOAT DOUBLE
+"u0_lvtpfet_fc" FLOAT DOUBLE
+"cgsl_zvtdgnfet_fc" FLOAT DOUBLE
+"toxe_zvtdgnfet_fc" FLOAT DOUBLE
+"vth0_zvtdgnfet_fc" FLOAT DOUBLE
+"cgdl_zvtdgnfet_fc" FLOAT DOUBLE
+"cjsws_zvtdgnfet_fc" FLOAT DOUBLE
+"cgso_zvtdgnfet_fc" FLOAT DOUBLE
+"xl_zvtdgnfet_fc" FLOAT DOUBLE
+"cgdo_zvtdgnfet_fc" FLOAT DOUBLE
+"cjswgs_zvtdgnfet_fc" FLOAT DOUBLE
+"cjd_zvtdgnfet_fc" FLOAT DOUBLE
+"xw_zvtdgnfet_fc" FLOAT DOUBLE
+"cjswd_zvtdgnfet_fc" FLOAT DOUBLE
+"pvth0_zvtdgnfet_fc" FLOAT DOUBLE
+"cjs_zvtdgnfet_fc" FLOAT DOUBLE
+"cjswgd_zvtdgnfet_fc" FLOAT DOUBLE
+"rdsw_zvtdgnfet_fc" FLOAT DOUBLE
+"u0_zvtdgnfet_fc" FLOAT DOUBLE
+"cgsl_dslnfetwl_fc" FLOAT DOUBLE
+"toxe_dslnfetwl_fc" FLOAT DOUBLE
+"vth0_dslnfetwl_fc" FLOAT DOUBLE
+"cgdl_dslnfetwl_fc" FLOAT DOUBLE
+"cjsws_dslnfetwl_fc" FLOAT DOUBLE
+"cgso_dslnfetwl_fc" FLOAT DOUBLE
+"xl_dslnfetwl_fc" FLOAT DOUBLE
+"cgdo_dslnfetwl_fc" FLOAT DOUBLE
+"cjswgs_dslnfetwl_fc" FLOAT DOUBLE
+"cjd_dslnfetwl_fc" FLOAT DOUBLE
+"xw_dslnfetwl_fc" FLOAT DOUBLE
+"cjswd_dslnfetwl_fc" FLOAT DOUBLE
+"pvth0_dslnfetwl_fc" FLOAT DOUBLE
+"cjs_dslnfetwl_fc" FLOAT DOUBLE
+"cjswgd_dslnfetwl_fc" FLOAT DOUBLE
+"rdsw_dslnfetwl_fc" FLOAT DOUBLE
+"u0_dslnfetwl_fc" FLOAT DOUBLE
+"cgsl_lslnfetwl_fc" FLOAT DOUBLE
+"toxe_lslnfetwl_fc" FLOAT DOUBLE
+"vth0_lslnfetwl_fc" FLOAT DOUBLE
+"cgdl_lslnfetwl_fc" FLOAT DOUBLE
+"cjsws_lslnfetwl_fc" FLOAT DOUBLE
+"cgso_lslnfetwl_fc" FLOAT DOUBLE
+"xl_lslnfetwl_fc" FLOAT DOUBLE
+"cgdo_lslnfetwl_fc" FLOAT DOUBLE
+"cjswgs_lslnfetwl_fc" FLOAT DOUBLE
+"cjd_lslnfetwl_fc" FLOAT DOUBLE
+"xw_lslnfetwl_fc" FLOAT DOUBLE
+"cjswd_lslnfetwl_fc" FLOAT DOUBLE
+"pvth0_lslnfetwl_fc" FLOAT DOUBLE
+"cjs_lslnfetwl_fc" FLOAT DOUBLE
+"cjswgd_lslnfetwl_fc" FLOAT DOUBLE
+"rdsw_lslnfetwl_fc" FLOAT DOUBLE
+"u0_lslnfetwl_fc" FLOAT DOUBLE
+"cgsl_sslnfetwl_fc" FLOAT DOUBLE
+"toxe_sslnfetwl_fc" FLOAT DOUBLE
+"vth0_sslnfetwl_fc" FLOAT DOUBLE
+"cgdl_sslnfetwl_fc" FLOAT DOUBLE
+"cjsws_sslnfetwl_fc" FLOAT DOUBLE
+"cgso_sslnfetwl_fc" FLOAT DOUBLE
+"xl_sslnfetwl_fc" FLOAT DOUBLE
+"cgdo_sslnfetwl_fc" FLOAT DOUBLE
+"cjswgs_sslnfetwl_fc" FLOAT DOUBLE
+"cjd_sslnfetwl_fc" FLOAT DOUBLE
+"xw_sslnfetwl_fc" FLOAT DOUBLE
+"cjswd_sslnfetwl_fc" FLOAT DOUBLE
+"pvth0_sslnfetwl_fc" FLOAT DOUBLE
+"cjs_sslnfetwl_fc" FLOAT DOUBLE
+"cjswgd_sslnfetwl_fc" FLOAT DOUBLE
+"rdsw_sslnfetwl_fc" FLOAT DOUBLE
+"u0_sslnfetwl_fc" FLOAT DOUBLE
+"cgsl_dgvnfet_fc" FLOAT DOUBLE
+"toxe_dgvnfet_fc" FLOAT DOUBLE
+"vth0_dgvnfet_fc" FLOAT DOUBLE
+"cgdl_dgvnfet_fc" FLOAT DOUBLE
+"cjsws_dgvnfet_fc" FLOAT DOUBLE
+"cgso_dgvnfet_fc" FLOAT DOUBLE
+"xl_dgvnfet_fc" FLOAT DOUBLE
+"cgdo_dgvnfet_fc" FLOAT DOUBLE
+"cjswgs_dgvnfet_fc" FLOAT DOUBLE
+"cjd_dgvnfet_fc" FLOAT DOUBLE
+"xw_dgvnfet_fc" FLOAT DOUBLE
+"cjswd_dgvnfet_fc" FLOAT DOUBLE
+"pvth0_dgvnfet_fc" FLOAT DOUBLE
+"cjs_dgvnfet_fc" FLOAT DOUBLE
+"cjswgd_dgvnfet_fc" FLOAT DOUBLE
+"rdsw_dgvnfet_fc" FLOAT DOUBLE
+"u0_dgvnfet_fc" FLOAT DOUBLE
+"cgsl_dslnfetpd_fc" FLOAT DOUBLE
+"toxe_dslnfetpd_fc" FLOAT DOUBLE
+"vth0_dslnfetpd_fc" FLOAT DOUBLE
+"cgdl_dslnfetpd_fc" FLOAT DOUBLE
+"cjsws_dslnfetpd_fc" FLOAT DOUBLE
+"cgso_dslnfetpd_fc" FLOAT DOUBLE
+"xl_dslnfetpd_fc" FLOAT DOUBLE
+"cgdo_dslnfetpd_fc" FLOAT DOUBLE
+"cjswgs_dslnfetpd_fc" FLOAT DOUBLE
+"cjd_dslnfetpd_fc" FLOAT DOUBLE
+"xw_dslnfetpd_fc" FLOAT DOUBLE
+"cjswd_dslnfetpd_fc" FLOAT DOUBLE
+"pvth0_dslnfetpd_fc" FLOAT DOUBLE
+"cjs_dslnfetpd_fc" FLOAT DOUBLE
+"cjswgd_dslnfetpd_fc" FLOAT DOUBLE
+"rdsw_dslnfetpd_fc" FLOAT DOUBLE
+"u0_dslnfetpd_fc" FLOAT DOUBLE
+"cgsl_dgnfet_fc" FLOAT DOUBLE
+"toxe_dgnfet_fc" FLOAT DOUBLE
+"vth0_dgnfet_fc" FLOAT DOUBLE
+"cgdl_dgnfet_fc" FLOAT DOUBLE
+"cjsws_dgnfet_fc" FLOAT DOUBLE
+"cgso_dgnfet_fc" FLOAT DOUBLE
+"xl_dgnfet_fc" FLOAT DOUBLE
+"cgdo_dgnfet_fc" FLOAT DOUBLE
+"cjswgs_dgnfet_fc" FLOAT DOUBLE
+"cjd_dgnfet_fc" FLOAT DOUBLE
+"xw_dgnfet_fc" FLOAT DOUBLE
+"cjswd_dgnfet_fc" FLOAT DOUBLE
+"pvth0_dgnfet_fc" FLOAT DOUBLE
+"cjs_dgnfet_fc" FLOAT DOUBLE
+"cjswgd_dgnfet_fc" FLOAT DOUBLE
+"rdsw_dgnfet_fc" FLOAT DOUBLE
+"u0_dgnfet_fc" FLOAT DOUBLE
+"cgsl_dplpfetpu_fc" FLOAT DOUBLE
+"toxe_dplpfetpu_fc" FLOAT DOUBLE
+"vth0_dplpfetpu_fc" FLOAT DOUBLE
+"cgdl_dplpfetpu_fc" FLOAT DOUBLE
+"cjsws_dplpfetpu_fc" FLOAT DOUBLE
+"cgso_dplpfetpu_fc" FLOAT DOUBLE
+"xl_dplpfetpu_fc" FLOAT DOUBLE
+"cgdo_dplpfetpu_fc" FLOAT DOUBLE
+"cjswgs_dplpfetpu_fc" FLOAT DOUBLE
+"cjd_dplpfetpu_fc" FLOAT DOUBLE
+"xw_dplpfetpu_fc" FLOAT DOUBLE
+"cjswd_dplpfetpu_fc" FLOAT DOUBLE
+"pvth0_dplpfetpu_fc" FLOAT DOUBLE
+"cjs_dplpfetpu_fc" FLOAT DOUBLE
+"cjswgd_dplpfetpu_fc" FLOAT DOUBLE
+"rdsw_dplpfetpu_fc" FLOAT DOUBLE
+"u0_dplpfetpu_fc" FLOAT DOUBLE
+"cgsl_dgvpfet_fc" FLOAT DOUBLE
+"toxe_dgvpfet_fc" FLOAT DOUBLE
+"vth0_dgvpfet_fc" FLOAT DOUBLE
+"cgdl_dgvpfet_fc" FLOAT DOUBLE
+"cjsws_dgvpfet_fc" FLOAT DOUBLE
+"cgso_dgvpfet_fc" FLOAT DOUBLE
+"xl_dgvpfet_fc" FLOAT DOUBLE
+"cgdo_dgvpfet_fc" FLOAT DOUBLE
+"cjswgs_dgvpfet_fc" FLOAT DOUBLE
+"cjd_dgvpfet_fc" FLOAT DOUBLE
+"xw_dgvpfet_fc" FLOAT DOUBLE
+"cjswd_dgvpfet_fc" FLOAT DOUBLE
+"pvth0_dgvpfet_fc" FLOAT DOUBLE
+"cjs_dgvpfet_fc" FLOAT DOUBLE
+"cjswgd_dgvpfet_fc" FLOAT DOUBLE
+"rdsw_dgvpfet_fc" FLOAT DOUBLE
+"u0_dgvpfet_fc" FLOAT DOUBLE
+"cgsl_sslnfetpd_fc" FLOAT DOUBLE
+"toxe_sslnfetpd_fc" FLOAT DOUBLE
+"vth0_sslnfetpd_fc" FLOAT DOUBLE
+"cgdl_sslnfetpd_fc" FLOAT DOUBLE
+"cjsws_sslnfetpd_fc" FLOAT DOUBLE
+"cgso_sslnfetpd_fc" FLOAT DOUBLE
+"xl_sslnfetpd_fc" FLOAT DOUBLE
+"cgdo_sslnfetpd_fc" FLOAT DOUBLE
+"cjswgs_sslnfetpd_fc" FLOAT DOUBLE
+"cjd_sslnfetpd_fc" FLOAT DOUBLE
+"xw_sslnfetpd_fc" FLOAT DOUBLE
+"cjswd_sslnfetpd_fc" FLOAT DOUBLE
+"pvth0_sslnfetpd_fc" FLOAT DOUBLE
+"cjs_sslnfetpd_fc" FLOAT DOUBLE
+"cjswgd_sslnfetpd_fc" FLOAT DOUBLE
+"rdsw_sslnfetpd_fc" FLOAT DOUBLE
+"u0_sslnfetpd_fc" FLOAT DOUBLE
+"cgsl_lslnfetpd_fc" FLOAT DOUBLE
+"toxe_lslnfetpd_fc" FLOAT DOUBLE
+"vth0_lslnfetpd_fc" FLOAT DOUBLE
+"cgdl_lslnfetpd_fc" FLOAT DOUBLE
+"cjsws_lslnfetpd_fc" FLOAT DOUBLE
+"cgso_lslnfetpd_fc" FLOAT DOUBLE
+"xl_lslnfetpd_fc" FLOAT DOUBLE
+"cgdo_lslnfetpd_fc" FLOAT DOUBLE
+"cjswgs_lslnfetpd_fc" FLOAT DOUBLE
+"cjd_lslnfetpd_fc" FLOAT DOUBLE
+"xw_lslnfetpd_fc" FLOAT DOUBLE
+"cjswd_lslnfetpd_fc" FLOAT DOUBLE
+"pvth0_lslnfetpd_fc" FLOAT DOUBLE
+"cjs_lslnfetpd_fc" FLOAT DOUBLE
+"cjswgd_lslnfetpd_fc" FLOAT DOUBLE
+"rdsw_lslnfetpd_fc" FLOAT DOUBLE
+"u0_lslnfetpd_fc" FLOAT DOUBLE
+"cgsl_dgxnfet_fc" FLOAT DOUBLE
+"toxe_dgxnfet_fc" FLOAT DOUBLE
+"vth0_dgxnfet_fc" FLOAT DOUBLE
+"cgdl_dgxnfet_fc" FLOAT DOUBLE
+"cjsws_dgxnfet_fc" FLOAT DOUBLE
+"cgso_dgxnfet_fc" FLOAT DOUBLE
+"xl_dgxnfet_fc" FLOAT DOUBLE
+"cgdo_dgxnfet_fc" FLOAT DOUBLE
+"cjswgs_dgxnfet_fc" FLOAT DOUBLE
+"cjd_dgxnfet_fc" FLOAT DOUBLE
+"xw_dgxnfet_fc" FLOAT DOUBLE
+"cjswd_dgxnfet_fc" FLOAT DOUBLE
+"pvth0_dgxnfet_fc" FLOAT DOUBLE
+"cjs_dgxnfet_fc" FLOAT DOUBLE
+"cjswgd_dgxnfet_fc" FLOAT DOUBLE
+"rdsw_dgxnfet_fc" FLOAT DOUBLE
+"u0_dgxnfet_fc" FLOAT DOUBLE
+"cgsl_lshpfetpu_fc" FLOAT DOUBLE
+"toxe_lshpfetpu_fc" FLOAT DOUBLE
+"vth0_lshpfetpu_fc" FLOAT DOUBLE
+"cgdl_lshpfetpu_fc" FLOAT DOUBLE
+"cjsws_lshpfetpu_fc" FLOAT DOUBLE
+"cgso_lshpfetpu_fc" FLOAT DOUBLE
+"xl_lshpfetpu_fc" FLOAT DOUBLE
+"cgdo_lshpfetpu_fc" FLOAT DOUBLE
+"cjswgs_lshpfetpu_fc" FLOAT DOUBLE
+"cjd_lshpfetpu_fc" FLOAT DOUBLE
+"xw_lshpfetpu_fc" FLOAT DOUBLE
+"cjswd_lshpfetpu_fc" FLOAT DOUBLE
+"pvth0_lshpfetpu_fc" FLOAT DOUBLE
+"cjs_lshpfetpu_fc" FLOAT DOUBLE
+"cjswgd_lshpfetpu_fc" FLOAT DOUBLE
+"rdsw_lshpfetpu_fc" FLOAT DOUBLE
+"u0_lshpfetpu_fc" FLOAT DOUBLE
+"cgsl_zvtnfet_fc" FLOAT DOUBLE
+"toxe_zvtnfet_fc" FLOAT DOUBLE
+"vth0_zvtnfet_fc" FLOAT DOUBLE
+"cgdl_zvtnfet_fc" FLOAT DOUBLE
+"cjsws_zvtnfet_fc" FLOAT DOUBLE
+"cgso_zvtnfet_fc" FLOAT DOUBLE
+"xl_zvtnfet_fc" FLOAT DOUBLE
+"cgdo_zvtnfet_fc" FLOAT DOUBLE
+"cjswgs_zvtnfet_fc" FLOAT DOUBLE
+"cjd_zvtnfet_fc" FLOAT DOUBLE
+"xw_zvtnfet_fc" FLOAT DOUBLE
+"cjswd_zvtnfet_fc" FLOAT DOUBLE
+"pvth0_zvtnfet_fc" FLOAT DOUBLE
+"cjs_zvtnfet_fc" FLOAT DOUBLE
+"cjswgd_zvtnfet_fc" FLOAT DOUBLE
+"rdsw_zvtnfet_fc" FLOAT DOUBLE
+"u0_zvtnfet_fc" FLOAT DOUBLE
+"cgsl_dgpfet_fc" FLOAT DOUBLE
+"toxe_dgpfet_fc" FLOAT DOUBLE
+"vth0_dgpfet_fc" FLOAT DOUBLE
+"cgdl_dgpfet_fc" FLOAT DOUBLE
+"cjsws_dgpfet_fc" FLOAT DOUBLE
+"cgso_dgpfet_fc" FLOAT DOUBLE
+"xl_dgpfet_fc" FLOAT DOUBLE
+"cgdo_dgpfet_fc" FLOAT DOUBLE
+"cjswgs_dgpfet_fc" FLOAT DOUBLE
+"cjd_dgpfet_fc" FLOAT DOUBLE
+"xw_dgpfet_fc" FLOAT DOUBLE
+"cjswd_dgpfet_fc" FLOAT DOUBLE
+"pvth0_dgpfet_fc" FLOAT DOUBLE
+"cjs_dgpfet_fc" FLOAT DOUBLE
+"cjswgd_dgpfet_fc" FLOAT DOUBLE
+"rdsw_dgpfet_fc" FLOAT DOUBLE
+"u0_dgpfet_fc" FLOAT DOUBLE
+"cgsl_hvtnfet_fc" FLOAT DOUBLE
+"toxe_hvtnfet_fc" FLOAT DOUBLE
+"vth0_hvtnfet_fc" FLOAT DOUBLE
+"cgdl_hvtnfet_fc" FLOAT DOUBLE
+"cjsws_hvtnfet_fc" FLOAT DOUBLE
+"cgso_hvtnfet_fc" FLOAT DOUBLE
+"xl_hvtnfet_fc" FLOAT DOUBLE
+"cgdo_hvtnfet_fc" FLOAT DOUBLE
+"cjswgs_hvtnfet_fc" FLOAT DOUBLE
+"cjd_hvtnfet_fc" FLOAT DOUBLE
+"xw_hvtnfet_fc" FLOAT DOUBLE
+"cjswd_hvtnfet_fc" FLOAT DOUBLE
+"pvth0_hvtnfet_fc" FLOAT DOUBLE
+"cjs_hvtnfet_fc" FLOAT DOUBLE
+"cjswgd_hvtnfet_fc" FLOAT DOUBLE
+"rdsw_hvtnfet_fc" FLOAT DOUBLE
+"u0_hvtnfet_fc" FLOAT DOUBLE
+"xxl_dgxpfet" FLOAT DOUBLE
+"dxl_dgxpfet" FLOAT DOUBLE
+"xvt_dgxpfet" FLOAT DOUBLE
+"dvt_dgxpfet" FLOAT DOUBLE
+"xxl_hvtpfet" FLOAT DOUBLE
+"dxl_hvtpfet" FLOAT DOUBLE
+"xvt_hvtpfet" FLOAT DOUBLE
+"dvt_hvtpfet" FLOAT DOUBLE
+"xxl_zvtegnfet" FLOAT DOUBLE
+"dxl_zvtegnfet" FLOAT DOUBLE
+"xvt_zvtegnfet" FLOAT DOUBLE
+"dvt_zvtegnfet" FLOAT DOUBLE
+"xxl_dslpfetpu" FLOAT DOUBLE
+"dxl_dslpfetpu" FLOAT DOUBLE
+"xvt_dslpfetpu" FLOAT DOUBLE
+"dvt_dslpfetpu" FLOAT DOUBLE
+"xxl_dplnfetwl" FLOAT DOUBLE
+"dxl_dplnfetwl" FLOAT DOUBLE
+"xvt_dplnfetwl" FLOAT DOUBLE
+"dvt_dplnfetwl" FLOAT DOUBLE
+"xxl_nfet" FLOAT DOUBLE
+"dxl_nfet" FLOAT DOUBLE
+"xvt_nfet" FLOAT DOUBLE
+"dvt_nfet" FLOAT DOUBLE
+"xxl_lshnfetwl" FLOAT DOUBLE
+"dxl_lshnfetwl" FLOAT DOUBLE
+"xvt_lshnfetwl" FLOAT DOUBLE
+"dvt_lshnfetwl" FLOAT DOUBLE
+"xxl_sslpfetpu" FLOAT DOUBLE
+"dxl_sslpfetpu" FLOAT DOUBLE
+"xvt_sslpfetpu" FLOAT DOUBLE
+"dvt_sslpfetpu" FLOAT DOUBLE
+"xxl_lslpfetpu" FLOAT DOUBLE
+"dxl_lslpfetpu" FLOAT DOUBLE
+"xvt_lslpfetpu" FLOAT DOUBLE
+"dvt_lslpfetpu" FLOAT DOUBLE
+"xxl_egvnfet" FLOAT DOUBLE
+"dxl_egvnfet" FLOAT DOUBLE
+"xvt_egvnfet" FLOAT DOUBLE
+"dvt_egvnfet" FLOAT DOUBLE
+"xxl_dplnfetpd" FLOAT DOUBLE
+"dxl_dplnfetpd" FLOAT DOUBLE
+"xvt_dplnfetpd" FLOAT DOUBLE
+"dvt_dplnfetpd" FLOAT DOUBLE
+"xxl_lvtnfet" FLOAT DOUBLE
+"dxl_lvtnfet" FLOAT DOUBLE
+"xvt_lvtnfet" FLOAT DOUBLE
+"dvt_lvtnfet" FLOAT DOUBLE
+"xxl_egnfet" FLOAT DOUBLE
+"dxl_egnfet" FLOAT DOUBLE
+"xvt_egnfet" FLOAT DOUBLE
+"dvt_egnfet" FLOAT DOUBLE
+"xxl_pfet" FLOAT DOUBLE
+"dxl_pfet" FLOAT DOUBLE
+"xvt_pfet" FLOAT DOUBLE
+"dvt_pfet" FLOAT DOUBLE
+"xxl_lshnfetpd" FLOAT DOUBLE
+"dxl_lshnfetpd" FLOAT DOUBLE
+"xvt_lshnfetpd" FLOAT DOUBLE
+"dvt_lshnfetpd" FLOAT DOUBLE
+"xxl_egvpfet" FLOAT DOUBLE
+"dxl_egvpfet" FLOAT DOUBLE
+"xvt_egvpfet" FLOAT DOUBLE
+"dvt_egvpfet" FLOAT DOUBLE
+"xxl_lvtpfet" FLOAT DOUBLE
+"dxl_lvtpfet" FLOAT DOUBLE
+"xvt_lvtpfet" FLOAT DOUBLE
+"dvt_lvtpfet" FLOAT DOUBLE
+"xxl_egpfet" FLOAT DOUBLE
+"dxl_egpfet" FLOAT DOUBLE
+"xvt_egpfet" FLOAT DOUBLE
+"dvt_egpfet" FLOAT DOUBLE
+"xxl_zvtdgnfet" FLOAT DOUBLE
+"dxl_zvtdgnfet" FLOAT DOUBLE
+"xvt_zvtdgnfet" FLOAT DOUBLE
+"dvt_zvtdgnfet" FLOAT DOUBLE
+"xxl_dslnfetwl" FLOAT DOUBLE
+"dxl_dslnfetwl" FLOAT DOUBLE
+"xvt_dslnfetwl" FLOAT DOUBLE
+"dvt_dslnfetwl" FLOAT DOUBLE
+"xxl_lslnfetwl" FLOAT DOUBLE
+"dxl_lslnfetwl" FLOAT DOUBLE
+"xvt_lslnfetwl" FLOAT DOUBLE
+"dvt_lslnfetwl" FLOAT DOUBLE
+"xxl_sslnfetwl" FLOAT DOUBLE
+"dxl_sslnfetwl" FLOAT DOUBLE
+"xvt_sslnfetwl" FLOAT DOUBLE
+"dvt_sslnfetwl" FLOAT DOUBLE
+"xxl_dgvnfet" FLOAT DOUBLE
+"dxl_dgvnfet" FLOAT DOUBLE
+"xvt_dgvnfet" FLOAT DOUBLE
+"dvt_dgvnfet" FLOAT DOUBLE
+"xxl_dslnfetpd" FLOAT DOUBLE
+"dxl_dslnfetpd" FLOAT DOUBLE
+"xvt_dslnfetpd" FLOAT DOUBLE
+"dvt_dslnfetpd" FLOAT DOUBLE
+"xxl_dgnfet" FLOAT DOUBLE
+"dxl_dgnfet" FLOAT DOUBLE
+"xvt_dgnfet" FLOAT DOUBLE
+"dvt_dgnfet" FLOAT DOUBLE
+"xxl_dplpfetpu" FLOAT DOUBLE
+"dxl_dplpfetpu" FLOAT DOUBLE
+"xvt_dplpfetpu" FLOAT DOUBLE
+"dvt_dplpfetpu" FLOAT DOUBLE
+"xxl_dgvpfet" FLOAT DOUBLE
+"dxl_dgvpfet" FLOAT DOUBLE
+"xvt_dgvpfet" FLOAT DOUBLE
+"dvt_dgvpfet" FLOAT DOUBLE
+"xxl_sslnfetpd" FLOAT DOUBLE
+"dxl_sslnfetpd" FLOAT DOUBLE
+"xvt_sslnfetpd" FLOAT DOUBLE
+"dvt_sslnfetpd" FLOAT DOUBLE
+"xxl_lslnfetpd" FLOAT DOUBLE
+"dxl_lslnfetpd" FLOAT DOUBLE
+"xvt_lslnfetpd" FLOAT DOUBLE
+"dvt_lslnfetpd" FLOAT DOUBLE
+"xxl_dgxnfet" FLOAT DOUBLE
+"dxl_dgxnfet" FLOAT DOUBLE
+"xvt_dgxnfet" FLOAT DOUBLE
+"dvt_dgxnfet" FLOAT DOUBLE
+"xxl_lshpfetpu" FLOAT DOUBLE
+"dxl_lshpfetpu" FLOAT DOUBLE
+"xvt_lshpfetpu" FLOAT DOUBLE
+"dvt_lshpfetpu" FLOAT DOUBLE
+"xxl_dgpfet" FLOAT DOUBLE
+"dxl_dgpfet" FLOAT DOUBLE
+"xvt_dgpfet" FLOAT DOUBLE
+"dvt_dgpfet" FLOAT DOUBLE
+"xxl_zvtnfet" FLOAT DOUBLE
+"dxl_zvtnfet" FLOAT DOUBLE
+"xvt_zvtnfet" FLOAT DOUBLE
+"dvt_zvtnfet" FLOAT DOUBLE
+"xxl_hvtnfet" FLOAT DOUBLE
+"dxl_hvtnfet" FLOAT DOUBLE
+"xvt_hvtnfet" FLOAT DOUBLE
+"dvt_hvtnfet" FLOAT DOUBLE
+"aclv_nest_ags" FLOAT DOUBLE
+"aclv_nest" FLOAT DOUBLE
+"aclv_iso_ags" FLOAT DOUBLE
+"aclv_iso" FLOAT DOUBLE
+"aclv_v_ags" FLOAT DOUBLE
+"aclv_v" FLOAT DOUBLE
+"aclv_h_ags" FLOAT DOUBLE
+"aclv_h" FLOAT DOUBLE
+"aclv_out_ags" FLOAT DOUBLE
+"aclv_out" FLOAT DOUBLE
+"aclv_in_ags" FLOAT DOUBLE
+"aclv_in" FLOAT DOUBLE
+"dnoin_mc" FLOAT DOUBLE
+"mc_dnoin" FLOAT DOUBLE
+"dnoip_mc" FLOAT DOUBLE
+"mc_dnoip" FLOAT DOUBLE
+"xg_dgnfet" FLOAT DOUBLE
+"dg_dgnfet" FLOAT DOUBLE
+"xr_dgnfet" FLOAT DOUBLE
+"dr_dgnfet" FLOAT DOUBLE
+"xol_dgnfet" FLOAT DOUBLE
+"dol_dgnfet" FLOAT DOUBLE
+"xcj_dgnfet" FLOAT DOUBLE
+"dcj_dgnfet" FLOAT DOUBLE
+"xcjg_dgnfet" FLOAT DOUBLE
+"dcjg_dgnfet" FLOAT DOUBLE
+"dcjsw_dgnfet" FLOAT DOUBLE
+"dcjswg_dgnfet" FLOAT DOUBLE
+"xg_dgpfet" FLOAT DOUBLE
+"dg_dgpfet" FLOAT DOUBLE
+"xr_dgpfet" FLOAT DOUBLE
+"dr_dgpfet" FLOAT DOUBLE
+"xol_dgpfet" FLOAT DOUBLE
+"dol_dgpfet" FLOAT DOUBLE
+"xcj_dgpfet" FLOAT DOUBLE
+"dcj_dgpfet" FLOAT DOUBLE
+"xcjg_dgpfet" FLOAT DOUBLE
+"dcjg_dgpfet" FLOAT DOUBLE
+"dcjsw_dgpfet" FLOAT DOUBLE
+"dcjswg_dgpfet" FLOAT DOUBLE
+"xg_dgvnfet" FLOAT DOUBLE
+"dg_dgvnfet" FLOAT DOUBLE
+"xr_dgvnfet" FLOAT DOUBLE
+"dr_dgvnfet" FLOAT DOUBLE
+"xol_dgvnfet" FLOAT DOUBLE
+"dol_dgvnfet" FLOAT DOUBLE
+"xcj_dgvnfet" FLOAT DOUBLE
+"dcj_dgvnfet" FLOAT DOUBLE
+"xcjg_dgvnfet" FLOAT DOUBLE
+"dcjg_dgvnfet" FLOAT DOUBLE
+"dcjsw_dgvnfet" FLOAT DOUBLE
+"dcjswg_dgvnfet" FLOAT DOUBLE
+"xg_dgvpfet" FLOAT DOUBLE
+"dg_dgvpfet" FLOAT DOUBLE
+"xr_dgvpfet" FLOAT DOUBLE
+"dr_dgvpfet" FLOAT DOUBLE
+"xol_dgvpfet" FLOAT DOUBLE
+"dol_dgvpfet" FLOAT DOUBLE
+"xcj_dgvpfet" FLOAT DOUBLE
+"dcj_dgvpfet" FLOAT DOUBLE
+"xcjg_dgvpfet" FLOAT DOUBLE
+"dcjg_dgvpfet" FLOAT DOUBLE
+"dcjsw_dgvpfet" FLOAT DOUBLE
+"dcjswg_dgvpfet" FLOAT DOUBLE
+"xg_dgxnfet" FLOAT DOUBLE
+"dg_dgxnfet" FLOAT DOUBLE
+"xr_dgxnfet" FLOAT DOUBLE
+"dr_dgxnfet" FLOAT DOUBLE
+"xol_dgxnfet" FLOAT DOUBLE
+"dol_dgxnfet" FLOAT DOUBLE
+"xcj_dgxnfet" FLOAT DOUBLE
+"dcj_dgxnfet" FLOAT DOUBLE
+"xcjg_dgxnfet" FLOAT DOUBLE
+"dcjg_dgxnfet" FLOAT DOUBLE
+"dcjsw_dgxnfet" FLOAT DOUBLE
+"dcjswg_dgxnfet" FLOAT DOUBLE
+"xg_dgxpfet" FLOAT DOUBLE
+"dg_dgxpfet" FLOAT DOUBLE
+"xr_dgxpfet" FLOAT DOUBLE
+"dr_dgxpfet" FLOAT DOUBLE
+"xol_dgxpfet" FLOAT DOUBLE
+"dol_dgxpfet" FLOAT DOUBLE
+"xcj_dgxpfet" FLOAT DOUBLE
+"dcj_dgxpfet" FLOAT DOUBLE
+"xcjg_dgxpfet" FLOAT DOUBLE
+"dcjg_dgxpfet" FLOAT DOUBLE
+"dcjsw_dgxpfet" FLOAT DOUBLE
+"dcjswg_dgxpfet" FLOAT DOUBLE
+"xg_dplnfetpd" FLOAT DOUBLE
+"dg_dplnfetpd" FLOAT DOUBLE
+"xr_dplnfetpd" FLOAT DOUBLE
+"dr_dplnfetpd" FLOAT DOUBLE
+"xol_dplnfetpd" FLOAT DOUBLE
+"dol_dplnfetpd" FLOAT DOUBLE
+"xcj_dplnfetpd" FLOAT DOUBLE
+"dcj_dplnfetpd" FLOAT DOUBLE
+"xcjg_dplnfetpd" FLOAT DOUBLE
+"dcjg_dplnfetpd" FLOAT DOUBLE
+"dcjsw_dplnfetpd" FLOAT DOUBLE
+"dcjswg_dplnfetpd" FLOAT DOUBLE
+"xg_dplnfetwl" FLOAT DOUBLE
+"dg_dplnfetwl" FLOAT DOUBLE
+"xr_dplnfetwl" FLOAT DOUBLE
+"dr_dplnfetwl" FLOAT DOUBLE
+"xol_dplnfetwl" FLOAT DOUBLE
+"dol_dplnfetwl" FLOAT DOUBLE
+"xcj_dplnfetwl" FLOAT DOUBLE
+"dcj_dplnfetwl" FLOAT DOUBLE
+"xcjg_dplnfetwl" FLOAT DOUBLE
+"dcjg_dplnfetwl" FLOAT DOUBLE
+"dcjsw_dplnfetwl" FLOAT DOUBLE
+"dcjswg_dplnfetwl" FLOAT DOUBLE
+"xg_dplpfetpu" FLOAT DOUBLE
+"dg_dplpfetpu" FLOAT DOUBLE
+"xr_dplpfetpu" FLOAT DOUBLE
+"dr_dplpfetpu" FLOAT DOUBLE
+"xol_dplpfetpu" FLOAT DOUBLE
+"dol_dplpfetpu" FLOAT DOUBLE
+"xcj_dplpfetpu" FLOAT DOUBLE
+"dcj_dplpfetpu" FLOAT DOUBLE
+"xcjg_dplpfetpu" FLOAT DOUBLE
+"dcjg_dplpfetpu" FLOAT DOUBLE
+"dcjsw_dplpfetpu" FLOAT DOUBLE
+"dcjswg_dplpfetpu" FLOAT DOUBLE
+"xg_dslnfetpd" FLOAT DOUBLE
+"dg_dslnfetpd" FLOAT DOUBLE
+"xr_dslnfetpd" FLOAT DOUBLE
+"dr_dslnfetpd" FLOAT DOUBLE
+"xol_dslnfetpd" FLOAT DOUBLE
+"dol_dslnfetpd" FLOAT DOUBLE
+"xcj_dslnfetpd" FLOAT DOUBLE
+"dcj_dslnfetpd" FLOAT DOUBLE
+"xcjg_dslnfetpd" FLOAT DOUBLE
+"dcjg_dslnfetpd" FLOAT DOUBLE
+"dcjsw_dslnfetpd" FLOAT DOUBLE
+"dcjswg_dslnfetpd" FLOAT DOUBLE
+"xg_dslnfetwl" FLOAT DOUBLE
+"dg_dslnfetwl" FLOAT DOUBLE
+"xr_dslnfetwl" FLOAT DOUBLE
+"dr_dslnfetwl" FLOAT DOUBLE
+"xol_dslnfetwl" FLOAT DOUBLE
+"dol_dslnfetwl" FLOAT DOUBLE
+"xcj_dslnfetwl" FLOAT DOUBLE
+"dcj_dslnfetwl" FLOAT DOUBLE
+"xcjg_dslnfetwl" FLOAT DOUBLE
+"dcjg_dslnfetwl" FLOAT DOUBLE
+"dcjsw_dslnfetwl" FLOAT DOUBLE
+"dcjswg_dslnfetwl" FLOAT DOUBLE
+"xg_dslpfetpu" FLOAT DOUBLE
+"dg_dslpfetpu" FLOAT DOUBLE
+"xr_dslpfetpu" FLOAT DOUBLE
+"dr_dslpfetpu" FLOAT DOUBLE
+"xol_dslpfetpu" FLOAT DOUBLE
+"dol_dslpfetpu" FLOAT DOUBLE
+"xcj_dslpfetpu" FLOAT DOUBLE
+"dcj_dslpfetpu" FLOAT DOUBLE
+"xcjg_dslpfetpu" FLOAT DOUBLE
+"dcjg_dslpfetpu" FLOAT DOUBLE
+"dcjsw_dslpfetpu" FLOAT DOUBLE
+"dcjswg_dslpfetpu" FLOAT DOUBLE
+"xg_egnfet" FLOAT DOUBLE
+"dg_egnfet" FLOAT DOUBLE
+"xr_egnfet" FLOAT DOUBLE
+"dr_egnfet" FLOAT DOUBLE
+"xol_egnfet" FLOAT DOUBLE
+"dol_egnfet" FLOAT DOUBLE
+"xcj_egnfet" FLOAT DOUBLE
+"dcj_egnfet" FLOAT DOUBLE
+"xcjg_egnfet" FLOAT DOUBLE
+"dcjg_egnfet" FLOAT DOUBLE
+"dcjsw_egnfet" FLOAT DOUBLE
+"dcjswg_egnfet" FLOAT DOUBLE
+"xg_egpfet" FLOAT DOUBLE
+"dg_egpfet" FLOAT DOUBLE
+"xr_egpfet" FLOAT DOUBLE
+"dr_egpfet" FLOAT DOUBLE
+"xol_egpfet" FLOAT DOUBLE
+"dol_egpfet" FLOAT DOUBLE
+"xcj_egpfet" FLOAT DOUBLE
+"dcj_egpfet" FLOAT DOUBLE
+"xcjg_egpfet" FLOAT DOUBLE
+"dcjg_egpfet" FLOAT DOUBLE
+"dcjsw_egpfet" FLOAT DOUBLE
+"dcjswg_egpfet" FLOAT DOUBLE
+"xg_egvnfet" FLOAT DOUBLE
+"dg_egvnfet" FLOAT DOUBLE
+"xr_egvnfet" FLOAT DOUBLE
+"dr_egvnfet" FLOAT DOUBLE
+"xol_egvnfet" FLOAT DOUBLE
+"dol_egvnfet" FLOAT DOUBLE
+"xcj_egvnfet" FLOAT DOUBLE
+"dcj_egvnfet" FLOAT DOUBLE
+"xcjg_egvnfet" FLOAT DOUBLE
+"dcjg_egvnfet" FLOAT DOUBLE
+"dcjsw_egvnfet" FLOAT DOUBLE
+"dcjswg_egvnfet" FLOAT DOUBLE
+"xg_egvpfet" FLOAT DOUBLE
+"dg_egvpfet" FLOAT DOUBLE
+"xr_egvpfet" FLOAT DOUBLE
+"dr_egvpfet" FLOAT DOUBLE
+"xol_egvpfet" FLOAT DOUBLE
+"dol_egvpfet" FLOAT DOUBLE
+"xcj_egvpfet" FLOAT DOUBLE
+"dcj_egvpfet" FLOAT DOUBLE
+"xcjg_egvpfet" FLOAT DOUBLE
+"dcjg_egvpfet" FLOAT DOUBLE
+"dcjsw_egvpfet" FLOAT DOUBLE
+"dcjswg_egvpfet" FLOAT DOUBLE
+"xg_hvtnfet" FLOAT DOUBLE
+"dg_hvtnfet" FLOAT DOUBLE
+"xr_hvtnfet" FLOAT DOUBLE
+"dr_hvtnfet" FLOAT DOUBLE
+"xol_hvtnfet" FLOAT DOUBLE
+"dol_hvtnfet" FLOAT DOUBLE
+"xcj_hvtnfet" FLOAT DOUBLE
+"dcj_hvtnfet" FLOAT DOUBLE
+"xcjg_hvtnfet" FLOAT DOUBLE
+"dcjg_hvtnfet" FLOAT DOUBLE
+"dcjsw_hvtnfet" FLOAT DOUBLE
+"dcjswg_hvtnfet" FLOAT DOUBLE
+"xg_hvtpfet" FLOAT DOUBLE
+"dg_hvtpfet" FLOAT DOUBLE
+"xr_hvtpfet" FLOAT DOUBLE
+"dr_hvtpfet" FLOAT DOUBLE
+"xol_hvtpfet" FLOAT DOUBLE
+"dol_hvtpfet" FLOAT DOUBLE
+"xcj_hvtpfet" FLOAT DOUBLE
+"dcj_hvtpfet" FLOAT DOUBLE
+"xcjg_hvtpfet" FLOAT DOUBLE
+"dcjg_hvtpfet" FLOAT DOUBLE
+"dcjsw_hvtpfet" FLOAT DOUBLE
+"dcjswg_hvtpfet" FLOAT DOUBLE
+"xg_lshnfetpd" FLOAT DOUBLE
+"dg_lshnfetpd" FLOAT DOUBLE
+"xr_lshnfetpd" FLOAT DOUBLE
+"dr_lshnfetpd" FLOAT DOUBLE
+"xol_lshnfetpd" FLOAT DOUBLE
+"dol_lshnfetpd" FLOAT DOUBLE
+"xcj_lshnfetpd" FLOAT DOUBLE
+"dcj_lshnfetpd" FLOAT DOUBLE
+"xcjg_lshnfetpd" FLOAT DOUBLE
+"dcjg_lshnfetpd" FLOAT DOUBLE
+"dcjsw_lshnfetpd" FLOAT DOUBLE
+"dcjswg_lshnfetpd" FLOAT DOUBLE
+"xg_lshnfetwl" FLOAT DOUBLE
+"dg_lshnfetwl" FLOAT DOUBLE
+"xr_lshnfetwl" FLOAT DOUBLE
+"dr_lshnfetwl" FLOAT DOUBLE
+"xol_lshnfetwl" FLOAT DOUBLE
+"dol_lshnfetwl" FLOAT DOUBLE
+"xcj_lshnfetwl" FLOAT DOUBLE
+"dcj_lshnfetwl" FLOAT DOUBLE
+"xcjg_lshnfetwl" FLOAT DOUBLE
+"dcjg_lshnfetwl" FLOAT DOUBLE
+"dcjsw_lshnfetwl" FLOAT DOUBLE
+"dcjswg_lshnfetwl" FLOAT DOUBLE
+"xg_lshpfetpu" FLOAT DOUBLE
+"dg_lshpfetpu" FLOAT DOUBLE
+"xr_lshpfetpu" FLOAT DOUBLE
+"dr_lshpfetpu" FLOAT DOUBLE
+"xol_lshpfetpu" FLOAT DOUBLE
+"dol_lshpfetpu" FLOAT DOUBLE
+"xcj_lshpfetpu" FLOAT DOUBLE
+"dcj_lshpfetpu" FLOAT DOUBLE
+"xcjg_lshpfetpu" FLOAT DOUBLE
+"dcjg_lshpfetpu" FLOAT DOUBLE
+"dcjsw_lshpfetpu" FLOAT DOUBLE
+"dcjswg_lshpfetpu" FLOAT DOUBLE
+"xg_lslnfetpd" FLOAT DOUBLE
+"dg_lslnfetpd" FLOAT DOUBLE
+"xr_lslnfetpd" FLOAT DOUBLE
+"dr_lslnfetpd" FLOAT DOUBLE
+"xol_lslnfetpd" FLOAT DOUBLE
+"dol_lslnfetpd" FLOAT DOUBLE
+"xcj_lslnfetpd" FLOAT DOUBLE
+"dcj_lslnfetpd" FLOAT DOUBLE
+"xcjg_lslnfetpd" FLOAT DOUBLE
+"dcjg_lslnfetpd" FLOAT DOUBLE
+"dcjsw_lslnfetpd" FLOAT DOUBLE
+"dcjswg_lslnfetpd" FLOAT DOUBLE
+"xg_lslnfetwl" FLOAT DOUBLE
+"dg_lslnfetwl" FLOAT DOUBLE
+"xr_lslnfetwl" FLOAT DOUBLE
+"dr_lslnfetwl" FLOAT DOUBLE
+"xol_lslnfetwl" FLOAT DOUBLE
+"dol_lslnfetwl" FLOAT DOUBLE
+"xcj_lslnfetwl" FLOAT DOUBLE
+"dcj_lslnfetwl" FLOAT DOUBLE
+"xcjg_lslnfetwl" FLOAT DOUBLE
+"dcjg_lslnfetwl" FLOAT DOUBLE
+"dcjsw_lslnfetwl" FLOAT DOUBLE
+"dcjswg_lslnfetwl" FLOAT DOUBLE
+"xg_lslpfetpu" FLOAT DOUBLE
+"dg_lslpfetpu" FLOAT DOUBLE
+"xr_lslpfetpu" FLOAT DOUBLE
+"dr_lslpfetpu" FLOAT DOUBLE
+"xol_lslpfetpu" FLOAT DOUBLE
+"dol_lslpfetpu" FLOAT DOUBLE
+"xcj_lslpfetpu" FLOAT DOUBLE
+"dcj_lslpfetpu" FLOAT DOUBLE
+"xcjg_lslpfetpu" FLOAT DOUBLE
+"dcjg_lslpfetpu" FLOAT DOUBLE
+"dcjsw_lslpfetpu" FLOAT DOUBLE
+"dcjswg_lslpfetpu" FLOAT DOUBLE
+"xg_lvtnfet" FLOAT DOUBLE
+"dg_lvtnfet" FLOAT DOUBLE
+"xr_lvtnfet" FLOAT DOUBLE
+"dr_lvtnfet" FLOAT DOUBLE
+"xol_lvtnfet" FLOAT DOUBLE
+"dol_lvtnfet" FLOAT DOUBLE
+"xcj_lvtnfet" FLOAT DOUBLE
+"dcj_lvtnfet" FLOAT DOUBLE
+"xcjg_lvtnfet" FLOAT DOUBLE
+"dcjg_lvtnfet" FLOAT DOUBLE
+"dcjsw_lvtnfet" FLOAT DOUBLE
+"dcjswg_lvtnfet" FLOAT DOUBLE
+"xg_lvtpfet" FLOAT DOUBLE
+"dg_lvtpfet" FLOAT DOUBLE
+"xr_lvtpfet" FLOAT DOUBLE
+"dr_lvtpfet" FLOAT DOUBLE
+"xol_lvtpfet" FLOAT DOUBLE
+"dol_lvtpfet" FLOAT DOUBLE
+"xcj_lvtpfet" FLOAT DOUBLE
+"dcj_lvtpfet" FLOAT DOUBLE
+"xcjg_lvtpfet" FLOAT DOUBLE
+"dcjg_lvtpfet" FLOAT DOUBLE
+"dcjsw_lvtpfet" FLOAT DOUBLE
+"dcjswg_lvtpfet" FLOAT DOUBLE
+"xg_nfet" FLOAT DOUBLE
+"dg_nfet" FLOAT DOUBLE
+"xr_nfet" FLOAT DOUBLE
+"dr_nfet" FLOAT DOUBLE
+"xol_nfet" FLOAT DOUBLE
+"dol_nfet" FLOAT DOUBLE
+"xcj_nfet" FLOAT DOUBLE
+"dcj_nfet" FLOAT DOUBLE
+"xcjg_nfet" FLOAT DOUBLE
+"dcjg_nfet" FLOAT DOUBLE
+"dcjsw_nfet" FLOAT DOUBLE
+"dcjswg_nfet" FLOAT DOUBLE
+"xg_pfet" FLOAT DOUBLE
+"dg_pfet" FLOAT DOUBLE
+"xr_pfet" FLOAT DOUBLE
+"dr_pfet" FLOAT DOUBLE
+"xol_pfet" FLOAT DOUBLE
+"dol_pfet" FLOAT DOUBLE
+"xcj_pfet" FLOAT DOUBLE
+"dcj_pfet" FLOAT DOUBLE
+"xcjg_pfet" FLOAT DOUBLE
+"dcjg_pfet" FLOAT DOUBLE
+"dcjsw_pfet" FLOAT DOUBLE
+"dcjswg_pfet" FLOAT DOUBLE
+"xg_sslnfetpd" FLOAT DOUBLE
+"dg_sslnfetpd" FLOAT DOUBLE
+"xr_sslnfetpd" FLOAT DOUBLE
+"dr_sslnfetpd" FLOAT DOUBLE
+"xol_sslnfetpd" FLOAT DOUBLE
+"dol_sslnfetpd" FLOAT DOUBLE
+"xcj_sslnfetpd" FLOAT DOUBLE
+"dcj_sslnfetpd" FLOAT DOUBLE
+"xcjg_sslnfetpd" FLOAT DOUBLE
+"dcjg_sslnfetpd" FLOAT DOUBLE
+"dcjsw_sslnfetpd" FLOAT DOUBLE
+"dcjswg_sslnfetpd" FLOAT DOUBLE
+"xg_sslnfetwl" FLOAT DOUBLE
+"dg_sslnfetwl" FLOAT DOUBLE
+"xr_sslnfetwl" FLOAT DOUBLE
+"dr_sslnfetwl" FLOAT DOUBLE
+"xol_sslnfetwl" FLOAT DOUBLE
+"dol_sslnfetwl" FLOAT DOUBLE
+"xcj_sslnfetwl" FLOAT DOUBLE
+"dcj_sslnfetwl" FLOAT DOUBLE
+"xcjg_sslnfetwl" FLOAT DOUBLE
+"dcjg_sslnfetwl" FLOAT DOUBLE
+"dcjsw_sslnfetwl" FLOAT DOUBLE
+"dcjswg_sslnfetwl" FLOAT DOUBLE
+"xg_sslpfetpu" FLOAT DOUBLE
+"dg_sslpfetpu" FLOAT DOUBLE
+"xr_sslpfetpu" FLOAT DOUBLE
+"dr_sslpfetpu" FLOAT DOUBLE
+"xol_sslpfetpu" FLOAT DOUBLE
+"dol_sslpfetpu" FLOAT DOUBLE
+"xcj_sslpfetpu" FLOAT DOUBLE
+"dcj_sslpfetpu" FLOAT DOUBLE
+"xcjg_sslpfetpu" FLOAT DOUBLE
+"dcjg_sslpfetpu" FLOAT DOUBLE
+"dcjsw_sslpfetpu" FLOAT DOUBLE
+"dcjswg_sslpfetpu" FLOAT DOUBLE
+"xg_zvtdgnfet" FLOAT DOUBLE
+"dg_zvtdgnfet" FLOAT DOUBLE
+"xr_zvtdgnfet" FLOAT DOUBLE
+"dr_zvtdgnfet" FLOAT DOUBLE
+"xol_zvtdgnfet" FLOAT DOUBLE
+"dol_zvtdgnfet" FLOAT DOUBLE
+"xcj_zvtdgnfet" FLOAT DOUBLE
+"dcj_zvtdgnfet" FLOAT DOUBLE
+"xcjg_zvtdgnfet" FLOAT DOUBLE
+"dcjg_zvtdgnfet" FLOAT DOUBLE
+"dcjsw_zvtdgnfet" FLOAT DOUBLE
+"dcjswg_zvtdgnfet" FLOAT DOUBLE
+"xg_zvtegnfet" FLOAT DOUBLE
+"dg_zvtegnfet" FLOAT DOUBLE
+"xr_zvtegnfet" FLOAT DOUBLE
+"dr_zvtegnfet" FLOAT DOUBLE
+"xol_zvtegnfet" FLOAT DOUBLE
+"dol_zvtegnfet" FLOAT DOUBLE
+"xcj_zvtegnfet" FLOAT DOUBLE
+"dcj_zvtegnfet" FLOAT DOUBLE
+"xcjg_zvtegnfet" FLOAT DOUBLE
+"dcjg_zvtegnfet" FLOAT DOUBLE
+"dcjsw_zvtegnfet" FLOAT DOUBLE
+"dcjswg_zvtegnfet" FLOAT DOUBLE
+"xg_zvtnfet" FLOAT DOUBLE
+"dg_zvtnfet" FLOAT DOUBLE
+"xr_zvtnfet" FLOAT DOUBLE
+"dr_zvtnfet" FLOAT DOUBLE
+"xol_zvtnfet" FLOAT DOUBLE
+"dol_zvtnfet" FLOAT DOUBLE
+"xcj_zvtnfet" FLOAT DOUBLE
+"dcj_zvtnfet" FLOAT DOUBLE
+"xcjg_zvtnfet" FLOAT DOUBLE
+"dcjg_zvtnfet" FLOAT DOUBLE
+"dcjsw_zvtnfet" FLOAT DOUBLE
+"dcjswg_zvtnfet" FLOAT DOUBLE
+"a_plorient" FLOAT DOUBLE
+"a_pld200" FLOAT DOUBLE
+"a_plnest" FLOAT DOUBLE
+"aclv_ran_fet" FLOAT DOUBLE
+"acwv_ran_fet" FLOAT DOUBLE
+"acwv_rxcrit_mc_fet" FLOAT DOUBLE
+"vtmatchd1a" FLOAT DOUBLE
+"vtmatchd2a" FLOAT DOUBLE
+"vsatmatchd1a" FLOAT DOUBLE
+"vsatmatchd2a" FLOAT DOUBLE
+"u0matchd1a" FLOAT DOUBLE
+"u0matchd2a" FLOAT DOUBLE
+"k2matchd1a" FLOAT DOUBLE
+"k2matchd2a" FLOAT DOUBLE
+"eta0matchd1a" FLOAT DOUBLE
+"eta0matchd2a" FLOAT DOUBLE
+"mka1" FLOAT DOUBLE
+"mka2" FLOAT DOUBLE
+"u0a1" FLOAT DOUBLE
+"u0a2" FLOAT DOUBLE
+"mc_cnr_round" FLOAT DOUBLE
+"pmimacv2" FLOAT DOUBLE
+"mmres" FLOAT DOUBLE
+"mmdio" FLOAT DOUBLE
+"mmis" FLOAT DOUBLE
+"mmise" FLOAT DOUBLE
+"mmbf" FLOAT DOUBLE
+"mmre" FLOAT DOUBLE
+"xl_sigma_0" FLOAT DOUBLE
+"xl_sigma_1" FLOAT DOUBLE
+"xl_sigma_2" FLOAT DOUBLE
+"xl_sigma_3" FLOAT DOUBLE
+"xl_sigma_4" FLOAT DOUBLE
+"xl_sigma_5" FLOAT DOUBLE
+"xl_sigma_12" FLOAT DOUBLE
+"xl_sigma_13" FLOAT DOUBLE
+"xl_sigma_6" FLOAT DOUBLE
+"xl_sigma_7" FLOAT DOUBLE
+"xl_sigma_31" FLOAT DOUBLE
+"xl_sigma_32" FLOAT DOUBLE
+"xl_sigma_33" FLOAT DOUBLE
+"xl_matrix_0_0" FLOAT DOUBLE
+"xl_matrix_0_1" FLOAT DOUBLE
+"xl_matrix_0_2" FLOAT DOUBLE
+"xl_matrix_0_3" FLOAT DOUBLE
+"xl_matrix_0_4" FLOAT DOUBLE
+"xl_matrix_0_5" FLOAT DOUBLE
+"xl_matrix_0_12" FLOAT DOUBLE
+"xl_matrix_0_13" FLOAT DOUBLE
+"xl_matrix_0_6" FLOAT DOUBLE
+"xl_matrix_0_7" FLOAT DOUBLE
+"xl_matrix_0_31" FLOAT DOUBLE
+"xl_matrix_0_32" FLOAT DOUBLE
+"xl_matrix_0_33" FLOAT DOUBLE
+"xl_matrix_1_0" FLOAT DOUBLE
+"xl_matrix_1_1" FLOAT DOUBLE
+"xl_matrix_1_2" FLOAT DOUBLE
+"xl_matrix_1_3" FLOAT DOUBLE
+"xl_matrix_1_4" FLOAT DOUBLE
+"xl_matrix_1_5" FLOAT DOUBLE
+"xl_matrix_1_12" FLOAT DOUBLE
+"xl_matrix_1_13" FLOAT DOUBLE
+"xl_matrix_1_6" FLOAT DOUBLE
+"xl_matrix_1_7" FLOAT DOUBLE
+"xl_matrix_1_31" FLOAT DOUBLE
+"xl_matrix_1_32" FLOAT DOUBLE
+"xl_matrix_1_33" FLOAT DOUBLE
+"xl_matrix_2_0" FLOAT DOUBLE
+"xl_matrix_2_1" FLOAT DOUBLE
+"xl_matrix_2_2" FLOAT DOUBLE
+"xl_matrix_2_3" FLOAT DOUBLE
+"xl_matrix_2_4" FLOAT DOUBLE
+"xl_matrix_2_5" FLOAT DOUBLE
+"xl_matrix_2_12" FLOAT DOUBLE
+"xl_matrix_2_13" FLOAT DOUBLE
+"xl_matrix_2_6" FLOAT DOUBLE
+"xl_matrix_2_7" FLOAT DOUBLE
+"xl_matrix_2_31" FLOAT DOUBLE
+"xl_matrix_2_32" FLOAT DOUBLE
+"xl_matrix_2_33" FLOAT DOUBLE
+"xl_matrix_3_0" FLOAT DOUBLE
+"xl_matrix_3_1" FLOAT DOUBLE
+"xl_matrix_3_2" FLOAT DOUBLE
+"xl_matrix_3_3" FLOAT DOUBLE
+"xl_matrix_3_4" FLOAT DOUBLE
+"xl_matrix_3_5" FLOAT DOUBLE
+"xl_matrix_3_12" FLOAT DOUBLE
+"xl_matrix_3_13" FLOAT DOUBLE
+"xl_matrix_3_6" FLOAT DOUBLE
+"xl_matrix_3_7" FLOAT DOUBLE
+"xl_matrix_3_31" FLOAT DOUBLE
+"xl_matrix_3_32" FLOAT DOUBLE
+"xl_matrix_3_33" FLOAT DOUBLE
+"xl_matrix_4_0" FLOAT DOUBLE
+"xl_matrix_4_1" FLOAT DOUBLE
+"xl_matrix_4_2" FLOAT DOUBLE
+"xl_matrix_4_3" FLOAT DOUBLE
+"xl_matrix_4_4" FLOAT DOUBLE
+"xl_matrix_4_5" FLOAT DOUBLE
+"xl_matrix_4_12" FLOAT DOUBLE
+"xl_matrix_4_13" FLOAT DOUBLE
+"xl_matrix_4_6" FLOAT DOUBLE
+"xl_matrix_4_7" FLOAT DOUBLE
+"xl_matrix_4_31" FLOAT DOUBLE
+"xl_matrix_4_32" FLOAT DOUBLE
+"xl_matrix_4_33" FLOAT DOUBLE
+"xl_matrix_5_0" FLOAT DOUBLE
+"xl_matrix_5_1" FLOAT DOUBLE
+"xl_matrix_5_2" FLOAT DOUBLE
+"xl_matrix_5_3" FLOAT DOUBLE
+"xl_matrix_5_4" FLOAT DOUBLE
+"xl_matrix_5_5" FLOAT DOUBLE
+"xl_matrix_5_12" FLOAT DOUBLE
+"xl_matrix_5_13" FLOAT DOUBLE
+"xl_matrix_5_6" FLOAT DOUBLE
+"xl_matrix_5_7" FLOAT DOUBLE
+"xl_matrix_5_31" FLOAT DOUBLE
+"xl_matrix_5_32" FLOAT DOUBLE
+"xl_matrix_5_33" FLOAT DOUBLE
+"xl_matrix_12_0" FLOAT DOUBLE
+"xl_matrix_12_1" FLOAT DOUBLE
+"xl_matrix_12_2" FLOAT DOUBLE
+"xl_matrix_12_3" FLOAT DOUBLE
+"xl_matrix_12_4" FLOAT DOUBLE
+"xl_matrix_12_5" FLOAT DOUBLE
+"xl_matrix_12_12" FLOAT DOUBLE
+"xl_matrix_12_13" FLOAT DOUBLE
+"xl_matrix_12_6" FLOAT DOUBLE
+"xl_matrix_12_7" FLOAT DOUBLE
+"xl_matrix_12_31" FLOAT DOUBLE
+"xl_matrix_12_32" FLOAT DOUBLE
+"xl_matrix_12_33" FLOAT DOUBLE
+"xl_matrix_13_0" FLOAT DOUBLE
+"xl_matrix_13_1" FLOAT DOUBLE
+"xl_matrix_13_2" FLOAT DOUBLE
+"xl_matrix_13_3" FLOAT DOUBLE
+"xl_matrix_13_4" FLOAT DOUBLE
+"xl_matrix_13_5" FLOAT DOUBLE
+"xl_matrix_13_12" FLOAT DOUBLE
+"xl_matrix_13_13" FLOAT DOUBLE
+"xl_matrix_13_6" FLOAT DOUBLE
+"xl_matrix_13_7" FLOAT DOUBLE
+"xl_matrix_13_31" FLOAT DOUBLE
+"xl_matrix_13_32" FLOAT DOUBLE
+"xl_matrix_13_33" FLOAT DOUBLE
+"xl_matrix_6_0" FLOAT DOUBLE
+"xl_matrix_6_1" FLOAT DOUBLE
+"xl_matrix_6_2" FLOAT DOUBLE
+"xl_matrix_6_3" FLOAT DOUBLE
+"xl_matrix_6_4" FLOAT DOUBLE
+"xl_matrix_6_5" FLOAT DOUBLE
+"xl_matrix_6_12" FLOAT DOUBLE
+"xl_matrix_6_13" FLOAT DOUBLE
+"xl_matrix_6_6" FLOAT DOUBLE
+"xl_matrix_6_7" FLOAT DOUBLE
+"xl_matrix_6_31" FLOAT DOUBLE
+"xl_matrix_6_32" FLOAT DOUBLE
+"xl_matrix_6_33" FLOAT DOUBLE
+"xl_matrix_7_0" FLOAT DOUBLE
+"xl_matrix_7_1" FLOAT DOUBLE
+"xl_matrix_7_2" FLOAT DOUBLE
+"xl_matrix_7_3" FLOAT DOUBLE
+"xl_matrix_7_4" FLOAT DOUBLE
+"xl_matrix_7_5" FLOAT DOUBLE
+"xl_matrix_7_12" FLOAT DOUBLE
+"xl_matrix_7_13" FLOAT DOUBLE
+"xl_matrix_7_6" FLOAT DOUBLE
+"xl_matrix_7_7" FLOAT DOUBLE
+"xl_matrix_7_31" FLOAT DOUBLE
+"xl_matrix_7_32" FLOAT DOUBLE
+"xl_matrix_7_33" FLOAT DOUBLE
+"xl_matrix_31_0" FLOAT DOUBLE
+"xl_matrix_31_1" FLOAT DOUBLE
+"xl_matrix_31_2" FLOAT DOUBLE
+"xl_matrix_31_3" FLOAT DOUBLE
+"xl_matrix_31_4" FLOAT DOUBLE
+"xl_matrix_31_5" FLOAT DOUBLE
+"xl_matrix_31_12" FLOAT DOUBLE
+"xl_matrix_31_13" FLOAT DOUBLE
+"xl_matrix_31_6" FLOAT DOUBLE
+"xl_matrix_31_7" FLOAT DOUBLE
+"xl_matrix_31_31" FLOAT DOUBLE
+"xl_matrix_31_32" FLOAT DOUBLE
+"xl_matrix_31_33" FLOAT DOUBLE
+"xl_matrix_32_0" FLOAT DOUBLE
+"xl_matrix_32_1" FLOAT DOUBLE
+"xl_matrix_32_2" FLOAT DOUBLE
+"xl_matrix_32_3" FLOAT DOUBLE
+"xl_matrix_32_4" FLOAT DOUBLE
+"xl_matrix_32_5" FLOAT DOUBLE
+"xl_matrix_32_12" FLOAT DOUBLE
+"xl_matrix_32_13" FLOAT DOUBLE
+"xl_matrix_32_6" FLOAT DOUBLE
+"xl_matrix_32_7" FLOAT DOUBLE
+"xl_matrix_32_31" FLOAT DOUBLE
+"xl_matrix_32_32" FLOAT DOUBLE
+"xl_matrix_32_33" FLOAT DOUBLE
+"xl_matrix_33_0" FLOAT DOUBLE
+"xl_matrix_33_1" FLOAT DOUBLE
+"xl_matrix_33_2" FLOAT DOUBLE
+"xl_matrix_33_3" FLOAT DOUBLE
+"xl_matrix_33_4" FLOAT DOUBLE
+"xl_matrix_33_5" FLOAT DOUBLE
+"xl_matrix_33_12" FLOAT DOUBLE
+"xl_matrix_33_13" FLOAT DOUBLE
+"xl_matrix_33_6" FLOAT DOUBLE
+"xl_matrix_33_7" FLOAT DOUBLE
+"xl_matrix_33_31" FLOAT DOUBLE
+"xl_matrix_33_32" FLOAT DOUBLE
+"xl_matrix_33_33" FLOAT DOUBLE
+"vth0_sigma_0" FLOAT DOUBLE
+"vth0_sigma_1" FLOAT DOUBLE
+"vth0_sigma_2" FLOAT DOUBLE
+"vth0_sigma_3" FLOAT DOUBLE
+"vth0_sigma_4" FLOAT DOUBLE
+"vth0_sigma_5" FLOAT DOUBLE
+"vth0_sigma_12" FLOAT DOUBLE
+"vth0_sigma_13" FLOAT DOUBLE
+"vth0_sigma_6" FLOAT DOUBLE
+"vth0_sigma_7" FLOAT DOUBLE
+"vth0_sigma_31" FLOAT DOUBLE
+"vth0_sigma_32" FLOAT DOUBLE
+"vth0_sigma_33" FLOAT DOUBLE
+"vth0_matrix_0_0" FLOAT DOUBLE
+"vth0_matrix_0_1" FLOAT DOUBLE
+"vth0_matrix_0_2" FLOAT DOUBLE
+"vth0_matrix_0_3" FLOAT DOUBLE
+"vth0_matrix_0_4" FLOAT DOUBLE
+"vth0_matrix_0_5" FLOAT DOUBLE
+"vth0_matrix_0_12" FLOAT DOUBLE
+"vth0_matrix_0_13" FLOAT DOUBLE
+"vth0_matrix_0_6" FLOAT DOUBLE
+"vth0_matrix_0_7" FLOAT DOUBLE
+"vth0_matrix_0_31" FLOAT DOUBLE
+"vth0_matrix_0_32" FLOAT DOUBLE
+"vth0_matrix_0_33" FLOAT DOUBLE
+"vth0_matrix_1_0" FLOAT DOUBLE
+"vth0_matrix_1_1" FLOAT DOUBLE
+"vth0_matrix_1_2" FLOAT DOUBLE
+"vth0_matrix_1_3" FLOAT DOUBLE
+"vth0_matrix_1_4" FLOAT DOUBLE
+"vth0_matrix_1_5" FLOAT DOUBLE
+"vth0_matrix_1_12" FLOAT DOUBLE
+"vth0_matrix_1_13" FLOAT DOUBLE
+"vth0_matrix_1_6" FLOAT DOUBLE
+"vth0_matrix_1_7" FLOAT DOUBLE
+"vth0_matrix_1_31" FLOAT DOUBLE
+"vth0_matrix_1_32" FLOAT DOUBLE
+"vth0_matrix_1_33" FLOAT DOUBLE
+"vth0_matrix_2_0" FLOAT DOUBLE
+"vth0_matrix_2_1" FLOAT DOUBLE
+"vth0_matrix_2_2" FLOAT DOUBLE
+"vth0_matrix_2_3" FLOAT DOUBLE
+"vth0_matrix_2_4" FLOAT DOUBLE
+"vth0_matrix_2_5" FLOAT DOUBLE
+"vth0_matrix_2_12" FLOAT DOUBLE
+"vth0_matrix_2_13" FLOAT DOUBLE
+"vth0_matrix_2_6" FLOAT DOUBLE
+"vth0_matrix_2_7" FLOAT DOUBLE
+"vth0_matrix_2_31" FLOAT DOUBLE
+"vth0_matrix_2_32" FLOAT DOUBLE
+"vth0_matrix_2_33" FLOAT DOUBLE
+"vth0_matrix_3_0" FLOAT DOUBLE
+"vth0_matrix_3_1" FLOAT DOUBLE
+"vth0_matrix_3_2" FLOAT DOUBLE
+"vth0_matrix_3_3" FLOAT DOUBLE
+"vth0_matrix_3_4" FLOAT DOUBLE
+"vth0_matrix_3_5" FLOAT DOUBLE
+"vth0_matrix_3_12" FLOAT DOUBLE
+"vth0_matrix_3_13" FLOAT DOUBLE
+"vth0_matrix_3_6" FLOAT DOUBLE
+"vth0_matrix_3_7" FLOAT DOUBLE
+"vth0_matrix_3_31" FLOAT DOUBLE
+"vth0_matrix_3_32" FLOAT DOUBLE
+"vth0_matrix_3_33" FLOAT DOUBLE
+"vth0_matrix_4_0" FLOAT DOUBLE
+"vth0_matrix_4_1" FLOAT DOUBLE
+"vth0_matrix_4_2" FLOAT DOUBLE
+"vth0_matrix_4_3" FLOAT DOUBLE
+"vth0_matrix_4_4" FLOAT DOUBLE
+"vth0_matrix_4_5" FLOAT DOUBLE
+"vth0_matrix_4_12" FLOAT DOUBLE
+"vth0_matrix_4_13" FLOAT DOUBLE
+"vth0_matrix_4_6" FLOAT DOUBLE
+"vth0_matrix_4_7" FLOAT DOUBLE
+"vth0_matrix_4_31" FLOAT DOUBLE
+"vth0_matrix_4_32" FLOAT DOUBLE
+"vth0_matrix_4_33" FLOAT DOUBLE
+"vth0_matrix_5_0" FLOAT DOUBLE
+"vth0_matrix_5_1" FLOAT DOUBLE
+"vth0_matrix_5_2" FLOAT DOUBLE
+"vth0_matrix_5_3" FLOAT DOUBLE
+"vth0_matrix_5_4" FLOAT DOUBLE
+"vth0_matrix_5_5" FLOAT DOUBLE
+"vth0_matrix_5_12" FLOAT DOUBLE
+"vth0_matrix_5_13" FLOAT DOUBLE
+"vth0_matrix_5_6" FLOAT DOUBLE
+"vth0_matrix_5_7" FLOAT DOUBLE
+"vth0_matrix_5_31" FLOAT DOUBLE
+"vth0_matrix_5_32" FLOAT DOUBLE
+"vth0_matrix_5_33" FLOAT DOUBLE
+"vth0_matrix_12_0" FLOAT DOUBLE
+"vth0_matrix_12_1" FLOAT DOUBLE
+"vth0_matrix_12_2" FLOAT DOUBLE
+"vth0_matrix_12_3" FLOAT DOUBLE
+"vth0_matrix_12_4" FLOAT DOUBLE
+"vth0_matrix_12_5" FLOAT DOUBLE
+"vth0_matrix_12_12" FLOAT DOUBLE
+"vth0_matrix_12_13" FLOAT DOUBLE
+"vth0_matrix_12_6" FLOAT DOUBLE
+"vth0_matrix_12_7" FLOAT DOUBLE
+"vth0_matrix_12_31" FLOAT DOUBLE
+"vth0_matrix_12_32" FLOAT DOUBLE
+"vth0_matrix_12_33" FLOAT DOUBLE
+"vth0_matrix_13_0" FLOAT DOUBLE
+"vth0_matrix_13_1" FLOAT DOUBLE
+"vth0_matrix_13_2" FLOAT DOUBLE
+"vth0_matrix_13_3" FLOAT DOUBLE
+"vth0_matrix_13_4" FLOAT DOUBLE
+"vth0_matrix_13_5" FLOAT DOUBLE
+"vth0_matrix_13_12" FLOAT DOUBLE
+"vth0_matrix_13_13" FLOAT DOUBLE
+"vth0_matrix_13_6" FLOAT DOUBLE
+"vth0_matrix_13_7" FLOAT DOUBLE
+"vth0_matrix_13_31" FLOAT DOUBLE
+"vth0_matrix_13_32" FLOAT DOUBLE
+"vth0_matrix_13_33" FLOAT DOUBLE
+"vth0_matrix_6_0" FLOAT DOUBLE
+"vth0_matrix_6_1" FLOAT DOUBLE
+"vth0_matrix_6_2" FLOAT DOUBLE
+"vth0_matrix_6_3" FLOAT DOUBLE
+"vth0_matrix_6_4" FLOAT DOUBLE
+"vth0_matrix_6_5" FLOAT DOUBLE
+"vth0_matrix_6_12" FLOAT DOUBLE
+"vth0_matrix_6_13" FLOAT DOUBLE
+"vth0_matrix_6_6" FLOAT DOUBLE
+"vth0_matrix_6_7" FLOAT DOUBLE
+"vth0_matrix_6_31" FLOAT DOUBLE
+"vth0_matrix_6_32" FLOAT DOUBLE
+"vth0_matrix_6_33" FLOAT DOUBLE
+"vth0_matrix_7_0" FLOAT DOUBLE
+"vth0_matrix_7_1" FLOAT DOUBLE
+"vth0_matrix_7_2" FLOAT DOUBLE
+"vth0_matrix_7_3" FLOAT DOUBLE
+"vth0_matrix_7_4" FLOAT DOUBLE
+"vth0_matrix_7_5" FLOAT DOUBLE
+"vth0_matrix_7_12" FLOAT DOUBLE
+"vth0_matrix_7_13" FLOAT DOUBLE
+"vth0_matrix_7_6" FLOAT DOUBLE
+"vth0_matrix_7_7" FLOAT DOUBLE
+"vth0_matrix_7_31" FLOAT DOUBLE
+"vth0_matrix_7_32" FLOAT DOUBLE
+"vth0_matrix_7_33" FLOAT DOUBLE
+"vth0_matrix_31_0" FLOAT DOUBLE
+"vth0_matrix_31_1" FLOAT DOUBLE
+"vth0_matrix_31_2" FLOAT DOUBLE
+"vth0_matrix_31_3" FLOAT DOUBLE
+"vth0_matrix_31_4" FLOAT DOUBLE
+"vth0_matrix_31_5" FLOAT DOUBLE
+"vth0_matrix_31_12" FLOAT DOUBLE
+"vth0_matrix_31_13" FLOAT DOUBLE
+"vth0_matrix_31_6" FLOAT DOUBLE
+"vth0_matrix_31_7" FLOAT DOUBLE
+"vth0_matrix_31_31" FLOAT DOUBLE
+"vth0_matrix_31_32" FLOAT DOUBLE
+"vth0_matrix_31_33" FLOAT DOUBLE
+"vth0_matrix_32_0" FLOAT DOUBLE
+"vth0_matrix_32_1" FLOAT DOUBLE
+"vth0_matrix_32_2" FLOAT DOUBLE
+"vth0_matrix_32_3" FLOAT DOUBLE
+"vth0_matrix_32_4" FLOAT DOUBLE
+"vth0_matrix_32_5" FLOAT DOUBLE
+"vth0_matrix_32_12" FLOAT DOUBLE
+"vth0_matrix_32_13" FLOAT DOUBLE
+"vth0_matrix_32_6" FLOAT DOUBLE
+"vth0_matrix_32_7" FLOAT DOUBLE
+"vth0_matrix_32_31" FLOAT DOUBLE
+"vth0_matrix_32_32" FLOAT DOUBLE
+"vth0_matrix_32_33" FLOAT DOUBLE
+"vth0_matrix_33_0" FLOAT DOUBLE
+"vth0_matrix_33_1" FLOAT DOUBLE
+"vth0_matrix_33_2" FLOAT DOUBLE
+"vth0_matrix_33_3" FLOAT DOUBLE
+"vth0_matrix_33_4" FLOAT DOUBLE
+"vth0_matrix_33_5" FLOAT DOUBLE
+"vth0_matrix_33_12" FLOAT DOUBLE
+"vth0_matrix_33_13" FLOAT DOUBLE
+"vth0_matrix_33_6" FLOAT DOUBLE
+"vth0_matrix_33_7" FLOAT DOUBLE
+"vth0_matrix_33_31" FLOAT DOUBLE
+"vth0_matrix_33_32" FLOAT DOUBLE
+"vth0_matrix_33_33" FLOAT DOUBLE
+"x1_xl_nfet" FLOAT DOUBLE
+"x1_xl_pfet" FLOAT DOUBLE
+"x1_xl_lvtnfet" FLOAT DOUBLE
+"x1_xl_lvtpfet" FLOAT DOUBLE
+"x1_xl_hvtnfet" FLOAT DOUBLE
+"x1_xl_hvtpfet" FLOAT DOUBLE
+"x1_xl_egnfet" FLOAT DOUBLE
+"x1_xl_egpfet" FLOAT DOUBLE
+"x1_xl_dgnfet" FLOAT DOUBLE
+"x1_xl_dgpfet" FLOAT DOUBLE
+"x1_xl_zvtnfet" FLOAT DOUBLE
+"x1_xl_zvtegnfet" FLOAT DOUBLE
+"x1_xl_zvtdgnfet" FLOAT DOUBLE
+"x1_vth0_nfet" FLOAT DOUBLE
+"x1_vth0_pfet" FLOAT DOUBLE
+"x1_vth0_lvtnfet" FLOAT DOUBLE
+"x1_vth0_lvtpfet" FLOAT DOUBLE
+"x1_vth0_hvtnfet" FLOAT DOUBLE
+"x1_vth0_hvtpfet" FLOAT DOUBLE
+"x1_vth0_egnfet" FLOAT DOUBLE
+"x1_vth0_egpfet" FLOAT DOUBLE
+"x1_vth0_dgnfet" FLOAT DOUBLE
+"x1_vth0_dgpfet" FLOAT DOUBLE
+"x1_vth0_zvtnfet" FLOAT DOUBLE
+"x1_vth0_zvtegnfet" FLOAT DOUBLE
+"x1_vth0_zvtdgnfet" FLOAT DOUBLE
+"x1_xl_lshnfetpd" FLOAT DOUBLE
+"x1_vth0_lshnfetpd" FLOAT DOUBLE
+"x1_xl_egvpfet" FLOAT DOUBLE
+"x1_vth0_egvpfet" FLOAT DOUBLE
+"x1_xl_dgxnfet" FLOAT DOUBLE
+"x1_vth0_dgxnfet" FLOAT DOUBLE
+"x1_xl_dslnfetwl" FLOAT DOUBLE
+"x1_vth0_dslnfetwl" FLOAT DOUBLE
+"x1_xl_dgvnfet" FLOAT DOUBLE
+"x1_vth0_dgvnfet" FLOAT DOUBLE
+"x1_xl_egvnfet" FLOAT DOUBLE
+"x1_vth0_egvnfet" FLOAT DOUBLE
+"x1_xl_lslnfetpd" FLOAT DOUBLE
+"x1_vth0_lslnfetpd" FLOAT DOUBLE
+"x1_xl_dgxpfet" FLOAT DOUBLE
+"x1_vth0_dgxpfet" FLOAT DOUBLE
+"x1_xl_sslnfetpd" FLOAT DOUBLE
+"x1_vth0_sslnfetpd" FLOAT DOUBLE
+"x1_xl_lslnfetwl" FLOAT DOUBLE
+"x1_vth0_lslnfetwl" FLOAT DOUBLE
+"x1_xl_sslnfetwl" FLOAT DOUBLE
+"x1_vth0_sslnfetwl" FLOAT DOUBLE
+"x1_xl_dplnfetwl" FLOAT DOUBLE
+"x1_vth0_dplnfetwl" FLOAT DOUBLE
+"x1_xl_lshpfetpu" FLOAT DOUBLE
+"x1_vth0_lshpfetpu" FLOAT DOUBLE
+"x1_xl_dslnfetpd" FLOAT DOUBLE
+"x1_vth0_dslnfetpd" FLOAT DOUBLE
+"x1_xl_sslpfetpu" FLOAT DOUBLE
+"x1_vth0_sslpfetpu" FLOAT DOUBLE
+"x1_xl_dgvpfet" FLOAT DOUBLE
+"x1_vth0_dgvpfet" FLOAT DOUBLE
+"x1_xl_dplpfetpu" FLOAT DOUBLE
+"x1_vth0_dplpfetpu" FLOAT DOUBLE
+"x1_xl_dslpfetpu" FLOAT DOUBLE
+"x1_vth0_dslpfetpu" FLOAT DOUBLE
+"x1_xl_lslpfetpu" FLOAT DOUBLE
+"x1_vth0_lslpfetpu" FLOAT DOUBLE
+"x1_xl_dplnfetpd" FLOAT DOUBLE
+"x1_vth0_dplnfetpd" FLOAT DOUBLE
+"x1_xl_lshnfetwl" FLOAT DOUBLE
+"x1_vth0_lshnfetwl" FLOAT DOUBLE
+"pc_ca_cap" FLOAT DOUBLE
+"len_dep" FLOAT DOUBLE
+"cnr_rnd_rss" FLOAT DOUBLE
+"tw_factor" FLOAT DOUBLE
+"grm_sti" FLOAT DOUBLE
+"p_sti" FLOAT DOUBLE
+"acwv_fet_ran" FLOAT DOUBLE
+"acwv_sfet_ran" FLOAT DOUBLE
+"acwv_zfet_ran" FLOAT DOUBLE
+"ibmrs_base" FLOAT DOUBLE
+"inc_acv" FLOAT DOUBLE
+"inc_npmis" FLOAT DOUBLE
+"delpc" FLOAT DOUBLE
+"pc_nest_f" FLOAT DOUBLE
+"pc_orient_f" FLOAT DOUBLE
+"pc_dist_f" FLOAT DOUBLE
+"vth0_tol_dgnfet" FLOAT DOUBLE
+"xl_tol_dgnfet" FLOAT DOUBLE
+"xl_dgnfet_n" FLOAT DOUBLE
+"xl_dgpfet_n" FLOAT DOUBLE
+"vth0_tol_dgpfet" FLOAT DOUBLE
+"xl_tol_dgpfet" FLOAT DOUBLE
+"vth0_tol_dgvnfet" FLOAT DOUBLE
+"xl_tol_dgvnfet" FLOAT DOUBLE
+"vth0_tol_dgvpfet" FLOAT DOUBLE
+"xl_tol_dgvpfet" FLOAT DOUBLE
+"vth0_tol_dgxnfet" FLOAT DOUBLE
+"xl_tol_dgxnfet" FLOAT DOUBLE
+"vth0_tol_dgxpfet" FLOAT DOUBLE
+"xl_tol_dgxpfet" FLOAT DOUBLE
+"vth0_tol_dplnfetpd" FLOAT DOUBLE
+"xl_tol_dplnfetpd" FLOAT DOUBLE
+"vth0_tol_dplnfetwl" FLOAT DOUBLE
+"xl_tol_dplnfetwl" FLOAT DOUBLE
+"vth0_tol_dplpfetpu" FLOAT DOUBLE
+"xl_tol_dplpfetpu" FLOAT DOUBLE
+"vth0_tol_dslnfetpd" FLOAT DOUBLE
+"xl_tol_dslnfetpd" FLOAT DOUBLE
+"vth0_tol_dslnfetwl" FLOAT DOUBLE
+"xl_tol_dslnfetwl" FLOAT DOUBLE
+"vth0_tol_dslpfetpu" FLOAT DOUBLE
+"xl_tol_dslpfetpu" FLOAT DOUBLE
+"vth0_tol_egnfet" FLOAT DOUBLE
+"xl_tol_egnfet" FLOAT DOUBLE
+"xl_egnfet_n" FLOAT DOUBLE
+"xw_egnfet_n" FLOAT DOUBLE
+"vth0_tol_egpfet" FLOAT DOUBLE
+"xl_tol_egpfet" FLOAT DOUBLE
+"xl_egpfet_n" FLOAT DOUBLE
+"xw_egpfet_n" FLOAT DOUBLE
+"vth0_tol_egvnfet" FLOAT DOUBLE
+"xl_tol_egvnfet" FLOAT DOUBLE
+"vth0_tol_egvpfet" FLOAT DOUBLE
+"xl_tol_egvpfet" FLOAT DOUBLE
+"vth0_tol_hvtnfet" FLOAT DOUBLE
+"xl_tol_hvtnfet" FLOAT DOUBLE
+"vth0_tol_hvtpfet" FLOAT DOUBLE
+"xl_tol_hvtpfet" FLOAT DOUBLE
+"vth0_tol_lshnfetpd" FLOAT DOUBLE
+"xl_tol_lshnfetpd" FLOAT DOUBLE
+"vth0_tol_lshnfetwl" FLOAT DOUBLE
+"xl_tol_lshnfetwl" FLOAT DOUBLE
+"vth0_tol_lshpfetpu" FLOAT DOUBLE
+"xl_tol_lshpfetpu" FLOAT DOUBLE
+"vth0_tol_lslnfetpd" FLOAT DOUBLE
+"xl_tol_lslnfetpd" FLOAT DOUBLE
+"vth0_tol_lslnfetwl" FLOAT DOUBLE
+"xl_tol_lslnfetwl" FLOAT DOUBLE
+"vth0_tol_lslpfetpu" FLOAT DOUBLE
+"xl_tol_lslpfetpu" FLOAT DOUBLE
+"vth0_tol_lvtnfet" FLOAT DOUBLE
+"xl_tol_lvtnfet" FLOAT DOUBLE
+"vth0_tol_lvtpfet" FLOAT DOUBLE
+"xl_tol_lvtpfet" FLOAT DOUBLE
+"vth0_tol_nfet" FLOAT DOUBLE
+"xl_tol_nfet" FLOAT DOUBLE
+"xl_nfet_n" FLOAT DOUBLE
+"xw_nfet_n" FLOAT DOUBLE
+"vth0_tol_pfet" FLOAT DOUBLE
+"xl_tol_pfet" FLOAT DOUBLE
+"xl_pfet_n" FLOAT DOUBLE
+"vth0_tol_sslnfetpd" FLOAT DOUBLE
+"xl_tol_sslnfetpd" FLOAT DOUBLE
+"vth0_tol_sslnfetwl" FLOAT DOUBLE
+"xl_tol_sslnfetwl" FLOAT DOUBLE
+"vth0_tol_sslpfetpu" FLOAT DOUBLE
+"xl_tol_sslpfetpu" FLOAT DOUBLE
+"vth0_tol_zvtdgnfet" FLOAT DOUBLE
+"xl_tol_zvtdgnfet" FLOAT DOUBLE
+"vth0_tol_zvtegnfet" FLOAT DOUBLE
+"xl_tol_zvtegnfet" FLOAT DOUBLE
+"vth0_tol_zvtnfet" FLOAT DOUBLE
+"xl_tol_zvtnfet" FLOAT DOUBLE
+"vth0_tol_egcnfet" FLOAT DOUBLE
+"xl_tol_egcnfet" FLOAT DOUBLE
+"xl_egcnfet_n" FLOAT DOUBLE
+"xw_egcnfet_n" FLOAT DOUBLE
+"vth0_tol_egcpfet" FLOAT DOUBLE
+"xl_tol_egcpfet" FLOAT DOUBLE
+"xl_egcpfet_n" FLOAT DOUBLE
+"xw_egcpfet_n" FLOAT DOUBLE
+"x_vth0_dgnfet" FLOAT DOUBLE
+"vth0_dgnfet_1" FLOAT DOUBLE
+"u0_dgnfet" FLOAT DOUBLE
+"mulu0_dgnfet" FLOAT DOUBLE
+"rdsw_dgnfet" FLOAT DOUBLE
+"mulrdsw_dgnfet" FLOAT DOUBLE
+"x_xl_dgnfet" FLOAT DOUBLE
+"xw_dgnfet_f" FLOAT DOUBLE
+"toxe_dgnfet" FLOAT DOUBLE
+"cgsl_dgnfet" FLOAT DOUBLE
+"cgdl_dgnfet" FLOAT DOUBLE
+"cgso_dgnfet" FLOAT DOUBLE
+"cgdo_dgnfet" FLOAT DOUBLE
+"dcov_dgnfet" FLOAT DOUBLE
+"lcov_dgnfet" FLOAT DOUBLE
+"lint_dgnfet" FLOAT DOUBLE
+"vth0_dgnfet" FLOAT DOUBLE
+"toxp_dgnfet" FLOAT DOUBLE
+"cjs_dgnfet" FLOAT DOUBLE
+"cjd_dgnfet" FLOAT DOUBLE
+"cjsws_dgnfet" FLOAT DOUBLE
+"cjswd_dgnfet" FLOAT DOUBLE
+"cjswgs_dgnfet" FLOAT DOUBLE
+"cjswgd_dgnfet" FLOAT DOUBLE
+"pvth0_dgnfet" FLOAT DOUBLE
+"x_vth0_dgpfet" FLOAT DOUBLE
+"vth0_dgpfet_1" FLOAT DOUBLE
+"u0_dgpfet" FLOAT DOUBLE
+"mulu0_dgpfet" FLOAT DOUBLE
+"rdsw_dgpfet" FLOAT DOUBLE
+"mulrdsw_dgpfet" FLOAT DOUBLE
+"x_xl_dgpfet" FLOAT DOUBLE
+"xw_dgpfet_f" FLOAT DOUBLE
+"toxe_dgpfet" FLOAT DOUBLE
+"cgsl_dgpfet" FLOAT DOUBLE
+"cgdl_dgpfet" FLOAT DOUBLE
+"cgso_dgpfet" FLOAT DOUBLE
+"cgdo_dgpfet" FLOAT DOUBLE
+"dcov_dgpfet" FLOAT DOUBLE
+"lcov_dgpfet" FLOAT DOUBLE
+"lint_dgpfet" FLOAT DOUBLE
+"vth0_dgpfet" FLOAT DOUBLE
+"toxp_dgpfet" FLOAT DOUBLE
+"cjs_dgpfet" FLOAT DOUBLE
+"cjd_dgpfet" FLOAT DOUBLE
+"cjsws_dgpfet" FLOAT DOUBLE
+"cjswd_dgpfet" FLOAT DOUBLE
+"cjswgs_dgpfet" FLOAT DOUBLE
+"cjswgd_dgpfet" FLOAT DOUBLE
+"pvth0_dgpfet" FLOAT DOUBLE
+"x_vth0_dgvnfet" FLOAT DOUBLE
+"vth0_dgvnfet_1" FLOAT DOUBLE
+"u0_dgvnfet" FLOAT DOUBLE
+"mulu0_dgvnfet" FLOAT DOUBLE
+"rdsw_dgvnfet" FLOAT DOUBLE
+"mulrdsw_dgvnfet" FLOAT DOUBLE
+"x_xl_dgvnfet" FLOAT DOUBLE
+"xw_dgvnfet_f" FLOAT DOUBLE
+"toxe_dgvnfet" FLOAT DOUBLE
+"cgsl_dgvnfet" FLOAT DOUBLE
+"cgdl_dgvnfet" FLOAT DOUBLE
+"cgso_dgvnfet" FLOAT DOUBLE
+"cgdo_dgvnfet" FLOAT DOUBLE
+"dcov_dgvnfet" FLOAT DOUBLE
+"lcov_dgvnfet" FLOAT DOUBLE
+"lint_dgvnfet" FLOAT DOUBLE
+"vth0_dgvnfet" FLOAT DOUBLE
+"toxp_dgvnfet" FLOAT DOUBLE
+"cjs_dgvnfet" FLOAT DOUBLE
+"cjd_dgvnfet" FLOAT DOUBLE
+"cjsws_dgvnfet" FLOAT DOUBLE
+"cjswd_dgvnfet" FLOAT DOUBLE
+"cjswgs_dgvnfet" FLOAT DOUBLE
+"cjswgd_dgvnfet" FLOAT DOUBLE
+"pvth0_dgvnfet" FLOAT DOUBLE
+"x_vth0_dgvpfet" FLOAT DOUBLE
+"vth0_dgvpfet_1" FLOAT DOUBLE
+"u0_dgvpfet" FLOAT DOUBLE
+"mulu0_dgvpfet" FLOAT DOUBLE
+"rdsw_dgvpfet" FLOAT DOUBLE
+"mulrdsw_dgvpfet" FLOAT DOUBLE
+"x_xl_dgvpfet" FLOAT DOUBLE
+"xw_dgvpfet_f" FLOAT DOUBLE
+"toxe_dgvpfet" FLOAT DOUBLE
+"cgsl_dgvpfet" FLOAT DOUBLE
+"cgdl_dgvpfet" FLOAT DOUBLE
+"cgso_dgvpfet" FLOAT DOUBLE
+"cgdo_dgvpfet" FLOAT DOUBLE
+"dcov_dgvpfet" FLOAT DOUBLE
+"lcov_dgvpfet" FLOAT DOUBLE
+"lint_dgvpfet" FLOAT DOUBLE
+"vth0_dgvpfet" FLOAT DOUBLE
+"toxp_dgvpfet" FLOAT DOUBLE
+"cjs_dgvpfet" FLOAT DOUBLE
+"cjd_dgvpfet" FLOAT DOUBLE
+"cjsws_dgvpfet" FLOAT DOUBLE
+"cjswd_dgvpfet" FLOAT DOUBLE
+"cjswgs_dgvpfet" FLOAT DOUBLE
+"cjswgd_dgvpfet" FLOAT DOUBLE
+"pvth0_dgvpfet" FLOAT DOUBLE
+"x_vth0_dgxnfet" FLOAT DOUBLE
+"vth0_dgxnfet_1" FLOAT DOUBLE
+"u0_dgxnfet" FLOAT DOUBLE
+"mulu0_dgxnfet" FLOAT DOUBLE
+"rdsw_dgxnfet" FLOAT DOUBLE
+"mulrdsw_dgxnfet" FLOAT DOUBLE
+"x_xl_dgxnfet" FLOAT DOUBLE
+"xw_dgxnfet_f" FLOAT DOUBLE
+"toxe_dgxnfet" FLOAT DOUBLE
+"cgsl_dgxnfet" FLOAT DOUBLE
+"cgdl_dgxnfet" FLOAT DOUBLE
+"cgso_dgxnfet" FLOAT DOUBLE
+"cgdo_dgxnfet" FLOAT DOUBLE
+"dcov_dgxnfet" FLOAT DOUBLE
+"lcov_dgxnfet" FLOAT DOUBLE
+"lint_dgxnfet" FLOAT DOUBLE
+"vth0_dgxnfet" FLOAT DOUBLE
+"toxp_dgxnfet" FLOAT DOUBLE
+"cjs_dgxnfet" FLOAT DOUBLE
+"cjd_dgxnfet" FLOAT DOUBLE
+"cjsws_dgxnfet" FLOAT DOUBLE
+"cjswd_dgxnfet" FLOAT DOUBLE
+"cjswgs_dgxnfet" FLOAT DOUBLE
+"cjswgd_dgxnfet" FLOAT DOUBLE
+"pvth0_dgxnfet" FLOAT DOUBLE
+"x_vth0_dgxpfet" FLOAT DOUBLE
+"vth0_dgxpfet_1" FLOAT DOUBLE
+"u0_dgxpfet" FLOAT DOUBLE
+"mulu0_dgxpfet" FLOAT DOUBLE
+"rdsw_dgxpfet" FLOAT DOUBLE
+"mulrdsw_dgxpfet" FLOAT DOUBLE
+"x_xl_dgxpfet" FLOAT DOUBLE
+"xw_dgxpfet_f" FLOAT DOUBLE
+"toxe_dgxpfet" FLOAT DOUBLE
+"cgsl_dgxpfet" FLOAT DOUBLE
+"cgdl_dgxpfet" FLOAT DOUBLE
+"cgso_dgxpfet" FLOAT DOUBLE
+"cgdo_dgxpfet" FLOAT DOUBLE
+"dcov_dgxpfet" FLOAT DOUBLE
+"lcov_dgxpfet" FLOAT DOUBLE
+"lint_dgxpfet" FLOAT DOUBLE
+"vth0_dgxpfet" FLOAT DOUBLE
+"toxp_dgxpfet" FLOAT DOUBLE
+"cjs_dgxpfet" FLOAT DOUBLE
+"cjd_dgxpfet" FLOAT DOUBLE
+"cjsws_dgxpfet" FLOAT DOUBLE
+"cjswd_dgxpfet" FLOAT DOUBLE
+"cjswgs_dgxpfet" FLOAT DOUBLE
+"cjswgd_dgxpfet" FLOAT DOUBLE
+"pvth0_dgxpfet" FLOAT DOUBLE
+"x_vth0_dplnfetpd" FLOAT DOUBLE
+"vth0_dplnfetpd_1" FLOAT DOUBLE
+"u0_dplnfetpd" FLOAT DOUBLE
+"mulu0_dplnfetpd" FLOAT DOUBLE
+"rdsw_dplnfetpd" FLOAT DOUBLE
+"mulrdsw_dplnfetpd" FLOAT DOUBLE
+"x_xl_dplnfetpd" FLOAT DOUBLE
+"xw_dplnfetpd_f" FLOAT DOUBLE
+"toxe_dplnfetpd" FLOAT DOUBLE
+"cgsl_dplnfetpd" FLOAT DOUBLE
+"cgdl_dplnfetpd" FLOAT DOUBLE
+"cgso_dplnfetpd" FLOAT DOUBLE
+"cgdo_dplnfetpd" FLOAT DOUBLE
+"dcov_dplnfetpd" FLOAT DOUBLE
+"lcov_dplnfetpd" FLOAT DOUBLE
+"lint_dplnfetpd" FLOAT DOUBLE
+"vth0_dplnfetpd" FLOAT DOUBLE
+"toxp_dplnfetpd" FLOAT DOUBLE
+"cjs_dplnfetpd" FLOAT DOUBLE
+"cjd_dplnfetpd" FLOAT DOUBLE
+"cjsws_dplnfetpd" FLOAT DOUBLE
+"cjswd_dplnfetpd" FLOAT DOUBLE
+"cjswgs_dplnfetpd" FLOAT DOUBLE
+"cjswgd_dplnfetpd" FLOAT DOUBLE
+"pvth0_dplnfetpd" FLOAT DOUBLE
+"x_vth0_dplnfetwl" FLOAT DOUBLE
+"vth0_dplnfetwl_1" FLOAT DOUBLE
+"u0_dplnfetwl" FLOAT DOUBLE
+"mulu0_dplnfetwl" FLOAT DOUBLE
+"rdsw_dplnfetwl" FLOAT DOUBLE
+"mulrdsw_dplnfetwl" FLOAT DOUBLE
+"x_xl_dplnfetwl" FLOAT DOUBLE
+"xw_dplnfetwl_f" FLOAT DOUBLE
+"toxe_dplnfetwl" FLOAT DOUBLE
+"cgsl_dplnfetwl" FLOAT DOUBLE
+"cgdl_dplnfetwl" FLOAT DOUBLE
+"cgso_dplnfetwl" FLOAT DOUBLE
+"cgdo_dplnfetwl" FLOAT DOUBLE
+"dcov_dplnfetwl" FLOAT DOUBLE
+"lcov_dplnfetwl" FLOAT DOUBLE
+"lint_dplnfetwl" FLOAT DOUBLE
+"vth0_dplnfetwl" FLOAT DOUBLE
+"toxp_dplnfetwl" FLOAT DOUBLE
+"cjs_dplnfetwl" FLOAT DOUBLE
+"cjd_dplnfetwl" FLOAT DOUBLE
+"cjsws_dplnfetwl" FLOAT DOUBLE
+"cjswd_dplnfetwl" FLOAT DOUBLE
+"cjswgs_dplnfetwl" FLOAT DOUBLE
+"cjswgd_dplnfetwl" FLOAT DOUBLE
+"pvth0_dplnfetwl" FLOAT DOUBLE
+"x_vth0_dplpfetpu" FLOAT DOUBLE
+"vth0_dplpfetpu_1" FLOAT DOUBLE
+"u0_dplpfetpu" FLOAT DOUBLE
+"mulu0_dplpfetpu" FLOAT DOUBLE
+"rdsw_dplpfetpu" FLOAT DOUBLE
+"mulrdsw_dplpfetpu" FLOAT DOUBLE
+"x_xl_dplpfetpu" FLOAT DOUBLE
+"xw_dplpfetpu_f" FLOAT DOUBLE
+"toxe_dplpfetpu" FLOAT DOUBLE
+"cgsl_dplpfetpu" FLOAT DOUBLE
+"cgdl_dplpfetpu" FLOAT DOUBLE
+"cgso_dplpfetpu" FLOAT DOUBLE
+"cgdo_dplpfetpu" FLOAT DOUBLE
+"dcov_dplpfetpu" FLOAT DOUBLE
+"lcov_dplpfetpu" FLOAT DOUBLE
+"lint_dplpfetpu" FLOAT DOUBLE
+"vth0_dplpfetpu" FLOAT DOUBLE
+"toxp_dplpfetpu" FLOAT DOUBLE
+"cjs_dplpfetpu" FLOAT DOUBLE
+"cjd_dplpfetpu" FLOAT DOUBLE
+"cjsws_dplpfetpu" FLOAT DOUBLE
+"cjswd_dplpfetpu" FLOAT DOUBLE
+"cjswgs_dplpfetpu" FLOAT DOUBLE
+"cjswgd_dplpfetpu" FLOAT DOUBLE
+"pvth0_dplpfetpu" FLOAT DOUBLE
+"x_vth0_dslnfetpd" FLOAT DOUBLE
+"vth0_dslnfetpd_1" FLOAT DOUBLE
+"u0_dslnfetpd" FLOAT DOUBLE
+"mulu0_dslnfetpd" FLOAT DOUBLE
+"rdsw_dslnfetpd" FLOAT DOUBLE
+"mulrdsw_dslnfetpd" FLOAT DOUBLE
+"x_xl_dslnfetpd" FLOAT DOUBLE
+"xw_dslnfetpd_f" FLOAT DOUBLE
+"toxe_dslnfetpd" FLOAT DOUBLE
+"cgsl_dslnfetpd" FLOAT DOUBLE
+"cgdl_dslnfetpd" FLOAT DOUBLE
+"cgso_dslnfetpd" FLOAT DOUBLE
+"cgdo_dslnfetpd" FLOAT DOUBLE
+"dcov_dslnfetpd" FLOAT DOUBLE
+"lcov_dslnfetpd" FLOAT DOUBLE
+"lint_dslnfetpd" FLOAT DOUBLE
+"vth0_dslnfetpd" FLOAT DOUBLE
+"toxp_dslnfetpd" FLOAT DOUBLE
+"cjs_dslnfetpd" FLOAT DOUBLE
+"cjd_dslnfetpd" FLOAT DOUBLE
+"cjsws_dslnfetpd" FLOAT DOUBLE
+"cjswd_dslnfetpd" FLOAT DOUBLE
+"cjswgs_dslnfetpd" FLOAT DOUBLE
+"cjswgd_dslnfetpd" FLOAT DOUBLE
+"pvth0_dslnfetpd" FLOAT DOUBLE
+"x_vth0_dslnfetwl" FLOAT DOUBLE
+"vth0_dslnfetwl_1" FLOAT DOUBLE
+"u0_dslnfetwl" FLOAT DOUBLE
+"mulu0_dslnfetwl" FLOAT DOUBLE
+"rdsw_dslnfetwl" FLOAT DOUBLE
+"mulrdsw_dslnfetwl" FLOAT DOUBLE
+"x_xl_dslnfetwl" FLOAT DOUBLE
+"xw_dslnfetwl_f" FLOAT DOUBLE
+"toxe_dslnfetwl" FLOAT DOUBLE
+"cgsl_dslnfetwl" FLOAT DOUBLE
+"cgdl_dslnfetwl" FLOAT DOUBLE
+"cgso_dslnfetwl" FLOAT DOUBLE
+"cgdo_dslnfetwl" FLOAT DOUBLE
+"dcov_dslnfetwl" FLOAT DOUBLE
+"lcov_dslnfetwl" FLOAT DOUBLE
+"lint_dslnfetwl" FLOAT DOUBLE
+"vth0_dslnfetwl" FLOAT DOUBLE
+"toxp_dslnfetwl" FLOAT DOUBLE
+"cjs_dslnfetwl" FLOAT DOUBLE
+"cjd_dslnfetwl" FLOAT DOUBLE
+"cjsws_dslnfetwl" FLOAT DOUBLE
+"cjswd_dslnfetwl" FLOAT DOUBLE
+"cjswgs_dslnfetwl" FLOAT DOUBLE
+"cjswgd_dslnfetwl" FLOAT DOUBLE
+"pvth0_dslnfetwl" FLOAT DOUBLE
+"x_vth0_dslpfetpu" FLOAT DOUBLE
+"vth0_dslpfetpu_1" FLOAT DOUBLE
+"u0_dslpfetpu" FLOAT DOUBLE
+"mulu0_dslpfetpu" FLOAT DOUBLE
+"rdsw_dslpfetpu" FLOAT DOUBLE
+"mulrdsw_dslpfetpu" FLOAT DOUBLE
+"x_xl_dslpfetpu" FLOAT DOUBLE
+"xw_dslpfetpu_f" FLOAT DOUBLE
+"toxe_dslpfetpu" FLOAT DOUBLE
+"cgsl_dslpfetpu" FLOAT DOUBLE
+"cgdl_dslpfetpu" FLOAT DOUBLE
+"cgso_dslpfetpu" FLOAT DOUBLE
+"cgdo_dslpfetpu" FLOAT DOUBLE
+"dcov_dslpfetpu" FLOAT DOUBLE
+"lcov_dslpfetpu" FLOAT DOUBLE
+"lint_dslpfetpu" FLOAT DOUBLE
+"vth0_dslpfetpu" FLOAT DOUBLE
+"toxp_dslpfetpu" FLOAT DOUBLE
+"cjs_dslpfetpu" FLOAT DOUBLE
+"cjd_dslpfetpu" FLOAT DOUBLE
+"cjsws_dslpfetpu" FLOAT DOUBLE
+"cjswd_dslpfetpu" FLOAT DOUBLE
+"cjswgs_dslpfetpu" FLOAT DOUBLE
+"cjswgd_dslpfetpu" FLOAT DOUBLE
+"pvth0_dslpfetpu" FLOAT DOUBLE
+"x_vth0_egnfet" FLOAT DOUBLE
+"vth0_egnfet_1" FLOAT DOUBLE
+"u0_egnfet" FLOAT DOUBLE
+"mulu0_egnfet" FLOAT DOUBLE
+"rdsw_egnfet" FLOAT DOUBLE
+"mulrdsw_egnfet" FLOAT DOUBLE
+"x_xl_egnfet" FLOAT DOUBLE
+"xw_egnfet_f" FLOAT DOUBLE
+"toxe_egnfet" FLOAT DOUBLE
+"cgsl_egnfet" FLOAT DOUBLE
+"cgdl_egnfet" FLOAT DOUBLE
+"cgso_egnfet" FLOAT DOUBLE
+"cgdo_egnfet" FLOAT DOUBLE
+"dcov_egnfet" FLOAT DOUBLE
+"lcov_egnfet" FLOAT DOUBLE
+"lint_egnfet" FLOAT DOUBLE
+"vth0_egnfet" FLOAT DOUBLE
+"toxp_egnfet" FLOAT DOUBLE
+"cjs_egnfet" FLOAT DOUBLE
+"cjd_egnfet" FLOAT DOUBLE
+"cjsws_egnfet" FLOAT DOUBLE
+"cjswd_egnfet" FLOAT DOUBLE
+"cjswgs_egnfet" FLOAT DOUBLE
+"cjswgd_egnfet" FLOAT DOUBLE
+"pvth0_egnfet" FLOAT DOUBLE
+"x_vth0_egpfet" FLOAT DOUBLE
+"vth0_egpfet_1" FLOAT DOUBLE
+"u0_egpfet" FLOAT DOUBLE
+"mulu0_egpfet" FLOAT DOUBLE
+"rdsw_egpfet" FLOAT DOUBLE
+"mulrdsw_egpfet" FLOAT DOUBLE
+"x_xl_egpfet" FLOAT DOUBLE
+"xw_egpfet_f" FLOAT DOUBLE
+"toxe_egpfet" FLOAT DOUBLE
+"cgsl_egpfet" FLOAT DOUBLE
+"cgdl_egpfet" FLOAT DOUBLE
+"cgso_egpfet" FLOAT DOUBLE
+"cgdo_egpfet" FLOAT DOUBLE
+"dcov_egpfet" FLOAT DOUBLE
+"lcov_egpfet" FLOAT DOUBLE
+"lint_egpfet" FLOAT DOUBLE
+"vth0_egpfet" FLOAT DOUBLE
+"toxp_egpfet" FLOAT DOUBLE
+"cjs_egpfet" FLOAT DOUBLE
+"cjd_egpfet" FLOAT DOUBLE
+"cjsws_egpfet" FLOAT DOUBLE
+"cjswd_egpfet" FLOAT DOUBLE
+"cjswgs_egpfet" FLOAT DOUBLE
+"cjswgd_egpfet" FLOAT DOUBLE
+"pvth0_egpfet" FLOAT DOUBLE
+"x_vth0_egvnfet" FLOAT DOUBLE
+"vth0_egvnfet_1" FLOAT DOUBLE
+"u0_egvnfet" FLOAT DOUBLE
+"mulu0_egvnfet" FLOAT DOUBLE
+"rdsw_egvnfet" FLOAT DOUBLE
+"mulrdsw_egvnfet" FLOAT DOUBLE
+"x_xl_egvnfet" FLOAT DOUBLE
+"xw_egvnfet_f" FLOAT DOUBLE
+"toxe_egvnfet" FLOAT DOUBLE
+"cgsl_egvnfet" FLOAT DOUBLE
+"cgdl_egvnfet" FLOAT DOUBLE
+"cgso_egvnfet" FLOAT DOUBLE
+"cgdo_egvnfet" FLOAT DOUBLE
+"dcov_egvnfet" FLOAT DOUBLE
+"lcov_egvnfet" FLOAT DOUBLE
+"lint_egvnfet" FLOAT DOUBLE
+"vth0_egvnfet" FLOAT DOUBLE
+"toxp_egvnfet" FLOAT DOUBLE
+"cjs_egvnfet" FLOAT DOUBLE
+"cjd_egvnfet" FLOAT DOUBLE
+"cjsws_egvnfet" FLOAT DOUBLE
+"cjswd_egvnfet" FLOAT DOUBLE
+"cjswgs_egvnfet" FLOAT DOUBLE
+"cjswgd_egvnfet" FLOAT DOUBLE
+"pvth0_egvnfet" FLOAT DOUBLE
+"x_vth0_egvpfet" FLOAT DOUBLE
+"vth0_egvpfet_1" FLOAT DOUBLE
+"u0_egvpfet" FLOAT DOUBLE
+"mulu0_egvpfet" FLOAT DOUBLE
+"rdsw_egvpfet" FLOAT DOUBLE
+"mulrdsw_egvpfet" FLOAT DOUBLE
+"x_xl_egvpfet" FLOAT DOUBLE
+"xw_egvpfet_f" FLOAT DOUBLE
+"toxe_egvpfet" FLOAT DOUBLE
+"cgsl_egvpfet" FLOAT DOUBLE
+"cgdl_egvpfet" FLOAT DOUBLE
+"cgso_egvpfet" FLOAT DOUBLE
+"cgdo_egvpfet" FLOAT DOUBLE
+"dcov_egvpfet" FLOAT DOUBLE
+"lcov_egvpfet" FLOAT DOUBLE
+"lint_egvpfet" FLOAT DOUBLE
+"vth0_egvpfet" FLOAT DOUBLE
+"toxp_egvpfet" FLOAT DOUBLE
+"cjs_egvpfet" FLOAT DOUBLE
+"cjd_egvpfet" FLOAT DOUBLE
+"cjsws_egvpfet" FLOAT DOUBLE
+"cjswd_egvpfet" FLOAT DOUBLE
+"cjswgs_egvpfet" FLOAT DOUBLE
+"cjswgd_egvpfet" FLOAT DOUBLE
+"pvth0_egvpfet" FLOAT DOUBLE
+"x_vth0_hvtnfet" FLOAT DOUBLE
+"vth0_hvtnfet_1" FLOAT DOUBLE
+"u0_hvtnfet" FLOAT DOUBLE
+"mulu0_hvtnfet" FLOAT DOUBLE
+"rdsw_hvtnfet" FLOAT DOUBLE
+"mulrdsw_hvtnfet" FLOAT DOUBLE
+"x_xl_hvtnfet" FLOAT DOUBLE
+"xw_hvtnfet_f" FLOAT DOUBLE
+"toxe_hvtnfet" FLOAT DOUBLE
+"cgsl_hvtnfet" FLOAT DOUBLE
+"cgdl_hvtnfet" FLOAT DOUBLE
+"cgso_hvtnfet" FLOAT DOUBLE
+"cgdo_hvtnfet" FLOAT DOUBLE
+"dcov_hvtnfet" FLOAT DOUBLE
+"lcov_hvtnfet" FLOAT DOUBLE
+"lint_hvtnfet" FLOAT DOUBLE
+"vth0_hvtnfet" FLOAT DOUBLE
+"toxp_hvtnfet" FLOAT DOUBLE
+"cjs_hvtnfet" FLOAT DOUBLE
+"cjd_hvtnfet" FLOAT DOUBLE
+"cjsws_hvtnfet" FLOAT DOUBLE
+"cjswd_hvtnfet" FLOAT DOUBLE
+"cjswgs_hvtnfet" FLOAT DOUBLE
+"cjswgd_hvtnfet" FLOAT DOUBLE
+"pvth0_hvtnfet" FLOAT DOUBLE
+"x_vth0_hvtpfet" FLOAT DOUBLE
+"vth0_hvtpfet_1" FLOAT DOUBLE
+"u0_hvtpfet" FLOAT DOUBLE
+"mulu0_hvtpfet" FLOAT DOUBLE
+"rdsw_hvtpfet" FLOAT DOUBLE
+"mulrdsw_hvtpfet" FLOAT DOUBLE
+"x_xl_hvtpfet" FLOAT DOUBLE
+"xw_hvtpfet_f" FLOAT DOUBLE
+"toxe_hvtpfet" FLOAT DOUBLE
+"cgsl_hvtpfet" FLOAT DOUBLE
+"cgdl_hvtpfet" FLOAT DOUBLE
+"cgso_hvtpfet" FLOAT DOUBLE
+"cgdo_hvtpfet" FLOAT DOUBLE
+"dcov_hvtpfet" FLOAT DOUBLE
+"lcov_hvtpfet" FLOAT DOUBLE
+"lint_hvtpfet" FLOAT DOUBLE
+"vth0_hvtpfet" FLOAT DOUBLE
+"toxp_hvtpfet" FLOAT DOUBLE
+"cjs_hvtpfet" FLOAT DOUBLE
+"cjd_hvtpfet" FLOAT DOUBLE
+"cjsws_hvtpfet" FLOAT DOUBLE
+"cjswd_hvtpfet" FLOAT DOUBLE
+"cjswgs_hvtpfet" FLOAT DOUBLE
+"cjswgd_hvtpfet" FLOAT DOUBLE
+"pvth0_hvtpfet" FLOAT DOUBLE
+"x_vth0_lshnfetpd" FLOAT DOUBLE
+"vth0_lshnfetpd_1" FLOAT DOUBLE
+"u0_lshnfetpd" FLOAT DOUBLE
+"mulu0_lshnfetpd" FLOAT DOUBLE
+"rdsw_lshnfetpd" FLOAT DOUBLE
+"mulrdsw_lshnfetpd" FLOAT DOUBLE
+"x_xl_lshnfetpd" FLOAT DOUBLE
+"xw_lshnfetpd_f" FLOAT DOUBLE
+"toxe_lshnfetpd" FLOAT DOUBLE
+"cgsl_lshnfetpd" FLOAT DOUBLE
+"cgdl_lshnfetpd" FLOAT DOUBLE
+"cgso_lshnfetpd" FLOAT DOUBLE
+"cgdo_lshnfetpd" FLOAT DOUBLE
+"dcov_lshnfetpd" FLOAT DOUBLE
+"lcov_lshnfetpd" FLOAT DOUBLE
+"lint_lshnfetpd" FLOAT DOUBLE
+"vth0_lshnfetpd" FLOAT DOUBLE
+"toxp_lshnfetpd" FLOAT DOUBLE
+"cjs_lshnfetpd" FLOAT DOUBLE
+"cjd_lshnfetpd" FLOAT DOUBLE
+"cjsws_lshnfetpd" FLOAT DOUBLE
+"cjswd_lshnfetpd" FLOAT DOUBLE
+"cjswgs_lshnfetpd" FLOAT DOUBLE
+"cjswgd_lshnfetpd" FLOAT DOUBLE
+"pvth0_lshnfetpd" FLOAT DOUBLE
+"x_vth0_lshnfetwl" FLOAT DOUBLE
+"vth0_lshnfetwl_1" FLOAT DOUBLE
+"u0_lshnfetwl" FLOAT DOUBLE
+"mulu0_lshnfetwl" FLOAT DOUBLE
+"rdsw_lshnfetwl" FLOAT DOUBLE
+"mulrdsw_lshnfetwl" FLOAT DOUBLE
+"x_xl_lshnfetwl" FLOAT DOUBLE
+"xw_lshnfetwl_f" FLOAT DOUBLE
+"toxe_lshnfetwl" FLOAT DOUBLE
+"cgsl_lshnfetwl" FLOAT DOUBLE
+"cgdl_lshnfetwl" FLOAT DOUBLE
+"cgso_lshnfetwl" FLOAT DOUBLE
+"cgdo_lshnfetwl" FLOAT DOUBLE
+"dcov_lshnfetwl" FLOAT DOUBLE
+"lcov_lshnfetwl" FLOAT DOUBLE
+"lint_lshnfetwl" FLOAT DOUBLE
+"vth0_lshnfetwl" FLOAT DOUBLE
+"toxp_lshnfetwl" FLOAT DOUBLE
+"cjs_lshnfetwl" FLOAT DOUBLE
+"cjd_lshnfetwl" FLOAT DOUBLE
+"cjsws_lshnfetwl" FLOAT DOUBLE
+"cjswd_lshnfetwl" FLOAT DOUBLE
+"cjswgs_lshnfetwl" FLOAT DOUBLE
+"cjswgd_lshnfetwl" FLOAT DOUBLE
+"pvth0_lshnfetwl" FLOAT DOUBLE
+"x_vth0_lshpfetpu" FLOAT DOUBLE
+"vth0_lshpfetpu_1" FLOAT DOUBLE
+"u0_lshpfetpu" FLOAT DOUBLE
+"mulu0_lshpfetpu" FLOAT DOUBLE
+"rdsw_lshpfetpu" FLOAT DOUBLE
+"mulrdsw_lshpfetpu" FLOAT DOUBLE
+"x_xl_lshpfetpu" FLOAT DOUBLE
+"xw_lshpfetpu_f" FLOAT DOUBLE
+"toxe_lshpfetpu" FLOAT DOUBLE
+"cgsl_lshpfetpu" FLOAT DOUBLE
+"cgdl_lshpfetpu" FLOAT DOUBLE
+"cgso_lshpfetpu" FLOAT DOUBLE
+"cgdo_lshpfetpu" FLOAT DOUBLE
+"dcov_lshpfetpu" FLOAT DOUBLE
+"lcov_lshpfetpu" FLOAT DOUBLE
+"lint_lshpfetpu" FLOAT DOUBLE
+"vth0_lshpfetpu" FLOAT DOUBLE
+"toxp_lshpfetpu" FLOAT DOUBLE
+"cjs_lshpfetpu" FLOAT DOUBLE
+"cjd_lshpfetpu" FLOAT DOUBLE
+"cjsws_lshpfetpu" FLOAT DOUBLE
+"cjswd_lshpfetpu" FLOAT DOUBLE
+"cjswgs_lshpfetpu" FLOAT DOUBLE
+"cjswgd_lshpfetpu" FLOAT DOUBLE
+"pvth0_lshpfetpu" FLOAT DOUBLE
+"x_vth0_lslnfetpd" FLOAT DOUBLE
+"vth0_lslnfetpd_1" FLOAT DOUBLE
+"u0_lslnfetpd" FLOAT DOUBLE
+"mulu0_lslnfetpd" FLOAT DOUBLE
+"rdsw_lslnfetpd" FLOAT DOUBLE
+"mulrdsw_lslnfetpd" FLOAT DOUBLE
+"x_xl_lslnfetpd" FLOAT DOUBLE
+"xw_lslnfetpd_f" FLOAT DOUBLE
+"toxe_lslnfetpd" FLOAT DOUBLE
+"cgsl_lslnfetpd" FLOAT DOUBLE
+"cgdl_lslnfetpd" FLOAT DOUBLE
+"cgso_lslnfetpd" FLOAT DOUBLE
+"cgdo_lslnfetpd" FLOAT DOUBLE
+"dcov_lslnfetpd" FLOAT DOUBLE
+"lcov_lslnfetpd" FLOAT DOUBLE
+"lint_lslnfetpd" FLOAT DOUBLE
+"vth0_lslnfetpd" FLOAT DOUBLE
+"toxp_lslnfetpd" FLOAT DOUBLE
+"cjs_lslnfetpd" FLOAT DOUBLE
+"cjd_lslnfetpd" FLOAT DOUBLE
+"cjsws_lslnfetpd" FLOAT DOUBLE
+"cjswd_lslnfetpd" FLOAT DOUBLE
+"cjswgs_lslnfetpd" FLOAT DOUBLE
+"cjswgd_lslnfetpd" FLOAT DOUBLE
+"pvth0_lslnfetpd" FLOAT DOUBLE
+"x_vth0_lslnfetwl" FLOAT DOUBLE
+"vth0_lslnfetwl_1" FLOAT DOUBLE
+"u0_lslnfetwl" FLOAT DOUBLE
+"mulu0_lslnfetwl" FLOAT DOUBLE
+"rdsw_lslnfetwl" FLOAT DOUBLE
+"mulrdsw_lslnfetwl" FLOAT DOUBLE
+"x_xl_lslnfetwl" FLOAT DOUBLE
+"xw_lslnfetwl_f" FLOAT DOUBLE
+"toxe_lslnfetwl" FLOAT DOUBLE
+"cgsl_lslnfetwl" FLOAT DOUBLE
+"cgdl_lslnfetwl" FLOAT DOUBLE
+"cgso_lslnfetwl" FLOAT DOUBLE
+"cgdo_lslnfetwl" FLOAT DOUBLE
+"dcov_lslnfetwl" FLOAT DOUBLE
+"lcov_lslnfetwl" FLOAT DOUBLE
+"lint_lslnfetwl" FLOAT DOUBLE
+"vth0_lslnfetwl" FLOAT DOUBLE
+"toxp_lslnfetwl" FLOAT DOUBLE
+"cjs_lslnfetwl" FLOAT DOUBLE
+"cjd_lslnfetwl" FLOAT DOUBLE
+"cjsws_lslnfetwl" FLOAT DOUBLE
+"cjswd_lslnfetwl" FLOAT DOUBLE
+"cjswgs_lslnfetwl" FLOAT DOUBLE
+"cjswgd_lslnfetwl" FLOAT DOUBLE
+"pvth0_lslnfetwl" FLOAT DOUBLE
+"x_vth0_lslpfetpu" FLOAT DOUBLE
+"vth0_lslpfetpu_1" FLOAT DOUBLE
+"u0_lslpfetpu" FLOAT DOUBLE
+"mulu0_lslpfetpu" FLOAT DOUBLE
+"rdsw_lslpfetpu" FLOAT DOUBLE
+"mulrdsw_lslpfetpu" FLOAT DOUBLE
+"x_xl_lslpfetpu" FLOAT DOUBLE
+"xw_lslpfetpu_f" FLOAT DOUBLE
+"toxe_lslpfetpu" FLOAT DOUBLE
+"cgsl_lslpfetpu" FLOAT DOUBLE
+"cgdl_lslpfetpu" FLOAT DOUBLE
+"cgso_lslpfetpu" FLOAT DOUBLE
+"cgdo_lslpfetpu" FLOAT DOUBLE
+"dcov_lslpfetpu" FLOAT DOUBLE
+"lcov_lslpfetpu" FLOAT DOUBLE
+"lint_lslpfetpu" FLOAT DOUBLE
+"vth0_lslpfetpu" FLOAT DOUBLE
+"toxp_lslpfetpu" FLOAT DOUBLE
+"cjs_lslpfetpu" FLOAT DOUBLE
+"cjd_lslpfetpu" FLOAT DOUBLE
+"cjsws_lslpfetpu" FLOAT DOUBLE
+"cjswd_lslpfetpu" FLOAT DOUBLE
+"cjswgs_lslpfetpu" FLOAT DOUBLE
+"cjswgd_lslpfetpu" FLOAT DOUBLE
+"pvth0_lslpfetpu" FLOAT DOUBLE
+"x_vth0_lvtnfet" FLOAT DOUBLE
+"vth0_lvtnfet_1" FLOAT DOUBLE
+"u0_lvtnfet" FLOAT DOUBLE
+"mulu0_lvtnfet" FLOAT DOUBLE
+"rdsw_lvtnfet" FLOAT DOUBLE
+"mulrdsw_lvtnfet" FLOAT DOUBLE
+"x_xl_lvtnfet" FLOAT DOUBLE
+"xw_lvtnfet_f" FLOAT DOUBLE
+"toxe_lvtnfet" FLOAT DOUBLE
+"cgsl_lvtnfet" FLOAT DOUBLE
+"cgdl_lvtnfet" FLOAT DOUBLE
+"cgso_lvtnfet" FLOAT DOUBLE
+"cgdo_lvtnfet" FLOAT DOUBLE
+"dcov_lvtnfet" FLOAT DOUBLE
+"lcov_lvtnfet" FLOAT DOUBLE
+"lint_lvtnfet" FLOAT DOUBLE
+"vth0_lvtnfet" FLOAT DOUBLE
+"toxp_lvtnfet" FLOAT DOUBLE
+"cjs_lvtnfet" FLOAT DOUBLE
+"cjd_lvtnfet" FLOAT DOUBLE
+"cjsws_lvtnfet" FLOAT DOUBLE
+"cjswd_lvtnfet" FLOAT DOUBLE
+"cjswgs_lvtnfet" FLOAT DOUBLE
+"cjswgd_lvtnfet" FLOAT DOUBLE
+"pvth0_lvtnfet" FLOAT DOUBLE
+"x_vth0_lvtpfet" FLOAT DOUBLE
+"vth0_lvtpfet_1" FLOAT DOUBLE
+"u0_lvtpfet" FLOAT DOUBLE
+"mulu0_lvtpfet" FLOAT DOUBLE
+"rdsw_lvtpfet" FLOAT DOUBLE
+"mulrdsw_lvtpfet" FLOAT DOUBLE
+"x_xl_lvtpfet" FLOAT DOUBLE
+"xw_lvtpfet_f" FLOAT DOUBLE
+"toxe_lvtpfet" FLOAT DOUBLE
+"cgsl_lvtpfet" FLOAT DOUBLE
+"cgdl_lvtpfet" FLOAT DOUBLE
+"cgso_lvtpfet" FLOAT DOUBLE
+"cgdo_lvtpfet" FLOAT DOUBLE
+"dcov_lvtpfet" FLOAT DOUBLE
+"lcov_lvtpfet" FLOAT DOUBLE
+"lint_lvtpfet" FLOAT DOUBLE
+"vth0_lvtpfet" FLOAT DOUBLE
+"toxp_lvtpfet" FLOAT DOUBLE
+"cjs_lvtpfet" FLOAT DOUBLE
+"cjd_lvtpfet" FLOAT DOUBLE
+"cjsws_lvtpfet" FLOAT DOUBLE
+"cjswd_lvtpfet" FLOAT DOUBLE
+"cjswgs_lvtpfet" FLOAT DOUBLE
+"cjswgd_lvtpfet" FLOAT DOUBLE
+"pvth0_lvtpfet" FLOAT DOUBLE
+"x_vth0_nfet" FLOAT DOUBLE
+"vth0_nfet_1" FLOAT DOUBLE
+"u0_nfet" FLOAT DOUBLE
+"mulu0_nfet" FLOAT DOUBLE
+"rdsw_nfet" FLOAT DOUBLE
+"mulrdsw_nfet" FLOAT DOUBLE
+"x_xl_nfet" FLOAT DOUBLE
+"xw_nfet_f" FLOAT DOUBLE
+"toxe_nfet" FLOAT DOUBLE
+"cgsl_nfet" FLOAT DOUBLE
+"cgdl_nfet" FLOAT DOUBLE
+"cgso_nfet" FLOAT DOUBLE
+"cgdo_nfet" FLOAT DOUBLE
+"dcov_nfet" FLOAT DOUBLE
+"lcov_nfet" FLOAT DOUBLE
+"lint_nfet" FLOAT DOUBLE
+"vth0_nfet" FLOAT DOUBLE
+"toxp_nfet" FLOAT DOUBLE
+"cjs_nfet" FLOAT DOUBLE
+"cjd_nfet" FLOAT DOUBLE
+"cjsws_nfet" FLOAT DOUBLE
+"cjswd_nfet" FLOAT DOUBLE
+"cjswgs_nfet" FLOAT DOUBLE
+"cjswgd_nfet" FLOAT DOUBLE
+"pvth0_nfet" FLOAT DOUBLE
+"x_vth0_pfet" FLOAT DOUBLE
+"vth0_pfet_1" FLOAT DOUBLE
+"u0_pfet" FLOAT DOUBLE
+"mulu0_pfet" FLOAT DOUBLE
+"rdsw_pfet" FLOAT DOUBLE
+"mulrdsw_pfet" FLOAT DOUBLE
+"x_xl_pfet" FLOAT DOUBLE
+"xw_pfet_f" FLOAT DOUBLE
+"toxe_pfet" FLOAT DOUBLE
+"cgsl_pfet" FLOAT DOUBLE
+"cgdl_pfet" FLOAT DOUBLE
+"cgso_pfet" FLOAT DOUBLE
+"cgdo_pfet" FLOAT DOUBLE
+"dcov_pfet" FLOAT DOUBLE
+"lcov_pfet" FLOAT DOUBLE
+"lint_pfet" FLOAT DOUBLE
+"vth0_pfet" FLOAT DOUBLE
+"toxp_pfet" FLOAT DOUBLE
+"cjs_pfet" FLOAT DOUBLE
+"cjd_pfet" FLOAT DOUBLE
+"cjsws_pfet" FLOAT DOUBLE
+"cjswd_pfet" FLOAT DOUBLE
+"cjswgs_pfet" FLOAT DOUBLE
+"cjswgd_pfet" FLOAT DOUBLE
+"pvth0_pfet" FLOAT DOUBLE
+"x_vth0_sslnfetpd" FLOAT DOUBLE
+"vth0_sslnfetpd_1" FLOAT DOUBLE
+"u0_sslnfetpd" FLOAT DOUBLE
+"mulu0_sslnfetpd" FLOAT DOUBLE
+"rdsw_sslnfetpd" FLOAT DOUBLE
+"mulrdsw_sslnfetpd" FLOAT DOUBLE
+"x_xl_sslnfetpd" FLOAT DOUBLE
+"xw_sslnfetpd_f" FLOAT DOUBLE
+"toxe_sslnfetpd" FLOAT DOUBLE
+"cgsl_sslnfetpd" FLOAT DOUBLE
+"cgdl_sslnfetpd" FLOAT DOUBLE
+"cgso_sslnfetpd" FLOAT DOUBLE
+"cgdo_sslnfetpd" FLOAT DOUBLE
+"dcov_sslnfetpd" FLOAT DOUBLE
+"lcov_sslnfetpd" FLOAT DOUBLE
+"lint_sslnfetpd" FLOAT DOUBLE
+"vth0_sslnfetpd" FLOAT DOUBLE
+"toxp_sslnfetpd" FLOAT DOUBLE
+"cjs_sslnfetpd" FLOAT DOUBLE
+"cjd_sslnfetpd" FLOAT DOUBLE
+"cjsws_sslnfetpd" FLOAT DOUBLE
+"cjswd_sslnfetpd" FLOAT DOUBLE
+"cjswgs_sslnfetpd" FLOAT DOUBLE
+"cjswgd_sslnfetpd" FLOAT DOUBLE
+"pvth0_sslnfetpd" FLOAT DOUBLE
+"x_vth0_sslnfetwl" FLOAT DOUBLE
+"vth0_sslnfetwl_1" FLOAT DOUBLE
+"u0_sslnfetwl" FLOAT DOUBLE
+"mulu0_sslnfetwl" FLOAT DOUBLE
+"rdsw_sslnfetwl" FLOAT DOUBLE
+"mulrdsw_sslnfetwl" FLOAT DOUBLE
+"x_xl_sslnfetwl" FLOAT DOUBLE
+"xw_sslnfetwl_f" FLOAT DOUBLE
+"toxe_sslnfetwl" FLOAT DOUBLE
+"cgsl_sslnfetwl" FLOAT DOUBLE
+"cgdl_sslnfetwl" FLOAT DOUBLE
+"cgso_sslnfetwl" FLOAT DOUBLE
+"cgdo_sslnfetwl" FLOAT DOUBLE
+"dcov_sslnfetwl" FLOAT DOUBLE
+"lcov_sslnfetwl" FLOAT DOUBLE
+"lint_sslnfetwl" FLOAT DOUBLE
+"vth0_sslnfetwl" FLOAT DOUBLE
+"toxp_sslnfetwl" FLOAT DOUBLE
+"cjs_sslnfetwl" FLOAT DOUBLE
+"cjd_sslnfetwl" FLOAT DOUBLE
+"cjsws_sslnfetwl" FLOAT DOUBLE
+"cjswd_sslnfetwl" FLOAT DOUBLE
+"cjswgs_sslnfetwl" FLOAT DOUBLE
+"cjswgd_sslnfetwl" FLOAT DOUBLE
+"pvth0_sslnfetwl" FLOAT DOUBLE
+"x_vth0_sslpfetpu" FLOAT DOUBLE
+"vth0_sslpfetpu_1" FLOAT DOUBLE
+"u0_sslpfetpu" FLOAT DOUBLE
+"mulu0_sslpfetpu" FLOAT DOUBLE
+"rdsw_sslpfetpu" FLOAT DOUBLE
+"mulrdsw_sslpfetpu" FLOAT DOUBLE
+"x_xl_sslpfetpu" FLOAT DOUBLE
+"xw_sslpfetpu_f" FLOAT DOUBLE
+"toxe_sslpfetpu" FLOAT DOUBLE
+"cgsl_sslpfetpu" FLOAT DOUBLE
+"cgdl_sslpfetpu" FLOAT DOUBLE
+"cgso_sslpfetpu" FLOAT DOUBLE
+"cgdo_sslpfetpu" FLOAT DOUBLE
+"dcov_sslpfetpu" FLOAT DOUBLE
+"lcov_sslpfetpu" FLOAT DOUBLE
+"lint_sslpfetpu" FLOAT DOUBLE
+"vth0_sslpfetpu" FLOAT DOUBLE
+"toxp_sslpfetpu" FLOAT DOUBLE
+"cjs_sslpfetpu" FLOAT DOUBLE
+"cjd_sslpfetpu" FLOAT DOUBLE
+"cjsws_sslpfetpu" FLOAT DOUBLE
+"cjswd_sslpfetpu" FLOAT DOUBLE
+"cjswgs_sslpfetpu" FLOAT DOUBLE
+"cjswgd_sslpfetpu" FLOAT DOUBLE
+"pvth0_sslpfetpu" FLOAT DOUBLE
+"x_vth0_zvtdgnfet" FLOAT DOUBLE
+"vth0_zvtdgnfet_1" FLOAT DOUBLE
+"u0_zvtdgnfet" FLOAT DOUBLE
+"mulu0_zvtdgnfet" FLOAT DOUBLE
+"rdsw_zvtdgnfet" FLOAT DOUBLE
+"mulrdsw_zvtdgnfet" FLOAT DOUBLE
+"x_xl_zvtdgnfet" FLOAT DOUBLE
+"xw_zvtdgnfet_f" FLOAT DOUBLE
+"toxe_zvtdgnfet" FLOAT DOUBLE
+"cgsl_zvtdgnfet" FLOAT DOUBLE
+"cgdl_zvtdgnfet" FLOAT DOUBLE
+"cgso_zvtdgnfet" FLOAT DOUBLE
+"cgdo_zvtdgnfet" FLOAT DOUBLE
+"dcov_zvtdgnfet" FLOAT DOUBLE
+"lcov_zvtdgnfet" FLOAT DOUBLE
+"lint_zvtdgnfet" FLOAT DOUBLE
+"vth0_zvtdgnfet" FLOAT DOUBLE
+"toxp_zvtdgnfet" FLOAT DOUBLE
+"cjs_zvtdgnfet" FLOAT DOUBLE
+"cjd_zvtdgnfet" FLOAT DOUBLE
+"cjsws_zvtdgnfet" FLOAT DOUBLE
+"cjswd_zvtdgnfet" FLOAT DOUBLE
+"cjswgs_zvtdgnfet" FLOAT DOUBLE
+"cjswgd_zvtdgnfet" FLOAT DOUBLE
+"pvth0_zvtdgnfet" FLOAT DOUBLE
+"x_vth0_zvtegnfet" FLOAT DOUBLE
+"vth0_zvtegnfet_1" FLOAT DOUBLE
+"u0_zvtegnfet" FLOAT DOUBLE
+"mulu0_zvtegnfet" FLOAT DOUBLE
+"rdsw_zvtegnfet" FLOAT DOUBLE
+"mulrdsw_zvtegnfet" FLOAT DOUBLE
+"x_xl_zvtegnfet" FLOAT DOUBLE
+"xw_zvtegnfet_f" FLOAT DOUBLE
+"toxe_zvtegnfet" FLOAT DOUBLE
+"cgsl_zvtegnfet" FLOAT DOUBLE
+"cgdl_zvtegnfet" FLOAT DOUBLE
+"cgso_zvtegnfet" FLOAT DOUBLE
+"cgdo_zvtegnfet" FLOAT DOUBLE
+"dcov_zvtegnfet" FLOAT DOUBLE
+"lcov_zvtegnfet" FLOAT DOUBLE
+"lint_zvtegnfet" FLOAT DOUBLE
+"vth0_zvtegnfet" FLOAT DOUBLE
+"toxp_zvtegnfet" FLOAT DOUBLE
+"cjs_zvtegnfet" FLOAT DOUBLE
+"cjd_zvtegnfet" FLOAT DOUBLE
+"cjsws_zvtegnfet" FLOAT DOUBLE
+"cjswd_zvtegnfet" FLOAT DOUBLE
+"cjswgs_zvtegnfet" FLOAT DOUBLE
+"cjswgd_zvtegnfet" FLOAT DOUBLE
+"pvth0_zvtegnfet" FLOAT DOUBLE
+"x_vth0_zvtnfet" FLOAT DOUBLE
+"vth0_zvtnfet_1" FLOAT DOUBLE
+"u0_zvtnfet" FLOAT DOUBLE
+"mulu0_zvtnfet" FLOAT DOUBLE
+"rdsw_zvtnfet" FLOAT DOUBLE
+"mulrdsw_zvtnfet" FLOAT DOUBLE
+"x_xl_zvtnfet" FLOAT DOUBLE
+"xw_zvtnfet_f" FLOAT DOUBLE
+"toxe_zvtnfet" FLOAT DOUBLE
+"cgsl_zvtnfet" FLOAT DOUBLE
+"cgdl_zvtnfet" FLOAT DOUBLE
+"cgso_zvtnfet" FLOAT DOUBLE
+"cgdo_zvtnfet" FLOAT DOUBLE
+"dcov_zvtnfet" FLOAT DOUBLE
+"lcov_zvtnfet" FLOAT DOUBLE
+"lint_zvtnfet" FLOAT DOUBLE
+"vth0_zvtnfet" FLOAT DOUBLE
+"toxp_zvtnfet" FLOAT DOUBLE
+"cjs_zvtnfet" FLOAT DOUBLE
+"cjd_zvtnfet" FLOAT DOUBLE
+"cjsws_zvtnfet" FLOAT DOUBLE
+"cjswd_zvtnfet" FLOAT DOUBLE
+"cjswgs_zvtnfet" FLOAT DOUBLE
+"cjswgd_zvtnfet" FLOAT DOUBLE
+"pvth0_zvtnfet" FLOAT DOUBLE
+"delnw_n" FLOAT DOUBLE
+"delnw_t" FLOAT DOUBLE
+"delpw_n" FLOAT DOUBLE
+"delpw_t" FLOAT DOUBLE
+"delm1_n" FLOAT DOUBLE
+"delm1_t" FLOAT DOUBLE
+"delm2_n" FLOAT DOUBLE
+"delm2_t" FLOAT DOUBLE
+"delm3_n" FLOAT DOUBLE
+"delm3_t" FLOAT DOUBLE
+"delm4_n" FLOAT DOUBLE
+"delm4_t" FLOAT DOUBLE
+"delm5_n" FLOAT DOUBLE
+"delm5_t" FLOAT DOUBLE
+"delm6_n" FLOAT DOUBLE
+"delm6_t" FLOAT DOUBLE
+"delm7_n" FLOAT DOUBLE
+"delm7_t" FLOAT DOUBLE
+"delb1_n" FLOAT DOUBLE
+"delb1_t" FLOAT DOUBLE
+"delb2_n" FLOAT DOUBLE
+"delb2_t" FLOAT DOUBLE
+"delba_n" FLOAT DOUBLE
+"delba_t" FLOAT DOUBLE
+"delbb_n" FLOAT DOUBLE
+"delbb_t" FLOAT DOUBLE
+"dell1_n" FLOAT DOUBLE
+"dell1_t" FLOAT DOUBLE
+"dell2_n" FLOAT DOUBLE
+"dell2_t" FLOAT DOUBLE
+"delea_n" FLOAT DOUBLE
+"delea_t" FLOAT DOUBLE
+"deleb_n" FLOAT DOUBLE
+"deleb_t" FLOAT DOUBLE
+"delfa_n" FLOAT DOUBLE
+"delfa_t" FLOAT DOUBLE
+"delfb_n" FLOAT DOUBLE
+"delfb_t" FLOAT DOUBLE
+"delua_n" FLOAT DOUBLE
+"delua_t" FLOAT DOUBLE
+"delub_n" FLOAT DOUBLE
+"delub_t" FLOAT DOUBLE
+"dellb_n" FLOAT DOUBLE
+"dellb_t" FLOAT DOUBLE
+"subt_n" FLOAT DOUBLE
+"subt_t" FLOAT DOUBLE
+"pct_n" FLOAT DOUBLE
+"pct_t" FLOAT DOUBLE
+"m1t_n" FLOAT DOUBLE
+"m1t_t" FLOAT DOUBLE
+"m2t_n" FLOAT DOUBLE
+"m2t_t" FLOAT DOUBLE
+"m3t_n" FLOAT DOUBLE
+"m3t_t" FLOAT DOUBLE
+"m4t_n" FLOAT DOUBLE
+"m4t_t" FLOAT DOUBLE
+"m5t_n" FLOAT DOUBLE
+"m5t_t" FLOAT DOUBLE
+"m6t_n" FLOAT DOUBLE
+"m6t_t" FLOAT DOUBLE
+"m7t_n" FLOAT DOUBLE
+"m7t_t" FLOAT DOUBLE
+"b1t_n" FLOAT DOUBLE
+"b1t_t" FLOAT DOUBLE
+"b2t_n" FLOAT DOUBLE
+"b2t_t" FLOAT DOUBLE
+"bat_n" FLOAT DOUBLE
+"bat_t" FLOAT DOUBLE
+"bbt_n" FLOAT DOUBLE
+"bbt_t" FLOAT DOUBLE
+"l1t_n" FLOAT DOUBLE
+"l1t_t" FLOAT DOUBLE
+"l2t_n" FLOAT DOUBLE
+"l2t_t" FLOAT DOUBLE
+"eat_n" FLOAT DOUBLE
+"eat_t" FLOAT DOUBLE
+"ebt_n" FLOAT DOUBLE
+"ebt_t" FLOAT DOUBLE
+"fat_n" FLOAT DOUBLE
+"fat_t" FLOAT DOUBLE
+"fbt_n" FLOAT DOUBLE
+"fbt_t" FLOAT DOUBLE
+"uat_n" FLOAT DOUBLE
+"uat_t" FLOAT DOUBLE
+"ubt_n" FLOAT DOUBLE
+"ubt_t" FLOAT DOUBLE
+"lbt_n" FLOAT DOUBLE
+"lbt_t" FLOAT DOUBLE
+"m6" FLOAT DOUBLE
+"m7" FLOAT DOUBLE
+"b1" FLOAT DOUBLE
+"b2" FLOAT DOUBLE
+"ba" FLOAT DOUBLE
+"bb" FLOAT DOUBLE
+"l1" FLOAT DOUBLE
+"l2" FLOAT DOUBLE
+"ea" FLOAT DOUBLE
+"eb" FLOAT DOUBLE
+"ua" FLOAT DOUBLE
+"ub" FLOAT DOUBLE
+"delm1e_f" FLOAT DOUBLE
+"delm2e_f" FLOAT DOUBLE
+"delm3e_f" FLOAT DOUBLE
+"delm4e_f" FLOAT DOUBLE
+"delm5e_f" FLOAT DOUBLE
+"delm6e_f" FLOAT DOUBLE
+"delm7e_f" FLOAT DOUBLE
+"delb1e_f" FLOAT DOUBLE
+"delb2e_f" FLOAT DOUBLE
+"delbae_f" FLOAT DOUBLE
+"delbbe_f" FLOAT DOUBLE
+"dell1e_f" FLOAT DOUBLE
+"dell2e_f" FLOAT DOUBLE
+"deleae_f" FLOAT DOUBLE
+"delebe_f" FLOAT DOUBLE
+"delfae_f" FLOAT DOUBLE
+"delfbe_f" FLOAT DOUBLE
+"deluae_f" FLOAT DOUBLE
+"delube_f" FLOAT DOUBLE
+"dellbe_f" FLOAT DOUBLE
+"m1w0_f" FLOAT DOUBLE
+"m2w0_f" FLOAT DOUBLE
+"m3w0_f" FLOAT DOUBLE
+"m4w0_f" FLOAT DOUBLE
+"m5w0_f" FLOAT DOUBLE
+"m6w0_f" FLOAT DOUBLE
+"m7w0_f" FLOAT DOUBLE
+"b1w0_f" FLOAT DOUBLE
+"b2w0_f" FLOAT DOUBLE
+"baw0_f" FLOAT DOUBLE
+"bbw0_f" FLOAT DOUBLE
+"l1w0_f" FLOAT DOUBLE
+"l2w0_f" FLOAT DOUBLE
+"eaw0_f" FLOAT DOUBLE
+"ebw0_f" FLOAT DOUBLE
+"faw0_f" FLOAT DOUBLE
+"fbw0_f" FLOAT DOUBLE
+"uaw0_f" FLOAT DOUBLE
+"ubw0_f" FLOAT DOUBLE
+"lbw0_f" FLOAT DOUBLE
+"m1wlim_f" FLOAT DOUBLE
+"m2wlim_f" FLOAT DOUBLE
+"m3wlim_f" FLOAT DOUBLE
+"m4wlim_f" FLOAT DOUBLE
+"m5wlim_f" FLOAT DOUBLE
+"m6wlim_f" FLOAT DOUBLE
+"m7wlim_f" FLOAT DOUBLE
+"b1wlim_f" FLOAT DOUBLE
+"b2wlim_f" FLOAT DOUBLE
+"bawlim_f" FLOAT DOUBLE
+"bbwlim_f" FLOAT DOUBLE
+"l1wlim_f" FLOAT DOUBLE
+"l2wlim_f" FLOAT DOUBLE
+"eawlim_f" FLOAT DOUBLE
+"ebwlim_f" FLOAT DOUBLE
+"fawlim_f" FLOAT DOUBLE
+"fbwlim_f" FLOAT DOUBLE
+"uawlim_f" FLOAT DOUBLE
+"ubwlim_f" FLOAT DOUBLE
+"lbwlim_f" FLOAT DOUBLE
+"m1delte_f" FLOAT DOUBLE
+"m2delte_f" FLOAT DOUBLE
+"m3delte_f" FLOAT DOUBLE
+"m4delte_f" FLOAT DOUBLE
+"m5delte_f" FLOAT DOUBLE
+"m6delte_f" FLOAT DOUBLE
+"m7delte_f" FLOAT DOUBLE
+"b1delte_f" FLOAT DOUBLE
+"b2delte_f" FLOAT DOUBLE
+"badelte_f" FLOAT DOUBLE
+"bbdelte_f" FLOAT DOUBLE
+"l1delte_f" FLOAT DOUBLE
+"l2delte_f" FLOAT DOUBLE
+"eadelte_f" FLOAT DOUBLE
+"ebdelte_f" FLOAT DOUBLE
+"fadelte_f" FLOAT DOUBLE
+"fbdelte_f" FLOAT DOUBLE
+"uadelte_f" FLOAT DOUBLE
+"ubdelte_f" FLOAT DOUBLE
+"lbdelte_f" FLOAT DOUBLE
+"m1rho_f" FLOAT DOUBLE
+"m2rho_f" FLOAT DOUBLE
+"m3rho_f" FLOAT DOUBLE
+"m4rho_f" FLOAT DOUBLE
+"m5rho_f" FLOAT DOUBLE
+"m6rho_f" FLOAT DOUBLE
+"m7rho_f" FLOAT DOUBLE
+"b1rho_f" FLOAT DOUBLE
+"b2rho_f" FLOAT DOUBLE
+"barho_f" FLOAT DOUBLE
+"bbrho_f" FLOAT DOUBLE
+"l1rho_f" FLOAT DOUBLE
+"l2rho_f" FLOAT DOUBLE
+"earho_f" FLOAT DOUBLE
+"ebrho_f" FLOAT DOUBLE
+"farho_f" FLOAT DOUBLE
+"fbrho_f" FLOAT DOUBLE
+"uarho_f" FLOAT DOUBLE
+"ubrho_f" FLOAT DOUBLE
+"lbrho_f" FLOAT DOUBLE
+"m1lambda_f" FLOAT DOUBLE
+"m2lambda_f" FLOAT DOUBLE
+"m3lambda_f" FLOAT DOUBLE
+"m4lambda_f" FLOAT DOUBLE
+"m5lambda_f" FLOAT DOUBLE
+"m6lambda_f" FLOAT DOUBLE
+"m7lambda_f" FLOAT DOUBLE
+"b1lambda_f" FLOAT DOUBLE
+"b2lambda_f" FLOAT DOUBLE
+"balambda_f" FLOAT DOUBLE
+"bblambda_f" FLOAT DOUBLE
+"l1lambda_f" FLOAT DOUBLE
+"l2lambda_f" FLOAT DOUBLE
+"ealambda_f" FLOAT DOUBLE
+"eblambda_f" FLOAT DOUBLE
+"falambda_f" FLOAT DOUBLE
+"fblambda_f" FLOAT DOUBLE
+"ualambda_f" FLOAT DOUBLE
+"ublambda_f" FLOAT DOUBLE
+"lblambda_f" FLOAT DOUBLE
+"m1p_f" FLOAT DOUBLE
+"m2p_f" FLOAT DOUBLE
+"m3p_f" FLOAT DOUBLE
+"m4p_f" FLOAT DOUBLE
+"m5p_f" FLOAT DOUBLE
+"m6p_f" FLOAT DOUBLE
+"m7p_f" FLOAT DOUBLE
+"b1p_f" FLOAT DOUBLE
+"b2p_f" FLOAT DOUBLE
+"bap_f" FLOAT DOUBLE
+"bbp_f" FLOAT DOUBLE
+"l1p_f" FLOAT DOUBLE
+"l2p_f" FLOAT DOUBLE
+"eap_f" FLOAT DOUBLE
+"ebp_f" FLOAT DOUBLE
+"fap_f" FLOAT DOUBLE
+"fbp_f" FLOAT DOUBLE
+"uap_f" FLOAT DOUBLE
+"ubp_f" FLOAT DOUBLE
+"lbp_f" FLOAT DOUBLE
+"m1r_f" FLOAT DOUBLE
+"m2r_f" FLOAT DOUBLE
+"m3r_f" FLOAT DOUBLE
+"m4r_f" FLOAT DOUBLE
+"m5r_f" FLOAT DOUBLE
+"m6r_f" FLOAT DOUBLE
+"m7r_f" FLOAT DOUBLE
+"b1r_f" FLOAT DOUBLE
+"b2r_f" FLOAT DOUBLE
+"bar_f" FLOAT DOUBLE
+"bbr_f" FLOAT DOUBLE
+"l1r_f" FLOAT DOUBLE
+"l2r_f" FLOAT DOUBLE
+"ear_f" FLOAT DOUBLE
+"ebr_f" FLOAT DOUBLE
+"far_f" FLOAT DOUBLE
+"fbr_f" FLOAT DOUBLE
+"uar_f" FLOAT DOUBLE
+"ubr_f" FLOAT DOUBLE
+"lbr_f" FLOAT DOUBLE
+"m1gamma_f" FLOAT DOUBLE
+"m2gamma_f" FLOAT DOUBLE
+"m3gamma_f" FLOAT DOUBLE
+"m4gamma_f" FLOAT DOUBLE
+"m5gamma_f" FLOAT DOUBLE
+"m6gamma_f" FLOAT DOUBLE
+"m7gamma_f" FLOAT DOUBLE
+"b1gamma_f" FLOAT DOUBLE
+"b2gamma_f" FLOAT DOUBLE
+"bagamma_f" FLOAT DOUBLE
+"bbgamma_f" FLOAT DOUBLE
+"l1gamma_f" FLOAT DOUBLE
+"l2gamma_f" FLOAT DOUBLE
+"eagamma_f" FLOAT DOUBLE
+"ebgamma_f" FLOAT DOUBLE
+"fagamma_f" FLOAT DOUBLE
+"fbgamma_f" FLOAT DOUBLE
+"uagamma_f" FLOAT DOUBLE
+"ubgamma_f" FLOAT DOUBLE
+"lbgamma_f" FLOAT DOUBLE
+"nwrs_n" FLOAT DOUBLE
+"nwrs_t" FLOAT DOUBLE
+"pwrs_n" FLOAT DOUBLE
+"pwrs_t" FLOAT DOUBLE
+"pcrs_n" FLOAT DOUBLE
+"pcrs_t" FLOAT DOUBLE
+"subrho_n" FLOAT DOUBLE
+"subrho_t" FLOAT DOUBLE
+"subpct_n" FLOAT DOUBLE
+"subpct_t" FLOAT DOUBLE
+"diffm1t_n" FLOAT DOUBLE
+"diffm1t_t" FLOAT DOUBLE
+"pcm1t_n" FLOAT DOUBLE
+"pcm1t_t" FLOAT DOUBLE
+"subm1t_n" FLOAT DOUBLE
+"subm1t_t" FLOAT DOUBLE
+"v1t_n" FLOAT DOUBLE
+"v1t_t" FLOAT DOUBLE
+"v2t_n" FLOAT DOUBLE
+"v2t_t" FLOAT DOUBLE
+"v3t_n" FLOAT DOUBLE
+"v3t_t" FLOAT DOUBLE
+"v4t_n" FLOAT DOUBLE
+"v4t_t" FLOAT DOUBLE
+"v5t_n" FLOAT DOUBLE
+"v5t_t" FLOAT DOUBLE
+"v6t_n" FLOAT DOUBLE
+"v6t_t" FLOAT DOUBLE
+"w0t_n" FLOAT DOUBLE
+"w0t_t" FLOAT DOUBLE
+"w1t_n" FLOAT DOUBLE
+"w1t_t" FLOAT DOUBLE
+"wtt_n" FLOAT DOUBLE
+"wtt_t" FLOAT DOUBLE
+"wat_n" FLOAT DOUBLE
+"wat_t" FLOAT DOUBLE
+"j0t_n" FLOAT DOUBLE
+"j0t_t" FLOAT DOUBLE
+"j1t_n" FLOAT DOUBLE
+"j1t_t" FLOAT DOUBLE
+"ytt_n" FLOAT DOUBLE
+"ytt_t" FLOAT DOUBLE
+"yat_n" FLOAT DOUBLE
+"yat_t" FLOAT DOUBLE
+"ott_n" FLOAT DOUBLE
+"ott_t" FLOAT DOUBLE
+"gmt_n" FLOAT DOUBLE
+"gmt_t" FLOAT DOUBLE
+"jrt_n" FLOAT DOUBLE
+"jrt_t" FLOAT DOUBLE
+"hlt_n" FLOAT DOUBLE
+"hlt_t" FLOAT DOUBLE
+"gat_n" FLOAT DOUBLE
+"gat_t" FLOAT DOUBLE
+"vvt_n" FLOAT DOUBLE
+"vvt_t" FLOAT DOUBLE
+"subtcr" FLOAT DOUBLE
+"nwtcr" FLOAT DOUBLE
+"pwtcr" FLOAT DOUBLE
+"pctcr" FLOAT DOUBLE
+"m1tcr" FLOAT DOUBLE
+"mxtcr" FLOAT DOUBLE
+"b1tcr" FLOAT DOUBLE
+"b2tcr" FLOAT DOUBLE
+"batcr" FLOAT DOUBLE
+"bbtcr" FLOAT DOUBLE
+"l1tcr" FLOAT DOUBLE
+"l2tcr" FLOAT DOUBLE
+"eatcr" FLOAT DOUBLE
+"ebtcr" FLOAT DOUBLE
+"fatcr" FLOAT DOUBLE
+"fbtcr" FLOAT DOUBLE
+"uatcr" FLOAT DOUBLE
+"ubtcr" FLOAT DOUBLE
+"lbtcr" FLOAT DOUBLE
+"cnr_wirerc" FLOAT DOUBLE
+"cnr_vpnp" FLOAT DOUBLE
+"cnr_cap" FLOAT DOUBLE
+"cnr_res" FLOAT DOUBLE
+"cnr_sub" FLOAT DOUBLE
+"cnr_nw" FLOAT DOUBLE
+"cnr_pw" FLOAT DOUBLE
+"cnr_m1" FLOAT DOUBLE
+"cnr_m2" FLOAT DOUBLE
+"cnr_m3" FLOAT DOUBLE
+"cnr_m4" FLOAT DOUBLE
+"cnr_m5" FLOAT DOUBLE
+"cnr_m6" FLOAT DOUBLE
+"cnr_m7" FLOAT DOUBLE
+"cnr_b1" FLOAT DOUBLE
+"cnr_b2" FLOAT DOUBLE
+"cnr_ba" FLOAT DOUBLE
+"cnr_bb" FLOAT DOUBLE
+"cnr_l1" FLOAT DOUBLE
+"cnr_l2" FLOAT DOUBLE
+"cnr_ea" FLOAT DOUBLE
+"cnr_eb" FLOAT DOUBLE
+"cnr_fa" FLOAT DOUBLE
+"cnr_fb" FLOAT DOUBLE
+"cnr_ua" FLOAT DOUBLE
+"cnr_ub" FLOAT DOUBLE
+"cnr_lb" FLOAT DOUBLE
+"cnr_sub_pc" FLOAT DOUBLE
+"cnr_diff_m1" FLOAT DOUBLE
+"cnr_pc_m1" FLOAT DOUBLE
+"cnr_sub_m1" FLOAT DOUBLE
+"cnr_v1" FLOAT DOUBLE
+"cnr_v2" FLOAT DOUBLE
+"cnr_v3" FLOAT DOUBLE
+"cnr_v4" FLOAT DOUBLE
+"cnr_v5" FLOAT DOUBLE
+"cnr_v6" FLOAT DOUBLE
+"cnr_w0" FLOAT DOUBLE
+"cnr_w1" FLOAT DOUBLE
+"cnr_wt" FLOAT DOUBLE
+"cnr_wa" FLOAT DOUBLE
+"cnr_j0" FLOAT DOUBLE
+"cnr_j1" FLOAT DOUBLE
+"cnr_yt" FLOAT DOUBLE
+"cnr_ya" FLOAT DOUBLE
+"cnr_ot" FLOAT DOUBLE
+"cnr_gm" FLOAT DOUBLE
+"cnr_jr" FLOAT DOUBLE
+"cnr_hl" FLOAT DOUBLE
+"cnr_ga" FLOAT DOUBLE
+"cnr_vv" FLOAT DOUBLE
+"xdelnw" FLOAT DOUBLE
+"delnw" FLOAT DOUBLE
+"xdelpw" FLOAT DOUBLE
+"delpw" FLOAT DOUBLE
+"xdelm1" FLOAT DOUBLE
+"delm1" FLOAT DOUBLE
+"xdelm2" FLOAT DOUBLE
+"delm2" FLOAT DOUBLE
+"xdelm3" FLOAT DOUBLE
+"delm3" FLOAT DOUBLE
+"xdelm4" FLOAT DOUBLE
+"delm4" FLOAT DOUBLE
+"xdelm5" FLOAT DOUBLE
+"delm5" FLOAT DOUBLE
+"xdelm6" FLOAT DOUBLE
+"delm6" FLOAT DOUBLE
+"xdelm7" FLOAT DOUBLE
+"delm7" FLOAT DOUBLE
+"xdelb1" FLOAT DOUBLE
+"delb1" FLOAT DOUBLE
+"xdelb2" FLOAT DOUBLE
+"delb2" FLOAT DOUBLE
+"xdelba" FLOAT DOUBLE
+"delba" FLOAT DOUBLE
+"xdelbb" FLOAT DOUBLE
+"delbb" FLOAT DOUBLE
+"xdell1" FLOAT DOUBLE
+"dell1" FLOAT DOUBLE
+"xdell2" FLOAT DOUBLE
+"dell2" FLOAT DOUBLE
+"xdelea" FLOAT DOUBLE
+"delea" FLOAT DOUBLE
+"xdeleb" FLOAT DOUBLE
+"deleb" FLOAT DOUBLE
+"xdelfa" FLOAT DOUBLE
+"delfa" FLOAT DOUBLE
+"xdelfb" FLOAT DOUBLE
+"delfb" FLOAT DOUBLE
+"xdelua" FLOAT DOUBLE
+"delua" FLOAT DOUBLE
+"xdelub" FLOAT DOUBLE
+"delub" FLOAT DOUBLE
+"xdellb" FLOAT DOUBLE
+"dellb" FLOAT DOUBLE
+"delnw_f" FLOAT DOUBLE
+"delpw_f" FLOAT DOUBLE
+"delm1_f" FLOAT DOUBLE
+"delm2_f" FLOAT DOUBLE
+"delm3_f" FLOAT DOUBLE
+"delm4_f" FLOAT DOUBLE
+"delm5_f" FLOAT DOUBLE
+"delm6_f" FLOAT DOUBLE
+"delm7_f" FLOAT DOUBLE
+"delb1_f" FLOAT DOUBLE
+"delb2_f" FLOAT DOUBLE
+"delba_f" FLOAT DOUBLE
+"delbb_f" FLOAT DOUBLE
+"dell1_f" FLOAT DOUBLE
+"dell2_f" FLOAT DOUBLE
+"delea_f" FLOAT DOUBLE
+"deleb_f" FLOAT DOUBLE
+"delfa_f" FLOAT DOUBLE
+"delfb_f" FLOAT DOUBLE
+"delua_f" FLOAT DOUBLE
+"delub_f" FLOAT DOUBLE
+"dellb_f" FLOAT DOUBLE
+"xsubt" FLOAT DOUBLE
+"dsubt" FLOAT DOUBLE
+"xpct" FLOAT DOUBLE
+"dpct" FLOAT DOUBLE
+"xm1t" FLOAT DOUBLE
+"dm1t" FLOAT DOUBLE
+"xm2t" FLOAT DOUBLE
+"dm2t" FLOAT DOUBLE
+"xm3t" FLOAT DOUBLE
+"dm3t" FLOAT DOUBLE
+"xm4t" FLOAT DOUBLE
+"dm4t" FLOAT DOUBLE
+"xm5t" FLOAT DOUBLE
+"dm5t" FLOAT DOUBLE
+"xm6t" FLOAT DOUBLE
+"dm6t" FLOAT DOUBLE
+"xm7t" FLOAT DOUBLE
+"dm7t" FLOAT DOUBLE
+"xb1t" FLOAT DOUBLE
+"db1t" FLOAT DOUBLE
+"xb2t" FLOAT DOUBLE
+"db2t" FLOAT DOUBLE
+"xbat" FLOAT DOUBLE
+"dbat" FLOAT DOUBLE
+"xbbt" FLOAT DOUBLE
+"dbbt" FLOAT DOUBLE
+"xl1t" FLOAT DOUBLE
+"dl1t" FLOAT DOUBLE
+"xl2t" FLOAT DOUBLE
+"dl2t" FLOAT DOUBLE
+"xeat" FLOAT DOUBLE
+"deat" FLOAT DOUBLE
+"xebt" FLOAT DOUBLE
+"debt" FLOAT DOUBLE
+"xfat" FLOAT DOUBLE
+"dfat" FLOAT DOUBLE
+"xfbt" FLOAT DOUBLE
+"dfbt" FLOAT DOUBLE
+"xuat" FLOAT DOUBLE
+"duat" FLOAT DOUBLE
+"xubt" FLOAT DOUBLE
+"dubt" FLOAT DOUBLE
+"xlbt" FLOAT DOUBLE
+"dlbt" FLOAT DOUBLE
+"subt_f" FLOAT DOUBLE
+"pct_f" FLOAT DOUBLE
+"m1t_f" FLOAT DOUBLE
+"m2t_f" FLOAT DOUBLE
+"m3t_f" FLOAT DOUBLE
+"m4t_f" FLOAT DOUBLE
+"m5t_f" FLOAT DOUBLE
+"m6t_f" FLOAT DOUBLE
+"m7t_f" FLOAT DOUBLE
+"b1t_f" FLOAT DOUBLE
+"b2t_f" FLOAT DOUBLE
+"bat_f" FLOAT DOUBLE
+"bbt_f" FLOAT DOUBLE
+"l1t_f" FLOAT DOUBLE
+"l2t_f" FLOAT DOUBLE
+"eat_f" FLOAT DOUBLE
+"ebt_f" FLOAT DOUBLE
+"fat_f" FLOAT DOUBLE
+"fbt_f" FLOAT DOUBLE
+"uat_f" FLOAT DOUBLE
+"ubt_f" FLOAT DOUBLE
+"lbt_f" FLOAT DOUBLE
+"xnwrs" FLOAT DOUBLE
+"dnwrs" FLOAT DOUBLE
+"xpwrs" FLOAT DOUBLE
+"dpwrs" FLOAT DOUBLE
+"xpcrs" FLOAT DOUBLE
+"dpcrs" FLOAT DOUBLE
+"nwrs_f" FLOAT DOUBLE
+"pwrs_f" FLOAT DOUBLE
+"pcrs_f" FLOAT DOUBLE
+"xsubrho" FLOAT DOUBLE
+"dsubrho" FLOAT DOUBLE
+"subrho_f" FLOAT DOUBLE
+"xsubpct" FLOAT DOUBLE
+"dsubpct" FLOAT DOUBLE
+"xdiffm1t" FLOAT DOUBLE
+"ddiffm1t" FLOAT DOUBLE
+"xpcm1t" FLOAT DOUBLE
+"dpcm1t" FLOAT DOUBLE
+"xsubm1t" FLOAT DOUBLE
+"dsubm1t" FLOAT DOUBLE
+"xv1t" FLOAT DOUBLE
+"dv1t" FLOAT DOUBLE
+"xv2t" FLOAT DOUBLE
+"dv2t" FLOAT DOUBLE
+"xv3t" FLOAT DOUBLE
+"dv3t" FLOAT DOUBLE
+"xv4t" FLOAT DOUBLE
+"dv4t" FLOAT DOUBLE
+"xv5t" FLOAT DOUBLE
+"dv5t" FLOAT DOUBLE
+"xv6t" FLOAT DOUBLE
+"dv6t" FLOAT DOUBLE
+"xw0t" FLOAT DOUBLE
+"dw0t" FLOAT DOUBLE
+"xw1t" FLOAT DOUBLE
+"dw1t" FLOAT DOUBLE
+"xwtt" FLOAT DOUBLE
+"dwtt" FLOAT DOUBLE
+"xwat" FLOAT DOUBLE
+"dwat" FLOAT DOUBLE
+"xj0t" FLOAT DOUBLE
+"dj0t" FLOAT DOUBLE
+"xj1t" FLOAT DOUBLE
+"dj1t" FLOAT DOUBLE
+"xytt" FLOAT DOUBLE
+"dytt" FLOAT DOUBLE
+"xyat" FLOAT DOUBLE
+"dyat" FLOAT DOUBLE
+"xott" FLOAT DOUBLE
+"dott" FLOAT DOUBLE
+"xgmt" FLOAT DOUBLE
+"dgmt" FLOAT DOUBLE
+"xjrt" FLOAT DOUBLE
+"djrt" FLOAT DOUBLE
+"xhlt" FLOAT DOUBLE
+"dhlt" FLOAT DOUBLE
+"xgat" FLOAT DOUBLE
+"dgat" FLOAT DOUBLE
+"xvvt" FLOAT DOUBLE
+"dvvt" FLOAT DOUBLE
+"subpct_f" FLOAT DOUBLE
+"diffm1t_f" FLOAT DOUBLE
+"pcm1t_f" FLOAT DOUBLE
+"subm1t_f" FLOAT DOUBLE
+"v1t_f" FLOAT DOUBLE
+"v2t_f" FLOAT DOUBLE
+"v3t_f" FLOAT DOUBLE
+"v4t_f" FLOAT DOUBLE
+"v5t_f" FLOAT DOUBLE
+"v6t_f" FLOAT DOUBLE
+"w0t_f" FLOAT DOUBLE
+"w1t_f" FLOAT DOUBLE
+"wtt_f" FLOAT DOUBLE
+"wat_f" FLOAT DOUBLE
+"j0t_f" FLOAT DOUBLE
+"j1t_f" FLOAT DOUBLE
+"ytt_f" FLOAT DOUBLE
+"yat_f" FLOAT DOUBLE
+"ott_f" FLOAT DOUBLE
+"gmt_f" FLOAT DOUBLE
+"jrt_f" FLOAT DOUBLE
+"hlt_f" FLOAT DOUBLE
+"gat_f" FLOAT DOUBLE
+"vvt_f" FLOAT DOUBLE
+"eg_nwell" FLOAT DOUBLE
+"xti_nwell" FLOAT DOUBLE
+"n_nwell" FLOAT DOUBLE
+"cta1_nwell" FLOAT DOUBLE
+"cta2_nwell" FLOAT DOUBLE
+"mj_nwell" FLOAT DOUBLE
+"tm1_nwell" FLOAT DOUBLE
+"tm2_nwell" FLOAT DOUBLE
+"pb_nwell" FLOAT DOUBLE
+"pta1_nwell" FLOAT DOUBLE
+"pta2_nwell" FLOAT DOUBLE
+"ctp1_nwell" FLOAT DOUBLE
+"ctp2_nwell" FLOAT DOUBLE
+"mjsw_nwell" FLOAT DOUBLE
+"tmsw1_nwell" FLOAT DOUBLE
+"tmsw2_nwell" FLOAT DOUBLE
+"pbsw_nwell" FLOAT DOUBLE
+"ptp1_nwell" FLOAT DOUBLE
+"ptp2_nwell" FLOAT DOUBLE
+"vb_nwell" FLOAT DOUBLE
+"js_nwell_n" FLOAT DOUBLE
+"js_nwell_t" FLOAT DOUBLE
+"jsw_nwell_n" FLOAT DOUBLE
+"jsw_nwell_t" FLOAT DOUBLE
+"cj_nwell_n" FLOAT DOUBLE
+"cj_nwell_t" FLOAT DOUBLE
+"cjsw_nwell_n" FLOAT DOUBLE
+"cjsw_nwell_t" FLOAT DOUBLE
+"xcj_nwell" FLOAT DOUBLE
+"dcj_nwell" FLOAT DOUBLE
+"xcjsw_nwell" FLOAT DOUBLE
+"dcjsw_nwell" FLOAT DOUBLE
+"js_nwell" FLOAT DOUBLE
+"jsw_nwell" FLOAT DOUBLE
+"cj_nwell" FLOAT DOUBLE
+"cjsw_nwell" FLOAT DOUBLE
+"eg_nb_sub" FLOAT DOUBLE
+"xti_nb_sub" FLOAT DOUBLE
+"n_nb_sub" FLOAT DOUBLE
+"cta1_nb_sub" FLOAT DOUBLE
+"cta2_nb_sub" FLOAT DOUBLE
+"mj_nb_sub" FLOAT DOUBLE
+"tm1_nb_sub" FLOAT DOUBLE
+"tm2_nb_sub" FLOAT DOUBLE
+"pb_nb_sub" FLOAT DOUBLE
+"pta1_nb_sub" FLOAT DOUBLE
+"pta2_nb_sub" FLOAT DOUBLE
+"ctp1_nb_sub" FLOAT DOUBLE
+"ctp2_nb_sub" FLOAT DOUBLE
+"mjsw_nb_sub" FLOAT DOUBLE
+"tmsw1_nb_sub" FLOAT DOUBLE
+"tmsw2_nb_sub" FLOAT DOUBLE
+"pbsw_nb_sub" FLOAT DOUBLE
+"ptp1_nb_sub" FLOAT DOUBLE
+"ptp2_nb_sub" FLOAT DOUBLE
+"vb_nb_sub" FLOAT DOUBLE
+"js_nb_sub_n" FLOAT DOUBLE
+"js_nb_sub_t" FLOAT DOUBLE
+"jsw_nb_sub_n" FLOAT DOUBLE
+"jsw_nb_sub_t" FLOAT DOUBLE
+"cj_nb_sub_n" FLOAT DOUBLE
+"cj_nb_sub_t" FLOAT DOUBLE
+"cjsw_nb_sub_n" FLOAT DOUBLE
+"cjsw_nb_sub_t" FLOAT DOUBLE
+"xcj_nb_sub" FLOAT DOUBLE
+"dcj_nb_sub" FLOAT DOUBLE
+"xcjsw_nb_sub" FLOAT DOUBLE
+"dcjsw_nb_sub" FLOAT DOUBLE
+"js_nb_sub" FLOAT DOUBLE
+"jsw_nb_sub" FLOAT DOUBLE
+"cj_nb_sub" FLOAT DOUBLE
+"cjsw_nb_sub" FLOAT DOUBLE
+"eg_nb_pw" FLOAT DOUBLE
+"xti_nb_pw" FLOAT DOUBLE
+"n_nb_pw" FLOAT DOUBLE
+"cta1_nb_pw" FLOAT DOUBLE
+"cta2_nb_pw" FLOAT DOUBLE
+"mj_nb_pw" FLOAT DOUBLE
+"tm1_nb_pw" FLOAT DOUBLE
+"tm2_nb_pw" FLOAT DOUBLE
+"pb_nb_pw" FLOAT DOUBLE
+"pta1_nb_pw" FLOAT DOUBLE
+"pta2_nb_pw" FLOAT DOUBLE
+"ctp1_nb_pw" FLOAT DOUBLE
+"ctp2_nb_pw" FLOAT DOUBLE
+"mjsw_nb_pw" FLOAT DOUBLE
+"tmsw1_nb_pw" FLOAT DOUBLE
+"tmsw2_nb_pw" FLOAT DOUBLE
+"pbsw_nb_pw" FLOAT DOUBLE
+"ptp1_nb_pw" FLOAT DOUBLE
+"ptp2_nb_pw" FLOAT DOUBLE
+"vb_nb_pw" FLOAT DOUBLE
+"js_nb_pw_n" FLOAT DOUBLE
+"js_nb_pw_t" FLOAT DOUBLE
+"jsw_nb_pw_n" FLOAT DOUBLE
+"jsw_nb_pw_t" FLOAT DOUBLE
+"cj_nb_pw_n" FLOAT DOUBLE
+"cj_nb_pw_t" FLOAT DOUBLE
+"cjsw_nb_pw_n" FLOAT DOUBLE
+"cjsw_nb_pw_t" FLOAT DOUBLE
+"xcj_nb_pw" FLOAT DOUBLE
+"dcj_nb_pw" FLOAT DOUBLE
+"xcjsw_nb_pw" FLOAT DOUBLE
+"dcjsw_nb_pw" FLOAT DOUBLE
+"js_nb_pw" FLOAT DOUBLE
+"jsw_nb_pw" FLOAT DOUBLE
+"cj_nb_pw" FLOAT DOUBLE
+"cjsw_nb_pw" FLOAT DOUBLE
+"eg_nd_sub" FLOAT DOUBLE
+"xti_nd_sub" FLOAT DOUBLE
+"n_nd_sub" FLOAT DOUBLE
+"vb_nd_sub" FLOAT DOUBLE
+"js_nd_sub_n" FLOAT DOUBLE
+"js_nd_sub_t" FLOAT DOUBLE
+"jsw_nd_sub_n" FLOAT DOUBLE
+"jsw_nd_sub_t" FLOAT DOUBLE
+"js_nd_sub" FLOAT DOUBLE
+"jsw_nd_sub" FLOAT DOUBLE
+"jss_nfet" FLOAT DOUBLE
+"jsws_nfet" FLOAT DOUBLE
+"eg_pd_nw" FLOAT DOUBLE
+"xti_pd_nw" FLOAT DOUBLE
+"n_pd_nw" FLOAT DOUBLE
+"vb_pd_nw" FLOAT DOUBLE
+"js_pd_nw_n" FLOAT DOUBLE
+"js_pd_nw_t" FLOAT DOUBLE
+"jsw_pd_nw_n" FLOAT DOUBLE
+"jsw_pd_nw_t" FLOAT DOUBLE
+"js_pd_nw" FLOAT DOUBLE
+"jsw_pd_nw" FLOAT DOUBLE
+"jss_pfet" FLOAT DOUBLE
+"jsws_pfet" FLOAT DOUBLE
+"js_esdndx_wn" FLOAT DOUBLE
+"js_esdndx_wt" FLOAT DOUBLE
+"js2_esdndx_wn" FLOAT DOUBLE
+"js2_esdndx_wt" FLOAT DOUBLE
+"js3_esdndx_wn" FLOAT DOUBLE
+"js3_esdndx_wt" FLOAT DOUBLE
+"jsw_esdndx_wn" FLOAT DOUBLE
+"jsw_esdndx_wt" FLOAT DOUBLE
+"rs_esdndx_wn" FLOAT DOUBLE
+"rs_esdndx_wt" FLOAT DOUBLE
+"js_esdvnpn_wn" FLOAT DOUBLE
+"js_esdvnpn_wt" FLOAT DOUBLE
+"js2_esdvnpn_wn" FLOAT DOUBLE
+"js2_esdvnpn_wt" FLOAT DOUBLE
+"js3_esdvnpn_wn" FLOAT DOUBLE
+"js3_esdvnpn_wt" FLOAT DOUBLE
+"jsw_esdvnpn_wn" FLOAT DOUBLE
+"jsw_esdvnpn_wt" FLOAT DOUBLE
+"rs_esdvnpn_wn" FLOAT DOUBLE
+"rs_esdvnpn_wt" FLOAT DOUBLE
+"js_esdvpnp_wn" FLOAT DOUBLE
+"js_esdvpnp_wt" FLOAT DOUBLE
+"js2_esdvpnp_wn" FLOAT DOUBLE
+"js2_esdvpnp_wt" FLOAT DOUBLE
+"js3_esdvpnp_wn" FLOAT DOUBLE
+"js3_esdvpnp_wt" FLOAT DOUBLE
+"jsw_esdvpnp_wn" FLOAT DOUBLE
+"jsw_esdvpnp_wt" FLOAT DOUBLE
+"rs_esdvpnp_wn" FLOAT DOUBLE
+"rs_esdvpnp_wb" FLOAT DOUBLE
+"rs_esdvpnp_ww" FLOAT DOUBLE
+"xjs_esdndx_w" FLOAT DOUBLE
+"djs_esdndx_w" FLOAT DOUBLE
+"xjs2_esdndx_w" FLOAT DOUBLE
+"djs2_esdndx_w" FLOAT DOUBLE
+"xjs3_esdndx_w" FLOAT DOUBLE
+"djs3_esdndx_w" FLOAT DOUBLE
+"xjsw_esdndx_w" FLOAT DOUBLE
+"djsw_esdndx_w" FLOAT DOUBLE
+"xjs_esdvnpn_w" FLOAT DOUBLE
+"djs_esdvnpn_w" FLOAT DOUBLE
+"xjs2_esdvnpn_w" FLOAT DOUBLE
+"djs2_esdvnpn_w" FLOAT DOUBLE
+"xjs3_esdvnpn_w" FLOAT DOUBLE
+"djs3_esdvnpn_w" FLOAT DOUBLE
+"xjsw_esdvnpn_w" FLOAT DOUBLE
+"djsw_esdvnpn_w" FLOAT DOUBLE
+"xjs_esdvpnp_w" FLOAT DOUBLE
+"djs_esdvpnp_w" FLOAT DOUBLE
+"xjs2_esdvpnp_w" FLOAT DOUBLE
+"djs2_esdvpnp_w" FLOAT DOUBLE
+"xjs3_esdvpnp_w" FLOAT DOUBLE
+"djs3_esdvpnp_w" FLOAT DOUBLE
+"xjsw_esdvpnp_w" FLOAT DOUBLE
+"djsw_esdvpnp_w" FLOAT DOUBLE
+"xrs_esdndx_w" FLOAT DOUBLE
+"drs_esdndx_w" FLOAT DOUBLE
+"xrs_esdvpnp_w" FLOAT DOUBLE
+"drs_esdvpnp_w" FLOAT DOUBLE
+"xrs_esdvnpn_w" FLOAT DOUBLE
+"drs_esdvnpn_w" FLOAT DOUBLE
+"js_esdndx_wf" FLOAT DOUBLE
+"js2_esdndx_wf" FLOAT DOUBLE
+"js3_esdndx_wf" FLOAT DOUBLE
+"jsw_esdndx_wf" FLOAT DOUBLE
+"js_esdvnpn_wf" FLOAT DOUBLE
+"js2_esdvnpn_wf" FLOAT DOUBLE
+"js3_esdvnpn_wf" FLOAT DOUBLE
+"jsw_esdvnpn_wf" FLOAT DOUBLE
+"js_esdvpnp_wf" FLOAT DOUBLE
+"js2_esdvpnp_wf" FLOAT DOUBLE
+"js3_esdvpnp_wf" FLOAT DOUBLE
+"jsw_esdvpnp_wf" FLOAT DOUBLE
+"rs_esdndx_wf" FLOAT DOUBLE
+"rs_esdvpnp_wf" FLOAT DOUBLE
+"rs_esdvnpn_wf" FLOAT DOUBLE
+"sbndwmin" FLOAT DOUBLE
+"sbndlmin" FLOAT DOUBLE
+"sbndtcrs1" FLOAT DOUBLE
+"sbndtcrs2" FLOAT DOUBLE
+"sbndtcrn1" FLOAT DOUBLE
+"sbndtcrn2" FLOAT DOUBLE
+"sbndtcdw1" FLOAT DOUBLE
+"sbndtcdw2" FLOAT DOUBLE
+"sbndvcrs1" FLOAT DOUBLE
+"sbndvcrs2" FLOAT DOUBLE
+"sbndtcvrs11" FLOAT DOUBLE
+"sbndtcvrs12" FLOAT DOUBLE
+"sbndtcvrs21" FLOAT DOUBLE
+"sbndtcvrs22" FLOAT DOUBLE
+"sbndksh" FLOAT DOUBLE
+"sbndtcksh1" FLOAT DOUBLE
+"sbndtcksh2" FLOAT DOUBLE
+"sbndmsh" FLOAT DOUBLE
+"sbndtcmsh1" FLOAT DOUBLE
+"sbndtcmsh2" FLOAT DOUBLE
+"sbndma" FLOAT DOUBLE
+"sbndml" FLOAT DOUBLE
+"sbndmw" FLOAT DOUBLE
+"sbndmal" FLOAT DOUBLE
+"sbndmaw" FLOAT DOUBLE
+"sbndsa" FLOAT DOUBLE
+"sbndtpw" FLOAT DOUBLE
+"sbndrhopw" FLOAT DOUBLE
+"sbndrs_n" FLOAT DOUBLE
+"sbndrs_t" FLOAT DOUBLE
+"sbndren_n" FLOAT DOUBLE
+"sbndren_t" FLOAT DOUBLE
+"sbnddw_n" FLOAT DOUBLE
+"sbnddw_t" FLOAT DOUBLE
+"sbndend_n" FLOAT DOUBLE
+"xsbndrs" FLOAT DOUBLE
+"dsbndrs" FLOAT DOUBLE
+"xsbndren" FLOAT DOUBLE
+"dsbndren" FLOAT DOUBLE
+"sbndrs_f" FLOAT DOUBLE
+"sbndren_f" FLOAT DOUBLE
+"sbnddw_f" FLOAT DOUBLE
+"sbndend_f" FLOAT DOUBLE
+"sbedwmin" FLOAT DOUBLE
+"sbedlmin" FLOAT DOUBLE
+"sbedtcrs1" FLOAT DOUBLE
+"sbedtcrs2" FLOAT DOUBLE
+"sbedtcrn1" FLOAT DOUBLE
+"sbedtcrn2" FLOAT DOUBLE
+"sbedtcdw1" FLOAT DOUBLE
+"sbedtcdw2" FLOAT DOUBLE
+"sbedvcrs1" FLOAT DOUBLE
+"sbedvcrs2" FLOAT DOUBLE
+"sbedtcvrs11" FLOAT DOUBLE
+"sbedtcvrs12" FLOAT DOUBLE
+"sbedtcvrs21" FLOAT DOUBLE
+"sbedtcvrs22" FLOAT DOUBLE
+"sbedksh" FLOAT DOUBLE
+"sbedtcksh1" FLOAT DOUBLE
+"sbedtcksh2" FLOAT DOUBLE
+"sbedmsh" FLOAT DOUBLE
+"sbedtcmsh1" FLOAT DOUBLE
+"sbedtcmsh2" FLOAT DOUBLE
+"sbedma" FLOAT DOUBLE
+"sbedml" FLOAT DOUBLE
+"sbedmw" FLOAT DOUBLE
+"sbedmal" FLOAT DOUBLE
+"sbedmaw" FLOAT DOUBLE
+"sbedsa" FLOAT DOUBLE
+"sbedtpw" FLOAT DOUBLE
+"sbedrhopw" FLOAT DOUBLE
+"sbedrs_n" FLOAT DOUBLE
+"sbedrs_t" FLOAT DOUBLE
+"sbedren_n" FLOAT DOUBLE
+"sbedren_t" FLOAT DOUBLE
+"sbeddw_n" FLOAT DOUBLE
+"sbeddw_t" FLOAT DOUBLE
+"sbedend_n" FLOAT DOUBLE
+"xsbedrs" FLOAT DOUBLE
+"dsbedrs" FLOAT DOUBLE
+"xsbedren" FLOAT DOUBLE
+"dsbedren" FLOAT DOUBLE
+"sbedrs_f" FLOAT DOUBLE
+"sbedren_f" FLOAT DOUBLE
+"sbeddw_f" FLOAT DOUBLE
+"sbedend_f" FLOAT DOUBLE
+"sbpdwmin" FLOAT DOUBLE
+"sbpdlmin" FLOAT DOUBLE
+"sbpdtcrs1" FLOAT DOUBLE
+"sbpdtcrs2" FLOAT DOUBLE
+"sbpdtcrn1" FLOAT DOUBLE
+"sbpdtcrn2" FLOAT DOUBLE
+"sbpdtcdw1" FLOAT DOUBLE
+"sbpdtcdw2" FLOAT DOUBLE
+"sbpdvcrs1" FLOAT DOUBLE
+"sbpdvcrs2" FLOAT DOUBLE
+"sbpdtcvrs11" FLOAT DOUBLE
+"sbpdtcvrs12" FLOAT DOUBLE
+"sbpdtcvrs21" FLOAT DOUBLE
+"sbpdtcvrs22" FLOAT DOUBLE
+"sbpdksh" FLOAT DOUBLE
+"sbpdtcksh1" FLOAT DOUBLE
+"sbpdtcksh2" FLOAT DOUBLE
+"sbpdmsh" FLOAT DOUBLE
+"sbpdtcmsh1" FLOAT DOUBLE
+"sbpdtcmsh2" FLOAT DOUBLE
+"sbpdtpw" FLOAT DOUBLE
+"sbpdrhopw" FLOAT DOUBLE
+"sbpdrs_n" FLOAT DOUBLE
+"sbpdrs_t" FLOAT DOUBLE
+"sbpdren_n" FLOAT DOUBLE
+"sbpdren_t" FLOAT DOUBLE
+"sbpddw_n" FLOAT DOUBLE
+"sbpddw_t" FLOAT DOUBLE
+"sbpdend_n" FLOAT DOUBLE
+"xsbpdrs" FLOAT DOUBLE
+"dsbpdrs" FLOAT DOUBLE
+"xsbpdren" FLOAT DOUBLE
+"dsbpdren" FLOAT DOUBLE
+"sbpdrs_f" FLOAT DOUBLE
+"sbpdren_f" FLOAT DOUBLE
+"sbpddw_f" FLOAT DOUBLE
+"sbpdend_f" FLOAT DOUBLE
+"xl_ncap_f" FLOAT DOUBLE
+"xl_pcap_f" FLOAT DOUBLE
+"xl_dgncap_f" FLOAT DOUBLE
+"xl_dgpcap_f" FLOAT DOUBLE
+"xl_egpcap_f" FLOAT DOUBLE
+"co_mv_n" FLOAT DOUBLE
+"co_mv_t" FLOAT DOUBLE
+"qs_mv_n" FLOAT DOUBLE
+"qs_mv_t" FLOAT DOUBLE
+"qp_mv" FLOAT DOUBLE
+"pon_mv" FLOAT DOUBLE
+"vbi_mv" FLOAT DOUBLE
+"co_mv_f" FLOAT DOUBLE
+"qs_mv_f" FLOAT DOUBLE
+"co_pmv_n" FLOAT DOUBLE
+"co_pmv_t" FLOAT DOUBLE
+"qs_pmv_n" FLOAT DOUBLE
+"qs_pmv_t" FLOAT DOUBLE
+"qp_pmv" FLOAT DOUBLE
+"minor_pmv" FLOAT DOUBLE
+"vbi_pmv" FLOAT DOUBLE
+"co_pmv_f" FLOAT DOUBLE
+"qs_pmv_f" FLOAT DOUBLE
+"co_egmv_n" FLOAT DOUBLE
+"co_egmv_t" FLOAT DOUBLE
+"qs_egmv_n" FLOAT DOUBLE
+"qs_egmv_t" FLOAT DOUBLE
+"qp_egmv" FLOAT DOUBLE
+"pon_egmv" FLOAT DOUBLE
+"vbi_egmv" FLOAT DOUBLE
+"co_egmv_f" FLOAT DOUBLE
+"qs_egmv_f" FLOAT DOUBLE
+"co_egpmv_n" FLOAT DOUBLE
+"co_egpmv_t" FLOAT DOUBLE
+"qs_egpmv_n" FLOAT DOUBLE
+"qs_egpmv_t" FLOAT DOUBLE
+"qp_egpmv" FLOAT DOUBLE
+"minor_egpmv" FLOAT DOUBLE
+"vbi_egpmv" FLOAT DOUBLE
+"co_egpmv_f" FLOAT DOUBLE
+"qs_egpmv_f" FLOAT DOUBLE
+"co_dgmv_n" FLOAT DOUBLE
+"co_dgmv_t" FLOAT DOUBLE
+"qs_dgmv_n" FLOAT DOUBLE
+"qs_dgmv_t" FLOAT DOUBLE
+"qp_dgmv" FLOAT DOUBLE
+"pon_dgmv" FLOAT DOUBLE
+"vbi_dgmv" FLOAT DOUBLE
+"co_dgmv_f" FLOAT DOUBLE
+"qs_dgmv_f" FLOAT DOUBLE
+"co_dgpmv_n" FLOAT DOUBLE
+"co_dgpmv_t" FLOAT DOUBLE
+"qs_dgpmv_n" FLOAT DOUBLE
+"qs_dgpmv_t" FLOAT DOUBLE
+"qp_dgpmv" FLOAT DOUBLE
+"pon_dgpmv" FLOAT DOUBLE
+"vbi_dgpmv" FLOAT DOUBLE
+"co_dgpmv_f" FLOAT DOUBLE
+"qs_dgpmv_f" FLOAT DOUBLE
+"oppcwmin" FLOAT DOUBLE
+"oppclmin" FLOAT DOUBLE
+"oppctcrs1" FLOAT DOUBLE
+"oppctcrs2" FLOAT DOUBLE
+"oppctcrn1" FLOAT DOUBLE
+"oppctcrn2" FLOAT DOUBLE
+"oppctcdw1" FLOAT DOUBLE
+"oppctcdw2" FLOAT DOUBLE
+"oppcksh" FLOAT DOUBLE
+"oppctcksh1" FLOAT DOUBLE
+"oppctcksh2" FLOAT DOUBLE
+"oppcmsh" FLOAT DOUBLE
+"oppctcmsh1" FLOAT DOUBLE
+"oppctcmsh2" FLOAT DOUBLE
+"oppcma" FLOAT DOUBLE
+"oppcml" FLOAT DOUBLE
+"oppcmw" FLOAT DOUBLE
+"oppcmal" FLOAT DOUBLE
+"oppcmaw" FLOAT DOUBLE
+"oppcsa" FLOAT DOUBLE
+"oppctnw" FLOAT DOUBLE
+"oppctpw" FLOAT DOUBLE
+"oppcrhonw" FLOAT DOUBLE
+"oppcrhopw" FLOAT DOUBLE
+"oppcrs_n" FLOAT DOUBLE
+"oppcrs_t" FLOAT DOUBLE
+"oppcren_n" FLOAT DOUBLE
+"oppcren_t" FLOAT DOUBLE
+"oppcdw_n" FLOAT DOUBLE
+"oppcdw_t" FLOAT DOUBLE
+"oppcend_n" FLOAT DOUBLE
+"xoppcrs" FLOAT DOUBLE
+"doppcrs" FLOAT DOUBLE
+"xoppcren" FLOAT DOUBLE
+"doppcren" FLOAT DOUBLE
+"oppcrs_f" FLOAT DOUBLE
+"oppcren_f" FLOAT DOUBLE
+"oppcdw_f" FLOAT DOUBLE
+"oppcend_f" FLOAT DOUBLE
+"pccdown" FLOAT DOUBLE
+"pccfringe" FLOAT DOUBLE
+"opndwmin" FLOAT DOUBLE
+"opndlmin" FLOAT DOUBLE
+"opndtcrs1" FLOAT DOUBLE
+"opndtcrs2" FLOAT DOUBLE
+"opndtcrn1" FLOAT DOUBLE
+"opndtcrn2" FLOAT DOUBLE
+"opndtcdw1" FLOAT DOUBLE
+"opndtcdw2" FLOAT DOUBLE
+"opndvcrs1" FLOAT DOUBLE
+"opndvcrs2" FLOAT DOUBLE
+"opndtcvrs11" FLOAT DOUBLE
+"opndtcvrs12" FLOAT DOUBLE
+"opndtcvrs21" FLOAT DOUBLE
+"opndtcvrs22" FLOAT DOUBLE
+"opndksh" FLOAT DOUBLE
+"opndtcksh1" FLOAT DOUBLE
+"opndtcksh2" FLOAT DOUBLE
+"opndmsh" FLOAT DOUBLE
+"opndtcmsh1" FLOAT DOUBLE
+"opndtcmsh2" FLOAT DOUBLE
+"opndma" FLOAT DOUBLE
+"opndml" FLOAT DOUBLE
+"opndmw" FLOAT DOUBLE
+"opndmal" FLOAT DOUBLE
+"opndmaw" FLOAT DOUBLE
+"opndsa" FLOAT DOUBLE
+"opndtpw" FLOAT DOUBLE
+"opndrhopw" FLOAT DOUBLE
+"opndrs_n" FLOAT DOUBLE
+"opndrs_t" FLOAT DOUBLE
+"opndren_n" FLOAT DOUBLE
+"opndren_t" FLOAT DOUBLE
+"opnddw_n" FLOAT DOUBLE
+"opnddw_t" FLOAT DOUBLE
+"opndend_n" FLOAT DOUBLE
+"xopndrs" FLOAT DOUBLE
+"dopndrs" FLOAT DOUBLE
+"xopndren" FLOAT DOUBLE
+"dopndren" FLOAT DOUBLE
+"opndrs_f" FLOAT DOUBLE
+"opndren_f" FLOAT DOUBLE
+"opnddw_f" FLOAT DOUBLE
+"opndend_f" FLOAT DOUBLE
+"nwwmin" FLOAT DOUBLE
+"nwlmin" FLOAT DOUBLE
+"nwwkerf" FLOAT DOUBLE
+"nwrxlen" FLOAT DOUBLE
+"nwrxovl" FLOAT DOUBLE
+"nwkw0" FLOAT DOUBLE
+"nwtcrs1" FLOAT DOUBLE
+"nwtcrs2" FLOAT DOUBLE
+"nwtcrn1" FLOAT DOUBLE
+"nwtcrn2" FLOAT DOUBLE
+"nwtcdw1" FLOAT DOUBLE
+"nwtcdw2" FLOAT DOUBLE
+"nwvcrs1" FLOAT DOUBLE
+"nwvcrs2" FLOAT DOUBLE
+"nwvcdw1" FLOAT DOUBLE
+"nwvcdw2" FLOAT DOUBLE
+"nwtcvrs11" FLOAT DOUBLE
+"nwtcvrs12" FLOAT DOUBLE
+"nwtcvrs21" FLOAT DOUBLE
+"nwtcvrs22" FLOAT DOUBLE
+"nwtcvdw11" FLOAT DOUBLE
+"nwtcvdw12" FLOAT DOUBLE
+"nwtcvdw21" FLOAT DOUBLE
+"nwtcvdw22" FLOAT DOUBLE
+"nwksh" FLOAT DOUBLE
+"nwtcksh1" FLOAT DOUBLE
+"nwtcksh2" FLOAT DOUBLE
+"nwmsh" FLOAT DOUBLE
+"nwtcmsh1" FLOAT DOUBLE
+"nwtcmsh2" FLOAT DOUBLE
+"nwkshhead" FLOAT DOUBLE
+"nwmshhead" FLOAT DOUBLE
+"nwresma" FLOAT DOUBLE
+"nwresml" FLOAT DOUBLE
+"nwresmw" FLOAT DOUBLE
+"nwresmal" FLOAT DOUBLE
+"nwresmaw" FLOAT DOUBLE
+"nwtpw" FLOAT DOUBLE
+"nwrhopw" FLOAT DOUBLE
+"nwren_n" FLOAT DOUBLE
+"nwren_t" FLOAT DOUBLE
+"nwdw_n" FLOAT DOUBLE
+"nwdw_t" FLOAT DOUBLE
+"nwend_n" FLOAT DOUBLE
+"xnwren" FLOAT DOUBLE
+"dnwren" FLOAT DOUBLE
+"nwren_f" FLOAT DOUBLE
+"nwdw_f" FLOAT DOUBLE
+"nwend_f" FLOAT DOUBLE
+"nf_vpnp_n" FLOAT DOUBLE
+"nf_vpnp_b" FLOAT DOUBLE
+"nf_vpnp_w" FLOAT DOUBLE
+"ne_vpnp_f" FLOAT DOUBLE
+"nc_vpnp_f" FLOAT DOUBLE
+"nr_vpnp_f" FLOAT DOUBLE
+"isa_vpnp_n" FLOAT DOUBLE
+"isa_vpnp_t" FLOAT DOUBLE
+"isp_vpnp_n" FLOAT DOUBLE
+"isp_vpnp_t" FLOAT DOUBLE
+"vpnpisa" FLOAT DOUBLE
+"vpnpisl" FLOAT DOUBLE
+"vpnpisw" FLOAT DOUBLE
+"vpnpisf" FLOAT DOUBLE
+"ikfa_vpnp_f" FLOAT DOUBLE
+"isep_vpnp_n" FLOAT DOUBLE
+"isep_vpnp_t" FLOAT DOUBLE
+"bfa_vpnp_n" FLOAT DOUBLE
+"bfa_vpnp_t" FLOAT DOUBLE
+"bfpb_vpnp_n" FLOAT DOUBLE
+"bfpb_vpnp_t" FLOAT DOUBLE
+"bfpc_vpnp_n" FLOAT DOUBLE
+"bfpc_vpnp_t" FLOAT DOUBLE
+"vpnpbfa" FLOAT DOUBLE
+"vpnpbfl" FLOAT DOUBLE
+"vpnpbfw" FLOAT DOUBLE
+"vpnpbff" FLOAT DOUBLE
+"rep_vpnp_n" FLOAT DOUBLE
+"rep_vpnp_t" FLOAT DOUBLE
+"rbp_vpnp_n" FLOAT DOUBLE
+"rbp_vpnp_t" FLOAT DOUBLE
+"rbm_vpnp_f" FLOAT DOUBLE
+"irb_vpnp_f" FLOAT DOUBLE
+"vpnprea" FLOAT DOUBLE
+"vpnprel" FLOAT DOUBLE
+"vpnprew" FLOAT DOUBLE
+"vpnpref" FLOAT DOUBLE
+"pver_vpnp_f" FLOAT DOUBLE
+"pvef_vpnp_n" FLOAT DOUBLE
+"pvef_vpnp_t" FLOAT DOUBLE
+"nrnw_vpnp_f" FLOAT DOUBLE
+"pxti_vpnp_f" FLOAT DOUBLE
+"pxtb_vpnp_f" FLOAT DOUBLE
+"ptrc1_vpnp_f" FLOAT DOUBLE
+"ptre_vpnp_f" FLOAT DOUBLE
+"ptrb_vpnp_f" FLOAT DOUBLE
+"xnf_vpnp" FLOAT DOUBLE
+"dnf_vpnp" FLOAT DOUBLE
+"xis_vpnp" FLOAT DOUBLE
+"dis_vpnp" FLOAT DOUBLE
+"xise_vpnp" FLOAT DOUBLE
+"dise_vpnp" FLOAT DOUBLE
+"xre_vpnp" FLOAT DOUBLE
+"dre_vpnp" FLOAT DOUBLE
+"xrb_vpnp" FLOAT DOUBLE
+"drb_vpnp" FLOAT DOUBLE
+"xbf_vpnp" FLOAT DOUBLE
+"dbf_vpnp" FLOAT DOUBLE
+"xpvef_vpnp" FLOAT DOUBLE
+"dpvef_vpnp" FLOAT DOUBLE
+"nf_vpnp_f" FLOAT DOUBLE
+"isa_vpnp_f" FLOAT DOUBLE
+"isp_vpnp_f" FLOAT DOUBLE
+"isep_vpnp_f" FLOAT DOUBLE
+"rbp_vpnp_f" FLOAT DOUBLE
+"rep_vpnp_f" FLOAT DOUBLE
+"bfa_vpnp_f" FLOAT DOUBLE
+"bfpb_vpnp_f" FLOAT DOUBLE
+"bfpc_vpnp_f" FLOAT DOUBLE
+"pvef_vpnp_f" FLOAT DOUBLE
+"pre_layout_sw" FLOAT DOUBLE
+"fixed_cor_sw" FLOAT DOUBLE
+"gstis" FLOAT DOUBLE
+"gwells" FLOAT DOUBLE
+"cor_nmos" FLOAT DOUBLE
+"cor_pmos" FLOAT DOUBLE
+"cor_tox" FLOAT DOUBLE
+"cor_toxeg" FLOAT DOUBLE
+"cor_toxdg" FLOAT DOUBLE
+"cor_wirerc" FLOAT DOUBLE
+"cor_res" FLOAT DOUBLE
+"dgnsvt18_dagidl" FLOAT DOUBLE
+"dgnsvt18_dcfring" FLOAT DOUBLE
+"dgnsvt18_dcjb" FLOAT DOUBLE
+"dgnsvt18_dcjgate" FLOAT DOUBLE
+"dgnsvt18_dcjsw" FLOAT DOUBLE
+"dgnsvt18_dcovlap" FLOAT DOUBLE
+"dgnsvt18_djbbtbr" FLOAT DOUBLE
+"dgnsvt18_djbbtgr" FLOAT DOUBLE
+"dgnsvt18_djbbtsr" FLOAT DOUBLE
+"dgnsvt18_djsdbr" FLOAT DOUBLE
+"dgnsvt18_djsdgr" FLOAT DOUBLE
+"dgnsvt18_djsdsr" FLOAT DOUBLE
+"dgnsvt18_djsgbr" FLOAT DOUBLE
+"dgnsvt18_djsggr" FLOAT DOUBLE
+"dgnsvt18_djsgsr" FLOAT DOUBLE
+"dgnsvt18_djtatbr" FLOAT DOUBLE
+"dgnsvt18_djtatgr" FLOAT DOUBLE
+"dgnsvt18_djtatsr" FLOAT DOUBLE
+"dgnsvt18_dmu" FLOAT DOUBLE
+"dgnsvt18_dnoise" FLOAT DOUBLE
+"dgnsvt18_drconpo" FLOAT DOUBLE
+"dgnsvt18_drconsd" FLOAT DOUBLE
+"dgnsvt18_drd_rpo" FLOAT DOUBLE
+"dgnsvt18_drdsw" FLOAT DOUBLE
+"dgnsvt18_drhig" FLOAT DOUBLE
+"dgnsvt18_drs_rpo" FLOAT DOUBLE
+"dgnsvt18_drshg" FLOAT DOUBLE
+"dgnsvt18_drshgu" FLOAT DOUBLE
+"dgnsvt18_dtoxe" FLOAT DOUBLE
+"dgnsvt18_dvth0" FLOAT DOUBLE
+"dgnsvt18_dxl" FLOAT DOUBLE
+"dgnsvt18_dxw" FLOAT DOUBLE
+"dgnsvt18_mcor_vt" FLOAT DOUBLE
+"dgpsvt18_dagidl" FLOAT DOUBLE
+"dgpsvt18_dcfring" FLOAT DOUBLE
+"dgpsvt18_dcjb" FLOAT DOUBLE
+"dgpsvt18_dcjgate" FLOAT DOUBLE
+"dgpsvt18_dcjsw" FLOAT DOUBLE
+"dgpsvt18_dcovlap" FLOAT DOUBLE
+"dgpsvt18_djbbtbr" FLOAT DOUBLE
+"dgpsvt18_djbbtgr" FLOAT DOUBLE
+"dgpsvt18_djbbtsr" FLOAT DOUBLE
+"dgpsvt18_djsdbr" FLOAT DOUBLE
+"dgpsvt18_djsdgr" FLOAT DOUBLE
+"dgpsvt18_djsdsr" FLOAT DOUBLE
+"dgpsvt18_djsgbr" FLOAT DOUBLE
+"dgpsvt18_djsggr" FLOAT DOUBLE
+"dgpsvt18_djsgsr" FLOAT DOUBLE
+"dgpsvt18_djtatbr" FLOAT DOUBLE
+"dgpsvt18_djtatgr" FLOAT DOUBLE
+"dgpsvt18_djtatsr" FLOAT DOUBLE
+"dgpsvt18_dmu" FLOAT DOUBLE
+"dgpsvt18_dnoise" FLOAT DOUBLE
+"dgpsvt18_drconpo" FLOAT DOUBLE
+"dgpsvt18_drconsd" FLOAT DOUBLE
+"dgpsvt18_drd_rpo" FLOAT DOUBLE
+"dgpsvt18_drdsw" FLOAT DOUBLE
+"dgpsvt18_drhig" FLOAT DOUBLE
+"dgpsvt18_drs_rpo" FLOAT DOUBLE
+"dgpsvt18_drshg" FLOAT DOUBLE
+"dgpsvt18_drshgu" FLOAT DOUBLE
+"dgpsvt18_dtoxe" FLOAT DOUBLE
+"dgpsvt18_dvth0" FLOAT DOUBLE
+"dgpsvt18_dxl" FLOAT DOUBLE
+"dgpsvt18_dxw" FLOAT DOUBLE
+"dgpsvt18_mcor_vt" FLOAT DOUBLE
+"cor_cap" FLOAT DOUBLE
+"cor_vpnp" FLOAT DOUBLE
+"to_micron" FLOAT DOUBLE
+"sDOTpercent" FLOAT DOUBLE
+"sDOTmult" FLOAT DOUBLE
+"sDOTmult2" FLOAT DOUBLE
+"mwDOTpc" FLOAT DOUBLE
+"msDOTpc" FLOAT DOUBLE
+"nomCOLONtDOTpc" FLOAT DOUBLE
+"sdevCOLONtDOTpc" FLOAT DOUBLE
+"nomCOLONsDOTpc" FLOAT DOUBLE
+"sdevCOLONsDOTpc" FLOAT DOUBLE
+"minCOLONrsDOTpc" FLOAT DOUBLE
+"nomCOLONrsDOTpc" FLOAT DOUBLE
+"maxCOLONrsDOTpc" FLOAT DOUBLE
+"swtDOTpc_tn" FLOAT DOUBLE
+"tDOTpc_tn" FLOAT DOUBLE
+"tcrDOTpc" FLOAT DOUBLE
+"m1resDOTw1" FLOAT DOUBLE
+"m1resDOTw2" FLOAT DOUBLE
+"m1resDOTw3" FLOAT DOUBLE
+"m1resDOTw4" FLOAT DOUBLE
+"m1resDOTw5" FLOAT DOUBLE
+"m1resDOTw6" FLOAT DOUBLE
+"m1resDOTw7" FLOAT DOUBLE
+"m1resDOTw8" FLOAT DOUBLE
+"m1resDOTw9" FLOAT DOUBLE
+"m1resDOTw10" FLOAT DOUBLE
+"m1resDOTw11" FLOAT DOUBLE
+"m1resDOTw12" FLOAT DOUBLE
+"m1resDOTw13" FLOAT DOUBLE
+"m1resDOTw14" FLOAT DOUBLE
+"m1resDOTw15" FLOAT DOUBLE
+"m1resDOTw16" FLOAT DOUBLE
+"m1resDOTw17" FLOAT DOUBLE
+"m1resDOTw18" FLOAT DOUBLE
+"m1resDOTminDOTbDOT1" FLOAT DOUBLE
+"m1resDOTminDOTbDOT2" FLOAT DOUBLE
+"m1resDOTminDOTbDOT3" FLOAT DOUBLE
+"m1resDOTminDOTbDOT4" FLOAT DOUBLE
+"m1resDOTminDOTbDOT5" FLOAT DOUBLE
+"m1resDOTminDOTbDOT6" FLOAT DOUBLE
+"m1resDOTminDOTbDOT7" FLOAT DOUBLE
+"m1resDOTminDOTbDOT8" FLOAT DOUBLE
+"m1resDOTminDOTbDOT9" FLOAT DOUBLE
+"m1resDOTminDOTbDOT10" FLOAT DOUBLE
+"m1resDOTminDOTbDOT11" FLOAT DOUBLE
+"m1resDOTminDOTbDOT12" FLOAT DOUBLE
+"m1resDOTminDOTbDOT13" FLOAT DOUBLE
+"m1resDOTminDOTbDOT14" FLOAT DOUBLE
+"m1resDOTminDOTbDOT15" FLOAT DOUBLE
+"m1resDOTminDOTbDOT16" FLOAT DOUBLE
+"m1resDOTminDOTbDOT17" FLOAT DOUBLE
+"m1resDOTminDOTbDOT18" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT1" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT2" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT3" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT4" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT5" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT6" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT7" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT8" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT9" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT10" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT11" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT12" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT13" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT14" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT15" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT16" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT17" FLOAT DOUBLE
+"m1resDOTnomDOTbDOT18" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT1" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT2" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT3" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT4" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT5" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT6" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT7" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT8" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT9" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT10" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT11" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT12" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT13" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT14" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT15" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT16" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT17" FLOAT DOUBLE
+"m1resDOTmaxDOTbDOT18" FLOAT DOUBLE
+"m1tcrDOTw1" FLOAT DOUBLE
+"m1tcrDOTw2" FLOAT DOUBLE
+"m1tcrDOTw3" FLOAT DOUBLE
+"m1tcrDOTw4" FLOAT DOUBLE
+"m1tcrDOTw5" FLOAT DOUBLE
+"m1tcrDOTw6" FLOAT DOUBLE
+"m1tcrDOTw7" FLOAT DOUBLE
+"m1tcrDOTw8" FLOAT DOUBLE
+"m1tcrDOTw9" FLOAT DOUBLE
+"m1tcrDOTw10" FLOAT DOUBLE
+"m1tcrDOTw11" FLOAT DOUBLE
+"m1tcrDOTw12" FLOAT DOUBLE
+"m1tcrDOTw13" FLOAT DOUBLE
+"m1tcrDOTw14" FLOAT DOUBLE
+"m1tcrDOTw15" FLOAT DOUBLE
+"m1tcrDOTw16" FLOAT DOUBLE
+"m1tcrDOTw17" FLOAT DOUBLE
+"m1tcrDOTw18" FLOAT DOUBLE
+"m1tcrDOTbDOT1" FLOAT DOUBLE
+"m1tcrDOTbDOT2" FLOAT DOUBLE
+"m1tcrDOTbDOT3" FLOAT DOUBLE
+"m1tcrDOTbDOT4" FLOAT DOUBLE
+"m1tcrDOTbDOT5" FLOAT DOUBLE
+"m1tcrDOTbDOT6" FLOAT DOUBLE
+"m1tcrDOTbDOT7" FLOAT DOUBLE
+"m1tcrDOTbDOT8" FLOAT DOUBLE
+"m1tcrDOTbDOT9" FLOAT DOUBLE
+"m1tcrDOTbDOT10" FLOAT DOUBLE
+"m1tcrDOTbDOT11" FLOAT DOUBLE
+"m1tcrDOTbDOT12" FLOAT DOUBLE
+"m1tcrDOTbDOT13" FLOAT DOUBLE
+"m1tcrDOTbDOT14" FLOAT DOUBLE
+"m1tcrDOTbDOT15" FLOAT DOUBLE
+"m1tcrDOTbDOT16" FLOAT DOUBLE
+"m1tcrDOTbDOT17" FLOAT DOUBLE
+"m1tcrDOTbDOT18" FLOAT DOUBLE
+"mwDOTm1" FLOAT DOUBLE
+"msDOTm1" FLOAT DOUBLE
+"nomCOLONtDOTm1" FLOAT DOUBLE
+"sdevCOLONtDOTm1" FLOAT DOUBLE
+"nomCOLONsDOTm1" FLOAT DOUBLE
+"sdevCOLONsDOTm1" FLOAT DOUBLE
+"minCOLONrsfDOTm1" FLOAT DOUBLE
+"nomCOLONrsfDOTm1" FLOAT DOUBLE
+"maxCOLONrsfDOTm1" FLOAT DOUBLE
+"swtDOTm1_tn" FLOAT DOUBLE
+"tDOTm1_tn" FLOAT DOUBLE
+"tcrDOTm1" FLOAT DOUBLE
+"mxresDOTw1" FLOAT DOUBLE
+"mxresDOTw2" FLOAT DOUBLE
+"mxresDOTw3" FLOAT DOUBLE
+"mxresDOTw4" FLOAT DOUBLE
+"mxresDOTw5" FLOAT DOUBLE
+"mxresDOTw6" FLOAT DOUBLE
+"mxresDOTw7" FLOAT DOUBLE
+"mxresDOTw8" FLOAT DOUBLE
+"mxresDOTw9" FLOAT DOUBLE
+"mxresDOTw10" FLOAT DOUBLE
+"mxresDOTw11" FLOAT DOUBLE
+"mxresDOTw12" FLOAT DOUBLE
+"mxresDOTw13" FLOAT DOUBLE
+"mxresDOTw14" FLOAT DOUBLE
+"mxresDOTw15" FLOAT DOUBLE
+"mxresDOTw16" FLOAT DOUBLE
+"mxresDOTminDOTbDOT1" FLOAT DOUBLE
+"mxresDOTminDOTbDOT2" FLOAT DOUBLE
+"mxresDOTminDOTbDOT3" FLOAT DOUBLE
+"mxresDOTminDOTbDOT4" FLOAT DOUBLE
+"mxresDOTminDOTbDOT5" FLOAT DOUBLE
+"mxresDOTminDOTbDOT6" FLOAT DOUBLE
+"mxresDOTminDOTbDOT7" FLOAT DOUBLE
+"mxresDOTminDOTbDOT8" FLOAT DOUBLE
+"mxresDOTminDOTbDOT9" FLOAT DOUBLE
+"mxresDOTminDOTbDOT10" FLOAT DOUBLE
+"mxresDOTminDOTbDOT11" FLOAT DOUBLE
+"mxresDOTminDOTbDOT12" FLOAT DOUBLE
+"mxresDOTminDOTbDOT13" FLOAT DOUBLE
+"mxresDOTminDOTbDOT14" FLOAT DOUBLE
+"mxresDOTminDOTbDOT15" FLOAT DOUBLE
+"mxresDOTminDOTbDOT16" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT1" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT2" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT3" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT4" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT5" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT6" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT7" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT8" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT9" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT10" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT11" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT12" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT13" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT14" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT15" FLOAT DOUBLE
+"mxresDOTnomDOTbDOT16" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT1" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT2" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT3" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT4" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT5" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT6" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT7" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT8" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT9" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT10" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT11" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT12" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT13" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT14" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT15" FLOAT DOUBLE
+"mxresDOTmaxDOTbDOT16" FLOAT DOUBLE
+"mxtcrDOTw1" FLOAT DOUBLE
+"mxtcrDOTw2" FLOAT DOUBLE
+"mxtcrDOTw3" FLOAT DOUBLE
+"mxtcrDOTw4" FLOAT DOUBLE
+"mxtcrDOTw5" FLOAT DOUBLE
+"mxtcrDOTw6" FLOAT DOUBLE
+"mxtcrDOTw7" FLOAT DOUBLE
+"mxtcrDOTw8" FLOAT DOUBLE
+"mxtcrDOTw9" FLOAT DOUBLE
+"mxtcrDOTw10" FLOAT DOUBLE
+"mxtcrDOTw11" FLOAT DOUBLE
+"mxtcrDOTw12" FLOAT DOUBLE
+"mxtcrDOTw13" FLOAT DOUBLE
+"mxtcrDOTw14" FLOAT DOUBLE
+"mxtcrDOTw15" FLOAT DOUBLE
+"mxtcrDOTw16" FLOAT DOUBLE
+"mxtcrDOTbDOT1" FLOAT DOUBLE
+"mxtcrDOTbDOT2" FLOAT DOUBLE
+"mxtcrDOTbDOT3" FLOAT DOUBLE
+"mxtcrDOTbDOT4" FLOAT DOUBLE
+"mxtcrDOTbDOT5" FLOAT DOUBLE
+"mxtcrDOTbDOT6" FLOAT DOUBLE
+"mxtcrDOTbDOT7" FLOAT DOUBLE
+"mxtcrDOTbDOT8" FLOAT DOUBLE
+"mxtcrDOTbDOT9" FLOAT DOUBLE
+"mxtcrDOTbDOT10" FLOAT DOUBLE
+"mxtcrDOTbDOT11" FLOAT DOUBLE
+"mxtcrDOTbDOT12" FLOAT DOUBLE
+"mxtcrDOTbDOT13" FLOAT DOUBLE
+"mxtcrDOTbDOT14" FLOAT DOUBLE
+"mxtcrDOTbDOT15" FLOAT DOUBLE
+"mxtcrDOTbDOT16" FLOAT DOUBLE
+"mwDOTm2" FLOAT DOUBLE
+"msDOTm2" FLOAT DOUBLE
+"nomCOLONtDOTm2" FLOAT DOUBLE
+"sdevCOLONtDOTm2" FLOAT DOUBLE
+"nomCOLONsDOTm2" FLOAT DOUBLE
+"sdevCOLONsDOTm2" FLOAT DOUBLE
+"minCOLONrsfDOTm2" FLOAT DOUBLE
+"nomCOLONrsfDOTm2" FLOAT DOUBLE
+"maxCOLONrsfDOTm2" FLOAT DOUBLE
+"swtDOTm2_tn" FLOAT DOUBLE
+"tDOTm2_tn" FLOAT DOUBLE
+"tcrDOTm2" FLOAT DOUBLE
+"mwDOTm3" FLOAT DOUBLE
+"msDOTm3" FLOAT DOUBLE
+"nomCOLONtDOTm3" FLOAT DOUBLE
+"sdevCOLONtDOTm3" FLOAT DOUBLE
+"nomCOLONsDOTm3" FLOAT DOUBLE
+"sdevCOLONsDOTm3" FLOAT DOUBLE
+"minCOLONrsfDOTm3" FLOAT DOUBLE
+"nomCOLONrsfDOTm3" FLOAT DOUBLE
+"maxCOLONrsfDOTm3" FLOAT DOUBLE
+"swtDOTm3_tn" FLOAT DOUBLE
+"tDOTm3_tn" FLOAT DOUBLE
+"tcrDOTm3" FLOAT DOUBLE
+"mwDOTm4" FLOAT DOUBLE
+"msDOTm4" FLOAT DOUBLE
+"nomCOLONtDOTm4" FLOAT DOUBLE
+"sdevCOLONtDOTm4" FLOAT DOUBLE
+"nomCOLONsDOTm4" FLOAT DOUBLE
+"sdevCOLONsDOTm4" FLOAT DOUBLE
+"minCOLONrsfDOTm4" FLOAT DOUBLE
+"nomCOLONrsfDOTm4" FLOAT DOUBLE
+"maxCOLONrsfDOTm4" FLOAT DOUBLE
+"swtDOTm4_tn" FLOAT DOUBLE
+"tDOTm4_tn" FLOAT DOUBLE
+"tcrDOTm4" FLOAT DOUBLE
+"mwDOTm5" FLOAT DOUBLE
+"msDOTm5" FLOAT DOUBLE
+"nomCOLONtDOTm5" FLOAT DOUBLE
+"sdevCOLONtDOTm5" FLOAT DOUBLE
+"nomCOLONsDOTm5" FLOAT DOUBLE
+"sdevCOLONsDOTm5" FLOAT DOUBLE
+"minCOLONrsfDOTm5" FLOAT DOUBLE
+"nomCOLONrsfDOTm5" FLOAT DOUBLE
+"maxCOLONrsfDOTm5" FLOAT DOUBLE
+"swtDOTm5_tn" FLOAT DOUBLE
+"tDOTm5_tn" FLOAT DOUBLE
+"tcrDOTm5" FLOAT DOUBLE
+"fxresDOTw1" FLOAT DOUBLE
+"fxresDOTw2" FLOAT DOUBLE
+"fxresDOTw3" FLOAT DOUBLE
+"fxresDOTw4" FLOAT DOUBLE
+"fxresDOTw5" FLOAT DOUBLE
+"fxresDOTw6" FLOAT DOUBLE
+"fxresDOTw7" FLOAT DOUBLE
+"fxresDOTw8" FLOAT DOUBLE
+"fxresDOTw9" FLOAT DOUBLE
+"fxresDOTminDOTbDOT1" FLOAT DOUBLE
+"fxresDOTminDOTbDOT2" FLOAT DOUBLE
+"fxresDOTminDOTbDOT3" FLOAT DOUBLE
+"fxresDOTminDOTbDOT4" FLOAT DOUBLE
+"fxresDOTminDOTbDOT5" FLOAT DOUBLE
+"fxresDOTminDOTbDOT6" FLOAT DOUBLE
+"fxresDOTminDOTbDOT7" FLOAT DOUBLE
+"fxresDOTminDOTbDOT8" FLOAT DOUBLE
+"fxresDOTminDOTbDOT9" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT1" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT2" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT3" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT4" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT5" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT6" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT7" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT8" FLOAT DOUBLE
+"fxresDOTnomDOTbDOT9" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT1" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT2" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT3" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT4" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT5" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT6" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT7" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT8" FLOAT DOUBLE
+"fxresDOTmaxDOTbDOT9" FLOAT DOUBLE
+"fxtcrDOTw1" FLOAT DOUBLE
+"fxtcrDOTw2" FLOAT DOUBLE
+"fxtcrDOTw3" FLOAT DOUBLE
+"fxtcrDOTw4" FLOAT DOUBLE
+"fxtcrDOTw5" FLOAT DOUBLE
+"fxtcrDOTw6" FLOAT DOUBLE
+"fxtcrDOTw7" FLOAT DOUBLE
+"fxtcrDOTw8" FLOAT DOUBLE
+"fxtcrDOTw9" FLOAT DOUBLE
+"fxtcrDOTbDOT1" FLOAT DOUBLE
+"fxtcrDOTbDOT2" FLOAT DOUBLE
+"fxtcrDOTbDOT3" FLOAT DOUBLE
+"fxtcrDOTbDOT4" FLOAT DOUBLE
+"fxtcrDOTbDOT5" FLOAT DOUBLE
+"fxtcrDOTbDOT6" FLOAT DOUBLE
+"fxtcrDOTbDOT7" FLOAT DOUBLE
+"fxtcrDOTbDOT8" FLOAT DOUBLE
+"fxtcrDOTbDOT9" FLOAT DOUBLE
+"mwDOTfa" FLOAT DOUBLE
+"msDOTfa" FLOAT DOUBLE
+"nomCOLONtDOTfa" FLOAT DOUBLE
+"sdevCOLONtDOTfa" FLOAT DOUBLE
+"nomCOLONsDOTfa" FLOAT DOUBLE
+"sdevCOLONsDOTfa" FLOAT DOUBLE
+"minCOLONrsfDOTfa" FLOAT DOUBLE
+"nomCOLONrsfDOTfa" FLOAT DOUBLE
+"maxCOLONrsfDOTfa" FLOAT DOUBLE
+"swtDOTfa_tn" FLOAT DOUBLE
+"tDOTfa_tn" FLOAT DOUBLE
+"tcrDOTfa" FLOAT DOUBLE
+"mwDOTfb" FLOAT DOUBLE
+"msDOTfb" FLOAT DOUBLE
+"nomCOLONtDOTfb" FLOAT DOUBLE
+"sdevCOLONtDOTfb" FLOAT DOUBLE
+"nomCOLONsDOTfb" FLOAT DOUBLE
+"sdevCOLONsDOTfb" FLOAT DOUBLE
+"minCOLONrsfDOTfb" FLOAT DOUBLE
+"nomCOLONrsfDOTfb" FLOAT DOUBLE
+"maxCOLONrsfDOTfb" FLOAT DOUBLE
+"swtDOTfb_tn" FLOAT DOUBLE
+"tDOTfb_tn" FLOAT DOUBLE
+"tcrDOTfb" FLOAT DOUBLE
+"mwDOTlb" FLOAT DOUBLE
+"msDOTlb" FLOAT DOUBLE
+"nomCOLONtDOTlb" FLOAT DOUBLE
+"sdevCOLONtDOTlb" FLOAT DOUBLE
+"nomCOLONsDOTlb" FLOAT DOUBLE
+"sdevCOLONsDOTlb" FLOAT DOUBLE
+"nomCOLONrhoDOTlb" FLOAT DOUBLE
+"sdevCOLONrhoDOTlb" FLOAT DOUBLE
+"swtDOTlb_tn" FLOAT DOUBLE
+"tDOTlb_tn" FLOAT DOUBLE
+"tcrDOTlb" FLOAT DOUBLE
+"minCOLONrvDOTm1_rx" FLOAT DOUBLE
+"nomCOLONrvDOTm1_rx" FLOAT DOUBLE
+"maxCOLONrvDOTm1_rx" FLOAT DOUBLE
+"minCOLONrvDOTm1_pc" FLOAT DOUBLE
+"nomCOLONrvDOTm1_pc" FLOAT DOUBLE
+"maxCOLONrvDOTm1_pc" FLOAT DOUBLE
+"minCOLONrvDOTm2_m1" FLOAT DOUBLE
+"nomCOLONrvDOTm2_m1" FLOAT DOUBLE
+"maxCOLONrvDOTm2_m1" FLOAT DOUBLE
+"minCOLONrvDOTm3_m2" FLOAT DOUBLE
+"nomCOLONrvDOTm3_m2" FLOAT DOUBLE
+"maxCOLONrvDOTm3_m2" FLOAT DOUBLE
+"minCOLONrvDOTm4_m3" FLOAT DOUBLE
+"nomCOLONrvDOTm4_m3" FLOAT DOUBLE
+"maxCOLONrvDOTm4_m3" FLOAT DOUBLE
+"minCOLONrvDOTm5_m4" FLOAT DOUBLE
+"nomCOLONrvDOTm5_m4" FLOAT DOUBLE
+"maxCOLONrvDOTm5_m4" FLOAT DOUBLE
+"minCOLONrvDOTfa_m5" FLOAT DOUBLE
+"nomCOLONrvDOTfa_m5" FLOAT DOUBLE
+"maxCOLONrvDOTfa_m5" FLOAT DOUBLE
+"minCOLONrvDOTfb_fa" FLOAT DOUBLE
+"nomCOLONrvDOTfb_fa" FLOAT DOUBLE
+"maxCOLONrvDOTfb_fa" FLOAT DOUBLE
+"minCOLONrvDOTlb_fb" FLOAT DOUBLE
+"nomCOLONrvDOTlb_fb" FLOAT DOUBLE
+"maxCOLONrvDOTlb_fb" FLOAT DOUBLE
+"fctb_sub" FLOAT DOUBLE
+"fcc_sub" FLOAT DOUBLE
+"fr_sub" FLOAT DOUBLE
+"fctt_sub" FLOAT DOUBLE
+"fctb_pc" FLOAT DOUBLE
+"fcc_pc" FLOAT DOUBLE
+"fr_pc" FLOAT DOUBLE
+"fctt_pc" FLOAT DOUBLE
+"fctb_m1" FLOAT DOUBLE
+"fcc_m1" FLOAT DOUBLE
+"fr_m1" FLOAT DOUBLE
+"fctt_m1" FLOAT DOUBLE
+"fctb_m2" FLOAT DOUBLE
+"fcc_m2" FLOAT DOUBLE
+"fr_m2" FLOAT DOUBLE
+"fctt_m2" FLOAT DOUBLE
+"fctb_m3" FLOAT DOUBLE
+"fcc_m3" FLOAT DOUBLE
+"fr_m3" FLOAT DOUBLE
+"fctt_m3" FLOAT DOUBLE
+"fctb_m4" FLOAT DOUBLE
+"fcc_m4" FLOAT DOUBLE
+"fr_m4" FLOAT DOUBLE
+"fctt_m4" FLOAT DOUBLE
+"fctb_m5" FLOAT DOUBLE
+"fcc_m5" FLOAT DOUBLE
+"fr_m5" FLOAT DOUBLE
+"fctt_m5" FLOAT DOUBLE
+"fctb_fa" FLOAT DOUBLE
+"fcc_fa" FLOAT DOUBLE
+"fr_fa" FLOAT DOUBLE
+"fctt_fa" FLOAT DOUBLE
+"fctb_fb" FLOAT DOUBLE
+"fcc_fb" FLOAT DOUBLE
+"fr_fb" FLOAT DOUBLE
+"fctt_fb" FLOAT DOUBLE
+"fctb_lb" FLOAT DOUBLE
+"fcc_lb" FLOAT DOUBLE
+"fr_lb" FLOAT DOUBLE
+"fctt_lb" FLOAT DOUBLE
+"m1opcDOTw1" FLOAT DOUBLE
+"m1opcDOTw2" FLOAT DOUBLE
+"m1opcDOTw3" FLOAT DOUBLE
+"m1opcDOTw4" FLOAT DOUBLE
+"m1opcDOTw5" FLOAT DOUBLE
+"m1opcDOTw6" FLOAT DOUBLE
+"m1opcDOTw7" FLOAT DOUBLE
+"m1opcDOTw8" FLOAT DOUBLE
+"m1opcDOTw9" FLOAT DOUBLE
+"m1opcDOTw10" FLOAT DOUBLE
+"m1opcDOTw11" FLOAT DOUBLE
+"m1opcDOTw12" FLOAT DOUBLE
+"m1opcDOTw13" FLOAT DOUBLE
+"m1opcDOTw14" FLOAT DOUBLE
+"m1opcDOTw15" FLOAT DOUBLE
+"m1opcDOTs1" FLOAT DOUBLE
+"m1opcDOTs2" FLOAT DOUBLE
+"m1opcDOTs3" FLOAT DOUBLE
+"m1opcDOTbDOT1DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT1DOT2" FLOAT DOUBLE
+"m1opcDOTbDOT1DOT3" FLOAT DOUBLE
+"m1opcDOTbDOT2DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT2DOT2" FLOAT DOUBLE
+"m1opcDOTbDOT2DOT3" FLOAT DOUBLE
+"m1opcDOTbDOT3DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT3DOT2" FLOAT DOUBLE
+"m1opcDOTbDOT3DOT3" FLOAT DOUBLE
+"m1opcDOTbDOT4DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT4DOT2" FLOAT DOUBLE
+"m1opcDOTbDOT4DOT3" FLOAT DOUBLE
+"m1opcDOTbDOT5DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT5DOT2" FLOAT DOUBLE
+"m1opcDOTbDOT5DOT3" FLOAT DOUBLE
+"m1opcDOTbDOT6DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT6DOT2" FLOAT DOUBLE
+"m1opcDOTbDOT6DOT3" FLOAT DOUBLE
+"m1opcDOTbDOT7DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT8DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT9DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT10DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT11DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT12DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT13DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT14DOT1" FLOAT DOUBLE
+"m1opcDOTbDOT15DOT1" FLOAT DOUBLE
+"mxopcDOTw1" FLOAT DOUBLE
+"mxopcDOTw2" FLOAT DOUBLE
+"mxopcDOTw3" FLOAT DOUBLE
+"mxopcDOTw4" FLOAT DOUBLE
+"mxopcDOTw5" FLOAT DOUBLE
+"mxopcDOTw6" FLOAT DOUBLE
+"mxopcDOTw7" FLOAT DOUBLE
+"mxopcDOTw8" FLOAT DOUBLE
+"mxopcDOTw9" FLOAT DOUBLE
+"mxopcDOTw10" FLOAT DOUBLE
+"mxopcDOTw11" FLOAT DOUBLE
+"mxopcDOTw12" FLOAT DOUBLE
+"mxopcDOTw13" FLOAT DOUBLE
+"mxopcDOTs1" FLOAT DOUBLE
+"mxopcDOTs2" FLOAT DOUBLE
+"mxopcDOTs3" FLOAT DOUBLE
+"mxopcDOTbDOT1DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT1DOT2" FLOAT DOUBLE
+"mxopcDOTbDOT1DOT3" FLOAT DOUBLE
+"mxopcDOTbDOT2DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT2DOT2" FLOAT DOUBLE
+"mxopcDOTbDOT2DOT3" FLOAT DOUBLE
+"mxopcDOTbDOT3DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT3DOT2" FLOAT DOUBLE
+"mxopcDOTbDOT3DOT3" FLOAT DOUBLE
+"mxopcDOTbDOT4DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT4DOT2" FLOAT DOUBLE
+"mxopcDOTbDOT4DOT3" FLOAT DOUBLE
+"mxopcDOTbDOT5DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT6DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT7DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT8DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT9DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT10DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT11DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT12DOT1" FLOAT DOUBLE
+"mxopcDOTbDOT13DOT1" FLOAT DOUBLE
+"fxopcDOTw1" FLOAT DOUBLE
+"fxopcDOTw2" FLOAT DOUBLE
+"fxopcDOTw3" FLOAT DOUBLE
+"fxopcDOTw4" FLOAT DOUBLE
+"fxopcDOTs1" FLOAT DOUBLE
+"fxopcDOTbDOT1DOT1" FLOAT DOUBLE
+"fxopcDOTbDOT2DOT1" FLOAT DOUBLE
+"fxopcDOTbDOT3DOT1" FLOAT DOUBLE
+"fxopcDOTbDOT4DOT1" FLOAT DOUBLE
+"sDOTpc" FLOAT DOUBLE
+"tDOTpc" FLOAT DOUBLE
+"rsDOTpc" FLOAT DOUBLE
+"sDOTm1" FLOAT DOUBLE
+"tDOTm1" FLOAT DOUBLE
+"rsfDOTm1" FLOAT DOUBLE
+"sDOTm2" FLOAT DOUBLE
+"tDOTm2" FLOAT DOUBLE
+"rsfDOTm2" FLOAT DOUBLE
+"sDOTm3" FLOAT DOUBLE
+"tDOTm3" FLOAT DOUBLE
+"rsfDOTm3" FLOAT DOUBLE
+"sDOTm4" FLOAT DOUBLE
+"tDOTm4" FLOAT DOUBLE
+"rsfDOTm4" FLOAT DOUBLE
+"sDOTm5" FLOAT DOUBLE
+"tDOTm5" FLOAT DOUBLE
+"rsfDOTm5" FLOAT DOUBLE
+"sDOTfa" FLOAT DOUBLE
+"tDOTfa" FLOAT DOUBLE
+"rsfDOTfa" FLOAT DOUBLE
+"sDOTfb" FLOAT DOUBLE
+"tDOTfb" FLOAT DOUBLE
+"rsfDOTfb" FLOAT DOUBLE
+"sDOTlb" FLOAT DOUBLE
+"tDOTlb" FLOAT DOUBLE
+"rhoDOTlb" FLOAT DOUBLE
+"rsDOTlb" FLOAT DOUBLE
+"rvDOTm1_rx" FLOAT DOUBLE
+"rvDOTm1_pc" FLOAT DOUBLE
+"rvDOTm2_m1" FLOAT DOUBLE
+"rvDOTm3_m2" FLOAT DOUBLE
+"rvDOTm4_m3" FLOAT DOUBLE
+"rvDOTm5_m4" FLOAT DOUBLE
+"rvDOTfa_m5" FLOAT DOUBLE
+"rvDOTfb_fa" FLOAT DOUBLE
+"rvDOTlb_fb" FLOAT DOUBLE
+"fa" FLOAT DOUBLE
+"fb" FLOAT DOUBLE
+"lb" FLOAT DOUBLE
+"m1" FLOAT DOUBLE
+"m2" FLOAT DOUBLE
+"m3" FLOAT DOUBLE
+"m4" FLOAT DOUBLE
+"m5" FLOAT DOUBLE
+"diel" FLOAT DOUBLE
+"pc" FLOAT DOUBLE
+"rx" FLOAT DOUBLE
+"sub" FLOAT DOUBLE
+) PROP(
+"key" "parameters"
+)
+VALUE
+"top-level" "top-level" (
+25.0000
+27.0000
+0.00000
+1.00000
+16.0000
+6.54762e-16
+1.22770e-16
+1.00000
+0.00000
+512.000
+5.71805e-17
+1.25000e-09
+5.74454e-11
+1.00000e-10
+6.00000e-09
+7.00000e-08
+4.00000e-08
+5.70000e-08
+1.60000e-07
+5.50000e-08
+2.20000e-07
+5.50000e-08
+7.00000e-08
+32.0000
+0.00000
+0.00000
+1.00000
+1.00000
+1.00000
+0.00000
+0.00000
+1.00000
+1.00000
+1.00000
+0.00000
+0.00000
+0.00000
+1.00000
+1.00000
+1.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+3.14159
+8.85419e-12
+1.25664e-06
+4.10000
+11.9000
+1.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.245000
+0.644210
+0.000676190
+0.000100000
+0.232630
+0.528090
+0.000625740
+0.000660060
+0.288610
+0.707410
+0.000745000
+0.00152940
+0.0584700
+0.240650
+0.000600000
+0.000997330
+-5.00000e-09
+0.00000
+0.00000
+1.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+2.35910e-10
+6.25000e-09
+-0.374000
+2.35910e-10
+3.10170e-11
+3.17000e-11
+2.00000e-09
+3.17000e-11
+2.04800e-10
+0.00130000
+0.00000
+3.10170e-11
+0.00000
+0.00130000
+2.04800e-10
+136.990
+185.680
+1.33690e-10
+2.55000e-09
+-0.476800
+1.33690e-10
+2.55630e-11
+7.31680e-11
+2.00000e-09
+7.31680e-11
+3.20000e-10
+0.00120000
+0.00000
+2.55630e-11
+0.00000
+0.00120000
+3.20000e-10
+105.000
+118.500
+3.59000e-10
+3.33000e-09
+-0.0337050
+3.59000e-10
+4.42000e-11
+0.00000
+0.00000
+0.00000
+7.68000e-11
+0.00110000
+-1.00000e-08
+4.42000e-11
+-0.00600000
+0.00110000
+7.68000e-11
+105.000
+443.000
+1.33690e-10
+2.55000e-09
+-0.490000
+1.33690e-10
+2.55630e-11
+7.31680e-11
+0.00000
+7.31680e-11
+3.20000e-10
+0.00120000
+0.00000
+2.55630e-11
+0.00000
+0.00120000
+3.20000e-10
+105.000
+94.0000
+1.64360e-10
+2.35000e-09
+0.466000
+1.64360e-10
+1.60540e-11
+6.08910e-11
+0.00000
+6.08910e-11
+3.20000e-10
+0.00110000
+0.00000
+1.60540e-11
+0.00000
+0.00110000
+3.20000e-10
+50.0000
+718.000
+1.64360e-10
+2.35000e-09
+0.343000
+1.64360e-10
+1.60540e-11
+6.08910e-11
+2.00000e-09
+6.08910e-11
+3.20000e-10
+0.00110000
+0.00000
+1.60540e-11
+0.00000
+0.00110000
+3.20000e-10
+50.0000
+718.000
+1.64360e-10
+2.35000e-09
+0.385400
+1.64360e-10
+1.60540e-11
+6.08910e-11
+0.00000
+6.08910e-11
+3.20000e-10
+0.00110000
+0.00000
+1.60540e-11
+0.00000
+0.00110000
+3.20000e-10
+50.0000
+693.000
+1.88900e-10
+2.50000e-09
+-0.469100
+1.88900e-10
+2.94210e-11
+9.98890e-12
+0.00000
+9.98890e-12
+3.20000e-10
+0.00120000
+-1.00000e-08
+2.94210e-11
+0.00000
+0.00120000
+3.20000e-10
+425.000
+186.600
+1.33690e-10
+2.55000e-09
+-0.504500
+1.33690e-10
+2.55630e-11
+7.31680e-11
+0.00000
+7.31680e-11
+3.20000e-10
+0.00120000
+0.00000
+2.55630e-11
+0.00000
+0.00120000
+3.20000e-10
+105.000
+112.300
+2.00000e-10
+3.35000e-09
+0.449000
+2.00000e-10
+3.75360e-11
+8.21450e-11
+-5.00000e-09
+8.21450e-11
+2.46174e-10
+0.00140000
+0.00000
+3.75360e-11
+0.00000
+0.00140000
+2.46174e-10
+69.7800
+550.000
+1.88750e-10
+2.35000e-09
+0.0760000
+1.88750e-10
+1.78440e-11
+4.09100e-11
+2.00000e-09
+4.09100e-11
+3.00000e-10
+0.00110000
+0.00000
+1.78440e-11
+0.00000
+0.00110000
+3.00000e-10
+47.4240
+1020.00
+1.64360e-10
+2.35000e-09
+0.438000
+1.64360e-10
+1.60540e-11
+6.08910e-11
+0.00000
+6.08910e-11
+3.20000e-10
+0.00110000
+0.00000
+1.60540e-11
+0.00000
+0.00110000
+3.20000e-10
+50.0000
+718.000
+2.00000e-10
+3.35000e-09
+0.449000
+2.00000e-10
+3.75360e-11
+8.21450e-11
+-5.00000e-09
+8.21450e-11
+2.46174e-10
+0.00140000
+0.00000
+3.75360e-11
+0.00000
+0.00140000
+2.46174e-10
+69.7800
+550.000
+6.80000e-11
+2.55000e-09
+-0.211220
+6.80000e-11
+2.86500e-11
+1.40000e-10
+2.00000e-09
+1.40000e-10
+3.00000e-10
+0.00110000
+0.00000
+2.86500e-11
+0.00000
+0.00110000
+3.00000e-10
+278.100
+252.160
+1.64360e-10
+2.35000e-09
+0.362400
+1.64360e-10
+1.60540e-11
+6.08910e-11
+0.00000
+6.08910e-11
+3.20000e-10
+0.00110000
+0.00000
+1.60540e-11
+0.00000
+0.00110000
+3.20000e-10
+50.0000
+790.000
+2.75450e-10
+3.65000e-09
+-0.394300
+2.75450e-10
+5.50710e-11
+3.01300e-13
+-5.00000e-09
+3.01300e-13
+1.21880e-10
+0.00140000
+0.00000
+5.50710e-11
+0.00000
+0.00140000
+1.21880e-10
+40.0000
+134.000
+2.75450e-10
+3.65000e-09
+-0.394300
+2.75450e-10
+5.50710e-11
+3.01300e-13
+-5.00000e-09
+3.01300e-13
+1.21880e-10
+0.00140000
+0.00000
+5.50710e-11
+0.00000
+0.00140000
+1.21880e-10
+40.0000
+134.000
+5.74000e-11
+2.55000e-09
+-0.167800
+5.74000e-11
+2.86500e-11
+1.54400e-10
+2.00000e-09
+1.54400e-10
+2.80000e-10
+0.00110000
+0.00000
+2.86500e-11
+0.00000
+0.00110000
+2.80000e-10
+86.7990
+296.000
+3.00000e-10
+5.75000e-09
+0.0250000
+3.00000e-10
+7.20000e-11
+0.00000
+0.00000
+0.00000
+1.50000e-10
+0.00110000
+-1.00000e-08
+7.20000e-11
+0.00000
+0.00110000
+1.50000e-10
+112.000
+456.200
+1.76600e-10
+2.35000e-09
+0.500000
+1.76600e-10
+1.92000e-11
+4.36200e-11
+0.00000
+4.36200e-11
+3.50000e-10
+0.00120000
+0.00000
+1.92000e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+516.000
+1.76600e-10
+2.35000e-09
+0.501800
+1.76600e-10
+1.92000e-11
+4.36200e-11
+0.00000
+4.36200e-11
+3.50000e-10
+0.00120000
+0.00000
+1.92000e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+525.800
+1.39510e-10
+2.30000e-09
+0.367000
+1.39510e-10
+2.98560e-11
+3.63870e-11
+0.00000
+3.63870e-11
+3.50000e-10
+0.00120000
+-1.00000e-08
+2.98560e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+360.000
+2.28000e-10
+5.90000e-09
+0.631000
+2.28000e-10
+1.06770e-11
+5.19450e-11
+2.00000e-09
+5.19450e-11
+1.40670e-10
+0.00130000
+0.00000
+1.06770e-11
+0.00000
+0.00130000
+1.40670e-10
+127.960
+419.245
+1.76600e-10
+2.35000e-09
+0.456000
+1.76600e-10
+1.92000e-11
+4.36200e-11
+0.00000
+4.36200e-11
+3.50000e-10
+0.00120000
+0.00000
+1.92000e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+518.000
+2.28000e-10
+5.90000e-09
+0.631000
+2.28000e-10
+1.06770e-11
+5.19450e-11
+2.00000e-09
+5.19450e-11
+1.40670e-10
+0.00130000
+0.00000
+1.06770e-11
+0.00000
+0.00130000
+1.40670e-10
+127.960
+419.245
+6.80000e-11
+2.55000e-09
+-0.305000
+6.80000e-11
+2.86500e-11
+1.40000e-10
+0.00000
+1.40000e-10
+3.00000e-10
+0.00110000
+0.00000
+2.86500e-11
+0.00000
+0.00110000
+3.00000e-10
+278.100
+252.160
+2.35910e-10
+6.25000e-09
+-0.374000
+2.35910e-10
+3.10170e-11
+3.17000e-11
+2.00000e-09
+3.17000e-11
+2.04800e-10
+0.00130000
+0.00000
+3.10170e-11
+0.00000
+0.00130000
+2.04800e-10
+136.990
+185.680
+1.39510e-10
+2.30000e-09
+0.327000
+1.39510e-10
+2.98560e-11
+3.63870e-11
+0.00000
+3.63870e-11
+3.50000e-10
+0.00120000
+-1.00000e-08
+2.98560e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+500.000
+1.76600e-10
+2.35000e-09
+0.480800
+1.76600e-10
+1.92000e-11
+4.36200e-11
+0.00000
+4.36200e-11
+3.50000e-10
+0.00120000
+0.00000
+1.92000e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+589.600
+2.28000e-10
+5.90000e-09
+0.631000
+2.28000e-10
+1.06770e-11
+5.19450e-11
+2.00000e-09
+5.19450e-11
+1.40670e-10
+0.00130000
+0.00000
+1.06770e-11
+0.00000
+0.00130000
+1.40670e-10
+127.960
+419.245
+6.80000e-11
+2.55000e-09
+-0.225600
+6.80000e-11
+2.86500e-11
+1.40000e-10
+0.00000
+1.40000e-10
+3.00000e-10
+0.00110000
+0.00000
+2.86500e-11
+0.00000
+0.00110000
+3.00000e-10
+278.100
+227.000
+3.64000e-10
+2.30000e-09
+-0.0670000
+3.64000e-10
+4.54000e-11
+0.00000
+0.00000
+0.00000
+1.51000e-10
+0.00110000
+-1.00000e-08
+4.54000e-11
+0.00000
+0.00110000
+1.51000e-10
+1.10000
+330.000
+2.35910e-10
+6.25000e-09
+-0.374000
+2.35910e-10
+3.10170e-11
+3.17000e-11
+2.00000e-09
+3.17000e-11
+2.04800e-10
+0.00130000
+0.00000
+3.10170e-11
+0.00000
+0.00130000
+2.04800e-10
+136.990
+185.680
+1.76600e-10
+2.35000e-09
+0.495000
+1.76600e-10
+1.92000e-11
+4.36200e-11
+2.00000e-09
+4.36200e-11
+3.50000e-10
+0.00120000
+0.00000
+1.92000e-11
+0.00000
+0.00120000
+3.50000e-10
+10.0000
+521.220
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+1.00000
+0.00000
+1.00000
+0.00000
+1.00000
+0.00000
+1.00000
+0.00000
+1.00000
+0.00000
+1.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+-0.00000
+-0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+5.00000e-11
+1.00000
+0.300000
+2.00000
+1.55000e-07
+1.55000e-07
+1.60000e-08
+1.60000e-08
+1.60000e-08
+2.00000e-11
+0.00000
+0.00000
+0.00000
+1.00000
+1.00000
+1.00000
+0.0800000
+4.00000e-09
+2.00000e-09
+2.00000e-09
+-0.0800000
+4.00000e-09
+0.0800000
+4.00000e-09
+-0.0800000
+4.00000e-09
+0.0800000
+4.00000e-09
+-0.0800000
+4.00000e-09
+0.0200000
+4.00000e-09
+0.0200000
+4.00000e-09
+-0.0400000
+4.00000e-09
+0.00800000
+4.00000e-09
+0.00800000
+4.00000e-09
+-0.0350000
+4.00000e-09
+0.0600000
+4.00000e-09
+-5.00000e-09
+0.00000
+-0.0600000
+4.00000e-09
+-5.00000e-09
+0.00000
+0.0600000
+4.00000e-09
+-0.0600000
+4.00000e-09
+0.00800000
+4.00000e-09
+-0.0350000
+4.00000e-09
+0.0200000
+4.00000e-09
+0.0200000
+4.00000e-09
+-0.0400000
+4.00000e-09
+0.00800000
+4.00000e-09
+0.00800000
+4.00000e-09
+-0.0350000
+4.00000e-09
+0.0120000
+4.00000e-09
+-0.0300000
+4.00000e-09
+0.0200000
+4.00000e-09
+2.00000e-09
+0.00000
+-0.0400000
+4.00000e-09
+2.00000e-09
+0.0200000
+4.00000e-09
+0.0150000
+4.00000e-09
+-0.0300000
+4.00000e-09
+0.0600000
+4.00000e-09
+0.0600000
+4.00000e-09
+0.0600000
+4.00000e-09
+0.0600000
+4.00000e-09
+-5.00000e-09
+0.00000
+-0.0600000
+-5.00000e-09
+-5.00000e-09
+0.00000
+0.00000
+0.631000
+419.245
+9.54097e-07
+127.960
+0.00000
+0.00000
+0.00000
+5.90000e-09
+2.28000e-10
+2.28000e-10
+5.19450e-11
+5.19450e-11
+0.00000
+0.00000
+0.00000
+0.631000
+5.58000e-09
+0.00130000
+0.00130000
+1.06770e-11
+1.06770e-11
+1.40670e-10
+1.40670e-10
+0.00000
+-0.00000
+-0.374000
+185.680
+0.00000
+136.990
+7.29980e-08
+0.00000
+0.00000
+6.25000e-09
+2.35910e-10
+2.35910e-10
+3.17000e-11
+3.17000e-11
+0.00000
+0.00000
+0.00000
+-0.374000
+5.77360e-09
+0.00130000
+0.00130000
+3.10170e-11
+3.10170e-11
+2.04800e-10
+2.04800e-10
+0.00000
+0.00000
+0.631000
+419.245
+9.54097e-07
+127.960
+0.00000
+0.00000
+0.00000
+5.90000e-09
+2.28000e-10
+2.28000e-10
+5.19450e-11
+5.19450e-11
+0.00000
+0.00000
+0.00000
+0.631000
+5.58000e-09
+0.00130000
+0.00130000
+1.06770e-11
+1.06770e-11
+1.40670e-10
+1.40670e-10
+0.00000
+-0.00000
+-0.374000
+185.680
+0.00000
+136.990
+7.29980e-08
+0.00000
+0.00000
+6.25000e-09
+2.35910e-10
+2.35910e-10
+3.17000e-11
+3.17000e-11
+0.00000
+0.00000
+0.00000
+-0.374000
+5.77360e-09
+0.00130000
+0.00130000
+3.10170e-11
+3.10170e-11
+2.04800e-10
+2.04800e-10
+0.00000
+0.00000
+0.631000
+419.245
+9.54097e-07
+127.960
+0.00000
+0.00000
+0.00000
+5.90000e-09
+2.28000e-10
+2.28000e-10
+5.19450e-11
+5.19450e-11
+0.00000
+0.00000
+0.00000
+0.631000
+5.58000e-09
+0.00130000
+0.00130000
+1.06770e-11
+1.06770e-11
+1.40670e-10
+1.40670e-10
+0.00000
+-0.00000
+-0.374000
+185.680
+0.00000
+136.990
+7.29980e-08
+0.00000
+0.00000
+6.25000e-09
+2.35910e-10
+2.35910e-10
+3.17000e-11
+3.17000e-11
+0.00000
+0.00000
+0.00000
+-0.374000
+5.77360e-09
+0.00130000
+0.00130000
+3.10170e-11
+3.10170e-11
+2.04800e-10
+2.04800e-10
+0.00000
+0.00000
+0.438000
+718.000
+0.00000
+50.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.64360e-10
+1.64360e-10
+6.08910e-11
+6.08910e-11
+0.00000
+0.00000
+0.00000
+0.438000
+2.16000e-09
+0.00110000
+0.00110000
+1.60540e-11
+1.60540e-11
+3.20000e-10
+3.20000e-10
+0.00000
+0.00000
+0.466000
+718.000
+0.00000
+50.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.64360e-10
+1.64360e-10
+6.08910e-11
+6.08910e-11
+0.00000
+0.00000
+0.00000
+0.466000
+2.16000e-09
+0.00110000
+0.00110000
+1.60540e-11
+1.60540e-11
+3.20000e-10
+3.20000e-10
+0.00000
+-0.00000
+-0.305000
+252.160
+0.00000
+278.100
+0.00000
+0.00000
+0.00000
+2.55000e-09
+6.80000e-11
+6.80000e-11
+1.40000e-10
+1.40000e-10
+0.00000
+0.00000
+0.00000
+-0.305000
+2.21340e-09
+0.00110000
+0.00110000
+2.86500e-11
+2.86500e-11
+3.00000e-10
+3.00000e-10
+0.00000
+0.00000
+0.456000
+518.000
+0.00000
+10.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.76600e-10
+1.76600e-10
+4.36200e-11
+4.36200e-11
+0.00000
+0.00000
+0.00000
+0.456000
+2.14500e-09
+0.00120000
+0.00120000
+1.92000e-11
+1.92000e-11
+3.50000e-10
+3.50000e-10
+0.00000
+0.00000
+0.500000
+516.000
+0.00000
+10.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.76600e-10
+1.76600e-10
+4.36200e-11
+4.36200e-11
+0.00000
+0.00000
+0.00000
+0.500000
+2.14500e-09
+0.00120000
+0.00120000
+1.92000e-11
+1.92000e-11
+3.50000e-10
+3.50000e-10
+0.00000
+-0.00000
+-0.490000
+94.0000
+0.00000
+105.000
+0.00000
+0.00000
+0.00000
+2.55000e-09
+1.33690e-10
+1.33690e-10
+7.31680e-11
+7.31680e-11
+0.00000
+0.00000
+0.00000
+-0.490000
+2.19500e-09
+0.00120000
+0.00120000
+2.55630e-11
+2.55630e-11
+3.20000e-10
+3.20000e-10
+0.00000
+0.00000
+0.449000
+550.000
+0.00000
+69.7800
+0.00000
+0.00000
+0.00000
+3.35000e-09
+2.00000e-10
+2.00000e-10
+8.21450e-11
+8.21450e-11
+0.00000
+0.00000
+0.00000
+0.449000
+3.11000e-09
+0.00140000
+0.00140000
+3.75360e-11
+3.75360e-11
+2.46174e-10
+2.46174e-10
+0.00000
+-0.00000
+-0.394300
+134.000
+0.00000
+40.0000
+0.00000
+0.00000
+0.00000
+3.65000e-09
+2.75450e-10
+2.75450e-10
+3.01300e-13
+3.01300e-13
+0.00000
+0.00000
+-7.00000e-09
+-0.394300
+3.25000e-09
+0.00140000
+0.00140000
+5.50710e-11
+5.50710e-11
+1.21880e-10
+1.21880e-10
+0.00000
+0.00000
+0.449000
+550.000
+0.00000
+69.7800
+0.00000
+0.00000
+0.00000
+3.35000e-09
+2.00000e-10
+2.00000e-10
+8.21450e-11
+8.21450e-11
+0.00000
+0.00000
+0.00000
+0.449000
+3.11000e-09
+0.00140000
+0.00140000
+3.75360e-11
+3.75360e-11
+2.46174e-10
+2.46174e-10
+0.00000
+-0.00000
+-0.394300
+134.000
+0.00000
+40.0000
+0.00000
+0.00000
+0.00000
+3.65000e-09
+2.75450e-10
+2.75450e-10
+3.01300e-13
+3.01300e-13
+0.00000
+0.00000
+-7.00000e-09
+-0.394300
+3.25000e-09
+0.00140000
+0.00140000
+5.50710e-11
+5.50710e-11
+1.21880e-10
+1.21880e-10
+0.00000
+0.00000
+0.495000
+521.220
+0.00000
+10.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.76600e-10
+1.76600e-10
+4.36200e-11
+4.36200e-11
+0.00000
+0.00000
+0.00000
+0.495000
+2.14500e-09
+0.00120000
+0.00120000
+1.92000e-11
+1.92000e-11
+3.50000e-10
+3.50000e-10
+0.00000
+-0.00000
+-0.476800
+118.500
+0.00000
+105.000
+0.00000
+0.00000
+0.00000
+2.55000e-09
+1.33690e-10
+1.33690e-10
+7.31680e-11
+7.31680e-11
+0.00000
+0.00000
+0.00000
+-0.476800
+2.19500e-09
+0.00120000
+0.00120000
+2.55630e-11
+2.55630e-11
+3.20000e-10
+3.20000e-10
+0.00000
+0.00000
+0.362400
+790.000
+0.00000
+50.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.64360e-10
+1.64360e-10
+6.08910e-11
+6.08910e-11
+0.00000
+0.00000
+0.00000
+0.362400
+2.16000e-09
+0.00110000
+0.00110000
+1.60540e-11
+1.60540e-11
+3.20000e-10
+3.20000e-10
+0.00000
+0.00000
+0.385400
+693.000
+0.00000
+50.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.64360e-10
+1.64360e-10
+6.08910e-11
+6.08910e-11
+0.00000
+0.00000
+0.00000
+0.385400
+2.16000e-09
+0.00110000
+0.00110000
+1.60540e-11
+1.60540e-11
+3.20000e-10
+3.20000e-10
+0.00000
+-0.00000
+-0.225600
+227.000
+0.00000
+278.100
+0.00000
+0.00000
+0.00000
+2.55000e-09
+6.80000e-11
+6.80000e-11
+1.40000e-10
+1.40000e-10
+0.00000
+0.00000
+0.00000
+-0.225600
+2.21340e-09
+0.00110000
+0.00110000
+2.86500e-11
+2.86500e-11
+3.00000e-10
+3.00000e-10
+0.00000
+0.00000
+0.480800
+589.600
+0.00000
+10.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.76600e-10
+1.76600e-10
+4.36200e-11
+4.36200e-11
+0.00000
+0.00000
+0.00000
+0.480800
+2.14500e-09
+0.00120000
+0.00120000
+1.92000e-11
+1.92000e-11
+3.50000e-10
+3.50000e-10
+0.00000
+0.00000
+0.501800
+525.800
+0.00000
+10.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.76600e-10
+1.76600e-10
+4.36200e-11
+4.36200e-11
+0.00000
+0.00000
+0.00000
+0.501800
+2.14500e-09
+0.00120000
+0.00120000
+1.92000e-11
+1.92000e-11
+3.50000e-10
+3.50000e-10
+0.00000
+-0.00000
+-0.504500
+112.300
+0.00000
+105.000
+0.00000
+0.00000
+0.00000
+2.55000e-09
+1.33690e-10
+1.33690e-10
+7.31680e-11
+7.31680e-11
+0.00000
+0.00000
+0.00000
+-0.504500
+2.19500e-09
+0.00120000
+0.00120000
+2.55630e-11
+2.55630e-11
+3.20000e-10
+3.20000e-10
+0.00000
+0.00000
+0.0760000
+1020.00
+0.00000
+47.4240
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.88750e-10
+1.88750e-10
+4.09100e-11
+4.09100e-11
+0.00000
+0.00000
+3.50000e-09
+0.0760000
+2.13300e-09
+0.00110000
+0.00110000
+1.78440e-11
+1.78440e-11
+3.00000e-10
+3.00000e-10
+0.00000
+-0.00000
+-0.167800
+296.000
+0.00000
+86.7990
+0.00000
+0.00000
+0.00000
+2.55000e-09
+5.74000e-11
+5.74000e-11
+1.54400e-10
+1.54400e-10
+0.00000
+0.00000
+0.00000
+-0.167800
+2.21550e-09
+0.00110000
+0.00110000
+2.86500e-11
+2.86500e-11
+2.80000e-10
+2.80000e-10
+0.00000
+0.00000
+0.343000
+718.000
+0.00000
+50.0000
+0.00000
+0.00000
+0.00000
+2.35000e-09
+1.64360e-10
+1.64360e-10
+6.08910e-11
+6.08910e-11
+0.00000
+0.00000
+0.00000
+0.343000
+2.16000e-09
+0.00110000
+0.00110000
+1.60540e-11
+1.60540e-11
+3.20000e-10
+3.20000e-10
+0.00000
+-0.00000
+-0.211220
+252.160
+0.00000
+278.100
+0.00000
+0.00000
+0.00000
+2.55000e-09
+6.80000e-11
+6.80000e-11
+1.40000e-10
+1.40000e-10
+0.00000
+0.00000
+0.00000
+-0.211220
+2.21340e-09
+0.00110000
+0.00110000
+2.86500e-11
+2.86500e-11
+3.00000e-10
+3.00000e-10
+0.00000
+0.00000
+0.327000
+500.000
+0.00000
+10.0000
+0.00000
+0.00000
+-1.00000e-08
+2.30000e-09
+1.39510e-10
+1.39510e-10
+3.63870e-11
+3.63870e-11
+0.00000
+0.00000
+0.00000
+0.327000
+2.10000e-09
+0.00120000
+0.00120000
+2.98560e-11
+2.98560e-11
+3.50000e-10
+3.50000e-10
+0.00000
+0.00000
+0.367000
+360.000
+0.00000
+10.0000
+0.00000
+0.00000
+-1.00000e-08
+2.30000e-09
+1.39510e-10
+1.39510e-10
+3.63870e-11
+3.63870e-11
+0.00000
+0.00000
+0.00000
+0.367000
+2.10000e-09
+0.00120000
+0.00120000
+2.98560e-11
+2.98560e-11
+3.50000e-10
+3.50000e-10
+0.00000
+-0.00000
+-0.469100
+186.600
+0.00000
+425.000
+0.00000
+0.00000
+-1.00000e-08
+2.50000e-09
+1.88900e-10
+1.88900e-10
+9.98890e-12
+9.98890e-12
+0.00000
+0.00000
+2.08474e-09
+-0.469100
+2.10500e-09
+0.00120000
+0.00120000
+2.94210e-11
+2.94210e-11
+3.20000e-10
+3.20000e-10
+0.00000
+0.00000
+0.0250000
+456.200
+0.00000
+112.000
+0.00000
+0.00000
+-1.00000e-08
+5.75000e-09
+3.00000e-10
+3.00000e-10
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.0250000
+5.51400e-09
+0.00110000
+0.00110000
+7.20000e-11
+7.20000e-11
+1.50000e-10
+1.50000e-10
+0.00000
+0.00000
+-0.0337050
+443.000
+0.00000
+105.000
+0.00000
+0.00000
+-1.00000e-08
+3.33000e-09
+3.59000e-10
+3.59000e-10
+0.00000
+0.00000
+0.00000
+0.00000
+6.02920e-09
+-0.0337050
+3.20000e-09
+0.00110000
+0.00110000
+4.42000e-11
+4.42000e-11
+7.68000e-11
+7.68000e-11
+-0.00600000
+0.00000
+-0.0670000
+330.000
+0.00000
+1.10000
+0.00000
+0.00000
+-1.00000e-08
+2.30000e-09
+3.64000e-10
+3.64000e-10
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+-0.0670000
+2.10000e-09
+0.00110000
+0.00110000
+4.54000e-11
+4.54000e-11
+1.51000e-10
+1.51000e-10
+0.00000
+0.00000
+5.95000e-08
+0.00000
+5.95000e-08
+0.00000
+9.80000e-09
+0.00000
+8.00000e-09
+0.00000
+8.00000e-09
+0.00000
+8.00000e-09
+0.00000
+8.00000e-09
+0.00000
+8.00000e-09
+0.00000
+8.00000e-09
+0.00000
+2.53000e-08
+0.00000
+2.53000e-08
+3.00000e-08
+2.65000e-08
+3.00000e-08
+2.65000e-08
+0.00000
+2.52000e-08
+0.00000
+2.52000e-08
+0.00000
+4.05000e-08
+0.00000
+4.05000e-08
+8.00000e-08
+5.94000e-08
+8.00000e-08
+5.94000e-08
+0.00000
+9.83000e-08
+0.00000
+9.83000e-08
+0.00000
+4.00000e-07
+0.000737000
+1.25000e-05
+8.50000e-08
+1.00000e-08
+1.36000e-07
+1.93000e-08
+1.37000e-07
+1.95000e-08
+1.37000e-07
+1.95000e-08
+1.37000e-07
+1.95000e-08
+1.37000e-07
+1.95000e-08
+1.37000e-07
+1.95000e-08
+1.37000e-07
+1.95000e-08
+2.55000e-07
+8.84000e-08
+2.55000e-07
+8.84000e-08
+3.65000e-07
+4.16000e-08
+3.65000e-07
+4.16000e-08
+2.50000e-07
+8.97000e-08
+2.50000e-07
+8.97000e-08
+4.30000e-07
+9.32000e-08
+4.30000e-07
+9.32000e-08
+8.50000e-07
+1.49500e-07
+8.50000e-07
+1.49500e-07
+1.20000e-06
+2.03400e-07
+1.20000e-06
+2.03400e-07
+2.22500e-06
+2.10500e-07
+44.0000
+46.0000
+79.0000
+81.0000
+89.0000
+91.0000
+225.000
+226.000
+111.000
+113.000
+161.000
+163.000
+-1.20000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-2.80000e-08
+-2.80000e-08
+-2.00000e-08
+-2.00000e-08
+-2.80000e-08
+-2.80000e-08
+-4.00000e-08
+-4.00000e-08
+-4.00000e-08
+-4.00000e-08
+-5.00000e-08
+-5.00000e-08
+0.00000
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+5.60000e-06
+5.60000e-06
+8.00000e-06
+8.00000e-06
+1.60000e-05
+1.60000e-05
+0.00100000
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+1.40000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+2.80000e-06
+5.60000e-06
+5.60000e-06
+8.00000e-06
+8.00000e-06
+1.60000e-05
+1.60000e-05
+0.00100000
+-2.10000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.00000e-08
+-1.50000e-08
+-1.50000e-08
+-2.50000e-08
+-2.50000e-08
+-1.50000e-08
+-1.50000e-08
+-4.00000e-08
+-4.00000e-08
+-4.00000e-08
+-4.00000e-08
+-5.00000e-08
+-5.00000e-08
+-1.25000e-07
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+1.80000e-08
+3.00000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.90000e-08
+3.00000e-08
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+0.120000
+1.00000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.300000
+0.00000
+86.0000
+86.0000
+86.0000
+86.0000
+86.0000
+86.0000
+86.0000
+86.0000
+86.0000
+88.0000
+88.0000
+86.0000
+86.0000
+88.0000
+88.0000
+88.0000
+88.0000
+88.5000
+88.5000
+100.000
+700.000
+210.000
+1600.00
+200.000
+11.0000
+5.00000
+0.100000
+0.0180000
+2.80000e-07
+2.80000e-08
+2.08700e-07
+5.14000e-08
+1.22500e-07
+1.00000e-08
+4.87500e-07
+5.85000e-08
+1.45000e-07
+3.23000e-08
+1.45000e-07
+3.23000e-08
+1.45000e-07
+3.23000e-08
+1.45000e-07
+3.23000e-08
+1.45000e-07
+3.23000e-08
+1.45000e-07
+3.23000e-08
+2.50000e-07
+7.91000e-08
+2.50000e-07
+7.91000e-08
+2.15000e-07
+6.17000e-08
+2.15000e-07
+6.17000e-08
+2.45000e-07
+7.88000e-08
+2.45000e-07
+7.88000e-08
+4.70000e-07
+1.09600e-07
+4.70000e-07
+1.09600e-07
+5.50000e-07
+2.00800e-07
+5.50000e-07
+2.00800e-07
+5.50000e-07
+2.00800e-07
+8.25000e-07
+2.64600e-07
+1.60000e-06
+2.84600e-07
+1.45000e-06
+1.31900e-07
+0.00200000
+0.00150000
+0.00200000
+0.00320000
+0.00240000
+0.00249000
+0.00295000
+0.00295000
+0.00312000
+0.00312000
+0.00295000
+0.00295000
+0.00330000
+0.00330000
+0.00350000
+0.00350000
+0.00359000
+0.00359000
+0.00385000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+3.00000e-08
+3.00000e-08
+0.00000
+0.00000
+0.00000
+0.00000
+8.00000e-08
+8.00000e-08
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.000737000
+8.50000e-08
+1.36000e-07
+1.37000e-07
+1.37000e-07
+1.37000e-07
+1.37000e-07
+1.37000e-07
+1.37000e-07
+2.55000e-07
+2.55000e-07
+3.65000e-07
+3.65000e-07
+2.50000e-07
+2.50000e-07
+4.30000e-07
+4.30000e-07
+8.50000e-07
+8.50000e-07
+1.20000e-06
+1.20000e-06
+2.22500e-06
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+700.000
+1600.00
+11.0000
+0.00000
+0.00000
+0.100000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+2.80000e-07
+2.08700e-07
+1.22500e-07
+4.87500e-07
+1.45000e-07
+1.45000e-07
+1.45000e-07
+1.45000e-07
+1.45000e-07
+1.45000e-07
+2.50000e-07
+2.50000e-07
+2.15000e-07
+2.15000e-07
+2.45000e-07
+2.45000e-07
+4.70000e-07
+4.70000e-07
+5.50000e-07
+5.50000e-07
+5.50000e-07
+8.25000e-07
+1.60000e-06
+1.45000e-06
+1.24300
+3.00000
+1.07500
+0.00181000
+1.30000e-05
+0.596500
+-0.0103000
+5.11000e-05
+1.34900
+-0.0176000
+8.82000e-05
+0.00199000
+1.22000e-05
+0.181300
+0.000530000
+-4.92000e-06
+0.236800
+-0.00689000
+-1.14000e-05
+8.00000
+9.21200e-05
+4.60600e-05
+4.53300e-12
+2.26650e-12
+0.000300000
+6.00000e-05
+5.20000e-10
+1.04000e-10
+0.00000
+0.00000
+0.00000
+0.00000
+9.21200e-05
+4.53300e-12
+0.000300000
+5.20000e-10
+1.21300
+3.00000
+1.02000
+0.00215000
+0.00000
+0.506800
+0.00210000
+0.00000
+0.715600
+0.00150000
+0.00000
+0.00562000
+0.00000
+0.305800
+0.00000
+0.00000
+0.101100
+-0.00236000
+-1.88000e-06
+8.00000
+3.41300e-06
+1.70650e-06
+1.20500e-10
+6.02500e-11
+6.20000e-05
+1.24000e-05
+6.20000e-12
+1.24000e-12
+0.00000
+0.00000
+0.00000
+0.00000
+3.41300e-06
+1.20500e-10
+6.20000e-05
+6.20000e-12
+1.24900
+1.45800
+1.02600
+0.00103000
+2.43000e-06
+0.502200
+0.00000
+0.00000
+0.947800
+-0.00192000
+0.00000
+0.000577000
+1.17000e-06
+0.184700
+-0.00111000
+6.73000e-06
+0.541000
+-0.00386000
+7.32000e-06
+8.00000
+1.82000e-06
+9.10000e-07
+1.70900e-12
+8.54500e-13
+0.000660000
+0.000132000
+3.90000e-10
+7.80000e-11
+0.00000
+0.00000
+0.00000
+0.00000
+1.82000e-06
+1.70900e-12
+0.000660000
+3.90000e-10
+1.18800
+3.05700
+1.00810
+8.00000
+1.37700e-07
+6.88500e-08
+2.36000e-14
+1.18000e-14
+1.37700e-07
+2.36000e-14
+1.37700e-07
+2.36000e-14
+1.12500
+4.87100
+1.01100
+8.00000
+1.63500e-07
+8.17500e-08
+2.54800e-14
+1.27400e-14
+1.63500e-07
+2.54800e-14
+1.63500e-07
+2.54800e-14
+3.03100e-08
+9.09300e-09
+1.43900e-06
+4.31700e-07
+0.000230000
+6.90000e-05
+1.07166e-13
+3.21498e-14
+1.20000e-11
+6.24000e-12
+3.03100e-08
+9.09300e-09
+1.43900e-06
+4.31700e-07
+0.000230000
+6.90000e-05
+5.80000e-14
+1.74000e-14
+1.20000e-11
+6.24000e-12
+4.50900e-08
+1.35270e-08
+1.25400e-05
+3.76200e-06
+0.000180000
+5.40000e-05
+0.00000
+0.00000
+1.13600e-11
+9.38000e-12
+2.01600e-11
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+3.03100e-08
+1.43900e-06
+0.000230000
+1.07166e-13
+3.03100e-08
+1.43900e-06
+0.000230000
+5.80000e-14
+4.50900e-08
+1.25400e-05
+0.000180000
+0.00000
+1.20000e-11
+1.13600e-11
+1.20000e-11
+2.00000e-07
+2.00000e-07
+0.00120000
+6.40000e-07
+0.000930000
+1.20000e-06
+0.000730000
+-3.50000e-08
+0.00250000
+-0.000160000
+0.00170000
+-1.00000e-05
+0.00170000
+-1.10000e-05
+6.20000
+0.00250000
+-7.40000e-06
+0.440000
+0.000480000
+2.00000e-06
+1.51000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+1.40000e-06
+0.000951000
+89.0000
+13.3500
+1.50000e-05
+1.50000e-05
+1.40000e-08
+7.00000e-08
+4.30000e-07
+0.00000
+0.00000
+0.00000
+0.00000
+89.0000
+1.50000e-05
+1.40000e-08
+4.30000e-07
+2.06000e-06
+2.00000e-07
+0.00130000
+6.20000e-07
+0.00120000
+1.10000e-06
+0.000350000
+3.70000e-06
+0.000550000
+0.00140000
+-0.0170000
+-0.000230000
+0.00830000
+4.90000e-05
+8.20000
+0.00000
+0.00000
+0.390000
+0.00000
+0.00000
+1.51000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+1.40000e-06
+0.000951000
+95.0000
+14.2500
+3.10000e-05
+3.10000e-05
+4.70000e-08
+1.00000e-07
+1.26000e-06
+0.00000
+0.00000
+0.00000
+0.00000
+95.0000
+3.10000e-05
+4.70000e-08
+1.26000e-06
+2.00000e-07
+2.00000e-07
+0.00160000
+8.90000e-07
+0.000210000
+-6.40000e-07
+0.000730000
+7.00000e-08
+-0.00280000
+-0.000180000
+0.00140000
+-7.30000e-06
+0.00130000
+-1.20000e-05
+7.70000
+0.00130000
+0.00000
+0.450000
+0.00110000
+-4.80000e-06
+1.40000e-06
+0.000951000
+196.000
+39.2000
+3.20000e-05
+3.20000e-05
+2.70000e-08
+7.00000e-08
+4.30000e-07
+0.00000
+0.00000
+0.00000
+0.00000
+196.000
+3.20000e-05
+2.70000e-08
+4.30000e-07
+2.00000e-09
+2.00000e-09
+2.00000e-09
+2.00000e-09
+-5.00000e-09
+0.0161800
+0.00243000
+0.000300000
+5.00000e-05
+0.0400000
+0.00900000
+0.172000
+0.0161800
+0.000300000
+0.0158350
+0.00237000
+0.000294700
+4.90000e-05
+0.0565600
+0.0105900
+0.0690000
+0.0158350
+0.000294700
+0.0110000
+0.00169000
+0.000270000
+4.70000e-05
+0.0400000
+0.0130000
+0.132000
+0.0110000
+0.000270000
+0.0108000
+0.00100800
+0.000202000
+3.03000e-05
+0.0200000
+0.0180000
+-0.150000
+0.0108000
+0.000202000
+0.00614000
+0.000980000
+0.000430000
+7.60000e-05
+0.0400000
+0.00000
+0.0550000
+0.00614000
+0.000430000
+0.00618000
+0.000890000
+0.000165000
+2.50000e-05
+0.0120000
+0.0280000
+-0.120000
+0.00618000
+0.000165000
+1.50000e-07
+4.00000e-07
+-0.000100000
+5.10000e-07
+-0.000330000
+4.20000e-07
+-0.000240000
+1.30000e-07
+-11.2000
+-0.00590000
+0.00000
+0.150000
+-0.0180000
+-8.00000e-05
+4.10000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+4.03000e-06
+5.32000e-06
+0.00237000
+0.00412000
+750.000
+150.000
+6.00000e-05
+6.00000e-05
+-6.80000e-08
+7.00000e-08
+4.00000e-07
+0.00000
+0.00000
+0.00000
+0.00000
+750.000
+6.00000e-05
+-6.80000e-08
+3.97500e-07
+0.000129651
+3.48471e-11
+2.00000e-07
+4.00000e-07
+0.00120000
+5.40000e-07
+0.000930000
+1.00000e-06
+0.000350000
+2.10000e-07
+0.00190000
+-0.000110000
+0.00270000
+-8.80000e-06
+0.00330000
+-8.90000e-06
+5.90000
+0.00210000
+0.00000
+0.440000
+0.000590000
+1.90000e-07
+1.51000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+1.40000e-06
+0.000951000
+103.000
+15.4500
+1.60000e-05
+1.60000e-05
+1.40000e-08
+7.00000e-08
+4.30000e-07
+0.00000
+0.00000
+0.00000
+0.00000
+103.000
+1.60000e-05
+1.40000e-08
+4.30000e-07
+3.00000e-06
+1.20000e-07
+1.00000e-05
+8.00000e-07
+9.00000e-07
+2.24000e-06
+0.00110000
+1.10000e-05
+0.00180000
+9.10000e-06
+-0.000220000
+2.90000e-06
+0.0200000
+-0.00130000
+0.0560000
+0.00000
+-0.00240000
+8.30000e-06
+-0.00250000
+8.50000e-06
+0.000430000
+6.70000e-06
+0.00000
+0.00000
+240.000
+0.00000
+0.00000
+-0.580000
+0.00000
+0.00000
+28.7000
+1.29000
+1.46000
+0.00000
+1.43000
+0.00000
+0.00000
+2.64000e-13
+2.96000e-10
+0.000245000
+0.000245000
+-2.60000e-07
+2.00000e-07
+1.70000e-06
+0.00000
+0.00000
+0.000245000
+-2.60000e-07
+1.70000e-06
+1.00520
+0.998000
+1.03000
+2.00000
+2.00000
+1.03500
+6.89021e-08
+1.37804e-08
+1.17082e-14
+2.34164e-15
+1.93000
+1.92890
+0.644300
+0.475400
+5.20000e+08
+6.40000e-11
+1.92000e-11
+0.850922
+0.255277
+4.10424e-07
+1.23127e-07
+1.21486e-08
+3.64458e-09
+5.38890
+0.573900
+0.250900
+0.458800
+0.000416000
+8.32000e-05
+0.000744000
+0.000148800
+95.2600
+8.58420e-05
+0.00000
+3.78450
+1.25240
+0.565800
+5.18000
+450.000
+100.000
+5.91000e-11
+3.00000
+1.15000
+0.00380000
+-0.000430000
+0.00200000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+1.00520
+6.89021e-08
+1.17082e-14
+6.40000e-11
+0.000744000
+0.000416000
+0.850922
+4.10424e-07
+1.21486e-08
+450.000
+1.00000
+1.00000
+2.00000
+2.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+0.00000
+1.00000e+06
+0.00000
+1.00000
+1.00000
+0.0400000
+0.100000
+0.0900000
+0.0100000
+0.00300000
+0.00500000
+5.00000
+11.0000
+21.0000
+0.00000
+0.00000
+0.00330000
+0.0600000
+0.0640000
+0.0650000
+0.0790000
+0.0800000
+0.0890000
+0.0900000
+0.120000
+0.140000
+0.200000
+0.300000
+0.400000
+0.600000
+1.00000
+1.40000
+2.80000
+5.00000
+12.2500
+0.228962
+0.226289
+0.225627
+0.216783
+0.216186
+0.211039
+0.210492
+0.196290
+0.188850
+0.173088
+0.158750
+0.151181
+0.143810
+0.138397
+0.136219
+0.133575
+0.132436
+0.131587
+0.300181
+0.293284
+0.291659
+0.272256
+0.271070
+0.261323
+0.260333
+0.236821
+0.225740
+0.203964
+0.185476
+0.176079
+0.167157
+0.160759
+0.158216
+0.155144
+0.153823
+0.152841
+0.435710
+0.416632
+0.412332
+0.365883
+0.363303
+0.343064
+0.341098
+0.298448
+0.280540
+0.248248
+0.223021
+0.210795
+0.199553
+0.191742
+0.188687
+0.185019
+0.183449
+0.182282
+0.0600000
+0.0640000
+0.0650000
+0.0790000
+0.0800000
+0.0890000
+0.0900000
+0.120000
+0.140000
+0.200000
+0.300000
+0.400000
+0.600000
+1.00000
+1.40000
+2.80000
+5.00000
+12.2500
+0.00234365
+0.00238961
+0.00240052
+0.00253324
+0.00254148
+0.00260964
+0.00261661
+0.00278341
+0.00286241
+0.00301690
+0.00314728
+0.00321455
+0.00328157
+0.00333395
+0.00335603
+0.00338345
+0.00339545
+0.00340447
+0.0600000
+0.0700000
+0.136000
+0.0193000
+0.0100000
+0.00980000
+0.131000
+0.300000
+0.435000
+0.00000
+0.00000
+0.00234365
+0.0700000
+0.0790000
+0.0800000
+0.0890000
+0.0900000
+0.120000
+0.140000
+0.200000
+0.300000
+0.400000
+0.600000
+1.00000
+1.40000
+2.80000
+5.00000
+12.2500
+0.199425
+0.194862
+0.194373
+0.190142
+0.189691
+0.177903
+0.171662
+0.158241
+0.145710
+0.138920
+0.132171
+0.127164
+0.125158
+0.122730
+0.121685
+0.120906
+0.245950
+0.237341
+0.236465
+0.229203
+0.228458
+0.210393
+0.201620
+0.183867
+0.168171
+0.159919
+0.151885
+0.146049
+0.143737
+0.140949
+0.139750
+0.138859
+0.320787
+0.303502
+0.301828
+0.288462
+0.287140
+0.257400
+0.244246
+0.219397
+0.198820
+0.188398
+0.178512
+0.171521
+0.168792
+0.165518
+0.164115
+0.163073
+0.0700000
+0.0790000
+0.0800000
+0.0890000
+0.0900000
+0.120000
+0.140000
+0.200000
+0.300000
+0.400000
+0.600000
+1.00000
+1.40000
+2.80000
+5.00000
+12.2500
+0.00249101
+0.00256916
+0.00257710
+0.00264292
+0.00264965
+0.00281166
+0.00288887
+0.00304090
+0.00317052
+0.00323803
+0.00330577
+0.00335895
+0.00338137
+0.00340919
+0.00342138
+0.00343054
+0.0700000
+0.0700000
+0.137000
+0.0195000
+0.0100000
+0.00800000
+0.120000
+0.246000
+0.320000
+0.00000
+0.00000
+0.00250000
+0.0700000
+0.0700000
+0.137000
+0.0195000
+0.0100000
+0.00800000
+0.120000
+0.246000
+0.320000
+0.00000
+0.00000
+0.00250000
+0.0700000
+0.0700000
+0.137000
+0.0195000
+0.0100000
+0.00800000
+0.120000
+0.246000
+0.320000
+0.00000
+0.00000
+0.00250000
+0.0700000
+0.0700000
+0.137000
+0.0195000
+0.0100000
+0.00800000
+0.120000
+0.246000
+0.320000
+0.00000
+0.00000
+0.00250000
+0.400000
+0.470000
+0.479000
+0.480000
+0.800000
+1.00000
+5.00000
+8.00000
+12.2500
+0.0212187
+0.0209960
+0.0209701
+0.0209672
+0.0203266
+0.0200962
+0.0192471
+0.0191598
+0.0191089
+0.0266532
+0.0259697
+0.0258980
+0.0258903
+0.0244708
+0.0240705
+0.0228615
+0.0227535
+0.0226914
+0.0358300
+0.0340312
+0.0338537
+0.0338345
+0.0307375
+0.0300043
+0.0281473
+0.0280063
+0.0279270
+0.400000
+0.470000
+0.479000
+0.480000
+0.800000
+1.00000
+5.00000
+8.00000
+12.2500
+0.00345901
+0.00349446
+0.00349824
+0.00349866
+0.00357649
+0.00359946
+0.00367187
+0.00367857
+0.00368244
+0.400000
+0.400000
+0.850000
+0.149500
+0.0300000
+0.0594000
+0.0191000
+0.0266000
+0.0358000
+0.00000
+0.00000
+0.00345000
+0.400000
+0.400000
+0.850000
+0.149500
+0.0300000
+0.0594000
+0.0191000
+0.0266000
+0.0358000
+0.00000
+0.00000
+0.00345000
+4.00000
+2.00000
+2.22500
+0.210500
+0.00000
+0.00000
+0.0300000
+0.00000
+0.00000
+0.00000
+0.00385000
+20.0000
+40.0000
+110.000
+10.0000
+30.0000
+100.000
+1.50000
+3.50000
+3.50000
+1.50000
+3.50000
+3.50000
+1.50000
+3.50000
+3.50000
+1.50000
+3.50000
+3.50000
+0.150000
+0.300000
+0.900000
+0.150000
+0.300000
+0.900000
+0.0100000
+0.0200000
+0.100000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+1.00000
+0.0600000
+0.0640000
+0.0650000
+0.0790000
+0.0800000
+0.0890000
+0.0900000
+0.120000
+0.140000
+0.200000
+0.300000
+0.400000
+0.600000
+1.00000
+1.40000
+0.0700000
+0.105000
+0.120000
+0.00250000
+0.00891000
+0.0132500
+0.000500000
+0.00691000
+0.0112500
+0.00000
+0.00641000
+0.0107500
+-0.00102000
+-0.000590000
+0.00375000
+-0.00109000
+-0.00109000
+0.00325000
+-0.00169000
+-0.00169000
+-0.00125000
+-0.00175000
+-0.00345000
+-0.00438000
+-0.00646000
+-0.00836000
+-0.00924000
+-0.00984000
+-0.00999000
+-0.0100000
+0.0700000
+0.0790000
+0.0800000
+0.0890000
+0.0900000
+0.120000
+0.140000
+0.200000
+0.300000
+0.400000
+0.600000
+1.00000
+1.40000
+0.0700000
+0.105000
+0.120000
+0.00000
+0.00428000
+0.00860000
+-0.000650000
+-0.000220000
+0.00410000
+-0.000720000
+-0.000720000
+0.00360000
+-0.00133000
+-0.00133000
+-0.000900000
+-0.00140000
+-0.00315000
+-0.00413000
+-0.00635000
+-0.00847000
+-0.00951000
+-0.0102600
+-0.0104900
+-0.0105000
+0.400000
+0.470000
+0.479000
+0.480000
+0.400000
+0.0400000
+0.00500000
+0.000500000
+0.00000
+0.00300000
+0.0900000
+11.0000
+0.0100000
+0.136000
+0.300000
+0.0100000
+0.137000
+0.246000
+0.0100000
+0.137000
+0.246000
+0.0100000
+0.137000
+0.246000
+0.0100000
+0.137000
+0.246000
+0.0300000
+0.850000
+0.0266000
+0.0300000
+0.850000
+0.0266000
+0.00000
+2.22500
+0.0300000
+0.0134831
+40.0000
+30.0000
+3.50000
+3.50000
+3.50000
+3.50000
+0.300000
+0.300000
+0.0200000
+0.00000
+1.00000
+2.00000
+3.00000
+4.00000
+5.00000
+6.00000
+7.00000
+8.00000
+9.00000
+10.0000
+11.0000
+)
+END

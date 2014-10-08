@@ -1,0 +1,152 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 7.0.1.125.isr11 -- 19 Oct 2008
+Copyright (C) 1989-2007 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 7,085,700; 7,143,021.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+Simulating `input.scs' on class4.ee.Virginia.EDU at 2:02:55 AM, Fri May 24, 2013 (process id: 4720).
+Command line:
+    /app/cadence/MMSIM70/tools.lnx86/spectre/bin/32bit/spectre -env  \
+        artist5.1.0 +escchars +log TranResults/psf/spectre.out  \
+        +inter=mpsc +mpssession=spectre0_4652_1 -format sst2 -raw  \
+        TranResults/psf +lqtimeout 900 -maxw 5 -maxn 5 input.scs
+spectre pid = 4720
+
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libinfineon_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libphilips_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libsparam_sh.so ...
+Loading /app/cadence/MMSIM70/tools.lnx86/cmi/lib/5.0/libstmodels_sh.so ...
+Using new Spectre Parser.
+Auto-loading AHDL component.
+Finished loading AHDL component in 0 s (elapsed).
+Installed AHDL simulation interface.
+
+Warning from spectre in `P_TRANSISTOR':`B0.I0.P0', in `inverter':`B0.I0', in `buffer':`B0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: B0.I0.P0.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`B0.I0.N0', in `inverter':`B0.I0', in `buffer':`B0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: B0.I0.N0.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`B0.I1.P0', in `inverter':`B0.I1', in `buffer':`B0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: B0.I1.P0.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+Warning from spectre in `N_TRANSISTOR':`B0.I1.N0', in `inverter':`B0.I1', in `buffer':`B0', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subN.scs" 5: B0.I1.N0.NX: `p_vta' is not a valid parameter for an instance of `nsvtlp'.  Ignored.
+Warning from spectre in `P_TRANSISTOR':`B1.I0.P0', in `inverter':`B1.I0', in `buffer':`B1', during hierarchy flattening.
+    WARNING (SFE-30): "../../../../template/ibm65/subP.scs" 5: B1.I0.P0.PX: `p_vta' is not a valid parameter for an instance of `psvtlp'.  Ignored.
+        Further occurrences of this warning will be suppressed.
+Warning from spectre during initial setup.
+    WARNING (CMI-2441): Bitcell8.N6.NX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'Bitcell8.N6.NX.nsvtlp'.
+    WARNING (CMI-2441): Bitcell8.P2.PX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'Bitcell8.P2.PX.psvtlp'.
+    WARNING (CMI-2441): Bitcell8.P4.PX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'Bitcell8.P4.PX.psvtlp'.
+    WARNING (CMI-2441): Bitcell8.N5.NX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'Bitcell8.N5.NX.nsvtlp'.
+    WARNING (CMI-2441): Bitcell7.N6.NX.m1: Instance length or width does not fit the given lmax-lmin or wmax-wmin range for the model 'Bitcell7.N6.NX.nsvtlp'.
+        Further occurrences of this warning will be suppressed.
+    WARNING (CMI-2426): Bitcell0.N5.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): Bitcell0.N5.NX.m1: `Eta0' = -684.074e-06 is negative.
+    WARNING (CMI-2546): Bitcell0.N5.NX.m1: `Cgsl' = -8.08889 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2546): Bitcell0.N5.NX.m1: `Cgdl' = -8.08889 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2426): Bitcell0.N3.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2546): Bitcell0.P4.PX.m1: `Cgsl' = -19.9751 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2546): Bitcell0.P4.PX.m1: `Cgdl' = -19.9751 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2426): DUT2.Nbuffer0.I3.N0.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): DUT2.Nbuffer0.I2.N0.NX.m1: `Dvt0' = -30 mV is negative.
+        Further occurrences of this warning will be suppressed.
+
+
+Circuit inventory:
+              nodes 223
+              bsim4 396   
+          capacitor 18    
+           resistor 15    
+            vsource 19    
+
+
+Warning from spectre.
+    WARNING (SPECTRE-6006): 431 warnings suppressed.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_4652_1, ).
+
+Warning from spectre during alter `settnom'.
+    WARNING (CMI-2426): Bitcell0.N5.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): Bitcell0.N5.NX.m1: `Eta0' = -684.074e-06 is negative.
+    WARNING (CMI-2546): Bitcell0.N5.NX.m1: `Cgsl' = -8.08889 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2546): Bitcell0.N5.NX.m1: `Cgdl' = -8.08889 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2426): Bitcell0.N3.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2546): Bitcell0.P4.PX.m1: `Cgsl' = -19.9751 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2546): Bitcell0.P4.PX.m1: `Cgdl' = -19.9751 pF/m must be non-negative, will be set to 0.
+    WARNING (CMI-2426): DUT2.Nbuffer0.I3.N0.NX.m1: `Dvt0' = -30 mV is negative.
+    WARNING (CMI-2426): DUT2.Nbuffer0.I2.N0.NX.m1: `Dvt0' = -30 mV is negative.
+        Further occurrences of this warning will be suppressed.
+
+
+settnom: `tnom' set to 27 C.
+
+Warning from spectre.
+    WARNING (SPECTRE-6006): 9 warnings suppressed.
+
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 32 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 32 ns
+    step = 10 ps
+    maxstep = 320 ps
+    ic = all
+    skipdc = no
+    reltol = 100e-06
+    abstol(I) = 1 pA
+    abstol(V) = 1 uV
+    temp = 25 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = gear2only
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 810 ps      (2.53 %), step = 10 ps       (31.3 m%)
+    tran: time = 2.4 ns       (7.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 4 ns        (12.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 5.61 ns     (17.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 7.21 ns     (22.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 8.81 ns     (27.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 10.4 ns     (32.5 %), step = 1.182 ps    (3.69 m%)
+    tran: time = 12.01 ns    (37.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 13.61 ns    (42.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 15.21 ns    (47.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 16.8 ns     (52.5 %), step = 10 ps       (31.2 m%)
+    tran: time = 18.4 ns     (57.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 20 ns       (62.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 21.6 ns     (67.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 23.2 ns     (72.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 24.8 ns     (77.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 26.4 ns     (82.5 %), step = 721.9 fs    (2.26 m%)
+    tran: time = 28 ns       (87.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 29.6 ns     (92.5 %), step = 10 ps       (31.3 m%)
+    tran: time = 31.2 ns     (97.5 %), step = 10 ps       (31.2 m%)
+Number of accepted tran steps =             4141
+Intrinsic tran analysis time =              25.46 s.
+Total time required for tran analysis `tran' was 25.49 s.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+Spectre received SIGTERM.
+
+Killed by user.
+
+Aggregate audit (2:03:28 AM, Fri May 24, 2013):
+Time used: CPU = 26 s, elapsed = 33 s, util. = 78.7%.
+Time spent in licensing: elapsed = 10 ms.
+Virtual memory used = 15.4 Mbytes.
+spectre completes with 0 errors, 470 warnings, and 0 notices.

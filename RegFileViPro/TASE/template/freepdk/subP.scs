@@ -1,0 +1,7 @@
+subckt P_TRANSISTOR D G S B
+
+parameters width=90n length=50n
+
+PX (D G S B) PMOS_VTL w=width l=length 
+
+ends P_TRANSISTOR

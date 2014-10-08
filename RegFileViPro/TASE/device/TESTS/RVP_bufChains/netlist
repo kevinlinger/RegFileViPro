@@ -1,0 +1,253 @@
+//Auto generated netlist for buffer chain characterization
+
+//============================================
+// Define VDD and VSS
+//============================================
+VVDD (VDD 0) vsource dc=pvdd
+VVSS (VSS 0) vsource dc=0
+
+//Input voltages
+VCMUX0 (CMUX_IN0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VCMUX1 (CMUX_IN1 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VCMUX2 (CMUX_IN2 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VCMUX3 (CMUX_IN3 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+
+VPCH0 (PCH_IN0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VPCH1 (PCH_IN1 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VPCH2 (PCH_IN2 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VPCH3 (PCH_IN3 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+
+VSAPCH0 (SAPCH_IN0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VSAPCH1 (SAPCH_IN1 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VSAPCH2 (SAPCH_IN2 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VSAPCH3 (SAPCH_IN3 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+
+VSAE0 (SAE_IN0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VSAE1 (SAE_IN1 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VSAE2 (SAE_IN2 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VSAE3 (SAE_IN3 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+
+VWEN0 (WEN_IN0 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VWEN1 (WEN_IN1 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VWEN2 (WEN_IN2 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+VWEN3 (WEN_IN3 0) vsource type=pulse val0=0 val1=pvdd rise=prise fall=pfall width=pwidth
+
+
+//Inverter subcircuit
+subckt INV OUT IN VDD VSS
+parameters i
+MP (OUT IN VDD VDD) P_TRANSISTOR width=i*wdef length=ldef
+MN (OUT IN VSS VSS) N_TRANSISTOR width=i*wdef length=ldef
+ends INV
+
+//CMUX inverter chain subckt for col-mux of 1
+subckt INVCHAIN_CMUX0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.28
+I3 (OUT X3 VDD VSS) INV i=18.3184
+ends INVCHAIN_CMUX0
+
+//CMUX inverter chain subckt for col-mux of 2
+subckt INVCHAIN_CMUX1 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.52
+I3 (OUT X3 VDD VSS) INV i=20.4304
+ends INVCHAIN_CMUX1
+
+//CMUX inverter chain subckt for col-mux of 4
+subckt INVCHAIN_CMUX2 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.95
+I3 (OUT X3 VDD VSS) INV i=24.5025
+ends INVCHAIN_CMUX2
+
+//CMUX inverter chain subckt for col-mux of 8
+subckt INVCHAIN_CMUX3 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=5.63
+I3 (OUT X3 VDD VSS) INV i=31.6969
+ends INVCHAIN_CMUX3
+
+
+//PCH inverter chain subckt for col-mux of 1
+subckt INVCHAIN_PCH0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.8
+I3 (OUT X3 VDD VSS) INV i=23.04
+ends INVCHAIN_PCH0
+
+//PCH inverter chain subckt for col-mux of 2
+subckt INVCHAIN_PCH1 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=6.04
+I3 (OUT X3 VDD VSS) INV i=36.4816
+ends INVCHAIN_PCH1
+
+//PCH inverter chain subckt for col-mux of 4
+subckt INVCHAIN_PCH2 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=4.58
+I2 (X3 X2 VDD VSS) INV i=20.9764
+I3 (OUT X3 VDD VSS) INV i=96.071912
+ends INVCHAIN_PCH2
+
+//PCH inverter chain subckt for col-mux of 8
+subckt INVCHAIN_PCH3 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=5.45
+I2 (X3 X2 VDD VSS) INV i=29.7025
+I3 (OUT X3 VDD VSS) INV i=161.878625
+ends INVCHAIN_PCH3
+
+
+//SAPCH inverter chain subckt for col-mux of 1
+subckt INVCHAIN_SAPCH0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.07
+I3 (OUT X3 VDD VSS) INV i=16.5649
+ends INVCHAIN_SAPCH0
+
+//SAPCH inverter chain subckt for col-mux of 2
+subckt INVCHAIN_SAPCH1 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.34
+I3 (OUT X3 VDD VSS) INV i=18.8356
+ends INVCHAIN_SAPCH1
+
+//SAPCH inverter chain subckt for col-mux of 4
+subckt INVCHAIN_SAPCH2 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.8
+I3 (OUT X3 VDD VSS) INV i=23.04
+ends INVCHAIN_SAPCH2
+
+//SAPCH inverter chain subckt for col-mux of 8
+subckt INVCHAIN_SAPCH3 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=5.51
+I3 (OUT X3 VDD VSS) INV i=30.3601
+ends INVCHAIN_SAPCH3
+
+
+//SAE inverter chain subckt for col-mux of 1
+subckt INVCHAIN_SAE0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (OUT X1 VDD VSS) INV i=7.18
+ends INVCHAIN_SAE0
+
+//SAE inverter chain subckt for col-mux of 2
+subckt INVCHAIN_SAE1 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.04
+I3 (OUT X3 VDD VSS) INV i=16.3216
+ends INVCHAIN_SAE1
+
+//SAE inverter chain subckt for col-mux of 4
+subckt INVCHAIN_SAE2 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.55
+I3 (OUT X3 VDD VSS) INV i=20.7025
+ends INVCHAIN_SAE2
+
+//SAE inverter chain subckt for col-mux of 8
+subckt INVCHAIN_SAE3 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=5.33
+I3 (OUT X3 VDD VSS) INV i=28.4089
+ends INVCHAIN_SAE3
+
+
+//WEN inverter chain subckt for col-mux of 1
+subckt INVCHAIN_WEN0 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (OUT X1 VDD VSS) INV i=5.97
+ends INVCHAIN_WEN0
+
+//WEN inverter chain subckt for col-mux of 2
+subckt INVCHAIN_WEN1 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (OUT X1 VDD VSS) INV i=7.06
+ends INVCHAIN_WEN1
+
+//WEN inverter chain subckt for col-mux of 4
+subckt INVCHAIN_WEN2 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=4.28
+I3 (OUT X3 VDD VSS) INV i=18.3184
+ends INVCHAIN_WEN2
+
+//WEN inverter chain subckt for col-mux of 8
+subckt INVCHAIN_WEN3 OUT IN VDD VSS
+I0 (X1 IN VDD VSS) INV i=1
+I1 (X2 X1 VDD VSS) INV i=1
+I2 (X3 X2 VDD VSS) INV i=5.14
+I3 (OUT X3 VDD VSS) INV i=26.4196
+ends INVCHAIN_WEN3
+
+
+ICMUX0 (CMUX_OUT0 CMUX_IN0 VDD VSS) INVCHAIN_CMUX0
+ICMUX1 (CMUX_OUT1 CMUX_IN1 VDD VSS) INVCHAIN_CMUX1
+ICMUX2 (CMUX_OUT2 CMUX_IN2 VDD VSS) INVCHAIN_CMUX2
+ICMUX3 (CMUX_OUT3 CMUX_IN3 VDD VSS) INVCHAIN_CMUX3
+
+IPCH0 (PCH_OUT0 PCH_IN0 VDD VSS) INVCHAIN_PCH0
+IPCH1 (PCH_OUT1 PCH_IN1 VDD VSS) INVCHAIN_PCH1
+IPCH2 (PCH_OUT2 PCH_IN2 VDD VSS) INVCHAIN_PCH2
+IPCH3 (PCH_OUT3 PCH_IN3 VDD VSS) INVCHAIN_PCH3
+
+ISAPCH0 (SAPCH_OUT0 SAPCH_IN0 VDD VSS) INVCHAIN_SAPCH0
+ISAPCH1 (SAPCH_OUT1 SAPCH_IN1 VDD VSS) INVCHAIN_SAPCH1
+ISAPCH2 (SAPCH_OUT2 SAPCH_IN2 VDD VSS) INVCHAIN_SAPCH2
+ISAPCH3 (SAPCH_OUT3 SAPCH_IN3 VDD VSS) INVCHAIN_SAPCH3
+
+ISAE0 (SAE_OUT0 SAE_IN0 VDD VSS) INVCHAIN_SAE0
+ISAE1 (SAE_OUT1 SAE_IN1 VDD VSS) INVCHAIN_SAE1
+ISAE2 (SAE_OUT2 SAE_IN2 VDD VSS) INVCHAIN_SAE2
+ISAE3 (SAE_OUT3 SAE_IN3 VDD VSS) INVCHAIN_SAE3
+
+IWEN0 (WEN_OUT0 WEN_IN0 VDD VSS) INVCHAIN_WEN0
+IWEN1 (WEN_OUT1 WEN_IN1 VDD VSS) INVCHAIN_WEN1
+IWEN2 (WEN_OUT2 WEN_IN2 VDD VSS) INVCHAIN_WEN2
+IWEN3 (WEN_OUT3 WEN_IN3 VDD VSS) INVCHAIN_WEN3
+
+
+CMUX0 (CMUX_OUT0 0) capacitor c=(2**0)*ws*cwl+2*ws*6*wdef*cg*1e6
+CPCH0 (PCH_OUT0 0) capacitor c=(2**0)*ws*cwl+3*(2**0)*ws*6*wdef*cg*1e6
+CSAPCH0 (SAPCH_OUT0 0) capacitor c=(2**0)*ws*cwl+2*ws*5*wdef*cg*1e6
+CSAE0 (SAE_OUT0 0) capacitor c=(2**0)*ws*cwl+7*ws*wdef*cg*1e6
+CWEN0 (WEN_OUT0 0) capacitor c=(2**0)*ws*cwl+ws*4*wdef*cg*1e6
+
+CMUX1 (CMUX_OUT1 0) capacitor c=(2**1)*ws*cwl+2*ws*6*wdef*cg*1e6
+CPCH1 (PCH_OUT1 0) capacitor c=(2**1)*ws*cwl+3*(2**1)*ws*6*wdef*cg*1e6
+CSAPCH1 (SAPCH_OUT1 0) capacitor c=(2**1)*ws*cwl+2*ws*5*wdef*cg*1e6
+CSAE1 (SAE_OUT1 0) capacitor c=(2**1)*ws*cwl+7*ws*wdef*cg*1e6
+CWEN1 (WEN_OUT1 0) capacitor c=(2**1)*ws*cwl+ws*4*wdef*cg*1e6
+
+CMUX2 (CMUX_OUT2 0) capacitor c=(2**2)*ws*cwl+2*ws*6*wdef*cg*1e6
+CPCH2 (PCH_OUT2 0) capacitor c=(2**2)*ws*cwl+3*(2**2)*ws*6*wdef*cg*1e6
+CSAPCH2 (SAPCH_OUT2 0) capacitor c=(2**2)*ws*cwl+2*ws*5*wdef*cg*1e6
+CSAE2 (SAE_OUT2 0) capacitor c=(2**2)*ws*cwl+7*ws*wdef*cg*1e6
+CWEN2 (WEN_OUT2 0) capacitor c=(2**2)*ws*cwl+ws*4*wdef*cg*1e6
+
+CMUX3 (CMUX_OUT3 0) capacitor c=(2**3)*ws*cwl+2*ws*6*wdef*cg*1e6
+CPCH3 (PCH_OUT3 0) capacitor c=(2**3)*ws*cwl+3*(2**3)*ws*6*wdef*cg*1e6
+CSAPCH3 (SAPCH_OUT3 0) capacitor c=(2**3)*ws*cwl+2*ws*5*wdef*cg*1e6
+CSAE3 (SAE_OUT3 0) capacitor c=(2**3)*ws*cwl+7*ws*wdef*cg*1e6
+CWEN3 (WEN_OUT3 0) capacitor c=(2**3)*ws*cwl+ws*4*wdef*cg*1e6
+
+
+myOption options pwr=all

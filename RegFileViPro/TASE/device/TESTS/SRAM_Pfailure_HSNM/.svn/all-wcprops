@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM
+END
+netlistFooter
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/netlistFooter
+END
+netlist
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/netlist
+END
+ocnloader
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/ocnloader
+END
+plotGen.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/plotGen.tpl
+END
+netlistHeader
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/netlistHeader
+END
+input.tpl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/input.tpl
+END
+readme
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/readme
+END
+vmin_cdfinv.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/SRAM_TOOL/!svn/ver/385/branches/TASE/device/TESTS/SRAM_Pfailure_HSNM/vmin_cdfinv.m
+END
